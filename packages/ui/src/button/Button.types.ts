@@ -1,4 +1,4 @@
-export type ButtonVariant = 'primary' | 'secondary'
+export type ButtonVariant = 'primary' | 'ghost-primary'
 
 export type BaseButtonProps = {
   label: string

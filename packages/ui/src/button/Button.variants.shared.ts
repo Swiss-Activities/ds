@@ -3,6 +3,7 @@ import type { ButtonVariant } from './Button.types'
 export type SharedButtonVariantStyles = {
   container: string
   text: string
+  webInteraction: string
 }
 
 export const sharedButtonBaseStyles = {
@@ -15,11 +16,13 @@ export const sharedButtonVariantStyles: Record<
   SharedButtonVariantStyles
 > = {
   primary: {
-    container: 'bg-[#0f172b]',
-    text: 'text-[#ffffff]',
+    container: 'bg-sa-primary',
+    text: 'text-sa-light',
+    webInteraction: 'hover:bg-sa-dark focus-visible:outline-sa-dark',
   },
-  secondary: {
-    container: 'bg-[#e2e8f0]',
-    text: 'text-[#0f172b]',
+  'ghost-primary': {
+    container: 'bg-transparent',
+    text: 'text-sa-primary',
+    webInteraction: 'hover:bg-sa-light focus-visible:outline-sa-primary',
   },
 }

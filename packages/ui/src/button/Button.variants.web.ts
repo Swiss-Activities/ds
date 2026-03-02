@@ -10,7 +10,7 @@ type ButtonVariantStyles = {
 
 export const buttonBaseStyles = {
   web:
-    `inline-flex ${sharedButtonBaseStyles.container} ${sharedButtonBaseStyles.text} transition-colors focus-visible:outline-2 focus-visible:outline-offset-2`,
+    `inline-flex appearance-none border-0 ${sharedButtonBaseStyles.container} ${sharedButtonBaseStyles.text} transition-colors focus-visible:outline-2 focus-visible:outline-offset-2`,
 } as const
 
 export const buttonDisabledStyles = {
@@ -20,10 +20,10 @@ export const buttonDisabledStyles = {
 export const buttonVariantStyles: Record<ButtonVariant, ButtonVariantStyles> = {
   primary: {
     web:
-      `${sharedButtonVariantStyles.primary.container} ${sharedButtonVariantStyles.primary.text} hover:bg-[#334155] focus-visible:outline-[#0f172b]`,
+      `${sharedButtonVariantStyles.primary.container} ${sharedButtonVariantStyles.primary.text} ${sharedButtonVariantStyles.primary.webInteraction}`,
   },
-  secondary: {
+  'ghost-primary': {
     web:
-      `${sharedButtonVariantStyles.secondary.container} ${sharedButtonVariantStyles.secondary.text} hover:bg-[#cbd5e1] focus-visible:outline-[#94a3b8]`,
+      `${sharedButtonVariantStyles['ghost-primary'].container} ${sharedButtonVariantStyles['ghost-primary'].text} ${sharedButtonVariantStyles['ghost-primary'].webInteraction}`,
   },
 }

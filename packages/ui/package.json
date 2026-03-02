@@ -21,7 +21,13 @@
     "./native": {
       "types": "./src/index.native.ts",
       "default": "./src/index.native.ts"
-    }
+    },
+    "./tokens": {
+      "types": "./src/tokens/index.ts",
+      "default": "./src/tokens/index.ts"
+    },
+    "./styles/sa-variables.css": "./src/styles/sa-variables.css",
+    "./styles/sa-theme.css": "./src/styles/sa-theme.css"
   },
   "scripts": {
     "typecheck:web": "tsc -p tsconfig.web.json --noEmit",

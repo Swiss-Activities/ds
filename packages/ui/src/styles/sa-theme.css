@@ -1,0 +1,8 @@
+@import "./sa-variables.css";
+
+@theme {
+  --color-sa-dark: var(--sa-color-dark);
+  --color-sa-light: var(--sa-color-light);
+  --color-sa-medium: var(--sa-color-medium);
+  --color-sa-primary: var(--sa-color-primary);
+}

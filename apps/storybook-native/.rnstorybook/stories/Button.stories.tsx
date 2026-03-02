@@ -21,15 +21,9 @@ export const Primary: Story = {
   }
 }
 
-export const Secondary: Story = {
+export const GhostPrimary: Story = {
   args: {
-    variant: 'secondary',
+    variant: 'ghost-primary',
     label: 'See Details'
-  }
-}
-
-export const Disabled: Story = {
-  args: {
-    disabled: true
   }
 }

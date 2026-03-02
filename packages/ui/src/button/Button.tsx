@@ -14,11 +14,13 @@ export function Button({
   label,
   variant = 'primary',
   className,
+  style,
   ...props
 }: ButtonProps) {
   return (
     <button
       className={`${buttonBaseStyles.web} ${buttonVariantStyles[variant].web} ${buttonDisabledStyles.web} ${className ?? ''}`.trim()}
+      style={{ appearance: 'none', border: 0, ...style }}
       type="button"
       {...props}
     >

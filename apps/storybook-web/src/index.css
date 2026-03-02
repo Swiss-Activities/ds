@@ -1,4 +1,11 @@
-@import "tailwindcss";
+@import "@swiss-activities/ui/styles/sa-variables.css";
+@import "tailwindcss/theme.css" layer(theme);
+@import "@swiss-activities/ui/styles/sa-theme.css";
+@import "tailwindcss/preflight.css" layer(base);
+@import "tailwindcss/utilities.css" layer(utilities);
+
+@source "../**/*.{ts,tsx}";
+@source "../../../packages/ui/src/**/*.{ts,tsx}";
 
 *,
 *::before,
@@ -18,4 +25,14 @@ body {
   background: #f8fafc;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+@layer base {
+  button,
+  [type='button'],
+  [type='submit'],
+  [type='reset'] {
+    appearance: none;
+    border: 0;
+  }
 }
