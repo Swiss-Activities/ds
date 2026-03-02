@@ -7,12 +7,13 @@
     "packages/*"
   ],
   "scripts": {
-    "storybook:web": "bun run --cwd apps/storybook-web storybook",
-    "build-storybook:web": "bun run --cwd apps/storybook-web build-storybook",
-    "storybook:native": "bun run --cwd apps/storybook-native storybook",
+    "dev:web": "bun run --cwd apps/storybook-web dev",
     "dev:native": "bun run --cwd apps/storybook-native start",
+    "build:web": "bun run --cwd apps/storybook-web build",
+    "build:storybook:web": "bun run --cwd apps/storybook-web build-storybook",
+    "storybook:web": "bun run --cwd apps/storybook-web storybook",
+    "storybook:native": "bun run --cwd apps/storybook-native storybook",
     "lint:web": "bun run --cwd apps/storybook-web lint",
-    "lint": "bun run lint:web",
     "typecheck:ui": "bun run --cwd packages/ui typecheck"
   }
 }
