@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": ["ES2022"],
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "jsx": "react-jsx",
+    "strict": true,
+    "noEmit": true,
+    "skipLibCheck": true,
+    "types": ["react"],
+    "customConditions": ["react-native"]
+  },
+  "include": [
+    "nativewind-env.d.ts",
+    "src/index.native.ts",
+    "src/button/index.native.ts",
+    "src/button/Button.native.tsx",
+    "src/button/Button.types.ts",
+    "src/button/Button.variants.ts"
+  ]
+}

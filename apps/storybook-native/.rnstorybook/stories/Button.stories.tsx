@@ -1,0 +1,34 @@
+import type { Meta, StoryObj } from '@storybook/react-native'
+
+import { Button } from '@swiss-activities/ui'
+
+const meta = {
+  title: 'Components/Button',
+  component: Button,
+  args: {
+    label: 'Book Activity'
+  }
+} satisfies Meta<typeof Button>
+
+export default meta
+
+type Story = StoryObj<typeof meta>
+
+export const Primary: Story = {
+  args: {
+    variant: 'primary'
+  }
+}
+
+export const Secondary: Story = {
+  args: {
+    variant: 'secondary',
+    label: 'See Details'
+  }
+}
+
+export const Disabled: Story = {
+  args: {
+    disabled: true
+  }
+}

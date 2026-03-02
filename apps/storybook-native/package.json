@@ -1,0 +1,49 @@
+{
+  "name": "@swiss-activities/storybook-native",
+  "version": "0.1.0",
+  "main": "index.ts",
+  "scripts": {
+    "start": "expo start",
+    "storybook": "expo start -c",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web",
+    "storybook-generate": "sb-rn-get-stories"
+  },
+  "dependencies": {
+    "@swiss-activities/ui": "workspace:*",
+    "expo": "~55.0.4",
+    "expo-status-bar": "~55.0.4",
+    "react": "19.2.0",
+    "react-native": "0.83.2",
+    "@babel/core": "^7.29.0",
+    "babel-loader": "^8.4.1",
+    "react-native-safe-area-context": "^5.7.0",
+    "@react-native-async-storage/async-storage": "^3.0.1",
+    "@react-native-community/datetimepicker": "^8.6.0",
+    "@react-native-community/slider": "^5.1.2",
+    "react-native-reanimated": "^4.2.2",
+    "react-native-gesture-handler": "^2.30.0",
+    "@gorhom/bottom-sheet": "^5.2.8",
+    "react-native-svg": "^15.15.3",
+    "@storybook/addon-ondevice-controls": "^10.2.3",
+    "@storybook/addon-ondevice-actions": "^10.2.3",
+    "@storybook/react-native": "^10.2.3",
+    "nativewind": "preview",
+    "react-native-css": "^3.0.1",
+    "storybook": "^10.2.14",
+    "react-dom": "19.2.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.2.1",
+    "@types/react": "~19.2.2",
+    "babel-preset-expo": "^55.0.0",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.2.1",
+    "typescript": "~5.9.2"
+  },
+  "overrides": {
+    "lightningcss": "1.30.1"
+  },
+  "private": true
+}

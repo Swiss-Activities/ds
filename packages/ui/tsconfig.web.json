@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "jsx": "react-jsx",
+    "strict": true,
+    "noEmit": true,
+    "skipLibCheck": true,
+    "types": ["react"]
+  },
+  "include": [
+    "src/index.ts",
+    "src/button/index.ts",
+    "src/button/Button.tsx",
+    "src/button/Button.types.ts",
+    "src/button/Button.variants.ts"
+  ]
+}
