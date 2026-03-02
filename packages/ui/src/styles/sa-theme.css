@@ -1,8 +1,11 @@
-@import "./sa-variables.css";
+:root {
+  --sa-color-dark: #eb002a;
+  --sa-color-light: #fff5f7;
+  --sa-color-medium: #ff859b;
+  --sa-color-primary: #ff385c;
 
-@theme {
-  --color-sa-dark: var(--sa-color-dark);
-  --color-sa-light: var(--sa-color-light);
-  --color-sa-medium: var(--sa-color-medium);
-  --color-sa-primary: var(--sa-color-primary);
+  --sa-radius-sm: 4px;
+  --sa-radius-md: 8px;
+  --sa-radius-lg: 12px;
+  --sa-radius-xl: 16px;
 }

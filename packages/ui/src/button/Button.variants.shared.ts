@@ -7,7 +7,7 @@ export type SharedButtonVariantStyles = {
 }
 
 export const sharedButtonBaseStyles = {
-  container: 'min-h-[40px] items-center justify-center rounded-[8px] px-[16px] py-[10px]',
+  container: 'min-h-[40px] items-center justify-center rounded-sa-md px-[16px] py-[10px]',
   text: 'text-[14px] [font-weight:600]',
 } as const
 
