@@ -31,3 +31,4 @@ storybook-static
 apps/storybook-web/storybook-static
 .expo
 apps/storybook-native/.expo
+*.tsbuildinfo
