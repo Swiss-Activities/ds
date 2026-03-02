@@ -1,13 +1,14 @@
-import { Pressable, Text, type PressableProps } from 'react-native'
+import type { TouchableOpacityProps } from 'react-native'
+import { Text, TouchableOpacity } from 'react-native-css/components'
 
 import type { BaseButtonProps } from './Button.types'
 import {
   buttonBaseStyles,
   buttonDisabledStyles,
   buttonVariantStyles,
-} from './Button.variants'
+} from './Button.variants.native'
 
-export type ButtonProps = BaseButtonProps & Omit<PressableProps, 'children'>
+export type ButtonProps = BaseButtonProps & Omit<TouchableOpacityProps, 'children'>
 
 export function Button({
   label,
@@ -16,17 +17,15 @@ export function Button({
   ...props
 }: ButtonProps) {
   return (
-    <Pressable
+    <TouchableOpacity
       accessibilityRole="button"
-      className={`${buttonBaseStyles.nativeContainer} ${buttonVariantStyles[variant].nativeContainer} ${disabled ? buttonDisabledStyles.native : ''}`.trim()}
+      className={`${buttonBaseStyles.container} ${buttonVariantStyles[variant].container} ${disabled ? buttonDisabledStyles.native : ''}`.trim()}
       disabled={disabled}
       {...props}
     >
-      <Text
-        className={`${buttonBaseStyles.nativeText} ${buttonVariantStyles[variant].nativeText}`}
-      >
+      <Text className={`${buttonBaseStyles.text} ${buttonVariantStyles[variant].text}`}>
         {label}
       </Text>
-    </Pressable>
+    </TouchableOpacity>
   )
 }

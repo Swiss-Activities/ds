@@ -1,6 +1,8 @@
-@import 'tailwindcss';
-@import 'nativewind/theme';
-@import 'nativewind/preflight';
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/utilities.css" source(none);
 
-@source './.rnstorybook';
-@source '../../packages/ui/src';
+@import "nativewind/theme";
+
+@source "./.rnstorybook";
+@source "../../packages/ui/src/**/*.native.{ts,tsx}";
+@source "../../packages/ui/src/button/Button.variants.shared.ts";

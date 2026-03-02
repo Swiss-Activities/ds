@@ -15,5 +15,8 @@
     "storybook:native": "bun run --cwd apps/storybook-native storybook",
     "lint:web": "bun run --cwd apps/storybook-web lint",
     "typecheck:ui": "bun run --cwd packages/ui typecheck"
+  },
+  "overrides": {
+    "lightningcss": "1.30.1"
   }
 }

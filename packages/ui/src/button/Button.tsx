@@ -5,7 +5,7 @@ import {
   buttonBaseStyles,
   buttonDisabledStyles,
   buttonVariantStyles,
-} from './Button.variants'
+} from './Button.variants.web'
 
 export type ButtonProps = BaseButtonProps &
   Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'children'>

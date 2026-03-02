@@ -4,4 +4,8 @@ const { withNativewind } = require('nativewind/metro')
 
 const config = getDefaultConfig(__dirname)
 
-module.exports = withStorybook(withNativewind(config))
+module.exports = withStorybook(
+  withNativewind(config, {
+    globalClassNamePolyfill: false,
+  })
+)

@@ -7,7 +7,8 @@ const meta = {
   component: Button,
   args: {
     label: 'Book Activity'
-  }
+  },
+  render: args => <Button {...args} />
 } satisfies Meta<typeof Button>
 
 export default meta

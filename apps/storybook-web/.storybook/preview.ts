@@ -1,7 +1,16 @@
 import type { Preview } from '@storybook/react-vite'
+import { createElement } from 'react'
 import '../src/index.css'
 
 const preview: Preview = {
+  decorators: [
+    Story =>
+      createElement(
+        'div',
+        { style: { padding: '16px' } },
+        createElement(Story),
+      ),
+  ],
   parameters: {
     controls: {
       matchers: {
