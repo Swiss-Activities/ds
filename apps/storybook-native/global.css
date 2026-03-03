@@ -1,11 +1,8 @@
 @import "tailwindcss/theme.css" layer(theme);
 @import "../../packages/ui/src/styles/sa-theme.css";
 @import "tailwindcss/utilities.css" source(none);
-
 @import "nativewind/theme";
-
-@source "./.rnstorybook";
+@source "./.rnstorybook/stories/**/*.stories.tsx";
 @source "../../packages/ui/src/**/*.native.{ts,tsx}";
 @source "../../packages/ui/src/button/button.variants.shared.ts";
-@source "../../packages/ui/src/card/card.variants.shared.ts";
 @source "../../packages/ui/src/flow/flow.variants.shared.ts";

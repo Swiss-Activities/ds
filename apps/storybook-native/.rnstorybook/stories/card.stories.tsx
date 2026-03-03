@@ -13,11 +13,11 @@ const meta = {
     rounded: true,
   },
   render: args => (
-    <View className="p-4">
+    <View style={{ padding: 16 }}>
       <Card {...args}>
         <Flow>
-          <Text className="text-[20px] font-semibold text-slate-900">Zurich City Pass</Text>
-          <Text className="text-[14px] text-slate-600">
+          <Text style={{ fontSize: 20, fontWeight: '600', color: '#0f172b' }}>Zurich City Pass</Text>
+          <Text style={{ fontSize: 14, color: '#45556c' }}>
             Explore museums, cruises, and city transport with one pass.
           </Text>
           <Button label="Book Activity" />

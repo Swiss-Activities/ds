@@ -8,9 +8,9 @@ const meta = {
   title: 'Components/Flow',
   component: Flow,
   render: () => (
-    <Flow className="px-4">
-      <Text className="text-[20px] font-semibold text-slate-900">Discover Switzerland</Text>
-      <Text className="text-[14px] text-slate-600">
+    <Flow style={{ paddingHorizontal: 16 }}>
+      <Text style={{ fontSize: 20, fontWeight: '600', color: '#0f172b' }}>Discover Switzerland</Text>
+      <Text style={{ fontSize: 14, color: '#45556c' }}>
         Hand-picked activities with instant booking and flexible cancellation.
       </Text>
       <Button label="Explore Activities" />
