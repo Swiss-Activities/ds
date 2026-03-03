@@ -1,0 +1,44 @@
+import type { Meta, StoryObj } from '@storybook/react-vite'
+
+const meta = {
+  title: 'Welcome/Start',
+  parameters: {
+    layout: 'fullscreen',
+    controls: {
+      hideNoControlsWarning: true,
+    },
+  },
+  render: () => (
+    <div className="relative min-h-screen overflow-hidden bg-gradient-to-b from-white to-gray-50">
+      <div className="pointer-events-none absolute -left-20 -top-20 h-72 w-72 rounded-full bg-gray-200/60 blur-3xl" />
+      <div className="pointer-events-none absolute -right-24 top-10 h-80 w-80 rounded-full bg-sa-light blur-3xl" />
+
+      <main className="relative mx-auto flex min-h-screen w-full max-w-5xl items-center px-6 py-16">
+        <section className="w-full rounded-[28px] border border-gray-200 bg-white/80 p-8 shadow-[0_1px_3px_var(--color-sa-gray-shadow)] backdrop-blur sm:p-12">
+          <h1 className="text-balance text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
+            Welcome to the Swiss Activities Design System
+          </h1>
+
+          <p className="mt-4 max-w-2xl text-base text-gray-600 sm:text-lg">
+            Use the sidebar to browse components and variants. Start with Button, Card, and Flow to preview shared primitives across web and native.
+          </p>
+
+          <a
+            className="mt-6 inline-flex text-sm font-semibold text-gray-700 underline decoration-gray-400 underline-offset-4 hover:text-gray-900"
+            href="https://swissactivities.atlassian.net/wiki/spaces/P/pages/505675778/Design+System"
+            rel="noreferrer"
+            target="_blank"
+          >
+            Open internal documentation
+          </a>
+        </section>
+      </main>
+    </div>
+  ),
+} satisfies Meta
+
+export default meta
+
+type Story = StoryObj<typeof meta>
+
+export const Default: Story = {}

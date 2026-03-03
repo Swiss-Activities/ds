@@ -4,12 +4,17 @@ import '../src/index.css'
 
 const preview: Preview = {
   decorators: [
-    Story =>
-      createElement(
+    (Story, context) => {
+      if (context.parameters.layout === 'fullscreen') {
+        return createElement(Story)
+      }
+
+      return createElement(
         'div',
         { style: { padding: '16px' } },
         createElement(Story),
-      ),
+      )
+    },
   ],
   parameters: {
     controls: {
@@ -18,7 +23,11 @@ const preview: Preview = {
        date: /Date$/i,
       },
     },
-
+    options: {
+      storySort: {
+        order: ['Welcome', 'Components'],
+      },
+    },
     a11y: {
       // 'todo' - show a11y violations in the test UI only
       // 'error' - fail CI on a11y violations

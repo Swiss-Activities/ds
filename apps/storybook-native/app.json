@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "storybook-native",
-    "slug": "storybook-native",
+    "name": "Swiss Activities Design System",
+    "slug": "design-system",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -25,6 +25,50 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": [
+      [
+        "expo-font",
+        {
+          "fonts": [
+            "./assets/fonts/inter-v11-latin-regular.ttf",
+            "./assets/fonts/inter-v11-latin-500.ttf",
+            "./assets/fonts/inter-v11-latin-600.ttf",
+            "./assets/fonts/inter-v11-latin-700.ttf"
+          ],
+          "android": {
+            "fonts": [
+              {
+                "fontFamily": "Inter",
+                "fontDefinitions": [
+                  {
+                    "path": "./assets/fonts/inter-v11-latin-regular.ttf",
+                    "weight": 400
+                  },
+                  {
+                    "path": "./assets/fonts/inter-v11-latin-500.ttf",
+                    "weight": 500
+                  },
+                  {
+                    "path": "./assets/fonts/inter-v11-latin-600.ttf",
+                    "weight": 600
+                  },
+                  {
+                    "path": "./assets/fonts/inter-v11-latin-700.ttf",
+                    "weight": 700
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "1fd275b3-c8a4-4478-b60a-f5c5924b2198"
+      }
+    },
+    "owner": "swiss_activities"
   }
 }
