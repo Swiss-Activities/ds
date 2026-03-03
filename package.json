@@ -1,11 +1,10 @@
 {
   "name": "swiss-activities-design-system",
-  "private": true,
   "version": "0.1.0",
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ],
+  "overrides": {
+    "lightningcss": "1.30.1"
+  },
+  "private": true,
   "scripts": {
     "dev:web": "bun run --cwd apps/storybook-web dev",
     "dev:native": "bun run --cwd apps/storybook-native start",
@@ -16,7 +15,11 @@
     "lint:web": "bun run --cwd apps/storybook-web lint",
     "typecheck:ui": "bun run --cwd packages/ui typecheck"
   },
-  "overrides": {
-    "lightningcss": "1.30.1"
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "devDependencies": {
+    "sharp": "^0.34.5"
   }
 }
