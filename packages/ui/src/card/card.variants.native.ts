@@ -1,7 +1,7 @@
 import { cva } from 'class-variance-authority'
 
 export const cardStyles = cva(
-  'h-max overflow-hidden bg-white shadow [border-width:1px] [border-style:solid] [border-color:#e2e8f0] p-6',
+  'h-max overflow-hidden bg-white shadow [border-width:1px] [border-style:solid] [border-color:var(--color-gray-200)] p-6',
   {
     variants: {
       responsivePadding: {

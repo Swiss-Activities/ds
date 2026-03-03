@@ -9,7 +9,7 @@ import {
 } from './card.variants.shared'
 
 export const cardStyles = cva(
-  `${sharedCardBaseStyles} shadow ${sharedCardPaddingStyles}`,
+  `${sharedCardBaseStyles} border border-gray-200 shadow-[0_1px_3px_var(--color-sa-gray-shadow)] ${sharedCardPaddingStyles}`,
   {
     variants: {
       responsivePadding: {
