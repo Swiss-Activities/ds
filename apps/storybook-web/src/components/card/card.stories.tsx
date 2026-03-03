@@ -8,14 +8,9 @@ const meta = {
   parameters: {
     layout: 'centered',
   },
-  args: {
-    responsivePadding: false,
-    fullWidth: false,
-    rounded: true,
-  },
-  render: args => (
+  render: () => (
     <div className="w-[360px] max-w-full">
-      <Card {...args}>
+      <Card>
         <Flow>
           <h3 className="text-xl font-semibold text-slate-900">Zurich City Pass</h3>
           <p className="text-sm text-slate-600">
@@ -31,22 +26,4 @@ const meta = {
 export default meta
 type Story = StoryObj<typeof meta>
 
-export const Contained: Story = {}
-
-export const EdgeToEdge: Story = {
-  args: {
-    fullWidth: true,
-  },
-}
-
-export const ResponsivePadding: Story = {
-  args: {
-    responsivePadding: true,
-  },
-}
-
-export const Square: Story = {
-  args: {
-    rounded: false,
-  },
-}
+export const Default: Story = {}

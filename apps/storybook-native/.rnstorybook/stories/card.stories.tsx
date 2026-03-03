@@ -7,14 +7,9 @@ import { Button, Card, Flow } from '@swiss-activities/ui'
 const meta = {
   title: 'Components/Card',
   component: Card,
-  args: {
-    responsivePadding: false,
-    fullWidth: false,
-    rounded: true,
-  },
-  render: args => (
+  render: () => (
     <View style={{ padding: 16 }}>
-      <Card {...args}>
+      <Card>
         <Flow>
           <Text style={{ fontSize: 20, fontWeight: '600', color: '#0f172b' }}>Zurich City Pass</Text>
           <Text style={{ fontSize: 14, color: '#45556c' }}>
@@ -31,22 +26,4 @@ export default meta
 
 type Story = StoryObj<typeof meta>
 
-export const Contained: Story = {}
-
-export const EdgeToEdge: Story = {
-  args: {
-    fullWidth: true,
-  },
-}
-
-export const ResponsivePadding: Story = {
-  args: {
-    responsivePadding: true,
-  },
-}
-
-export const Square: Story = {
-  args: {
-    rounded: false,
-  },
-}
+export const Default: Story = {}

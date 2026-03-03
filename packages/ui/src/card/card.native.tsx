@@ -10,14 +10,11 @@ export type CardProps = BaseCardProps & Omit<ViewProps, 'children'>
 export function Card({
   children = null,
   className,
-  responsivePadding = false,
-  fullWidth = true,
-  rounded = false,
   ...props
 }: CardProps) {
   return (
     <View
-      className={cn(cardStyles({ responsivePadding, fullWidth, rounded }), className)}
+      className={cn(cardStyles(), className)}
       {...props}
     >
       {children}
