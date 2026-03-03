@@ -7,3 +7,4 @@
 @source "./.rnstorybook";
 @source "../../packages/ui/src/**/*.native.{ts,tsx}";
 @source "../../packages/ui/src/button/Button.variants.shared.ts";
+@source "../../packages/ui/src/card/Card.variants.shared.ts";
