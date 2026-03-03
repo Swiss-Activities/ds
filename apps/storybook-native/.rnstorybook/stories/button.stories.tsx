@@ -7,7 +7,7 @@ const meta = {
   title: 'Components/Button',
   component: Button,
   args: {
-    label: 'Book Activity'
+    children: 'Book Activity'
   },
   render: args => <Button {...args} />
 } satisfies Meta<typeof Button>
@@ -25,6 +25,6 @@ export const Primary: Story = {
 export const GhostPrimary: Story = {
   args: {
     variant: 'ghost-primary',
-    label: 'See Details'
+    children: 'See Details'
   }
 }

@@ -5,10 +5,10 @@ import { buttonComponentId, type BaseButtonProps } from './button.types'
 import { buttonStyles } from './button.variants.web'
 
 export type ButtonProps = BaseButtonProps &
-  Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'children'>
+  ButtonHTMLAttributes<HTMLButtonElement>
 
 export function Button({
-  label,
+  children = null,
   variant = 'primary',
   className,
   style,
@@ -23,7 +23,7 @@ export function Button({
       type="button"
       {...props}
     >
-      {label}
+      {children}
     </button>
   )
 }

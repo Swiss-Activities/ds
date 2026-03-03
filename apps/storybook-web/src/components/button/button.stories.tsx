@@ -9,7 +9,7 @@ const meta = {
     layout: 'centered',
   },
   args: {
-    label: 'Book Activity',
+    children: 'Book Activity',
   },
 } satisfies Meta<typeof Button>
 
@@ -25,6 +25,6 @@ export const Primary: Story = {
 export const GhostPrimary: Story = {
   args: {
     variant: 'ghost-primary',
-    label: 'See Details',
+    children: 'See Details',
   },
 }

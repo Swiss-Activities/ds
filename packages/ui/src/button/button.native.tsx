@@ -12,7 +12,7 @@ export type ButtonProps = BaseButtonProps &
   Omit<TouchableOpacityProps, 'children'> & { className?: string }
 
 export function Button({
-  label,
+  children = null,
   variant = 'primary',
   disabled,
   className,
@@ -25,7 +25,7 @@ export function Button({
       disabled={disabled}
       {...props}
     >
-      <Text className={cn(buttonTextStyles({ variant }))}>{label}</Text>
+      <Text className={cn(buttonTextStyles({ variant }))}>{children}</Text>
     </TouchableOpacity>
   )
 }

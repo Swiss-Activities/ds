@@ -35,7 +35,7 @@ export const Default: Story = {
           <p className="text-sm text-slate-600">
             Explore museums, cruises, and city transport with one pass.
           </p>
-          <Button label="Book Activity" />
+          <Button>Book Activity</Button>
         </Flow>
       </Card>
     </div>

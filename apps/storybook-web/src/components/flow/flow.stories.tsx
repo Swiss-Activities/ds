@@ -8,18 +8,27 @@ const meta = {
   parameters: {
     layout: 'centered',
   },
-  render: () => (
-    <Flow className="w-[360px] max-w-full">
-      <h3 className="text-xl font-semibold text-slate-900">Discover Switzerland</h3>
-      <p className="text-sm text-slate-600">
-        Hand-picked activities with instant booking and flexible cancellation.
-      </p>
-      <Button label="Explore Activities" />
-    </Flow>
-  ),
+  argTypes: {
+    className: {
+      control: 'text',
+    },
+  },
 } satisfies Meta<typeof Flow>
 
 export default meta
 type Story = StoryObj<typeof meta>
 
-export const Default: Story = {}
+export const Default: Story = {
+  args: {
+    className: 'w-[360px] max-w-full',
+  },
+  render: args => (
+    <Flow {...args}>
+      <h3 className="text-xl font-semibold text-slate-900">Discover Switzerland</h3>
+      <p className="text-sm text-slate-600">
+        Hand-picked activities with instant booking and flexible cancellation.
+      </p>
+      <Button>Explore Activities</Button>
+    </Flow>
+  ),
+}

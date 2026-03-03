@@ -1,8 +1,10 @@
+import type { ReactNode } from 'react'
+
 export type ButtonVariant = 'primary' | 'ghost-primary'
 
 export const buttonComponentId = 'sa-button'
 
 export type BaseButtonProps = {
-  label: string
+  children?: ReactNode
   variant?: ButtonVariant
 }

@@ -35,7 +35,7 @@ export const Default: Story = {
           <Text style={{ fontSize: 14, color: '#45556c' }}>
             Explore museums, cruises, and city transport with one pass.
           </Text>
-          <Button label="Book Activity" />
+          <Button>Book Activity</Button>
         </Flow>
       </Card>
     </View>
