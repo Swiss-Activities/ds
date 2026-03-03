@@ -1,34 +1,33 @@
-import type { Meta, StoryObj } from '@storybook/react-vite'
+import type { Meta, StoryObj } from '@storybook/react-native'
+import { Text, View } from 'react-native-css/components'
 
-import { Button, Card } from '@swiss-activities/ui'
+import { Button, Card, Flow } from '@swiss-activities/ui'
 
 const meta = {
   title: 'Components/Card',
   component: Card,
-  parameters: {
-    layout: 'centered',
-  },
   args: {
     responsivePadding: false,
     fullWidth: false,
     rounded: true,
   },
   render: args => (
-    <div className="w-[360px] max-w-full">
+    <View className="p-4">
       <Card {...args}>
-        <h3 className="text-xl font-semibold text-slate-900">Zurich City Pass</h3>
-        <p className="mt-2 text-sm text-slate-600">
-          Explore museums, cruises, and city transport with one pass.
-        </p>
-        <div className="mt-4">
+        <Flow>
+          <Text className="text-[20px] font-semibold text-slate-900">Zurich City Pass</Text>
+          <Text className="text-[14px] text-slate-600">
+            Explore museums, cruises, and city transport with one pass.
+          </Text>
           <Button label="Book Activity" />
-        </div>
+        </Flow>
       </Card>
-    </div>
+    </View>
   ),
 } satisfies Meta<typeof Card>
 
 export default meta
+
 type Story = StoryObj<typeof meta>
 
 export const Contained: Story = {}

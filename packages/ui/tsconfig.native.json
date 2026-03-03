@@ -15,8 +15,21 @@
     "nativewind-env.d.ts",
     "src/index.native.ts",
     "src/button/index.native.ts",
-    "src/button/Button.native.tsx",
-    "src/button/Button.types.ts",
-    "src/button/Button.variants.ts"
+    "src/button/button.native.tsx",
+    "src/button/button.types.ts",
+    "src/button/button.variants.native.ts",
+    "src/button/button.variants.shared.ts",
+    "src/card/index.native.ts",
+    "src/card/card.native.tsx",
+    "src/card/card.types.ts",
+    "src/card/card.variants.native.ts",
+    "src/card/card.variants.shared.ts",
+    "src/flow/index.native.ts",
+    "src/flow/flow.children.ts",
+    "src/flow/flow.native.tsx",
+    "src/flow/flow.types.ts",
+    "src/flow/flow.variants.native.ts",
+    "src/flow/flow.variants.shared.ts",
+    "src/utils/cn.ts"
   ]
 }

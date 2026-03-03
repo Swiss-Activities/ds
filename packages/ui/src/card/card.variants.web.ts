@@ -6,7 +6,7 @@ import {
   sharedCardPaddingStyles,
   sharedCardResponsivePaddingStyles,
   sharedCardRoundedStyles,
-} from './Card.variants.shared'
+} from './card.variants.shared'
 
 export const cardStyles = cva(
   `${sharedCardBaseStyles} ${sharedCardPaddingStyles}`,

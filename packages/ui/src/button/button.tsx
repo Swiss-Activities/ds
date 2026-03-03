@@ -1,8 +1,8 @@
 import type { ButtonHTMLAttributes } from 'react'
 
 import { cn } from '../utils/cn'
-import type { BaseButtonProps } from './Button.types'
-import { buttonStyles } from './Button.variants.web'
+import { buttonComponentId, type BaseButtonProps } from './button.types'
+import { buttonStyles } from './button.variants.web'
 
 export type ButtonProps = BaseButtonProps &
   Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'children'>
@@ -27,3 +27,5 @@ export function Button({
     </button>
   )
 }
+
+;(Button as { saComponent?: string }).saComponent = buttonComponentId

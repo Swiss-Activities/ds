@@ -3,7 +3,7 @@ import { cva } from 'class-variance-authority'
 import {
   sharedButtonBaseStyles,
   sharedButtonVariantStyles,
-} from './Button.variants.shared'
+} from './button.variants.shared'
 
 export const buttonContainerStyles = cva(sharedButtonBaseStyles.container, {
   variants: {

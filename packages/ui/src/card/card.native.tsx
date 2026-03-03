@@ -2,8 +2,8 @@ import type { ViewProps } from 'react-native'
 import { View } from 'react-native-css/components'
 
 import { cn } from '../utils/cn'
-import type { BaseCardProps } from './Card.types'
-import { cardStyles } from './Card.variants.native'
+import type { BaseCardProps } from './card.types'
+import { cardStyles } from './card.variants.native'
 
 export type CardProps = BaseCardProps & Omit<ViewProps, 'children'>
 

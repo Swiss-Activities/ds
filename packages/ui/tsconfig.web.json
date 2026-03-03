@@ -13,8 +13,21 @@
   "include": [
     "src/index.ts",
     "src/button/index.ts",
-    "src/button/Button.tsx",
-    "src/button/Button.types.ts",
-    "src/button/Button.variants.ts"
+    "src/button/button.tsx",
+    "src/button/button.types.ts",
+    "src/button/button.variants.web.ts",
+    "src/button/button.variants.shared.ts",
+    "src/card/index.ts",
+    "src/card/card.tsx",
+    "src/card/card.types.ts",
+    "src/card/card.variants.web.ts",
+    "src/card/card.variants.shared.ts",
+    "src/flow/index.ts",
+    "src/flow/flow.children.ts",
+    "src/flow/flow.tsx",
+    "src/flow/flow.types.ts",
+    "src/flow/flow.variants.web.ts",
+    "src/flow/flow.variants.shared.ts",
+    "src/utils/cn.ts"
   ]
 }

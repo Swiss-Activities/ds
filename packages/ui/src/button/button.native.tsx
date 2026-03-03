@@ -2,11 +2,11 @@ import type { TouchableOpacityProps } from 'react-native'
 import { Text, TouchableOpacity } from 'react-native-css/components'
 
 import { cn } from '../utils/cn'
-import type { BaseButtonProps } from './Button.types'
+import { buttonComponentId, type BaseButtonProps } from './button.types'
 import {
   buttonContainerStyles,
   buttonTextStyles,
-} from './Button.variants.native'
+} from './button.variants.native'
 
 export type ButtonProps = BaseButtonProps &
   Omit<TouchableOpacityProps, 'children'> & { className?: string }
@@ -29,3 +29,5 @@ export function Button({
     </TouchableOpacity>
   )
 }
+
+;(Button as { saComponent?: string }).saComponent = buttonComponentId

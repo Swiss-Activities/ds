@@ -1,4 +1,4 @@
-import type { ButtonVariant } from './Button.types'
+import type { ButtonVariant } from './button.types'
 
 export type SharedButtonVariantStyles = {
   container: string

@@ -1,2 +1,2 @@
-export { Card } from './Card.native'
-export type { CardProps } from './Card.native'
+export { Card } from './card.native'
+export type { CardProps } from './card.native'
