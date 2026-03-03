@@ -1,0 +1,12 @@
+{
+  "extends": "./tsconfig.json",
+  "include": [
+    "App.tsx",
+    "index.ts",
+    "nativewind-env.d.ts",
+    "../../packages/ui/nativewind-env.d.ts",
+    "postcss.config.mjs",
+    ".rnstorybook/**/*.ts",
+    ".rnstorybook/**/*.tsx"
+  ]
+}

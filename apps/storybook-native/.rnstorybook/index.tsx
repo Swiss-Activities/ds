@@ -18,7 +18,6 @@ const StorybookUIRoot = view.getStorybookUI({
     setItem: AsyncStorage.setItem,
   },
   theme: {
-    preferredColorScheme: 'light',
     brand: {
       title: 'Design System',
       image: brandLogo,

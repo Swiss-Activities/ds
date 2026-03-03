@@ -1,3 +1,4 @@
+import React from 'react'
 import type { Meta, StoryObj } from '@storybook/react-native'
 import { Text, View } from 'react-native-css/components'
 

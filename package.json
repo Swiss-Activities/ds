@@ -13,7 +13,8 @@
     "storybook:web": "bun run --cwd apps/storybook-web storybook",
     "storybook:native": "bun run --cwd apps/storybook-native storybook",
     "lint:web": "bun run --cwd apps/storybook-web lint",
-    "typecheck:ui": "bun run --cwd packages/ui typecheck"
+    "typecheck:ui": "bun run --cwd packages/ui typecheck",
+    "typecheck": "bun run typecheck:ui && bun run --cwd apps/storybook-web typecheck && bun run --cwd apps/storybook-native typecheck"
   },
   "workspaces": [
     "apps/*",
