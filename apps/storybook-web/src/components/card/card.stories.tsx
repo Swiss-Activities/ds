@@ -8,9 +8,28 @@ const meta = {
   parameters: {
     layout: 'centered',
   },
-  render: () => (
+  argTypes: {
+    elevation: {
+      options: ['md', 'lg'],
+      control: 'inline-radio',
+    },
+    noPadding: {
+      control: 'boolean',
+    },
+  },
+} satisfies Meta<typeof Card>
+
+export default meta
+type Story = StoryObj<typeof meta>
+
+export const Default: Story = {
+  args: {
+    elevation: 'md',
+    noPadding: false,
+  },
+  render: args => (
     <div className="w-[360px] max-w-full">
-      <Card>
+      <Card {...args}>
         <Flow>
           <h3 className="text-xl font-semibold text-slate-900">Zurich City Pass</h3>
           <p className="text-sm text-slate-600">
@@ -21,9 +40,4 @@ const meta = {
       </Card>
     </div>
   ),
-} satisfies Meta<typeof Card>
-
-export default meta
-type Story = StoryObj<typeof meta>
-
-export const Default: Story = {}
+}
