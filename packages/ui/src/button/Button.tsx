@@ -1,11 +1,8 @@
 import type { ButtonHTMLAttributes } from 'react'
 
+import { cn } from '../utils/cn'
 import type { BaseButtonProps } from './Button.types'
-import {
-  buttonBaseStyles,
-  buttonDisabledStyles,
-  buttonVariantStyles,
-} from './Button.variants.web'
+import { buttonStyles } from './Button.variants.web'
 
 export type ButtonProps = BaseButtonProps &
   Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'children'>
@@ -15,11 +12,13 @@ export function Button({
   variant = 'primary',
   className,
   style,
+  disabled,
   ...props
 }: ButtonProps) {
   return (
     <button
-      className={`${buttonBaseStyles.web} ${buttonVariantStyles[variant].web} ${buttonDisabledStyles.web} ${className ?? ''}`.trim()}
+      className={cn(buttonStyles({ variant, disabled }), className)}
+      disabled={disabled}
       style={{ appearance: 'none', border: 0, ...style }}
       type="button"
       {...props}

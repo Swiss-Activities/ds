@@ -1,13 +1,8 @@
 import type { HTMLAttributes } from 'react'
 
+import { cn } from '../utils/cn'
 import type { BaseCardProps } from './Card.types'
-import {
-  cardBaseStyles,
-  cardMxStyles,
-  cardPaddingStyles,
-  cardResponsivePaddingStyles,
-  cardRoundedStyles,
-} from './Card.variants.web'
+import { cardStyles } from './Card.variants.web'
 
 export type CardProps = BaseCardProps & HTMLAttributes<HTMLDivElement>
 
@@ -21,7 +16,7 @@ export function Card({
 }: CardProps) {
   return (
     <div
-      className={`${cardBaseStyles.web} ${cardPaddingStyles.web} ${responsivePadding ? cardResponsivePaddingStyles.web : ''} ${fullWidth ? cardMxStyles.web : ''} ${rounded ? cardRoundedStyles.web : ''} ${className ?? ''}`.trim()}
+      className={cn(cardStyles({ responsivePadding, fullWidth, rounded }), className)}
       {...props}
     >
       {children}

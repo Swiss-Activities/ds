@@ -1,3 +1,5 @@
+import { cva } from 'class-variance-authority'
+
 import {
   sharedCardBaseStyles,
   sharedCardMxStyles,
@@ -6,22 +8,27 @@ import {
   sharedCardRoundedStyles,
 } from './Card.variants.shared'
 
-export const cardBaseStyles = {
-  web: sharedCardBaseStyles,
-} as const
-
-export const cardPaddingStyles = {
-  web: sharedCardPaddingStyles,
-} as const
-
-export const cardResponsivePaddingStyles = {
-  web: sharedCardResponsivePaddingStyles,
-} as const
-
-export const cardMxStyles = {
-  web: sharedCardMxStyles,
-} as const
-
-export const cardRoundedStyles = {
-  web: sharedCardRoundedStyles,
-} as const
+export const cardStyles = cva(
+  `${sharedCardBaseStyles} ${sharedCardPaddingStyles}`,
+  {
+    variants: {
+      responsivePadding: {
+        true: sharedCardResponsivePaddingStyles,
+        false: '',
+      },
+      fullWidth: {
+        true: sharedCardMxStyles,
+        false: '',
+      },
+      rounded: {
+        true: sharedCardRoundedStyles,
+        false: '',
+      },
+    },
+    defaultVariants: {
+      responsivePadding: false,
+      fullWidth: true,
+      rounded: false,
+    },
+  },
+)
