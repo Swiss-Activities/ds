@@ -9,11 +9,13 @@ export type CardProps = BaseCardProps & HTMLAttributes<HTMLDivElement>
 export function Card({
   children = null,
   className,
+  elevation = 'md',
+  noPadding = false,
   ...props
 }: CardProps) {
   return (
     <div
-      className={cn(cardStyles(), className)}
+      className={cn(cardStyles({ elevation, noPadding }), className)}
       {...props}
     >
       {children}
