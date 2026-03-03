@@ -1,5 +1,12 @@
 @import "tailwindcss/theme.css" layer(theme);
 @import "../../packages/ui/src/styles/sa-theme.css";
+@theme {
+  --shadow-*: initial;
+  --shadow: initial;
+}
+@utility shadow {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
 @import "tailwindcss/utilities.css" source(none);
 @import "nativewind/theme";
 @source "./.rnstorybook/stories/**/*.stories.tsx";

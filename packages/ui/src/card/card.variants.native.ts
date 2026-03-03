@@ -1,27 +1,19 @@
 import { cva } from 'class-variance-authority'
 
-import {
-  sharedCardBaseStyles,
-  sharedCardMxStyles,
-  sharedCardPaddingStyles,
-  sharedCardResponsivePaddingStyles,
-  sharedCardRoundedStyles,
-} from './card.variants.shared'
-
 export const cardStyles = cva(
-  `${sharedCardBaseStyles} ${sharedCardPaddingStyles}`,
+  'h-max overflow-hidden bg-white shadow [border-width:1px] [border-style:solid] [border-color:#e2e8f0] p-6',
   {
     variants: {
       responsivePadding: {
-        true: sharedCardResponsivePaddingStyles,
+        true: 'px-2 sm:px-4 lg:px-6',
         false: '',
       },
       fullWidth: {
-        true: sharedCardMxStyles,
+        true: '-mx-2 rounded-none sm:-mx-4 lg:mx-0',
         false: '',
       },
       rounded: {
-        true: sharedCardRoundedStyles,
+        true: 'rounded-lg',
         false: '',
       },
     },
