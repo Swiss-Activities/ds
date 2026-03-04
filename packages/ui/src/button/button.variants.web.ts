@@ -1,26 +1,42 @@
 import { cva } from 'class-variance-authority'
+
+import type { ButtonSize, ButtonVariant } from './button.types'
+import { buttonSizes, buttonVariants } from './button.types'
 import {
   sharedButtonBaseStyles,
+  sharedButtonDisabledStyles,
+  sharedButtonSizeStyles,
   sharedButtonVariantStyles,
 } from './button.variants.shared'
 
+const webButtonVariantStyles = Object.fromEntries(
+  buttonVariants.map(variant => [
+    variant,
+    `${sharedButtonVariantStyles[variant].container} ${sharedButtonVariantStyles[variant].text} ${sharedButtonVariantStyles[variant].webInteraction}`.trim(),
+  ]),
+) as Record<ButtonVariant, string>
+
+const webButtonSizeStyles = Object.fromEntries(
+  buttonSizes.map(size => [
+    size,
+    `${sharedButtonSizeStyles[size].container} ${sharedButtonSizeStyles[size].text}`.trim(),
+  ]),
+) as Record<ButtonSize, string>
+
 export const buttonStyles = cva(
-  `inline-flex appearance-none border-0 ${sharedButtonBaseStyles.container} ${sharedButtonBaseStyles.text} transition-colors focus-visible:outline-2 focus-visible:outline-offset-2`,
+  `${sharedButtonBaseStyles.container} ${sharedButtonBaseStyles.text} transition-colors focus-visible:outline-2 focus-visible:outline-offset-2`,
   {
     variants: {
-      variant: {
-        primary:
-          `${sharedButtonVariantStyles.primary.container} ${sharedButtonVariantStyles.primary.text} ${sharedButtonVariantStyles.primary.webInteraction}`,
-        'ghost-primary':
-          `${sharedButtonVariantStyles['ghost-primary'].container} ${sharedButtonVariantStyles['ghost-primary'].text} ${sharedButtonVariantStyles['ghost-primary'].webInteraction}`,
-      },
+      variant: webButtonVariantStyles,
+      size: webButtonSizeStyles,
       disabled: {
-        true: 'disabled:cursor-not-allowed disabled:opacity-50',
+        true: sharedButtonDisabledStyles.container,
         false: '',
       },
     },
     defaultVariants: {
-      variant: 'primary',
+      variant: 'secondary',
+      size: 'md',
       disabled: false,
     },
   },

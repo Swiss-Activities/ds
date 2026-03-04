@@ -13,19 +13,37 @@ export type ButtonProps = BaseButtonProps &
 
 export function Button({
   children = null,
-  variant = 'primary',
+  variant = 'secondary',
+  size = 'md',
   disabled,
   className,
   ...props
 }: ButtonProps) {
+  const isInstruction = variant === 'instruction'
+  const shouldApplyDisabledStyles = Boolean(disabled) && !isInstruction
+  const isDisabled = Boolean(disabled) || isInstruction
+
   return (
     <TouchableOpacity
       accessibilityRole="button"
-      className={cn(buttonContainerStyles({ variant, disabled }), className)}
-      disabled={disabled}
+      className={cn(
+        buttonContainerStyles({
+          variant,
+          size,
+          disabled: shouldApplyDisabledStyles,
+        }),
+        className,
+      )}
+      disabled={isDisabled}
       {...props}
     >
-      <Text className={cn(buttonTextStyles({ variant }))}>{children}</Text>
+      <Text
+        className={cn(
+          buttonTextStyles({ variant, size, disabled: shouldApplyDisabledStyles }),
+        )}
+      >
+        {children}
+      </Text>
     </TouchableOpacity>
   )
 }

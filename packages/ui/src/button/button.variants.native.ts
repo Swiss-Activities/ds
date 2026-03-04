@@ -1,35 +1,58 @@
 import { cva } from 'class-variance-authority'
 
+import type { ButtonSize, ButtonVariant } from './button.types'
+import { buttonSizes, buttonVariants } from './button.types'
 import {
   sharedButtonBaseStyles,
+  sharedButtonDisabledStyles,
+  sharedButtonSizeStyles,
   sharedButtonVariantStyles,
 } from './button.variants.shared'
 
+const nativeButtonContainerVariantStyles = Object.fromEntries(
+  buttonVariants.map(variant => [variant, sharedButtonVariantStyles[variant].container]),
+) as Record<ButtonVariant, string>
+
+const nativeButtonTextVariantStyles = Object.fromEntries(
+  buttonVariants.map(variant => [variant, sharedButtonVariantStyles[variant].text]),
+) as Record<ButtonVariant, string>
+
+const nativeButtonContainerSizeStyles = Object.fromEntries(
+  buttonSizes.map(size => [size, sharedButtonSizeStyles[size].container]),
+) as Record<ButtonSize, string>
+
+const nativeButtonTextSizeStyles = Object.fromEntries(
+  buttonSizes.map(size => [size, sharedButtonSizeStyles[size].text]),
+) as Record<ButtonSize, string>
+
 export const buttonContainerStyles = cva(sharedButtonBaseStyles.container, {
   variants: {
-    variant: {
-      primary: sharedButtonVariantStyles.primary.container,
-      'ghost-primary': sharedButtonVariantStyles['ghost-primary'].container,
-    },
+    variant: nativeButtonContainerVariantStyles,
+    size: nativeButtonContainerSizeStyles,
     disabled: {
-      true: 'opacity-50',
+      true: sharedButtonDisabledStyles.container,
       false: '',
     },
   },
   defaultVariants: {
-    variant: 'primary',
+    variant: 'secondary',
+    size: 'md',
     disabled: false,
   },
 })
 
 export const buttonTextStyles = cva(sharedButtonBaseStyles.text, {
   variants: {
-    variant: {
-      primary: sharedButtonVariantStyles.primary.text,
-      'ghost-primary': sharedButtonVariantStyles['ghost-primary'].text,
+    variant: nativeButtonTextVariantStyles,
+    size: nativeButtonTextSizeStyles,
+    disabled: {
+      true: '',
+      false: '',
     },
   },
   defaultVariants: {
-    variant: 'primary',
+    variant: 'secondary',
+    size: 'md',
+    disabled: false,
   },
 })

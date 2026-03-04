@@ -9,17 +9,25 @@ export type ButtonProps = BaseButtonProps &
 
 export function Button({
   children = null,
-  variant = 'primary',
+  variant = 'secondary',
+  size = 'md',
   className,
   style,
   disabled,
   ...props
 }: ButtonProps) {
+  const isInstruction = variant === 'instruction'
+  const shouldApplyDisabledStyles = Boolean(disabled) && !isInstruction
+  const isDisabled = Boolean(disabled) || isInstruction
+
   return (
     <button
-      className={cn(buttonStyles({ variant, disabled }), className)}
-      disabled={disabled}
-      style={{ appearance: 'none', border: 0, ...style }}
+      className={cn(
+        buttonStyles({ variant, size, disabled: shouldApplyDisabledStyles }),
+        className,
+      )}
+      disabled={isDisabled}
+      style={{ appearance: 'none', ...style }}
       type="button"
       {...props}
     >
