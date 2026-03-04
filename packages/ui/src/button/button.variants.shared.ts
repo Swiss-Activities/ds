@@ -106,7 +106,7 @@ export const sharedButtonSizeStyles: Record<ButtonSize, SharedButtonSizeStyles> 
     text: '',
   },
   pill: {
-    container: '!min-h-[32px] !rounded-full !px-3 !py-1.5 lg:!min-h-[36px]',
+    container: '!min-h-[32px] !rounded-[9999px] !px-3 !py-1.5 lg:!min-h-[36px]',
     text: '!text-xs sm:!text-sm',
   },
 }
