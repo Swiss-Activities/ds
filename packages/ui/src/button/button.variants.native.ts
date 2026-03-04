@@ -35,7 +35,7 @@ export const buttonContainerStyles = cva(sharedButtonBaseStyles.container, {
     },
   },
   defaultVariants: {
-    variant: 'secondary',
+    variant: 'primary',
     size: 'md',
     disabled: false,
   },
@@ -51,7 +51,7 @@ export const buttonTextStyles = cva(sharedButtonBaseStyles.text, {
     },
   },
   defaultVariants: {
-    variant: 'secondary',
+    variant: 'primary',
     size: 'md',
     disabled: false,
   },
