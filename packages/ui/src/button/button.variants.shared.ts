@@ -101,7 +101,7 @@ export const sharedButtonSizeStyles: Record<ButtonSize, SharedButtonSizeStyles> 
     container: '!min-h-[36px] !px-2.5 !py-1',
     text: '!text-xs lg:!text-[14px]',
   },
-  md: {
+  default: {
     container: '',
     text: '',
   },

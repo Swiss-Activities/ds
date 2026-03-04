@@ -36,7 +36,7 @@ export const buttonStyles = cva(
     },
     defaultVariants: {
       variant: 'primary',
-      size: 'md',
+      size: 'default',
       disabled: false,
     },
   },

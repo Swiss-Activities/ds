@@ -5,7 +5,7 @@ export const textSizes = [
   '2xl',
   'xl',
   'lg',
-  'md',
+  'default',
   'md2',
   'sm',
   'sm2',

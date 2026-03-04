@@ -10,7 +10,7 @@ export type ButtonProps = BaseButtonProps &
 export function Button({
   children = null,
   variant = 'primary',
-  size = 'md',
+  size = 'default',
   className,
   style,
   disabled,

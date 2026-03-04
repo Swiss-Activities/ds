@@ -10,7 +10,7 @@ export type CardProps = BaseCardProps & Omit<ViewProps, 'children'>
 export function Card({
   children = null,
   className,
-  elevation = 'md',
+  elevation = 'default',
   noPadding = false,
   ...props
 }: CardProps) {

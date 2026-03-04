@@ -1,5 +1,6 @@
 export * from './button'
 export * from './card'
 export * from './flow'
+export * from './logo'
 export * from './text'
 export * from './tokens'

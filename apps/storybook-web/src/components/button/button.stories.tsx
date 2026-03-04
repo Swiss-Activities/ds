@@ -30,7 +30,7 @@ const meta = {
   args: {
     children: 'Book Activity',
     variant: 'primary',
-    size: 'md',
+    size: 'default',
     disabled: false,
   },
 } satisfies Meta<typeof Button>
@@ -42,7 +42,7 @@ type Story = StoryObj<typeof meta>
 const storyFor = (
   variant: (typeof buttonVariants)[number],
   children: string = 'Book Activity',
-  size: (typeof buttonSizes)[number] = 'md',
+  size: (typeof buttonSizes)[number] = 'default',
 ): Story => ({
   args: {
     variant,
@@ -71,7 +71,7 @@ export const SizeXSmall: Story = storyFor('primary', 'Book Activity', 'xs')
 export const Disabled: Story = {
   args: {
     variant: 'primary',
-    size: 'md',
+    size: 'default',
     children: 'Book Activity',
     disabled: true,
   },

@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite'
 
 import { Text, textElements, textSizes } from '@swiss-activities/ui'
 
-const sizeOptions = ['default', ...textSizes] as const
+const sizeOptions = ['unset', ...textSizes] as const
 const sizeMapping = Object.fromEntries(
   textSizes.map(size => [size, size]),
 ) as Record<(typeof textSizes)[number], (typeof textSizes)[number]>
@@ -17,7 +17,7 @@ const meta = {
     size: {
       options: sizeOptions,
       mapping: {
-        default: false,
+        unset: false,
         ...sizeMapping,
       },
       control: 'select',

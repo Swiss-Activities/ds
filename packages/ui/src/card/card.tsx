@@ -9,7 +9,7 @@ export type CardProps = BaseCardProps & HTMLAttributes<HTMLDivElement>
 export function Card({
   children = null,
   className,
-  elevation = 'md',
+  elevation = 'default',
   noPadding = false,
   ...props
 }: CardProps) {

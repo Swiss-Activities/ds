@@ -17,7 +17,7 @@ export const buttonVariants = [
 
 export type ButtonVariant = (typeof buttonVariants)[number]
 
-export const buttonSizes = ['xs', 'sm', 'md', 'pill'] as const
+export const buttonSizes = ['xs', 'sm', 'default', 'pill'] as const
 
 export type ButtonSize = (typeof buttonSizes)[number]
 

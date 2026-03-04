@@ -3,6 +3,6 @@ import type { ReactNode } from 'react'
 export type BaseCardProps = {
   children?: ReactNode
   className?: string
-  elevation?: 'md' | 'lg'
+  elevation?: 'default' | 'lg'
   noPadding?: boolean
 }

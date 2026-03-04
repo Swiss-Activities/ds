@@ -10,7 +10,7 @@ const meta = {
   },
   argTypes: {
     elevation: {
-      options: ['md', 'lg'],
+      options: ['default', 'lg'],
       control: 'inline-radio',
     },
     noPadding: {
@@ -24,7 +24,7 @@ type Story = StoryObj<typeof meta>
 
 export const Default: Story = {
   args: {
-    elevation: 'md',
+    elevation: 'default',
     noPadding: false,
   },
   render: args => (

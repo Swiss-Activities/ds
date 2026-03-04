@@ -7,7 +7,7 @@ export const cardStyles = cva(
   {
     variants: {
       elevation: {
-        md: 'shadow-[0px_2px_2px_rgba(0,0,0,0.05)]',
+        default: 'shadow-[0px_2px_2px_rgba(0,0,0,0.05)]',
         lg: 'shadow-md',
       },
       noPadding: {
@@ -16,7 +16,7 @@ export const cardStyles = cva(
       },
     },
     defaultVariants: {
-      elevation: 'md',
+      elevation: 'default',
       noPadding: false,
     },
   },
