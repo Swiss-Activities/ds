@@ -30,6 +30,10 @@
     "src/flow/flow.types.ts",
     "src/flow/flow.variants.native.ts",
     "src/flow/flow.variants.shared.ts",
+    "src/text/index.native.ts",
+    "src/text/text.native.tsx",
+    "src/text/text.types.ts",
+    "src/text/text.variants.shared.ts",
     "src/utils/cn.ts"
   ]
 }

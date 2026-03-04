@@ -28,6 +28,10 @@
     "src/flow/flow.types.ts",
     "src/flow/flow.variants.web.ts",
     "src/flow/flow.variants.shared.ts",
+    "src/text/index.ts",
+    "src/text/text.tsx",
+    "src/text/text.types.ts",
+    "src/text/text.variants.shared.ts",
     "src/utils/cn.ts"
   ]
 }

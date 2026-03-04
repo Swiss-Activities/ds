@@ -13,3 +13,4 @@
 @source "../../packages/ui/src/**/*.native.{ts,tsx}";
 @source "../../packages/ui/src/button/button.variants.shared.ts";
 @source "../../packages/ui/src/flow/flow.variants.shared.ts";
+@source "../../packages/ui/src/text/text.variants.shared.ts";
