@@ -42,6 +42,12 @@ const swissActivitiesColors: ColorToken[] = [
     className: 'bg-sa-bg',
   },
   {
+    label: 'Border',
+    hex: saColors.border,
+    cssVar: '--color-sa-border',
+    className: 'bg-sa-border',
+  },
+  {
     label: 'Blue',
     hex: saColors.blue,
     cssVar: '--color-sa-blue',

@@ -16,6 +16,7 @@ export type GrayColorName = keyof typeof grayColors
 
 export const saColors = {
   bg: '#f9fafb',
+  border: '#e5e5e5',
   blue: '#002f49',
   dark: '#eb002a',
   light: '#fff5f7',

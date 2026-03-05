@@ -1,5 +1,6 @@
 :root {
   --sa-color-bg: #f9fafb;
+  --sa-color-border: #e5e5e5;
   --sa-color-blue: #002f49;
   --sa-color-dark: #eb002a;
   --sa-color-gray-shadow: #a3a3a33d;
@@ -27,6 +28,7 @@
   --color-gray-950: #0a0a0a;
 
   --color-sa-bg: var(--sa-color-bg);
+  --color-sa-border: var(--sa-color-border);
   --color-sa-blue: var(--sa-color-blue);
   --color-sa-dark: var(--sa-color-dark);
   --color-sa-gray-shadow: var(--sa-color-gray-shadow);

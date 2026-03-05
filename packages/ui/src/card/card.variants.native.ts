@@ -1,7 +1,7 @@
 import { cva } from 'class-variance-authority'
 
 export const cardStyles = cva(
-  'h-max overflow-hidden rounded-lg bg-white [outline-width:1px] [outline-style:solid] [outline-color:var(--color-gray-200)]',
+  'h-max overflow-hidden rounded-lg bg-white [outline-width:1px] [outline-style:solid] [outline-color:var(--color-sa-border)]',
   {
     variants: {
       elevation: {
