@@ -26,6 +26,14 @@
       "types": "./src/tokens/index.ts",
       "default": "./src/tokens/index.ts"
     },
+    "./tokens/colors": {
+      "types": "./src/tokens/colors.ts",
+      "default": "./src/tokens/colors.ts"
+    },
+    "./tokens/radius": {
+      "types": "./src/tokens/radius.ts",
+      "default": "./src/tokens/radius.ts"
+    },
     "./styles/sa-theme.css": "./src/styles/sa-theme.css"
   },
   "scripts": {
