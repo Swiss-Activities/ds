@@ -1,5 +1,6 @@
 export * from './badge'
 export * from './button'
+export * from './conditional-wrapper'
 export * from './card'
 export * from './flow'
 export * from './logo'
