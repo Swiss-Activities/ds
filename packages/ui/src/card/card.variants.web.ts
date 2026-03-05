@@ -3,7 +3,7 @@ import { cva } from 'class-variance-authority'
 import { sharedCardBaseStyles } from './card.variants.shared'
 
 export const cardStyles = cva(
-  `${sharedCardBaseStyles} outline outline-1 outline-border`,
+  `${sharedCardBaseStyles} outline outline-1 outline-gray-200`,
   {
     variants: {
       elevation: {
