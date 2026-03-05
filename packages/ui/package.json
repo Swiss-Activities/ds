@@ -34,6 +34,18 @@
       "types": "./src/tokens/radius.ts",
       "default": "./src/tokens/radius.ts"
     },
+    "./badge/badge.types": {
+      "types": "./src/badge/badge.types.ts",
+      "default": "./src/badge/badge.types.ts"
+    },
+    "./card/card.types": {
+      "types": "./src/card/card.types.ts",
+      "default": "./src/card/card.types.ts"
+    },
+    "./text/text.types": {
+      "types": "./src/text/text.types.ts",
+      "default": "./src/text/text.types.ts"
+    },
     "./styles/sa-theme.css": "./src/styles/sa-theme.css"
   },
   "scripts": {
