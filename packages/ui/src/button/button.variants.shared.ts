@@ -26,10 +26,10 @@ export const sharedButtonVariantStyles: Record<
   SharedButtonVariantStyles
 > = {
   primary: {
-    container: 'border border-sa-primary bg-sa-primary',
+    container: 'border border-primary bg-primary',
     text: 'text-white',
     webInteraction:
-      'hover:text-white sm:hover:border-sa-dark sm:hover:bg-sa-dark focus-visible:outline-sa-dark',
+      'hover:text-white sm:hover:border-dark sm:hover:bg-dark focus-visible:outline-dark',
   },
   secondary: {
     container: 'border border-gray-400 bg-white',
@@ -39,14 +39,14 @@ export const sharedButtonVariantStyles: Record<
   },
   tertiary: {
     container: 'border border-transparent bg-transparent',
-    text: 'text-sa-primary',
-    webInteraction: 'sm:hover:underline focus-visible:outline-sa-primary',
+    text: 'text-primary',
+    webInteraction: 'sm:hover:underline focus-visible:outline-primary',
   },
   outline: {
-    container: 'border border-sa-primary bg-transparent',
-    text: 'text-sa-primary',
+    container: 'border border-primary bg-transparent',
+    text: 'text-primary',
     webInteraction:
-      'sm:hover:bg-sa-primary sm:hover:text-white focus-visible:outline-sa-primary',
+      'sm:hover:bg-primary sm:hover:text-white focus-visible:outline-primary',
   },
   'outline-gray': {
     container: 'border border-gray-200 bg-transparent',
@@ -60,15 +60,15 @@ export const sharedButtonVariantStyles: Record<
       'sm:hover:border-gray-100 sm:hover:bg-gray-100 focus-visible:outline-gray-300',
   },
   'blue-outline': {
-    container: 'border border-sa-blue bg-transparent',
-    text: 'text-sa-blue',
+    container: 'border border-blue bg-transparent',
+    text: 'text-blue',
     webInteraction:
-      'sm:hover:border-sa-blue sm:hover:bg-sa-blue sm:hover:text-white focus-visible:outline-sa-blue',
+      'sm:hover:border-blue sm:hover:bg-blue sm:hover:text-white focus-visible:outline-blue',
   },
   blue: {
-    container: 'border border-sa-blue bg-sa-blue',
+    container: 'border border-blue bg-blue',
     text: 'text-white',
-    webInteraction: 'sm:hover:brightness-[125%] focus-visible:outline-sa-blue',
+    webInteraction: 'sm:hover:brightness-[125%] focus-visible:outline-blue',
   },
   gray: {
     container: 'border border-[#A9A2A3] bg-[#A9A2A3]',
@@ -76,14 +76,14 @@ export const sharedButtonVariantStyles: Record<
     webInteraction: 'focus-visible:outline-gray-500',
   },
   instruction: {
-    container: 'pointer-events-none border border-sa-light bg-sa-light',
-    text: 'text-sa-primary',
+    container: 'pointer-events-none border border-light bg-light',
+    text: 'text-primary',
     webInteraction: '',
   },
   link: {
     container: 'min-h-[auto] w-max border-none bg-transparent p-0',
-    text: 'text-sa-primary',
-    webInteraction: 'hover:underline focus-visible:outline-sa-primary',
+    text: 'text-primary',
+    webInteraction: 'hover:underline focus-visible:outline-primary',
   },
   linkGray: {
     container: 'min-h-[auto] w-max border-none bg-transparent p-0',

@@ -9,12 +9,12 @@ const meta = {
     },
   },
   render: () => (
-    <div className="relative min-h-screen overflow-hidden bg-gradient-to-b from-white to-sa-bg">
+    <div className="relative min-h-screen overflow-hidden bg-gradient-to-b from-white to-bg">
       <div className="pointer-events-none absolute -left-20 -top-20 h-72 w-72 rounded-full bg-gray-200/60 blur-3xl" />
-      <div className="pointer-events-none absolute -right-24 top-10 h-80 w-80 rounded-full bg-sa-bg blur-3xl" />
+      <div className="pointer-events-none absolute -right-24 top-10 h-80 w-80 rounded-full bg-bg blur-3xl" />
 
       <main className="relative mx-auto flex min-h-screen w-full max-w-5xl items-center px-6 py-16">
-        <section className="w-full rounded-[28px] border border-gray-200 bg-white/80 p-8 shadow-[0_1px_3px_var(--color-sa-gray-shadow)] backdrop-blur sm:p-12">
+        <section className="w-full rounded-[28px] border border-gray-200 bg-white/80 p-8 shadow-[0_1px_3px_var(--color-gray-shadow)] backdrop-blur sm:p-12">
           <h1 className="text-balance text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
             Welcome to the Swiss Activities Design System
           </h1>

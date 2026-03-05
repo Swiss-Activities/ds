@@ -14,44 +14,44 @@ const swissActivitiesColors: ColorToken[] = [
   {
     label: 'Primary',
     hex: saColors.primary,
-    cssVar: '--color-sa-primary',
-    className: 'bg-sa-primary',
+    cssVar: '--color-primary',
+    className: 'bg-primary',
   },
   {
     label: 'Dark',
     hex: saColors.dark,
-    cssVar: '--color-sa-dark',
-    className: 'bg-sa-dark',
+    cssVar: '--color-dark',
+    className: 'bg-dark',
   },
   {
     label: 'Medium',
     hex: saColors.medium,
-    cssVar: '--color-sa-medium',
-    className: 'bg-sa-medium',
+    cssVar: '--color-medium',
+    className: 'bg-medium',
   },
   {
     label: 'Light',
     hex: saColors.light,
-    cssVar: '--color-sa-light',
-    className: 'bg-sa-light',
+    cssVar: '--color-light',
+    className: 'bg-light',
   },
   {
     label: 'Background',
     hex: saColors.bg,
-    cssVar: '--color-sa-bg',
-    className: 'bg-sa-bg',
+    cssVar: '--color-bg',
+    className: 'bg-bg',
   },
   {
     label: 'Border',
     hex: saColors.border,
-    cssVar: '--color-sa-border',
-    className: 'bg-sa-border',
+    cssVar: '--color-border',
+    className: 'bg-border',
   },
   {
     label: 'Blue',
     hex: saColors.blue,
-    cssVar: '--color-sa-blue',
-    className: 'bg-sa-blue',
+    cssVar: '--color-blue',
+    className: 'bg-blue',
   },
 ]
 
@@ -161,7 +161,7 @@ function ColorGrid({
 
 function ColorsReference() {
   return (
-    <main className="min-h-screen bg-sa-bg px-6 py-10 sm:px-10">
+    <main className="min-h-screen bg-bg px-6 py-10 sm:px-10">
       <div className="mx-auto max-w-6xl">
         <h1 className="text-3xl font-semibold tracking-tight text-gray-900 sm:text-4xl">
           Swiss Activities Color Tokens
