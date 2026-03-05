@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
 import { useState } from 'react'
 
-import { saColors } from '@swiss-activities/ui/tokens'
+import { grayColors, saColors } from '@swiss-activities/ui/tokens'
 
 type ColorToken = {
   className: string
@@ -49,19 +49,14 @@ const swissActivitiesColors: ColorToken[] = [
   },
 ]
 
-const grayColors: ColorToken[] = [
-  { label: 'Gray 50', hex: '#fafafa', cssVar: '--color-gray-50', className: 'bg-gray-50' },
-  { label: 'Gray 100', hex: '#f5f5f5', cssVar: '--color-gray-100', className: 'bg-gray-100' },
-  { label: 'Gray 200', hex: '#e5e5e5', cssVar: '--color-gray-200', className: 'bg-gray-200' },
-  { label: 'Gray 300', hex: '#d4d4d4', cssVar: '--color-gray-300', className: 'bg-gray-300' },
-  { label: 'Gray 400', hex: '#a3a3a3', cssVar: '--color-gray-400', className: 'bg-gray-400' },
-  { label: 'Gray 500', hex: '#737373', cssVar: '--color-gray-500', className: 'bg-gray-500' },
-  { label: 'Gray 600', hex: '#525252', cssVar: '--color-gray-600', className: 'bg-gray-600' },
-  { label: 'Gray 700', hex: '#404040', cssVar: '--color-gray-700', className: 'bg-gray-700' },
-  { label: 'Gray 800', hex: '#262626', cssVar: '--color-gray-800', className: 'bg-gray-800' },
-  { label: 'Gray 900', hex: '#171717', cssVar: '--color-gray-900', className: 'bg-gray-900' },
-  { label: 'Gray 950', hex: '#0a0a0a', cssVar: '--color-gray-950', className: 'bg-gray-950' },
-]
+const neutralGrayColors: ColorToken[] = Object.entries(grayColors).map(
+  ([scale, hex]) => ({
+    label: `Gray ${scale}`,
+    hex,
+    cssVar: `--color-gray-${scale}`,
+    className: `bg-gray-${scale}`,
+  }),
+)
 
 async function copyText(value: string): Promise<boolean> {
   if (typeof navigator !== 'undefined' && navigator.clipboard?.writeText) {
@@ -172,7 +167,7 @@ function ColorsReference() {
 
         <div className="mt-8 space-y-8">
           <ColorGrid title="Swiss Activities Palette" tokens={swissActivitiesColors} />
-          <ColorGrid title="Neutral Gray Palette" tokens={grayColors} />
+          <ColorGrid title="Neutral Gray Palette" tokens={neutralGrayColors} />
         </div>
       </div>
     </main>
