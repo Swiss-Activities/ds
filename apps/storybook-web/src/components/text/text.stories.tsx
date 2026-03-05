@@ -29,9 +29,6 @@ const meta = {
     bold: {
       control: 'boolean',
     },
-    display: {
-      control: 'boolean',
-    },
     black: {
       control: 'boolean',
     },
@@ -50,7 +47,6 @@ const meta = {
     size: 'sm',
     as: 'p',
     bold: false,
-    display: false,
     black: false,
     gray: false,
   },
@@ -74,6 +70,13 @@ export const Muted: Story = {
   args: {
     gray: true,
     children: 'Supporting text for activity cards and page sections.',
+  },
+}
+
+export const Display: Story = {
+  args: {
+    size: 'display',
+    children: 'Display body text scales up on larger breakpoints.',
   },
 }
 

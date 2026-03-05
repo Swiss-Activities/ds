@@ -20,7 +20,6 @@ export const Text = forwardRef<HTMLElement, TextProps>(function Text(
     size = 'sm',
     as = 'p',
     bold = false,
-    display = false,
     black = false,
     gray = false,
     ...props
@@ -38,7 +37,6 @@ export const Text = forwardRef<HTMLElement, TextProps>(function Text(
         textStyles({
           size: normalizedSize,
           bold,
-          display,
           black,
           gray,
         }),

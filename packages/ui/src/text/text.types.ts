@@ -7,6 +7,7 @@ export const textSizes = [
   'lg',
   'default',
   'md2',
+  'display',
   'sm',
   'sm2',
   'xs',
@@ -35,7 +36,6 @@ export type BaseTextProps = {
   size?: TextSize
   as?: TextElement
   bold?: boolean
-  display?: boolean
   black?: boolean
   gray?: boolean
 }

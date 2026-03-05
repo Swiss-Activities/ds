@@ -9,6 +9,7 @@ export const textVariantSizes = [
   'lg',
   'default',
   'md2',
+  'display',
   'sm',
   'sm2',
   'xs',
@@ -40,6 +41,7 @@ export const textStyles = cva('break-words', {
       lg: 'text-black font-semibold text-[17px] sm:text-[20px] lg:text-[24px]',
       default: 'text-black font-semibold leading-snug text-[16px] xs:text-[18px]',
       md2: 'text-black font-semibold leading-snug text-[16px] lg:text-[18px]',
+      display: `${smBaseTextStyles} lg:!text-[16px] lg:!leading-relaxed`,
       sm: smBaseTextStyles,
       sm2: `${smBaseTextStyles} lg:!text-[14px]`,
       xs: `${smBaseTextStyles} !text-[12px]`,
@@ -47,10 +49,6 @@ export const textStyles = cva('break-words', {
       none: smBaseTextStyles,
     },
     bold: {
-      true: '',
-      false: '',
-    },
-    display: {
       true: '',
       false: '',
     },
@@ -74,21 +72,10 @@ export const textStyles = cva('break-words', {
       bold: true,
       class: 'font-semibold',
     },
-    {
-      size: 'sm',
-      display: true,
-      class: 'lg:!text-[16px] lg:!leading-relaxed',
-    },
-    {
-      size: 'none',
-      display: true,
-      class: 'lg:!text-[16px] lg:!leading-relaxed',
-    },
   ],
   defaultVariants: {
     size: 'sm',
     bold: false,
-    display: false,
     black: false,
     gray: false,
   },

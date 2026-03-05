@@ -16,7 +16,6 @@ export function Text({
   size = 'sm',
   as = 'p',
   bold = false,
-  display = false,
   black = false,
   gray = false,
   ...props
@@ -29,7 +28,6 @@ export function Text({
         textStyles({
           size: normalizedSize,
           bold,
-          display,
           black,
           gray,
         }),
