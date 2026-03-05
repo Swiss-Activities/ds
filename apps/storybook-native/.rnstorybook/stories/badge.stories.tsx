@@ -6,7 +6,7 @@ import { Badge } from '@swiss-activities/ui'
 import { badgeVariants } from '@swiss-activities/ui/badge/badge.types'
 
 const meta = {
-  title: 'Components/Badge',
+  title: 'Web & Mobile/Badge',
   component: Badge,
   argTypes: {
     variant: {

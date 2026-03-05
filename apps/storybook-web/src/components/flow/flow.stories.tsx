@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite'
 import { Button, Flow } from '@swiss-activities/ui'
 
 const meta = {
-  title: 'Components/Flow',
+  title: 'Web & Mobile/Flow',
   component: Flow,
   parameters: {
     layout: 'centered',

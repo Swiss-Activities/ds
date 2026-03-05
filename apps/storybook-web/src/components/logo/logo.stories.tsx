@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite'
 import { Logo, logoSizes } from '@swiss-activities/ui'
 
 const meta = {
-  title: 'Components/Logo',
+  title: 'Web & Mobile/Logo',
   component: Logo,
   parameters: {
     layout: 'centered',

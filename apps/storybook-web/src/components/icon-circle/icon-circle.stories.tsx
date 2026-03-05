@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite'
 import { IconCircle } from '@swiss-activities/ui'
 
 const meta = {
-  title: 'Components/IconCircle',
+  title: 'Web & Mobile/IconCircle',
   component: IconCircle,
   parameters: {
     layout: 'centered',

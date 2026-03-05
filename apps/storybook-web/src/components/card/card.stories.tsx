@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite'
 import { Button, Card, Flow } from '@swiss-activities/ui'
 
 const meta = {
-  title: 'Components/Card',
+  title: 'Web & Mobile/Card',
   component: Card,
   parameters: {
     layout: 'centered',
