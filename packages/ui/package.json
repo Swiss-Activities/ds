@@ -42,6 +42,14 @@
       "types": "./src/card/card.types.ts",
       "default": "./src/card/card.types.ts"
     },
+    "./skeleton/skeleton.types": {
+      "types": "./src/skeleton/skeleton.types.ts",
+      "default": "./src/skeleton/skeleton.types.ts"
+    },
+    "./tokens/animations": {
+      "types": "./src/tokens/animations.ts",
+      "default": "./src/tokens/animations.ts"
+    },
     "./text/text.types": {
       "types": "./src/text/text.types.ts",
       "default": "./src/text/text.types.ts"
