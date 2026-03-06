@@ -2,8 +2,8 @@ import React from 'react'
 import type { Meta, StoryObj } from '@storybook/react-native'
 import { Text, View } from 'react-native-css/components'
 
-import { Rating, ratingSizes } from '@swiss-activities/ui'
-import type { RatingSize } from '@swiss-activities/ui/rating/rating.types'
+import { Rating } from '@swiss-activities/ui'
+import { ratingSizes, type RatingSize } from '@swiss-activities/ui/rating/rating.types'
 
 const meta = {
   title: 'Web & Mobile/Rating',

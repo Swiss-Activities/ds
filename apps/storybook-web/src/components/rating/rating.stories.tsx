@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
 
-import { Rating, ratingSizes } from '@swiss-activities/ui'
-import type { RatingSize } from '@swiss-activities/ui/rating/rating.types'
+import { Rating } from '@swiss-activities/ui'
+import { ratingSizes, type RatingSize } from '@swiss-activities/ui/rating/rating.types'
 
 const meta = {
   title: 'Web & Mobile/Rating',
