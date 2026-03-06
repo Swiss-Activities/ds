@@ -1,6 +1,7 @@
 export * from './button/index.native'
 export * from './card/index.native'
 export * from './flow/index.native'
+export * from './image-card/index.native'
 export * from './logo/index.native'
 export * from './skeleton/index.native'
 export * from './text/index.native'

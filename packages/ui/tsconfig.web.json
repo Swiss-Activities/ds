@@ -41,6 +41,9 @@
     "src/text/text.tsx",
     "src/text/text.types.ts",
     "src/text/text.variants.shared.ts",
-    "src/utils/cn.ts"
+    "src/utils/cn.ts",
+    "src/image-card/index.ts",
+    "src/image-card/image-card.tsx",
+    "src/image-card/image-card.types.ts"
   ]
 }

@@ -54,6 +54,10 @@
       "types": "./src/text/text.types.ts",
       "default": "./src/text/text.types.ts"
     },
+    "./image-card/image-card.types": {
+      "types": "./src/image-card/image-card.types.ts",
+      "default": "./src/image-card/image-card.types.ts"
+    },
     "./styles/sa-theme.css": "./src/styles/sa-theme.css"
   },
   "scripts": {
