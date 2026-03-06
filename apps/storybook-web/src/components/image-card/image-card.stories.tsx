@@ -22,7 +22,7 @@ export const Default: Story = {
         alt="Grindelwald First Cliff Walk"
       />
     ),
-    button: <Button>Add Ticket</Button>,
+    button: <Button variant="secondary" size="sm">Add Ticket</Button>,
   },
   render: args => (
     <div className="w-[360px] max-w-full">

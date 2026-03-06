@@ -24,7 +24,7 @@ export const Default: Story = {
         resizeMode="cover"
       />
     ),
-    button: <Button>Add Ticket</Button>,
+    button: <Button variant="secondary" size="sm">Add Ticket</Button>,
   },
   render: args => (
     <View style={{ padding: 16, width: 360 }}>
