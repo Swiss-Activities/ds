@@ -44,6 +44,9 @@
     "src/utils/cn.ts",
     "src/image-card/index.ts",
     "src/image-card/image-card.tsx",
-    "src/image-card/image-card.types.ts"
+    "src/image-card/image-card.types.ts",
+    "src/rating/index.ts",
+    "src/rating/rating.tsx",
+    "src/rating/rating.types.ts"
   ]
 }

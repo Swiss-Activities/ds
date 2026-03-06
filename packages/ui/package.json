@@ -58,6 +58,10 @@
       "types": "./src/image-card/image-card.types.ts",
       "default": "./src/image-card/image-card.types.ts"
     },
+    "./rating/rating.types": {
+      "types": "./src/rating/rating.types.ts",
+      "default": "./src/rating/rating.types.ts"
+    },
     "./styles/sa-theme.css": "./src/styles/sa-theme.css"
   },
   "scripts": {
