@@ -17,9 +17,6 @@ const meta = {
     amount: {
       control: { type: 'number', min: 1, max: 10 },
     },
-    full: {
-      control: 'boolean',
-    },
     loading: {
       control: 'boolean',
     },
@@ -37,18 +34,6 @@ export const Default: Story = {
   },
   render: args => (
     <div className="w-[360px]">
-      <Skeleton {...args} />
-    </div>
-  ),
-}
-
-export const Full: Story = {
-  args: {
-    loading: true,
-    full: true,
-  },
-  render: args => (
-    <div className="relative h-48 w-[360px] rounded-lg border border-gray-200">
       <Skeleton {...args} />
     </div>
   ),
