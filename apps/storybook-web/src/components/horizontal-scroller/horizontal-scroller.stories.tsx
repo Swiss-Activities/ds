@@ -14,7 +14,7 @@ const items = Array.from({ length: 15 }, (_, i) => (
 ))
 
 const meta = {
-  title: 'Web Only/HorizontalScroller',
+  title: 'Web & Mobile/HorizontalScroller',
   component: HorizontalScroller,
   parameters: { layout: 'padded' },
   argTypes: {
