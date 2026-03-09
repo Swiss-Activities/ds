@@ -34,6 +34,10 @@
       "types": "./src/tokens/radius.ts",
       "default": "./src/tokens/radius.ts"
     },
+    "./breadcrumbs/breadcrumbs.types": {
+      "types": "./src/breadcrumbs/breadcrumbs.types.ts",
+      "default": "./src/breadcrumbs/breadcrumbs.types.ts"
+    },
     "./badge/badge.types": {
       "types": "./src/badge/badge.types.ts",
       "default": "./src/badge/badge.types.ts"

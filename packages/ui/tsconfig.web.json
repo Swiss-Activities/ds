@@ -12,6 +12,9 @@
   },
   "include": [
     "src/index.ts",
+    "src/breadcrumbs/index.ts",
+    "src/breadcrumbs/breadcrumbs.tsx",
+    "src/breadcrumbs/breadcrumbs.types.ts",
     "src/button/index.ts",
     "src/button/button.tsx",
     "src/button/button.types.ts",

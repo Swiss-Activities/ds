@@ -14,6 +14,9 @@
   "include": [
     "nativewind-env.d.ts",
     "src/index.native.ts",
+    "src/breadcrumbs/index.native.ts",
+    "src/breadcrumbs/breadcrumbs.native.tsx",
+    "src/breadcrumbs/breadcrumbs.types.ts",
     "src/button/index.native.ts",
     "src/button/button.native.tsx",
     "src/button/button.types.ts",
