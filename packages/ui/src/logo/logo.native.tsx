@@ -3,6 +3,7 @@ import { View } from 'react-native-css/components'
 import { SvgXml } from 'react-native-svg'
 
 import { cn } from '../utils/cn'
+import { Text } from '../text/text.native'
 import type { BaseLogoProps } from './logo.types'
 import { getLogoDimensions, getLogoMarkup } from './logo.shared'
 
@@ -36,7 +37,7 @@ export function Logo({
   return (
     <View className={cn('flex-row items-center gap-2', className)} {...props}>
       <View className="shrink-0">{svg}</View>
-      {children}
+      <Text as="span" size="default" bold black>{children}</Text>
     </View>
   )
 }

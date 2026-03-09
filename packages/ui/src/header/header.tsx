@@ -10,7 +10,7 @@ export function Header({ children, className, loading, ...props }: HeaderProps) 
   return (
     <header
       className={cn(
-        'fixed top-0 inset-x-0 z-50 flex h-14 items-center justify-between bg-white px-4 shadow-sm border-b border-border backdrop-blur-md',
+        'fixed top-0 inset-x-0 z-50 flex h-[var(--h-header)] items-center justify-between bg-white px-4 shadow-[0_1px_2px_0_rgba(0,0,0,0.05)] border-solid border-gray-200 border-l-0 border-r-0 border-t-0 border-b backdrop-blur-md',
         className,
       )}
       {...props}

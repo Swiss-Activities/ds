@@ -1,10 +1,11 @@
 import type { ImgHTMLAttributes } from 'react'
 
 import { cn } from '../utils/cn'
+import { Text } from '../text'
 import type { BaseLogoProps } from './logo.types'
 import { getLogoDimensions, getLogoMarkup } from './logo.shared'
 
-export type LogoProps = BaseLogoProps & ImgHTMLAttributes<HTMLImageElement>
+export type LogoProps = BaseLogoProps & Omit<ImgHTMLAttributes<HTMLImageElement>, 'children'>
 
 const encodedLogoSrc = {
   default: `data:image/svg+xml;utf8,${encodeURIComponent(getLogoMarkup('default'))}`,
@@ -37,7 +38,7 @@ export function Logo({
   return (
     <span className={cn('inline-flex items-center gap-2', className)}>
       {img}
-      {children}
+      <Text as="span" size="default" bold black>{children}</Text>
     </span>
   )
 }
