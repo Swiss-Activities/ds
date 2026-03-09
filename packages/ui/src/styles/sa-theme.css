@@ -41,3 +41,10 @@
   --radius-lg: var(--sa-radius-lg);
   --radius-xl: var(--sa-radius-xl);
 }
+
+@utility no-scrollbar {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}

@@ -1,4 +1,5 @@
 export * from './badge'
+export * from './horizontal-scroller'
 export * from './breadcrumbs'
 export * from './button'
 export * from './conditional-wrapper'

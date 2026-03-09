@@ -66,6 +66,10 @@
       "types": "./src/rating/rating.types.ts",
       "default": "./src/rating/rating.types.ts"
     },
+    "./horizontal-scroller/horizontal-scroller.types": {
+      "types": "./src/horizontal-scroller/horizontal-scroller.types.ts",
+      "default": "./src/horizontal-scroller/horizontal-scroller.types.ts"
+    },
     "./styles/sa-theme.css": "./src/styles/sa-theme.css"
   },
   "scripts": {

@@ -52,6 +52,9 @@
     "src/image-card/image-card.types.ts",
     "src/rating/index.native.ts",
     "src/rating/rating.native.tsx",
-    "src/rating/rating.types.ts"
+    "src/rating/rating.types.ts",
+    "src/horizontal-scroller/index.native.ts",
+    "src/horizontal-scroller/horizontal-scroller.native.tsx",
+    "src/horizontal-scroller/horizontal-scroller.types.ts"
   ]
 }
