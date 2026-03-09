@@ -15,19 +15,29 @@ export function Logo({
   size = 'default',
   className,
   alt = 'Swiss Activities',
+  children,
   ...props
 }: LogoProps) {
   const dimensions = getLogoDimensions(size)
   const src = size === 'sm' ? encodedLogoSrc.sm : encodedLogoSrc.default
 
-  return (
+  const img = (
     <img
       alt={alt}
-      className={cn('inline-block shrink-0', className)}
+      className={cn('inline-block shrink-0', !children && className)}
       height={dimensions.height}
       src={src}
       width={dimensions.width}
       {...props}
     />
+  )
+
+  if (!children) return img
+
+  return (
+    <span className={cn('inline-flex items-center gap-2', className)}>
+      {img}
+      {children}
+    </span>
   )
 }

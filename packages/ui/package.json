@@ -66,6 +66,10 @@
       "types": "./src/rating/rating.types.ts",
       "default": "./src/rating/rating.types.ts"
     },
+    "./header/header.types": {
+      "types": "./src/header/header.types.ts",
+      "default": "./src/header/header.types.ts"
+    },
     "./horizontal-scroller/horizontal-scroller.types": {
       "types": "./src/horizontal-scroller/horizontal-scroller.types.ts",
       "default": "./src/horizontal-scroller/horizontal-scroller.types.ts"
