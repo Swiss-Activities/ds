@@ -189,7 +189,7 @@ export function HorizontalScroller({
       <ul
         ref={scrollContainerRef}
         className={cn(
-          'no-scrollbar flex snap-x overflow-x-auto [&>*]:snap-center',
+          'no-scrollbar flex snap-x gap-2 overflow-x-auto [&>*]:snap-center',
           classNameInner,
         )}
       >

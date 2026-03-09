@@ -30,7 +30,7 @@ export function HorizontalScroller({
         horizontal
         showsHorizontalScrollIndicator={false}
       >
-        <View className={cn('flex flex-row', classNameInner)}>{children}</View>
+        <View className={cn('flex flex-row gap-2', classNameInner)}>{children}</View>
       </ScrollView>
     </View>
   )
