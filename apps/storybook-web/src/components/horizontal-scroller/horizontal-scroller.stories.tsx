@@ -34,7 +34,6 @@ type Story = StoryObj<typeof meta>
 export const White: Story = {
   args: {
     variant: 'white',
-    classNameInner: 'gap-2',
     children: items,
   },
 }
@@ -42,7 +41,6 @@ export const White: Story = {
 export const WhiteButton: Story = {
   args: {
     variant: 'white-button',
-    classNameInner: 'gap-2',
     children: items,
   },
 }
@@ -50,7 +48,6 @@ export const WhiteButton: Story = {
 export const Black: Story = {
   args: {
     variant: 'black',
-    classNameInner: 'gap-2',
     children: items,
   },
   decorators: [
@@ -65,7 +62,6 @@ export const Black: Story = {
 export const WithActiveId: Story = {
   args: {
     variant: 'white',
-    classNameInner: 'gap-2',
     activeId: '10',
     children: Array.from({ length: 15 }, (_, i) => (
       <li
