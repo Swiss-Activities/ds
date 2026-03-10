@@ -6,50 +6,55 @@ import { buttonStyles } from './button.variants.web'
 
 type ButtonAsButton = BaseButtonProps &
   { as?: 'button' } &
-  ButtonHTMLAttributes<HTMLButtonElement>
+  Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'children'>
 
 type ButtonAsAnchor = BaseButtonProps &
   { as: 'a' } &
-  AnchorHTMLAttributes<HTMLAnchorElement>
+  Omit<AnchorHTMLAttributes<HTMLAnchorElement>, 'children'>
 
 export type ButtonProps = ButtonAsButton | ButtonAsAnchor
 
-export function Button({
-  children = null,
-  variant = 'primary',
-  size = 'default',
-  className,
-  style,
-  disabled,
-  as: Tag = 'button',
-  ...props
-}: ButtonProps) {
+export function Button(props: ButtonProps) {
+  const {
+    children = null,
+    variant = 'primary',
+    size = 'default',
+    className,
+    style,
+    as: Tag = 'button',
+  } = props
+
   const isInstruction = variant === 'instruction'
+  const disabled = 'disabled' in props ? props.disabled : undefined
   const shouldApplyDisabledStyles = Boolean(disabled) && !isInstruction
   const isDisabled = Boolean(disabled) || isInstruction
 
-  const sharedProps = {
-    className: cn(
-      buttonStyles({ variant, size, disabled: shouldApplyDisabledStyles }),
-      className,
-    ),
-    style: { appearance: 'none' as const, ...style },
-  }
+  const classes = cn(
+    buttonStyles({ variant, size, disabled: shouldApplyDisabledStyles }),
+    className,
+  )
 
   if (Tag === 'a') {
+    const { children: _, variant: _v, size: _s, className: _c, style: _st, as: _a, ...anchorProps } = props as ButtonAsAnchor & BaseButtonProps
     return (
-      <a {...sharedProps} {...(props as AnchorHTMLAttributes<HTMLAnchorElement>)}>
+      <a
+        className={classes}
+        style={{ appearance: 'none', ...style }}
+        {...anchorProps}
+      >
         {children}
       </a>
     )
   }
 
+  const { children: _, variant: _v, size: _s, className: _c, style: _st, as: _a, ...buttonProps } = props as ButtonAsButton & BaseButtonProps
   return (
     <button
-      {...sharedProps}
+      className={classes}
+      style={{ appearance: 'none', ...style }}
       disabled={isDisabled}
       type="button"
-      {...(props as ButtonHTMLAttributes<HTMLButtonElement>)}
+      {...buttonProps}
     >
       {children}
     </button>
