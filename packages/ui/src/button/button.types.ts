@@ -27,4 +27,5 @@ export type BaseButtonProps = {
   children?: ReactNode
   variant?: ButtonVariant
   size?: ButtonSize
+  as?: 'button' | 'a'
 }

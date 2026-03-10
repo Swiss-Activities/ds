@@ -13,7 +13,7 @@ export type SharedButtonSizeStyles = {
 
 export const sharedButtonBaseStyles = {
   container:
-    'group inline-flex h-[max-content] max-h-max min-h-[48px] cursor-pointer appearance-none items-center justify-center rounded-lg border-solid px-3.5 py-2.5 text-center transition duration-100 ease-in',
+    'group inline-flex h-[max-content] max-h-max min-h-[48px] cursor-pointer appearance-none items-center justify-center rounded-md border-solid px-3.5 py-2.5 text-center transition duration-100 ease-in',
   text: 'text-[14px] font-medium',
 } as const
 
