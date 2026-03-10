@@ -57,11 +57,13 @@ function ArrowButton({
           {
             'h-full bg-transparent from-white text-black':
               variant === 'white' || variant === 'white-button',
+            'h-full bg-transparent from-bg text-black':
+              variant === 'bg',
             'bg-gradient-to-l':
-              (variant === 'white' || variant === 'white-button') &&
+              (variant === 'white' || variant === 'white-button' || variant === 'bg') &&
               direction === 'right',
             'bg-gradient-to-r':
-              (variant === 'white' || variant === 'white-button') &&
+              (variant === 'white' || variant === 'white-button' || variant === 'bg') &&
               direction === 'left',
             'h-8 rounded-full bg-white/20 text-white backdrop-blur':
               variant === 'black',
