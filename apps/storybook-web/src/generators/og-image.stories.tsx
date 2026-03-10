@@ -28,13 +28,6 @@ function OgTemplate({ title, subtitle, imageUrl }: OgTemplateProps) {
       }}
     >
       <div style={{ display: 'flex', flex: 1 }}>
-        {/* Left accent bar */}
-        <div
-          style={{
-            width: 16,
-            backgroundColor: saColors.primary,
-          }}
-        />
         {/* Content area */}
         <div
           style={{
@@ -98,13 +91,6 @@ function OgTemplate({ title, subtitle, imageUrl }: OgTemplateProps) {
           </div>
         )}
       </div>
-      {/* Bottom stripe */}
-      <div
-        style={{
-          height: 12,
-          backgroundColor: saColors.primary,
-        }}
-      />
     </div>
   )
 }
