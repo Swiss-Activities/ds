@@ -13,9 +13,10 @@ const logoDataUrl = `data:image/svg+xml;base64,${btoa(logoMarkupDefault)}`
 type OgTemplateProps = {
   title: string
   subtitle: string
+  imageUrl: string
 }
 
-function OgTemplate({ title, subtitle }: OgTemplateProps) {
+function OgTemplate({ title, subtitle, imageUrl }: OgTemplateProps) {
   return (
     <div
       style={{
@@ -56,9 +57,8 @@ function OgTemplate({ title, subtitle }: OgTemplateProps) {
             style={{
               fontSize: 48,
               fontWeight: 700,
-              color: saColors.blue,
+              color: grayColors[900],
               lineHeight: 1.2,
-              maxWidth: 900,
             }}
           >
             {title}
@@ -72,13 +72,31 @@ function OgTemplate({ title, subtitle }: OgTemplateProps) {
                 color: grayColors[600],
                 marginTop: 16,
                 lineHeight: 1.4,
-                maxWidth: 900,
               }}
             >
               {subtitle}
             </div>
           )}
         </div>
+        {/* Image area (50/50 split) */}
+        {imageUrl && (
+          <div
+            style={{
+              display: 'flex',
+              width: '50%',
+              height: '100%',
+            }}
+          >
+            <img
+              src={imageUrl}
+              style={{
+                width: '100%',
+                height: '100%',
+                objectFit: 'cover',
+              }}
+            />
+          </div>
+        )}
       </div>
       {/* Bottom stripe */}
       <div
@@ -99,6 +117,7 @@ async function loadFont(url: string): Promise<ArrayBuffer> {
 function OgImageGenerator() {
   const [title, setTitle] = useState('Your OG Image Title')
   const [subtitle, setSubtitle] = useState('Optional subtitle text goes here')
+  const [imageUrl, setImageUrl] = useState('')
   const [svgDataUrl, setSvgDataUrl] = useState<string | null>(null)
   const [fonts, setFonts] = useState<ArrayBuffer[] | null>(null)
   const [isGenerating, setIsGenerating] = useState(false)
@@ -119,7 +138,7 @@ function OgImageGenerator() {
     let cancelled = false
 
     satori(
-      <OgTemplate title={title || 'Enter a title'} subtitle={subtitle} />,
+      <OgTemplate title={title || 'Enter a title'} subtitle={subtitle} imageUrl={imageUrl} />,
       {
         width: OG_WIDTH,
         height: OG_HEIGHT,
@@ -137,7 +156,7 @@ function OgImageGenerator() {
     return () => {
       cancelled = true
     }
-  }, [title, subtitle, fonts])
+  }, [title, subtitle, imageUrl, fonts])
 
   const handleDownload = useCallback(async () => {
     if (!svgDataUrl) return
@@ -190,7 +209,7 @@ function OgImageGenerator() {
           style={{
             fontSize: 28,
             fontWeight: 600,
-            color: saColors.blue,
+            color: grayColors[900],
             marginBottom: 8,
           }}
         >
@@ -209,7 +228,7 @@ function OgImageGenerator() {
 
         {/* Form */}
         <div style={{ display: 'flex', gap: 16, marginBottom: 32, flexWrap: 'wrap' }}>
-          <div style={{ flex: '1 1 400px' }}>
+          <div style={{ flex: '1 1 260px' }}>
             <label
               htmlFor="og-title"
               style={{
@@ -239,7 +258,7 @@ function OgImageGenerator() {
               }}
             />
           </div>
-          <div style={{ flex: '1 1 400px' }}>
+          <div style={{ flex: '1 1 260px' }}>
             <label
               htmlFor="og-subtitle"
               style={{
@@ -258,6 +277,36 @@ function OgImageGenerator() {
               value={subtitle}
               onChange={(e) => setSubtitle(e.target.value)}
               placeholder="Enter a subtitle..."
+              style={{
+                width: '100%',
+                padding: '10px 14px',
+                fontSize: 15,
+                borderRadius: 8,
+                border: `1px solid ${saColors.border}`,
+                outline: 'none',
+                boxSizing: 'border-box',
+              }}
+            />
+          </div>
+          <div style={{ flex: '1 1 260px' }}>
+            <label
+              htmlFor="og-image"
+              style={{
+                display: 'block',
+                fontSize: 13,
+                fontWeight: 500,
+                color: grayColors[700],
+                marginBottom: 6,
+              }}
+            >
+              Image URL (optional)
+            </label>
+            <input
+              id="og-image"
+              type="text"
+              value={imageUrl}
+              onChange={(e) => setImageUrl(e.target.value)}
+              placeholder="https://example.com/image.jpg"
               style={{
                 width: '100%',
                 padding: '10px 14px',
