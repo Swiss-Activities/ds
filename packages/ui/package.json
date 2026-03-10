@@ -78,6 +78,10 @@
       "types": "./src/horizontal-scroller/horizontal-scroller.types.ts",
       "default": "./src/horizontal-scroller/horizontal-scroller.types.ts"
     },
+    "./logo/markup": {
+      "types": "./src/logo/logo.markup.ts",
+      "default": "./src/logo/logo.markup.ts"
+    },
     "./styles/sa-theme.css": "./src/styles/sa-theme.css"
   },
   "scripts": {
