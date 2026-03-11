@@ -25,7 +25,7 @@ const preview: Preview = {
     },
     options: {
       storySort: {
-        order: ['General', 'Foundations', 'Web & Mobile', 'Generators'],
+        order: ['General', ['Installation Web', 'Welcome'], 'Foundations', 'Web & Mobile', 'Generators'],
       },
     },
     a11y: {
