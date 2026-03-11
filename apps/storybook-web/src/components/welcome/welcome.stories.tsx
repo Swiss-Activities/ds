@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
 
 const meta = {
-  title: 'Welcome/Start',
+  title: 'General/Welcome',
   parameters: {
     layout: 'fullscreen',
     controls: {

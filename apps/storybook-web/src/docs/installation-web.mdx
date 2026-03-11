@@ -1,0 +1,107 @@
+import { Meta } from '@storybook/blocks'
+
+<Meta title="General/Installation Web" />
+
+# Installation (Web)
+
+How to integrate the Swiss Activities Design System into a web project.
+
+## Prerequisites
+
+- **git** (for submodule management)
+- **Tailwind CSS v4** configured in your project
+
+## Setup
+
+### 1. Add the DS as a git submodule
+
+```bash
+git submodule add https://github.com/Swiss-Activities/ds.git ds
+```
+
+### 2. Add the dependency
+
+In your `package.json`, add a file-based dependency pointing to the UI package:
+
+```json
+{
+  "dependencies": {
+    "@swiss-activities/ui": "file:./ds/packages/ui"
+  }
+}
+```
+
+Then install:
+
+```bash
+# yarn
+yarn install
+
+# bun
+bun install
+```
+
+### 3. Configure TypeScript paths
+
+Add path aliases in your `tsconfig.json` so TypeScript can resolve `@swiss-activities/ui` imports:
+
+```json
+{
+  "compilerOptions": {
+    "paths": {
+      "@swiss-activities/ui": ["ds/packages/ui/src/index.ts"],
+      "@swiss-activities/ui/*": ["ds/packages/ui/src/*"]
+    }
+  }
+}
+```
+
+### 4. Import the theme CSS
+
+In your global CSS file, import the SA theme:
+
+```css
+@import "@swiss-activities/ui/styles/sa-theme.css";
+```
+
+This provides design tokens (colors, spacing, etc.) as CSS custom properties.
+
+## Usage
+
+### Components
+
+```tsx
+import { Button } from '@swiss-activities/ui'
+
+<Button variant="primary" size="md">Book now</Button>
+```
+
+### Tokens
+
+```ts
+import { saColors } from '@swiss-activities/ui/tokens/colors'
+import { screens } from '@swiss-activities/ui/tokens/screens'
+```
+
+### Types
+
+```ts
+import type { ButtonProps } from '@swiss-activities/ui'
+```
+
+## Framework notes
+
+### Vite
+
+Works out of the box. Vite resolves `file:` dependencies and TypeScript paths without extra config.
+
+### Next.js
+
+Requires path aliases in `next.config.js` (or `next.config.ts`) to resolve the submodule correctly, since Next.js uses webpack/turbopack rather than Vite's resolver.
+
+## Current integrations
+
+| Project | Framework | Setup |
+|---------|-----------|-------|
+| **website** | Next.js | git submodule + path aliases |
+| **mobile-tickets** | Vite | git submodule |
