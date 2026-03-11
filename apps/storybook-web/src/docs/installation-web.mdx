@@ -141,23 +141,15 @@ Works out of the box. Vite resolves `file:` dependencies and TypeScript paths na
 
 TypeScript path aliases from `tsconfig.json` are picked up automatically by Next.js.
 
-**Important:** The DS monorepo has its own `node_modules` (with React 19) for Storybook development. When Next.js (webpack) resolves imports from `ds/packages/ui`, it can pick up that React copy instead of the website's, causing dual-React hydration errors everywhere. Pin React in your webpack config to prevent this:
+**Important — bun install conflict:** Running `bun install` in the DS monorepo (for Storybook dev) creates `ds/packages/ui/node_modules/` with symlinks to React 19, tailwind-merge v3, etc. When Next.js webpack resolves imports from `ds/packages/ui/src/`, it finds these before the website's own dependencies, causing dual-React hydration errors and broken styles.
 
-```js
-// next.config.js
-const path = require("path");
+**Fix:** Delete the bun-managed node_modules from the UI package:
 
-const nextConfig = {
-  webpack(config) {
-    config.resolve.alias = {
-      ...config.resolve.alias,
-      react: path.resolve(__dirname, "node_modules/react"),
-      "react-dom": path.resolve(__dirname, "node_modules/react-dom"),
-    };
-    return config;
-  },
-};
+```bash
+rm -rf ds/packages/ui/node_modules
 ```
+
+This needs to be done after every `bun install` in the DS. The website's own dependency tree (managed by yarn) has the correct nested versions already.
 
 ## Usage
 
