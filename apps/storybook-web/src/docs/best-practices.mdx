@@ -1,0 +1,134 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+
+<Meta title="General/Best Practices" />
+
+# Best Practices
+
+Guidelines for integrating the Design System into your app in a way that's easy to maintain and evolve.
+
+## Create your own component implementations
+
+Don't use DS components directly throughout your app. Instead, create **app-level wrappers** in a local components directory. This gives you a single place to update when the DS API changes, and lets you add app-specific behavior without forking the DS.
+
+```
+modules/components/
+  Badge/index.tsx        ← your wrapper
+  Breadcrumbs/index.tsx
+  Button/index.tsx
+  Card/index.tsx
+  Skeleton/index.tsx
+```
+
+### Pattern 1: Simple re-export
+
+When a DS component works as-is, re-export it. This still gives you a seam to add customisation later without changing every import across the app.
+
+```tsx
+// modules/components/Skeleton/index.tsx
+export { Skeleton } from "@swiss-activities/ui";
+export type { SkeletonProps } from "@swiss-activities/ui";
+```
+
+### Pattern 2: Opinionated defaults
+
+Wrap the DS component with your app's default styling or props, so consumers don't repeat the same config everywhere.
+
+```tsx
+// modules/components/Card/index.tsx
+import { Card as DSCard } from "@swiss-activities/ui";
+import { cn } from "@utils/css/cn";
+
+type CardProps = {
+  padding?: boolean;
+  className?: string;
+  children: React.ReactNode;
+};
+
+export const Card = ({ padding = true, className, ...rest }: CardProps) => {
+  return (
+    <DSCard
+      noPadding
+      className={cn(
+        "font-medium lg:overflow-visible",
+        { "px-2 py-6 sm:px-4 lg:p-6": padding },
+        className
+      )}
+      {...rest}
+    />
+  );
+};
+```
+
+### Pattern 3: Props transformation
+
+When your app uses different data shapes than the DS expects, the wrapper translates between the two.
+
+```tsx
+// modules/components/Badge/index.tsx
+import { Badge as DSBadge } from "@swiss-activities/ui";
+import type { BaseBadgeProps } from "@swiss-activities/ui/badge/badge.types";
+
+type BadgeProps = {
+  type?: "demand" | "info";
+  text?: boolean;
+  children?: React.ReactNode;
+};
+
+export const Badge = ({ type, text = false, children, ...rest }: BadgeProps) => {
+  const variant: BaseBadgeProps["variant"] = text
+    ? "text"
+    : type === "demand" ? "demand" : type === "info" ? "info" : "overlay";
+
+  return (
+    <DSBadge variant={variant} {...rest}>
+      {children}
+    </DSBadge>
+  );
+};
+```
+
+### Pattern 4: Composition with extra features
+
+Add app-specific concerns like i18n, analytics, schema markup, or loading states on top of the DS primitive.
+
+```tsx
+// modules/components/Breadcrumbs/index.tsx
+import { Breadcrumbs as DSBreadcrumbs } from "@swiss-activities/ui";
+import { BreadcrumbsGSD } from "./GSD";
+import { useI18n } from "@utils/i18n/useI18n";
+
+export const Breadcrumbs = ({ items, noSchema, ...rest }: BreadcrumbsProps) => {
+  const { t, locale } = useI18n();
+
+  const resolved = useMemo(
+    () => items.map(b => ({ title: b.title, url: b.urls[locale] })),
+    [items, locale]
+  );
+
+  return (
+    <>
+      {!noSchema && <BreadcrumbsGSD items={resolved} />}
+      <DSBreadcrumbs items={resolved} {...rest} />
+    </>
+  );
+};
+```
+
+## Why this matters
+
+- **DS updates in one place** — when a DS component's API changes, you update the wrapper, not 50 call sites
+- **App logic stays out of the DS** — i18n, data fetching, analytics belong in wrappers, not the shared library
+- **Consistent defaults** — enforce your app's opinions (spacing, variants, styling) without relying on every developer to remember them
+- **Easy to migrate** — if you ever swap the DS or a specific primitive, the rest of the app doesn't change
+
+## Importing tokens
+
+Tokens (colors, screens, animations) can be imported directly — no wrapper needed. They're plain values, not components.
+
+```ts
+import { saColors } from "@swiss-activities/ui/tokens/colors";
+import { screens } from "@swiss-activities/ui/tokens/screens";
+import { saKeyframes, saAnimations } from "@swiss-activities/ui/tokens";
+```
+
+Use them in your `tailwind.config.ts` to extend your theme, keeping DS and app tokens in sync.
