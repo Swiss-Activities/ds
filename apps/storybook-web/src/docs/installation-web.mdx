@@ -139,7 +139,25 @@ Works out of the box. Vite resolves `file:` dependencies and TypeScript paths na
 
 ### Next.js
 
-TypeScript path aliases from `tsconfig.json` are picked up automatically by Next.js — no extra config needed.
+TypeScript path aliases from `tsconfig.json` are picked up automatically by Next.js.
+
+**Important:** The DS monorepo has its own `node_modules` (with React 19) for Storybook development. When Next.js (webpack) resolves imports from `ds/packages/ui`, it can pick up that React copy instead of the website's, causing dual-React hydration errors everywhere. Pin React in your webpack config to prevent this:
+
+```js
+// next.config.js
+const path = require("path");
+
+const nextConfig = {
+  webpack(config) {
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      react: path.resolve(__dirname, "node_modules/react"),
+      "react-dom": path.resolve(__dirname, "node_modules/react-dom"),
+    };
+    return config;
+  },
+};
+```
 
 ## Usage
 
