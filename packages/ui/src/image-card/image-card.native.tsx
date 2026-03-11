@@ -2,15 +2,14 @@ import type { ViewProps } from 'react-native'
 import { View } from 'react-native-css/components'
 
 import { cn } from '../utils/cn'
-import { Text } from '../text/text.native'
 import type { BaseImageCardProps } from './image-card.types'
 
-export type ImageCardProps = BaseImageCardProps & Omit<ViewProps, 'children'>
+export type ImageCardProps = BaseImageCardProps & ViewProps
 
 export function ImageCard({
   image,
   button,
-  text,
+  children,
   className,
   ...props
 }: ImageCardProps) {
@@ -27,9 +26,7 @@ export function ImageCard({
         <View className="absolute inset-0 bg-gradient-to-b from-blue" />
       </View>
       <View className="relative z-10 flex flex-col gap-8">
-        <Text size="default" bold className="text-white">
-          {text}
-        </Text>
+        {children}
         {button}
       </View>
     </View>

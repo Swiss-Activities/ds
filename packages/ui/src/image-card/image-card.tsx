@@ -1,16 +1,14 @@
 import type { HTMLAttributes } from 'react'
 
 import { cn } from '../utils/cn'
-import { Text } from '../text/text'
 import type { BaseImageCardProps } from './image-card.types'
 
-export type ImageCardProps = BaseImageCardProps &
-  Omit<HTMLAttributes<HTMLDivElement>, 'children'>
+export type ImageCardProps = BaseImageCardProps & HTMLAttributes<HTMLDivElement>
 
 export function ImageCard({
   image,
   button,
-  text,
+  children,
   className,
   ...props
 }: ImageCardProps) {
@@ -27,9 +25,7 @@ export function ImageCard({
         <div className="absolute inset-0 bg-gradient-to-b from-blue" />
       </div>
       <div className="relative z-10 flex flex-col gap-8">
-        <Text size="default" bold className="text-white">
-          {text}
-        </Text>
+        {children}
         {button}
       </div>
     </div>

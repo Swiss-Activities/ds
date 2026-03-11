@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
 
-import { Button, ImageCard } from '@swiss-activities/ui'
+import { Button, ImageCard, Text } from '@swiss-activities/ui'
 
 const meta = {
   title: 'Web & Mobile/ImageCard',
@@ -15,7 +15,11 @@ type Story = StoryObj<typeof meta>
 
 export const Default: Story = {
   args: {
-    text: 'Add a scenic cliff walk to your adventure',
+    children: (
+      <Text size="default" bold className="text-white">
+        Add a scenic cliff walk to your adventure
+      </Text>
+    ),
     image: (
       <img
         src="https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/Grindelwald_First_Cliff_Walk_Eiger_Moench_Jungfrau_Bergpanorama_4653546e26.jpg"
