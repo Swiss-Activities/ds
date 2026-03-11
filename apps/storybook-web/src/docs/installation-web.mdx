@@ -4,24 +4,28 @@ import { Meta } from '@storybook/addon-docs/blocks'
 
 # Installation (Web)
 
-How to integrate the Swiss Activities Design System into a web project.
+How to integrate the Swiss Activities Design System into a web project using a git submodule.
 
 ## Prerequisites
 
-- **git** (for submodule management)
-- **Tailwind CSS v4** configured in your project
+- **git** — the DS is consumed as a git submodule
+- **Tailwind CSS** — v4 recommended, v3 supported (see legacy section below)
 
-## Setup
-
-### 1. Add the DS as a git submodule
+## 1. Add the DS as a git submodule
 
 ```bash
 git submodule add https://github.com/Swiss-Activities/ds.git ds
 ```
 
-### 2. Add the dependency
+After cloning a repo that already has the submodule:
 
-In your `package.json`, add a file-based dependency pointing to the UI package:
+```bash
+git submodule update --init --recursive
+```
+
+## 2. Add the dependency
+
+Add a `file:` dependency in your `package.json` pointing to the UI package inside the submodule:
 
 ```json
 {
@@ -31,19 +35,17 @@ In your `package.json`, add a file-based dependency pointing to the UI package:
 }
 ```
 
-Then install:
+Then run your package manager:
 
 ```bash
-# yarn
-yarn install
-
-# bun
 bun install
+# or
+yarn install
 ```
 
-### 3. Configure TypeScript paths
+## 3. Configure TypeScript paths
 
-Add path aliases in your `tsconfig.json` so TypeScript can resolve `@swiss-activities/ui` imports:
+Add path aliases in `tsconfig.json` so TypeScript resolves bare `@swiss-activities/ui` imports to the local source:
 
 ```json
 {
@@ -56,15 +58,96 @@ Add path aliases in your `tsconfig.json` so TypeScript can resolve `@swiss-activ
 }
 ```
 
-### 4. Import the theme CSS
+## 4. Configure Tailwind CSS
 
-In your global CSS file, import the SA theme:
+### Tailwind v4 (recommended)
+
+Install the Vite plugin or PostCSS plugin for Tailwind v4. Then in your global CSS file:
+
+```css
+@import "tailwindcss/theme.css" layer(theme);
+@import "@swiss-activities/ui/styles/sa-theme.css";
+@import "tailwindcss/preflight.css" layer(base);
+@import "tailwindcss/utilities.css" layer(utilities);
+
+/* Tell Tailwind to scan DS source files for class names */
+@source "../../../ds/packages/ui/src/**/*.{ts,tsx}";
+```
+
+The theme import provides design tokens (colors, spacing, etc.) as CSS custom properties.
+
+### Tailwind v3 (legacy)
+
+The **website** project currently uses Tailwind v3. This requires a classic config-based setup.
+
+**`postcss.config.js`**
+
+```js
+module.exports = {
+  plugins: {
+    tailwindcss: {},
+    autoprefixer: {},
+  },
+};
+```
+
+**`tailwind.config.ts`** — import tokens from the DS and add the DS source to `content`:
+
+```ts
+import type { Config } from "tailwindcss";
+import { grayColors, saColors } from "@swiss-activities/ui/tokens/colors";
+import { saKeyframes, saAnimations } from "@swiss-activities/ui/tokens";
+import { screens } from "@swiss-activities/ui/tokens/screens";
+
+const config: Config = {
+  content: [
+    "./src/**/*.{js,ts,jsx,tsx}",
+    "./ds/packages/ui/src/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    screens,
+    extend: {
+      colors: {
+        gray: grayColors,
+        dark: saColors.dark,
+        primary: saColors.primary,
+        medium: saColors.medium,
+        light: saColors.light,
+        blue: saColors.blue,
+        bg: saColors.bg,
+      },
+      keyframes: saKeyframes,
+      animation: saAnimations,
+    },
+  },
+};
+
+export default config;
+```
+
+**Global CSS** — import the theme CSS:
 
 ```css
 @import "@swiss-activities/ui/styles/sa-theme.css";
 ```
 
-This provides design tokens (colors, spacing, etc.) as CSS custom properties.
+## 5. Framework-specific setup
+
+### Vite
+
+Works out of the box. Vite resolves `file:` dependencies and TypeScript paths natively.
+
+### Next.js
+
+Next.js uses webpack/turbopack, so you need to tell it to transpile the DS package. In `next.config.js`:
+
+```js
+const nextConfig = {
+  transpilePackages: ["@swiss-activities/ui"],
+};
+```
+
+TypeScript path aliases from `tsconfig.json` are picked up automatically by Next.js.
 
 ## Usage
 
@@ -73,7 +156,9 @@ This provides design tokens (colors, spacing, etc.) as CSS custom properties.
 ```tsx
 import { Button } from '@swiss-activities/ui'
 
-<Button variant="primary" size="md">Book now</Button>
+export function Example() {
+  return <Button variant="primary" size="md">Book now</Button>
+}
 ```
 
 ### Tokens
@@ -81,6 +166,7 @@ import { Button } from '@swiss-activities/ui'
 ```ts
 import { saColors } from '@swiss-activities/ui/tokens/colors'
 import { screens } from '@swiss-activities/ui/tokens/screens'
+import { saKeyframes, saAnimations } from '@swiss-activities/ui/tokens'
 ```
 
 ### Types
@@ -89,19 +175,7 @@ import { screens } from '@swiss-activities/ui/tokens/screens'
 import type { ButtonProps } from '@swiss-activities/ui'
 ```
 
-## Framework notes
-
-### Vite
-
-Works out of the box. Vite resolves `file:` dependencies and TypeScript paths without extra config.
-
-### Next.js
-
-Requires path aliases in `next.config.js` (or `next.config.ts`) to resolve the submodule correctly, since Next.js uses webpack/turbopack rather than Vite's resolver.
-
 ## Current integrations
 
-| Project | Framework | Setup |
-|---------|-----------|-------|
-| **website** | Next.js | git submodule + path aliases |
-| **mobile-tickets** | Vite | git submodule |
+- **website** — Next.js + Tailwind v3 (legacy) + git submodule
+- **mobile-tickets** — Vite + Tailwind v4 + git submodule
