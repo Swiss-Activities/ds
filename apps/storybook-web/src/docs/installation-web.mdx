@@ -139,15 +139,7 @@ Works out of the box. Vite resolves `file:` dependencies and TypeScript paths na
 
 ### Next.js
 
-Next.js uses webpack/turbopack, so you need to tell it to transpile the DS package. In `next.config.js`:
-
-```js
-const nextConfig = {
-  transpilePackages: ["@swiss-activities/ui"],
-};
-```
-
-TypeScript path aliases from `tsconfig.json` are picked up automatically by Next.js.
+TypeScript path aliases from `tsconfig.json` are picked up automatically by Next.js — no extra config needed.
 
 ## Usage
 
