@@ -1,5 +1,4 @@
-import { registerRootComponent } from 'expo'
+import { registerRootComponent } from "expo";
+import StorybookUIRoot from "./.rnstorybook";
 
-import StorybookUIRoot from './.rnstorybook'
-
-registerRootComponent(StorybookUIRoot)
+registerRootComponent(StorybookUIRoot);

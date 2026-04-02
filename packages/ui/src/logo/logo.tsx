@@ -1,44 +1,46 @@
-import type { ImgHTMLAttributes } from 'react'
+import type { ImgHTMLAttributes } from "react";
+import { Text } from "../text";
+import { cn } from "../utils/cn";
+import { getLogoDimensions, getLogoMarkup } from "./logo.shared";
+import type { BaseLogoProps } from "./logo.types";
 
-import { cn } from '../utils/cn'
-import { Text } from '../text'
-import type { BaseLogoProps } from './logo.types'
-import { getLogoDimensions, getLogoMarkup } from './logo.shared'
-
-export type LogoProps = BaseLogoProps & Omit<ImgHTMLAttributes<HTMLImageElement>, 'children'>
+export type LogoProps = BaseLogoProps &
+  Omit<ImgHTMLAttributes<HTMLImageElement>, "children">;
 
 const encodedLogoSrc = {
-  default: `data:image/svg+xml;utf8,${encodeURIComponent(getLogoMarkup('default'))}`,
-  sm: `data:image/svg+xml;utf8,${encodeURIComponent(getLogoMarkup('sm'))}`,
-} as const
+  default: `data:image/svg+xml;utf8,${encodeURIComponent(getLogoMarkup("default"))}`,
+  sm: `data:image/svg+xml;utf8,${encodeURIComponent(getLogoMarkup("sm"))}`,
+} as const;
 
 export function Logo({
-  size = 'default',
+  size = "default",
   className,
-  alt = 'Swiss Activities',
+  alt = "Swiss Activities",
   children,
   ...props
 }: LogoProps) {
-  const dimensions = getLogoDimensions(size)
-  const src = size === 'sm' ? encodedLogoSrc.sm : encodedLogoSrc.default
+  const dimensions = getLogoDimensions(size);
+  const src = size === "sm" ? encodedLogoSrc.sm : encodedLogoSrc.default;
 
   const img = (
     <img
       alt={alt}
-      className={cn('inline-block shrink-0', !children && className)}
+      className={cn("inline-block shrink-0", !children && className)}
       height={dimensions.height}
       src={src}
       width={dimensions.width}
       {...props}
     />
-  )
+  );
 
-  if (!children) return img
+  if (!children) return img;
 
   return (
-    <span className={cn('inline-flex items-center gap-2', className)}>
+    <span className={cn("inline-flex items-center gap-2", className)}>
       {img}
-      <Text as="span" size="default" bold black>{children}</Text>
+      <Text as="span" size="default" bold black>
+        {children}
+      </Text>
     </span>
-  )
+  );
 }

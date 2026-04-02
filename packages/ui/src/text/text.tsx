@@ -1,32 +1,24 @@
-import {
-  createElement,
-  forwardRef,
-  type HTMLAttributes,
-} from 'react'
+import { createElement, forwardRef, type HTMLAttributes } from "react";
+import { cn } from "../utils/cn";
+import type { BaseTextProps } from "./text.types";
+import { resolveTextVariantSize, textStyles } from "./text.variants.shared";
 
-import { cn } from '../utils/cn'
-import type { BaseTextProps } from './text.types'
-import {
-  resolveTextVariantSize,
-  textStyles,
-} from './text.variants.shared'
-
-export type TextProps = BaseTextProps & HTMLAttributes<HTMLElement>
+export type TextProps = BaseTextProps & HTMLAttributes<HTMLElement>;
 
 export const Text = forwardRef<HTMLElement, TextProps>(function Text(
   {
     children = null,
     className,
-    size = 'sm',
-    as = 'p',
+    size = "sm",
+    as = "p",
     bold = false,
     black = false,
     gray = false,
     ...props
   },
-  ref,
+  ref
 ) {
-  const normalizedSize = resolveTextVariantSize(size)
+  const normalizedSize = resolveTextVariantSize(size);
 
   return createElement(
     as,
@@ -40,9 +32,9 @@ export const Text = forwardRef<HTMLElement, TextProps>(function Text(
           black,
           gray,
         }),
-        className,
+        className
       ),
     },
-    children ?? '',
-  )
-})
+    children ?? ""
+  );
+});

@@ -1,27 +1,26 @@
-import type { TouchableOpacityProps } from 'react-native'
-import { Text, TouchableOpacity } from 'react-native-css/components'
-
-import { cn } from '../utils/cn'
-import { buttonComponentId, type BaseButtonProps } from './button.types'
+import type { TouchableOpacityProps } from "react-native";
+import { Text, TouchableOpacity } from "react-native-css/components";
+import { cn } from "../utils/cn";
+import { buttonComponentId, type BaseButtonProps } from "./button.types";
 import {
   buttonContainerStyles,
   buttonTextStyles,
-} from './button.variants.native'
+} from "./button.variants.native";
 
 export type ButtonProps = BaseButtonProps &
-  Omit<TouchableOpacityProps, 'children'> & { className?: string }
+  Omit<TouchableOpacityProps, "children"> & { className?: string };
 
 export function Button({
   children = null,
-  variant = 'primary',
-  size = 'default',
+  variant = "primary",
+  size = "default",
   disabled,
   className,
   ...props
 }: ButtonProps) {
-  const isInstruction = variant === 'instruction'
-  const shouldApplyDisabledStyles = Boolean(disabled) && !isInstruction
-  const isDisabled = Boolean(disabled) || isInstruction
+  const isInstruction = variant === "instruction";
+  const shouldApplyDisabledStyles = Boolean(disabled) && !isInstruction;
+  const isDisabled = Boolean(disabled) || isInstruction;
 
   return (
     <TouchableOpacity
@@ -32,20 +31,24 @@ export function Button({
           size,
           disabled: shouldApplyDisabledStyles,
         }),
-        className,
+        className
       )}
       disabled={isDisabled}
       {...props}
     >
       <Text
         className={cn(
-          buttonTextStyles({ variant, size, disabled: shouldApplyDisabledStyles }),
+          buttonTextStyles({
+            variant,
+            size,
+            disabled: shouldApplyDisabledStyles,
+          })
         )}
       >
         {children}
       </Text>
     </TouchableOpacity>
-  )
+  );
 }
 
-;(Button as { saComponent?: string }).saComponent = buttonComponentId
+(Button as { saComponent?: string }).saComponent = buttonComponentId;

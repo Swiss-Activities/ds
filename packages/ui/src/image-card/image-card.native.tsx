@@ -1,10 +1,9 @@
-import type { ViewProps } from 'react-native'
-import { View } from 'react-native-css/components'
+import type { ViewProps } from "react-native";
+import { View } from "react-native-css/components";
+import { cn } from "../utils/cn";
+import type { BaseImageCardProps } from "./image-card.types";
 
-import { cn } from '../utils/cn'
-import type { BaseImageCardProps } from './image-card.types'
-
-export type ImageCardProps = BaseImageCardProps & ViewProps
+export type ImageCardProps = BaseImageCardProps & ViewProps;
 
 export function ImageCard({
   image,
@@ -16,8 +15,8 @@ export function ImageCard({
   return (
     <View
       className={cn(
-        'relative flex flex-col justify-between overflow-hidden rounded-lg px-6 py-8',
-        className,
+        "relative flex flex-col justify-between overflow-hidden rounded-lg px-6 py-8",
+        className
       )}
       {...props}
     >
@@ -30,5 +29,5 @@ export function ImageCard({
         {button}
       </View>
     </View>
-  )
+  );
 }

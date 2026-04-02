@@ -1,15 +1,15 @@
-import { SafeAreaView, View } from 'react-native';
-import type { Preview } from '@storybook/react-native';
+import type { Preview } from "@storybook/react-native";
+import { SafeAreaView, View } from "react-native";
 
 const preview: Preview = {
   decorators: [
     (Story, context) => {
-      if (context.parameters.layout === 'fullscreen') {
+      if (context.parameters.layout === "fullscreen") {
         return (
           <SafeAreaView style={{ flex: 1 }}>
             <Story />
           </SafeAreaView>
-        )
+        );
       }
 
       return (
@@ -18,7 +18,7 @@ const preview: Preview = {
             <Story />
           </View>
         </SafeAreaView>
-      )
+      );
     },
   ],
   parameters: {
@@ -30,7 +30,7 @@ const preview: Preview = {
     },
     options: {
       storySort: {
-        order: ['Welcome', 'Components'],
+        order: ["Welcome", "Components"],
       },
     },
   },

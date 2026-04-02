@@ -1,34 +1,36 @@
-'use client'
+"use client";
 
-import type { HTMLAttributes } from 'react'
-import { useEffect, useState } from 'react'
+import type { HTMLAttributes } from "react";
+import { useEffect, useState } from "react";
+import { cn } from "../utils/cn";
+import type { BaseSkeletonProps } from "./skeleton.types";
+import {
+  skeletonContainerStyles,
+  skeletonItemStyles,
+} from "./skeleton.variants.shared";
 
-import { cn } from '../utils/cn'
-import type { BaseSkeletonProps } from './skeleton.types'
-import { skeletonContainerStyles, skeletonItemStyles } from './skeleton.variants.shared'
-
-export type SkeletonProps = BaseSkeletonProps & HTMLAttributes<HTMLSpanElement>
+export type SkeletonProps = BaseSkeletonProps & HTMLAttributes<HTMLSpanElement>;
 
 export function Skeleton({
   loading,
   full = false,
-  size = 'sm',
+  size = "sm",
   amount = 2,
   className,
   classNameItems,
   ...props
 }: SkeletonProps) {
-  const [fadeOut, setFadeOut] = useState(false)
+  const [fadeOut, setFadeOut] = useState(false);
 
   useEffect(() => {
     if (!loading) {
-      setFadeOut(true)
+      setFadeOut(true);
 
-      const timer = setTimeout(() => {}, 500)
+      const timer = setTimeout(() => {}, 500);
 
-      return () => clearTimeout(timer)
+      return () => clearTimeout(timer);
     }
-  }, [loading])
+  }, [loading]);
 
   return (
     <span
@@ -40,11 +42,11 @@ export function Skeleton({
           key={`skeleton-${index}`}
           className={cn(skeletonItemStyles({ size, full }), classNameItems)}
           style={{
-            background: 'linear-gradient(90deg, #fafafa, #e4e4e7, #fafafa)',
-            backgroundSize: '200% 100%',
+            background: "linear-gradient(90deg, #fafafa, #e4e4e7, #fafafa)",
+            backgroundSize: "200% 100%",
           }}
         />
       ))}
     </span>
-  )
+  );
 }

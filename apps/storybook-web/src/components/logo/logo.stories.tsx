@@ -1,35 +1,34 @@
-import type { Meta, StoryObj } from '@storybook/react-vite'
-
-import { Logo, logoSizes } from '@swiss-activities/ui'
+import type { Meta, StoryObj } from "@storybook/react-vite";
+import { Logo, logoSizes } from "@swiss-activities/ui";
 
 const meta = {
-  title: 'Web & Mobile/Logo',
+  title: "Web & Mobile/Logo",
   component: Logo,
   parameters: {
-    layout: 'centered',
+    layout: "centered",
   },
   argTypes: {
     size: {
       options: logoSizes,
-      control: 'inline-radio',
+      control: "inline-radio",
     },
     className: {
-      control: 'text',
+      control: "text",
     },
   },
   args: {
-    size: 'default',
+    size: "default",
   },
-} satisfies Meta<typeof Logo>
+} satisfies Meta<typeof Logo>;
 
-export default meta
+export default meta;
 
-type Story = StoryObj<typeof meta>
+type Story = StoryObj<typeof meta>;
 
-export const Default: Story = {}
+export const Default: Story = {};
 
 export const Small: Story = {
   args: {
-    size: 'sm',
+    size: "sm",
   },
-}
+};

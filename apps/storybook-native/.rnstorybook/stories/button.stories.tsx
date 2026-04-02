@@ -1,77 +1,76 @@
-import React from 'react'
-import type { Meta, StoryObj } from '@storybook/react-native'
-
-import { Button, buttonSizes, buttonVariants } from '@swiss-activities/ui'
+import React from "react";
+import type { Meta, StoryObj } from "@storybook/react-native";
+import { Button, buttonSizes, buttonVariants } from "@swiss-activities/ui";
 
 const meta = {
-  title: 'Web & Mobile/Button',
+  title: "Web & Mobile/Button",
   component: Button,
   argTypes: {
     variant: {
       options: buttonVariants,
-      control: 'select',
+      control: "select",
     },
     size: {
       options: buttonSizes,
-      control: 'inline-radio',
+      control: "inline-radio",
     },
     disabled: {
-      control: 'boolean',
+      control: "boolean",
     },
     children: {
-      control: 'text',
+      control: "text",
     },
     className: {
-      control: 'text',
+      control: "text",
     },
   },
   args: {
-    children: 'Book Activity',
-    variant: 'primary',
-    size: 'default',
+    children: "Book Activity",
+    variant: "primary",
+    size: "default",
     disabled: false,
   },
-  render: args => <Button {...args} />,
-} satisfies Meta<typeof Button>
+  render: (args) => <Button {...args} />,
+} satisfies Meta<typeof Button>;
 
-export default meta
+export default meta;
 
-type Story = StoryObj<typeof meta>
+type Story = StoryObj<typeof meta>;
 
 const storyFor = (
   variant: (typeof buttonVariants)[number],
-  children: string = 'Book Activity',
-  size: (typeof buttonSizes)[number] = 'default',
+  children: string = "Book Activity",
+  size: (typeof buttonSizes)[number] = "default"
 ): Story => ({
   args: {
     variant,
     size,
     children,
   },
-})
+});
 
-export const Primary: Story = storyFor('primary')
-export const Secondary: Story = storyFor('secondary')
-export const Outline: Story = storyFor('outline', 'See Details')
-export const OutlineGray: Story = storyFor('outline-gray', 'See Details')
-export const Tertiary: Story = storyFor('tertiary', 'See Details')
-export const Transparent: Story = storyFor('transparent', 'Continue')
-export const Blue: Story = storyFor('blue')
-export const BlueOutline: Story = storyFor('blue-outline', 'See Details')
-export const Gray: Story = storyFor('gray')
-export const Instruction: Story = storyFor('instruction', 'Info')
-export const Link: Story = storyFor('link', 'Read More')
-export const LinkGray: Story = storyFor('linkGray', 'Read More')
+export const Primary: Story = storyFor("primary");
+export const Secondary: Story = storyFor("secondary");
+export const Outline: Story = storyFor("outline", "See Details");
+export const OutlineGray: Story = storyFor("outline-gray", "See Details");
+export const Tertiary: Story = storyFor("tertiary", "See Details");
+export const Transparent: Story = storyFor("transparent", "Continue");
+export const Blue: Story = storyFor("blue");
+export const BlueOutline: Story = storyFor("blue-outline", "See Details");
+export const Gray: Story = storyFor("gray");
+export const Instruction: Story = storyFor("instruction", "Info");
+export const Link: Story = storyFor("link", "Read More");
+export const LinkGray: Story = storyFor("linkGray", "Read More");
 
-export const SizePill: Story = storyFor('primary', 'Book', 'pill')
-export const SizeSmall: Story = storyFor('primary', 'Book Activity', 'sm')
-export const SizeXSmall: Story = storyFor('primary', 'Book Activity', 'xs')
+export const SizePill: Story = storyFor("primary", "Book", "pill");
+export const SizeSmall: Story = storyFor("primary", "Book Activity", "sm");
+export const SizeXSmall: Story = storyFor("primary", "Book Activity", "xs");
 
 export const Disabled: Story = {
   args: {
-    variant: 'primary',
-    size: 'default',
-    children: 'Book Activity',
+    variant: "primary",
+    size: "default",
+    children: "Book Activity",
     disabled: true,
   },
-}
+};

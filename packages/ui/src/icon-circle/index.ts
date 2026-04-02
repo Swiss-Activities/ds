@@ -1,2 +1,2 @@
-export { IconCircle } from './icon-circle'
-export type { IconCircleProps } from './icon-circle'
+export { IconCircle } from "./icon-circle";
+export type { IconCircleProps } from "./icon-circle";

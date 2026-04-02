@@ -1,27 +1,26 @@
-import { cva } from 'class-variance-authority'
-
-import type { ButtonSize, ButtonVariant } from './button.types'
-import { buttonSizes, buttonVariants } from './button.types'
+import { cva } from "class-variance-authority";
+import type { ButtonSize, ButtonVariant } from "./button.types";
+import { buttonSizes, buttonVariants } from "./button.types";
 import {
   sharedButtonBaseStyles,
   sharedButtonDisabledStyles,
   sharedButtonSizeStyles,
   sharedButtonVariantStyles,
-} from './button.variants.shared'
+} from "./button.variants.shared";
 
 const webButtonVariantStyles = Object.fromEntries(
-  buttonVariants.map(variant => [
+  buttonVariants.map((variant) => [
     variant,
     `${sharedButtonVariantStyles[variant].container} ${sharedButtonVariantStyles[variant].text} ${sharedButtonVariantStyles[variant].webInteraction}`.trim(),
-  ]),
-) as Record<ButtonVariant, string>
+  ])
+) as Record<ButtonVariant, string>;
 
 const webButtonSizeStyles = Object.fromEntries(
-  buttonSizes.map(size => [
+  buttonSizes.map((size) => [
     size,
     `${sharedButtonSizeStyles[size].container} ${sharedButtonSizeStyles[size].text}`.trim(),
-  ]),
-) as Record<ButtonSize, string>
+  ])
+) as Record<ButtonSize, string>;
 
 export const buttonStyles = cva(
   `${sharedButtonBaseStyles.container} ${sharedButtonBaseStyles.text} transition-colors focus-visible:outline-2 focus-visible:outline-offset-2`,
@@ -31,13 +30,13 @@ export const buttonStyles = cva(
       size: webButtonSizeStyles,
       disabled: {
         true: sharedButtonDisabledStyles.container,
-        false: '',
+        false: "",
       },
     },
     defaultVariants: {
-      variant: 'primary',
-      size: 'default',
+      variant: "primary",
+      size: "default",
       disabled: false,
     },
-  },
-)
+  }
+);

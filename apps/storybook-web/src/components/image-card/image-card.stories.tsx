@@ -1,17 +1,16 @@
-import type { Meta, StoryObj } from '@storybook/react-vite'
-
-import { Button, ImageCard, Text } from '@swiss-activities/ui'
+import type { Meta, StoryObj } from "@storybook/react-vite";
+import { Button, ImageCard, Text } from "@swiss-activities/ui";
 
 const meta = {
-  title: 'Web & Mobile/ImageCard',
+  title: "Web & Mobile/ImageCard",
   component: ImageCard,
   parameters: {
-    layout: 'centered',
+    layout: "centered",
   },
-} satisfies Meta<typeof ImageCard>
+} satisfies Meta<typeof ImageCard>;
 
-export default meta
-type Story = StoryObj<typeof meta>
+export default meta;
+type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
@@ -26,11 +25,15 @@ export const Default: Story = {
         alt="Grindelwald First Cliff Walk"
       />
     ),
-    button: <Button variant="secondary" size="sm">Add Ticket</Button>,
+    button: (
+      <Button variant="secondary" size="sm">
+        Add Ticket
+      </Button>
+    ),
   },
-  render: args => (
+  render: (args) => (
     <div className="w-[360px] max-w-full">
       <ImageCard {...args} />
     </div>
   ),
-}
+};

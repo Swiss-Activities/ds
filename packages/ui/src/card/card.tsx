@@ -1,15 +1,14 @@
-import type { HTMLAttributes } from 'react'
+import type { HTMLAttributes } from "react";
+import { cn } from "../utils/cn";
+import type { BaseCardProps } from "./card.types";
+import { cardStyles } from "./card.variants.web";
 
-import { cn } from '../utils/cn'
-import type { BaseCardProps } from './card.types'
-import { cardStyles } from './card.variants.web'
-
-export type CardProps = BaseCardProps & HTMLAttributes<HTMLDivElement>
+export type CardProps = BaseCardProps & HTMLAttributes<HTMLDivElement>;
 
 export function Card({
   children = null,
   className,
-  elevation = 'default',
+  elevation = "default",
   noPadding = false,
   ...props
 }: CardProps) {
@@ -20,5 +19,5 @@ export function Card({
     >
       {children}
     </div>
-  )
+  );
 }

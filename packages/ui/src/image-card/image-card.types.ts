@@ -1,8 +1,8 @@
-import type { ReactNode } from 'react'
+import type { ReactNode } from "react";
 
 export type BaseImageCardProps = {
-  image: ReactNode
-  button?: ReactNode
-  children?: ReactNode
-  className?: string
-}
+  image: ReactNode;
+  button?: ReactNode;
+  children?: ReactNode;
+  className?: string;
+};

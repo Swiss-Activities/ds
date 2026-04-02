@@ -1,38 +1,39 @@
-import React from 'react'
-import type { Meta, StoryObj } from '@storybook/react-native'
-import { Text, View } from 'react-native-css/components'
-
-import { Button, Card, Flow } from '@swiss-activities/ui'
+import React from "react";
+import type { Meta, StoryObj } from "@storybook/react-native";
+import { Button, Card, Flow } from "@swiss-activities/ui";
+import { Text, View } from "react-native-css/components";
 
 const meta = {
-  title: 'Web & Mobile/Card',
+  title: "Web & Mobile/Card",
   component: Card,
   argTypes: {
     elevation: {
-      options: ['default', 'lg'],
-      control: 'inline-radio',
+      options: ["default", "lg"],
+      control: "inline-radio",
     },
     noPadding: {
-      control: 'boolean',
+      control: "boolean",
     },
   },
-} satisfies Meta<typeof Card>
+} satisfies Meta<typeof Card>;
 
-export default meta
+export default meta;
 
-type Story = StoryObj<typeof meta>
+type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    elevation: 'default',
+    elevation: "default",
     noPadding: false,
   },
-  render: args => (
+  render: (args) => (
     <View style={{ padding: 16 }}>
       <Card {...args}>
         <Flow>
-          <Text style={{ fontSize: 20, fontWeight: '600', color: '#0f172b' }}>Zurich City Pass</Text>
-          <Text style={{ fontSize: 14, color: '#45556c' }}>
+          <Text style={{ fontSize: 20, fontWeight: "600", color: "#0f172b" }}>
+            Zurich City Pass
+          </Text>
+          <Text style={{ fontSize: 14, color: "#45556c" }}>
             Explore museums, cruises, and city transport with one pass.
           </Text>
           <Button>Book Activity</Button>
@@ -40,4 +41,4 @@ export const Default: Story = {
       </Card>
     </View>
   ),
-}
+};

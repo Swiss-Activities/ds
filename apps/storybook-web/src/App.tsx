@@ -19,7 +19,7 @@ function App() {
         Run <code>bun run storybook:web</code> to start it.
       </p>
     </main>
-  )
+  );
 }
 
-export default App
+export default App;

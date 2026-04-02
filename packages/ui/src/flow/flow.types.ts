@@ -1,6 +1,6 @@
-import type { ReactNode } from 'react'
+import type { ReactNode } from "react";
 
 export type BaseFlowProps = {
-  children?: ReactNode
-  className?: string
-}
+  children?: ReactNode;
+  className?: string;
+};

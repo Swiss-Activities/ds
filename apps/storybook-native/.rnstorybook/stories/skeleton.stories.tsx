@@ -1,52 +1,51 @@
-import React from 'react'
-import type { Meta, StoryObj } from '@storybook/react-native'
-import { Text, View } from 'react-native-css/components'
-
-import { Skeleton } from '@swiss-activities/ui'
-import { skeletonSizes } from '@swiss-activities/ui/skeleton/skeleton.types'
+import React from "react";
+import type { Meta, StoryObj } from "@storybook/react-native";
+import { Skeleton } from "@swiss-activities/ui";
+import { skeletonSizes } from "@swiss-activities/ui/skeleton/skeleton.types";
+import { Text, View } from "react-native-css/components";
 
 const meta = {
-  title: 'Web & Mobile/Skeleton',
+  title: "Web & Mobile/Skeleton",
   component: Skeleton,
   argTypes: {
     size: {
       options: [...skeletonSizes],
-      control: 'inline-radio',
+      control: "inline-radio",
     },
     amount: {
-      control: { type: 'number', min: 1, max: 10 },
+      control: { type: "number", min: 1, max: 10 },
     },
     loading: {
-      control: 'boolean',
+      control: "boolean",
     },
   },
-} satisfies Meta<typeof Skeleton>
+} satisfies Meta<typeof Skeleton>;
 
-export default meta
-type Story = StoryObj<typeof meta>
+export default meta;
+type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
     loading: true,
-    size: 'sm',
+    size: "sm",
     amount: 2,
   },
-  render: args => (
+  render: (args) => (
     <View style={{ padding: 16, width: 360 }}>
       <Skeleton {...args} />
     </View>
   ),
-}
+};
 
 export const Sizes: Story = {
   render: () => (
     <View style={{ padding: 16, width: 360, gap: 24 }}>
-      {skeletonSizes.map(size => (
+      {skeletonSizes.map((size) => (
         <View key={size} style={{ gap: 8 }}>
-          <Text style={{ fontSize: 14, color: '#737373' }}>{size}</Text>
+          <Text style={{ fontSize: 14, color: "#737373" }}>{size}</Text>
           <Skeleton loading size={size} amount={1} />
         </View>
       ))}
     </View>
   ),
-}
+};

@@ -1,11 +1,11 @@
-import type { ReactNode } from 'react'
+import type { ReactNode } from "react";
 
-export const logoSizes = ['sm', 'default'] as const
+export const logoSizes = ["sm", "default"] as const;
 
-export type LogoSize = (typeof logoSizes)[number]
+export type LogoSize = (typeof logoSizes)[number];
 
 export type BaseLogoProps = {
-  size?: LogoSize
-  className?: string
-  children?: ReactNode
-}
+  size?: LogoSize;
+  className?: string;
+  children?: ReactNode;
+};

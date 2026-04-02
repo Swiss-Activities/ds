@@ -3,6 +3,6 @@ export const saRadius = {
   md: 8,
   lg: 12,
   xl: 16,
-} as const
+} as const;
 
-export type SaRadiusName = keyof typeof saRadius
+export type SaRadiusName = keyof typeof saRadius;

@@ -1,17 +1,16 @@
-import type { Meta, StoryObj } from '@storybook/react-vite'
+import type { Meta, StoryObj } from "@storybook/react-vite";
+import { Text, textElements, textSizes } from "@swiss-activities/ui";
 
-import { Text, textElements, textSizes } from '@swiss-activities/ui'
-
-const sizeOptions = ['unset', ...textSizes] as const
+const sizeOptions = ["unset", ...textSizes] as const;
 const sizeMapping = Object.fromEntries(
-  textSizes.map(size => [size, size]),
-) as Record<(typeof textSizes)[number], (typeof textSizes)[number]>
+  textSizes.map((size) => [size, size])
+) as Record<(typeof textSizes)[number], (typeof textSizes)[number]>;
 
 const meta = {
-  title: 'Web & Mobile/Text',
+  title: "Web & Mobile/Text",
   component: Text,
   parameters: {
-    layout: 'centered',
+    layout: "centered",
   },
   argTypes: {
     size: {
@@ -20,69 +19,70 @@ const meta = {
         unset: false,
         ...sizeMapping,
       },
-      control: 'select',
+      control: "select",
     },
     as: {
       options: textElements,
-      control: 'select',
+      control: "select",
     },
     bold: {
-      control: 'boolean',
+      control: "boolean",
     },
     black: {
-      control: 'boolean',
+      control: "boolean",
     },
     gray: {
-      control: 'boolean',
+      control: "boolean",
     },
     children: {
-      control: 'text',
+      control: "text",
     },
     className: {
-      control: 'text',
+      control: "text",
     },
   },
   args: {
-    children: 'Hand-picked activities with instant booking and flexible cancellation.',
-    size: 'sm',
-    as: 'p',
+    children:
+      "Hand-picked activities with instant booking and flexible cancellation.",
+    size: "sm",
+    as: "p",
     bold: false,
     black: false,
     gray: false,
   },
-} satisfies Meta<typeof Text>
+} satisfies Meta<typeof Text>;
 
-export default meta
+export default meta;
 
-type Story = StoryObj<typeof meta>
+type Story = StoryObj<typeof meta>;
 
-export const Default: Story = {}
+export const Default: Story = {};
 
 export const Heading: Story = {
   args: {
-    as: 'h2',
-    size: '2xl',
-    children: 'Swiss Activities Design System',
+    as: "h2",
+    size: "2xl",
+    children: "Swiss Activities Design System",
   },
-}
+};
 
 export const Muted: Story = {
   args: {
     gray: true,
-    children: 'Supporting text for activity cards and page sections.',
+    children: "Supporting text for activity cards and page sections.",
   },
-}
+};
 
 export const Display: Story = {
   args: {
-    size: 'display',
-    children: 'Display body text scales up on larger breakpoints.',
+    size: "display",
+    children: "Display body text scales up on larger breakpoints.",
   },
-}
+};
 
 export const Tiny: Story = {
   args: {
-    size: 'xs2',
-    children: 'Terms and conditions apply.',
+    size: "xs2",
+    children: "Terms and conditions apply.",
   },
-}
+};

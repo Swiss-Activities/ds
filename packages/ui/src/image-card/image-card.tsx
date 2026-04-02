@@ -1,9 +1,9 @@
-import type { HTMLAttributes } from 'react'
+import type { HTMLAttributes } from "react";
+import { cn } from "../utils/cn";
+import type { BaseImageCardProps } from "./image-card.types";
 
-import { cn } from '../utils/cn'
-import type { BaseImageCardProps } from './image-card.types'
-
-export type ImageCardProps = BaseImageCardProps & HTMLAttributes<HTMLDivElement>
+export type ImageCardProps = BaseImageCardProps &
+  HTMLAttributes<HTMLDivElement>;
 
 export function ImageCard({
   image,
@@ -15,8 +15,8 @@ export function ImageCard({
   return (
     <div
       className={cn(
-        'relative flex flex-col justify-between overflow-hidden rounded-lg px-6 py-8',
-        className,
+        "relative flex flex-col justify-between overflow-hidden rounded-lg px-6 py-8",
+        className
       )}
       {...props}
     >
@@ -29,5 +29,5 @@ export function ImageCard({
         {button}
       </div>
     </div>
-  )
+  );
 }

@@ -1,66 +1,68 @@
-import type { Meta, StoryObj } from '@storybook/react-vite'
-
-import { Rating } from '@swiss-activities/ui'
-import { ratingSizes, type RatingSize } from '@swiss-activities/ui/rating/rating.types'
+import type { Meta, StoryObj } from "@storybook/react-vite";
+import { Rating } from "@swiss-activities/ui";
+import {
+  ratingSizes,
+  type RatingSize,
+} from "@swiss-activities/ui/rating/rating.types";
 
 const meta = {
-  title: 'Web & Mobile/Rating',
+  title: "Web & Mobile/Rating",
   component: Rating,
   parameters: {
-    layout: 'centered',
+    layout: "centered",
   },
   argTypes: {
     score: {
-      control: { type: 'number', min: 0, max: 5, step: 0.1 },
+      control: { type: "number", min: 0, max: 5, step: 0.1 },
     },
     count: {
-      control: { type: 'number', min: 0 },
+      control: { type: "number", min: 0 },
     },
     size: {
       options: [...ratingSizes],
-      control: 'inline-radio',
+      control: "inline-radio",
     },
     showScore: {
-      control: 'boolean',
+      control: "boolean",
     },
   },
   args: {
     score: 4.8,
     count: 187,
     showScore: true,
-    size: 'default',
+    size: "default",
   },
-} satisfies Meta<typeof Rating>
+} satisfies Meta<typeof Rating>;
 
-export default meta
+export default meta;
 
-type Story = StoryObj<typeof meta>
+type Story = StoryObj<typeof meta>;
 
-export const Default: Story = {}
+export const Default: Story = {};
 
 export const Large: Story = {
   args: {
     score: 4.5,
     showScore: false,
-    size: 'lg',
+    size: "lg",
   },
-}
+};
 
 export const Small: Story = {
   args: {
     score: 4.8,
     count: 42,
-    size: 'sm',
+    size: "sm",
   },
-}
+};
 
 export const ExtraSmall: Story = {
   args: {
     score: 4.2,
     count: 12,
-    size: 'xs',
+    size: "xs",
   },
-}
+};
 
 export const WithLabel: Story = {
   args: {
@@ -71,14 +73,14 @@ export const WithLabel: Story = {
       </span>
     ),
   },
-}
+};
 
 export const HalfStar: Story = {
   args: {
     score: 3.5,
     count: 64,
   },
-}
+};
 
 export const AllSizes: Story = {
   render: () => (
@@ -91,7 +93,7 @@ export const AllSizes: Story = {
             count={120}
             size={size as RatingSize}
             label={
-              size === 'default' || size === 'lg' ? (
+              size === "default" || size === "lg" ? (
                 <span className="text-xs text-gray-700">(120 Reviews)</span>
               ) : undefined
             }
@@ -100,4 +102,4 @@ export const AllSizes: Story = {
       ))}
     </div>
   ),
-}
+};

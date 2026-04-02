@@ -1,16 +1,15 @@
-import type { ViewProps } from 'react-native'
-import { View } from 'react-native-css/components'
+import type { ViewProps } from "react-native";
+import { View } from "react-native-css/components";
+import { cn } from "../utils/cn";
+import type { BaseCardProps } from "./card.types";
+import { cardStyles } from "./card.variants.native";
 
-import { cn } from '../utils/cn'
-import type { BaseCardProps } from './card.types'
-import { cardStyles } from './card.variants.native'
-
-export type CardProps = BaseCardProps & Omit<ViewProps, 'children'>
+export type CardProps = BaseCardProps & Omit<ViewProps, "children">;
 
 export function Card({
   children = null,
   className,
-  elevation = 'default',
+  elevation = "default",
   noPadding = false,
   ...props
 }: CardProps) {
@@ -21,5 +20,5 @@ export function Card({
     >
       {children}
     </View>
-  )
+  );
 }
