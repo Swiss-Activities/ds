@@ -2,6 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import {
   HorizontalScroller,
   horizontalScrollerVariants,
+  useHorizontalScroller,
 } from "@swiss-activities/ui";
 
 const items = Array.from({ length: 15 }, (_, i) => (
@@ -74,3 +75,73 @@ export const WithActiveId: Story = {
     )),
   },
 };
+
+export const WithTitle: Story = {
+  args: {
+    variant: "white",
+    title: "Popular Activities",
+    children: items,
+  },
+};
+
+export const Compound: StoryObj = {
+  render: () => (
+    <HorizontalScroller.Root>
+      <div className="mb-4 flex items-center justify-between">
+        <HorizontalScroller.Title>Custom Layout</HorizontalScroller.Title>
+        <div className="flex gap-2">
+          <HorizontalScroller.Prev variant="white" />
+          <HorizontalScroller.Next variant="white" />
+        </div>
+      </div>
+      <HorizontalScroller.Track>{items}</HorizontalScroller.Track>
+    </HorizontalScroller.Root>
+  ),
+};
+
+function CustomControls() {
+  const { canScrollLeft, canScrollRight, scrollPrev, scrollNext } =
+    useHorizontalScroller();
+  return (
+    <div className="mt-3 flex gap-2">
+      <button
+        disabled={!canScrollLeft}
+        onClick={scrollPrev}
+        className="rounded bg-gray-200 px-3 py-1 text-sm disabled:opacity-30"
+      >
+        Prev
+      </button>
+      <button
+        disabled={!canScrollRight}
+        onClick={scrollNext}
+        className="rounded bg-gray-200 px-3 py-1 text-sm disabled:opacity-30"
+      >
+        Next
+      </button>
+    </div>
+  );
+}
+
+export const CompoundWithHook: StoryObj = {
+  render: () => (
+    <HorizontalScroller.Root>
+      <HorizontalScroller.Title>With Custom Controls</HorizontalScroller.Title>
+      <HorizontalScroller.Track className="mt-2">{items}</HorizontalScroller.Track>
+      <CustomControls />
+    </HorizontalScroller.Root>
+  ),
+};
+
+export const MobileBleed: StoryObj = {
+  render: () => (
+    <div className="bg-gray-50 px-4">
+      <HorizontalScroller.Root>
+        <HorizontalScroller.Title>Edge to Edge</HorizontalScroller.Title>
+        <HorizontalScroller.Track bleed className="mt-2">
+          {items}
+        </HorizontalScroller.Track>
+      </HorizontalScroller.Root>
+    </div>
+  ),
+};
+

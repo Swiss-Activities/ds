@@ -1,4 +1,5 @@
 export * from "./activity-card";
+export * from "./section-activity-grid";
 export * from "./badge";
 export * from "./horizontal-scroller";
 export * from "./breadcrumbs";

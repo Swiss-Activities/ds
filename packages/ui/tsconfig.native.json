@@ -55,6 +55,16 @@
     "src/rating/rating.types.ts",
     "src/horizontal-scroller/index.native.ts",
     "src/horizontal-scroller/horizontal-scroller.native.tsx",
-    "src/horizontal-scroller/horizontal-scroller.types.ts"
+    "src/horizontal-scroller/horizontal-scroller.types.ts",
+    "src/horizontal-scroller/horizontal-scroller.context.ts",
+    "src/horizontal-scroller/horizontal-scroller.root.native.tsx",
+    "src/horizontal-scroller/horizontal-scroller.track.native.tsx",
+    "src/horizontal-scroller/horizontal-scroller.title.native.tsx",
+    "src/activity-card/index.native.ts",
+    "src/activity-card/activity-card.native.tsx",
+    "src/activity-card/activity-card.types.ts",
+    "src/section-activity-grid/index.native.ts",
+    "src/section-activity-grid/section-activity-grid.native.tsx",
+    "src/section-activity-grid/section-activity-grid.types.ts"
   ]
 }
