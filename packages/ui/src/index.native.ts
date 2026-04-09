@@ -1,3 +1,4 @@
+export * from "./activity-card/index.native";
 export * from "./breadcrumbs/index.native";
 export * from "./horizontal-scroller/index.native";
 export * from "./button/index.native";

@@ -1,3 +1,4 @@
+export * from "./activity-card";
 export * from "./badge";
 export * from "./horizontal-scroller";
 export * from "./breadcrumbs";

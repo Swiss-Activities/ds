@@ -1,7 +1,8 @@
 import type { ViewProps } from "react-native";
-import { Text, View } from "react-native-css/components";
+import { View } from "react-native-css/components";
 import Svg, { Path } from "react-native-svg";
 import { cn } from "../utils/cn";
+import { Text } from "../text";
 import type { BaseRatingProps } from "./rating.types";
 
 const STAR_PATH =
@@ -65,12 +66,18 @@ export function Rating({
       {...props}
     >
       {showScore && (
-        <Text className="me-1.5 text-xs font-semibold">{score.toFixed(1)}</Text>
+        <Text as="span" size="xs" gray className="me-1.5 font-medium">
+          {score.toFixed(1)}
+        </Text>
       )}
       {isSm ? (
         <View className="flex flex-row items-center">
           <StarSolid size={starSize} color={yellow} />
-          {count != null && <Text className="ms-1 text-xs">({count})</Text>}
+          {count != null && (
+            <Text as="span" size="xs" gray className="ms-1 font-medium">
+              ({count})
+            </Text>
+          )}
         </View>
       ) : (
         <>

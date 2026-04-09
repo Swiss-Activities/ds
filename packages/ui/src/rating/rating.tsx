@@ -1,5 +1,6 @@
 import type { HTMLAttributes } from "react";
 import { cn } from "../utils/cn";
+import { Text } from "../text";
 import type { BaseRatingProps } from "./rating.types";
 
 function StarSolid({ className }: { className?: string }) {
@@ -47,13 +48,15 @@ export function Rating({
   return (
     <span className={cn("flex flex-wrap items-center", className)} {...props}>
       {showScore && (
-        <span className="me-1.5 text-xs font-semibold">{score.toFixed(1)}</span>
+        <Text as="span" size="xs" gray className="me-1.5 font-medium">
+          {score.toFixed(1)}
+        </Text>
       )}
       {isSm ? (
-        <span className="flex items-center text-xs">
+        <Text as="span" size="xs" gray className="flex items-center font-medium">
           <StarSolid className="relative -top-px text-sm text-yellow-400" />
-          {count != null && <span className="ms-1 flex">({count})</span>}
-        </span>
+          {count != null && <Text as="span" size="xs" gray className="ms-1 font-medium">({count})</Text>}
+        </Text>
       ) : (
         <>
           <span
