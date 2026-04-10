@@ -16,11 +16,13 @@ export function ActivityCard({
   priceLabel,
   price,
   className,
+  render,
   ...props
 }: ActivityCardProps) {
   return (
     <Card
       noPadding
+      render={render}
       className={cn("group flex h-full w-full flex-col lg:hover:shadow-md", className)}
       {...props}
     >
@@ -28,10 +30,12 @@ export function ActivityCard({
         {image}
       </div>
       <div className="flex flex-1 flex-col gap-1 p-3.5 pt-4">
-        <Text as="h3" size="default" bold className="!leading-snug">
+        <Text as="h3" size="default" bold className="!text-base !leading-snug">
           {title}
         </Text>
-        <Rating score={score} count={reviewCount} size="sm" className="mt-1" />
+        {score > 0 && (
+          <Rating score={score} count={reviewCount} size="sm" className="mt-1" />
+        )}
         <div className="mt-auto">
           <div className="-mx-3.5 mb-3 mt-2 h-px bg-gray-200" />
           <div className="flex items-baseline justify-between">

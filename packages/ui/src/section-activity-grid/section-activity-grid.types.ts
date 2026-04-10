@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import type { ActivityCardRender } from "../activity-card/activity-card.types";
 
 export type ActivityItem = {
   image: ReactNode;
@@ -7,7 +8,7 @@ export type ActivityItem = {
   reviewCount: number;
   priceLabel: string;
   price: string;
-  href?: string;
+  render?: ActivityCardRender;
 };
 
 export type BaseSectionActivityGridProps = {

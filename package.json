@@ -12,7 +12,7 @@
     "build:storybook:web": "bun run --cwd apps/storybook-web build-storybook",
     "storybook:web": "bun run --cwd apps/storybook-web storybook",
     "storybook:native": "bun run --cwd apps/storybook-native storybook",
-    "postinstall": "node scripts/patch-react-native-css-lightningcss.mjs",
+    "postinstall": "node scripts/patch-react-native-css-lightningcss.mjs && node scripts/remove-react-symlinks.mjs",
     "lint:web": "bun run --cwd apps/storybook-web lint",
     "typecheck:ui": "bun run --cwd packages/ui typecheck",
     "typecheck": "bun run typecheck:ui && bun run --cwd apps/storybook-web typecheck && bun run --cwd apps/storybook-native typecheck"

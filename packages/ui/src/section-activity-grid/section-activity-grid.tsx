@@ -45,7 +45,7 @@ function NavButton({ direction }: { direction: "prev" | "next" }) {
     <button
       disabled={disabled}
       onClick={onClick}
-      className="flex h-9 w-9 cursor-pointer items-center justify-center rounded-full border border-gray-200 bg-white text-gray-700 shadow-sm transition hover:bg-gray-50 disabled:pointer-events-none disabled:opacity-30"
+      className="flex h-9 w-9 cursor-pointer items-center justify-center rounded-full border border-solid border-gray-200 bg-white text-gray-700 shadow-sm transition hover:bg-gray-50 disabled:pointer-events-none disabled:opacity-30"
     >
       {direction === "prev" ? <ChevronLeft /> : <ChevronRight />}
     </button>
@@ -70,7 +70,10 @@ export function SectionActivityGrid({
           <NavButton direction="next" />
         </div>
       </div>
-      <HorizontalScrollerTrack bleed className="snap-x gap-4 sm:gap-6 lg:gap-7">
+      <HorizontalScrollerTrack
+        bleed
+        className="-mx-px -my-2 snap-x gap-4 px-px py-2 [scroll-padding-inline:1px] sm:gap-6 lg:gap-7"
+      >
         {activities.map((a, i) => (
           <li
             key={i}
@@ -83,6 +86,7 @@ export function SectionActivityGrid({
               reviewCount={a.reviewCount}
               priceLabel={a.priceLabel}
               price={a.price}
+              render={a.render}
             />
           </li>
         ))}

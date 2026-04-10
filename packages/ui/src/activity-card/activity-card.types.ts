@@ -1,4 +1,7 @@
 import type { ReactNode } from "react";
+import type { CardRender } from "../card/card.types";
+
+export type ActivityCardRender = CardRender;
 
 export type BaseActivityCardProps = {
   image: ReactNode;
@@ -8,4 +11,5 @@ export type BaseActivityCardProps = {
   priceLabel: string;
   price: string;
   className?: string;
+  render?: ActivityCardRender;
 };

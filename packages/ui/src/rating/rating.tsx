@@ -48,14 +48,14 @@ export function Rating({
   return (
     <span className={cn("flex flex-wrap items-center", className)} {...props}>
       {showScore && (
-        <Text as="span" size="xs" gray className="me-1.5 font-medium">
+        <Text as="span" size="xs" gray className="me-1.5 font-medium !text-gray-700">
           {score.toFixed(1)}
         </Text>
       )}
       {isSm ? (
-        <Text as="span" size="xs" gray className="flex items-center font-medium">
+        <Text as="span" size="xs" gray className="flex items-center font-medium !text-gray-700">
           <StarSolid className="relative -top-px text-sm text-yellow-400" />
-          {count != null && <Text as="span" size="xs" gray className="ms-1 font-medium">({count})</Text>}
+          {count != null && <Text as="span" size="xs" gray className="ms-1 font-medium !text-gray-700">({count})</Text>}
         </Text>
       ) : (
         <>
