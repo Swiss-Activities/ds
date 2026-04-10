@@ -3,7 +3,7 @@ import { Badge } from "@swiss-activities/ui";
 import { badgeVariants } from "@swiss-activities/ui/badge/badge.types";
 
 const meta = {
-  title: "Web & Mobile/Badge",
+  title: "Components/Badge",
   component: Badge,
   parameters: {
     layout: "centered",

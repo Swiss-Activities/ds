@@ -3,7 +3,7 @@ import { Skeleton } from "@swiss-activities/ui";
 import { skeletonSizes } from "@swiss-activities/ui/skeleton/skeleton.types";
 
 const meta = {
-  title: "Web & Mobile/Skeleton",
+  title: "Components/Skeleton",
   component: Skeleton,
   parameters: {
     layout: "centered",

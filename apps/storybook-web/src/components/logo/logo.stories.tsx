@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import { Logo, logoSizes } from "@swiss-activities/ui";
 
 const meta = {
-  title: "Web & Mobile/Logo",
+  title: "Components/Logo",
   component: Logo,
   parameters: {
     layout: "centered",

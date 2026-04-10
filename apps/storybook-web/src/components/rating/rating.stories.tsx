@@ -6,7 +6,7 @@ import {
 } from "@swiss-activities/ui/rating/rating.types";
 
 const meta = {
-  title: "Web & Mobile/Rating",
+  title: "Components/Rating",
   component: Rating,
   parameters: {
     layout: "centered",

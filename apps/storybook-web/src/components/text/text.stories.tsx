@@ -7,7 +7,7 @@ const sizeMapping = Object.fromEntries(
 ) as Record<(typeof textSizes)[number], (typeof textSizes)[number]>;
 
 const meta = {
-  title: "Web & Mobile/Text",
+  title: "Components/Text",
   component: Text,
   parameters: {
     layout: "centered",

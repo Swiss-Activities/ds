@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import { Breadcrumbs } from "@swiss-activities/ui";
 
 const meta = {
-  title: "Web & Mobile/Breadcrumbs",
+  title: "Components/Breadcrumbs",
   component: Breadcrumbs,
   parameters: {
     layout: "padded",

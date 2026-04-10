@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import { ActivityCard } from "@swiss-activities/ui";
 
 const meta = {
-  title: "Web & Mobile/ActivityCard",
+  title: "Components/ActivityCard",
   component: ActivityCard,
   parameters: {
     layout: "centered",

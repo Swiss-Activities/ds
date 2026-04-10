@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import { ConditionalWrapper } from "@swiss-activities/ui";
 
 const meta = {
-  title: "Web & Mobile/ConditionalWrapper",
+  title: "Components/ConditionalWrapper",
   component: ConditionalWrapper,
   parameters: {
     layout: "centered",
