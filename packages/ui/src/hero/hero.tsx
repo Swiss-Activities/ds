@@ -21,7 +21,7 @@ export function Hero({
       )}
       {...props}
     >
-      <div className="relative aspect-[4/3] max-h-[300px] w-full overflow-hidden [&_img]:absolute [&_img]:inset-0 [&_img]:h-full [&_img]:w-full [&_img]:object-cover">
+      <div className="relative aspect-[5/2] w-full overflow-hidden sm:aspect-[4/3] sm:max-h-[300px] [&_img]:absolute [&_img]:inset-0 [&_img]:h-full [&_img]:w-full [&_img]:object-cover">
         {image}
         <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-blue to-transparent" />
         <Text
