@@ -1,5 +1,6 @@
 export * from "./activity-card";
 export * from "./section-activity-grid";
+export * from "./section-hero";
 export * from "./badge";
 export * from "./horizontal-scroller";
 export * from "./breadcrumbs";
@@ -8,6 +9,8 @@ export * from "./conditional-wrapper";
 export * from "./card";
 export * from "./flow";
 export * from "./header";
+export * from "./hero";
+export * from "./weather";
 export * from "./image-card";
 export * from "./icon-circle";
 export * from "./logo";

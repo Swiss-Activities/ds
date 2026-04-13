@@ -75,6 +75,11 @@ export const sharedButtonVariantStyles: Record<
     text: "text-white",
     webInteraction: "focus-visible:outline-gray-500",
   },
+  ghost: {
+    container: "min-h-[auto] border-none bg-transparent p-0",
+    text: "text-inherit",
+    webInteraction: "focus-visible:outline-primary",
+  },
   instruction: {
     container: "pointer-events-none border border-light bg-light",
     text: "text-primary",

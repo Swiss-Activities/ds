@@ -10,6 +10,7 @@ export const buttonVariants = [
   "blue-outline",
   "blue",
   "gray",
+  "ghost",
   "instruction",
   "link",
   "linkGray",

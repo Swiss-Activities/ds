@@ -65,6 +65,15 @@
     "src/activity-card/activity-card.types.ts",
     "src/section-activity-grid/index.ts",
     "src/section-activity-grid/section-activity-grid.tsx",
-    "src/section-activity-grid/section-activity-grid.types.ts"
+    "src/section-activity-grid/section-activity-grid.types.ts",
+    "src/hero/index.ts",
+    "src/hero/hero.tsx",
+    "src/hero/hero.types.ts",
+    "src/weather/index.ts",
+    "src/weather/weather.tsx",
+    "src/weather/weather.types.ts",
+    "src/section-hero/index.ts",
+    "src/section-hero/section-hero.tsx",
+    "src/section-hero/section-hero.types.ts"
   ]
 }

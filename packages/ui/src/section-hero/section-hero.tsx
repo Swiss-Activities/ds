@@ -1,0 +1,27 @@
+"use client";
+
+import type { HTMLAttributes } from "react";
+import { cn } from "../utils/cn";
+import { Hero } from "../hero";
+import { Weather } from "../weather";
+import type { BaseSectionHeroProps } from "./section-hero.types";
+
+export type SectionHeroProps = BaseSectionHeroProps &
+  Omit<HTMLAttributes<HTMLDivElement>, "children" | "title">;
+
+export function SectionHero({
+  title,
+  image,
+  days,
+  unit,
+  selected,
+  onSelect,
+  className,
+  ...props
+}: SectionHeroProps) {
+  return (
+    <Hero title={title} image={image} className={cn(className)} {...props}>
+      <Weather days={days} unit={unit} selected={selected} onSelect={onSelect} />
+    </Hero>
+  );
+}
