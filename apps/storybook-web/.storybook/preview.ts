@@ -27,7 +27,7 @@ const preview: Preview = {
       storySort: {
         order: [
           "General",
-          ["Welcome", "Installation Web", "Best Practices"],
+          ["Welcome", "Installation Web", "Data Package", "Best Practices"],
           "Foundations",
           "Components",
           "Sections",

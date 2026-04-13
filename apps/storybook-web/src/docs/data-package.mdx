@@ -1,0 +1,192 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+
+<Meta title="General/Data Package" />
+
+# Data Package
+
+`@swiss-activities/data` is a separate package that provides hooks, types, and adapters for fetching data from the Swiss Activities gateway API. It keeps UI components presentation-only while offering a reusable data layer.
+
+## Installation
+
+Add the `file:` dependency alongside the UI package:
+
+```json
+{
+  "dependencies": {
+    "@swiss-activities/data": "file:./ds/packages/data",
+    "@swiss-activities/ui": "file:./ds/packages/ui"
+  }
+}
+```
+
+Add the TypeScript path alias in `tsconfig.json`:
+
+```json
+{
+  "compilerOptions": {
+    "paths": {
+      "@swiss-activities/data": ["ds/packages/data/src/index.ts"]
+    }
+  }
+}
+```
+
+## Requirements
+
+- `react` ^18.0.0 or ^19.0.0
+- `@tanstack/react-query` ^5.0.0
+
+Your app must be wrapped in a `QueryClientProvider` (from React Query) and a `DataProvider` (from this package).
+
+## Setup
+
+```tsx
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+import { DataProvider } from '@swiss-activities/data'
+
+const queryClient = new QueryClient()
+
+function App() {
+  return (
+    <QueryClientProvider client={queryClient}>
+      <DataProvider
+        gatewayUrl="https://gateway.swissactivities.com"
+        apiUrl="https://www.swissactivities.com/api"
+        locale="de_CH"
+      >
+        {/* your app */}
+      </DataProvider>
+    </QueryClientProvider>
+  )
+}
+```
+
+### DataProvider props
+
+| Prop | Type | Description |
+|------|------|-------------|
+| `gatewayUrl` | `string` | Base URL for server-side gateway calls |
+| `apiUrl` | `string` | Base URL for client-side API proxy calls |
+| `locale` | `string` | Current locale (e.g. `de_CH`) |
+| `traceUrl` | `string?` | Cloudflare trace URL for country detection (defaults to swissactivities.com) |
+
+## Hooks
+
+### useGetHome
+
+Fetches personalized homepage sections from the gateway API. Automatically detects the user's country (via Cloudflare trace) and coordinates (via browser geolocation, only if already granted).
+
+```tsx
+import { useGetHome } from '@swiss-activities/data'
+
+function PersonalizedSections() {
+  const { data, isLoading, error } = useGetHome()
+
+  if (isLoading || !data) return null
+
+  return data.sections.map(section => (
+    <div key={section.id}>{section.title}</div>
+  ))
+}
+```
+
+### useGetCountry
+
+Detects the user's country code via Cloudflare's trace endpoint.
+
+```tsx
+import { useGetCountry } from '@swiss-activities/data'
+
+function Example() {
+  const { data: country } = useGetCountry()
+  // country = "CH", "DE", "US", etc.
+}
+```
+
+### useGeolocation
+
+Browser geolocation hook with permission state tracking.
+
+```tsx
+import { useGeolocation } from '@swiss-activities/data'
+
+function Example() {
+  const { isAvailable, isDenied, coordinates, getCurrentPosition } = useGeolocation()
+}
+```
+
+## Adapters
+
+### toActivityItem
+
+Maps a gateway `TGatewayHomeItem` to an `ActivityItemData` object that can be passed to `SectionActivityGrid`.
+
+```tsx
+import { toActivityItem } from '@swiss-activities/data'
+import type { TGatewayHomeItem } from '@swiss-activities/data'
+
+const item: ActivityItemData = toActivityItem(gatewayItem, {
+  priceLabel: "pro Person",
+  fromLabel: "ab",
+  renderImage: (item) => <img src={item.image_url} alt={item.title} />,
+})
+```
+
+The `renderImage` callback lets each consumer use their own image component (e.g. Next.js `Image`, Expo `Image`, plain `<img>`).
+
+## Server-side functions
+
+For SSR/SSG, use the standalone fetch functions instead of hooks:
+
+```ts
+import { getHome, getCountry } from '@swiss-activities/data'
+
+// In getStaticProps / getServerSideProps:
+const data = await getHome("https://gateway.swissactivities.com", {
+  locale: "de_CH",
+  country: "CH",
+})
+```
+
+## Types
+
+```ts
+import type {
+  TGatewayHome,
+  TGatewayHomeSection,
+  TGatewayHomeItem,
+  TGatewayHomeParams,
+  ActivityItemData,
+  DataConfig,
+} from '@swiss-activities/data'
+```
+
+## Full example
+
+```tsx
+import { useGetHome, toActivityItem } from '@swiss-activities/data'
+import { SectionActivityGrid } from '@swiss-activities/ui'
+import { StaticImage } from '@components/Image'
+
+export function PersonalizedSections() {
+  const { data, isLoading } = useGetHome()
+
+  if (isLoading || !data) return null
+
+  return data.sections.map(section => (
+    <SectionActivityGrid
+      key={section.id}
+      title={section.title}
+      activities={section.data
+        .filter(item => !!item.price_formatted)
+        .map(item => toActivityItem(item, {
+          priceLabel: "pro Person",
+          fromLabel: "ab",
+          renderImage: (item) => (
+            <StaticImage src={item.image_url} alt={item.title} width={600} height={400} />
+          ),
+        }))}
+    />
+  ))
+}
+```
