@@ -138,18 +138,35 @@ function NextButton({ hasOverflow, variant }: { hasOverflow: boolean; variant: W
   );
 }
 
-function ScrollBackGradient({ variant }: { variant: WeatherVariant }) {
-  const { canScrollLeft } = useHorizontalScroller();
+function ChevronLeft({ className }: { className?: string }) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 320 512"
+      fill="currentColor"
+      className={cn("h-3.5 w-3.5", className)}
+    >
+      <path d="M15 239c-9.4 9.4-9.4 24.6 0 33.9L207 465c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9L65.9 256 241 81c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0L15 239z" />
+    </svg>
+  );
+}
+
+function ScrollBackButton({ variant }: { variant: WeatherVariant }) {
+  const { canScrollLeft, scrollPrev } = useHorizontalScroller();
   const s = styles[variant];
 
   return (
-    <div
+    <button
+      onClick={scrollPrev}
+      tabIndex={canScrollLeft ? 0 : -1}
       className={cn(
-        "pointer-events-none absolute inset-y-0 start-0 z-10 w-8 rounded-lg bg-gradient-to-r to-transparent transition-opacity",
+        "absolute inset-y-0 start-0 z-10 flex w-10 cursor-pointer items-center justify-start rounded-none bg-gradient-to-r to-transparent ps-2 transition-opacity",
         s.gradient,
-        canScrollLeft ? "opacity-100" : "opacity-0"
+        canScrollLeft ? "opacity-100" : "pointer-events-none opacity-0"
       )}
-    />
+    >
+      <ChevronLeft className={cn(variant === "dark" ? "text-white/80" : "text-gray-500")} />
+    </button>
   );
 }
 
@@ -192,25 +209,27 @@ export function Weather({
 
   return (
     <div ref={containerRef} className={cn(className)}>
-      <HorizontalScrollerRoot className="relative flex gap-2" {...props}>
-        <ScrollBackGradient variant={variant} />
-        <HorizontalScrollerTrack className="gap-2">
-          {days.map((day, i) => {
-            const id = day.id ?? String(i);
-            return (
-              <li key={id} className="shrink-0 list-none">
-                <WeatherDayCard
-                  day={day}
-                  unit={unit}
-                  width={itemWidth}
-                  variant={variant}
-                  isSelected={selected === id}
-                  onSelect={onSelect ? () => onSelect(id) : undefined}
-                />
-              </li>
-            );
-          })}
-        </HorizontalScrollerTrack>
+      <HorizontalScrollerRoot className="flex gap-2" {...props}>
+        <div className="relative flex-1 overflow-hidden">
+          <ScrollBackButton variant={variant} />
+          <HorizontalScrollerTrack className="gap-2">
+            {days.map((day, i) => {
+              const id = day.id ?? String(i);
+              return (
+                <li key={id} className="shrink-0 list-none">
+                  <WeatherDayCard
+                    day={day}
+                    unit={unit}
+                    width={itemWidth}
+                    variant={variant}
+                    isSelected={selected === id}
+                    onSelect={onSelect ? () => onSelect(id) : undefined}
+                  />
+                </li>
+              );
+            })}
+          </HorizontalScrollerTrack>
+        </div>
         <NextButton hasOverflow={hasOverflow} variant={variant} />
       </HorizontalScrollerRoot>
     </div>
