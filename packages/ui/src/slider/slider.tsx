@@ -1,7 +1,7 @@
 "use client";
 
 import type { HTMLAttributes } from "react";
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { cn } from "../utils/cn";
 import type { BaseSliderProps } from "./slider.types";
 
@@ -43,25 +43,64 @@ export function Slider({
   ...props
 }: SliderProps) {
   const trackRef = useRef<HTMLDivElement>(null);
-  const [index, setIndex] = useState(0);
+  const [rawIndex, setRawIndex] = useState(loop ? 1 : 0);
+  const isJumping = useRef(false);
   const total = slides.length;
 
+  const allSlides = useMemo(
+    () =>
+      loop && total > 1
+        ? [slides[total - 1], ...slides, slides[0]]
+        : slides,
+    [slides, loop, total]
+  );
+
+  const realIndex = loop && total > 1
+    ? ((rawIndex - 1 + total) % total)
+    : rawIndex;
+
+  useEffect(() => {
+    if (!loop || total <= 1) return;
+    const el = trackRef.current;
+    if (!el) return;
+    el.scrollTo({ left: el.clientWidth, behavior: "instant" });
+  }, [loop, total]);
+
   const updateIndex = useCallback(() => {
+    if (isJumping.current) return;
     const el = trackRef.current;
     if (!el || el.clientWidth === 0) return;
-    setIndex(Math.round(el.scrollLeft / el.clientWidth));
+    setRawIndex(Math.round(el.scrollLeft / el.clientWidth));
   }, []);
 
   useEffect(() => {
     const el = trackRef.current;
     if (!el) return;
-    el.addEventListener("scrollend", updateIndex, { passive: true });
-    el.addEventListener("scroll", updateIndex, { passive: true });
-    return () => {
-      el.removeEventListener("scrollend", updateIndex);
-      el.removeEventListener("scroll", updateIndex);
+
+    const onScrollEnd = () => {
+      if (!loop || total <= 1 || isJumping.current) return;
+      const idx = Math.round(el.scrollLeft / el.clientWidth);
+
+      if (idx === 0) {
+        isJumping.current = true;
+        el.scrollTo({ left: total * el.clientWidth, behavior: "instant" });
+        setRawIndex(total);
+        requestAnimationFrame(() => { isJumping.current = false; });
+      } else if (idx === allSlides.length - 1) {
+        isJumping.current = true;
+        el.scrollTo({ left: el.clientWidth, behavior: "instant" });
+        setRawIndex(1);
+        requestAnimationFrame(() => { isJumping.current = false; });
+      }
     };
-  }, [updateIndex]);
+
+    el.addEventListener("scroll", updateIndex, { passive: true });
+    el.addEventListener("scrollend", onScrollEnd, { passive: true });
+    return () => {
+      el.removeEventListener("scroll", updateIndex);
+      el.removeEventListener("scrollend", onScrollEnd);
+    };
+  }, [updateIndex, loop, total, allSlides.length]);
 
   const goTo = useCallback((i: number) => {
     const el = trackRef.current;
@@ -70,23 +109,15 @@ export function Slider({
   }, []);
 
   const goPrev = useCallback(() => {
-    if (index > 0) {
-      goTo(index - 1);
-    } else if (loop) {
-      goTo(total - 1);
-    }
-  }, [index, loop, total, goTo]);
+    if (rawIndex > 0) goTo(rawIndex - 1);
+  }, [rawIndex, goTo]);
 
   const goNext = useCallback(() => {
-    if (index < total - 1) {
-      goTo(index + 1);
-    } else if (loop) {
-      goTo(0);
-    }
-  }, [index, loop, total, goTo]);
+    if (rawIndex < allSlides.length - 1) goTo(rawIndex + 1);
+  }, [rawIndex, allSlides.length, goTo]);
 
-  const showPrev = loop || index > 0;
-  const showNext = loop || index < total - 1;
+  const showPrev = rawIndex > (loop ? 0 : 0) && realIndex > 0;
+  const showNext = loop || rawIndex < allSlides.length - 1;
 
   return (
     <div className={cn("group relative", className)} {...props}>
@@ -94,7 +125,7 @@ export function Slider({
         ref={trackRef}
         className="no-scrollbar h-full snap-x snap-mandatory overflow-x-auto [display:flex]"
       >
-        {slides.map((slide, i) => (
+        {allSlides.map((slide, i) => (
           <div
             key={i}
             className="relative h-full min-w-full snap-start"
@@ -121,7 +152,7 @@ export function Slider({
       )}
       {showCounter && total > 1 && (
         <span className="absolute bottom-3 right-3 z-20 rounded-full bg-white/90 px-2 py-0.5 text-xs font-medium text-blue shadow-sm backdrop-blur-sm">
-          {index + 1}/{total}
+          {realIndex + 1}/{total}
         </span>
       )}
     </div>
