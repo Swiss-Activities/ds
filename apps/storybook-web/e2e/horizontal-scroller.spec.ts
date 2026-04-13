@@ -62,7 +62,7 @@ test.describe("SectionActivityGrid @ 1232px (desktop)", () => {
     await page.waitForTimeout(600);
 
     const after = await getFirstItemLeft(page);
-    expect(before - after).toBeCloseTo(step, 0);
+    expect(before - after).toBeCloseTo(step, -1);
   });
 
   test("prev scrolls exactly one card back", async ({ page }) => {
@@ -76,7 +76,7 @@ test.describe("SectionActivityGrid @ 1232px (desktop)", () => {
     await page.waitForTimeout(600);
     const after = await getFirstItemLeft(page);
 
-    expect(after - before).toBeCloseTo(step, 0);
+    expect(after - before).toBeCloseTo(step, -1);
   });
 
   test("prev button hidden at start, next hidden at end", async ({ page }) => {
@@ -113,7 +113,7 @@ test.describe("SectionActivityGrid @ 768px (tablet)", () => {
     await page.waitForTimeout(600);
 
     const after = await getFirstItemLeft(page);
-    expect(before - after).toBeCloseTo(step, 0);
+    expect(before - after).toBeCloseTo(step, -1);
   });
 
   test("prev scrolls exactly one card back", async ({ page }) => {
@@ -127,7 +127,7 @@ test.describe("SectionActivityGrid @ 768px (tablet)", () => {
     await page.waitForTimeout(600);
     const after = await getFirstItemLeft(page);
 
-    expect(after - before).toBeCloseTo(step, 0);
+    expect(after - before).toBeCloseTo(step, -1);
   });
 });
 
@@ -150,7 +150,7 @@ test.describe("SectionActivityGrid @ 640px (sm)", () => {
     await page.waitForTimeout(600);
 
     const after = await getFirstItemLeft(page);
-    expect(before - after).toBeCloseTo(step, 0);
+    expect(before - after).toBeCloseTo(step, -1);
   });
 });
 

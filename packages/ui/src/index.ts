@@ -16,5 +16,6 @@ export * from "./icon-circle";
 export * from "./logo";
 export * from "./rating";
 export * from "./skeleton";
+export * from "./slider";
 export * from "./text";
 export * from "./tokens";

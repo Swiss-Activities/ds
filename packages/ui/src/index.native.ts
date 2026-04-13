@@ -13,5 +13,6 @@ export * from "./image-card/index.native";
 export * from "./logo/index.native";
 export * from "./rating/index.native";
 export * from "./skeleton/index.native";
+export * from "./slider/index.native";
 export * from "./text/index.native";
 export * from "./tokens";
