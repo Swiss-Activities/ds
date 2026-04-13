@@ -13,7 +13,7 @@ import type { BaseWeatherProps, WeatherDay, WeatherVariant } from "./weather.typ
 export type WeatherProps = BaseWeatherProps &
   Omit<HTMLAttributes<HTMLDivElement>, "children">;
 
-const MIN_ITEM_WIDTH = 60;
+const MIN_ITEM_WIDTH = 72;
 const BUTTON_WIDTH = 36;
 const GAP = 8;
 
@@ -64,22 +64,24 @@ function WeatherDayCard({
       <Text as="span" size="xs" bold className={s.label}>
         {day.label}
       </Text>
-      <div className={cn("flex items-center justify-center [&_svg]:h-5 [&_svg]:w-5", s.icon)}>
-        {day.icon}
-      </div>
-      <div className="flex items-center gap-0.5">
-        <Text as="span" size="xs" className={s.low}>
-          {day.low}{unit}
-        </Text>
-        <Text as="span" size="xs" bold className={s.high}>
-          {day.high}{unit}
-        </Text>
+      <div className="flex w-full items-center justify-between">
+        <div className={cn("[&_svg]:h-6 [&_svg]:w-6", s.icon)}>
+          {day.icon}
+        </div>
+        <div className="flex flex-col items-end">
+          <Text as="span" size="xs" className={s.low}>
+            {day.low}{unit}
+          </Text>
+          <Text as="span" size="xs" bold className={s.high}>
+            {day.high}{unit}
+          </Text>
+        </div>
       </div>
     </>
   );
 
   const cardClasses = cn(
-    "flex flex-col items-center gap-1 rounded-lg border border-solid px-2.5 py-2",
+    "flex flex-col items-start gap-1 rounded-lg border border-solid px-2.5 py-2",
     isSelected ? s.cardSelected : s.card
   );
 

@@ -16,6 +16,9 @@ const targets = [
   "packages/ui/node_modules/react-dom",
   "packages/ui/node_modules/react-native",
   "packages/ui/node_modules/react-native-svg",
+  "packages/data/node_modules/react",
+  "packages/data/node_modules/react-dom",
+  "packages/data/node_modules/@tanstack",
 ];
 
 let removed = 0;

@@ -32,6 +32,7 @@ const preview: Preview = {
           "Components",
           "Sections",
           "Pages",
+          "Playgrounds",
           "Generators",
         ],
       },

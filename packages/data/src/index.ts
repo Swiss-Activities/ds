@@ -1,0 +1,17 @@
+export { DataProvider, useDataConfig } from "./provider";
+export type { DataConfig } from "./types";
+
+export { useGetHome, getHome } from "./gateway/getHome";
+export { useGetCountry, getCountry } from "./gateway/getCountry";
+export type {
+  TGatewayHome,
+  TGatewayHomeSection,
+  TGatewayHomeItem,
+  TGatewayHomeParams,
+} from "./gateway/types";
+
+export { toActivityItem } from "./adapters/activityItem";
+export type { ActivityItemData, RenderImage } from "./adapters/activityItem";
+
+export { useGeolocation } from "./hooks/useGeolocation";
+export { useSilentCoordinates } from "./hooks/useSilentCoordinates";
