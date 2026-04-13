@@ -20,8 +20,12 @@ export function SectionHero({
   ...props
 }: SectionHeroProps) {
   return (
-    <Hero title={title} image={image} className={cn(className)} {...props}>
-      <Weather days={days} unit={unit} selected={selected} onSelect={onSelect} />
-    </Hero>
+    <section className={cn(className)} {...props}>
+      <div className="sa-container">
+        <Hero title={title} image={image}>
+          <Weather days={days} unit={unit} selected={selected} onSelect={onSelect} />
+        </Hero>
+      </div>
+    </section>
   );
 }

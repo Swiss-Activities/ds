@@ -62,7 +62,8 @@ export function SectionActivityGrid({
   ...props
 }: SectionActivityGridProps) {
   return (
-    <HorizontalScrollerRoot className={cn(className)} {...props}>
+    <section className={cn(className)} {...props}>
+      <HorizontalScrollerRoot className="sa-container">
       <div className="mb-4 flex items-center justify-between">
         <HorizontalScrollerTitle>{title}</HorizontalScrollerTitle>
         <div className="hidden gap-2 sm:flex">
@@ -91,6 +92,7 @@ export function SectionActivityGrid({
           </li>
         ))}
       </HorizontalScrollerTrack>
-    </HorizontalScrollerRoot>
+      </HorizontalScrollerRoot>
+    </section>
   );
 }

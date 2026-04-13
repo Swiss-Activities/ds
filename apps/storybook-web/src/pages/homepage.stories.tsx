@@ -2,7 +2,6 @@ import { useState } from "react";
 import type { StoryObj } from "@storybook/react-vite";
 import { SectionHero, SectionActivityGrid } from "@swiss-activities/ui";
 import type { ActivityItem } from "@swiss-activities/ui";
-import { Container } from "../components/container";
 
 function Sun() {
   return (
@@ -167,26 +166,24 @@ export const Default: StoryObj = {
     const [selected, setSelected] = useState("0");
     return (
       <div className="min-h-screen bg-gray-50">
-        <Container>
-          <SectionHero
-            title="Interlaken"
-            image={
-              <img
-                src="https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/Jungfraujoch_Plateau_Sonnenaufgang_Aletschgletscher_6b8bb53632.jpg"
-                alt="Interlaken"
-              />
-            }
-            days={days}
-            selected={selected}
-            onSelect={setSelected}
-          />
-        </Container>
-        <Container>
-          <SectionActivityGrid
-            title="Beliebte Aktivitäten in Interlaken"
-            activities={activities}
-          />
-        </Container>
+        <SectionHero
+          title="Interlaken"
+          image={
+            <img
+              src="https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/Jungfraujoch_Plateau_Sonnenaufgang_Aletschgletscher_6b8bb53632.jpg"
+              alt="Interlaken"
+            />
+          }
+          days={days}
+          selected={selected}
+          onSelect={setSelected}
+          className="py-6"
+        />
+        <SectionActivityGrid
+          title="Beliebte Aktivitäten in Interlaken"
+          activities={activities}
+          className="py-6"
+        />
       </div>
     );
   },

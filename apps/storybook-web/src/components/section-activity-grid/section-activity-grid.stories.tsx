@@ -1,7 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import { SectionActivityGrid } from "@swiss-activities/ui";
 import type { ActivityItem } from "@swiss-activities/ui";
-import { Container } from "../container";
 
 const activities: ActivityItem[] = [
   {
@@ -99,8 +98,6 @@ export const Default: Story = {
     activities,
   },
   render: (args) => (
-    <Container>
-      <SectionActivityGrid {...args} />
-    </Container>
+    <SectionActivityGrid {...args} className="py-6" />
   ),
 };

@@ -1,7 +1,6 @@
 import { useState } from "react";
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import { SectionHero } from "@swiss-activities/ui";
-import { Container } from "../container";
 
 function Sun() {
   return (
@@ -97,9 +96,7 @@ export const Default: Story = {
   render: (args) => {
     const [selected, setSelected] = useState(args.selected);
     return (
-      <Container>
-        <SectionHero {...args} selected={selected} onSelect={setSelected} />
-      </Container>
+      <SectionHero {...args} selected={selected} onSelect={setSelected} className="py-6" />
     );
   },
 };
