@@ -48,6 +48,9 @@
     "src/text/text.types.ts",
     "src/text/text.variants.shared.ts",
     "src/utils/cn.ts",
+    "src/info-badge/index.ts",
+    "src/info-badge/info-badge.tsx",
+    "src/info-badge/info-badge.types.ts",
     "src/image-card/index.ts",
     "src/image-card/image-card.tsx",
     "src/image-card/image-card.types.ts",
@@ -77,6 +80,9 @@
     "src/weather/weather.types.ts",
     "src/section-hero/index.ts",
     "src/section-hero/section-hero.tsx",
-    "src/section-hero/section-hero.types.ts"
+    "src/section-hero/section-hero.types.ts",
+    "src/section-product/index.ts",
+    "src/section-product/section-product.tsx",
+    "src/section-product/section-product.types.ts"
   ]
 }

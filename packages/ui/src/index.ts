@@ -1,6 +1,7 @@
 export * from "./activity-card";
 export * from "./section-activity-grid";
 export * from "./section-hero";
+export * from "./section-product";
 export * from "./badge";
 export * from "./horizontal-scroller";
 export * from "./breadcrumbs";
@@ -13,6 +14,7 @@ export * from "./hero";
 export * from "./weather";
 export * from "./image-card";
 export * from "./icon-circle";
+export * from "./info-badge";
 export * from "./logo";
 export * from "./rating";
 export * from "./skeleton";

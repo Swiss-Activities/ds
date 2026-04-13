@@ -9,6 +9,7 @@ export type BaseRatingProps = {
   count?: number;
   size?: RatingSize;
   showScore?: boolean;
+  stacked?: boolean;
   label?: ReactNode;
   className?: string;
 };

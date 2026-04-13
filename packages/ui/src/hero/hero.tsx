@@ -55,7 +55,7 @@ export function Hero({
   return (
     <div
       className={cn(
-        "relative overflow-hidden rounded-lg bg-blue",
+        "relative overflow-hidden bg-blue sm:rounded-lg",
         className
       )}
       {...props}
@@ -75,13 +75,15 @@ export function Hero({
             <BackLink label={backLabel} href={backHref} onClick={onBack} />
           </div>
         )}
-        <Text
-          as="h2"
-          size="2xl"
-          className="pointer-events-none absolute bottom-3 left-4 z-10 !text-white sm:left-6 lg:left-8"
-        >
-          {title}
-        </Text>
+        {title && (
+          <Text
+            as="h2"
+            size="xl"
+            className="pointer-events-none absolute bottom-3 left-4 z-10 max-w-[90%] !text-white sm:left-6 lg:left-8"
+          >
+            {title}
+          </Text>
+        )}
       </div>
       {children && <div className="p-4 sm:p-6 lg:p-8">{children}</div>}
     </div>

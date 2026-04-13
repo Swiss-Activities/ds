@@ -31,6 +31,25 @@ function StarHalfSolid({ className }: { className?: string }) {
   );
 }
 
+function Stars({ score, className }: { score: number; className?: string }) {
+  return (
+    <span className={cn("flex items-center space-x-0.5", className)}>
+      {[1, 2, 3, 4, 5].map((i) => {
+        const isFull = score >= i;
+        const isHalf = !isFull && score >= i - 0.5;
+        return (
+          <span className="relative flex" key={i}>
+            <StarSolid className={cn({ "text-yellow-400": isFull })} />
+            {isHalf && (
+              <StarHalfSolid className="absolute start-0 top-0 text-yellow-400" />
+            )}
+          </span>
+        );
+      })}
+    </span>
+  );
+}
+
 export type RatingProps = BaseRatingProps &
   Omit<HTMLAttributes<HTMLSpanElement>, "children">;
 
@@ -39,11 +58,23 @@ export function Rating({
   count,
   size = "default",
   showScore = true,
+  stacked = false,
   label,
   className,
   ...props
 }: RatingProps) {
   const isSm = size === "sm" || size === "xs";
+
+  if (stacked) {
+    return (
+      <span className={cn("flex flex-col items-center", className)} {...props}>
+        <Text as="span" size="default" bold className="!leading-none">
+          {score.toFixed(1)}
+        </Text>
+        <Stars score={score} className="mt-1 text-xs text-gray-300" />
+      </span>
+    );
+  }
 
   return (
     <span className={cn("flex flex-wrap items-center", className)} {...props}>
@@ -59,26 +90,13 @@ export function Rating({
         </Text>
       ) : (
         <>
-          <span
+          <Stars
+            score={score}
             className={cn(
-              "relative -top-px me-2 flex items-center space-x-0.5 text-xs text-gray-300 lg:text-sm",
+              "relative -top-px me-2 text-xs text-gray-300 lg:text-sm",
               { "me-0 w-max !text-2xl": size === "lg" }
             )}
-          >
-            {[1, 2, 3, 4, 5].map((i) => {
-              const isFull = score >= i;
-              const isHalf = !isFull && score >= i - 0.5;
-
-              return (
-                <span className="relative flex" key={i}>
-                  <StarSolid className={cn({ "text-yellow-400": isFull })} />
-                  {isHalf && (
-                    <StarHalfSolid className="absolute start-0 top-0 text-yellow-400" />
-                  )}
-                </span>
-              );
-            })}
-          </span>
+          />
           {label}
         </>
       )}

@@ -1,6 +1,7 @@
 export * from "./activity-card/index.native";
 export * from "./section-activity-grid/index.native";
 export * from "./section-hero/index.native";
+export * from "./section-product/index.native";
 export * from "./breadcrumbs/index.native";
 export * from "./horizontal-scroller/index.native";
 export * from "./button/index.native";
@@ -8,6 +9,7 @@ export * from "./card/index.native";
 export * from "./flow/index.native";
 export * from "./header/index.native";
 export * from "./hero/index.native";
+export * from "./info-badge/index.native";
 export * from "./weather/index.native";
 export * from "./image-card/index.native";
 export * from "./logo/index.native";
