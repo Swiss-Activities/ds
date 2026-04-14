@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 
-export const ratingSizes = ["xs", "sm", "default", "lg"] as const;
+export const ratingSizes = ["xs", "sm", "default", "md", "lg"] as const;
 
 export type RatingSize = (typeof ratingSizes)[number];
 

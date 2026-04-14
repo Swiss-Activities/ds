@@ -94,6 +94,7 @@ export function Rating({
             score={score}
             className={cn(
               "relative -top-px me-2 text-xs text-gray-300 lg:text-sm",
+              { "me-0 w-max !text-xl": size === "md" },
               { "me-0 w-max !text-2xl": size === "lg" }
             )}
           />

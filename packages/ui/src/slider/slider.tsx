@@ -128,7 +128,7 @@ export function Slider({
         {allSlides.map((slide, i) => (
           <div
             key={i}
-            className="relative h-full min-w-full snap-start"
+            className="relative h-full min-w-full snap-start [&_img]:h-full [&_img]:w-full [&_img]:object-cover"
           >
             {slide}
           </div>

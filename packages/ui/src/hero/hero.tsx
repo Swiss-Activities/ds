@@ -69,7 +69,9 @@ export function Hero({
         {hasBack && (
           <div className="pointer-events-none absolute inset-x-0 top-0 z-20 h-20 bg-gradient-to-b from-blue/50 to-transparent" />
         )}
-        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-blue to-transparent" />
+        {title && (
+          <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-blue to-transparent" />
+        )}
         {hasBack && (
           <div className="absolute left-3 top-3 z-30">
             <BackLink label={backLabel} href={backHref} onClick={onBack} />
