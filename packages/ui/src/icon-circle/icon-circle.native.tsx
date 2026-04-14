@@ -1,7 +1,9 @@
+import React from "react";
 import type { ReactNode } from "react";
 import type { ViewProps } from "react-native";
 import { View } from "react-native-css/components";
 import { cn } from "../utils/cn";
+import { Text } from "../text/text.native";
 
 export type IconCircleProps = {
   icon: ReactNode;
@@ -13,6 +15,15 @@ export function IconCircle({
   className,
   ...props
 }: IconCircleProps) {
+  const content =
+    typeof icon === "string" || typeof icon === "number" ? (
+      <Text as="span" className="text-lg text-primary">
+        {icon}
+      </Text>
+    ) : (
+      icon
+    );
+
   return (
     <View
       className={cn(
@@ -21,7 +32,7 @@ export function IconCircle({
       )}
       {...props}
     >
-      {icon}
+      {content}
     </View>
   );
 }

@@ -9,6 +9,10 @@ const meta = {
   argTypes: {
     white: { control: "boolean" },
     ignoreLast: { control: "boolean" },
+    gradient: {
+      options: [false, "white", "gray"],
+      control: "inline-radio",
+    },
   },
   args: {
     items: [
@@ -16,6 +20,7 @@ const meta = {
       { label: "Zurich", href: "/en/activities/zurich" },
       { label: "Boat Tours", href: "/en/activities/zurich/boat-tours" },
     ],
+    gradient: "white",
   },
   render: (args) => (
     <View style={{ padding: 16 }}>
@@ -30,9 +35,24 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {};
 
+export const White: Story = {
+  args: {
+    white: true,
+    gradient: false,
+  },
+  decorators: [
+    (Story) => (
+      <View style={{ padding: 16, borderRadius: 16, backgroundColor: "#262626" }}>
+        <Story />
+      </View>
+    ),
+  ],
+};
+
 export const IgnoreLast: Story = {
   args: {
     ignoreLast: true,
+    gradient: "gray",
   },
 };
 
@@ -45,6 +65,11 @@ export const ManyItems: Story = {
       { label: "Outdoor Activities", href: "/en/activities/zurich/outdoor" },
       { label: "Water Sports", href: "/en/activities/zurich/water-sports" },
       { label: "Boat Tours", href: "/en/activities/zurich/boat-tours" },
+      {
+        label: "Lake Zurich Sunset Cruise",
+        href: "/en/activities/zurich/boat-tours/sunset-cruise",
+      },
     ],
+    gradient: "white",
   },
 };

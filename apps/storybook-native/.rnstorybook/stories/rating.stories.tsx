@@ -60,6 +60,14 @@ export const Small: Story = {
   },
 };
 
+export const ExtraSmall: Story = {
+  args: {
+    score: 4.2,
+    count: 12,
+    size: "xs",
+  },
+};
+
 export const WithLabel: Story = {
   args: {
     score: 4.6,
@@ -68,6 +76,13 @@ export const WithLabel: Story = {
         (215 Reviews - 1,240x booked)
       </Text>
     ),
+  },
+};
+
+export const HalfStar: Story = {
+  args: {
+    score: 3.5,
+    count: 64,
   },
 };
 

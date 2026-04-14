@@ -17,15 +17,70 @@ export function HorizontalScrollerRoot({
   ...props
 }: HorizontalScrollerRootProps) {
   const trackRef = useRef<any>(null);
+  const scrollXRef = useRef(0);
+  const contentWidthRef = useRef(0);
+  const viewportWidthRef = useRef(0);
+  const stepWidthRef = useRef(300);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(false);
 
+  const updateOverflow = useCallback(
+    (
+      scrollX = scrollXRef.current,
+      contentWidth = contentWidthRef.current,
+      viewportWidth = viewportWidthRef.current
+    ) => {
+      setCanScrollLeft(scrollX > 1);
+      setCanScrollRight(scrollX < contentWidth - viewportWidth - 1);
+    },
+    []
+  );
+
+  const setMetrics = useCallback(
+    ({
+      scrollX,
+      contentWidth,
+      viewportWidth,
+      stepWidth,
+    }: {
+      scrollX?: number;
+      contentWidth?: number;
+      viewportWidth?: number;
+      stepWidth?: number;
+    }) => {
+      if (typeof scrollX === "number") {
+        scrollXRef.current = scrollX;
+      }
+
+      if (typeof contentWidth === "number") {
+        contentWidthRef.current = contentWidth;
+      }
+
+      if (typeof viewportWidth === "number") {
+        viewportWidthRef.current = viewportWidth;
+      }
+
+      if (typeof stepWidth === "number" && stepWidth > 0) {
+        stepWidthRef.current = stepWidth;
+      }
+
+      updateOverflow();
+    },
+    [updateOverflow]
+  );
+
   const scrollPrev = useCallback(() => {
-    trackRef.current?.scrollTo?.({ x: -300, animated: true });
+    const nextX = Math.max(0, scrollXRef.current - stepWidthRef.current);
+    trackRef.current?.scrollTo?.({ x: nextX, animated: true });
   }, []);
 
   const scrollNext = useCallback(() => {
-    trackRef.current?.scrollTo?.({ x: 300, animated: true });
+    const maxX = Math.max(
+      0,
+      contentWidthRef.current - viewportWidthRef.current
+    );
+    const nextX = Math.min(maxX, scrollXRef.current + stepWidthRef.current);
+    trackRef.current?.scrollTo?.({ x: nextX, animated: true });
   }, []);
 
   const value = useMemo(
@@ -36,8 +91,16 @@ export function HorizontalScrollerRoot({
       scrollNext,
       activeId,
       trackRef,
+      setMetrics,
     }),
-    [canScrollLeft, canScrollRight, scrollPrev, scrollNext, activeId]
+    [
+      canScrollLeft,
+      canScrollRight,
+      scrollPrev,
+      scrollNext,
+      activeId,
+      setMetrics,
+    ]
   );
 
   return (

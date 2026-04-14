@@ -31,13 +31,13 @@ const preview: Preview = {
     options: {
       storySort: {
         order: [
+          "General",
           "Foundations",
           "Components",
           "Sections",
           "Pages",
           "Playgrounds",
           "Generators",
-          "Docs",
         ],
       },
     },

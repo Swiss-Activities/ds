@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import type { Meta, StoryObj } from "@storybook/react-native";
 import { Weather } from "@swiss-activities/ui";
+import { grayColors, saColors } from "@swiss-activities/ui/tokens";
 import { View } from "react-native";
 import { getWeatherDaysShort } from "./story-data";
 
@@ -27,7 +28,7 @@ function DarkWeather(args: React.ComponentProps<typeof Weather>) {
         width: 320,
         padding: 16,
         borderRadius: 16,
-        backgroundColor: "#1447e6",
+        backgroundColor: saColors.blue,
       }}
     >
       <Weather {...args} selected={selected} onSelect={setSelected} />
@@ -44,7 +45,7 @@ function LightWeather(args: React.ComponentProps<typeof Weather>) {
         width: 320,
         padding: 16,
         borderRadius: 16,
-        backgroundColor: "#f5f5f5",
+        backgroundColor: grayColors[50],
       }}
     >
       <Weather {...args} selected={selected} onSelect={setSelected} />
@@ -81,7 +82,7 @@ export const NonInteractive: Story = {
         width: 320,
         padding: 16,
         borderRadius: 16,
-        backgroundColor: "#1447e6",
+        backgroundColor: saColors.blue,
       }}
     >
       <Weather {...args} />
