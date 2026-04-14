@@ -31,6 +31,7 @@ const pinnedModules = [
   "react-dom",
   "react-native",
   "react-native-svg",
+  "@swiss-activities/dummy-data",
   "@storybook/react-native",
   "@storybook/addon-ondevice-actions",
   "@storybook/addon-ondevice-controls",
