@@ -1,7 +1,7 @@
 "use client";
 
 import type { HTMLAttributes } from "react";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import { cn } from "../utils/cn";
 import { Text } from "../text";
 import { Accordion } from "../accordion";
@@ -66,6 +66,50 @@ export function ContentBlocks({
   ...props
 }: ContentBlocksProps) {
   const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const container = containerRef.current;
+    if (!container) return;
+
+    let ticking = false;
+
+    const update = () => {
+      const threshold = 100;
+      const scrollPos = window.pageYOffset + threshold;
+      let currentId = "";
+
+      const headings = container.querySelectorAll("h2[id]");
+      for (const heading of Array.from(headings)) {
+        if ((heading as HTMLElement).offsetTop <= scrollPos) {
+          currentId = heading.id;
+        } else {
+          break;
+        }
+      }
+
+      container.querySelectorAll("[data-id]").forEach((el) => {
+        if (el.getAttribute("data-id") === currentId) {
+          (el as HTMLElement).style.color = "var(--color-primary)";
+        } else {
+          (el as HTMLElement).style.color = "";
+        }
+      });
+    };
+
+    const onScroll = () => {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(() => {
+        update();
+        ticking = false;
+      });
+    };
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+    update();
+
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
     <div ref={containerRef} className={cn(className)} {...props}>
