@@ -4,7 +4,7 @@ import { Accordion, Text } from "@swiss-activities/ui";
 const meta = {
   title: "Components/Accordion",
   component: Accordion,
-  parameters: { layout: "centered" },
+  parameters: { layout: "padded" },
 } satisfies Meta<typeof Accordion>;
 
 export default meta;
@@ -51,6 +51,10 @@ export const Default: Story = {
         ),
       },
     ],
-    className: "max-w-[500px]",
   },
+  render: (args) => (
+    <div className="w-full max-w-[600px]">
+      <Accordion {...args} />
+    </div>
+  ),
 };

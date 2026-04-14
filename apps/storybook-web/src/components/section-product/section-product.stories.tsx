@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { SectionProduct, SectionReviewGrid, ContentBlocks, Rating, InfoBadge, Text, Card, Button } from "@swiss-activities/ui";
+import { SectionProduct, SectionReviewGrid, SectionActivityGrid, ContentBlocks, Rating, InfoBadge, Text, Card, Button } from "@swiss-activities/ui";
+import type { ActivityItem } from "@swiss-activities/ui";
 
 function TrophyIcon() {
   return (
@@ -111,8 +112,8 @@ export const Default: Story = {
   },
   render: (args) => (
     <div className="min-h-screen bg-white">
-      <SectionProduct {...args} className="py-6 lg:py-8" />
-      <section className="bg-bg py-8">
+      <SectionProduct {...args} className="pt-6 pb-8 lg:pt-8 lg:pb-10" />
+      <section className="bg-bg py-8 lg:py-10">
         <div className="sa-container">
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6 lg:grid-cols-4 lg:gap-7">
             <Card noPadding render={({ className, children }) => <Button variant="ghost" className={`${className} !justify-start !text-left !p-3`}>{children}</Button>}>
@@ -201,7 +202,7 @@ export const Default: Story = {
           ]}
         />
       </section>
-      <section className="py-8">
+      <section className="py-8 lg:py-10">
         <div className="sa-container">
           <ContentBlocks
             items={[
@@ -234,6 +235,60 @@ export const Default: Story = {
           />
         </div>
       </section>
+      <SectionActivityGrid
+        title="Mehr Erlebnisse zum Jungfraujoch"
+        className="pb-8 lg:pb-10"
+        activities={[
+          {
+            image: <img src="https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/Grindelwald_First_Cliff_Walk_Eiger_Moench_Jungfrau_Bergpanorama_4653546e26.jpg" alt="Grindelwald" />,
+            title: "Ab Grindelwald: Ticket Jungfraujoch inkl. Sitzplatzreservation",
+            score: 4.7,
+            reviewCount: 100,
+            priceLabel: "pro Person",
+            price: "ab CHF 211.20",
+          },
+          {
+            image: <img src="https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/omar_m_j_F7_U3wadbd0_unsplash_f301eb283f.jpg" alt="Pilatus" />,
+            title: '"Moonlight": Silberhornhütte ab Interlaken',
+            score: 4.7,
+            reviewCount: 100,
+            priceLabel: "pro Person",
+            price: "ab CHF 189.00",
+          },
+          {
+            image: <img src="https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/Jungfraujoch_Plateau_Sonnenaufgang_Aletschgletscher_6b8bb53632.jpg" alt="Jungfraujoch" />,
+            title: "Jungfraujoch: Top of Europe — VIP Pass",
+            score: 4.8,
+            reviewCount: 64,
+            priceLabel: "pro Person",
+            price: "ab CHF 298.00",
+          },
+          {
+            image: <img src="https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/Grindelwald_First_Cliff_Walk_Eiger_Moench_Jungfrau_Bergpanorama_4653546e26.jpg" alt="Grindelwald" />,
+            title: "Grindelwald: First Cliff Walk by Tissot",
+            score: 4.5,
+            reviewCount: 53,
+            priceLabel: "pro Person",
+            price: "ab CHF 68.00",
+          },
+          {
+            image: <img src="https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/omar_m_j_F7_U3wadbd0_unsplash_f301eb283f.jpg" alt="Harder Kulm" />,
+            title: "Interlaken: Harder Kulm — Top of Interlaken",
+            score: 4.6,
+            reviewCount: 87,
+            priceLabel: "pro Person",
+            price: "ab CHF 42.00",
+          },
+          {
+            image: <img src="https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/Jungfraujoch_Plateau_Sonnenaufgang_Aletschgletscher_6b8bb53632.jpg" alt="Schilthorn" />,
+            title: "Mürren: Schilthorn — Piz Gloria Ticket",
+            score: 4.4,
+            reviewCount: 42,
+            priceLabel: "pro Person",
+            price: "ab CHF 105.00",
+          },
+        ]}
+      />
     </div>
   ),
 };
