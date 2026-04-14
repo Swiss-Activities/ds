@@ -2,6 +2,8 @@ export * from "./activity-card";
 export * from "./section-activity-grid";
 export * from "./section-hero";
 export * from "./section-product";
+export * from "./section-scroller";
+export * from "./section-review-grid";
 export * from "./badge";
 export * from "./horizontal-scroller";
 export * from "./breadcrumbs";

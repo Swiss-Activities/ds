@@ -89,6 +89,12 @@
     "src/section-hero/section-hero.types.ts",
     "src/section-product/index.ts",
     "src/section-product/section-product.tsx",
-    "src/section-product/section-product.types.ts"
+    "src/section-product/section-product.types.ts",
+    "src/section-review-grid/index.ts",
+    "src/section-review-grid/section-review-grid.tsx",
+    "src/section-review-grid/section-review-grid.types.ts",
+    "src/section-scroller/index.ts",
+    "src/section-scroller/section-scroller.tsx",
+    "src/section-scroller/section-scroller.types.ts"
   ]
 }
