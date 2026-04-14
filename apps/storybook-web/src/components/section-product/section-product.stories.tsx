@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import { SectionProduct, SectionReviewGrid, SectionActivityGrid, ContentBlocks, Rating, InfoBadge, Text, Card, Button } from "@swiss-activities/ui";
 import type { ActivityItem } from "@swiss-activities/ui";
+import { Page } from "../page";
 
 function TrophyIcon() {
   return (
@@ -111,8 +112,8 @@ export const Default: Story = {
     ),
   },
   render: (args) => (
-    <div className="min-h-screen bg-white">
-      <SectionProduct {...args} className="pt-6 pb-8 lg:pt-8 lg:pb-10" />
+    <Page className="bg-white">
+      <SectionProduct {...args} className="pb-6 lg:pb-8" />
       <section className="bg-bg py-8 lg:py-10">
         <div className="sa-container">
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6 lg:grid-cols-4 lg:gap-7">
@@ -289,6 +290,6 @@ export const Default: Story = {
           },
         ]}
       />
-    </div>
+    </Page>
   ),
 };

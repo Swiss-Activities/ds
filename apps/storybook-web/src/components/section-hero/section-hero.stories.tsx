@@ -96,7 +96,7 @@ export const Default: Story = {
   render: (args) => {
     const [selected, setSelected] = useState(args.selected);
     return (
-      <SectionHero {...args} selected={selected} onSelect={setSelected} className="py-6" />
+      <SectionHero {...args} selected={selected} onSelect={setSelected} className="pb-6" />
     );
   },
 };

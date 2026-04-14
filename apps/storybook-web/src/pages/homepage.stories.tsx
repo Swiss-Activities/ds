@@ -1,6 +1,7 @@
 import { useState } from "react";
 import type { StoryObj } from "@storybook/react-vite";
 import { SectionHero, SectionActivityGrid } from "@swiss-activities/ui";
+import { Page } from "../components/page";
 import type { ActivityItem } from "@swiss-activities/ui";
 
 function Sun() {
@@ -165,7 +166,7 @@ export const Default: StoryObj = {
   render: () => {
     const [selected, setSelected] = useState("0");
     return (
-      <div className="min-h-screen bg-gray-50">
+      <Page>
         <SectionHero
           title="Interlaken"
           image={
@@ -177,14 +178,14 @@ export const Default: StoryObj = {
           days={days}
           selected={selected}
           onSelect={setSelected}
-          className="py-6"
+          className="pb-6"
         />
         <SectionActivityGrid
           title="Beliebte Aktivitäten in Interlaken"
           activities={activities}
           className="py-6"
         />
-      </div>
+      </Page>
     );
   },
 };

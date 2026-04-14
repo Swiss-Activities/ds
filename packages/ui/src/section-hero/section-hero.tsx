@@ -22,9 +22,11 @@ export function SectionHero({
   return (
     <section className={cn(className)} {...props}>
       <div className="sa-container">
-        <Hero title={title} image={image}>
-          <Weather days={days} unit={unit} selected={selected} onSelect={onSelect} />
-        </Hero>
+        <div className="-mx-2 sm:mx-0">
+          <Hero title={title} image={image}>
+            <Weather days={days} unit={unit} selected={selected} onSelect={onSelect} />
+          </Hero>
+        </div>
       </div>
     </section>
   );
