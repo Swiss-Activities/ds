@@ -9,5 +9,7 @@ export type BaseSectionReviewGridProps = {
   title: ReactNode;
   subtitle?: ReactNode;
   reviews: ReviewItem[];
+  as?: "section" | "div";
+  noContainer?: boolean;
   className?: string;
 };

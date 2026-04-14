@@ -112,9 +112,9 @@ export const Default: Story = {
   render: (args) => (
     <div className="min-h-screen bg-white">
       <SectionProduct {...args} className="py-6 lg:py-8" />
-      <section className="bg-bg py-4 lg:py-6">
+      <section className="bg-bg py-8">
         <div className="sa-container">
-          <div className="grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6 lg:grid-cols-4 lg:gap-7">
             <Card noPadding render={({ className, children }) => <Button variant="ghost" className={`${className} !justify-start !text-left !p-3`}>{children}</Button>}>
               <InfoBadge
                 icon={<ClockIcon />}
@@ -147,7 +147,8 @@ export const Default: Story = {
         </div>
         <SectionReviewGrid
           title="Bewertungen"
-          className="py-6"
+          as="div"
+          className="pt-6"
           reviews={[
           {
             author: "Willhelmine",

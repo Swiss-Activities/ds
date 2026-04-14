@@ -48,12 +48,14 @@ export function SectionScroller({
   title,
   subtitle,
   children,
+  as: Tag = "section",
+  noContainer = false,
   className,
   ...props
 }: SectionScrollerProps) {
   return (
-    <section className={cn(className)} {...props}>
-      <HorizontalScrollerRoot className="sa-container">
+    <Tag className={cn(className)} {...props}>
+      <HorizontalScrollerRoot className={cn(!noContainer && "sa-container")}>
         <div className="mb-4 flex items-center justify-between">
           <div className="flex items-center gap-4">
             <HorizontalScrollerTitle>{title}</HorizontalScrollerTitle>
@@ -71,7 +73,7 @@ export function SectionScroller({
           {children}
         </HorizontalScrollerTrack>
       </HorizontalScrollerRoot>
-    </section>
+    </Tag>
   );
 }
 

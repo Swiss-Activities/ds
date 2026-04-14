@@ -13,11 +13,13 @@ export function SectionReviewGrid({
   title,
   subtitle,
   reviews,
+  as,
+  noContainer,
   className,
   ...props
 }: SectionReviewGridProps) {
   return (
-    <SectionScroller title={title} subtitle={subtitle} className={cn(className)} {...props}>
+    <SectionScroller title={title} subtitle={subtitle} as={as} noContainer={noContainer} className={cn(className)} {...props}>
       {reviews.map((review, i) => (
         <li key={review.id ?? i} className={sectionScrollerItemClassName}>
           <ReviewCard
