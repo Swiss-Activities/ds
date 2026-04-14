@@ -111,11 +111,10 @@ function GatewayPlayground() {
       style={{
         minHeight: "100vh",
         backgroundColor: saColors.bg,
-        padding: "40px",
         fontFamily: "Inter, system-ui, sans-serif",
       }}
     >
-      <div style={{ maxWidth: 1280, margin: "0 auto" }}>
+      <div className="sa-container" style={{ paddingTop: 40 }}>
         <h1
           style={{
             fontSize: 28,
@@ -261,18 +260,18 @@ function GatewayPlayground() {
             returned
           </div>
         )}
-
-        {data?.sections.map((section) => (
-          <div key={section.id} style={{ marginBottom: 48 }}>
-            <SectionActivityGrid
-              title={section.title}
-              activities={section.data
-                .filter((item) => !!item.price_formatted)
-                .map(toActivityItem)}
-            />
-          </div>
-        ))}
       </div>
+
+      {data?.sections.map((section) => (
+        <SectionActivityGrid
+          key={section.id}
+          title={section.title}
+          className="py-6"
+          activities={section.data
+            .filter((item) => !!item.price_formatted)
+            .map(toActivityItem)}
+        />
+      ))}
     </main>
   );
 }
