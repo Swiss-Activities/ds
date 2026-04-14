@@ -29,7 +29,7 @@ export function Accordion({
       {items.map((item, i) => (
         <details key={item.id ?? i} className="group">
           <summary className="flex cursor-pointer list-none items-center justify-between py-4 [&::-webkit-details-marker]:hidden">
-            <Text as="span" size="default">
+            <Text as="span" size="lg" className="!text-[17px]">
               {item.title}
             </Text>
             <ChevronDown className="shrink-0 text-gray-400 transition group-open:rotate-180" />

@@ -60,7 +60,7 @@ export function Hero({
       )}
       {...props}
     >
-      <div className="relative aspect-[5/2] w-full overflow-hidden sm:aspect-[4/3] sm:max-h-[300px] [&_img]:absolute [&_img]:inset-0 [&_img]:h-full [&_img]:w-full [&_img]:object-cover">
+      <div className="relative aspect-video w-full overflow-hidden sm:aspect-[4/3] sm:max-h-[300px] [&_img]:absolute [&_img]:inset-0 [&_img]:h-full [&_img]:w-full [&_img]:object-cover">
         {isGallery ? (
           <Slider slides={images} loop className="absolute inset-0" />
         ) : (
