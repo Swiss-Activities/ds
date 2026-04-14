@@ -1,16 +1,20 @@
-import type { Meta, StoryObj } from "@storybook/react-vite";
+import React from "react";
+import type { Meta, StoryObj } from "@storybook/react-native";
 import { heroTitles } from "@swiss-activities/dummy-data";
 import { Hero } from "@swiss-activities/ui";
-import { getHeroGallery, getHeroImage } from "../../story-data";
-import { Container } from "../container";
+import { View } from "react-native";
+import { getHeroGallery, getHeroImage } from "./story-data";
 
 const meta = {
   title: "Components/Hero",
   component: Hero,
-  parameters: { layout: "fullscreen" },
+  parameters: {
+    layout: "fullscreen",
+  },
 } satisfies Meta<typeof Hero>;
 
 export default meta;
+
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
@@ -19,9 +23,9 @@ export const Default: Story = {
     image: getHeroImage(),
   },
   render: (args) => (
-    <Container>
+    <View style={{ padding: 16 }}>
       <Hero {...args} />
-    </Container>
+    </View>
   ),
 };
 
@@ -30,12 +34,12 @@ export const WithBackButton: Story = {
     title: heroTitles.hero,
     image: getHeroImage(),
     backLabel: heroTitles.hero,
-    backHref: "#",
+    onBack: () => {},
   },
   render: (args) => (
-    <Container>
+    <View style={{ padding: 16 }}>
       <Hero {...args} />
-    </Container>
+    </View>
   ),
 };
 
@@ -44,11 +48,11 @@ export const Gallery: Story = {
     title: heroTitles.gallery,
     images: getHeroGallery(),
     backLabel: heroTitles.hero,
-    backHref: "#",
+    onBack: () => {},
   },
   render: (args) => (
-    <Container>
+    <View style={{ padding: 16 }}>
       <Hero {...args} />
-    </Container>
+    </View>
   ),
 };

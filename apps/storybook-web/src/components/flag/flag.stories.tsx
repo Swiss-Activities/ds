@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
+import { flagCountries } from "@swiss-activities/dummy-data";
 import { Flag } from "@swiss-activities/ui";
 
 const meta = {
@@ -20,7 +21,7 @@ export const Default: Story = {
 export const Countries: StoryObj = {
   render: () => (
     <div className="flex flex-wrap gap-4">
-      {["CH", "DE", "US", "GB", "FR", "IT", "JP", "KR", "CN", "BR", "AU", "IN"].map((code) => (
+      {flagCountries.map((code) => (
         <div key={code} className="flex items-center gap-2">
           <Flag countryCode={code} />
           <span className="text-sm text-gray-600">{code}</span>

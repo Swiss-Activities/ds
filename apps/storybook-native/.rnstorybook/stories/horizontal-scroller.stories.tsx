@@ -13,7 +13,7 @@ const items = Array.from({ length: 8 }, (_, i) => (
 ));
 
 const meta = {
-  title: "Web & Mobile/HorizontalScroller",
+  title: "Components/HorizontalScroller",
   component: HorizontalScroller,
   argTypes: {
     variant: {

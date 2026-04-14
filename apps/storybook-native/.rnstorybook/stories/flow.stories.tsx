@@ -4,7 +4,7 @@ import { Button, Flow } from "@swiss-activities/ui";
 import { Text } from "react-native-css/components";
 
 const meta = {
-  title: "Web & Mobile/Flow",
+  title: "Components/Flow",
   component: Flow,
   argTypes: {
     className: {

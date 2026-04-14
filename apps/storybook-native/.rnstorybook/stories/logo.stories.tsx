@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from "@storybook/react-native";
 import { Logo, logoSizes } from "@swiss-activities/ui";
 
 const meta = {
-  title: "Web & Mobile/Logo",
+  title: "Components/Logo",
   component: Logo,
   argTypes: {
     size: {

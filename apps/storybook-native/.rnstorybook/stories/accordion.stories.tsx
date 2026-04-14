@@ -1,14 +1,19 @@
-import type { Meta, StoryObj } from "@storybook/react-vite";
+import React from "react";
+import type { Meta, StoryObj } from "@storybook/react-native";
 import { Accordion } from "@swiss-activities/ui";
-import { getAccordionItems } from "../../story-data";
+import { View } from "react-native";
+import { getAccordionItems } from "./story-data";
 
 const meta = {
   title: "Components/Accordion",
   component: Accordion,
-  parameters: { layout: "padded" },
+  parameters: {
+    layout: "padded",
+  },
 } satisfies Meta<typeof Accordion>;
 
 export default meta;
+
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
@@ -16,8 +21,8 @@ export const Default: Story = {
     items: getAccordionItems(),
   },
   render: (args) => (
-    <div className="w-full max-w-[600px]">
+    <View style={{ width: "100%", maxWidth: 600, alignSelf: "center" }}>
       <Accordion {...args} />
-    </div>
+    </View>
   ),
 };

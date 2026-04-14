@@ -1,17 +1,19 @@
-import { useState } from "react";
-import type { Meta, StoryObj } from "@storybook/react-vite";
+import React, { useState } from "react";
+import type { Meta, StoryObj } from "@storybook/react-native";
 import { heroTitles } from "@swiss-activities/dummy-data";
 import { SectionHero } from "@swiss-activities/ui";
-import { getHeroImage, getWeatherDaysLong } from "../../story-data";
-import { Page } from "../page";
+import { StoryScrollScreen, getHeroImage, getWeatherDaysLong } from "./story-data";
 
 const meta = {
   title: "Sections/SectionHero",
   component: SectionHero,
-  parameters: { layout: "fullscreen" },
+  parameters: {
+    layout: "fullscreen",
+  },
 } satisfies Meta<typeof SectionHero>;
 
 export default meta;
+
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
@@ -23,19 +25,11 @@ export const Default: Story = {
   },
   render: (args) => {
     const [selected, setSelected] = useState(args.selected);
+
     return (
-      <Page>
-        <SectionHero
-          {...args}
-          selected={selected}
-          onSelect={(id) => {
-            if (typeof id === "string") {
-              setSelected(id);
-            }
-          }}
-          className="pb-6"
-        />
-      </Page>
+      <StoryScrollScreen>
+        <SectionHero {...args} selected={selected} onSelect={setSelected} />
+      </StoryScrollScreen>
     );
   },
 };

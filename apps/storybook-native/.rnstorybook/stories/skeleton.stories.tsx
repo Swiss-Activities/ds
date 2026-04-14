@@ -5,7 +5,7 @@ import { skeletonSizes } from "@swiss-activities/ui/skeleton/skeleton.types";
 import { Text, View } from "react-native-css/components";
 
 const meta = {
-  title: "Web & Mobile/Skeleton",
+  title: "Components/Skeleton",
   component: Skeleton,
   argTypes: {
     size: {
@@ -38,6 +38,11 @@ export const Default: Story = {
 };
 
 export const Sizes: Story = {
+  args: {
+    loading: true,
+    size: "sm",
+    amount: 1,
+  },
   render: () => (
     <View style={{ padding: 16, width: 360, gap: 24 }}>
       {skeletonSizes.map((size) => (

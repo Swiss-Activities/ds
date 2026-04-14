@@ -13,11 +13,12 @@
     "build-storybook": "storybook build -o dist"
   },
   "dependencies": {
+    "@swiss-activities/dummy-data": "workspace:*",
     "@swiss-activities/data": "workspace:*",
     "@swiss-activities/ui": "workspace:*",
     "@tanstack/react-query": "^5.59.15",
-    "react": "^19.2.5",
-    "react-dom": "^19.2.5",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
     "satori": "^0.26.0"
   },
   "devDependencies": {
@@ -29,8 +30,8 @@
     "@storybook/react-vite": "^10.3.5",
     "@tailwindcss/vite": "^4.2.2",
     "@types/node": "^25.5.2",
-    "@types/react": "^19.2.14",
-    "@types/react-dom": "^19.2.3",
+    "@types/react": "~19.1.10",
+    "@types/react-dom": "~19.1.9",
     "@vitejs/plugin-react": "^6.0.1",
     "@vitest/browser-playwright": "^4.1.4",
     "@vitest/coverage-v8": "^4.1.4",

@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from "@storybook/react-native";
 import { Button, buttonSizes, buttonVariants } from "@swiss-activities/ui";
 
 const meta = {
-  title: "Web & Mobile/Button",
+  title: "Components/Button",
   component: Button,
   argTypes: {
     variant: {

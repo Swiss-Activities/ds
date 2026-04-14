@@ -4,7 +4,7 @@ import { Button, Card, Flow } from "@swiss-activities/ui";
 import { Text, View } from "react-native-css/components";
 
 const meta = {
-  title: "Web & Mobile/Card",
+  title: "Components/Card",
   component: Card,
   argTypes: {
     elevation: {

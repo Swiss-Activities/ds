@@ -30,7 +30,15 @@ const preview: Preview = {
     },
     options: {
       storySort: {
-        order: ["Welcome", "Components"],
+        order: [
+          "Foundations",
+          "Components",
+          "Sections",
+          "Pages",
+          "Playgrounds",
+          "Generators",
+          "Docs",
+        ],
       },
     },
   },

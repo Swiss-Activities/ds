@@ -8,7 +8,7 @@ import {
 import { Text, View } from "react-native-css/components";
 
 const meta = {
-  title: "Web & Mobile/Rating",
+  title: "Components/Rating",
   component: Rating,
   argTypes: {
     score: {

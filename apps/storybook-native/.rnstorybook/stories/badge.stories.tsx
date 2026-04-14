@@ -5,7 +5,7 @@ import { badgeVariants } from "@swiss-activities/ui/badge/badge.types";
 import { View } from "react-native-css/components";
 
 const meta = {
-  title: "Web & Mobile/Badge",
+  title: "Components/Badge",
   component: Badge,
   argTypes: {
     variant: {

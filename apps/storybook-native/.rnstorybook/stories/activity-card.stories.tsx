@@ -1,6 +1,8 @@
-import type { Meta, StoryObj } from "@storybook/react-vite";
+import React from "react";
+import type { Meta, StoryObj } from "@storybook/react-native";
 import { ActivityCard } from "@swiss-activities/ui";
-import { getActivityItems } from "../../story-data";
+import { View } from "react-native";
+import { getActivityItems } from "./story-data";
 
 const items = getActivityItems();
 
@@ -21,22 +23,23 @@ const meta = {
 } satisfies Meta<typeof ActivityCard>;
 
 export default meta;
+
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: items[0],
   render: (args) => (
-    <div className="w-[280px]">
+    <View style={{ width: 280 }}>
       <ActivityCard {...args} />
-    </div>
+    </View>
   ),
 };
 
 export const CliffWalk: Story = {
   args: items[1],
   render: (args) => (
-    <div className="w-[280px]">
+    <View style={{ width: 280 }}>
       <ActivityCard {...args} />
-    </div>
+    </View>
   ),
 };

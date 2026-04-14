@@ -4,7 +4,7 @@ import { Button, ImageCard } from "@swiss-activities/ui";
 import { Image, View } from "react-native-css/components";
 
 const meta = {
-  title: "Web & Mobile/ImageCard",
+  title: "Components/ImageCard",
   component: ImageCard,
 } satisfies Meta<typeof ImageCard>;
 
@@ -13,7 +13,6 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    text: "Add a scenic cliff walk to your adventure",
     image: (
       <Image
         source={{
@@ -28,6 +27,7 @@ export const Default: Story = {
         Add Ticket
       </Button>
     ),
+    children: "Add a scenic cliff walk to your adventure",
   },
   render: (args) => (
     <View style={{ padding: 16, width: 360 }}>

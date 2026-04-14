@@ -4,7 +4,7 @@ import { IconCircle } from "@swiss-activities/ui";
 import { Text, View } from "react-native-css/components";
 
 const meta = {
-  title: "Web & Mobile/IconCircle",
+  title: "Components/IconCircle",
   component: IconCircle,
 } satisfies Meta<typeof IconCircle>;
 

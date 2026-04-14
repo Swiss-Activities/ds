@@ -1,6 +1,6 @@
 "use client";
 
-import type { HTMLAttributes, ReactNode } from "react";
+import type { HTMLAttributes } from "react";
 import type { BaseHorizontalScrollerProps } from "./horizontal-scroller.types";
 import { HorizontalScrollerRoot } from "./horizontal-scroller.root";
 import { HorizontalScrollerTrack } from "./horizontal-scroller.track";

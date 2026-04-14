@@ -4,7 +4,7 @@ import { Breadcrumbs } from "@swiss-activities/ui";
 import { View } from "react-native-css/components";
 
 const meta = {
-  title: "Web & Mobile/Breadcrumbs",
+  title: "Components/Breadcrumbs",
   component: Breadcrumbs,
   argTypes: {
     white: { control: "boolean" },

@@ -39,6 +39,11 @@ export const Default: Story = {
 };
 
 export const Sizes: Story = {
+  args: {
+    loading: true,
+    size: "sm",
+    amount: 1,
+  },
   render: () => (
     <div className="flex w-[360px] flex-col gap-6">
       {skeletonSizes.map((size) => (

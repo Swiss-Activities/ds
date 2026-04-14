@@ -4,7 +4,7 @@ import { Linking } from "react-native";
 import { Text, View } from "react-native-css/components";
 
 const meta = {
-  title: "Welcome/Start",
+  title: "Docs/Welcome",
   parameters: {
     layout: "fullscreen",
   },

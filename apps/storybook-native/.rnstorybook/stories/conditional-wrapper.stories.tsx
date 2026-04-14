@@ -1,10 +1,11 @@
 import React from "react";
 import type { Meta, StoryObj } from "@storybook/react-native";
 import { ConditionalWrapper } from "@swiss-activities/ui";
+import type { ReactNode } from "react";
 import { Text, View } from "react-native-css/components";
 
 const meta = {
-  title: "Web & Mobile/ConditionalWrapper",
+  title: "Components/ConditionalWrapper",
   component: ConditionalWrapper,
   argTypes: {
     condition: {
@@ -20,7 +21,7 @@ type Story = StoryObj<typeof meta>;
 export const WithWrapper: Story = {
   args: {
     condition: true,
-    wrapper: (children) => (
+    wrapper: (children: ReactNode) => (
       <View
         style={{ padding: 16, backgroundColor: "#f9fafb", borderRadius: 8 }}
       >
@@ -43,7 +44,7 @@ export const WithWrapper: Story = {
 export const WithoutWrapper: Story = {
   args: {
     condition: false,
-    wrapper: (children) => (
+    wrapper: (children: ReactNode) => (
       <View
         style={{ padding: 16, backgroundColor: "#f9fafb", borderRadius: 8 }}
       >

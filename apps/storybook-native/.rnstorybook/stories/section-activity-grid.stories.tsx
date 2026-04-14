@@ -1,15 +1,19 @@
-import type { Meta, StoryObj } from "@storybook/react-vite";
+import React from "react";
+import type { Meta, StoryObj } from "@storybook/react-native";
 import { heroTitles } from "@swiss-activities/dummy-data";
 import { SectionActivityGrid } from "@swiss-activities/ui";
-import { getActivityItems } from "../../story-data";
+import { getActivityItems, StoryScrollScreen } from "./story-data";
 
 const meta = {
   title: "Sections/SectionActivityGrid",
   component: SectionActivityGrid,
-  parameters: { layout: "fullscreen" },
+  parameters: {
+    layout: "fullscreen",
+  },
 } satisfies Meta<typeof SectionActivityGrid>;
 
 export default meta;
+
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
@@ -18,6 +22,8 @@ export const Default: Story = {
     activities: getActivityItems(),
   },
   render: (args) => (
-    <SectionActivityGrid {...args} className="py-6" />
+    <StoryScrollScreen>
+      <SectionActivityGrid {...args} />
+    </StoryScrollScreen>
   ),
 };

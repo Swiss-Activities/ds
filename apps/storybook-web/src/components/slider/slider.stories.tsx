@@ -1,26 +1,8 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import { Slider } from "@swiss-activities/ui";
+import { getSliderSlides } from "../../story-data";
 
-const images = [
-  <img
-    key="1"
-    src="https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/Jungfraujoch_Plateau_Sonnenaufgang_Aletschgletscher_6b8bb53632.jpg"
-    alt="Jungfraujoch"
-    className="h-full w-full object-cover"
-  />,
-  <img
-    key="2"
-    src="https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/Grindelwald_First_Cliff_Walk_Eiger_Moench_Jungfrau_Bergpanorama_4653546e26.jpg"
-    alt="Grindelwald"
-    className="h-full w-full object-cover"
-  />,
-  <img
-    key="3"
-    src="https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/omar_m_j_F7_U3wadbd0_unsplash_f301eb283f.jpg"
-    alt="Pilatus"
-    className="h-full w-full object-cover"
-  />,
-];
+const slides = getSliderSlides();
 
 const meta = {
   title: "Components/Slider",
@@ -33,7 +15,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    slides: images,
+    slides,
   },
   render: (args) => (
     <div className="h-[300px] w-[500px] overflow-hidden rounded-lg">
@@ -44,7 +26,7 @@ export const Default: Story = {
 
 export const ManySlides: Story = {
   args: {
-    slides: [...images, ...images, ...images, ...images],
+    slides: [...slides, ...slides, ...slides, ...slides],
   },
   render: (args) => (
     <div className="h-[300px] w-[500px] overflow-hidden rounded-lg">
@@ -55,7 +37,7 @@ export const ManySlides: Story = {
 
 export const NoNav: Story = {
   args: {
-    slides: images,
+    slides,
     showNav: false,
   },
   render: (args) => (
@@ -67,7 +49,7 @@ export const NoNav: Story = {
 
 export const SingleSlide: Story = {
   args: {
-    slides: [images[0]],
+    slides: [slides[0]],
   },
   render: (args) => (
     <div className="h-[300px] w-[500px] overflow-hidden rounded-lg">
