@@ -19,13 +19,13 @@ export function SectionScroller({
   return (
     <View className={cn(className)} {...props}>
       <HorizontalScrollerRoot>
-        <View className="mb-4 flex flex-row items-center gap-4 px-4">
+        <View className="mb-4 flex flex-row items-center gap-4">
           <HorizontalScrollerTitle>
             {title}
           </HorizontalScrollerTitle>
           {subtitle}
         </View>
-        <HorizontalScrollerTrack bleed className="gap-4 px-4">
+        <HorizontalScrollerTrack className="-mx-px -my-2 gap-4 px-px py-2">
           {children}
         </HorizontalScrollerTrack>
       </HorizontalScrollerRoot>
