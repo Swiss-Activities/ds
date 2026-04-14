@@ -33,7 +33,7 @@ export function Accordion({ items, className, ...props }: AccordionProps) {
               onPress={() => setOpenId(isOpen ? null : id)}
               className="flex flex-row items-center justify-between py-4"
             >
-              <Text as="span" size="default" bold>
+              <Text as="span" size="lg" className="!text-[17px]">
                 {item.title}
               </Text>
               <View className={cn(isOpen && "rotate-180")}>

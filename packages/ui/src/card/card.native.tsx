@@ -11,11 +11,16 @@ export function Card({
   className,
   elevation = "default",
   noPadding = false,
+  render,
   ...props
 }: CardProps) {
+  const mergedClassName = cn(cardStyles({ elevation, noPadding }), className);
+
+  if (render) return render({ className: mergedClassName, children });
+
   return (
     <View
-      className={cn(cardStyles({ elevation, noPadding }), className)}
+      className={mergedClassName}
       {...props}
     >
       {children}

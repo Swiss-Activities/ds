@@ -6,7 +6,12 @@ import type { BaseBadgeProps } from "./badge.types";
 
 export type BadgeProps = BaseBadgeProps & Omit<ViewProps, "children">;
 
-export function Badge({ children, variant = "info", className, ...props }: BadgeProps) {
+export function Badge({
+  children,
+  variant = "overlay",
+  className,
+  ...props
+}: BadgeProps) {
   return (
     <View
       className={cn(

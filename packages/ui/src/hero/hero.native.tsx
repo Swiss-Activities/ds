@@ -46,17 +46,17 @@ export function Hero({
 
   return (
     <View
-      className={cn("relative overflow-hidden rounded-lg bg-blue", className)}
+      className={cn("relative overflow-hidden bg-blue", className)}
       {...props}
     >
-      <View className="relative aspect-[5/2] w-full overflow-hidden">
+      <View className="relative aspect-video w-full overflow-hidden">
         {isGallery ? (
           <Slider slides={images} className="absolute inset-0" />
         ) : (
           image
         )}
         {hasBack && (
-          <View className="absolute inset-x-0 top-0 z-20 h-16 bg-gradient-to-b from-black/30 to-transparent" />
+          <View className="absolute inset-x-0 top-0 z-20 h-20 bg-gradient-to-b from-blue/50 to-transparent" />
         )}
         {title && (
           <View className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-blue to-transparent" />
@@ -69,7 +69,7 @@ export function Hero({
         {title && (
           <Text
             as="h2"
-            size="2xl"
+            size="xl"
             className="absolute bottom-3 left-4 z-10 !text-white"
           >
             {title}

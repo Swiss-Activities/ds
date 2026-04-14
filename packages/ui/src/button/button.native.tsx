@@ -1,5 +1,6 @@
+import React from "react";
 import type { TouchableOpacityProps } from "react-native";
-import { Text, TouchableOpacity } from "react-native-css/components";
+import { Text, TouchableOpacity, View } from "react-native-css/components";
 import { cn } from "../utils/cn";
 import { buttonComponentId, type BaseButtonProps } from "./button.types";
 import {
@@ -21,6 +22,17 @@ export function Button({
   const isInstruction = variant === "instruction";
   const shouldApplyDisabledStyles = Boolean(disabled) && !isInstruction;
   const isDisabled = Boolean(disabled) || isInstruction;
+  const textClassName = cn(
+    buttonTextStyles({
+      variant,
+      size,
+      disabled: shouldApplyDisabledStyles,
+    })
+  );
+  const childNodes = React.Children.toArray(children);
+  const isTextOnly = childNodes.every(
+    (child) => typeof child === "string" || typeof child === "number"
+  );
 
   return (
     <TouchableOpacity
@@ -36,17 +48,23 @@ export function Button({
       disabled={isDisabled}
       {...props}
     >
-      <Text
-        className={cn(
-          buttonTextStyles({
-            variant,
-            size,
-            disabled: shouldApplyDisabledStyles,
-          })
-        )}
-      >
-        {children}
-      </Text>
+      {isTextOnly ? (
+        <Text className={textClassName}>{children}</Text>
+      ) : (
+        <View className="flex flex-row items-center justify-center gap-1.5">
+          {childNodes.map((child, index) =>
+            typeof child === "string" || typeof child === "number" ? (
+              <Text className={textClassName} key={`button-text-${index}`}>
+                {child}
+              </Text>
+            ) : (
+              <React.Fragment key={`button-node-${index}`}>
+                {child}
+              </React.Fragment>
+            )
+          )}
+        </View>
+      )}
     </TouchableOpacity>
   );
 }

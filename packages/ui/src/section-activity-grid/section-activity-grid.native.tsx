@@ -27,6 +27,7 @@ export function SectionActivityGrid({
             reviewCount={a.reviewCount}
             priceLabel={a.priceLabel}
             price={a.price}
+            render={a.render}
           />
         </View>
       ))}

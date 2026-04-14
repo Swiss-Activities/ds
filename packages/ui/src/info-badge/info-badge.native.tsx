@@ -15,10 +15,12 @@ export function InfoBadge({
   ...props
 }: InfoBadgeProps) {
   return (
-    <View className={cn("flex flex-row items-start gap-2", className)} {...props}>
-      <View className="shrink-0">{icon}</View>
+    <View className={cn("flex flex-row items-center gap-2", className)} {...props}>
+      <View className="flex shrink-0 text-gray-700 [&_svg]:h-7 [&_svg]:w-7">
+        {icon}
+      </View>
       <View className="flex flex-col">
-        <Text as="span" size="xs" bold className="!leading-tight">
+        <Text as="span" size="xs" black bold className="!leading-tight">
           {title}
         </Text>
         {subtitle && (

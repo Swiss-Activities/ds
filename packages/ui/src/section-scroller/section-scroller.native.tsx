@@ -1,9 +1,9 @@
 import type { ViewProps } from "react-native";
 import { View } from "react-native-css/components";
 import { cn } from "../utils/cn";
-import { Text } from "../text/text.native";
 import { HorizontalScrollerRoot } from "../horizontal-scroller/horizontal-scroller.root.native";
 import { HorizontalScrollerTrack } from "../horizontal-scroller/horizontal-scroller.track.native";
+import { HorizontalScrollerTitle } from "../horizontal-scroller/horizontal-scroller.title.native";
 import type { BaseSectionScrollerProps } from "./section-scroller.types";
 
 export type SectionScrollerProps = BaseSectionScrollerProps &
@@ -20,9 +20,9 @@ export function SectionScroller({
     <View className={cn(className)} {...props}>
       <HorizontalScrollerRoot>
         <View className="mb-4 flex flex-row items-center gap-4 px-4">
-          <Text as="h2" size="lg" bold>
+          <HorizontalScrollerTitle>
             {title}
-          </Text>
+          </HorizontalScrollerTitle>
           {subtitle}
         </View>
         <HorizontalScrollerTrack bleed className="gap-4 px-4">
