@@ -15,6 +15,7 @@ const starPixelSizes = {
   xs: 14,
   sm: 14,
   default: 14,
+  md: 20,
   lg: 24,
 } as const;
 

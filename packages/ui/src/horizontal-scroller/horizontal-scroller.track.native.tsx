@@ -29,11 +29,12 @@ export function HorizontalScrollerTrack({
       ref={trackRef as any}
       horizontal
       showsHorizontalScrollIndicator={false}
+      decelerationRate="fast"
     >
       <View
         className={cn(
           "flex flex-row gap-2",
-          bleed && "-mx-4 px-4",
+          bleed && "px-4",
           className
         )}
         {...props}

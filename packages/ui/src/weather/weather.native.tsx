@@ -13,30 +13,34 @@ export type WeatherProps = BaseWeatherProps & Omit<ViewProps, "children">;
 function WeatherDayCard({
   day,
   unit,
+  isSelected,
 }: {
   day: WeatherDay;
   unit: string;
+  isSelected: boolean;
 }) {
   return (
     <View
       className={cn(
-        "flex min-w-[60px] flex-1 flex-col items-center gap-1 rounded-lg border border-solid px-2.5 py-2",
-        day.current
-          ? "border-orange bg-white/10"
-          : "border-white/20 bg-white/5"
+        "flex flex-col items-start gap-1 rounded-lg border border-solid px-2.5 py-2",
+        isSelected
+          ? "border-primary bg-white/10"
+          : "border-white bg-white/5"
       )}
     >
       <Text as="span" size="xs" bold className="!text-white">
         {day.label}
       </Text>
-      <View className="flex items-center justify-center">{day.icon}</View>
-      <View className="flex flex-row items-center gap-0.5">
-        <Text as="span" size="xs" className="!text-white/60">
-          {day.low}{unit}
-        </Text>
-        <Text as="span" size="xs" bold className="!text-white">
-          {day.high}{unit}
-        </Text>
+      <View className="flex w-full flex-row items-center justify-between">
+        <View className="[&_svg]:h-6 [&_svg]:w-6">{day.icon}</View>
+        <View className="flex flex-col items-end">
+          <Text as="span" size="xs" className="!text-white/60">
+            {day.low}{unit}
+          </Text>
+          <Text as="span" size="xs" bold className="!text-white">
+            {day.high}{unit}
+          </Text>
+        </View>
       </View>
     </View>
   );
@@ -45,17 +49,22 @@ function WeatherDayCard({
 export function Weather({
   days,
   unit = "°",
+  variant = "dark",
+  selected,
   className,
   ...props
 }: WeatherProps) {
   return (
     <HorizontalScrollerRoot className={cn(className)} {...props}>
       <HorizontalScrollerTrack className="gap-2">
-        {days.map((day, i) => (
-          <View key={i} className="shrink-0">
-            <WeatherDayCard day={day} unit={unit} />
-          </View>
-        ))}
+        {days.map((day, i) => {
+          const id = day.id ?? String(i);
+          return (
+            <View key={id} className="shrink-0">
+              <WeatherDayCard day={day} unit={unit} isSelected={selected === id} />
+            </View>
+          );
+        })}
       </HorizontalScrollerTrack>
     </HorizontalScrollerRoot>
   );

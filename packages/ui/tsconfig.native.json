@@ -89,6 +89,21 @@
     "src/section-hero/section-hero.types.ts",
     "src/section-product/index.native.ts",
     "src/section-product/section-product.native.tsx",
-    "src/section-product/section-product.types.ts"
+    "src/section-product/section-product.types.ts",
+    "src/accordion/index.native.ts",
+    "src/accordion/accordion.native.tsx",
+    "src/accordion/accordion.types.ts",
+    "src/badge/index.native.ts",
+    "src/badge/badge.native.tsx",
+    "src/badge/badge.types.ts",
+    "src/content-blocks/index.native.ts",
+    "src/content-blocks/content-blocks.native.tsx",
+    "src/content-blocks/content-blocks.types.ts",
+    "src/section-scroller/index.native.ts",
+    "src/section-scroller/section-scroller.native.tsx",
+    "src/section-scroller/section-scroller.types.ts",
+    "src/section-review-grid/index.native.ts",
+    "src/section-review-grid/section-review-grid.native.tsx",
+    "src/section-review-grid/section-review-grid.types.ts"
   ]
 }

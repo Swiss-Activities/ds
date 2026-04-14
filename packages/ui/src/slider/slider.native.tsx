@@ -1,8 +1,7 @@
 "use client";
 
-import { useCallback, useRef, useState } from "react";
-import type { ViewProps, NativeScrollEvent, NativeSyntheticEvent } from "react-native";
-import { Dimensions } from "react-native";
+import { useCallback, useState } from "react";
+import type { ViewProps, NativeScrollEvent, NativeSyntheticEvent, LayoutChangeEvent } from "react-native";
 import { ScrollView, View } from "react-native-css/components";
 import { cn } from "../utils/cn";
 import { Text } from "../text/text.native";
@@ -17,19 +16,28 @@ export function Slider({
   ...props
 }: SliderProps) {
   const [index, setIndex] = useState(0);
+  const [width, setWidth] = useState(0);
   const total = slides.length;
+
+  const onLayout = useCallback((e: LayoutChangeEvent) => {
+    setWidth(e.nativeEvent.layout.width);
+  }, []);
 
   const onScroll = useCallback(
     (e: NativeSyntheticEvent<NativeScrollEvent>) => {
       const offsetX = e.nativeEvent.contentOffset.x;
-      const width = e.nativeEvent.layoutMeasurement.width;
-      if (width > 0) setIndex(Math.round(offsetX / width));
+      const w = e.nativeEvent.layoutMeasurement.width;
+      if (w > 0) setIndex(Math.round(offsetX / w));
     },
     []
   );
 
   return (
-    <View className={cn("relative overflow-hidden", className)} {...props}>
+    <View
+      className={cn("relative overflow-hidden", className)}
+      onLayout={onLayout}
+      {...props}
+    >
       <ScrollView
         horizontal
         pagingEnabled
@@ -38,14 +46,14 @@ export function Slider({
         scrollEventThrottle={16}
       >
         {slides.map((slide, i) => (
-          <View key={i} style={{ width: Dimensions.get("window").width }}>
+          <View key={i} style={width ? { width } : undefined}>
             {slide}
           </View>
         ))}
       </ScrollView>
       {showCounter && total > 1 && (
-        <View className="absolute bottom-3 right-3 z-20 rounded bg-black/30 px-2 py-0.5 backdrop-blur-sm">
-          <Text as="span" size="xs" className="!text-white">
+        <View className="absolute bottom-3 right-3 z-20 rounded-full bg-white/90 px-2 py-0.5">
+          <Text as="span" size="xs" bold className="!text-blue">
             {index + 1}/{total}
           </Text>
         </View>
