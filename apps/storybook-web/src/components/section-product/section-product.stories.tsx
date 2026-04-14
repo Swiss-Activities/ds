@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { SectionProduct, SectionReviewGrid, Rating, InfoBadge, Text, Card, Button } from "@swiss-activities/ui";
+import { SectionProduct, SectionReviewGrid, ContentBlocks, Rating, InfoBadge, Text, Card, Button } from "@swiss-activities/ui";
 
 function TrophyIcon() {
   return (
@@ -200,6 +200,39 @@ export const Default: Story = {
           },
           ]}
         />
+      </section>
+      <section className="py-8">
+        <div className="sa-container">
+          <ContentBlocks
+            items={[
+              {
+                id: "leistungen",
+                title: "Leistungen",
+                content: "<p>Jungfraujoch Ticket ab Interlaken und zurück</p><p>Sitzplatzreservation</p><p>Zugang Aussichtsplattform Sphinx, Plateau und Eispalast</p>",
+              },
+              {
+                id: "hoehepunkte",
+                title: "Höhepunkte",
+                content: "<ul><li>Fahre mit der spektakulären Jungfraubahn durch das Massiv des Eiger und Mönch zum \"Top of Europe\"</li><li>Buche deine garantierte Sitzplatzreservation gleich mit und reise ohne Warteschlange aufs Jungfraujoch</li><li>Betrachte den Gletscher aus nächster Nähe bei einem Zwischenhalt an der Station Eismeer</li><li>Wähle deine Strecke via Lauterbrunnen oder via Grindelwald</li><li>Geniesse die Aussicht auf die Eiger Nordwand bei Anreise über Grindelwald</li><li>Komme am höchstgelegenen Bahnhof Europas auf 3454 m ü. M. an</li><li>Besuche die Aussichtsplattform Sphinx mit Blick über den Aletschgletscher</li><li>Bestaune die Eisskulpturen im Eispalast auf dem Jungfraujoch</li><li>Vergnüge dich im Schnee, auch im Sommer!</li></ul>",
+              },
+              {
+                id: "ticket-jungfraujoch",
+                title: "Ticket Jungfraujoch ab Interlaken",
+                content: "<p>Ab Interlaken Ost kannst du mit deinem Jungfraujoch Ticket zwischen zwei Routen auswählen – entweder über Lauterbrunnen oder über Grindelwald.</p><p>Über <strong>Grindelwald</strong> fährst du ab Grindelwald Terminal mit der Seilbahn \"Eiger Express\" zur Station Eigergletscher. In nur 15 min bringt dich die 2020 eröffnete, moderne Seilbahn ab Grindelwald zur Station.</p><p>Über <strong>Lauterbrunnen</strong> bringt dich die Zahnradbahn via Wengen zur Kleinen Scheidegg.</p><p>Strecke Interlaken Ost - Grindelwald: ca. 90 min | Strecke Interlaken Ost - Lauterbrunnen: ca. 120 min</p>",
+              },
+              {
+                id: "praktische-informationen",
+                title: "Praktische Informationen",
+                content: "<p>Hunde benötigen ein eigenes Ticket zwischen Eigergletscher und Jungfraujoch sowie retour.</p><h3>Mit Rollstuhl oder Kinderwagen unterwegs</h3><p>Mit Rollstuhl oder Kinderwagen ist eine Anreise mit der 3S-Bahn Eiger Express ab Grindelwald Terminal anzuraten.</p><h3>Swiss Activities Tipp</h3><p>Eine ca. 45-minütige Wanderung führt dich zwischen März und Oktober vom Jungfraujoch über den Gletscher zur Mönchsjochhütte auf 3657 m ü. M.</p>",
+              },
+              {
+                id: "wichtige-informationen",
+                title: "Wichtige Informationen",
+                content: "<p>Finde dich mindestens 10 min vor der reservierten Zeit am Bahnhof Interlaken (Bergfahrt) und Jungfraujoch Bahnhof (Talfahrt) ein.</p><p>Ziehe warme Kleider an, auch im Sommer.</p>",
+              },
+            ]}
+          />
+        </div>
       </section>
     </div>
   ),

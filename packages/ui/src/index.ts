@@ -1,3 +1,4 @@
+export * from "./accordion";
 export * from "./activity-card";
 export * from "./section-activity-grid";
 export * from "./section-hero";
@@ -10,6 +11,7 @@ export * from "./breadcrumbs";
 export * from "./button";
 export * from "./conditional-wrapper";
 export * from "./card";
+export * from "./content-blocks";
 export * from "./flag";
 export * from "./flow";
 export * from "./header";
