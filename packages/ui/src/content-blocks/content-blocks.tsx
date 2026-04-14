@@ -89,7 +89,7 @@ export function ContentBlocks({
             </div>
           ))}
         </div>
-        <div className="sticky top-[calc(var(--h-header,58px)+24px)] h-max max-h-[calc(100vh-var(--h-header,58px)-48px)] overflow-y-auto rounded-lg border border-solid border-gray-200 p-6 shadow-sm">
+        <div className="sticky top-6 h-max max-h-[calc(100vh-48px)] overflow-y-auto rounded-lg border border-solid border-gray-200 p-6 shadow-sm">
           <TocNav items={items} tocTitle={tocTitle} />
         </div>
       </div>
