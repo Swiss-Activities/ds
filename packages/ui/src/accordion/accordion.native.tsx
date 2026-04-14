@@ -2,6 +2,8 @@ import { useState } from "react";
 import type { ViewProps } from "react-native";
 import { Pressable, View } from "react-native-css/components";
 import { cn } from "../utils/cn";
+import { Icon } from "../icon/icon.native";
+import { ChevronDown } from "../icons/index.native";
 import { Text } from "../text/text.native";
 import type { BaseAccordionProps } from "./accordion.types";
 
@@ -34,16 +36,9 @@ export function Accordion({ items, className, ...props }: AccordionProps) {
               <Text as="span" size="default" bold>
                 {item.title}
               </Text>
-              <Text
-                as="span"
-                size="xs"
-                className={cn(
-                  "text-gray-400",
-                  isOpen && "rotate-180"
-                )}
-              >
-                ▾
-              </Text>
+              <View className={cn(isOpen && "rotate-180")}>
+                <Icon icon={ChevronDown} size="default" color="#a1a1aa" />
+              </View>
             </Pressable>
             {isOpen && <View className="pb-4">{item.content}</View>}
           </View>

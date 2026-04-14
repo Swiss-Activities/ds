@@ -3,36 +3,12 @@
 import type { HTMLAttributes } from "react";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { cn } from "../utils/cn";
+import { Icon } from "../icon/icon";
+import { ChevronLeft, ChevronRight } from "../icons";
 import type { BaseSliderProps } from "./slider.types";
 
 export type SliderProps = BaseSliderProps &
   Omit<HTMLAttributes<HTMLDivElement>, "children">;
-
-function ChevronLeft({ className }: { className?: string }) {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 320 512"
-      fill="currentColor"
-      className={cn("h-3 w-3", className)}
-    >
-      <path d="M15 239c-9.4 9.4-9.4 24.6 0 33.9L207 465c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9L65.9 256 241 81c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0L15 239z" />
-    </svg>
-  );
-}
-
-function ChevronRight({ className }: { className?: string }) {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 320 512"
-      fill="currentColor"
-      className={cn("h-3 w-3", className)}
-    >
-      <path d="M305 239c9.4 9.4 9.4 24.6 0 33.9L113 465c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l175-175L79 81c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0L305 239z" />
-    </svg>
-  );
-}
 
 export function Slider({
   slides,
@@ -120,10 +96,13 @@ export function Slider({
   const showNext = loop || rawIndex < allSlides.length - 1;
 
   return (
-    <div className={cn("group relative", className)} {...props}>
+    <div
+      className={cn("group relative h-full w-full overflow-hidden", className)}
+      {...props}
+    >
       <div
         ref={trackRef}
-        className="no-scrollbar h-full snap-x snap-mandatory overflow-x-auto [display:flex]"
+        className="no-scrollbar h-full w-full snap-x snap-mandatory overflow-x-auto [display:flex]"
       >
         {allSlides.map((slide, i) => (
           <div
@@ -137,17 +116,17 @@ export function Slider({
       {showNav && showPrev && (
         <button
           onClick={goPrev}
-          className="absolute bottom-1/2 left-3 z-20 hidden h-8 w-8 translate-y-1/2 cursor-pointer items-center justify-center rounded-full bg-white/90 text-gray-700 shadow-sm backdrop-blur-sm transition hover:bg-white sm:flex"
+          className="absolute left-3 top-1/2 z-20 hidden h-8 w-8 -translate-y-1/2 cursor-pointer items-center justify-center rounded-full bg-white/90 text-gray-700 shadow-sm backdrop-blur-sm transition hover:bg-white sm:flex"
         >
-          <ChevronLeft />
+          <Icon icon={ChevronLeft} size="md" />
         </button>
       )}
       {showNav && showNext && (
         <button
           onClick={goNext}
-          className="absolute bottom-1/2 right-3 z-20 hidden h-8 w-8 translate-y-1/2 cursor-pointer items-center justify-center rounded-full bg-white/90 text-gray-700 shadow-sm backdrop-blur-sm transition hover:bg-white sm:flex"
+          className="absolute right-3 top-1/2 z-20 hidden h-8 w-8 -translate-y-1/2 cursor-pointer items-center justify-center rounded-full bg-white/90 text-gray-700 shadow-sm backdrop-blur-sm transition hover:bg-white sm:flex"
         >
-          <ChevronRight />
+          <Icon icon={ChevronRight} size="md" />
         </button>
       )}
       {showCounter && total > 1 && (

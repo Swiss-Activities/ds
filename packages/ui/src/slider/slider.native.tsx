@@ -34,7 +34,7 @@ export function Slider({
 
   return (
     <View
-      className={cn("relative overflow-hidden", className)}
+      className={cn("relative h-full w-full overflow-hidden", className)}
       onLayout={onLayout}
       {...props}
     >

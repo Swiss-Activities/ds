@@ -1,4 +1,6 @@
 import type { HTMLAttributes } from "react";
+import { Icon } from "../icon/icon";
+import { ChevronRight } from "../icons";
 import { cn } from "../utils/cn";
 import type { BaseBreadcrumbsProps } from "./breadcrumbs.types";
 
@@ -49,12 +51,12 @@ export function Breadcrumbs({
               </a>
               {items.length > index + 1 && (
                 <span
-                  className={cn("relative -top-px px-1.5 leading-none", {
+                  className={cn("flex items-center px-1.5", {
                     "text-white/50": white,
                     "text-gray-500": !white,
                   })}
                 >
-                  ›
+                  <Icon icon={ChevronRight} size="xs" strokeWidth={2} />
                 </span>
               )}
             </span>

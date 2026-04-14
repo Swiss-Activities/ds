@@ -1,6 +1,8 @@
 import { createElement, type HTMLAttributes } from "react";
 import { cn } from "../utils/cn";
 import { Hero } from "../hero";
+import { Icon } from "../icon/icon";
+import { ChevronLeft } from "../icons";
 import { Slider } from "../slider";
 import { Text } from "../text";
 import { Breadcrumbs } from "../breadcrumbs";
@@ -24,14 +26,7 @@ function BackLink({
       ...(href ? { href } : { type: "button" as const, onClick }),
     },
     <span className="flex h-6 w-6 items-center justify-center rounded-full border border-solid border-white bg-white/70 backdrop-blur-sm">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 320 512"
-        fill="currentColor"
-        className="h-2 w-2 text-blue"
-      >
-        <path d="M15 239c-9.4 9.4-9.4 24.6 0 33.9L207 465c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9L65.9 256 241 81c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0L15 239z" />
-      </svg>
+      <Icon icon={ChevronLeft} size="sm" className="text-blue" />
     </span>,
     <span className="text-sm font-medium text-white">{label}</span>
   );

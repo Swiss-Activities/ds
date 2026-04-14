@@ -2,7 +2,9 @@
 
 import type { HTMLAttributes } from "react";
 import { useEffect, useRef } from "react";
+import { Icon } from "../icon/icon";
 import { cn } from "../utils/cn";
+import { List } from "../icons";
 import { Text } from "../text";
 import { Accordion } from "../accordion";
 import type { BaseContentBlocksProps, ContentBlockItem } from "./content-blocks.types";
@@ -32,14 +34,7 @@ function TocNav({
   return (
     <div className="space-y-4">
       <Text as="p" size="default" bold className="flex items-center gap-2">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-4 w-4 text-primary">
-          <line x1="8" y1="6" x2="21" y2="6" />
-          <line x1="8" y1="12" x2="21" y2="12" />
-          <line x1="8" y1="18" x2="21" y2="18" />
-          <line x1="3" y1="6" x2="3.01" y2="6" />
-          <line x1="3" y1="12" x2="3.01" y2="12" />
-          <line x1="3" y1="18" x2="3.01" y2="18" />
-        </svg>
+        <Icon icon={List} size="default" className="text-primary" />
         {tocTitle}
       </Text>
       <ul className="grid gap-3">

@@ -5,24 +5,17 @@ import { Pressable, View } from "react-native-css/components";
 import Svg, {
   Defs,
   LinearGradient,
-  Path,
   Rect,
   Stop,
 } from "react-native-svg";
 import { cn } from "../utils/cn";
+import { Icon } from "../icon/icon.native";
+import { ChevronLeft } from "../icons/index.native";
 import { useHorizontalScroller } from "./horizontal-scroller.context";
 import type {
   BaseHorizontalScrollerNavProps,
   HorizontalScrollerVariant,
 } from "./horizontal-scroller.types";
-
-function ChevronLeft({ color }: { color: string }) {
-  return (
-    <Svg width={14} height={14} viewBox="0 0 320 512" fill={color}>
-      <Path d="M15 239c-9.4 9.4-9.4 24.6 0 33.9L207 465c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9L65.9 256 241 81c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0L15 239z" />
-    </Svg>
-  );
-}
 
 function DefaultArrowButton({
   variant = "white",
@@ -72,7 +65,7 @@ function DefaultArrowButton({
             }}
           />
         ) : null}
-        <ChevronLeft color={iconColor} />
+        <Icon icon={ChevronLeft} size="md" color={iconColor} />
       </Pressable>
     </View>
   );

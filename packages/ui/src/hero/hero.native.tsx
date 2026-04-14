@@ -1,6 +1,8 @@
 import type { ViewProps } from "react-native";
 import { Pressable, View } from "react-native-css/components";
 import { cn } from "../utils/cn";
+import { Icon } from "../icon/icon.native";
+import { ChevronLeft } from "../icons/index.native";
 import { Text } from "../text/text.native";
 import { Slider } from "../slider/slider.native";
 import type { BaseHeroProps } from "./hero.types";
@@ -20,9 +22,7 @@ function BackButton({
       className="flex flex-row items-center gap-2 bg-transparent"
     >
       <View className="flex h-6 w-6 items-center justify-center rounded-full border border-solid border-white bg-white/70">
-        <Text as="span" size="xs" className="!text-blue">
-          ‹
-        </Text>
+        <Icon icon={ChevronLeft} size="sm" color="#002f49" />
       </View>
       <Text as="span" size="sm" className="!text-white">
         {label}

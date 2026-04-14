@@ -1,23 +1,12 @@
 import type { HTMLAttributes } from "react";
+import { Icon } from "../icon/icon";
 import { cn } from "../utils/cn";
+import { ChevronDown } from "../icons";
 import { Text } from "../text";
 import type { BaseAccordionProps } from "./accordion.types";
 
 export type AccordionProps = BaseAccordionProps &
   Omit<HTMLAttributes<HTMLDivElement>, "children">;
-
-function ChevronDown({ className }: { className?: string }) {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 512 512"
-      fill="currentColor"
-      className={cn("h-3 w-3", className)}
-    >
-      <path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" />
-    </svg>
-  );
-}
 
 export function Accordion({
   items,
@@ -32,7 +21,11 @@ export function Accordion({
             <Text as="span" size="lg" className="!text-[17px]">
               {item.title}
             </Text>
-            <ChevronDown className="shrink-0 text-gray-400 transition group-open:rotate-180" />
+            <Icon
+              icon={ChevronDown}
+              size="default"
+              className="text-gray-400 transition group-open:rotate-180"
+            />
           </summary>
           <div className="pb-4">
             {item.content}

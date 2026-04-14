@@ -1,28 +1,14 @@
 "use client";
 
 import type { HTMLAttributes } from "react";
+import { Icon } from "../icon/icon";
 import { cn } from "../utils/cn";
+import { ChevronLeft, ChevronRight } from "../icons";
 import { HorizontalScrollerRoot } from "../horizontal-scroller/horizontal-scroller.root";
 import { HorizontalScrollerTrack } from "../horizontal-scroller/horizontal-scroller.track";
 import { HorizontalScrollerTitle } from "../horizontal-scroller/horizontal-scroller.title";
 import { useHorizontalScroller } from "../horizontal-scroller/horizontal-scroller.context";
 import type { BaseSectionScrollerProps } from "./section-scroller.types";
-
-function ChevronLeft({ className }: { className?: string }) {
-  return (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" fill="currentColor" className={cn("h-3 w-3", className)}>
-      <path d="M15 239c-9.4 9.4-9.4 24.6 0 33.9L207 465c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9L65.9 256 241 81c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0L15 239z" />
-    </svg>
-  );
-}
-
-function ChevronRight({ className }: { className?: string }) {
-  return (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" fill="currentColor" className={cn("h-3 w-3", className)}>
-      <path d="M305 239c9.4 9.4 9.4 24.6 0 33.9L113 465c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l175-175L79 81c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0L305 239z" />
-    </svg>
-  );
-}
 
 function NavButton({ direction }: { direction: "prev" | "next" }) {
   const { canScrollLeft, canScrollRight, scrollPrev, scrollNext } =
@@ -36,7 +22,11 @@ function NavButton({ direction }: { direction: "prev" | "next" }) {
       onClick={onClick}
       className="flex h-9 w-9 cursor-pointer items-center justify-center rounded-full border border-solid border-gray-200 bg-white text-gray-700 shadow-sm transition hover:bg-gray-50 disabled:pointer-events-none disabled:opacity-30"
     >
-      {direction === "prev" ? <ChevronLeft /> : <ChevronRight />}
+      {direction === "prev" ? (
+        <Icon icon={ChevronLeft} size="md" />
+      ) : (
+        <Icon icon={ChevronRight} size="md" />
+      )}
     </button>
   );
 }

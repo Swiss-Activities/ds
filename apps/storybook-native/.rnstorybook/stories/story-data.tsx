@@ -6,6 +6,8 @@ import {
   activityItems,
   contentBlocks,
   heroGalleryImageKeys,
+  productInfoBadges,
+  productInfoCards,
   relatedActivityItems,
   reviewItems,
   sectionProductReviews,
@@ -16,6 +18,14 @@ import {
   weatherDaysShort,
 } from "@swiss-activities/dummy-data";
 import { Flow, Text } from "@swiss-activities/ui";
+import {
+  Clock3,
+  Cloud,
+  Flame,
+  MapPin,
+  Star,
+  Trophy,
+} from "@swiss-activities/ui/icons";
 
 const imageFillStyles = StyleSheet.create({
   fill: {
@@ -93,6 +103,25 @@ function renderWeatherIcon(icon: WeatherIconKind) {
       return <CloudStormIcon />;
     default:
       return <CloudIcon />;
+  }
+}
+
+function renderProductIcon(icon: string) {
+  switch (icon) {
+    case "trophy":
+      return <Trophy size={20} color="#002f49" strokeWidth={1.8} />;
+    case "fire":
+      return <Flame size={20} color="#002f49" strokeWidth={1.8} />;
+    case "clock":
+      return <Clock3 size={20} color="#002f49" strokeWidth={1.8} />;
+    case "cloud":
+      return <Cloud size={20} color="#002f49" strokeWidth={1.8} />;
+    case "map-pin":
+      return <MapPin size={20} color="#002f49" strokeWidth={1.8} />;
+    case "star":
+      return <Star size={20} color="#002f49" strokeWidth={1.8} />;
+    default:
+      return <Star size={20} color="#002f49" strokeWidth={1.8} />;
   }
 }
 
@@ -236,5 +265,19 @@ export function getContentBlocks() {
         ))}
       </Flow>
     ),
+  }));
+}
+
+export function getProductInfoBadges() {
+  return productInfoBadges.map((item) => ({
+    ...item,
+    icon: renderProductIcon(item.icon),
+  }));
+}
+
+export function getProductInfoCards() {
+  return productInfoCards.map((item) => ({
+    ...item,
+    icon: renderProductIcon(item.icon),
   }));
 }

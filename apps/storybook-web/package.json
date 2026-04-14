@@ -17,6 +17,7 @@
     "@swiss-activities/data": "workspace:*",
     "@swiss-activities/ui": "workspace:*",
     "@tanstack/react-query": "^5.59.15",
+    "lucide-react": "^0.542.0",
     "react": "19.1.0",
     "react-dom": "19.1.0",
     "satori": "^0.26.0"

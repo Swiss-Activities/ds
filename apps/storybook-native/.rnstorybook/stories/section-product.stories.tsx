@@ -3,8 +3,6 @@ import type { Meta, StoryObj } from "@storybook/react-native";
 import {
   heroTitles,
   productBreadcrumbs,
-  productInfoBadges,
-  productInfoCards,
 } from "@swiss-activities/dummy-data";
 import {
   Card,
@@ -21,13 +19,14 @@ import {
   StoryScrollScreen,
   getContentBlocks,
   getHeroGallery,
+  getProductInfoBadges,
+  getProductInfoCards,
   getRelatedActivityItems,
   getSectionProductReviews,
 } from "./story-data";
 
-function EmojiIcon({ children }: { children: React.ReactNode }) {
-  return <Text>{children}</Text>;
-}
+const infoBadges = getProductInfoBadges();
+const infoCards = getProductInfoCards();
 
 const meta = {
   title: "Sections/SectionProduct",
@@ -60,14 +59,14 @@ export const Default: Story = {
         >
           <Rating score={4.7} stacked />
           <InfoBadge
-            icon={<EmojiIcon>🏆</EmojiIcon>}
-            title={productInfoBadges[0].title}
-            subtitle={productInfoBadges[0].subtitle}
+            icon={infoBadges[0].icon}
+            title={infoBadges[0].title}
+            subtitle={infoBadges[0].subtitle}
           />
           <InfoBadge
-            icon={<EmojiIcon>🔥</EmojiIcon>}
-            title={productInfoBadges[1].title}
-            subtitle={productInfoBadges[1].subtitle}
+            icon={infoBadges[1].icon}
+            title={infoBadges[1].title}
+            subtitle={infoBadges[1].subtitle}
           />
         </View>
         <Text>
@@ -83,20 +82,10 @@ export const Default: Story = {
       <SectionProduct {...args} />
       <View style={{ gap: 16 }}>
         <View style={{ gap: 12 }}>
-          {productInfoCards.map((item) => (
+          {infoCards.map((item) => (
             <Card key={item.title}>
               <InfoBadge
-                icon={
-                  <EmojiIcon>
-                    {item.icon === "clock"
-                      ? "🕒"
-                      : item.icon === "cloud"
-                        ? "☁️"
-                        : item.icon === "map-pin"
-                          ? "📍"
-                          : "⭐"}
-                  </EmojiIcon>
-                }
+                icon={item.icon}
                 title={item.title}
                 subtitle={item.subtitle}
               />

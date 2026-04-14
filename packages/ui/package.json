@@ -38,6 +38,14 @@
       "types": "./src/tokens/screens.ts",
       "default": "./src/tokens/screens.ts"
     },
+    "./icons": {
+      "react-native": {
+        "types": "./src/icons/index.native.ts",
+        "default": "./src/icons/index.native.ts"
+      },
+      "types": "./src/icons/index.ts",
+      "default": "./src/icons/index.ts"
+    },
     "./breadcrumbs/breadcrumbs.types": {
       "types": "./src/breadcrumbs/breadcrumbs.types.ts",
       "default": "./src/breadcrumbs/breadcrumbs.types.ts"
@@ -114,6 +122,8 @@
   "dependencies": {
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "lucide-react": "^0.542.0",
+    "lucide-react-native": "^0.542.0",
     "tailwind-merge": "^3.5.0"
   }
 }

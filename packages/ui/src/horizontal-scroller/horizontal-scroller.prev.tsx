@@ -1,25 +1,14 @@
 "use client";
 
 import type { HTMLAttributes } from "react";
+import { Icon } from "../icon/icon";
 import { cn } from "../utils/cn";
+import { ChevronLeft } from "../icons";
 import { useHorizontalScroller } from "./horizontal-scroller.context";
 import type {
   BaseHorizontalScrollerNavProps,
   HorizontalScrollerVariant,
 } from "./horizontal-scroller.types";
-
-function ChevronLeft({ className }: { className?: string }) {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 320 512"
-      fill="currentColor"
-      className={cn("inline-flex h-[1em] w-[1em] shrink-0", className)}
-    >
-      <path d="M15 239c-9.4 9.4-9.4 24.6 0 33.9L207 465c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9L65.9 256 241 81c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0L15 239z" />
-    </svg>
-  );
-}
 
 function DefaultArrowButton({
   variant = "white",
@@ -50,7 +39,7 @@ function DefaultArrowButton({
         {variant === "white-button" ? (
           <div className="absolute top-1/2 start-0 h-12 w-9 -translate-y-1/2 rounded-r-xl bg-white shadow-[10px_0_10px_0px_rgba(0,0,0,0.5)]" />
         ) : null}
-        <ChevronLeft className="relative z-10" />
+        <Icon icon={ChevronLeft} size="md" className="relative z-10" />
       </button>
     </div>
   );

@@ -6,6 +6,8 @@ import Svg, {
   Rect,
   Stop,
 } from "react-native-svg";
+import { Icon } from "../icon/icon.native";
+import { ChevronRight } from "../icons/index.native";
 import { cn } from "../utils/cn";
 import type { BaseBreadcrumbsProps } from "./breadcrumbs.types";
 
@@ -63,14 +65,14 @@ export function Breadcrumbs({
                   {item.label}
                 </Text>
                 {items.length > index + 1 && (
-                  <Text
-                    className={cn("px-1.5 text-xs", {
-                      "text-white/50": white,
-                      "text-gray-500": !white,
-                    })}
-                  >
-                    ›
-                  </Text>
+                  <View className="px-1.5">
+                    <Icon
+                      icon={ChevronRight}
+                      size="xs"
+                      color={white ? "rgba(255,255,255,0.5)" : "#6b7280"}
+                      strokeWidth={2}
+                    />
+                  </View>
                 )}
               </View>
             );

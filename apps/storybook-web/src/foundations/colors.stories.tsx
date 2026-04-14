@@ -1,5 +1,6 @@
 import { useState } from "react";
 import type { Meta, StoryObj } from "@storybook/react-vite";
+import { Check } from "@swiss-activities/ui/icons";
 import { grayColors, saColors } from "@swiss-activities/ui/tokens";
 
 type ColorToken = {
@@ -112,7 +113,7 @@ function CopyButton({ text, value }: { text: string; value: string }) {
         style={{ transitionDuration: isCopied ? "150ms" : "0ms" }}
       >
         <span>Copied</span>
-        <span>✓</span>
+        <Check className="h-3.5 w-3.5" strokeWidth={2} />
       </span>
     </button>
   );

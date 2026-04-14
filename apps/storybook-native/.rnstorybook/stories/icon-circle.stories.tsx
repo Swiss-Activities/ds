@@ -1,7 +1,8 @@
 import React from "react";
 import type { Meta, StoryObj } from "@storybook/react-native";
 import { IconCircle } from "@swiss-activities/ui";
-import { Text, View } from "react-native-css/components";
+import { Check, Mountain, Star } from "@swiss-activities/ui/icons";
+import { View } from "react-native-css/components";
 
 const meta = {
   title: "Components/IconCircle",
@@ -17,7 +18,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    icon: "⭐",
+    icon: <Star size={18} color="#002f49" fill="#002f49" strokeWidth={1.8} />,
   },
   render: (args) => (
     <View style={{ padding: 16 }}>
@@ -26,9 +27,9 @@ export const Default: Story = {
   ),
 };
 
-export const Emoji: Story = {
+export const MountainIcon: Story = {
   args: {
-    icon: "🏔️",
+    icon: <Mountain size={18} color="#002f49" strokeWidth={1.8} />,
   },
   render: (args) => (
     <View style={{ padding: 16 }}>
@@ -39,7 +40,7 @@ export const Emoji: Story = {
 
 export const CustomSize: Story = {
   args: {
-    icon: <Text className="text-xl text-primary">✓</Text>,
+    icon: <Check size={22} color="#002f49" strokeWidth={2} />,
     className: "h-12 w-12",
   },
   render: (args) => (
