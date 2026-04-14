@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import type { ViewProps } from "react-native";
 import { View } from "react-native-css/components";
 import { cn } from "../utils/cn";
@@ -16,6 +17,12 @@ export function SectionActivityGrid({
   className,
   ...props
 }: SectionActivityGridProps) {
+  const [maxCardHeight, setMaxCardHeight] = useState(0);
+
+  useEffect(() => {
+    setMaxCardHeight(0);
+  }, [activities]);
+
   return (
     <SectionScroller title={title} className={cn(className)} {...props}>
       {activities.map((a, i) => (
@@ -28,6 +35,11 @@ export function SectionActivityGrid({
             priceLabel={a.priceLabel}
             price={a.price}
             render={a.render}
+            style={maxCardHeight ? { minHeight: maxCardHeight } : undefined}
+            onLayout={(event) => {
+              const height = Math.ceil(event.nativeEvent.layout.height);
+              setMaxCardHeight((current) => (height > current ? height : current));
+            }}
           />
         </View>
       ))}

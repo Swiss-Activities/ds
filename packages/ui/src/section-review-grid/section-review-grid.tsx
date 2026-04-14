@@ -21,7 +21,7 @@ export function SectionReviewGrid({
   return (
     <SectionScroller title={title} subtitle={subtitle} as={as} noContainer={noContainer} className={cn(className)} {...props}>
       {reviews.map((review, i) => (
-        <li key={review.id ?? i} className={sectionScrollerItemClassName}>
+        <li key={review.id ? `${review.id}-${i}` : String(i)} className={sectionScrollerItemClassName}>
           <ReviewCard
             author={review.author}
             countryCode={review.countryCode}

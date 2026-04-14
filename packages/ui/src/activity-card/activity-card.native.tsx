@@ -24,10 +24,10 @@ export function ActivityCard({
     <Card
       noPadding
       render={render}
-      className={cn("flex h-full w-full flex-col", className)}
+      className={cn("flex w-full flex-col self-start", className)}
       {...props}
     >
-      <View className="h-[210px] w-full shrink-0 overflow-hidden">
+      <View className="aspect-[4/3] w-full shrink-0 overflow-hidden">
         {image}
       </View>
       <View className="flex flex-1 flex-col gap-1 p-3.5 pt-4">
@@ -39,7 +39,7 @@ export function ActivityCard({
         )}
         <View className="mt-auto">
           <View className="-mx-3.5 mb-3 mt-2 h-px bg-gray-200" />
-          <View className="mt-2 flex flex-row items-baseline justify-between">
+          <View className="flex flex-row items-baseline justify-between">
             <Text size="xs" gray className="font-medium">
               {priceLabel}
             </Text>

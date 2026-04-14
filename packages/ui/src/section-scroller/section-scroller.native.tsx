@@ -19,13 +19,13 @@ export function SectionScroller({
   return (
     <View className={cn(className)} {...props}>
       <HorizontalScrollerRoot>
-        <View className="mb-4 flex flex-row items-center gap-4">
+        <View className="mb-4 flex flex-row items-center gap-4 px-4">
           <HorizontalScrollerTitle>
             {title}
           </HorizontalScrollerTitle>
           {subtitle}
         </View>
-        <HorizontalScrollerTrack className="-mx-px -my-2 gap-4 px-px py-2">
+        <HorizontalScrollerTrack className="gap-4 px-4 pt-2 pb-4">
           {children}
         </HorizontalScrollerTrack>
       </HorizontalScrollerRoot>
@@ -33,4 +33,4 @@ export function SectionScroller({
   );
 }
 
-export const sectionScrollerItemClassName = "w-[220px] shrink-0";
+export const sectionScrollerItemClassName = "w-[220px] shrink-0 self-start";

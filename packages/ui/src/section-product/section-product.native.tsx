@@ -27,15 +27,17 @@ export function SectionProduct({
         backLabel={backLabel}
         onBack={onBack}
       />
-      {breadcrumbs && breadcrumbs.length > 0 && (
-        <Breadcrumbs items={breadcrumbs} ignoreLast className="mt-3" />
-      )}
-      {title && (
-        <Text as="h1" size="xl" className="mt-3">
-          {title}
-        </Text>
-      )}
-      {children}
+      <View className="px-4">
+        {breadcrumbs && breadcrumbs.length > 0 && (
+          <Breadcrumbs items={breadcrumbs} ignoreLast className="mt-3" />
+        )}
+        {title && (
+          <Text as="h1" size="xl" className="mt-3">
+            {title}
+          </Text>
+        )}
+        {children}
+      </View>
     </View>
   );
 }

@@ -26,7 +26,7 @@ export function ActivityCard({
       className={cn("group flex h-full w-full flex-col lg:hover:shadow-md", className)}
       {...props}
     >
-      <div className="h-[210px] w-full shrink-0 overflow-hidden [&_img]:h-full [&_img]:w-full [&_img]:object-cover">
+      <div className="aspect-[4/3] w-full shrink-0 overflow-hidden [&_img]:h-full [&_img]:w-full [&_img]:object-cover">
         {image}
       </div>
       <div className="flex flex-1 flex-col gap-1 p-3.5 pt-4">

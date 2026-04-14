@@ -161,7 +161,7 @@ export function StoryScrollScreen({
   return (
     <ScrollView
       contentContainerStyle={{
-        padding: 16,
+        paddingVertical: 16,
         gap: 24,
       }}
     >

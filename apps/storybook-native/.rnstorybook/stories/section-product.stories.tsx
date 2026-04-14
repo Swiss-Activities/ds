@@ -7,6 +7,7 @@ import {
 import {
   Card,
   ContentBlocks,
+  grayColors,
   InfoBadge,
   Rating,
   SectionActivityGrid,
@@ -80,23 +81,29 @@ export const Default: Story = {
   render: (args) => (
     <StoryScrollScreen>
       <SectionProduct {...args} />
-      <View style={{ gap: 16 }}>
-        <View style={{ gap: 12 }}>
-          {infoCards.map((item) => (
-            <Card key={item.title}>
-              <InfoBadge
-                icon={item.icon}
-                title={item.title}
-                subtitle={item.subtitle}
-              />
-            </Card>
-          ))}
+      <View style={{ backgroundColor: grayColors[50], paddingVertical: 24, gap: 24 }}>
+        <View style={{ paddingHorizontal: 16 }}>
+          <View style={{ gap: 12 }}>
+            {infoCards.map((item) => (
+              <Card key={item.title}>
+                <InfoBadge
+                  icon={item.icon}
+                  title={item.title}
+                  subtitle={item.subtitle}
+                />
+              </Card>
+            ))}
+          </View>
         </View>
         <SectionReviewGrid
           title="Bewertungen"
           reviews={getSectionProductReviews()}
         />
+      </View>
+      <View style={{ paddingHorizontal: 16, paddingVertical: 24 }}>
         <ContentBlocks items={getContentBlocks()} />
+      </View>
+      <View style={{ paddingBottom: 16 }}>
         <SectionActivityGrid
           title={heroTitles.relatedActivities}
           activities={getRelatedActivityItems()}

@@ -110,7 +110,7 @@ export function HorizontalScrollerTrack({
     >
       <View
         className={cn(
-          "flex flex-row gap-2",
+          "flex flex-row items-start gap-2",
           bleed && "-mx-4 px-4",
           className
         )}
