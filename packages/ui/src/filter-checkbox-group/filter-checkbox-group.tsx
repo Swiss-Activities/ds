@@ -196,7 +196,7 @@ export function FilterCheckboxGroup({
         type === "accordion" &&
           inlineFrom &&
           shouldRenderInline &&
-          "py-5 first:pt-0",
+          "py-3 first:pt-0",
         className
       )}
       {...props}

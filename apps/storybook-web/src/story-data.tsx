@@ -172,7 +172,7 @@ export function getHomepageFilterGroups() {
 
 export function getHomepageFilterDrawerContent() {
   return (
-    <div className="-mx-4 border-t border-solid border-gray-200">
+    <div className="-mx-4 border-t border-solid border-gray-200 lg:border-t-0">
       {getHomepageFilterGroups().map((group) => (
         <FilterCheckboxGroup
           key={group.id}
