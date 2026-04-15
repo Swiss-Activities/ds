@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import { Sheet, Scroll } from "@silk-hq/components";
 import { Button } from "../button/button";
