@@ -17,6 +17,7 @@ export * from "./flow";
 export * from "./header";
 export * from "./hero";
 export * from "./weather";
+export * from "./sheet";
 export * from "./icon/icon";
 export * from "./image-card";
 export * from "./icon-circle";

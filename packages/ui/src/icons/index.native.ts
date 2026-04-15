@@ -15,5 +15,6 @@ export {
   Sun,
   ThumbsUp,
   Trophy,
+  X,
 } from "lucide-react-native";
 export type { LucideProps } from "lucide-react-native";
