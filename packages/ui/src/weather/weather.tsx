@@ -93,7 +93,7 @@ function WeatherDayCard({
       <Button
         variant="ghost"
         onClick={onSelect}
-        className={cardClasses}
+        className={cn(cardClasses, "cursor-pointer appearance-none text-left")}
         style={width ? { width } : undefined}
       >
         {content}

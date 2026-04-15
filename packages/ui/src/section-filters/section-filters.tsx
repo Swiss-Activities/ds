@@ -80,10 +80,10 @@ export function SectionFilters({
           <div className="no-scrollbar overflow-x-auto py-2 [scrollbar-width:none]">
             <div className="flex min-w-max items-center gap-2">
               <Button
-                type="filter"
+                type="pill"
                 text={filterButtonLabel}
                 icon={<Icon icon={Filter} size="xs" />}
-                className="shrink-0 whitespace-nowrap"
+                className="shrink-0 whitespace-nowrap !bg-white lg:hover:!border-blue lg:hover:!bg-white lg:hover:!text-blue"
                 onClick={() => setPresented(true)}
               />
               {items.map((item) => (

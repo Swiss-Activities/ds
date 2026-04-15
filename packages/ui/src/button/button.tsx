@@ -1,4 +1,4 @@
-import { forwardRef, type ReactNode } from "react";
+import { Children, forwardRef, type ReactNode } from "react";
 import { Loader } from "../loader";
 import { cn } from "../utils/cn";
 import { buttonComponentId, type ButtonShowTextFrom, type ButtonVariant } from "./button.types";
@@ -52,66 +52,76 @@ export const Button = forwardRef<any, ButtonProps>(function Button(props, ref) {
   const trailingIcon = iconRight ?? (reverse ? icon : null);
   const hasLabel = Boolean(text) || Boolean(children);
   const stretchTrailingSlot = Boolean(iconRightDivider && trailingIcon);
+  const childNodes = Children.toArray(children ?? []);
+  const hasComplexChildren = childNodes.some(
+    (child) => typeof child !== "string" && typeof child !== "number"
+  );
+  const renderCustomChildren =
+    text == null && !leadingIcon && !trailingIcon && hasComplexChildren;
   const mergedStyle = {
     ...(style ?? {}),
     borderStyle: "solid",
   };
 
   const inner = (
-    <span
-      className={cn("pointer-events-none flex", {
-        "items-center": !stretchTrailingSlot,
-        "items-stretch self-stretch": stretchTrailingSlot,
-      })}
-    >
-      {leadingIcon && (
-        <span
-          className={cn("flex text-base", {
-            "lg:!text-sm": size === "sm" || resolvedType === "filter",
-            "me-2": hasLabel || Boolean(trailingIcon),
-          })}
-        >
-          {leadingIcon}
-        </span>
-      )}
-      <span className="flex items-center">
-        {text ? (
+    renderCustomChildren ? (
+      <>{children}</>
+    ) : (
+      <span
+        className={cn("pointer-events-none flex", {
+          "items-center": !stretchTrailingSlot,
+          "items-stretch self-stretch": stretchTrailingSlot,
+        })}
+      >
+        {leadingIcon && (
           <span
-            className={cn("first-letter:uppercase", {
-              "hidden xs:block": showTextFrom === "xs",
-              "hidden sm:block": showTextFrom === "sm",
-              "hidden md:block": showTextFrom === "md",
-              "hidden lg:block": showTextFrom === "lg",
-              "hidden xl:block": showTextFrom === "xl",
-              "hidden 2xl:block": showTextFrom === "2xl",
+            className={cn("flex text-base", {
+              "lg:!text-sm": size === "sm" || resolvedType === "filter",
+              "me-2": hasLabel || Boolean(trailingIcon),
             })}
           >
-            {text}
+            {leadingIcon}
           </span>
-        ) : (
-          ""
         )}
-        {children ? <span className="first-letter:uppercase">{children}</span> : ""}
-      </span>
-      {trailingIcon ? (
-        <span
-          className={cn("flex items-center text-base", {
-            "lg:!text-sm": size === "sm" || resolvedType === "filter",
-            "relative ms-2 self-stretch ps-3":
-              iconRightDivider,
-            "ms-2": !iconRightDivider && hasLabel,
-          })}
-        >
-          {iconRightDivider ? (
+        <span className="flex items-center">
+          {text ? (
             <span
-              aria-hidden="true"
-              className="absolute -inset-y-2 left-0 w-px bg-gray-200"
-            />
-          ) : null}
-          {trailingIcon}
+              className={cn("first-letter:uppercase", {
+                "hidden xs:block": showTextFrom === "xs",
+                "hidden sm:block": showTextFrom === "sm",
+                "hidden md:block": showTextFrom === "md",
+                "hidden lg:block": showTextFrom === "lg",
+                "hidden xl:block": showTextFrom === "xl",
+                "hidden 2xl:block": showTextFrom === "2xl",
+              })}
+            >
+              {text}
+            </span>
+          ) : (
+            ""
+          )}
+          {children ? <span className="first-letter:uppercase">{children}</span> : ""}
         </span>
-      ) : null}
-    </span>
+        {trailingIcon ? (
+          <span
+            className={cn("flex items-center text-base", {
+              "lg:!text-sm": size === "sm" || resolvedType === "filter",
+              "relative ms-2 self-stretch ps-3":
+                iconRightDivider,
+              "ms-2": !iconRightDivider && hasLabel,
+            })}
+          >
+            {iconRightDivider ? (
+              <span
+                aria-hidden="true"
+                className="absolute -inset-y-2 left-0 w-px bg-gray-200"
+              />
+            ) : null}
+            {trailingIcon}
+          </span>
+        ) : null}
+      </span>
+    )
   );
 
   const classes = cn(

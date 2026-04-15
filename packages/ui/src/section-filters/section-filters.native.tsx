@@ -84,9 +84,10 @@ export function SectionFilters({
           contentContainerStyle={styles.track}
         >
           <Button
-            type="filter"
+            type="pill"
             text={filterButtonLabel}
-            icon={<Icon icon={Filter} size="xs" color="#737373" />}
+            icon={<Icon icon={Filter} size="xs" color="#002f49" />}
+            className="bg-white"
             onPress={() => setPresented(true)}
           />
           {items.map((item) => (
