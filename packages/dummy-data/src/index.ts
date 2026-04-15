@@ -39,6 +39,12 @@ export type ActivityItemData = {
   price: string;
 };
 
+export type HomepageFilterItemData = {
+  id: string;
+  label: string;
+  kind?: "plain" | "disclosure" | "removable";
+};
+
 export type ReviewItemData = {
   author: string;
   countryCode?: string;
@@ -172,6 +178,13 @@ export const weatherDaysLong: WeatherDayData[] = [
   { id: "25", label: "Sa", icon: "cloud-rain", low: 4, high: 17 },
   { id: "26", label: "So", icon: "sun", low: 8, high: 25 },
 ];
+
+export const homepageFilterItems: HomepageFilterItemData[] = [
+  { id: "category", label: "Kategorie", kind: "disclosure" },
+  { id: "weather", label: "Bei jedem Wetter", kind: "disclosure" },
+  { id: "price", label: "Unter CHF 100" },
+  { id: "family", label: "Familienfreundlich" },
+] as const;
 
 export const activityItems: ActivityItemData[] = [
   {

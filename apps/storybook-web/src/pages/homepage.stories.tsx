@@ -1,8 +1,17 @@
 import { useState } from "react";
 import type { StoryObj } from "@storybook/react-vite";
 import { heroTitles } from "@swiss-activities/dummy-data";
-import { SectionHero, SectionActivityGrid } from "@swiss-activities/ui";
-import { getActivityItems, getHeroImage, getWeatherDaysLong } from "../story-data";
+import {
+  SectionActivityGrid,
+  SectionFilters,
+  SectionHero,
+} from "@swiss-activities/ui";
+import {
+  getActivityItems,
+  getHeroImage,
+  getHomepageFilters,
+  getWeatherDaysLong,
+} from "../story-data";
 import { Page } from "../components/page";
 
 export default {
@@ -26,6 +35,11 @@ export const Default: StoryObj = {
             }
           }}
           className="pb-6"
+        />
+        <SectionFilters
+          desktopDrawer="left"
+          items={getHomepageFilters()}
+          className="pb-2"
         />
         <SectionActivityGrid
           title={heroTitles.sectionActivityGrid}

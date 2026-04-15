@@ -6,6 +6,7 @@ import {
   activityItems,
   contentBlocks,
   heroGalleryImageKeys,
+  homepageFilterItems,
   productInfoBadges,
   productInfoCards,
   relatedActivityItems,
@@ -195,6 +196,10 @@ export function getWeatherDaysLong() {
     ...day,
     icon: renderWeatherIcon(day.icon),
   }));
+}
+
+export function getHomepageFilters() {
+  return homepageFilterItems.map((item) => ({ ...item }));
 }
 
 export function getHeroImage() {

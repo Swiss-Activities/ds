@@ -1,6 +1,7 @@
 export * from "./accordion";
 export * from "./activity-card";
 export * from "./section-activity-grid";
+export * from "./section-filters";
 export * from "./section-hero";
 export * from "./section-product";
 export * from "./section-scroller";

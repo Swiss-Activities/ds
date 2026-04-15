@@ -5,6 +5,7 @@ export {
   ChevronRight,
   Clock3,
   Cloud,
+  Filter,
   Flame,
   Languages,
   Loader2,

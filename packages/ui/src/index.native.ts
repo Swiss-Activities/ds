@@ -21,6 +21,7 @@ export * from "./loader/index.native";
 export * from "./rating/index.native";
 export * from "./review-card/index.native";
 export * from "./section-activity-grid/index.native";
+export * from "./section-filters/index.native";
 export * from "./section-hero/index.native";
 export * from "./section-product/index.native";
 export * from "./section-review-grid/index.native";

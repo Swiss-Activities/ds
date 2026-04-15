@@ -1,11 +1,16 @@
 import React, { useState } from "react";
 import type { Meta, StoryObj } from "@storybook/react-native";
 import { heroTitles } from "@swiss-activities/dummy-data";
-import { SectionActivityGrid, SectionHero } from "@swiss-activities/ui";
+import {
+  SectionActivityGrid,
+  SectionFilters,
+  SectionHero,
+} from "@swiss-activities/ui";
 import {
   StoryScrollScreen,
   getActivityItems,
   getHeroImage,
+  getHomepageFilters,
   getWeatherDaysLong,
 } from "./story-data";
 
@@ -33,6 +38,7 @@ export const Default: Story = {
           selected={selected}
           onSelect={setSelected}
         />
+        <SectionFilters items={getHomepageFilters()} />
         <SectionActivityGrid
           title={heroTitles.sectionActivityGrid}
           activities={getActivityItems()}
