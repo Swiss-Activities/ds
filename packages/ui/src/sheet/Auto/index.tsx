@@ -1,5 +1,5 @@
 import React from "react";
-import { Sheet } from "@silk-hq/components";
+import { Sheet as SilkSheet, AutoFocusTarget } from "@silk-hq/components";
 import {
   Handle as SharedHandle,
   Backdrop as SharedBackdrop,
@@ -15,28 +15,28 @@ import {
 } from "../shared";
 import { cn } from "../../utils/cn";
 
-type SheetRootProps = React.ComponentPropsWithoutRef<typeof Sheet.Root>;
+type SheetRootProps = React.ComponentPropsWithoutRef<typeof SilkSheet.Root>;
 type RootProps = Omit<SheetRootProps, "license"> & {
   license?: SheetRootProps["license"];
 };
 
-const Root = React.forwardRef<React.ElementRef<typeof Sheet.Root>, RootProps>(
+const Root = React.forwardRef<React.ElementRef<typeof SilkSheet.Root>, RootProps>(
   ({ children, ...restProps }, ref) => {
     return (
-      <Sheet.Root license="non-commercial" {...restProps} ref={ref}>
+      <SilkSheet.Root license="non-commercial" {...restProps} ref={ref}>
         {children}
-      </Sheet.Root>
+      </SilkSheet.Root>
     );
   }
 );
-Root.displayName = "SheetAuto.Root";
+Root.displayName = "Sheet.Root";
 
-type ViewProps = React.ComponentPropsWithoutRef<typeof Sheet.View>;
+type ViewProps = React.ComponentPropsWithoutRef<typeof SilkSheet.View>;
 
-const View = React.forwardRef<React.ElementRef<typeof Sheet.View>, ViewProps>(
+const View = React.forwardRef<React.ElementRef<typeof SilkSheet.View>, ViewProps>(
   ({ children, className, ...restProps }, ref) => {
     return (
-      <Sheet.View
+      <SilkSheet.View
         className={cn("fixed inset-x-0 bottom-0 z-[200]", className)}
         swipeOvershoot={false}
         nativeEdgeSwipePrevention={true}
@@ -44,22 +44,22 @@ const View = React.forwardRef<React.ElementRef<typeof Sheet.View>, ViewProps>(
         ref={ref}
       >
         {children}
-      </Sheet.View>
+      </SilkSheet.View>
     );
   }
 );
-View.displayName = "SheetAuto.View";
+View.displayName = "Sheet.View";
 
 const Content = React.forwardRef<
-  React.ElementRef<typeof Sheet.Content>,
-  React.ComponentPropsWithoutRef<typeof Sheet.Content>
+  React.ElementRef<typeof SilkSheet.Content>,
+  React.ComponentPropsWithoutRef<typeof SilkSheet.Content>
 >(({ children, className, style, ...restProps }, ref) => {
   return (
-    <Sheet.Content
+    <SilkSheet.Content
       className={cn(
-        "max-h-[80dvh] rounded-t-3xl bg-white",
+        "max-h-[95dvh] rounded-t-3xl bg-white",
         className
-      )}
+        )}
       style={
         {
           ...style,
@@ -70,14 +70,14 @@ const Content = React.forwardRef<
       ref={ref}
     >
       {children}
-    </Sheet.Content>
+    </SilkSheet.Content>
   );
 });
-Content.displayName = "SheetAuto.Content";
+Content.displayName = "Sheet.Content";
 
 const Handle = React.forwardRef<
-  React.ElementRef<typeof Sheet.Handle>,
-  React.ComponentPropsWithoutRef<typeof Sheet.Handle>
+  React.ElementRef<typeof SilkSheet.Handle>,
+  React.ComponentPropsWithoutRef<typeof SilkSheet.Handle>
 >(({ className, ...restProps }, ref) => {
   return (
     <SharedHandle
@@ -88,9 +88,9 @@ const Handle = React.forwardRef<
     />
   );
 });
-Handle.displayName = "SheetAuto.Handle";
+Handle.displayName = "Sheet.Handle";
 
-export const SheetAuto = {
+export const Sheet = {
   Root,
   Portal,
   View,
@@ -102,6 +102,7 @@ export const SheetAuto = {
   Outlet,
   Title,
   Description,
+  AutoFocusTarget,
   ScrollRoot: SharedScrollRoot,
   ScrollView: SharedScrollView,
   ScrollContent: SharedScrollContent,

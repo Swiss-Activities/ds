@@ -93,8 +93,6 @@
     "src/sheet/index.ts",
     "src/sheet/shared.tsx",
     "src/sheet/Auto/index.tsx",
-    "src/sheet/Detent/index.tsx",
-    "src/sheet/Full/index.tsx",
     "src/section-hero/index.ts",
     "src/section-hero/section-hero.tsx",
     "src/section-hero/section-hero.types.ts",
