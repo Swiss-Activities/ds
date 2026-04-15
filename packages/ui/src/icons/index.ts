@@ -12,6 +12,7 @@ export {
   List,
   MapPin,
   Mountain,
+  Plus,
   Star,
   StarHalf,
   Sun,

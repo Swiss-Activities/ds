@@ -8,6 +8,7 @@ import {
 } from "@swiss-activities/ui";
 import {
   getActivityItems,
+  getHomepageFilterDrawerContent,
   getHeroImage,
   getHomepageFilters,
   getWeatherDaysLong,
@@ -38,6 +39,7 @@ export const Default: StoryObj = {
         />
         <SectionFilters
           desktopDrawer="left"
+          drawerContent={getHomepageFilterDrawerContent()}
           items={getHomepageFilters()}
           className="pb-2"
         />

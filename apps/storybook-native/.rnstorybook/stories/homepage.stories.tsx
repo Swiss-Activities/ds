@@ -9,6 +9,7 @@ import {
 import {
   StoryScrollScreen,
   getActivityItems,
+  getHomepageFilterDrawerContent,
   getHeroImage,
   getHomepageFilters,
   getWeatherDaysLong,
@@ -38,7 +39,10 @@ export const Default: Story = {
           selected={selected}
           onSelect={setSelected}
         />
-        <SectionFilters items={getHomepageFilters()} />
+        <SectionFilters
+          items={getHomepageFilters()}
+          drawerContent={getHomepageFilterDrawerContent()}
+        />
         <SectionActivityGrid
           title={heroTitles.sectionActivityGrid}
           activities={getActivityItems()}

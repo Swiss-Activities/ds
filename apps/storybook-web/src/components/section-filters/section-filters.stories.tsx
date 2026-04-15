@@ -1,6 +1,9 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import { SectionFilters } from "@swiss-activities/ui";
-import { getHomepageFilters } from "../../story-data";
+import {
+  getHomepageFilterDrawerContent,
+  getHomepageFilters,
+} from "../../story-data";
 import { Page } from "../page";
 
 const meta = {
@@ -11,6 +14,7 @@ const meta = {
   },
   args: {
     desktopDrawer: "left",
+    drawerContent: getHomepageFilterDrawerContent(),
     items: getHomepageFilters(),
   },
 } satisfies Meta<typeof SectionFilters>;
@@ -20,17 +24,6 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
-  render: (args) => (
-    <Page>
-      <SectionFilters {...args} />
-    </Page>
-  ),
-};
-
-export const MobileOnlyBottomSheet: Story = {
-  args: {
-    desktopDrawer: undefined,
-  },
   render: (args) => (
     <Page>
       <SectionFilters {...args} />

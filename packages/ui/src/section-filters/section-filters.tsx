@@ -129,7 +129,7 @@ export function SectionFilters({
             >
               <div
                 className={cn(
-                  "px-5 pb-4",
+                  "px-4 pb-4",
                   isSideDrawer ? "pt-5" : "pt-2"
                 )}
               >

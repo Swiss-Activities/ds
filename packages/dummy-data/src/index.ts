@@ -45,6 +45,19 @@ export type HomepageFilterItemData = {
   kind?: "plain" | "disclosure" | "removable";
 };
 
+export type HomepageFilterGroupItemData = {
+  count?: number;
+  id: string;
+  label: string;
+  selected?: boolean;
+};
+
+export type HomepageFilterGroupData = {
+  id: string;
+  items: HomepageFilterGroupItemData[];
+  title: string;
+};
+
 export type ReviewItemData = {
   author: string;
   countryCode?: string;
@@ -184,6 +197,42 @@ export const homepageFilterItems: HomepageFilterItemData[] = [
   { id: "weather", label: "Bei jedem Wetter", kind: "disclosure" },
   { id: "price", label: "Unter CHF 100" },
   { id: "family", label: "Familienfreundlich" },
+] as const;
+
+export const homepageFilterGroups: HomepageFilterGroupData[] = [
+  {
+    id: "category",
+    title: "Kategorie",
+    items: [
+      { id: "tickets", label: "Tickets", count: 124, selected: true },
+      { id: "tours", label: "Touren", count: 63 },
+      { id: "boat-trips", label: "Bootsfahrten", count: 21 },
+      { id: "cable-cars", label: "Bergbahnen", count: 48 },
+      { id: "family", label: "Familien", count: 33 },
+      { id: "food", label: "Kulinarik", count: 14 },
+      { id: "winter", label: "Winter", count: 27 },
+    ],
+  },
+  {
+    id: "weather",
+    title: "Wetter",
+    items: [
+      { id: "any-weather", label: "Bei jedem Wetter", count: 58, selected: true },
+      { id: "indoor", label: "Indoor", count: 19 },
+      { id: "outdoor", label: "Outdoor", count: 87 },
+      { id: "sunny", label: "Bei Sonne", count: 46 },
+    ],
+  },
+  {
+    id: "duration",
+    title: "Dauer",
+    items: [
+      { id: "under-2h", label: "Unter 2 Stunden", count: 34 },
+      { id: "half-day", label: "Halbtagesausflug", count: 42 },
+      { id: "full-day", label: "Tagesausflug", count: 29 },
+      { id: "multi-day", label: "Mehrtägig", count: 8 },
+    ],
+  },
 ] as const;
 
 export const activityItems: ActivityItemData[] = [

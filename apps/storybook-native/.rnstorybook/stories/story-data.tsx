@@ -1,11 +1,13 @@
 import React from "react";
 import { Image, ScrollView, StyleSheet } from "react-native";
 import Svg, { Circle, Line, Path } from "react-native-svg";
+import { View } from "react-native-css/components";
 import {
   accordionItems,
   activityItems,
   contentBlocks,
   heroGalleryImageKeys,
+  homepageFilterGroups,
   homepageFilterItems,
   productInfoBadges,
   productInfoCards,
@@ -18,7 +20,7 @@ import {
   weatherDaysLong,
   weatherDaysShort,
 } from "@swiss-activities/dummy-data";
-import { Flow, Text } from "@swiss-activities/ui";
+import { FilterCheckboxGroup, Flow, Text } from "@swiss-activities/ui";
 import {
   Clock3,
   Cloud,
@@ -200,6 +202,30 @@ export function getWeatherDaysLong() {
 
 export function getHomepageFilters() {
   return homepageFilterItems.map((item) => ({ ...item }));
+}
+
+export function getHomepageFilterGroups() {
+  return homepageFilterGroups.map((group) => ({
+    ...group,
+    items: group.items.map((item) => ({ ...item })),
+  }));
+}
+
+export function getHomepageFilterDrawerContent() {
+  return (
+    <View style={{ marginHorizontal: -16, borderTopWidth: 1, borderTopColor: "#e5e7eb" }}>
+      {getHomepageFilterGroups().map((group) => (
+        <FilterCheckboxGroup
+          key={group.id}
+          title={group.title}
+          items={group.items}
+          type="accordion"
+          lessLabel="Weniger Filter"
+          moreLabel={(remaining) => `Mehr ${remaining} Filter`}
+        />
+      ))}
+    </View>
+  );
 }
 
 export function getHeroImage() {

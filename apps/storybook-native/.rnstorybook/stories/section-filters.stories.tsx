@@ -1,12 +1,17 @@
 import React from "react";
 import type { Meta, StoryObj } from "@storybook/react-native";
 import { SectionFilters } from "@swiss-activities/ui";
-import { StoryScrollScreen, getHomepageFilters } from "./story-data";
+import {
+  StoryScrollScreen,
+  getHomepageFilterDrawerContent,
+  getHomepageFilters,
+} from "./story-data";
 
 const meta = {
   title: "Sections/SectionFilters",
   component: SectionFilters,
   args: {
+    drawerContent: getHomepageFilterDrawerContent(),
     items: getHomepageFilters(),
   },
 } satisfies Meta<typeof SectionFilters>;
