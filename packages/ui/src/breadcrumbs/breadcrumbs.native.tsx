@@ -53,7 +53,10 @@ export function Breadcrumbs({
             const isLast = ignoreLast && items.length === index + 1;
 
             return (
-              <View key={item.href} className="flex flex-row items-center">
+              <View
+                key={`${item.href}-${item.label}-${index}`}
+                className="flex flex-row items-center"
+              >
                 <Text
                   className={cn("text-xs font-medium", {
                     "text-gray-500": isLast && !white,

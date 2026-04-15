@@ -33,7 +33,10 @@ export function Breadcrumbs({
           const isLast = ignoreLast && items.length === index + 1;
 
           return (
-            <span key={item.href} className="flex items-center">
+            <span
+              key={`${item.href}-${item.label}-${index}`}
+              className="flex items-center"
+            >
               <a
                 href={item.href}
                 tabIndex={isLast ? -1 : 0}

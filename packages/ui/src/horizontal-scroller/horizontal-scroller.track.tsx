@@ -1,7 +1,7 @@
 "use client";
 
-import type { HTMLAttributes, ReactElement } from "react";
-import React, { useEffect, useRef } from "react";
+import type { HTMLAttributes } from "react";
+import React, { useEffect } from "react";
 import { cn } from "../utils/cn";
 import { useHorizontalScroller } from "./horizontal-scroller.context";
 import type { BaseHorizontalScrollerTrackProps } from "./horizontal-scroller.types";
@@ -16,21 +16,26 @@ export function HorizontalScrollerTrack({
   ...props
 }: HorizontalScrollerTrackProps) {
   const { activeId, trackRef } = useHorizontalScroller();
-  const elementRefs = useRef<Record<string, HTMLDivElement | null>>({});
 
   useEffect(() => {
     if (!activeId) return;
+    const track = trackRef.current;
+    if (!track) return;
 
     if (activeId === "all") {
       setTimeout(() => {
-        trackRef.current?.scrollTo({ left: 0, behavior: "smooth" });
+        track.scrollTo({ left: 0, behavior: "smooth" });
       }, 100);
       return;
     }
 
-    if (elementRefs.current[activeId]) {
+    const activeElement = track.querySelector(
+      `[data-id=\"${CSS.escape(activeId)}\"]`
+    ) as HTMLElement | null;
+
+    if (activeElement) {
       setTimeout(() => {
-        elementRefs.current[activeId]?.scrollIntoView({
+        activeElement.scrollIntoView({
           behavior: "smooth",
           block: "center",
           inline: "center",
@@ -38,29 +43,6 @@ export function HorizontalScrollerTrack({
       }, 100);
     }
   }, [activeId, trackRef]);
-
-  const childrenWithRefs = React.Children.map(children, (child) => {
-    if (React.isValidElement(child)) {
-      const id = (child as ReactElement<Record<string, unknown>>).props[
-        "data-id"
-      ];
-      if (typeof id === "string") {
-        return React.cloneElement(
-          child as ReactElement<Record<string, unknown>>,
-          {
-            ref: (el: HTMLDivElement) => {
-              if (el) {
-                elementRefs.current[id] = el;
-              } else {
-                delete elementRefs.current[id];
-              }
-            },
-          } as Record<string, unknown>
-        );
-      }
-    }
-    return child;
-  });
 
   return (
     <ul
@@ -72,7 +54,7 @@ export function HorizontalScrollerTrack({
       )}
       {...props}
     >
-      {childrenWithRefs}
+      {children}
     </ul>
   );
 }

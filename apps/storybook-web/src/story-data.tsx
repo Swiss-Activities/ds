@@ -55,6 +55,8 @@ const productIconMap = {
   "map-pin": MapPin,
   star: Star,
 } as const;
+const bodyParagraphClassName =
+  "break-words text-[14px] leading-relaxed text-gray-700 lg:text-[15px] lg:leading-relaxed";
 
 function imageFor(key: StoryImageKey, alt?: string, className?: string) {
   const image = storyImages[key];
@@ -194,7 +196,9 @@ export function getContentBlocks() {
     content: (
       <div className="space-y-3">
         {item.paragraphs.map((paragraph) => (
-          <Text key={paragraph}>{paragraph}</Text>
+          <p key={paragraph} className={bodyParagraphClassName}>
+            {paragraph}
+          </p>
         ))}
       </div>
     ),

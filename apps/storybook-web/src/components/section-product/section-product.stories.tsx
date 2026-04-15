@@ -1,3 +1,4 @@
+import { useMemo } from "react";
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import {
   heroTitles,
@@ -6,6 +7,7 @@ import {
 import {
   Button,
   Card,
+  ContentBlocks,
   InfoBadge,
   Rating,
   SectionActivityGrid,
@@ -14,6 +16,7 @@ import {
   Text,
 } from "@swiss-activities/ui";
 import {
+  getContentBlocks,
   getHeroGallery,
   getProductInfoBadges,
   getProductInfoCards,
@@ -25,24 +28,19 @@ import { Page } from "../page";
 const infoBadges = getProductInfoBadges();
 const infoCards = getProductInfoCards();
 
-const meta = {
-  title: "Sections/SectionProduct",
-  component: SectionProduct,
-  parameters: { layout: "fullscreen" },
-} satisfies Meta<typeof SectionProduct>;
+function SectionProductStoryPage(args: Story["args"]) {
+  const heroGallery = useMemo(() => getHeroGallery(), []);
+  const reviews = useMemo(() => getSectionProductReviews(), []);
+  const contentItems = useMemo(() => getContentBlocks(), []);
+  const relatedActivities = useMemo(() => getRelatedActivityItems(), []);
 
-export default meta;
-type Story = StoryObj<typeof meta>;
-
-export const Default: Story = {
-  args: {
-    title: heroTitles.product,
-    images: getHeroGallery(),
-    backLabel: heroTitles.hero,
-    backHref: "#",
-    breadcrumbs: [...productBreadcrumbs],
-    children: (
-      <>
+  return (
+    <Page className="bg-white">
+      <SectionProduct
+        {...args}
+        images={heroGallery}
+        className="pb-6 lg:pb-8"
+      >
         <div className="mt-4 flex items-center gap-6 lg:mt-6">
           <Rating score={4.7} stacked />
           <div className="h-8 w-px bg-gray-200" />
@@ -63,12 +61,7 @@ export const Default: Story = {
           Jungfraujoch. Auch bekannt als Top of Europe liegt das Jungfraujoch
           mit Europas hochstem Bahnhof auf 3454 m u. M.
         </Text>
-      </>
-    ),
-  },
-  render: (args) => (
-    <Page className="bg-white">
-      <SectionProduct {...args} className="pb-6 lg:pb-8" />
+      </SectionProduct>
       <section className="bg-bg py-8 lg:py-10">
         <div className="sa-container">
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6 lg:grid-cols-4 lg:gap-7">
@@ -98,14 +91,39 @@ export const Default: Story = {
           title="Bewertungen"
           as="div"
           className="pt-6"
-          reviews={getSectionProductReviews()}
+          reviews={reviews}
         />
+      </section>
+      <section className="py-8 lg:py-10">
+        <div className="sa-container">
+          <ContentBlocks items={contentItems} />
+        </div>
       </section>
       <SectionActivityGrid
         title={heroTitles.relatedActivities}
         className="pb-8 lg:pb-10"
-        activities={getRelatedActivityItems()}
+        activities={relatedActivities}
       />
     </Page>
-  ),
+  );
+}
+
+const meta = {
+  title: "Sections/SectionProduct",
+  component: SectionProduct,
+  parameters: { layout: "fullscreen" },
+} satisfies Meta<typeof SectionProduct>;
+
+export default meta;
+type Story = StoryObj<typeof meta>;
+
+export const Default: Story = {
+  args: {
+    title: heroTitles.product,
+    images: [],
+    backLabel: heroTitles.hero,
+    backHref: "#",
+    breadcrumbs: [...productBreadcrumbs],
+  },
+  render: (args) => <SectionProductStoryPage {...args} />,
 };

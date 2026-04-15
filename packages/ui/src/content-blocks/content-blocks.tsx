@@ -1,7 +1,7 @@
 "use client";
 
 import type { HTMLAttributes } from "react";
-import { Fragment, useEffect, useState } from "react";
+import { useEffect, useRef } from "react";
 import { cn } from "../utils/cn";
 import { Text } from "../text";
 import { Accordion } from "../accordion";
@@ -22,34 +22,98 @@ function BlockContent({ content }: { content: ContentBlockItem["content"] }) {
   return <>{content}</>;
 }
 
+function TocNav({
+  items,
+  tocTitle,
+}: {
+  items: BaseContentBlocksProps["items"];
+  tocTitle: string;
+}) {
+  return (
+    <div className="space-y-4">
+      <Text as="p" size="default" bold className="flex items-center gap-2">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-4 w-4 text-primary">
+          <line x1="8" y1="6" x2="21" y2="6" />
+          <line x1="8" y1="12" x2="21" y2="12" />
+          <line x1="8" y1="18" x2="21" y2="18" />
+          <line x1="3" y1="6" x2="3.01" y2="6" />
+          <line x1="3" y1="12" x2="3.01" y2="12" />
+          <line x1="3" y1="18" x2="3.01" y2="18" />
+        </svg>
+        {tocTitle}
+      </Text>
+      <ul className="grid gap-3">
+        {items.map((item) => (
+          <li key={item.id}>
+            <a
+              href={`#${item.id}`}
+              data-id={item.id}
+              className="inline-block text-sm font-medium text-black transition duration-100 ease-in"
+            >
+              {item.title}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
 export function ContentBlocks({
   items,
+  tocTitle = "Inhaltsverzeichnis",
   className,
   ...props
 }: ContentBlocksProps) {
-  const [isDesktop, setIsDesktop] = useState(() => {
-    if (typeof window === "undefined") return false;
-    return window.matchMedia("(min-width: 1024px)").matches;
-  });
+  const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const mediaQuery = window.matchMedia("(min-width: 1024px)");
+    const container = containerRef.current;
+    if (!container) return;
+
+    let ticking = false;
 
     const update = () => {
-      setIsDesktop(mediaQuery.matches);
+      const threshold = 100;
+      const scrollPos = window.pageYOffset + threshold;
+      let currentId = "";
+
+      const headings = container.querySelectorAll("h2[id]");
+      for (const heading of Array.from(headings)) {
+        if ((heading as HTMLElement).offsetTop <= scrollPos) {
+          currentId = heading.id;
+        } else {
+          break;
+        }
+      }
+
+      container.querySelectorAll("[data-id]").forEach((el) => {
+        if (el.getAttribute("data-id") === currentId) {
+          (el as HTMLElement).style.color = "var(--color-primary)";
+        } else {
+          (el as HTMLElement).style.color = "";
+        }
+      });
     };
 
+    const onScroll = () => {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(() => {
+        update();
+        ticking = false;
+      });
+    };
+
+    window.addEventListener("scroll", onScroll, { passive: true });
     update();
-    mediaQuery.addEventListener("change", update);
 
-    return () => {
-      mediaQuery.removeEventListener("change", update);
-    };
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   return (
-    <div className={cn(className)} {...props}>
-      {!isDesktop ? (
+    <div ref={containerRef} className={cn(className)} {...props}>
+      <div className="lg:hidden">
         <Accordion
           items={items.map((item) => ({
             id: item.id,
@@ -57,21 +121,22 @@ export function ContentBlocks({
             content: <BlockContent content={item.content} />,
           }))}
         />
-      ) : (
-        <div className="flex flex-col gap-10">
-          {items.map((item, index) => (
-            <Fragment key={item.id}>
-              <div>
-                <Text as="h2" size="lg" className="mb-4">
-                  {item.title}
-                </Text>
-                <BlockContent content={item.content} />
-              </div>
-              {index < items.length - 1 ? <div className="h-px bg-gray-200" /> : null}
-            </Fragment>
+      </div>
+      <div className="hidden grid-cols-3 gap-8 lg:grid xl:gap-16">
+        <div className="col-span-2 flex flex-col gap-10">
+          {items.map((item) => (
+            <div key={item.id}>
+              <Text id={item.id} as="h2" size="lg" className="mb-4">
+                {item.title}
+              </Text>
+              <BlockContent content={item.content} />
+            </div>
           ))}
         </div>
-      )}
+        <div className="sticky top-6 h-max max-h-[calc(100vh-48px)] overflow-y-auto rounded-lg border border-solid border-gray-200 p-6 shadow-sm">
+          <TocNav items={items} tocTitle={tocTitle} />
+        </div>
+      </div>
     </div>
   );
 }
