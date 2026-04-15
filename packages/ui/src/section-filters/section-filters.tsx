@@ -9,7 +9,6 @@ import { Text } from "../text";
 import { cn } from "../utils/cn";
 import type {
   BaseSectionFiltersProps,
-  SectionFilterItem,
   SectionFiltersBreakpoint,
 } from "./section-filters.types";
 
@@ -42,18 +41,6 @@ function useMinBreakpoint(breakpoint: SectionFiltersBreakpoint) {
   }, [breakpoint]);
 
   return matches;
-}
-
-function getItemIcon(item: SectionFilterItem) {
-  if (item.kind === "disclosure") {
-    return <Icon icon={ChevronDown} size="xs" />;
-  }
-
-  if (item.kind === "removable") {
-    return <Icon icon={X} size="xs" />;
-  }
-
-  return null;
 }
 
 export type SectionFiltersProps = BaseSectionFiltersProps &
@@ -104,7 +91,13 @@ export function SectionFilters({
                   key={item.id}
                   type="filter"
                   text={item.label}
-                  iconRight={getItemIcon(item)}
+                  iconRight={
+                    item.kind === "disclosure" ? (
+                      <Icon icon={ChevronDown} size="xs" />
+                    ) : item.kind === "removable" ? (
+                      <Icon icon={X} size="xs" />
+                    ) : null
+                  }
                   className="shrink-0 whitespace-nowrap"
                 />
               ))}
@@ -127,9 +120,9 @@ export function SectionFilters({
                 isSideDrawer && sideDrawerContentClassName
               )}
             >
-              <div
+              <Sheet.Header
                 className={cn(
-                  "px-4 pb-4",
+                  "pb-4",
                   isSideDrawer ? "pt-5" : "pt-2"
                 )}
               >
@@ -142,10 +135,10 @@ export function SectionFilters({
                 >
                   {drawerTitle}
                 </Sheet.Title>
-              </div>
+              </Sheet.Header>
               <Sheet.ScrollRoot className="min-h-0 h-full">
                 <Sheet.ScrollView className="min-h-0 h-full">
-                  <Sheet.ScrollContent className="px-4 py-3">
+                  <Sheet.ScrollContent className="py-3">
                     {drawerContent ?? (
                       <div className="grid gap-2">
                         {items.map((item) => (

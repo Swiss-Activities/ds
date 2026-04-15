@@ -14,19 +14,7 @@ import { Icon } from "../icon/icon.native";
 import { ChevronDown, Filter, X } from "../icons/index.native";
 import { Text } from "../text/text.native";
 import { cn } from "../utils/cn";
-import type { BaseSectionFiltersProps, SectionFilterItem } from "./section-filters.types";
-
-function getItemIcon(item: SectionFilterItem) {
-  if (item.kind === "disclosure") {
-    return <Icon icon={ChevronDown} size="xs" color="#737373" />;
-  }
-
-  if (item.kind === "removable") {
-    return <Icon icon={X} size="xs" color="#737373" />;
-  }
-
-  return null;
-}
+import type { BaseSectionFiltersProps } from "./section-filters.types";
 
 const styles = StyleSheet.create({
   track: {
@@ -107,7 +95,13 @@ export function SectionFilters({
               <Button
                 type="filter"
                 text={item.label}
-                iconRight={getItemIcon(item)}
+                iconRight={
+                  item.kind === "disclosure" ? (
+                    <Icon icon={ChevronDown} size="xs" color="#737373" />
+                  ) : item.kind === "removable" ? (
+                    <Icon icon={X} size="xs" color="#737373" />
+                  ) : null
+                }
               />
             </React.Fragment>
           ))}

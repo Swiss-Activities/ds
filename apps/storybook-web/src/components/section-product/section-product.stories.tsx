@@ -6,7 +6,6 @@ import {
 import {
   Button,
   Card,
-  ContentBlocks,
   InfoBadge,
   Rating,
   SectionActivityGrid,
@@ -15,7 +14,6 @@ import {
   Text,
 } from "@swiss-activities/ui";
 import {
-  getContentBlocks,
   getHeroGallery,
   getProductInfoBadges,
   getProductInfoCards,
@@ -102,11 +100,6 @@ export const Default: Story = {
           className="pt-6"
           reviews={getSectionProductReviews()}
         />
-      </section>
-      <section className="py-8 lg:py-10">
-        <div className="sa-container">
-          <ContentBlocks items={getContentBlocks()} />
-        </div>
       </section>
       <SectionActivityGrid
         title={heroTitles.relatedActivities}

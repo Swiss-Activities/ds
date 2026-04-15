@@ -4,6 +4,7 @@ import React from "react";
 import { Sheet as SilkSheet, AutoFocusTarget } from "@silk-hq/components";
 import {
   Handle as SharedHandle,
+  Header as SharedHeader,
   Backdrop as SharedBackdrop,
   ScrollRoot as SharedScrollRoot,
   ScrollView as SharedScrollView,
@@ -100,6 +101,7 @@ export const Sheet = {
   Content,
   Trigger,
   Handle,
+  Header: SharedHeader,
   CloseButton,
   Outlet,
   Title,

@@ -100,10 +100,10 @@ export const Auto: Story = {
               <Sheet.Backdrop />
               <Sheet.CloseButton />
               <Sheet.Content className="flex flex-col bg-white">
-                <div className="px-5 pb-3 pt-2">
+                <Sheet.Header className="pb-3 pt-2">
                   <Sheet.Handle />
-                </div>
-                <div className="px-4 pb-6">
+                </Sheet.Header>
+                <Sheet.ScrollContent className="pb-6 pt-0">
                   <Sheet.Title className="text-xl font-semibold text-gray-950">
                     Travel date
                   </Sheet.Title>
@@ -122,7 +122,7 @@ export const Auto: Story = {
                       </button>
                     ))}
                   </div>
-                </div>
+                </Sheet.ScrollContent>
               </Sheet.Content>
             </Sheet.View>
           </Sheet.Portal>
@@ -155,7 +155,7 @@ export const Full: Story = {
                 className="grid grid-rows-[min-content_1fr] overflow-hidden bg-white"
                 data-testid="sheet-full-content"
               >
-                <div className="border-b border-solid border-gray-200 px-5 pb-4 pt-2">
+                <Sheet.Header className="border-b border-solid border-gray-200 pb-4 pt-2">
                   <Sheet.Handle />
                   <Sheet.Title className="mt-4 text-xl font-semibold text-gray-950">
                     Choose a station
@@ -163,13 +163,13 @@ export const Full: Story = {
                   <Sheet.Description className="mt-2 text-sm leading-6 text-gray-600">
                     The same bottom sheet can cover longer flows by letting the list scroll once the content exceeds the available height.
                   </Sheet.Description>
-                </div>
+                </Sheet.Header>
                 <Sheet.ScrollRoot className="min-h-0 h-full">
                   <Sheet.ScrollView
                     className="min-h-0 h-full"
                     data-testid="sheet-full-scroll"
                   >
-                    <Sheet.ScrollContent className="px-4 py-2">
+                    <Sheet.ScrollContent className="py-2">
                       <div className="flex flex-col">
                         {locations.map((item) => (
                           <button

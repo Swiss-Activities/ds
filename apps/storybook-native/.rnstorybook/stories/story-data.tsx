@@ -1,6 +1,5 @@
 import React from "react";
 import { Image, ScrollView, StyleSheet } from "react-native";
-import Svg, { Circle, Line, Path } from "react-native-svg";
 import { View } from "react-native-css/components";
 import {
   accordionItems,
@@ -20,13 +19,16 @@ import {
   weatherDaysLong,
   weatherDaysShort,
 } from "@swiss-activities/dummy-data";
-import { FilterCheckboxGroup, Flow, Text } from "@swiss-activities/ui";
+import { FilterCheckboxGroup, Flow, Icon, Text } from "@swiss-activities/ui";
 import {
+  CloudLightning,
+  CloudRain,
   Clock3,
   Cloud,
   Flame,
   MapPin,
   Star,
+  Sun,
   Trophy,
 } from "@swiss-activities/ui/icons";
 
@@ -43,90 +45,33 @@ export const imageUrls = {
   pilatus: storyImages.pilatus.url,
 } as const;
 
-function SunIcon() {
-  return (
-    <Svg width={24} height={24} viewBox="0 0 24 24" fill="none">
-      <Circle cx={12} cy={12} r={5} fill="#facc15" />
-      <Path
-        d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"
-        stroke="#facc15"
-        strokeWidth={2}
-        strokeLinecap="round"
-      />
-    </Svg>
-  );
-}
+const weatherIconMap = {
+  sun: {
+    icon: Sun,
+    color: "#facc15",
+  },
+  cloud: {
+    icon: Cloud,
+    color: "#d1d5db",
+  },
+  "cloud-rain": {
+    icon: CloudRain,
+    color: "#d1d5db",
+  },
+  "cloud-storm": {
+    icon: CloudLightning,
+    color: "#d1d5db",
+  },
+} satisfies Record<WeatherIconKind, { icon: typeof Sun; color: string }>;
 
-function CloudIcon() {
-  return (
-    <Svg width={24} height={24} viewBox="0 0 24 24" fill="none">
-      <Path
-        d="M19.36 10.04A7.49 7.49 0 0 0 4.5 11.5a4.5 4.5 0 0 0 0 9h14a5 5 0 0 0 .86-9.96z"
-        fill="#d1d5db"
-      />
-    </Svg>
-  );
-}
-
-function CloudRainIcon() {
-  return (
-    <Svg width={24} height={24} viewBox="0 0 24 24" fill="none">
-      <Path
-        d="M19.36 10.04A7.49 7.49 0 0 0 4.5 11.5a4.5 4.5 0 0 0 0 9h14a5 5 0 0 0 .86-9.96z"
-        fill="#d1d5db"
-      />
-      <Line x1={8} y1={20} x2={8} y2={23} stroke="#60a5fa" strokeWidth={1.5} strokeLinecap="round" />
-      <Line x1={12} y1={20} x2={12} y2={23} stroke="#60a5fa" strokeWidth={1.5} strokeLinecap="round" />
-      <Line x1={16} y1={20} x2={16} y2={23} stroke="#60a5fa" strokeWidth={1.5} strokeLinecap="round" />
-    </Svg>
-  );
-}
-
-function CloudStormIcon() {
-  return (
-    <Svg width={24} height={24} viewBox="0 0 24 24" fill="none">
-      <Path
-        d="M19.36 10.04A7.49 7.49 0 0 0 4.5 11.5a4.5 4.5 0 0 0 0 9h14a5 5 0 0 0 .86-9.96z"
-        fill="#d1d5db"
-      />
-      <Path d="M11 14h3l-2 4h2l-3 5v-5h-2z" fill="#fbbf24" />
-    </Svg>
-  );
-}
-
-function renderWeatherIcon(icon: WeatherIconKind) {
-  switch (icon) {
-    case "sun":
-      return <SunIcon />;
-    case "cloud":
-      return <CloudIcon />;
-    case "cloud-rain":
-      return <CloudRainIcon />;
-    case "cloud-storm":
-      return <CloudStormIcon />;
-    default:
-      return <CloudIcon />;
-  }
-}
-
-function renderProductIcon(icon: string) {
-  switch (icon) {
-    case "trophy":
-      return <Trophy size={20} color="#002f49" strokeWidth={1.8} />;
-    case "fire":
-      return <Flame size={20} color="#002f49" strokeWidth={1.8} />;
-    case "clock":
-      return <Clock3 size={20} color="#002f49" strokeWidth={1.8} />;
-    case "cloud":
-      return <Cloud size={20} color="#002f49" strokeWidth={1.8} />;
-    case "map-pin":
-      return <MapPin size={20} color="#002f49" strokeWidth={1.8} />;
-    case "star":
-      return <Star size={20} color="#002f49" strokeWidth={1.8} />;
-    default:
-      return <Star size={20} color="#002f49" strokeWidth={1.8} />;
-  }
-}
+const productIconMap = {
+  trophy: Trophy,
+  fire: Flame,
+  clock: Clock3,
+  cloud: Cloud,
+  "map-pin": MapPin,
+  star: Star,
+} as const;
 
 function storyImageFor(key: StoryImageKey, alt?: string, suffix?: string) {
   const image = storyImages[key];
@@ -189,14 +134,26 @@ export function getAccordionItems() {
 export function getWeatherDaysShort() {
   return weatherDaysShort.map((day) => ({
     ...day,
-    icon: renderWeatherIcon(day.icon),
+    icon: (
+      <Icon
+        icon={weatherIconMap[day.icon].icon}
+        size="lg"
+        color={weatherIconMap[day.icon].color}
+      />
+    ),
   }));
 }
 
 export function getWeatherDaysLong() {
   return weatherDaysLong.map((day) => ({
     ...day,
-    icon: renderWeatherIcon(day.icon),
+    icon: (
+      <Icon
+        icon={weatherIconMap[day.icon].icon}
+        size="lg"
+        color={weatherIconMap[day.icon].color}
+      />
+    ),
   }));
 }
 
@@ -302,13 +259,25 @@ export function getContentBlocks() {
 export function getProductInfoBadges() {
   return productInfoBadges.map((item) => ({
     ...item,
-    icon: renderProductIcon(item.icon),
+    icon: (
+      <Icon
+        icon={productIconMap[item.icon as keyof typeof productIconMap] ?? Star}
+        size="md"
+        color="#002f49"
+      />
+    ),
   }));
 }
 
 export function getProductInfoCards() {
   return productInfoCards.map((item) => ({
     ...item,
-    icon: renderProductIcon(item.icon),
+    icon: (
+      <Icon
+        icon={productIconMap[item.icon as keyof typeof productIconMap] ?? Star}
+        size="md"
+        color="#002f49"
+      />
+    ),
   }));
 }

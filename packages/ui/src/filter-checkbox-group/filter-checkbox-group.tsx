@@ -192,7 +192,6 @@ export function FilterCheckboxGroup({
     <div
       className={cn(
         "space-y-2",
-        type === "accordion" && inlineFrom && "px-4",
         type === "accordion" &&
           inlineFrom &&
           shouldRenderInline &&

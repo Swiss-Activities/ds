@@ -5,6 +5,8 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { cn } from "../utils/cn";
 import { Text } from "../text";
 import { Button } from "../button";
+import { Icon } from "../icon/icon";
+import { ChevronLeft, ChevronRight } from "../icons";
 import { HorizontalScrollerRoot } from "../horizontal-scroller/horizontal-scroller.root";
 import { HorizontalScrollerTrack } from "../horizontal-scroller/horizontal-scroller.track";
 import { useHorizontalScroller } from "../horizontal-scroller/horizontal-scroller.context";
@@ -16,6 +18,7 @@ export type WeatherProps = BaseWeatherProps &
 const MIN_ITEM_WIDTH = 72;
 const BUTTON_WIDTH = 36;
 const GAP = 8;
+const EDGE_SAFETY = 1;
 
 const styles = {
   dark: {
@@ -105,19 +108,6 @@ function WeatherDayCard({
   );
 }
 
-function ChevronRight({ className }: { className?: string }) {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 320 512"
-      fill="currentColor"
-      className={cn("h-3.5 w-3.5", className)}
-    >
-      <path d="M305 239c9.4 9.4 9.4 24.6 0 33.9L113 465c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l175-175L79 81c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0L305 239z" />
-    </svg>
-  );
-}
-
 function NextButton({ hasOverflow, variant }: { hasOverflow: boolean; variant: WeatherVariant }) {
   const { canScrollRight, scrollNext } = useHorizontalScroller();
   const s = styles[variant];
@@ -135,21 +125,8 @@ function NextButton({ hasOverflow, variant }: { hasOverflow: boolean; variant: W
       )}
       style={{ width: BUTTON_WIDTH }}
     >
-      <ChevronRight />
+      <Icon icon={ChevronRight} size="sm" />
     </button>
-  );
-}
-
-function ChevronLeft({ className }: { className?: string }) {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 320 512"
-      fill="currentColor"
-      className={cn("h-3.5 w-3.5", className)}
-    >
-      <path d="M15 239c-9.4 9.4-9.4 24.6 0 33.9L207 465c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9L65.9 256 241 81c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0L15 239z" />
-    </svg>
   );
 }
 
@@ -167,7 +144,11 @@ function ScrollBackButton({ variant }: { variant: WeatherVariant }) {
         canScrollLeft ? "opacity-100" : "pointer-events-none opacity-0"
       )}
     >
-      <ChevronLeft className={cn(variant === "dark" ? "text-white/80" : "text-gray-500")} />
+      <Icon
+        icon={ChevronLeft}
+        size="sm"
+        className={cn(variant === "dark" ? "text-white/80" : "text-gray-500")}
+      />
     </button>
   );
 }
@@ -196,7 +177,7 @@ export function Weather({
 
     const available = fitsAll
       ? containerWidth
-      : containerWidth - BUTTON_WIDTH - GAP;
+      : containerWidth - BUTTON_WIDTH - GAP - EDGE_SAFETY;
     const count = Math.max(1, Math.floor((available + GAP) / (MIN_ITEM_WIDTH + GAP)));
     const w = (available - (count - 1) * GAP) / count;
     setItemWidth(Math.max(w, MIN_ITEM_WIDTH));

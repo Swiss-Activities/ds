@@ -5,6 +5,8 @@ export {
   ChevronRight,
   Clock3,
   Cloud,
+  CloudLightning,
+  CloudRain,
   Filter,
   Flame,
   Languages,

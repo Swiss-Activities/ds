@@ -6,11 +6,12 @@ import { Pressable, View } from "react-native-css/components";
 import Svg, {
   Defs,
   LinearGradient,
-  Path,
   Rect,
   Stop,
 } from "react-native-svg";
 import { cn } from "../utils/cn";
+import { Icon } from "../icon/icon.native";
+import { ChevronLeft, ChevronRight } from "../icons/index.native";
 import { Text } from "../text/text.native";
 import { HorizontalScrollerRoot } from "../horizontal-scroller/horizontal-scroller.root.native";
 import { HorizontalScrollerTrack } from "../horizontal-scroller/horizontal-scroller.track.native";
@@ -86,22 +87,6 @@ function WeatherDayCard({
   );
 }
 
-function ChevronRight({ color }: { color: string }) {
-  return (
-    <Svg width={14} height={14} viewBox="0 0 320 512" fill={color}>
-      <Path d="M305 239c9.4 9.4 9.4 24.6 0 33.9L113 465c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l175-175L79 81c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0L305 239z" />
-    </Svg>
-  );
-}
-
-function ChevronLeft({ color }: { color: string }) {
-  return (
-    <Svg width={14} height={14} viewBox="0 0 320 512" fill={color}>
-      <Path d="M15 239c-9.4 9.4-9.4 24.6 0 33.9L207 465c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9L65.9 256 241 81c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0L15 239z" />
-    </Svg>
-  );
-}
-
 function NextButton({
   hasOverflow,
   variant,
@@ -126,7 +111,11 @@ function NextButton({
       )}
       style={{ width: BUTTON_WIDTH }}
     >
-      <ChevronRight color={isDark ? "#ffffff" : "#737373"} />
+      <Icon
+        icon={ChevronRight}
+        size="sm"
+        color={isDark ? "#ffffff" : "#737373"}
+      />
     </Pressable>
   );
 }
@@ -161,7 +150,11 @@ function ScrollBackButton({
         </Defs>
         <Rect width="100%" height="100%" fill="url(#weather-back-gradient)" />
       </Svg>
-      <ChevronLeft color={variant === "dark" ? "#ffffff" : "#737373"} />
+      <Icon
+        icon={ChevronLeft}
+        size="sm"
+        color={variant === "dark" ? "#ffffff" : "#737373"}
+      />
     </Pressable>
   );
 }

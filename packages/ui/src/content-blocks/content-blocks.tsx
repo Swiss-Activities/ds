@@ -1,10 +1,8 @@
 "use client";
 
 import type { HTMLAttributes } from "react";
-import { useEffect, useRef } from "react";
-import { Icon } from "../icon/icon";
+import { Fragment, useEffect, useState } from "react";
 import { cn } from "../utils/cn";
-import { List } from "../icons";
 import { Text } from "../text";
 import { Accordion } from "../accordion";
 import type { BaseContentBlocksProps, ContentBlockItem } from "./content-blocks.types";
@@ -24,91 +22,34 @@ function BlockContent({ content }: { content: ContentBlockItem["content"] }) {
   return <>{content}</>;
 }
 
-function TocNav({
-  items,
-  tocTitle,
-}: {
-  items: BaseContentBlocksProps["items"];
-  tocTitle: string;
-}) {
-  return (
-    <div className="space-y-4">
-      <Text as="p" size="default" bold className="flex items-center gap-2">
-        <Icon icon={List} size="default" className="text-primary" />
-        {tocTitle}
-      </Text>
-      <ul className="grid gap-3">
-        {items.map((item) => (
-          <li key={item.id}>
-            <a
-              href={`#${item.id}`}
-              data-id={item.id}
-              className="inline-block text-sm font-medium text-black transition duration-100 ease-in"
-            >
-              {item.title}
-            </a>
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-}
-
 export function ContentBlocks({
   items,
-  tocTitle = "Inhaltsverzeichnis",
   className,
   ...props
 }: ContentBlocksProps) {
-  const containerRef = useRef<HTMLDivElement>(null);
+  const [isDesktop, setIsDesktop] = useState(() => {
+    if (typeof window === "undefined") return false;
+    return window.matchMedia("(min-width: 1024px)").matches;
+  });
 
   useEffect(() => {
-    const container = containerRef.current;
-    if (!container) return;
-
-    let ticking = false;
+    const mediaQuery = window.matchMedia("(min-width: 1024px)");
 
     const update = () => {
-      const threshold = 100;
-      const scrollPos = window.pageYOffset + threshold;
-      let currentId = "";
-
-      const headings = container.querySelectorAll("h2[id]");
-      for (const heading of Array.from(headings)) {
-        if ((heading as HTMLElement).offsetTop <= scrollPos) {
-          currentId = heading.id;
-        } else {
-          break;
-        }
-      }
-
-      container.querySelectorAll("[data-id]").forEach((el) => {
-        if (el.getAttribute("data-id") === currentId) {
-          (el as HTMLElement).style.color = "var(--color-primary)";
-        } else {
-          (el as HTMLElement).style.color = "";
-        }
-      });
+      setIsDesktop(mediaQuery.matches);
     };
 
-    const onScroll = () => {
-      if (ticking) return;
-      ticking = true;
-      requestAnimationFrame(() => {
-        update();
-        ticking = false;
-      });
-    };
-
-    window.addEventListener("scroll", onScroll, { passive: true });
     update();
+    mediaQuery.addEventListener("change", update);
 
-    return () => window.removeEventListener("scroll", onScroll);
+    return () => {
+      mediaQuery.removeEventListener("change", update);
+    };
   }, []);
 
   return (
-    <div ref={containerRef} className={cn(className)} {...props}>
-      <div className="lg:hidden">
+    <div className={cn(className)} {...props}>
+      {!isDesktop ? (
         <Accordion
           items={items.map((item) => ({
             id: item.id,
@@ -116,22 +57,21 @@ export function ContentBlocks({
             content: <BlockContent content={item.content} />,
           }))}
         />
-      </div>
-      <div className="hidden grid-cols-3 gap-8 lg:grid xl:gap-16">
-        <div className="col-span-2 flex flex-col gap-10">
-          {items.map((item) => (
-            <div key={item.id}>
-              <Text id={item.id} as="h2" size="lg" className="mb-4">
-                {item.title}
-              </Text>
-              <BlockContent content={item.content} />
-            </div>
+      ) : (
+        <div className="flex flex-col gap-10">
+          {items.map((item, index) => (
+            <Fragment key={item.id}>
+              <div>
+                <Text as="h2" size="lg" className="mb-4">
+                  {item.title}
+                </Text>
+                <BlockContent content={item.content} />
+              </div>
+              {index < items.length - 1 ? <div className="h-px bg-gray-200" /> : null}
+            </Fragment>
           ))}
         </div>
-        <div className="sticky top-6 h-max max-h-[calc(100vh-48px)] overflow-y-auto rounded-lg border border-solid border-gray-200 p-6 shadow-sm">
-          <TocNav items={items} tocTitle={tocTitle} />
-        </div>
-      </div>
+      )}
     </div>
   );
 }

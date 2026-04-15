@@ -16,91 +16,45 @@ import {
   weatherDaysLong,
   weatherDaysShort,
 } from "@swiss-activities/dummy-data";
-import { FilterCheckboxGroup, Text } from "@swiss-activities/ui";
+import { FilterCheckboxGroup, Icon, Text } from "@swiss-activities/ui";
 import {
+  CloudLightning,
+  CloudRain,
   Clock3,
   Cloud,
   Flame,
   MapPin,
   Star,
+  Sun,
   Trophy,
 } from "@swiss-activities/ui/icons";
+const weatherIconMap = {
+  sun: {
+    icon: Sun,
+    color: "#facc15",
+  },
+  cloud: {
+    icon: Cloud,
+    color: "#d1d5db",
+  },
+  "cloud-rain": {
+    icon: CloudRain,
+    color: "#d1d5db",
+  },
+  "cloud-storm": {
+    icon: CloudLightning,
+    color: "#d1d5db",
+  },
+} satisfies Record<WeatherIconKind, { icon: typeof Sun; color: string }>;
 
-function SunIcon() {
-  return (
-    <svg viewBox="0 0 24 24" fill="currentColor" className="text-yellow-400">
-      <circle cx="12" cy="12" r="5" />
-      <path
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"
-      />
-    </svg>
-  );
-}
-
-function CloudIcon() {
-  return (
-    <svg viewBox="0 0 24 24" fill="currentColor" className="text-gray-300">
-      <path d="M19.36 10.04A7.49 7.49 0 0 0 4.5 11.5a4.5 4.5 0 0 0 0 9h14a5 5 0 0 0 .86-9.96z" />
-    </svg>
-  );
-}
-
-function CloudRainIcon() {
-  return (
-    <svg viewBox="0 0 24 24" fill="currentColor" className="text-gray-300">
-      <path d="M19.36 10.04A7.49 7.49 0 0 0 4.5 11.5a4.5 4.5 0 0 0 0 9h14a5 5 0 0 0 .86-9.96z" />
-      <line stroke="#60a5fa" strokeWidth="1.5" strokeLinecap="round" x1="8" y1="22" x2="8" y2="24" />
-      <line stroke="#60a5fa" strokeWidth="1.5" strokeLinecap="round" x1="12" y1="22" x2="12" y2="24" />
-      <line stroke="#60a5fa" strokeWidth="1.5" strokeLinecap="round" x1="16" y1="22" x2="16" y2="24" />
-    </svg>
-  );
-}
-
-function CloudStormIcon() {
-  return (
-    <svg viewBox="0 0 24 24" fill="currentColor" className="text-gray-300">
-      <path d="M19.36 10.04A7.49 7.49 0 0 0 4.5 11.5a4.5 4.5 0 0 0 0 9h14a5 5 0 0 0 .86-9.96z" />
-      <path fill="#fbbf24" d="M11 14h3l-2 4h2l-3 5v-5h-2z" />
-    </svg>
-  );
-}
-
-function renderWeatherIcon(icon: WeatherIconKind) {
-  switch (icon) {
-    case "sun":
-      return <SunIcon />;
-    case "cloud":
-      return <CloudIcon />;
-    case "cloud-rain":
-      return <CloudRainIcon />;
-    case "cloud-storm":
-      return <CloudStormIcon />;
-    default:
-      return <CloudIcon />;
-  }
-}
-
-function renderProductIcon(icon: string) {
-  switch (icon) {
-    case "trophy":
-      return <Trophy className="h-5 w-5" />;
-    case "fire":
-      return <Flame className="h-5 w-5" />;
-    case "clock":
-      return <Clock3 className="h-5 w-5" />;
-    case "cloud":
-      return <Cloud className="h-5 w-5" />;
-    case "map-pin":
-      return <MapPin className="h-5 w-5" />;
-    case "star":
-      return <Star className="h-5 w-5" />;
-    default:
-      return <Star className="h-5 w-5" />;
-  }
-}
+const productIconMap = {
+  trophy: Trophy,
+  fire: Flame,
+  clock: Clock3,
+  cloud: Cloud,
+  "map-pin": MapPin,
+  star: Star,
+} as const;
 
 function imageFor(key: StoryImageKey, alt?: string, className?: string) {
   const image = storyImages[key];
@@ -148,14 +102,26 @@ export function getHeroGallery() {
 export function getWeatherDaysShort() {
   return weatherDaysShort.map((day) => ({
     ...day,
-    icon: renderWeatherIcon(day.icon),
+    icon: (
+      <Icon
+        icon={weatherIconMap[day.icon].icon}
+        size="lg"
+        color={weatherIconMap[day.icon].color}
+      />
+    ),
   }));
 }
 
 export function getWeatherDaysLong() {
   return weatherDaysLong.map((day) => ({
     ...day,
-    icon: renderWeatherIcon(day.icon),
+    icon: (
+      <Icon
+        icon={weatherIconMap[day.icon].icon}
+        size="lg"
+        color={weatherIconMap[day.icon].color}
+      />
+    ),
   }));
 }
 
@@ -172,7 +138,7 @@ export function getHomepageFilterGroups() {
 
 export function getHomepageFilterDrawerContent() {
   return (
-    <div className="-mx-4 border-t border-solid border-gray-200 lg:border-t-0">
+    <div className="-mx-4 border-t border-solid border-gray-200 lg:mx-0 lg:border-t-0">
       {getHomepageFilterGroups().map((group) => (
         <FilterCheckboxGroup
           key={group.id}
@@ -238,13 +204,23 @@ export function getContentBlocks() {
 export function getProductInfoBadges() {
   return productInfoBadges.map((item) => ({
     ...item,
-    icon: renderProductIcon(item.icon),
+    icon: (
+      <Icon
+        icon={productIconMap[item.icon as keyof typeof productIconMap] ?? Star}
+        size="md"
+      />
+    ),
   }));
 }
 
 export function getProductInfoCards() {
   return productInfoCards.map((item) => ({
     ...item,
-    icon: renderProductIcon(item.icon),
+    icon: (
+      <Icon
+        icon={productIconMap[item.icon as keyof typeof productIconMap] ?? Star}
+        size="md"
+      />
+    ),
   }));
 }

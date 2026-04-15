@@ -7,6 +7,8 @@ import { Icon } from "../icon/icon";
 import { X } from "../icons";
 import { cn } from "../utils/cn";
 
+export const sheetInsetXClassName = "px-4 lg:px-6";
+
 type HandleProps = React.ComponentPropsWithoutRef<typeof Sheet.Handle>;
 
 export const Handle = React.forwardRef<
@@ -57,6 +59,23 @@ export function CloseButton({ label = "Close" }: { label?: string }) {
     </div>
   );
 }
+
+type HeaderProps = React.HTMLAttributes<HTMLDivElement>;
+
+export const Header = React.forwardRef<HTMLDivElement, HeaderProps>(
+  ({ children, className, ...restProps }, ref) => {
+    return (
+      <div
+        className={cn(sheetInsetXClassName, className)}
+        {...restProps}
+        ref={ref}
+      >
+        {children}
+      </div>
+    );
+  }
+);
+Header.displayName = "Sheet.Header";
 
 type ContentProps = React.ComponentPropsWithoutRef<typeof Sheet.Content>;
 
@@ -144,7 +163,11 @@ export const ScrollContent = React.forwardRef<
   ScrollContentProps
 >(({ children, className, ...restProps }, ref) => {
   return (
-    <Scroll.Content className={className} {...restProps} ref={ref}>
+    <Scroll.Content
+      className={cn(sheetInsetXClassName, className)}
+      {...restProps}
+      ref={ref}
+    >
       {children}
     </Scroll.Content>
   );

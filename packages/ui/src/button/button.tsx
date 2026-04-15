@@ -38,6 +38,7 @@ export const Button = forwardRef<any, ButtonProps>(function Button(props, ref) {
     selected = false,
     showTextFrom,
     size = "md",
+    style,
     submit = false,
     text = null,
     type,
@@ -51,6 +52,10 @@ export const Button = forwardRef<any, ButtonProps>(function Button(props, ref) {
   const trailingIcon = iconRight ?? (reverse ? icon : null);
   const hasLabel = Boolean(text) || Boolean(children);
   const stretchTrailingSlot = Boolean(iconRightDivider && trailingIcon);
+  const mergedStyle = {
+    ...(style ?? {}),
+    borderStyle: "solid",
+  };
 
   const inner = (
     <span
@@ -164,7 +169,7 @@ export const Button = forwardRef<any, ButtonProps>(function Button(props, ref) {
         {...rest}
         ref={ref}
         type="submit"
-        style={{ borderStyle: "solid" }}
+        style={mergedStyle}
         className={classes}
       />
     );
@@ -176,7 +181,7 @@ export const Button = forwardRef<any, ButtonProps>(function Button(props, ref) {
         {...rest}
         ref={ref}
         href={href}
-        style={{ borderStyle: "solid" }}
+        style={mergedStyle}
         className={classes}
       >
         {loading ? <Loader size="sm" color="text-current" /> : inner}
@@ -189,7 +194,7 @@ export const Button = forwardRef<any, ButtonProps>(function Button(props, ref) {
       <div
         {...rest}
         ref={ref}
-        style={{ borderStyle: "solid" }}
+        style={mergedStyle}
         className={classes}
       >
         {loading ? <Loader size="sm" color="text-current" /> : inner}
@@ -198,14 +203,14 @@ export const Button = forwardRef<any, ButtonProps>(function Button(props, ref) {
   }
 
   return (
-    <button
-      {...rest}
-      ref={ref}
-      type={submit ? "submit" : undefined}
-      style={{ borderStyle: "solid" }}
-      className={classes}
-      disabled={disabled || resolvedType === "instruction" || loading}
-    >
+      <button
+        {...rest}
+        ref={ref}
+        type={submit ? "submit" : undefined}
+        style={mergedStyle}
+        className={classes}
+        disabled={disabled || resolvedType === "instruction" || loading}
+      >
       {loading ? <Loader size="sm" color="text-current" /> : inner}
     </button>
   );
