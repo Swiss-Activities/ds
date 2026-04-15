@@ -7,6 +7,7 @@ export {
   Cloud,
   Flame,
   Languages,
+  Loader2,
   List,
   MapPin,
   Mountain,

@@ -1,32 +1,59 @@
 import type { ReactNode } from "react";
 
 export const buttonVariants = [
-  "primary",
-  "secondary",
-  "tertiary",
-  "outline",
-  "outline-gray",
-  "transparent",
-  "blue-outline",
   "blue",
+  "blue-outline",
+  "danger",
   "gray",
   "ghost",
   "instruction",
   "link",
   "linkGray",
+  "outline",
+  "outline-gray",
+  "pill",
+  "pill-primary",
+  "primary",
+  "secondary",
+  "tertiary",
+  "transparent",
+  "white",
 ] as const;
 
 export type ButtonVariant = (typeof buttonVariants)[number];
 
-export const buttonSizes = ["xs", "sm", "default", "pill"] as const;
+export const buttonSizes = ["xs", "sm", "md", "lg"] as const;
 
-export type ButtonSize = (typeof buttonSizes)[number];
+export type ButtonSizeToken = (typeof buttonSizes)[number];
+
+export type ButtonSize = ButtonSizeToken | "default" | "pill";
+
+export const buttonShowTextFrom = [
+  "xs",
+  "sm",
+  "md",
+  "lg",
+  "xl",
+  "2xl",
+] as const;
+
+export type ButtonShowTextFrom = (typeof buttonShowTextFrom)[number];
 
 export const buttonComponentId = "sa-button";
 
 export type BaseButtonProps = {
+  as?: "button" | "a" | "div" | "submit";
   children?: ReactNode;
-  variant?: ButtonVariant;
+  className?: string;
+  disabled?: boolean;
+  icon?: ReactNode;
+  loading?: boolean;
+  reverse?: boolean;
+  selected?: boolean;
+  showTextFrom?: ButtonShowTextFrom;
   size?: ButtonSize;
-  as?: "button" | "a";
+  submit?: boolean;
+  text?: ReactNode | string;
+  type?: ButtonVariant;
+  variant?: ButtonVariant;
 };

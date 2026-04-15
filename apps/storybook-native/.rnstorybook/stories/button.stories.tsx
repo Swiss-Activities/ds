@@ -6,7 +6,7 @@ const meta = {
   title: "Components/Button",
   component: Button,
   argTypes: {
-    variant: {
+    type: {
       options: buttonVariants,
       control: "select",
     },
@@ -17,7 +17,10 @@ const meta = {
     disabled: {
       control: "boolean",
     },
-    children: {
+    loading: {
+      control: "boolean",
+    },
+    text: {
       control: "text",
     },
     className: {
@@ -25,9 +28,9 @@ const meta = {
     },
   },
   args: {
-    children: "Book Activity",
-    variant: "primary",
-    size: "default",
+    text: "Book Activity",
+    type: "primary",
+    size: "md",
     disabled: false,
   },
   render: (args) => <Button {...args} />,
@@ -38,14 +41,14 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 const storyFor = (
-  variant: (typeof buttonVariants)[number],
-  children: string = "Book Activity",
-  size: (typeof buttonSizes)[number] = "default"
+  type: (typeof buttonVariants)[number],
+  text: string = "Book Activity",
+  size: (typeof buttonSizes)[number] = "md"
 ): Story => ({
   args: {
-    variant,
+    type,
     size,
-    children,
+    text,
   },
 });
 
@@ -58,19 +61,32 @@ export const Transparent: Story = storyFor("transparent", "Continue");
 export const Blue: Story = storyFor("blue");
 export const BlueOutline: Story = storyFor("blue-outline", "See Details");
 export const Gray: Story = storyFor("gray");
+export const Danger: Story = storyFor("danger", "Delete");
 export const Instruction: Story = storyFor("instruction", "Info");
 export const Link: Story = storyFor("link", "Read More");
 export const LinkGray: Story = storyFor("linkGray", "Read More");
+export const White: Story = storyFor("white", "Continue");
 
-export const SizePill: Story = storyFor("primary", "Book", "pill");
-export const SizeSmall: Story = storyFor("primary", "Book Activity", "sm");
-export const SizeXSmall: Story = storyFor("primary", "Book Activity", "xs");
+export const Pill: Story = storyFor("pill", "Book");
+export const PillPrimary: Story = storyFor("pill-primary", "Book");
 
 export const Disabled: Story = {
   args: {
-    variant: "primary",
-    size: "default",
-    children: "Book Activity",
+    type: "primary",
+    size: "md",
+    text: "Book Activity",
     disabled: true,
   },
 };
+
+export const Loading: Story = {
+  args: {
+    type: "primary",
+    size: "md",
+    text: "Book Activity",
+    loading: true,
+  },
+};
+
+export const SizeSmall: Story = storyFor("primary", "Book Activity", "sm");
+export const SizeXSmall: Story = storyFor("primary", "Book Activity", "xs");

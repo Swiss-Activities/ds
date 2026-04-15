@@ -1,5 +1,5 @@
 import { cva } from "class-variance-authority";
-import type { ButtonSize, ButtonVariant } from "./button.types";
+import type { ButtonSizeToken, ButtonVariant } from "./button.types";
 import { buttonSizes, buttonVariants } from "./button.types";
 import {
   sharedButtonBaseStyles,
@@ -24,11 +24,11 @@ const nativeButtonTextVariantStyles = Object.fromEntries(
 
 const nativeButtonContainerSizeStyles = Object.fromEntries(
   buttonSizes.map((size) => [size, sharedButtonSizeStyles[size].container])
-) as Record<ButtonSize, string>;
+) as Record<ButtonSizeToken, string>;
 
 const nativeButtonTextSizeStyles = Object.fromEntries(
   buttonSizes.map((size) => [size, sharedButtonSizeStyles[size].text])
-) as Record<ButtonSize, string>;
+) as Record<ButtonSizeToken, string>;
 
 export const buttonContainerStyles = cva(sharedButtonBaseStyles.container, {
   variants: {
@@ -40,11 +40,11 @@ export const buttonContainerStyles = cva(sharedButtonBaseStyles.container, {
     },
   },
   defaultVariants: {
-    variant: "primary",
-    size: "default",
-    disabled: false,
-  },
-});
+      variant: "secondary",
+      size: "md",
+      disabled: false,
+    },
+  });
 
 export const buttonTextStyles = cva(sharedButtonBaseStyles.text, {
   variants: {
@@ -56,8 +56,8 @@ export const buttonTextStyles = cva(sharedButtonBaseStyles.text, {
     },
   },
   defaultVariants: {
-    variant: "primary",
-    size: "default",
-    disabled: false,
-  },
-});
+      variant: "secondary",
+      size: "md",
+      disabled: false,
+    },
+  });

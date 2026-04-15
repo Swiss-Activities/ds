@@ -1,81 +1,179 @@
-import type { AnchorHTMLAttributes, ButtonHTMLAttributes } from "react";
+import { forwardRef, type ReactNode } from "react";
+import { Loader } from "../loader";
 import { cn } from "../utils/cn";
-import { buttonComponentId, type BaseButtonProps } from "./button.types";
-import { buttonStyles } from "./button.variants.web";
+import { buttonComponentId, type ButtonShowTextFrom, type ButtonVariant } from "./button.types";
 
-type ButtonAsButton = BaseButtonProps & { as?: "button" } & Omit<
-    ButtonHTMLAttributes<HTMLButtonElement>,
-    "children"
-  >;
+export type ButtonProps = {
+  children?: ReactNode;
+  className?: string;
+  disabled?: boolean;
+  icon?: ReactNode;
+  loading?: boolean;
+  reverse?: boolean;
+  selected?: boolean;
+  showTextFrom?: ButtonShowTextFrom;
+  size?: "xs" | "sm" | "md" | "lg";
+  submit?: boolean;
+  text?: ReactNode | string;
+  type?: ButtonVariant;
+  variant?: ButtonVariant;
+  as?: "button" | "a" | "div" | "submit";
+  href?: string;
+  [key: string]: any;
+};
 
-type ButtonAsAnchor = BaseButtonProps & { as: "a" } & Omit<
-    AnchorHTMLAttributes<HTMLAnchorElement>,
-    "children"
-  >;
-
-export type ButtonProps = ButtonAsButton | ButtonAsAnchor;
-
-export function Button(props: ButtonProps) {
+export const Button = forwardRef<any, ButtonProps>(function Button(props, ref) {
   const {
     children = null,
-    variant = "primary",
-    size = "default",
-    className,
-    style,
-    as: Tag = "button",
+    className = null,
+    disabled = false,
+    href = undefined,
+    icon = null,
+    loading = false,
+    reverse = false,
+    selected = false,
+    showTextFrom,
+    size = "md",
+    submit = false,
+    text = null,
+    type,
+    variant,
+    as = "button",
+    ...rest
   } = props;
 
-  const isInstruction = variant === "instruction";
-  const disabled = "disabled" in props ? props.disabled : undefined;
-  const shouldApplyDisabledStyles = Boolean(disabled) && !isInstruction;
-  const isDisabled = Boolean(disabled) || isInstruction;
+  const resolvedType = variant ?? type ?? "secondary";
+
+  const inner = (
+    <span
+      className={cn("pointer-events-none flex items-center gap-2", {
+        "flex-row-reverse": reverse,
+      })}
+    >
+      {icon && (
+        <span
+          className={cn("flex text-base", {
+            "lg:!text-sm": size === "sm",
+          })}
+        >
+          {icon}
+        </span>
+      )}
+      {text ? (
+        <span
+          className={cn("first-letter:uppercase", {
+            "hidden xs:block": showTextFrom === "xs",
+            "hidden sm:block": showTextFrom === "sm",
+            "hidden md:block": showTextFrom === "md",
+            "hidden lg:block": showTextFrom === "lg",
+            "hidden xl:block": showTextFrom === "xl",
+            "hidden 2xl:block": showTextFrom === "2xl",
+          })}
+        >
+          {text}
+        </span>
+      ) : (
+        ""
+      )}
+      {children ? <span className="first-letter:uppercase">{children}</span> : ""}
+    </span>
+  );
 
   const classes = cn(
-    buttonStyles({ variant, size, disabled: shouldApplyDisabledStyles }),
+    "group inline-flex h-[max-content] max-h-max min-h-[48px] cursor-pointer appearance-none items-center justify-center rounded-lg !border-solid px-3.5 py-2.5 text-center text-sm font-medium transition duration-100 ease-in",
+    {
+      "!border border-gray-400 bg-white text-gray-700 sm:hover:border-gray-500 sm:hover:bg-gray-500 sm:hover:text-white":
+        resolvedType === "secondary",
+      "!border border-primary bg-primary text-white hover:text-white sm:hover:border-dark sm:hover:bg-dark":
+        resolvedType === "primary" || resolvedType === "pill-primary",
+      "!border !border-transparent text-primary sm:hover:underline":
+        resolvedType === "tertiary",
+      "!border !border-primary bg-transparent text-primary sm:hover:bg-primary sm:hover:text-white":
+        resolvedType === "outline",
+      "!border !border-gray-200 bg-transparent text-gray-700 sm:hover:bg-gray-200":
+        resolvedType === "outline-gray",
+      "!border !border-blue !bg-blue text-white sm:hover:brightness-[125%]":
+        resolvedType === "blue",
+      "!border !border-blue !bg-transparent text-blue sm:hover:!border-blue sm:hover:!bg-blue sm:hover:text-white":
+        resolvedType === "blue-outline",
+      "border-transparent bg-transparent sm:hover:border-gray-100 sm:hover:bg-gray-100":
+        resolvedType === "transparent" || resolvedType === "danger",
+      "border-solid border-[#A9A2A3] bg-[#A9A2A3] text-white":
+        resolvedType === "gray",
+      "text-black": resolvedType === "transparent",
+      "border-white bg-white sm:hover:bg-white": resolvedType === "white",
+      "!min-h-[32px] !rounded-full !border !px-3 !py-1.5 !text-xs sm:!text-sm lg:min-h-[36px]":
+        resolvedType === "pill" || resolvedType === "pill-primary",
+      "border-blue bg-transparent text-blue lg:hover:bg-blue lg:hover:text-white":
+        resolvedType === "pill",
+      "!min-h-[auto] !w-max !border-none !bg-transparent !p-0 hover:underline":
+        resolvedType === "link",
+      "!min-h-[auto] !w-max !border-none !bg-transparent !p-0 !text-gray-700 !underline hover:!no-underline":
+        resolvedType === "linkGray",
+      "!bg-blue !text-white": resolvedType === "pill" && selected,
+      "text-primary": resolvedType === "danger" || resolvedType === "instruction",
+      "pointer-events-none !border-gray-300 !bg-gray-300":
+        disabled && resolvedType !== "instruction",
+      "!pointer-events-none !border-light !bg-light":
+        resolvedType === "instruction",
+      "!min-h-[36px] !px-2.5 !py-1 !text-xs lg:!text-[14px]": size === "sm",
+      "!min-h-[24px] !px-2 !py-0.5 !text-xs": size === "xs",
+      "!pointer-events-none": loading,
+    },
     className
   );
 
-  if (Tag === "a") {
-    const {
-      children: _,
-      variant: _v,
-      size: _s,
-      className: _c,
-      style: _st,
-      as: _a,
-      ...anchorProps
-    } = props as ButtonAsAnchor & BaseButtonProps;
+  if (as === "submit") {
+    return (
+      <input
+        {...rest}
+        ref={ref}
+        type="submit"
+        style={{ borderStyle: "solid" }}
+        className={classes}
+      />
+    );
+  }
+
+  if (href || as === "a") {
     return (
       <a
+        {...rest}
+        ref={ref}
+        href={href}
+        style={{ borderStyle: "solid" }}
         className={classes}
-        style={{ appearance: "none", ...style }}
-        {...anchorProps}
       >
-        {children}
+        {loading ? <Loader size="sm" color="text-current" /> : inner}
       </a>
     );
   }
 
-  const {
-    children: _,
-    variant: _v,
-    size: _s,
-    className: _c,
-    style: _st,
-    as: _a,
-    ...buttonProps
-  } = props as ButtonAsButton & BaseButtonProps;
+  if (as === "div") {
+    return (
+      <div
+        {...rest}
+        ref={ref}
+        style={{ borderStyle: "solid" }}
+        className={classes}
+      >
+        {loading ? <Loader size="sm" color="text-current" /> : inner}
+      </div>
+    );
+  }
+
   return (
     <button
+      {...rest}
+      ref={ref}
+      type={submit ? "submit" : undefined}
+      style={{ borderStyle: "solid" }}
       className={classes}
-      style={{ appearance: "none", ...style }}
-      disabled={isDisabled}
-      type="button"
-      {...buttonProps}
+      disabled={disabled || resolvedType === "instruction" || loading}
     >
-      {children}
+      {loading ? <Loader size="sm" color="text-current" /> : inner}
     </button>
   );
-}
+});
 
 (Button as { saComponent?: string }).saComponent = buttonComponentId;

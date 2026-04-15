@@ -48,12 +48,11 @@ export function CloseButton({ label = "Close" }: { label?: string }) {
     <div className="pointer-events-none absolute inset-0 z-10 flex items-start justify-end">
       <Sheet.Trigger action="dismiss" asChild>
         <Button
-          variant="transparent"
+          type="transparent"
+          icon={<Icon icon={X} size="sm" />}
+          text={label}
           className="pointer-events-auto !min-h-[40px] !border-none !text-white gap-1.5 hover:!bg-transparent focus-visible:!outline-white"
-        >
-          <Icon icon={X} size="sm" />
-          <span>{label}</span>
-        </Button>
+        />
       </Sheet.Trigger>
     </div>
   );

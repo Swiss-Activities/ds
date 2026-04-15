@@ -1,5 +1,5 @@
 import { cva } from "class-variance-authority";
-import type { ButtonSize, ButtonVariant } from "./button.types";
+import type { ButtonSizeToken, ButtonVariant } from "./button.types";
 import { buttonSizes, buttonVariants } from "./button.types";
 import {
   sharedButtonBaseStyles,
@@ -20,7 +20,7 @@ const webButtonSizeStyles = Object.fromEntries(
     size,
     `${sharedButtonSizeStyles[size].container} ${sharedButtonSizeStyles[size].text}`.trim(),
   ])
-) as Record<ButtonSize, string>;
+) as Record<ButtonSizeToken, string>;
 
 export const buttonStyles = cva(
   `${sharedButtonBaseStyles.container} ${sharedButtonBaseStyles.text} transition-colors focus-visible:outline-2 focus-visible:outline-offset-2`,
@@ -34,8 +34,8 @@ export const buttonStyles = cva(
       },
     },
     defaultVariants: {
-      variant: "primary",
-      size: "default",
+      variant: "secondary",
+      size: "md",
       disabled: false,
     },
   }

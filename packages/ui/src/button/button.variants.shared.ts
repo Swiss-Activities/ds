@@ -1,4 +1,4 @@
-import type { ButtonSize, ButtonVariant } from "./button.types";
+import type { ButtonSizeToken, ButtonVariant } from "./button.types";
 
 export type SharedButtonVariantStyles = {
   container: string;
@@ -13,8 +13,8 @@ export type SharedButtonSizeStyles = {
 
 export const sharedButtonBaseStyles = {
   container:
-    "group inline-flex h-[max-content] max-h-max min-h-[48px] cursor-pointer appearance-none items-center justify-center rounded-md border-solid px-3.5 py-2.5 text-center transition duration-100 ease-in",
-  text: "text-[14px] font-medium",
+    "group inline-flex h-[max-content] max-h-max min-h-[48px] cursor-pointer appearance-none items-center justify-center rounded-lg border-solid px-3.5 py-2.5 text-center transition duration-100 ease-in",
+  text: "text-sm font-medium",
 } as const;
 
 export const sharedButtonDisabledStyles = {
@@ -80,6 +80,12 @@ export const sharedButtonVariantStyles: Record<
     text: "text-inherit",
     webInteraction: "focus-visible:outline-primary",
   },
+  danger: {
+    container: "border border-transparent bg-transparent",
+    text: "text-primary",
+    webInteraction:
+      "sm:hover:border-gray-100 sm:hover:bg-gray-100 focus-visible:outline-gray-300",
+  },
   instruction: {
     container: "pointer-events-none border border-light bg-light",
     text: "text-primary",
@@ -95,10 +101,29 @@ export const sharedButtonVariantStyles: Record<
     text: "text-gray-700 underline",
     webInteraction: "hover:no-underline focus-visible:outline-gray-500",
   },
+  pill: {
+    container:
+      "min-h-[32px] rounded-full border border-blue bg-transparent px-3 py-1.5 lg:min-h-[36px]",
+    text: "text-blue text-xs sm:text-sm",
+    webInteraction:
+      "lg:hover:bg-blue lg:hover:text-white focus-visible:outline-blue",
+  },
+  "pill-primary": {
+    container:
+      "min-h-[32px] rounded-full border border-primary bg-primary px-3 py-1.5 lg:min-h-[36px]",
+    text: "text-white text-xs sm:text-sm",
+    webInteraction:
+      "hover:text-white sm:hover:border-dark sm:hover:bg-dark focus-visible:outline-dark",
+  },
+  white: {
+    container: "border border-white bg-white",
+    text: "text-black",
+    webInteraction: "sm:hover:bg-white focus-visible:outline-white",
+  },
 };
 
 export const sharedButtonSizeStyles: Record<
-  ButtonSize,
+  ButtonSizeToken,
   SharedButtonSizeStyles
 > = {
   xs: {
@@ -109,12 +134,12 @@ export const sharedButtonSizeStyles: Record<
     container: "!min-h-[36px] !px-2.5 !py-1",
     text: "!text-xs lg:!text-[14px]",
   },
-  default: {
+  md: {
     container: "",
     text: "",
   },
-  pill: {
-    container: "!min-h-[32px] !rounded-[9999px] !px-3 !py-1.5 lg:!min-h-[36px]",
-    text: "!text-xs sm:!text-sm",
+  lg: {
+    container: "",
+    text: "",
   },
 };
