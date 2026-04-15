@@ -1,7 +1,9 @@
 "use client";
 
 import type { HTMLAttributes } from "react";
-import { useEffect, useRef } from "react";
+import { memo, useEffect, useMemo, useRef } from "react";
+import { Icon } from "../icon/icon";
+import { List } from "../icons";
 import { cn } from "../utils/cn";
 import { Text } from "../text";
 import { Accordion } from "../accordion";
@@ -10,7 +12,11 @@ import type { BaseContentBlocksProps, ContentBlockItem } from "./content-blocks.
 export type ContentBlocksProps = BaseContentBlocksProps &
   Omit<HTMLAttributes<HTMLDivElement>, "children">;
 
-function BlockContent({ content }: { content: ContentBlockItem["content"] }) {
+const BlockContent = memo(function BlockContent({
+  content,
+}: {
+  content: ContentBlockItem["content"];
+}) {
   if (typeof content === "string") {
     return (
       <div
@@ -20,9 +26,9 @@ function BlockContent({ content }: { content: ContentBlockItem["content"] }) {
     );
   }
   return <>{content}</>;
-}
+});
 
-function TocNav({
+const TocNav = memo(function TocNav({
   items,
   tocTitle,
 }: {
@@ -32,14 +38,7 @@ function TocNav({
   return (
     <div className="space-y-4">
       <Text as="p" size="default" bold className="flex items-center gap-2">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-4 w-4 text-primary">
-          <line x1="8" y1="6" x2="21" y2="6" />
-          <line x1="8" y1="12" x2="21" y2="12" />
-          <line x1="8" y1="18" x2="21" y2="18" />
-          <line x1="3" y1="6" x2="3.01" y2="6" />
-          <line x1="3" y1="12" x2="3.01" y2="12" />
-          <line x1="3" y1="18" x2="3.01" y2="18" />
-        </svg>
+        <Icon icon={List} size="default" className="text-primary" />
         {tocTitle}
       </Text>
       <ul className="grid gap-3">
@@ -57,9 +56,9 @@ function TocNav({
       </ul>
     </div>
   );
-}
+});
 
-export function ContentBlocks({
+export const ContentBlocks = memo(function ContentBlocks({
   items,
   tocTitle = "Inhaltsverzeichnis",
   className,
@@ -109,18 +108,22 @@ export function ContentBlocks({
     update();
 
     return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+  }, [items]);
+
+  const accordionItems = useMemo(
+    () =>
+      items.map((item) => ({
+        id: item.id,
+        title: item.title,
+        content: <BlockContent content={item.content} />,
+      })),
+    [items]
+  );
 
   return (
     <div ref={containerRef} className={cn(className)} {...props}>
       <div className="lg:hidden">
-        <Accordion
-          items={items.map((item) => ({
-            id: item.id,
-            title: item.title,
-            content: <BlockContent content={item.content} />,
-          }))}
-        />
+        <Accordion items={accordionItems} />
       </div>
       <div className="hidden grid-cols-3 gap-8 lg:grid xl:gap-16">
         <div className="col-span-2 flex flex-col gap-10">
@@ -139,4 +142,4 @@ export function ContentBlocks({
       </div>
     </div>
   );
-}
+});
