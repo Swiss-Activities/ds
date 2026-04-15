@@ -61,7 +61,7 @@ function SectionProductStoryPage(args: Story["args"]) {
           mit Europas hochstem Bahnhof auf 3454 m u. M.
         </Text>
       </SectionProduct>
-      <section className="py-6 lg:pt-4 lg:pb-10">
+      <section className="pt-0 pb-0 lg:pt-4 lg:pb-10">
         <div className="sa-container">
           <ProductInfoList items={infoCards} />
         </div>
@@ -73,7 +73,7 @@ function SectionProductStoryPage(args: Story["args"]) {
           reviews={reviews}
         />
       </section>
-      <section className="py-8 lg:py-10">
+      <section className="pt-0 pb-8 lg:py-10">
         <div className="sa-container">
           <ContentBlocks items={contentItems} />
         </div>
