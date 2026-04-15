@@ -30,6 +30,7 @@ export * from "./logo";
 export * from "./loader";
 export * from "./rating";
 export * from "./review-card";
+export * from "./product-info-list";
 export * from "./skeleton";
 export * from "./slider";
 export * from "./text";

@@ -5,10 +5,9 @@ import {
   productBreadcrumbs,
 } from "@swiss-activities/dummy-data";
 import {
-  Button,
-  Card,
   ContentBlocks,
   InfoBadge,
+  ProductInfoList,
   Rating,
   SectionActivityGrid,
   SectionProduct,
@@ -39,7 +38,7 @@ function SectionProductStoryPage(args: Story["args"]) {
       <SectionProduct
         {...args}
         images={heroGallery}
-        className="pb-6 lg:pb-8"
+        className="pb-6 lg:pb-4"
       >
         <div className="mt-4 flex items-center gap-6 lg:mt-6">
           <Rating score={4.7} stacked />
@@ -62,35 +61,15 @@ function SectionProductStoryPage(args: Story["args"]) {
           mit Europas hochstem Bahnhof auf 3454 m u. M.
         </Text>
       </SectionProduct>
-      <section className="bg-bg py-8 lg:py-10">
+      <section className="py-6 lg:pt-4 lg:pb-10">
         <div className="sa-container">
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6 lg:grid-cols-4 lg:gap-7">
-            {infoCards.map((item) => (
-              <Card
-                key={item.title}
-                noPadding
-                render={({ className, children }) => (
-                  <Button
-                    variant="ghost"
-                    className={`${className} !justify-start !text-left !p-3`}
-                  >
-                    {children}
-                  </Button>
-                )}
-              >
-                <InfoBadge
-                  icon={item.icon}
-                  title={item.title}
-                  subtitle={item.subtitle}
-                />
-              </Card>
-            ))}
-          </div>
+          <ProductInfoList items={infoCards} />
         </div>
+      </section>
+      <section className="bg-bg pt-6 pb-8 lg:py-10">
         <SectionReviewGrid
           title="Bewertungen"
           as="div"
-          className="pt-6"
           reviews={reviews}
         />
       </section>
