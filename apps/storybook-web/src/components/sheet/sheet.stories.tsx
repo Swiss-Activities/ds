@@ -1,6 +1,8 @@
 import { useState } from "react";
 import type { Meta, StoryObj } from "@storybook/react-vite";
+import "@silk-hq/components/unlayered-styles";
 import {
+  Card,
   SheetAuto,
   SheetFull,
   SheetWithDetent,
@@ -61,7 +63,7 @@ function DemoPage({
 }) {
   return (
     <div className="min-h-screen bg-bg px-4 py-8">
-      <div className="mx-auto max-w-3xl rounded-3xl bg-white p-6 shadow-sm">
+      <Card className="mx-auto max-w-3xl">
         <p className="text-sm font-medium text-primary">Drawer Demo</p>
         <h1 className="mt-2 text-3xl font-semibold text-gray-950">{title}</h1>
         <p className="mt-3 max-w-2xl text-sm leading-6 text-gray-700">
@@ -74,7 +76,7 @@ function DemoPage({
         >
           Open sheet
         </button>
-      </div>
+      </Card>
     </div>
   );
 }
@@ -98,7 +100,7 @@ export const Auto: Story = {
             <SheetAuto.View contentPlacement="bottom">
               <SheetAuto.Backdrop />
               <SheetAuto.CloseButton />
-              <SheetAuto.Content className="flex max-h-[80dvh] flex-col overflow-hidden bg-white">
+              <SheetAuto.Content className="flex flex-col bg-white">
                 <div className="px-5 pb-3 pt-2">
                   <SheetAuto.Handle />
                 </div>

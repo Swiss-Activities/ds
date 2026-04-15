@@ -53,10 +53,19 @@ View.displayName = "SheetAuto.View";
 const Content = React.forwardRef<
   React.ElementRef<typeof Sheet.Content>,
   React.ComponentPropsWithoutRef<typeof Sheet.Content>
->(({ children, className, ...restProps }, ref) => {
+>(({ children, className, style, ...restProps }, ref) => {
   return (
     <Sheet.Content
-      className={cn("rounded-t-3xl bg-white", className)}
+      className={cn(
+        "max-h-[80dvh] rounded-t-3xl bg-white",
+        className
+      )}
+      style={
+        {
+          ...style,
+          "--silk-default-height": "auto",
+        } as React.CSSProperties
+      }
       {...restProps}
       ref={ref}
     >
