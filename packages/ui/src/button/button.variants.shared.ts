@@ -86,6 +86,13 @@ export const sharedButtonVariantStyles: Record<
     webInteraction:
       "sm:hover:border-gray-100 sm:hover:bg-gray-100 focus-visible:outline-gray-300",
   },
+  filter: {
+    container:
+      "min-h-[36px] rounded-full border border-gray-200 bg-white px-3 py-1.5 shadow-[0_1px_2px_0_rgba(0,0,0,0.08)]",
+    text: "text-gray-700 text-xs sm:text-sm",
+    webInteraction:
+      "sm:hover:border-gray-300 sm:hover:bg-gray-50 focus-visible:outline-gray-300",
+  },
   instruction: {
     container: "pointer-events-none border border-light bg-light",
     text: "text-primary",

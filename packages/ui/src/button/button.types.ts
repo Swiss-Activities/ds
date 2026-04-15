@@ -4,6 +4,7 @@ export const buttonVariants = [
   "blue",
   "blue-outline",
   "danger",
+  "filter",
   "gray",
   "ghost",
   "instruction",
@@ -47,6 +48,8 @@ export type BaseButtonProps = {
   className?: string;
   disabled?: boolean;
   icon?: ReactNode;
+  iconRight?: ReactNode;
+  iconRightDivider?: boolean;
   loading?: boolean;
   reverse?: boolean;
   selected?: boolean;

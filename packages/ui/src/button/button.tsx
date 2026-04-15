@@ -8,6 +8,8 @@ export type ButtonProps = {
   className?: string;
   disabled?: boolean;
   icon?: ReactNode;
+  iconRight?: ReactNode;
+  iconRightDivider?: boolean;
   loading?: boolean;
   reverse?: boolean;
   selected?: boolean;
@@ -29,6 +31,8 @@ export const Button = forwardRef<any, ButtonProps>(function Button(props, ref) {
     disabled = false,
     href = undefined,
     icon = null,
+    iconRight = null,
+    iconRightDivider = false,
     loading = false,
     reverse = false,
     selected = false,
@@ -43,39 +47,65 @@ export const Button = forwardRef<any, ButtonProps>(function Button(props, ref) {
   } = props;
 
   const resolvedType = variant ?? type ?? "secondary";
+  const leadingIcon = reverse ? null : icon;
+  const trailingIcon = iconRight ?? (reverse ? icon : null);
+  const hasLabel = Boolean(text) || Boolean(children);
+  const stretchTrailingSlot = Boolean(iconRightDivider && trailingIcon);
 
   const inner = (
     <span
-      className={cn("pointer-events-none flex items-center gap-2", {
-        "flex-row-reverse": reverse,
+      className={cn("pointer-events-none flex", {
+        "items-center": !stretchTrailingSlot,
+        "items-stretch self-stretch": stretchTrailingSlot,
       })}
     >
-      {icon && (
+      {leadingIcon && (
         <span
           className={cn("flex text-base", {
-            "lg:!text-sm": size === "sm",
+            "lg:!text-sm": size === "sm" || resolvedType === "filter",
+            "me-2": hasLabel || Boolean(trailingIcon),
           })}
         >
-          {icon}
+          {leadingIcon}
         </span>
       )}
-      {text ? (
+      <span className="flex items-center">
+        {text ? (
+          <span
+            className={cn("first-letter:uppercase", {
+              "hidden xs:block": showTextFrom === "xs",
+              "hidden sm:block": showTextFrom === "sm",
+              "hidden md:block": showTextFrom === "md",
+              "hidden lg:block": showTextFrom === "lg",
+              "hidden xl:block": showTextFrom === "xl",
+              "hidden 2xl:block": showTextFrom === "2xl",
+            })}
+          >
+            {text}
+          </span>
+        ) : (
+          ""
+        )}
+        {children ? <span className="first-letter:uppercase">{children}</span> : ""}
+      </span>
+      {trailingIcon ? (
         <span
-          className={cn("first-letter:uppercase", {
-            "hidden xs:block": showTextFrom === "xs",
-            "hidden sm:block": showTextFrom === "sm",
-            "hidden md:block": showTextFrom === "md",
-            "hidden lg:block": showTextFrom === "lg",
-            "hidden xl:block": showTextFrom === "xl",
-            "hidden 2xl:block": showTextFrom === "2xl",
+          className={cn("flex items-center text-base", {
+            "lg:!text-sm": size === "sm" || resolvedType === "filter",
+            "relative ms-2 self-stretch ps-3":
+              iconRightDivider,
+            "ms-2": !iconRightDivider && hasLabel,
           })}
         >
-          {text}
+          {iconRightDivider ? (
+            <span
+              aria-hidden="true"
+              className="absolute -inset-y-2 left-0 w-px bg-gray-200"
+            />
+          ) : null}
+          {trailingIcon}
         </span>
-      ) : (
-        ""
-      )}
-      {children ? <span className="first-letter:uppercase">{children}</span> : ""}
+      ) : null}
     </span>
   );
 
@@ -100,12 +130,17 @@ export const Button = forwardRef<any, ButtonProps>(function Button(props, ref) {
         resolvedType === "transparent" || resolvedType === "danger",
       "border-solid border-[#A9A2A3] bg-[#A9A2A3] text-white":
         resolvedType === "gray",
+      "!border border-gray-200 bg-white text-gray-700 shadow-[0_1px_2px_0_rgba(0,0,0,0.08)]":
+        resolvedType === "filter",
       "text-black": resolvedType === "transparent",
       "border-white bg-white sm:hover:bg-white": resolvedType === "white",
       "!min-h-[32px] !rounded-full !border !px-3 !py-1.5 !text-xs sm:!text-sm lg:min-h-[36px]":
         resolvedType === "pill" || resolvedType === "pill-primary",
+      "!min-h-[36px] !rounded-full !px-3 !py-1.5 !text-xs sm:!text-sm":
+        resolvedType === "filter",
       "border-blue bg-transparent text-blue lg:hover:bg-blue lg:hover:text-white":
         resolvedType === "pill",
+      "sm:hover:border-gray-300 sm:hover:bg-gray-50": resolvedType === "filter",
       "!min-h-[auto] !w-max !border-none !bg-transparent !p-0 hover:underline":
         resolvedType === "link",
       "!min-h-[auto] !w-max !border-none !bg-transparent !p-0 !text-gray-700 !underline hover:!no-underline":

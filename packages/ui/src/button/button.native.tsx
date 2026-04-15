@@ -54,6 +54,8 @@ export const Button = forwardRef<any, ButtonProps>(function Button(
     size = "md",
     disabled,
     icon = null,
+    iconRight = null,
+    iconRightDivider = false,
     loading = false,
     reverse = false,
     selected = false,
@@ -80,8 +82,10 @@ export const Button = forwardRef<any, ButtonProps>(function Button(
     }
   );
   const childNodes = React.Children.toArray(children ?? []);
-  const combinedContent = text != null ? [text, ...childNodes] : childNodes;
-  const contentNodes = icon ? [icon, ...combinedContent] : combinedContent;
+  const labelNodes = text != null ? [text, ...childNodes] : childNodes;
+  const leadingIcon = reverse ? null : icon;
+  const trailingIcon = iconRight ?? (reverse ? icon : null);
+  const stretchTrailingSlot = Boolean(iconRightDivider && trailingIcon);
   const isTextOnly = childNodes.every(
     (child) => typeof child === "string" || typeof child === "number"
   );
@@ -99,6 +103,7 @@ export const Button = forwardRef<any, ButtonProps>(function Button(
           "min-h-[32px] rounded-full px-3 py-1.5 lg:min-h-[36px]":
             usesLegacyPillSize,
           "bg-blue border-blue": resolvedVariant === "pill" && selected,
+          "border-gray-200 bg-white shadow-sm": resolvedVariant === "filter",
         },
         className
       )}
@@ -111,25 +116,54 @@ export const Button = forwardRef<any, ButtonProps>(function Button(
           color={getSpinnerColor(resolvedVariant, selected)}
           size="sm"
         />
-      ) : isTextOnly && !icon && text == null ? (
+      ) : isTextOnly && !leadingIcon && !trailingIcon && text == null ? (
         <Text className={textClassName}>{children}</Text>
       ) : (
         <View
-          className={cn("flex flex-row items-center justify-center gap-2", {
-            "flex-row-reverse": reverse,
+          className={cn("flex flex-row justify-center", {
+            "items-center": !stretchTrailingSlot,
+            "items-stretch self-stretch": stretchTrailingSlot,
           })}
         >
-          {contentNodes.map((child, index) =>
-            typeof child === "string" || typeof child === "number" ? (
-              <Text className={textClassName} key={`button-text-${index}`}>
-                {child}
-              </Text>
-            ) : (
-              <React.Fragment key={`button-node-${index}`}>
-                {child}
-              </React.Fragment>
-            )
-          )}
+          {leadingIcon ? (
+            <View
+              className={cn("flex", {
+                "mr-2": labelNodes.length > 0 || Boolean(trailingIcon),
+              })}
+            >
+              {leadingIcon}
+            </View>
+          ) : null}
+          <View className="flex flex-row items-center">
+            {labelNodes.map((child, index) =>
+              typeof child === "string" || typeof child === "number" ? (
+                <Text className={textClassName} key={`button-text-${index}`}>
+                  {child}
+                </Text>
+              ) : (
+                <React.Fragment key={`button-node-${index}`}>
+                  {child}
+                </React.Fragment>
+              )
+            )}
+          </View>
+          {trailingIcon ? (
+            <View
+              className={cn("flex items-center justify-center", {
+                "relative ml-2 self-stretch pl-3":
+                  iconRightDivider,
+                "ml-2": !iconRightDivider && labelNodes.length > 0,
+              })}
+            >
+              {iconRightDivider ? (
+                <View
+                  className="absolute left-0 w-px bg-gray-200"
+                  style={{ top: -8, bottom: -8 }}
+                />
+              ) : null}
+              {trailingIcon}
+            </View>
+          ) : null}
         </View>
       )}
     </TouchableOpacity>

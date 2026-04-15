@@ -1,6 +1,7 @@
 import React from "react";
 import type { Meta, StoryObj } from "@storybook/react-native";
-import { Button, buttonSizes, buttonVariants } from "@swiss-activities/ui";
+import { Button, Icon, buttonSizes, buttonVariants } from "@swiss-activities/ui";
+import { List, X } from "@swiss-activities/ui/icons";
 
 const meta = {
   title: "Components/Button",
@@ -69,6 +70,22 @@ export const White: Story = storyFor("white", "Continue");
 
 export const Pill: Story = storyFor("pill", "Book");
 export const PillPrimary: Story = storyFor("pill-primary", "Book");
+export const Filter: Story = {
+  args: {
+    type: "filter",
+    text: "Interlaken",
+    iconRight: <Icon icon={X} size="xs" />,
+  },
+};
+
+export const FilterWithDividerIcon: Story = {
+  args: {
+    type: "filter",
+    text: "Filters",
+    iconRight: <Icon icon={List} size="xs" />,
+    iconRightDivider: true,
+  },
+};
 
 export const Disabled: Story = {
   args: {
