@@ -12,6 +12,7 @@ export type SectionScrollerProps = BaseSectionScrollerProps &
 export function SectionScroller({
   title,
   subtitle,
+  action,
   children,
   className,
   ...props
@@ -19,11 +20,14 @@ export function SectionScroller({
   return (
     <View className={cn(className)} {...props}>
       <HorizontalScrollerRoot>
-        <View className="mb-4 flex flex-row items-center gap-4 px-4">
-          <HorizontalScrollerTitle>
-            {title}
-          </HorizontalScrollerTitle>
-          {subtitle}
+        <View className="mb-4 flex flex-row flex-wrap items-center gap-x-4 gap-y-2 px-4">
+          <View className="min-w-0 flex-1 flex flex-row flex-wrap items-center gap-x-4 gap-y-2">
+            <HorizontalScrollerTitle>
+              {title}
+            </HorizontalScrollerTitle>
+            {subtitle}
+            {action}
+          </View>
         </View>
         <HorizontalScrollerTrack className="gap-4 px-4 pt-2 pb-4">
           {children}

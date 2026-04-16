@@ -15,5 +15,7 @@ export type BaseSectionActivityGridProps = {
   title: ReactNode;
   action?: ReactNode;
   activities: ActivityItem[];
+  loading?: boolean;
+  skeletonAmount?: number;
   className?: string;
 };

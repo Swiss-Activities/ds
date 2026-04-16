@@ -3,6 +3,7 @@ import { cn } from "../utils/cn";
 import { Card } from "../card";
 import { Text } from "../text";
 import { Rating } from "../rating";
+import { ActivityCardSkeletonContent } from "./activity-card-skeleton";
 import type { BaseActivityCardProps } from "./activity-card.types";
 
 export type ActivityCardProps = BaseActivityCardProps &
@@ -15,6 +16,7 @@ export function ActivityCard({
   reviewCount,
   priceLabel,
   price,
+  loading = false,
   className,
   render,
   ...props
@@ -23,7 +25,10 @@ export function ActivityCard({
     <Card
       noPadding
       render={render}
-      className={cn("group flex h-full w-full flex-col lg:hover:shadow-md", className)}
+      className={cn(
+        "group relative flex h-full w-full flex-col overflow-hidden lg:hover:shadow-md",
+        className
+      )}
       {...props}
     >
       <div className="aspect-[4/3] w-full shrink-0 overflow-hidden [&_img]:h-full [&_img]:w-full [&_img]:object-cover">
@@ -48,6 +53,11 @@ export function ActivityCard({
           </div>
         </div>
       </div>
+      {loading ? (
+        <div className="absolute inset-0 z-10 bg-white">
+          <ActivityCardSkeletonContent />
+        </div>
+      ) : null}
     </Card>
   );
 }

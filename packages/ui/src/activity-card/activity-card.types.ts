@@ -10,6 +10,7 @@ export type BaseActivityCardProps = {
   reviewCount: number;
   priceLabel: string;
   price: string;
+  loading?: boolean;
   className?: string;
   render?: ActivityCardRender;
 };

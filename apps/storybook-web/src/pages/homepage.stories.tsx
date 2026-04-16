@@ -1,8 +1,8 @@
 import { useEffect, useMemo, useState } from "react";
-import type { StoryObj } from "@storybook/react-vite";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 import { useGatewayStore } from "@swiss-activities/data";
 import { heroTitles } from "@swiss-activities/dummy-data";
-import { SectionActivityGrid, SectionHero, Text } from "@swiss-activities/ui";
+import { HeroSkeleton, SectionActivityGrid, SectionHero, Text } from "@swiss-activities/ui";
 import {
   getActivityItems,
   getHomepageHeroDefaultTabId,
@@ -12,6 +12,11 @@ import {
   getWeatherDaysLong,
 } from "../story-data";
 import { Page } from "../components/page";
+
+type GatewayPreviewArgs = {
+  delayMs: number;
+  outcome: "success" | "error";
+};
 
 function HomepageHeroOverlay() {
   return (
@@ -116,15 +121,117 @@ function FallbackHomepagePreview() {
   );
 }
 
-export default {
+function GatewayHomepagePreview({
+  delayMs,
+  outcome,
+}: GatewayPreviewArgs) {
+  const tabs = useMemo(() => getHomepageHeroTabs(), []);
+  const initialTabId = tabs[0]?.id ?? getHomepageHeroDefaultTabId() ?? null;
+  const selectedTabId = useGatewayStore((state) => state.selectedTabId);
+  const setSelectedTabId = useGatewayStore((state) => state.setSelectedTabId);
+  const reset = useGatewayStore((state) => state.reset);
+  const [status, setStatus] = useState<"loading" | "success" | "error">("loading");
+
+  useEffect(() => {
+    reset();
+
+    if (initialTabId) {
+      setSelectedTabId(initialTabId);
+    }
+
+    return reset;
+  }, [initialTabId, reset, setSelectedTabId]);
+
+  const activeTabId = selectedTabId ?? initialTabId ?? undefined;
+  const fallbackSections = useMemo(
+    () => [
+      {
+        id: "fallback-highlights",
+        title: heroTitles.sectionActivityGrid,
+        activities: getActivityItems(),
+      },
+    ],
+    []
+  );
+  const gatewaySections = useMemo(
+    () => getHomepageHeroSections(activeTabId),
+    [activeTabId]
+  );
+
+  useEffect(() => {
+    setStatus("loading");
+
+    const timer = setTimeout(() => {
+      setStatus(outcome);
+    }, delayMs);
+
+    return () => clearTimeout(timer);
+  }, [activeTabId, delayMs, outcome]);
+
+  const sections = status === "success" ? gatewaySections : fallbackSections;
+  const isLoading = status === "loading";
+
+  return (
+    <Page>
+      <div className="sa-container">
+        <div className="-mx-2 pb-6 sm:mx-0">
+          <div className="relative">
+            <SectionHero
+              image={getHeroImage()}
+              overlay={<HomepageHeroOverlay />}
+              variant="fallback"
+              tabs={tabs}
+              selectedTabId={activeTabId}
+              onSelectTab={setSelectedTabId}
+            />
+            {isLoading ? <HeroSkeleton fill className="z-50" /> : null}
+          </div>
+        </div>
+      </div>
+      {sections.map((section) => (
+        <div key={section.id} className="sa-container">
+          <SectionActivityGrid
+            title={section.title}
+            activities={section.activities}
+            loading={isLoading}
+            className="py-6"
+          />
+        </div>
+      ))}
+    </Page>
+  );
+}
+
+const meta = {
   title: "Pages/Homepage",
   parameters: { layout: "fullscreen" },
-};
+  argTypes: {
+    outcome: {
+      options: ["success", "error"],
+      control: "inline-radio",
+    },
+    delayMs: {
+      control: { type: "number", min: 0, step: 100 },
+    },
+  },
+} satisfies Meta<GatewayPreviewArgs>;
 
-export const Default: StoryObj = {
+export default meta;
+
+type Story = StoryObj<GatewayPreviewArgs>;
+
+export const Default: Story = {
   render: () => <LocalizedHomepagePreview />,
 };
 
-export const Fallback: StoryObj = {
+export const Fallback: Story = {
   render: () => <FallbackHomepagePreview />,
+};
+
+export const GatewayLoading: Story = {
+  args: {
+    delayMs: 1500,
+    outcome: "success",
+  },
+  render: (args) => <GatewayHomepagePreview {...args} />,
 };

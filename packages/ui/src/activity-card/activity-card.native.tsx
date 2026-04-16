@@ -4,6 +4,7 @@ import { cn } from "../utils/cn";
 import { Card } from "../card/card.native";
 import { Text } from "../text/text.native";
 import { Rating } from "../rating/rating.native";
+import { ActivityCardSkeletonContent } from "./activity-card-skeleton.native";
 import type { BaseActivityCardProps } from "./activity-card.types";
 
 export type ActivityCardProps = BaseActivityCardProps &
@@ -16,6 +17,7 @@ export function ActivityCard({
   reviewCount,
   priceLabel,
   price,
+  loading = false,
   className,
   render,
   ...props
@@ -24,7 +26,7 @@ export function ActivityCard({
     <Card
       noPadding
       render={render}
-      className={cn("flex w-full flex-col self-start", className)}
+      className={cn("relative flex w-full flex-col self-start overflow-hidden", className)}
       {...props}
     >
       <View className="aspect-[4/3] w-full shrink-0 overflow-hidden">
@@ -49,6 +51,11 @@ export function ActivityCard({
           </View>
         </View>
       </View>
+      {loading ? (
+        <View className="absolute inset-0 z-10 bg-white">
+          <ActivityCardSkeletonContent />
+        </View>
+      ) : null}
     </Card>
   );
 }
