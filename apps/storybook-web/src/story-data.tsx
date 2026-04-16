@@ -5,6 +5,7 @@ import {
   heroGalleryImageKeys,
   homepageFilterGroups,
   homepageFilterItems,
+  homepageHeroTabs,
   productInfoBadges,
   productInfoCards,
   relatedActivityItems,
@@ -23,6 +24,7 @@ import {
   Clock3,
   Cloud,
   Flame,
+  Mountain,
   MapPin,
   Star,
   Sun,
@@ -54,6 +56,13 @@ const productIconMap = {
   cloud: Cloud,
   "map-pin": MapPin,
   star: Star,
+} as const;
+
+const homepageHeroTabIconMap = {
+  trophy: Trophy,
+  mountain: Mountain,
+  flame: Flame,
+  "map-pin": MapPin,
 } as const;
 const bodyParagraphClassName =
   "break-words text-[14px] leading-relaxed text-gray-700 lg:text-[15px] lg:leading-relaxed";
@@ -154,6 +163,50 @@ export function getHomepageFilterDrawerContent() {
       ))}
     </div>
   );
+}
+
+export function getHomepageHeroTabs() {
+  return homepageHeroTabs.map((tab) => ({
+    id: tab.id,
+    label: tab.label,
+    icon: (
+      <Icon
+        icon={homepageHeroTabIconMap[tab.icon]}
+        size="md"
+      />
+    ),
+  }));
+}
+
+export function getHomepageHeroDefaultTabId() {
+  return homepageHeroTabs[0]?.id;
+}
+
+export function getHomepageHeroSections(selectedTabId?: string | null) {
+  const activeTab =
+    homepageHeroTabs.find((tab) => tab.id === selectedTabId) ??
+    homepageHeroTabs[0];
+
+  if (!activeTab) {
+    return [];
+  }
+
+  return activeTab.sections.map((section) => ({
+    id: section.id,
+    title: section.title,
+    activities: section.activityIndexes.flatMap((activityIndex) => {
+      const item = activityItems[activityIndex];
+
+      if (!item) {
+        return [];
+      }
+
+      return [{
+        ...item,
+        image: imageFor(item.image, item.alt),
+      }];
+    }),
+  }));
 }
 
 export function getActivityItems() {

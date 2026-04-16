@@ -58,6 +58,25 @@ export type HomepageFilterGroupData = {
   title: string;
 };
 
+export type HomepageHeroTabIconKind =
+  | "trophy"
+  | "mountain"
+  | "flame"
+  | "map-pin";
+
+export type HomepageHeroTabSectionData = {
+  activityIndexes: number[];
+  id: string;
+  title: string;
+};
+
+export type HomepageHeroTabData = {
+  icon: HomepageHeroTabIconKind;
+  id: string;
+  label: string;
+  sections: HomepageHeroTabSectionData[];
+};
+
 export type ReviewItemData = {
   author: string;
   countryCode?: string;
@@ -197,6 +216,77 @@ export const homepageFilterItems: HomepageFilterItemData[] = [
   { id: "weather", label: "Bei jedem Wetter", kind: "disclosure" },
   { id: "price", label: "Unter CHF 100" },
   { id: "family", label: "Familienfreundlich" },
+] as const;
+
+export const homepageHeroTabs: HomepageHeroTabData[] = [
+  {
+    id: "trending",
+    label: "Im Trend",
+    icon: "trophy",
+    sections: [
+      {
+        id: "trending-top",
+        title: "Beliebte Erlebnisse",
+        activityIndexes: [0, 1, 2, 3, 4, 5],
+      },
+      {
+        id: "trending-scenic",
+        title: "Aussicht und Panorama",
+        activityIndexes: [2, 4, 5, 1, 0, 3],
+      },
+    ],
+  },
+  {
+    id: "mountains",
+    label: "Berge",
+    icon: "mountain",
+    sections: [
+      {
+        id: "mountains-lifts",
+        title: "Bergbahnen und Gipfel",
+        activityIndexes: [1, 2, 3, 5, 0, 4],
+      },
+      {
+        id: "mountains-daytrips",
+        title: "Tagesausflüge in die Berge",
+        activityIndexes: [5, 2, 0, 3, 1, 4],
+      },
+    ],
+  },
+  {
+    id: "adventure",
+    label: "Abenteuer",
+    icon: "flame",
+    sections: [
+      {
+        id: "adventure-outdoor",
+        title: "Outdoor und Action",
+        activityIndexes: [4, 0, 1, 5, 3, 2],
+      },
+      {
+        id: "adventure-family",
+        title: "Erlebnisse für Gruppen",
+        activityIndexes: [0, 4, 2, 1, 5, 3],
+      },
+    ],
+  },
+  {
+    id: "nearby",
+    label: "In der Nähe",
+    icon: "map-pin",
+    sections: [
+      {
+        id: "nearby-short",
+        title: "In deiner Nähe",
+        activityIndexes: [3, 0, 4, 1, 2, 5],
+      },
+      {
+        id: "nearby-city",
+        title: "Beliebt rund um Interlaken",
+        activityIndexes: [0, 3, 2, 5, 1, 4],
+      },
+    ],
+  },
 ] as const;
 
 export const homepageFilterGroups: HomepageFilterGroupData[] = [

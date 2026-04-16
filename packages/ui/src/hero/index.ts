@@ -1,3 +1,3 @@
 export { Hero } from "./hero";
 export type { HeroProps } from "./hero";
-export type { BaseHeroProps } from "./hero.types";
+export type { BaseHeroProps, HeroTab, HeroVariant } from "./hero.types";

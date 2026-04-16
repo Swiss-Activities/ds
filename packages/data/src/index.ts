@@ -3,6 +3,7 @@ export type { DataConfig } from "./types";
 
 export { useGetHome, getHome } from "./gateway/getHome";
 export { useGetCountry, getCountry } from "./gateway/getCountry";
+export { useGatewayStore } from "./gateway/store";
 export type {
   TGatewayHome,
   TGatewayHomeSection,
@@ -12,6 +13,7 @@ export type {
   TGatewayWeatherCardItem,
   TGatewayHomeParams,
 } from "./gateway/types";
+export type { GatewayStoreState } from "./gateway/store";
 
 export { toActivityItem } from "./adapters/activityItem";
 export type { ActivityItemData, RenderImage } from "./adapters/activityItem";

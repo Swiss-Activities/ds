@@ -12,10 +12,16 @@ export type SectionHeroProps = BaseSectionHeroProps &
 export function SectionHero({
   title,
   image,
+  overlay,
+  search,
+  variant = "localized",
   days,
   unit,
   selected,
   onSelect,
+  tabs,
+  selectedTabId,
+  onSelectTab,
   className,
   ...props
 }: SectionHeroProps) {
@@ -23,8 +29,24 @@ export function SectionHero({
     <section className={cn(className)} {...props}>
       <div className="sa-container">
         <div className="-mx-2 sm:mx-0">
-          <Hero title={title} image={image}>
-            <Weather days={days} unit={unit} selected={selected} onSelect={onSelect} />
+          <Hero
+            title={title}
+            image={image}
+            overlay={overlay}
+            search={search}
+            variant={variant}
+            tabs={tabs}
+            selectedTabId={selectedTabId}
+            onSelectTab={onSelectTab}
+          >
+            {variant === "localized" && days ? (
+              <Weather
+                days={days}
+                unit={unit}
+                selected={selected}
+                onSelect={onSelect}
+              />
+            ) : null}
           </Hero>
         </div>
       </div>
