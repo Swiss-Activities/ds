@@ -13,6 +13,12 @@ export type ActivityItemData = {
 
 export type RenderImage = (item: TGatewayHomeItem) => ReactNode;
 
+const getImageUrl = (item: TGatewayHomeItem) => item.imageUrl ?? item.image_url;
+const getReviewCount = (item: TGatewayHomeItem) =>
+  item.reviewCount ?? item.review_count;
+const getPriceFormatted = (item: TGatewayHomeItem) =>
+  item.priceFormatted ?? item.price_formatted;
+
 export const toActivityItem = (
   item: TGatewayHomeItem,
   {
@@ -25,11 +31,11 @@ export const toActivityItem = (
     renderImage: RenderImage;
   }
 ): ActivityItemData => ({
-  image: item.image_url ? renderImage(item) : null,
+  image: getImageUrl(item) ? renderImage(item) : null,
   title: item.title,
   score: item.rating ?? 0,
-  reviewCount: item.review_count ?? 0,
+  reviewCount: getReviewCount(item) ?? 0,
   priceLabel,
-  price: item.price_formatted ? `${fromLabel} ${item.price_formatted}` : "",
+  price: getPriceFormatted(item) ? `${fromLabel} ${getPriceFormatted(item)}` : "",
   href: item.path,
 });

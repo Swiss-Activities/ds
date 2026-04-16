@@ -1,8 +1,6 @@
 import { createElement, type HTMLAttributes, type ReactNode } from "react";
 import { Button } from "../button";
 import { Card } from "../card";
-import { Icon } from "../icon/icon";
-import { ChevronRight } from "../icons";
 import { Text } from "../text";
 import { cn } from "../utils/cn";
 import type { BaseProductInfoListProps, ProductInfoListItem } from "./product-info-list.types";
@@ -95,9 +93,6 @@ function ProductInfoListItemRow({
           subtitle={subtitle}
           details={details}
         />
-      </div>
-      <div className="shrink-0 text-gray-400">
-        <Icon icon={ChevronRight} size="sm" />
       </div>
     </>
   );

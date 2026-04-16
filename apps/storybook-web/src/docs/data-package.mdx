@@ -128,9 +128,17 @@ import type { TGatewayHomeItem } from '@swiss-activities/data'
 const item: ActivityItemData = toActivityItem(gatewayItem, {
   priceLabel: "pro Person",
   fromLabel: "ab",
-  renderImage: (item) => <img src={item.image_url} alt={item.title} />,
+  renderImage: (item) => (
+    <img src={item.imageUrl ?? item.image_url} alt={item.title} />
+  ),
 })
 ```
+
+The adapter accepts both the legacy snake_case gateway fields and the newer camelCase fields:
+
+- `image_url` / `imageUrl`
+- `price_formatted` / `priceFormatted`
+- `review_count` / `reviewCount`
 
 The `renderImage` callback lets each consumer use their own image component (e.g. Next.js `Image`, Expo `Image`, plain `<img>`).
 
@@ -154,7 +162,10 @@ const data = await getHome("https://gateway.swissactivities.com", {
 import type {
   TGatewayHome,
   TGatewayHomeSection,
+  TGatewayHomeCarouselSection,
+  TGatewayHomeWeatherCardSection,
   TGatewayHomeItem,
+  TGatewayWeatherCardItem,
   TGatewayHomeParams,
   ActivityItemData,
   DataConfig,
@@ -173,17 +184,24 @@ export function PersonalizedSections() {
 
   if (isLoading || !data) return null
 
-  return data.sections.map(section => (
+  return data.sections
+    .filter(section => section.component === "carousel")
+    .map(section => (
     <SectionActivityGrid
       key={section.id}
       title={section.title}
       activities={section.data
-        .filter(item => !!item.price_formatted)
+        .filter(item => !!(item.priceFormatted ?? item.price_formatted))
         .map(item => toActivityItem(item, {
           priceLabel: "pro Person",
           fromLabel: "ab",
           renderImage: (item) => (
-            <StaticImage src={item.image_url} alt={item.title} width={600} height={400} />
+            <StaticImage
+              src={(item.imageUrl ?? item.image_url)!}
+              alt={item.title}
+              width={600}
+              height={400}
+            />
           ),
         }))}
     />

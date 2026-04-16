@@ -6,7 +6,10 @@ export { useGetCountry, getCountry } from "./gateway/getCountry";
 export type {
   TGatewayHome,
   TGatewayHomeSection,
+  TGatewayHomeCarouselSection,
+  TGatewayHomeWeatherCardSection,
   TGatewayHomeItem,
+  TGatewayWeatherCardItem,
   TGatewayHomeParams,
 } from "./gateway/types";
 

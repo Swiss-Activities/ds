@@ -2,9 +2,10 @@ import { useCallback, useState } from "react";
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import { SectionActivityGrid } from "@swiss-activities/ui";
 import { grayColors, saColors } from "@swiss-activities/ui/tokens";
-import type {
-  TGatewayHome,
-  TGatewayHomeItem,
+import {
+  toActivityItem,
+  type TGatewayHome,
+  type TGatewayHomeCarouselSection,
 } from "@swiss-activities/data";
 import { Field, Input, Select, SubmitButton } from "./form";
 
@@ -55,18 +56,9 @@ const COUNTRIES = [
   { value: "CN", label: "China" },
 ];
 
-function toActivityItem(item: TGatewayHomeItem) {
-  return {
-    image: item.image_url ? (
-      <img src={item.image_url} alt={item.title} />
-    ) : null,
-    title: item.title,
-    score: item.rating ?? 0,
-    reviewCount: item.review_count ?? 0,
-    priceLabel: "pro Person",
-    price: item.price_formatted ? `ab ${item.price_formatted}` : "",
-  };
-}
+const isCarouselSection = (
+  section: TGatewayHome["sections"][number]
+): section is TGatewayHomeCarouselSection => section.component === "carousel";
 
 function GatewayPlayground() {
   const [gatewayUrl, setGatewayUrl] = useState(DEFAULT_GATEWAY_URL);
@@ -262,14 +254,26 @@ function GatewayPlayground() {
         )}
       </div>
 
-      {data?.sections.map((section) => (
+      {data?.sections.filter(isCarouselSection).map((section) => (
         <SectionActivityGrid
           key={section.id}
           title={section.title}
           className="py-6"
           activities={section.data
-            .filter((item) => !!item.price_formatted)
-            .map(toActivityItem)}
+            .filter((item) => !!(item.priceFormatted ?? item.price_formatted))
+            .map((item) =>
+              toActivityItem(item, {
+                priceLabel: "pro Person",
+                fromLabel: "ab",
+                renderImage: (gatewayItem) =>
+                  (gatewayItem.imageUrl ?? gatewayItem.image_url) ? (
+                    <img
+                      src={(gatewayItem.imageUrl ?? gatewayItem.image_url) as string}
+                      alt={gatewayItem.title}
+                    />
+                  ) : null,
+              })
+            )}
         />
       ))}
     </main>
