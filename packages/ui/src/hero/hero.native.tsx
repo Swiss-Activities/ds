@@ -55,7 +55,30 @@ function BottomFadeOverlay() {
 }
 
 function FallbackTintOverlay() {
-  return <View className="absolute inset-0 z-10 bg-blue/35" />;
+  return (
+    <View className="absolute inset-x-0 top-0 z-10 h-1/2">
+      <Svg
+        pointerEvents="none"
+        width="100%"
+        height="100%"
+        style={{ position: "absolute", left: 0, top: 0, bottom: 0 }}
+      >
+        <Defs>
+          <LinearGradient
+            id="hero-fallback-top-gradient"
+            x1="0%"
+            y1="0%"
+            x2="0%"
+            y2="100%"
+          >
+            <Stop offset="0%" stopColor={saColors.blue} stopOpacity={0.55} />
+            <Stop offset="100%" stopColor={saColors.blue} stopOpacity={0} />
+          </LinearGradient>
+        </Defs>
+        <Rect width="100%" height="100%" fill="url(#hero-fallback-top-gradient)" />
+      </Svg>
+    </View>
+  );
 }
 
 function BackButton({

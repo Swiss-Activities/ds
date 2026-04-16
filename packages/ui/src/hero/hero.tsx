@@ -134,7 +134,7 @@ export function Hero({
             <div className="pointer-events-none absolute inset-x-0 top-0 z-20 h-20 bg-gradient-to-b from-blue/50 to-transparent" />
           )}
           {isFallback ? (
-            <div className="pointer-events-none absolute inset-0 z-10 bg-blue/25" />
+            <div className="pointer-events-none absolute inset-x-0 top-0 z-10 h-1/2 bg-gradient-to-b from-blue/55 to-transparent" />
           ) : null}
           {hasBottomFade && (
             <div
