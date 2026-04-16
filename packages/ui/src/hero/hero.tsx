@@ -70,7 +70,7 @@ function HeroTabs({
                         isActive ? "text-blue" : "text-white"
                       )}
                     >
-                      {tab.icon}
+                      {isActive && tab.activeIcon ? tab.activeIcon : tab.icon}
                     </span>
                   ) : null}
                   <span className="relative mt-auto sm:mt-0 lg:top-px">
@@ -108,103 +108,107 @@ export function Hero({
   const isFallback = variant === "fallback" && !!tabs?.length;
   const isLocalized = variant === "localized";
   const hasBottomFade = !!title || isFallback;
-  const hasOverlay = !!overlay || !!search;
+  const hasOverlayStack = !!overlay || !!search;
   const localizedMediaClassName = "h-[196px] sm:h-[228px] lg:h-[264px]";
   const localizedContentClassName = "h-[120px] sm:h-[132px] lg:h-[144px]";
   const fallbackMediaClassName = "h-[316px] sm:h-[360px] lg:h-[408px]";
 
   return (
-    <div
-      className={cn(
-        "relative overflow-hidden bg-blue sm:rounded-lg",
-        className
-      )}
-      {...props}
-    >
-      <div
-        className={cn(
-          "relative w-full overflow-hidden [&_img]:absolute [&_img]:inset-0 [&_img]:h-full [&_img]:w-full [&_img]:object-cover",
-          isLocalized && localizedMediaClassName,
-          isFallback && fallbackMediaClassName
-        )}
-      >
-        {isGallery ? (
-          <Slider slides={images} loop className="absolute inset-0" />
-        ) : (
-          image
-        )}
-        {hasBack && (
-          <div className="pointer-events-none absolute inset-x-0 top-0 z-20 h-20 bg-gradient-to-b from-blue/50 to-transparent" />
-        )}
-        {isFallback ? (
-          <div className="pointer-events-none absolute inset-0 z-10 bg-blue/35" />
-        ) : null}
-        {hasBottomFade && (
-          <div
-            className={cn(
-              "pointer-events-none absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t to-transparent",
-              isFallback ? "from-blue/90" : "from-blue"
-            )}
-          />
-        )}
-        {hasBack && (
-          <div className="absolute left-3 top-3 z-30">
-            <BackLink label={backLabel} href={backHref} onClick={onBack} />
-          </div>
-        )}
-        {hasOverlay ? (
-          <div
-            className={cn(
-              isFallback
-                ? "relative z-20 flex items-start justify-center px-4 pt-14 pb-20 sm:px-8 sm:pt-16 sm:pb-24 md:px-10 md:pt-20 md:pb-28 lg:px-12 lg:pt-24 lg:pb-40 xl:pt-28 xl:pb-44"
-                : "absolute inset-0 z-20 flex items-center justify-center px-4 py-6 sm:px-8 sm:py-8 md:px-10 md:py-10 lg:px-12 lg:py-12"
-            )}
-          >
-            <div className="pointer-events-auto relative flex w-full max-w-5xl flex-col items-center justify-center gap-6 sm:gap-8">
-              {overlay ? (
-                <div className="relative flex flex-col items-center justify-center">
-                  {overlay}
-                </div>
-              ) : null}
-              {search ? (
-                <div className="flex w-full items-center justify-center">
-                  {search}
-                </div>
-              ) : null}
-            </div>
-          </div>
-        ) : null}
-        {title && (
-          <Text
-            as="h2"
-            size="xl"
-            className="pointer-events-none absolute bottom-3 left-4 z-10 max-w-[90%] !text-white sm:left-6 lg:left-8"
-          >
-            {title}
-          </Text>
-        )}
-        {isFallback && tabs ? (
-          <HeroTabs
-            tabs={tabs}
-            selectedTabId={selectedTabId}
-            onSelectTab={onSelectTab}
-          />
-        ) : null}
-      </div>
-      {children && (
+    <div className={cn("relative", className)} {...props}>
+      <div className="relative overflow-hidden bg-blue lg:rounded-lg">
         <div
           className={cn(
-            isLocalized
-              ? cn(
-                  localizedContentClassName,
-                  "flex items-center px-4 py-3 sm:px-6 sm:py-4 lg:px-8 lg:py-5"
-                )
-              : "p-4 sm:p-6 lg:p-8"
+            "relative w-full overflow-hidden",
+            isLocalized && localizedMediaClassName,
+            isFallback && fallbackMediaClassName
           )}
         >
-          {isLocalized ? <div className="w-full">{children}</div> : children}
+          <div className="absolute inset-0 [&_img]:absolute [&_img]:inset-0 [&_img]:h-full [&_img]:w-full [&_img]:object-cover">
+            {isGallery ? (
+              <Slider slides={images} loop className="absolute inset-0" />
+            ) : (
+              image
+            )}
+          </div>
+          {hasBack && (
+            <div className="pointer-events-none absolute inset-x-0 top-0 z-20 h-20 bg-gradient-to-b from-blue/50 to-transparent" />
+          )}
+          {isFallback ? (
+            <div className="pointer-events-none absolute inset-0 z-10 bg-blue/25" />
+          ) : null}
+          {hasBottomFade && (
+            <div
+              className={cn(
+                "pointer-events-none absolute inset-x-0 bottom-0 z-10 h-1/2 bg-gradient-to-t to-transparent",
+                isFallback ? "from-blue/75" : "from-blue"
+              )}
+            />
+          )}
+          {hasBack && (
+            <div className="absolute left-3 top-3 z-30">
+              <BackLink label={backLabel} href={backHref} onClick={onBack} />
+            </div>
+          )}
+          {title && (
+            <Text
+              as="h2"
+              size="xl"
+              className="pointer-events-none absolute bottom-3 left-4 z-10 max-w-[90%] !text-white sm:left-6 lg:left-8"
+            >
+              {title}
+            </Text>
+          )}
+          {isFallback && tabs ? (
+            <HeroTabs
+              tabs={tabs}
+              selectedTabId={selectedTabId}
+              onSelectTab={onSelectTab}
+            />
+          ) : null}
         </div>
-      )}
+        {children && (
+          <div
+            className={cn(
+              isLocalized
+                ? cn(
+                    localizedContentClassName,
+                    "flex items-center px-4 py-3 sm:px-6 sm:py-4 lg:px-8 lg:py-5"
+                  )
+                : "p-4 sm:p-6 lg:p-8"
+            )}
+          >
+            {isLocalized ? <div className="w-full">{children}</div> : children}
+          </div>
+        )}
+      </div>
+      {hasOverlayStack ? (
+        <div
+          className={cn(
+            "pointer-events-none absolute inset-0 z-40 flex justify-center px-4 sm:px-8 md:px-10 lg:px-12",
+            isFallback
+              ? "items-start pt-12 lg:pt-16"
+              : "items-center py-6 sm:py-8 md:py-10 lg:py-12"
+          )}
+        >
+          <div
+            className={cn(
+              "pointer-events-auto relative flex w-full max-w-5xl flex-col items-center justify-center",
+              isFallback && search ? "gap-6 sm:gap-8" : "gap-0"
+            )}
+          >
+            {overlay ? (
+              <div className="relative flex flex-col items-center justify-center">
+                {overlay}
+              </div>
+            ) : null}
+            {search ? (
+              <div className="flex w-full items-center justify-center">
+                {search}
+              </div>
+            ) : null}
+          </div>
+        </div>
+      ) : null}
     </div>
   );
 }

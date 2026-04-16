@@ -255,26 +255,27 @@ function GatewayPlayground() {
       </div>
 
       {data?.sections.filter(isCarouselSection).map((section) => (
-        <SectionActivityGrid
-          key={section.id}
-          title={section.title}
-          className="py-6"
-          activities={section.data
-            .filter((item) => !!(item.priceFormatted ?? item.price_formatted))
-            .map((item) =>
-              toActivityItem(item, {
-                priceLabel: "pro Person",
-                fromLabel: "ab",
-                renderImage: (gatewayItem) =>
-                  (gatewayItem.imageUrl ?? gatewayItem.image_url) ? (
-                    <img
-                      src={(gatewayItem.imageUrl ?? gatewayItem.image_url) as string}
-                      alt={gatewayItem.title}
-                    />
-                  ) : null,
-              })
-            )}
-        />
+        <div key={section.id} className="sa-container">
+          <SectionActivityGrid
+            title={section.title}
+            className="py-6"
+            activities={section.data
+              .filter((item) => !!(item.priceFormatted ?? item.price_formatted))
+              .map((item) =>
+                toActivityItem(item, {
+                  priceLabel: "pro Person",
+                  fromLabel: "ab",
+                  renderImage: (gatewayItem) =>
+                    (gatewayItem.imageUrl ?? gatewayItem.image_url) ? (
+                      <img
+                        src={(gatewayItem.imageUrl ?? gatewayItem.image_url) as string}
+                        alt={gatewayItem.title}
+                      />
+                    ) : null,
+                })
+              )}
+          />
+        </div>
       ))}
     </main>
   );

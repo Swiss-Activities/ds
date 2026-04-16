@@ -45,18 +45,22 @@ function LocalizedSectionHeroPreview() {
 
   return (
     <Page>
-      <SectionHero
-        title={heroTitles.hero}
-        image={getHeroImage()}
-        days={getWeatherDaysLong()}
-        selected={selected}
-        onSelect={(id) => {
-          if (typeof id === "string") {
-            setSelected(id);
-          }
-        }}
-        className="pb-6"
-      />
+      <div className="sa-container">
+        <div className="-mx-2 sm:mx-0">
+          <SectionHero
+            title={heroTitles.hero}
+            image={getHeroImage()}
+            days={getWeatherDaysLong()}
+            selected={selected}
+            onSelect={(id) => {
+              if (typeof id === "string") {
+                setSelected(id);
+              }
+            }}
+            className="pb-6"
+          />
+        </div>
+      </div>
     </Page>
   );
 }
@@ -80,15 +84,19 @@ function FallbackSectionHeroPreview() {
 
   return (
     <Page>
-      <SectionHero
-        image={getHeroImage()}
-        overlay={<HeroOverlayPreview />}
-        variant="fallback"
-        tabs={tabs}
-        selectedTabId={selectedTabId ?? initialTabId ?? undefined}
-        onSelectTab={setSelectedTabId}
-        className="pb-6"
-      />
+      <div className="sa-container">
+        <div className="-mx-2 sm:mx-0">
+          <SectionHero
+            image={getHeroImage()}
+            overlay={<HeroOverlayPreview />}
+            variant="fallback"
+            tabs={tabs}
+            selectedTabId={selectedTabId ?? initialTabId ?? undefined}
+            onSelectTab={setSelectedTabId}
+            className="pb-6"
+          />
+        </div>
+      </div>
     </Page>
   );
 }

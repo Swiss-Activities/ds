@@ -76,32 +76,30 @@ export function SectionFilters({
   return (
     <>
       <section className={cn(className)} {...props}>
-        <div className="sa-container">
-          <div className="no-scrollbar overflow-x-auto py-2 [scrollbar-width:none]">
-            <div className="flex min-w-max items-center gap-2">
+        <div className="no-scrollbar overflow-x-auto py-2 [scrollbar-width:none]">
+          <div className="flex min-w-max items-center gap-2">
+            <Button
+              type="pill"
+              text={filterButtonLabel}
+              icon={<Icon icon={Filter} size="xs" />}
+              className="shrink-0 whitespace-nowrap !bg-white lg:hover:!border-blue lg:hover:!bg-white lg:hover:!text-blue"
+              onClick={() => setPresented(true)}
+            />
+            {items.map((item) => (
               <Button
-                type="pill"
-                text={filterButtonLabel}
-                icon={<Icon icon={Filter} size="xs" />}
-                className="shrink-0 whitespace-nowrap !bg-white lg:hover:!border-blue lg:hover:!bg-white lg:hover:!text-blue"
-                onClick={() => setPresented(true)}
+                key={item.id}
+                type="filter"
+                text={item.label}
+                iconRight={
+                  item.kind === "disclosure" ? (
+                    <Icon icon={ChevronDown} size="xs" />
+                  ) : item.kind === "removable" ? (
+                    <Icon icon={X} size="xs" />
+                  ) : null
+                }
+                className="shrink-0 whitespace-nowrap"
               />
-              {items.map((item) => (
-                <Button
-                  key={item.id}
-                  type="filter"
-                  text={item.label}
-                  iconRight={
-                    item.kind === "disclosure" ? (
-                      <Icon icon={ChevronDown} size="xs" />
-                    ) : item.kind === "removable" ? (
-                      <Icon icon={X} size="xs" />
-                    ) : null
-                  }
-                  className="shrink-0 whitespace-nowrap"
-                />
-              ))}
-            </div>
+            ))}
           </div>
         </div>
       </section>

@@ -39,13 +39,13 @@ export function SectionScroller({
   subtitle,
   children,
   as: Tag = "section",
-  noContainer = false,
+  noContainer: _noContainer,
   className,
   ...props
 }: SectionScrollerProps) {
   return (
     <Tag className={cn(className)} {...props}>
-      <HorizontalScrollerRoot className={cn(!noContainer && "sa-container")}>
+      <HorizontalScrollerRoot>
         <div className="mb-4 flex items-center justify-between">
           <div className="flex items-center gap-4">
             <HorizontalScrollerTitle>{title}</HorizontalScrollerTitle>

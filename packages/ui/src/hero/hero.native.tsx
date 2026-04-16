@@ -112,7 +112,7 @@ function HeroTabs({
             >
               {tab.icon ? (
                 <View className={cn(isActive ? "text-blue" : "text-white")}>
-                  {tab.icon}
+                  {isActive && tab.activeIcon ? tab.activeIcon : tab.icon}
                 </View>
               ) : null}
               <Text
@@ -184,7 +184,7 @@ export function Hero({
           <View
             className={cn(
               isFallback
-                ? "relative z-20 flex items-start justify-center px-4 pt-14 pb-20"
+                ? "absolute inset-0 z-20 flex items-start justify-center px-4 pt-14 pb-20"
                 : "absolute inset-0 z-20 flex items-center justify-center px-4 py-6"
             )}
           >

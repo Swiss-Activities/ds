@@ -6,6 +6,7 @@ export type HeroTab = {
   id: string;
   label: ReactNode;
   icon?: ReactNode;
+  activeIcon?: ReactNode;
 };
 
 export type BaseHeroProps = {

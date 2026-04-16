@@ -89,33 +89,31 @@ export function SectionProduct({
 }: SectionProductProps) {
   return (
     <section className={cn(className)} {...props}>
-      <div className="sa-container">
-        <div className="-mx-2 md:hidden">
-          <Hero
-            images={images}
-            backLabel={backLabel}
-            backHref={backHref}
-            onBack={onBack}
-          />
-        </div>
-        {images && images.length > 0 && (
-          <GalleryGrid
-            images={images}
-            backLabel={backLabel}
-            backHref={backHref}
-            onBack={onBack}
-          />
-        )}
-        {breadcrumbs && breadcrumbs.length > 0 && (
-          <Breadcrumbs items={breadcrumbs} ignoreLast className="mt-3 lg:mt-4" />
-        )}
-        {title && (
-          <Text as="h1" size="xl" className="mt-3 lg:mt-6">
-            {title}
-          </Text>
-        )}
-        {children}
+      <div className="-mx-2 md:hidden">
+        <Hero
+          images={images}
+          backLabel={backLabel}
+          backHref={backHref}
+          onBack={onBack}
+        />
       </div>
+      {images && images.length > 0 && (
+        <GalleryGrid
+          images={images}
+          backLabel={backLabel}
+          backHref={backHref}
+          onBack={onBack}
+        />
+      )}
+      {breadcrumbs && breadcrumbs.length > 0 && (
+        <Breadcrumbs items={breadcrumbs} ignoreLast className="mt-3 lg:mt-4" />
+      )}
+      {title && (
+        <Text as="h1" size="xl" className="mt-3 lg:mt-6">
+          {title}
+        </Text>
+      )}
+      {children}
     </section>
   );
 }

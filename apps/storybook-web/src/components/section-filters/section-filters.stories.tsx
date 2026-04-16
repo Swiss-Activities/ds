@@ -26,7 +26,9 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   render: (args) => (
     <Page>
-      <SectionFilters {...args} />
+      <div className="sa-container">
+        <SectionFilters {...args} />
+      </div>
     </Page>
   ),
 };

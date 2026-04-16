@@ -38,23 +38,29 @@ function LocalizedHomepagePreview() {
 
   return (
     <Page>
-      <SectionHero
-        title={heroTitles.hero}
-        image={getHeroImage()}
-        days={getWeatherDaysLong()}
-        selected={selected}
-        onSelect={(id) => {
-          if (typeof id === "string") {
-            setSelected(id);
-          }
-        }}
-        className="pb-6"
-      />
-      <SectionActivityGrid
-        title={heroTitles.sectionActivityGrid}
-        activities={getActivityItems()}
-        className="py-6"
-      />
+      <div className="sa-container">
+        <div className="-mx-2 sm:mx-0">
+          <SectionHero
+            title={heroTitles.hero}
+            image={getHeroImage()}
+            days={getWeatherDaysLong()}
+            selected={selected}
+            onSelect={(id) => {
+              if (typeof id === "string") {
+                setSelected(id);
+              }
+            }}
+            className="pb-6"
+          />
+        </div>
+      </div>
+      <div className="sa-container">
+        <SectionActivityGrid
+          title={heroTitles.sectionActivityGrid}
+          activities={getActivityItems()}
+          className="py-6"
+        />
+      </div>
     </Page>
   );
 }
@@ -84,22 +90,27 @@ function FallbackHomepagePreview() {
 
   return (
     <Page>
-      <SectionHero
-        image={getHeroImage()}
-        overlay={<HomepageHeroOverlay />}
-        variant="fallback"
-        tabs={tabs}
-        selectedTabId={activeTabId}
-        onSelectTab={setSelectedTabId}
-        className="pb-6"
-      />
+      <div className="sa-container">
+        <div className="-mx-2 sm:mx-0">
+          <SectionHero
+            image={getHeroImage()}
+            overlay={<HomepageHeroOverlay />}
+            variant="fallback"
+            tabs={tabs}
+            selectedTabId={activeTabId}
+            onSelectTab={setSelectedTabId}
+            className="pb-6"
+          />
+        </div>
+      </div>
       {sections.map((section) => (
-        <SectionActivityGrid
-          key={section.id}
-          title={section.title}
-          activities={section.activities}
-          className="py-6"
-        />
+        <div key={section.id} className="sa-container">
+          <SectionActivityGrid
+            title={section.title}
+            activities={section.activities}
+            className="py-6"
+          />
+        </div>
       ))}
     </Page>
   );

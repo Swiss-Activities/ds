@@ -22,7 +22,9 @@ export const Default: Story = {
     )),
   },
   render: (args) => (
-    <SectionScroller {...args} className="py-6" />
+    <div className="sa-container">
+      <SectionScroller {...args} className="py-6" />
+    </div>
   ),
 };
 
@@ -39,6 +41,8 @@ export const WithSubtitle: Story = {
     )),
   },
   render: (args) => (
-    <SectionScroller {...args} className="py-6" />
+    <div className="sa-container">
+      <SectionScroller {...args} className="py-6" />
+    </div>
   ),
 };

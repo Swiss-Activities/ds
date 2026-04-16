@@ -18,6 +18,8 @@ export const Default: Story = {
     activities: getActivityItems(),
   },
   render: (args) => (
-    <SectionActivityGrid {...args} className="py-6" />
+    <div className="sa-container">
+      <SectionActivityGrid {...args} className="py-6" />
+    </div>
   ),
 };
