@@ -37,6 +37,7 @@ export type SectionScrollerProps = BaseSectionScrollerProps &
 export function SectionScroller({
   title,
   subtitle,
+  action,
   children,
   as: Tag = "section",
   noContainer: _noContainer,
@@ -46,11 +47,13 @@ export function SectionScroller({
   return (
     <Tag className={cn(className)} {...props}>
       <HorizontalScrollerRoot>
-        <div className="mb-4 flex items-center justify-between">
-          <div className="flex items-center gap-4">
+        <div className="mb-4 flex flex-wrap items-center gap-x-4 gap-y-2">
+          <div className="flex min-w-0 flex-1 flex-wrap items-center gap-x-4 gap-y-2">
             <HorizontalScrollerTitle>{title}</HorizontalScrollerTitle>
             {subtitle}
+            {action ? <div className="hidden shrink-0 sm:block">{action}</div> : null}
           </div>
+          {action ? <div className="ml-auto shrink-0 sm:hidden">{action}</div> : null}
           <div className="hidden gap-2 sm:flex">
             <NavButton direction="prev" />
             <NavButton direction="next" />

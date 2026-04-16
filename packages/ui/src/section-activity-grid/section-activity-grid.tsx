@@ -11,12 +11,13 @@ export type SectionActivityGridProps = BaseSectionActivityGridProps &
 
 export function SectionActivityGrid({
   title,
+  action,
   activities,
   className,
   ...props
 }: SectionActivityGridProps) {
   return (
-    <SectionScroller title={title} className={cn(className)} {...props}>
+    <SectionScroller title={title} action={action} className={cn(className)} {...props}>
       {activities.map((a, i) => (
         <li key={i} className={sectionScrollerItemClassName}>
           <ActivityCard

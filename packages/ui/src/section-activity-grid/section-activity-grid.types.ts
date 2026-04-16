@@ -13,6 +13,7 @@ export type ActivityItem = {
 
 export type BaseSectionActivityGridProps = {
   title: ReactNode;
+  action?: ReactNode;
   activities: ActivityItem[];
   className?: string;
 };
