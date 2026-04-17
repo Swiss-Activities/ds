@@ -6,12 +6,16 @@ import { useGetCountry } from "./getCountry";
 import { useSilentCoordinates } from "../hooks/useSilentCoordinates";
 import type { TGatewayHome, TGatewayHomeParams } from "./types";
 
+const normalizeLocale = (locale?: string | null) =>
+  locale ? locale.replace("_", "-") : undefined;
+
 const fetchHome = async (
   apiUrl: string,
   params: TGatewayHomeParams
 ): Promise<TGatewayHome> => {
   const searchParams = new URLSearchParams();
-  if (params.locale) searchParams.set("locale", params.locale);
+  const locale = normalizeLocale(params.locale);
+  if (locale) searchParams.set("locale", locale);
   if (params.lat != null) searchParams.set("lat", String(params.lat));
   if (params.lng != null) searchParams.set("lng", String(params.lng));
   if (params.country) searchParams.set("country", params.country);
@@ -28,7 +32,8 @@ export const getHome = async (
   params: TGatewayHomeParams
 ): Promise<TGatewayHome> => {
   const searchParams = new URLSearchParams();
-  if (params.locale) searchParams.set("locale", params.locale);
+  const locale = normalizeLocale(params.locale);
+  if (locale) searchParams.set("locale", locale);
   if (params.lat != null) searchParams.set("lat", String(params.lat));
   if (params.lng != null) searchParams.set("lng", String(params.lng));
   if (params.country) searchParams.set("country", params.country);
@@ -46,20 +51,25 @@ export const getHome = async (
   return response.json();
 };
 
-export const useGetHome = () => {
+export const useGetHome = ({
+  enabled = true,
+}: {
+  enabled?: boolean;
+} = {}) => {
   const { apiUrl, locale } = useDataConfig();
   const { data: country, isFetched: countryFetched } = useGetCountry();
   const { coords, ready: coordsReady } = useSilentCoordinates();
 
-  const enabled = countryFetched && coordsReady;
+  const queryEnabled = enabled && countryFetched && coordsReady;
+  const isPreparing = enabled && (!countryFetched || !coordsReady);
 
   const params: TGatewayHomeParams = {
-    locale,
+    locale: normalizeLocale(locale),
     ...(country ? { country } : {}),
     ...(coords ? { lat: coords.latitude, lng: coords.longitude } : {}),
   };
 
-  return useQuery({
+  const query = useQuery({
     queryKey: [
       "get",
       "gateway/app/v1/home",
@@ -70,6 +80,11 @@ export const useGetHome = () => {
     ],
     queryFn: () => fetchHome(apiUrl, params),
     staleTime: Infinity,
-    enabled,
+    enabled: queryEnabled,
   });
+
+  return {
+    ...query,
+    isLoading: isPreparing || query.isLoading,
+  };
 };

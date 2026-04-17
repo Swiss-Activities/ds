@@ -1,4 +1,5 @@
 export { DataProvider, useDataConfig } from "./provider";
+export { GatewayProvider } from "./gateway-provider";
 export type { DataConfig } from "./types";
 
 export { useGetHome, getHome } from "./gateway/getHome";

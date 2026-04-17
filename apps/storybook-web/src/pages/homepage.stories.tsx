@@ -121,55 +121,13 @@ function FallbackHomepagePreview() {
   );
 }
 
-function GatewayHomepagePreview({
-  delayMs,
-  outcome,
-}: GatewayPreviewArgs) {
+function GatewaySkeletonHomepagePreview() {
   const tabs = useMemo(() => getHomepageHeroTabs(), []);
   const initialTabId = tabs[0]?.id ?? getHomepageHeroDefaultTabId() ?? null;
-  const selectedTabId = useGatewayStore((state) => state.selectedTabId);
-  const setSelectedTabId = useGatewayStore((state) => state.setSelectedTabId);
-  const reset = useGatewayStore((state) => state.reset);
-  const [status, setStatus] = useState<"loading" | "success" | "error">("loading");
-
-  useEffect(() => {
-    reset();
-
-    if (initialTabId) {
-      setSelectedTabId(initialTabId);
-    }
-
-    return reset;
-  }, [initialTabId, reset, setSelectedTabId]);
-
-  const activeTabId = selectedTabId ?? initialTabId ?? undefined;
   const fallbackSections = useMemo(
-    () => [
-      {
-        id: "fallback-highlights",
-        title: heroTitles.sectionActivityGrid,
-        activities: getActivityItems(),
-      },
-    ],
-    []
+    () => getHomepageHeroSections(initialTabId),
+    [initialTabId]
   );
-  const gatewaySections = useMemo(
-    () => getHomepageHeroSections(activeTabId),
-    [activeTabId]
-  );
-
-  useEffect(() => {
-    setStatus("loading");
-
-    const timer = setTimeout(() => {
-      setStatus(outcome);
-    }, delayMs);
-
-    return () => clearTimeout(timer);
-  }, [activeTabId, delayMs, outcome]);
-
-  const sections = status === "success" ? gatewaySections : fallbackSections;
-  const isLoading = status === "loading";
 
   return (
     <Page>
@@ -181,25 +139,51 @@ function GatewayHomepagePreview({
               overlay={<HomepageHeroOverlay />}
               variant="fallback"
               tabs={tabs}
-              selectedTabId={activeTabId}
-              onSelectTab={setSelectedTabId}
+              selectedTabId={initialTabId ?? undefined}
             />
-            {isLoading ? <HeroSkeleton fill className="z-50" /> : null}
+            <HeroSkeleton fill className="z-50" />
           </div>
         </div>
       </div>
-      {sections.map((section) => (
+      {fallbackSections.map((section) => (
         <div key={section.id} className="sa-container">
           <SectionActivityGrid
             title={section.title}
             activities={section.activities}
-            loading={isLoading}
+            loading
             className="py-6"
           />
         </div>
       ))}
     </Page>
   );
+}
+
+function GatewayHomepagePreview({
+  delayMs,
+  outcome,
+}: GatewayPreviewArgs) {
+  const [status, setStatus] = useState<"loading" | "success" | "error">("loading");
+
+  useEffect(() => {
+    setStatus("loading");
+
+    const timer = setTimeout(() => {
+      setStatus(outcome);
+    }, delayMs);
+
+    return () => clearTimeout(timer);
+  }, [delayMs, outcome]);
+
+  if (status === "success") {
+    return <LocalizedHomepagePreview />;
+  }
+
+  if (status === "error") {
+    return <FallbackHomepagePreview />;
+  }
+
+  return <GatewaySkeletonHomepagePreview />;
 }
 
 const meta = {
@@ -234,4 +218,8 @@ export const GatewayLoading: Story = {
     outcome: "success",
   },
   render: (args) => <GatewayHomepagePreview {...args} />,
+};
+
+export const SkeletonOnly: Story = {
+  render: () => <GatewaySkeletonHomepagePreview />,
 };
