@@ -15,20 +15,22 @@ import {
   sectionProductReviews,
   storyImages,
   type StoryImageKey,
-  type WeatherIconKind,
   weatherDaysLong,
   weatherDaysShort,
 } from "@swiss-activities/dummy-data";
-import { FilterCheckboxGroup, Flow, Icon, Text } from "@swiss-activities/ui";
 import {
-  CloudLightning,
-  CloudRain,
+  FilterCheckboxGroup,
+  Flow,
+  Icon,
+  Text,
+  renderWeatherIcon,
+} from "@swiss-activities/ui";
+import {
   Clock3,
   Cloud,
   Flame,
   MapPin,
   Star,
-  Sun,
   Trophy,
 } from "@swiss-activities/ui/icons";
 
@@ -44,25 +46,6 @@ export const imageUrls = {
   grindelwald: storyImages.grindelwald.url,
   pilatus: storyImages.pilatus.url,
 } as const;
-
-const weatherIconMap = {
-  sun: {
-    icon: Sun,
-    color: "#facc15",
-  },
-  cloud: {
-    icon: Cloud,
-    color: "#d1d5db",
-  },
-  "cloud-rain": {
-    icon: CloudRain,
-    color: "#d1d5db",
-  },
-  "cloud-storm": {
-    icon: CloudLightning,
-    color: "#d1d5db",
-  },
-} satisfies Record<WeatherIconKind, { icon: typeof Sun; color: string }>;
 
 const productIconMap = {
   trophy: Trophy,
@@ -134,26 +117,14 @@ export function getAccordionItems() {
 export function getWeatherDaysShort() {
   return weatherDaysShort.map((day) => ({
     ...day,
-    icon: (
-      <Icon
-        icon={weatherIconMap[day.icon].icon}
-        size="lg"
-        color={weatherIconMap[day.icon].color}
-      />
-    ),
+    icon: renderWeatherIcon(day.icon),
   }));
 }
 
 export function getWeatherDaysLong() {
   return weatherDaysLong.map((day) => ({
     ...day,
-    icon: (
-      <Icon
-        icon={weatherIconMap[day.icon].icon}
-        size="lg"
-        color={weatherIconMap[day.icon].color}
-      />
-    ),
+    icon: renderWeatherIcon(day.icon),
   }));
 }
 

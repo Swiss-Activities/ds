@@ -13,41 +13,24 @@ import {
   sectionProductReviews,
   storyImages,
   type StoryImageKey,
-  type WeatherIconKind,
   weatherDaysLong,
   weatherDaysShort,
 } from "@swiss-activities/dummy-data";
-import { FilterCheckboxGroup, Icon, Text } from "@swiss-activities/ui";
 import {
-  CloudLightning,
-  CloudRain,
+  FilterCheckboxGroup,
+  Icon,
+  Text,
+  renderWeatherIcon,
+} from "@swiss-activities/ui";
+import {
   Clock3,
   Cloud,
   Flame,
   Mountain,
   MapPin,
   Star,
-  Sun,
   Trophy,
 } from "@swiss-activities/ui/icons";
-const weatherIconMap = {
-  sun: {
-    icon: Sun,
-    color: "#facc15",
-  },
-  cloud: {
-    icon: Cloud,
-    color: "#d1d5db",
-  },
-  "cloud-rain": {
-    icon: CloudRain,
-    color: "#d1d5db",
-  },
-  "cloud-storm": {
-    icon: CloudLightning,
-    color: "#d1d5db",
-  },
-} satisfies Record<WeatherIconKind, { icon: typeof Sun; color: string }>;
 
 const productIconMap = {
   trophy: Trophy,
@@ -113,26 +96,14 @@ export function getHeroGallery() {
 export function getWeatherDaysShort() {
   return weatherDaysShort.map((day) => ({
     ...day,
-    icon: (
-      <Icon
-        icon={weatherIconMap[day.icon].icon}
-        size="lg"
-        color={weatherIconMap[day.icon].color}
-      />
-    ),
+    icon: renderWeatherIcon(day.icon),
   }));
 }
 
 export function getWeatherDaysLong() {
   return weatherDaysLong.map((day) => ({
     ...day,
-    icon: (
-      <Icon
-        icon={weatherIconMap[day.icon].icon}
-        size="lg"
-        color={weatherIconMap[day.icon].color}
-      />
-    ),
+    icon: renderWeatherIcon(day.icon),
   }));
 }
 
