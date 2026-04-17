@@ -170,7 +170,8 @@ export function Hero({
 }: HeroProps) {
   const isGallery = images && images.length > 0;
   const hasBack = !!backLabel;
-  const isFallback = variant === "fallback" && !!tabs?.length;
+  const isFallback = variant === "fallback";
+  const hasTabs = isFallback && !!tabs?.length;
   const isLocalized = variant === "localized";
   const hasBottomFade = !!title || isFallback;
   const hasOverlay = !!overlay || !!search;
@@ -230,7 +231,7 @@ export function Hero({
             {title}
           </Text>
         )}
-        {isFallback && tabs ? (
+        {hasTabs && tabs ? (
           <HeroTabs
             tabs={tabs}
             selectedTabId={selectedTabId}
