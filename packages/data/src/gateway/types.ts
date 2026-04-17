@@ -33,6 +33,7 @@ export type TGatewayHomeWeatherCardSection = {
   id: string;
   component: "weather_card";
   title: string;
+  imageUrl?: string | null;
   data: TGatewayWeatherCardItem[];
 };
 

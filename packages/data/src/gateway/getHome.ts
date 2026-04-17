@@ -53,8 +53,16 @@ export const getHome = async (
 
 export const useGetHome = ({
   enabled = true,
+  retry = 3,
+  retryOnMount = true,
+  refetchOnWindowFocus = true,
+  refetchOnReconnect = true,
 }: {
   enabled?: boolean;
+  retry?: boolean | number;
+  retryOnMount?: boolean;
+  refetchOnWindowFocus?: boolean;
+  refetchOnReconnect?: boolean;
 } = {}) => {
   const { apiUrl, locale } = useDataConfig();
   const { data: country, isFetched: countryFetched } = useGetCountry();
@@ -81,6 +89,10 @@ export const useGetHome = ({
     queryFn: () => fetchHome(apiUrl, params),
     staleTime: Infinity,
     enabled: queryEnabled,
+    retry,
+    retryOnMount,
+    refetchOnWindowFocus,
+    refetchOnReconnect,
   });
 
   return {
