@@ -1,11 +1,17 @@
 import { useCallback, useState } from "react";
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { SectionActivityGrid } from "@swiss-activities/ui";
+import {
+  SectionActivityGrid,
+  SectionHero,
+  gatewayHomepageHeroFallbackImage,
+  renderWeatherIcon,
+} from "@swiss-activities/ui";
 import { grayColors, saColors } from "@swiss-activities/ui/tokens";
 import {
   toActivityItem,
   type TGatewayHome,
   type TGatewayHomeCarouselSection,
+  type TGatewayHomeWeatherCardSection,
 } from "@swiss-activities/data";
 import { Field, Input, Select, SubmitButton } from "./form";
 
@@ -60,6 +66,10 @@ const isCarouselSection = (
   section: TGatewayHome["sections"][number]
 ): section is TGatewayHomeCarouselSection => section.component === "carousel";
 
+const isWeatherCardSection = (
+  section: TGatewayHome["sections"][number]
+): section is TGatewayHomeWeatherCardSection => section.component === "weather_card";
+
 function GatewayPlayground() {
   const [gatewayUrl, setGatewayUrl] = useState(DEFAULT_GATEWAY_URL);
   const [locale, setLocale] = useState("de_CH");
@@ -80,6 +90,7 @@ function GatewayPlayground() {
   }, [gatewayUrl, locale, country, lat, lng]);
 
   const requestUrl = buildUrl();
+  const weatherSection = data?.sections.find(isWeatherCardSection) ?? null;
 
   const fetchData = useCallback(async () => {
     setLoading(true);
@@ -253,6 +264,33 @@ function GatewayPlayground() {
           </div>
         )}
       </div>
+
+      {weatherSection ? (
+        <div className="sa-container" style={{ marginBottom: 32 }}>
+          <SectionHero
+            title={weatherSection.title}
+            image={
+              <img
+                src={weatherSection.imageUrl || gatewayHomepageHeroFallbackImage}
+                alt={weatherSection.title}
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "cover",
+                  display: "block",
+                }}
+              />
+            }
+            days={weatherSection.data.map((item) => ({
+              id: item.dayFull,
+              label: item.day,
+              low: item.tempMin,
+              high: item.tempMax,
+              icon: renderWeatherIcon(item.icon),
+            }))}
+          />
+        </div>
+      ) : null}
 
       {data?.sections.filter(isCarouselSection).map((section) => (
         <div key={section.id} className="sa-container">
