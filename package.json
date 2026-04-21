@@ -19,6 +19,9 @@
     "storybook:native": "bun run --cwd apps/storybook-native storybook",
     "postinstall": "node scripts/patch-react-native-css-lightningcss.mjs",
     "lint:web": "bun run --cwd apps/storybook-web lint",
+    "build:ui": "bun run --cwd packages/ui build",
+    "build:data": "bun run --cwd packages/data build",
+    "build": "bun run build:ui && bun run build:data",
     "typecheck:ui": "bun run --cwd packages/ui typecheck",
     "typecheck": "bun run typecheck:ui && bun run --cwd apps/storybook-web typecheck && bun run --cwd apps/storybook-native typecheck"
   },

@@ -1,0 +1,122 @@
+@import "@silk-hq/components/unlayered-styles";
+
+:root {
+  --h-header: 58px;
+  --sa-container: 1232px;
+}
+
+@media (min-width: 640px) {
+  :root {
+    --h-header: 72px;
+  }
+}
+
+@theme {
+  --breakpoint-xs: 375px;
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+
+  --spacing-header: var(--h-header);
+
+  --color-gray-50: #fafafa;
+  --color-gray-100: #f5f5f5;
+  --color-gray-200: #e5e5e5;
+  --color-gray-300: #d4d4d4;
+  --color-gray-400: #a1a1a1;
+  --color-gray-500: #737373;
+  --color-gray-600: #525252;
+  --color-gray-700: #404040;
+  --color-gray-800: #262626;
+  --color-gray-900: #171717;
+  --color-gray-950: #0a0a0a;
+
+  --color-bg: #f9fafb;
+  --color-border: #e5e5e5;
+  --color-blue: #002f49;
+  --color-dark: #eb002a;
+  --color-gray-shadow: #a3a3a33d;
+  --color-light: #fff5f7;
+  --color-medium: #ff859b;
+  --color-primary: #ff385c;
+
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+}
+
+@utility no-scrollbar {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@utility prose-sa {
+  max-width: none;
+  word-break: break-word;
+
+  & p {
+    font-size: 14px;
+    line-height: 1.625;
+    color: var(--color-gray-700);
+    margin-top: 0.75em;
+    margin-bottom: 0.75em;
+  }
+
+  & p:first-child { margin-top: 0; }
+
+  & ul, & ol {
+    font-size: 14px;
+    line-height: 1.625;
+    color: var(--color-gray-700);
+    padding-left: 1.25em;
+    margin-top: 0.75em;
+    margin-bottom: 0.75em;
+    list-style-type: disc;
+  }
+
+  & ol { list-style-type: decimal; }
+
+  & li { margin-top: 0.25em; margin-bottom: 0.25em; }
+
+  & h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--color-gray-900);
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+  }
+
+  & strong { font-weight: 600; color: var(--color-gray-900); }
+
+  & a { color: var(--color-primary); text-decoration: underline; }
+  & a:hover { text-decoration: none; }
+
+  & small {
+    font-size: 13px;
+    color: var(--color-gray-500);
+  }
+
+  & img { border-radius: 0.5rem; }
+
+  @media (min-width: 1024px) {
+    & p, & ul, & ol { font-size: 15px; }
+    & h3 { font-size: 18px; }
+  }
+}
+
+@utility sa-container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: var(--sa-container);
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  @media (min-width: 640px) {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
