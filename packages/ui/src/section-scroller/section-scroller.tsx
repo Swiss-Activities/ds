@@ -61,7 +61,7 @@ export function SectionScroller({
         </div>
         <HorizontalScrollerTrack
           bleed
-          className="-mx-px -my-2 snap-x gap-4 px-px py-2 [scroll-padding-inline:1px] sm:gap-6 lg:gap-7"
+          className="-mx-2 -my-2 snap-x gap-4 px-2 py-2 [scroll-padding-inline:0.5rem] sm:-mx-px sm:gap-6 sm:px-px sm:[scroll-padding-inline:1px] lg:gap-7"
         >
           {children}
         </HorizontalScrollerTrack>
