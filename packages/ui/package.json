@@ -3,121 +3,96 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
-  "typesVersions": {
-    "*": {
-      "web": ["dist/index.d.ts"],
-      "tokens": ["dist/tokens/index.d.ts"],
-      "tokens/*": ["dist/tokens/*.d.ts"],
-      "icons": ["dist/icons/index.d.ts"],
-      "logo/markup": ["dist/logo/logo.markup.d.ts"],
-      "breadcrumbs/breadcrumbs.types": [
-        "dist/breadcrumbs/breadcrumbs.types.d.ts"
-      ],
-      "badge/badge.types": ["dist/badge/badge.types.d.ts"],
-      "card/card.types": ["dist/card/card.types.d.ts"],
-      "skeleton/skeleton.types": ["dist/skeleton/skeleton.types.d.ts"],
-      "text/text.types": ["dist/text/text.types.d.ts"],
-      "image-card/image-card.types": [
-        "dist/image-card/image-card.types.d.ts"
-      ],
-      "rating/rating.types": ["dist/rating/rating.types.d.ts"],
-      "header/header.types": ["dist/header/header.types.d.ts"],
-      "horizontal-scroller/horizontal-scroller.types": [
-        "dist/horizontal-scroller/horizontal-scroller.types.d.ts"
-      ]
-    }
-  },
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
   "exports": {
     ".": {
       "react-native": {
         "types": "./src/index.native.ts",
         "default": "./src/index.native.ts"
       },
-      "types": "./dist/index.d.ts",
-      "default": "./dist/index.js"
+      "types": "./src/index.ts",
+      "default": "./src/index.ts"
     },
     "./web": {
-      "types": "./dist/index.d.ts",
-      "default": "./dist/index.js"
+      "types": "./src/index.ts",
+      "default": "./src/index.ts"
     },
     "./native": {
       "types": "./src/index.native.ts",
       "default": "./src/index.native.ts"
     },
     "./tokens": {
-      "types": "./dist/tokens/index.d.ts",
-      "default": "./dist/tokens/index.js"
+      "types": "./src/tokens/index.ts",
+      "default": "./src/tokens/index.ts"
     },
     "./tokens/colors": {
-      "types": "./dist/tokens/colors.d.ts",
-      "default": "./dist/tokens/colors.js"
+      "types": "./src/tokens/colors.ts",
+      "default": "./src/tokens/colors.ts"
     },
     "./tokens/radius": {
-      "types": "./dist/tokens/radius.d.ts",
-      "default": "./dist/tokens/radius.js"
+      "types": "./src/tokens/radius.ts",
+      "default": "./src/tokens/radius.ts"
     },
     "./tokens/screens": {
-      "types": "./dist/tokens/screens.d.ts",
-      "default": "./dist/tokens/screens.js"
+      "types": "./src/tokens/screens.ts",
+      "default": "./src/tokens/screens.ts"
     },
     "./icons": {
       "react-native": {
         "types": "./src/icons/index.native.ts",
         "default": "./src/icons/index.native.ts"
       },
-      "types": "./dist/icons/index.d.ts",
-      "default": "./dist/icons/index.js"
+      "types": "./src/icons/index.ts",
+      "default": "./src/icons/index.ts"
     },
     "./breadcrumbs/breadcrumbs.types": {
-      "types": "./dist/breadcrumbs/breadcrumbs.types.d.ts",
-      "default": "./dist/breadcrumbs/breadcrumbs.types.js"
+      "types": "./src/breadcrumbs/breadcrumbs.types.ts",
+      "default": "./src/breadcrumbs/breadcrumbs.types.ts"
     },
     "./badge/badge.types": {
-      "types": "./dist/badge/badge.types.d.ts",
-      "default": "./dist/badge/badge.types.js"
+      "types": "./src/badge/badge.types.ts",
+      "default": "./src/badge/badge.types.ts"
     },
     "./card/card.types": {
-      "types": "./dist/card/card.types.d.ts",
-      "default": "./dist/card/card.types.js"
+      "types": "./src/card/card.types.ts",
+      "default": "./src/card/card.types.ts"
     },
     "./skeleton/skeleton.types": {
-      "types": "./dist/skeleton/skeleton.types.d.ts",
-      "default": "./dist/skeleton/skeleton.types.js"
+      "types": "./src/skeleton/skeleton.types.ts",
+      "default": "./src/skeleton/skeleton.types.ts"
     },
     "./tokens/animations": {
-      "types": "./dist/tokens/animations.d.ts",
-      "default": "./dist/tokens/animations.js"
+      "types": "./src/tokens/animations.ts",
+      "default": "./src/tokens/animations.ts"
     },
     "./text/text.types": {
-      "types": "./dist/text/text.types.d.ts",
-      "default": "./dist/text/text.types.js"
+      "types": "./src/text/text.types.ts",
+      "default": "./src/text/text.types.ts"
     },
     "./image-card/image-card.types": {
-      "types": "./dist/image-card/image-card.types.d.ts",
-      "default": "./dist/image-card/image-card.types.js"
+      "types": "./src/image-card/image-card.types.ts",
+      "default": "./src/image-card/image-card.types.ts"
     },
     "./rating/rating.types": {
-      "types": "./dist/rating/rating.types.d.ts",
-      "default": "./dist/rating/rating.types.js"
+      "types": "./src/rating/rating.types.ts",
+      "default": "./src/rating/rating.types.ts"
     },
     "./header/header.types": {
-      "types": "./dist/header/header.types.d.ts",
-      "default": "./dist/header/header.types.js"
+      "types": "./src/header/header.types.ts",
+      "default": "./src/header/header.types.ts"
     },
     "./horizontal-scroller/horizontal-scroller.types": {
-      "types": "./dist/horizontal-scroller/horizontal-scroller.types.d.ts",
-      "default": "./dist/horizontal-scroller/horizontal-scroller.types.js"
+      "types": "./src/horizontal-scroller/horizontal-scroller.types.ts",
+      "default": "./src/horizontal-scroller/horizontal-scroller.types.ts"
     },
     "./logo/markup": {
-      "types": "./dist/logo/logo.markup.d.ts",
-      "default": "./dist/logo/logo.markup.js"
+      "types": "./src/logo/logo.markup.ts",
+      "default": "./src/logo/logo.markup.ts"
     },
-    "./styles/sa-theme.css": "./dist/styles/sa-theme.css"
+    "./styles/sa-theme.css": "./src/styles/sa-theme.css"
   },
   "scripts": {
-    "build": "rm -rf dist && tsc -p tsconfig.build.json && mkdir -p dist/styles && cp src/styles/sa-theme.css dist/styles/sa-theme.css",
     "typecheck:web": "tsc -p tsconfig.web.json --noEmit",
     "typecheck:native": "tsc -p tsconfig.native.json --noEmit",
     "typecheck": "bun run typecheck:web && bun run typecheck:native"
