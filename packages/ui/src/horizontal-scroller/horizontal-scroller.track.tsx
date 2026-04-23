@@ -35,10 +35,19 @@ export function HorizontalScrollerTrack({
 
     if (activeElement) {
       setTimeout(() => {
-        activeElement.scrollIntoView({
+        const maxLeft = Math.max(0, track.scrollWidth - track.clientWidth);
+        const targetLeft = Math.min(
+          maxLeft,
+          Math.max(
+            0,
+            activeElement.offsetLeft -
+              (track.clientWidth - activeElement.offsetWidth) / 2
+          )
+        );
+
+        track.scrollTo({
+          left: targetLeft,
           behavior: "smooth",
-          block: "center",
-          inline: "center",
         });
       }, 100);
     }
