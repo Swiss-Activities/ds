@@ -52,6 +52,7 @@ export type AppGatewayRenderPageArgs<TSection> = {
 export type AppGatewayRenderItemViewArgs<TItemData = unknown> = {
   selectedItemId: string;
   selectedItemData?: TItemData;
+  pendingItemId?: string | null;
   selectedTabId?: string;
   onBack: () => void;
   onSelectItem?: AppGatewaySelectItem;
@@ -397,6 +398,7 @@ function AppGatewayContent<TSection, THero, TItemData>({
         {renderItemView({
           selectedItemId,
           selectedItemData: selectedItemData ?? undefined,
+          pendingItemId,
           selectedTabId,
           onBack: handleBack,
           onSelectItem: canSelectItem ? handleSelectItem : undefined,
