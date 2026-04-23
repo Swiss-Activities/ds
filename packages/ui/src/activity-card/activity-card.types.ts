@@ -11,6 +11,7 @@ export type BaseActivityCardProps = {
   priceLabel: string;
   price: string;
   loading?: boolean;
+  pending?: boolean;
   className?: string;
   render?: ActivityCardRender;
 };

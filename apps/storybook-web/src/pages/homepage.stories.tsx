@@ -55,7 +55,6 @@ function LocalizedHomepagePreview() {
                 setSelected(id);
               }
             }}
-            className="pb-6"
           />
         </div>
       </div>
@@ -63,7 +62,7 @@ function LocalizedHomepagePreview() {
         <SectionActivityGrid
           title={heroTitles.sectionActivityGrid}
           activities={getActivityItems()}
-          className="py-6"
+          className="pt-6"
         />
       </div>
     </Page>
@@ -104,7 +103,6 @@ function FallbackHomepagePreview() {
             tabs={tabs}
             selectedTabId={activeTabId}
             onSelectTab={setSelectedTabId}
-            className="pb-6"
           />
         </div>
       </div>
@@ -113,7 +111,7 @@ function FallbackHomepagePreview() {
           <SectionActivityGrid
             title={section.title}
             activities={section.activities}
-            className="py-6"
+            className="pt-6"
           />
         </div>
       ))}
@@ -132,7 +130,7 @@ function GatewaySkeletonHomepagePreview() {
   return (
     <Page>
       <div className="sa-container">
-        <div className="-mx-2 pb-6 sm:mx-0">
+        <div className="-mx-2 sm:mx-0">
           <div className="relative">
             <SectionHero
               image={getHeroImage()}
@@ -151,7 +149,7 @@ function GatewaySkeletonHomepagePreview() {
             title={section.title}
             activities={section.activities}
             loading
-            className="py-6"
+            className="pt-6"
           />
         </div>
       ))}

@@ -16,7 +16,18 @@ export function SectionProduct({
   backLabel,
   backHref,
   onBack,
-  children,
+  rating,
+  badges,
+  description,
+  infoItems,
+  reviewsTitle,
+  reviewsSubtitle,
+  reviews,
+  contentItems,
+  contentTocTitle,
+  relatedActivitiesTitle,
+  relatedActivitiesAction,
+  relatedActivities,
   className,
   ...props
 }: SectionProductProps) {
@@ -36,7 +47,15 @@ export function SectionProduct({
             {title}
           </Text>
         )}
-        {children}
+        {description && (
+          <View className="mt-4">
+            {typeof description === "string" ? (
+              <Text>{description}</Text>
+            ) : (
+              description
+            )}
+          </View>
+        )}
       </View>
     </View>
   );

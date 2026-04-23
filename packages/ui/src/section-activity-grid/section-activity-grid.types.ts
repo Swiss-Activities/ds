@@ -8,6 +8,7 @@ export type ActivityItem = {
   reviewCount: number;
   priceLabel: string;
   price: string;
+  pending?: boolean;
   render?: ActivityCardRender;
 };
 

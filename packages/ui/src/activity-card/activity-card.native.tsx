@@ -18,6 +18,7 @@ export function ActivityCard({
   priceLabel,
   price,
   loading = false,
+  pending = false,
   className,
   render,
   ...props
@@ -55,6 +56,8 @@ export function ActivityCard({
         <View className="absolute inset-0 z-10 bg-white">
           <ActivityCardSkeletonContent />
         </View>
+      ) : pending ? (
+        <View className="absolute inset-0 z-10 bg-white/70" />
       ) : null}
     </Card>
   );

@@ -2,6 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import { heroTitles } from "@swiss-activities/dummy-data";
 import { Button, SectionActivityGrid } from "@swiss-activities/ui";
 import { getActivityItems } from "../../story-data";
+import { Page } from "../page";
 
 const meta = {
   title: "Sections/SectionActivityGrid",
@@ -18,9 +19,11 @@ export const Default: Story = {
     activities: getActivityItems(),
   },
   render: (args) => (
-    <div className="sa-container">
-      <SectionActivityGrid {...args} className="py-6" />
-    </div>
+    <Page>
+      <div className="sa-container">
+        <SectionActivityGrid {...args} className="pt-6" />
+      </div>
+    </Page>
   ),
 };
 
@@ -37,8 +40,10 @@ export const WithAction: Story = {
     ),
   },
   render: (args) => (
-    <div className="sa-container">
-      <SectionActivityGrid {...args} className="py-6" />
-    </div>
+    <Page>
+      <div className="sa-container">
+        <SectionActivityGrid {...args} className="pt-6" />
+      </div>
+    </Page>
   ),
 };

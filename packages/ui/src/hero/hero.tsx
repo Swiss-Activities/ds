@@ -25,7 +25,7 @@ function BackLink({
     tag,
     {
       className:
-        "flex cursor-pointer items-center gap-2 bg-transparent p-0 text-white no-underline",
+        "flex cursor-pointer appearance-none items-center gap-2 border-none bg-transparent p-0 text-white no-underline",
       ...(href ? { href } : { type: "button" as const, onClick }),
     },
     <span className="flex h-6 w-6 items-center justify-center rounded-full border border-solid border-white bg-white/70 backdrop-blur-sm">

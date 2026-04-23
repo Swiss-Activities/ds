@@ -3,6 +3,7 @@ import { cn } from "../utils/cn";
 import { Card } from "../card";
 import { Text } from "../text";
 import { Rating } from "../rating";
+import { Loader } from "../loader";
 import { ActivityCardSkeletonContent } from "./activity-card-skeleton";
 import type { BaseActivityCardProps } from "./activity-card.types";
 
@@ -17,6 +18,7 @@ export function ActivityCard({
   priceLabel,
   price,
   loading = false,
+  pending = false,
   className,
   render,
   ...props
@@ -35,7 +37,12 @@ export function ActivityCard({
         {image}
       </div>
       <div className="flex flex-1 flex-col gap-1 p-3.5 pt-4">
-        <Text as="h3" size="default" bold className="!text-base !leading-snug">
+        <Text
+          as="h3"
+          size="default"
+          bold
+          className="!text-left !text-base !leading-snug"
+        >
           {title}
         </Text>
         {score > 0 && (
@@ -56,6 +63,10 @@ export function ActivityCard({
       {loading ? (
         <div className="absolute inset-0 z-10 bg-white">
           <ActivityCardSkeletonContent />
+        </div>
+      ) : pending ? (
+        <div className="absolute inset-0 z-10 flex items-center justify-center bg-white/70 backdrop-blur-sm">
+          <Loader size="md" color="text-blue" />
         </div>
       ) : null}
     </Card>

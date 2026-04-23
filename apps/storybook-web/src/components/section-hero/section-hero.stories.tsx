@@ -57,7 +57,6 @@ function LocalizedSectionHeroPreview() {
                 setSelected(id);
               }
             }}
-            className="pb-6"
           />
         </div>
       </div>
@@ -93,7 +92,6 @@ function FallbackSectionHeroPreview() {
             tabs={tabs}
             selectedTabId={selectedTabId ?? initialTabId ?? undefined}
             onSelectTab={setSelectedTabId}
-            className="pb-6"
           />
         </div>
       </div>

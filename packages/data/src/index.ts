@@ -1,6 +1,18 @@
 export { DataProvider, useDataConfig } from "./provider";
 export { GatewayProvider } from "./gateway-provider";
 export type { DataConfig } from "./types";
+export { AppGateway } from "./app-gateway";
+export type {
+  AppGatewayFallbackHeroArgs,
+  AppGatewayFallbackSectionsArgs,
+  AppGatewayMapGatewayDataArgs,
+  AppGatewayMappedData,
+  AppGatewayRenderGatewayHeroArgs,
+  AppGatewayRenderItemViewArgs,
+  AppGatewayRenderPageArgs,
+  AppGatewaySelectItem,
+  BaseAppGatewayProps,
+} from "./app-gateway";
 
 export { useGetHome, getHome } from "./gateway/getHome";
 export { useGetCountry, getCountry } from "./gateway/getCountry";

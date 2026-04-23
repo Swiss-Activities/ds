@@ -8,7 +8,7 @@ export function Page({
   className?: string;
 }) {
   return (
-    <div className={`min-h-screen pt-0 sm:pt-6 lg:pt-8 ${className}`}>
+    <div className={`min-h-screen pb-8 pt-0 sm:pt-6 lg:pb-10 lg:pt-8 ${className}`}>
       {children}
     </div>
   );

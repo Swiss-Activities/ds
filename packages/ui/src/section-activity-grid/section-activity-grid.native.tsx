@@ -31,6 +31,7 @@ export function SectionActivityGrid({
         reviewCount: 0,
         priceLabel: "",
         price: "",
+        pending: false,
         render: undefined,
       }));
 
@@ -68,6 +69,7 @@ export function SectionActivityGrid({
             priceLabel={a.priceLabel}
             price={a.price}
             loading={loading}
+            pending={a.pending}
             render={a.render}
             style={maxCardHeight ? { minHeight: maxCardHeight } : undefined}
             onLayout={(event) => {

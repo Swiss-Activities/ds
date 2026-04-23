@@ -14,9 +14,18 @@ export function Accordion({
   ...props
 }: AccordionProps) {
   return (
-    <div className={cn("divide-y divide-gray-200 border-y border-solid border-gray-200", className)} {...props}>
+    <div
+      className={cn(
+        "divide-y divide-solid divide-gray-200 border-y !border-l-0 !border-r-0 border-solid border-gray-200 [&>details]:!border-l-0 [&>details]:!border-r-0",
+        className
+      )}
+      {...props}
+    >
       {items.map((item, i) => (
-        <details key={item.id ?? i} className="group">
+        <details
+          key={item.id ?? i}
+          className="group !border-l-0 !border-r-0"
+        >
           <summary className="flex cursor-pointer list-none items-center justify-between py-4 [&::-webkit-details-marker]:hidden">
             <Text as="span" size="lg" className="!text-[17px]">
               {item.title}

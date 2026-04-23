@@ -1,4 +1,10 @@
 import type { ReactNode } from "react";
+import type { BaseContentBlocksProps } from "../content-blocks/content-blocks.types";
+import type { BaseInfoBadgeProps } from "../info-badge/info-badge.types";
+import type { BaseProductInfoListProps } from "../product-info-list/product-info-list.types";
+import type { BaseRatingProps } from "../rating/rating.types";
+import type { BaseSectionActivityGridProps } from "../section-activity-grid/section-activity-grid.types";
+import type { BaseSectionReviewGridProps } from "../section-review-grid/section-review-grid.types";
 
 export type BaseSectionProductProps = {
   title: ReactNode;
@@ -7,6 +13,17 @@ export type BaseSectionProductProps = {
   backLabel?: string;
   backHref?: string;
   onBack?: () => void;
-  children?: ReactNode;
+  rating?: BaseRatingProps;
+  badges?: BaseInfoBadgeProps[];
+  description?: ReactNode;
+  infoItems?: BaseProductInfoListProps["items"];
+  reviewsTitle?: BaseSectionReviewGridProps["title"];
+  reviewsSubtitle?: BaseSectionReviewGridProps["subtitle"];
+  reviews?: BaseSectionReviewGridProps["reviews"];
+  contentItems?: BaseContentBlocksProps["items"];
+  contentTocTitle?: BaseContentBlocksProps["tocTitle"];
+  relatedActivitiesTitle?: BaseSectionActivityGridProps["title"];
+  relatedActivitiesAction?: BaseSectionActivityGridProps["action"];
+  relatedActivities?: BaseSectionActivityGridProps["activities"];
   className?: string;
 };

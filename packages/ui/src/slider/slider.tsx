@@ -115,16 +115,18 @@ export function Slider({
       </div>
       {showNav && showPrev && (
         <button
+          type="button"
           onClick={goPrev}
-          className="absolute left-3 top-1/2 z-20 hidden h-8 w-8 -translate-y-1/2 cursor-pointer items-center justify-center rounded-full bg-white/90 text-gray-700 shadow-sm backdrop-blur-sm transition hover:bg-white sm:flex"
+          className="absolute left-3 top-1/2 z-20 hidden h-8 w-8 -translate-y-1/2 cursor-pointer appearance-none items-center justify-center rounded-full border border-solid border-transparent bg-white/90 text-gray-700 shadow-sm backdrop-blur-sm transition hover:bg-white sm:flex"
         >
           <Icon icon={ChevronLeft} size="md" />
         </button>
       )}
       {showNav && showNext && (
         <button
+          type="button"
           onClick={goNext}
-          className="absolute right-3 top-1/2 z-20 hidden h-8 w-8 -translate-y-1/2 cursor-pointer items-center justify-center rounded-full bg-white/90 text-gray-700 shadow-sm backdrop-blur-sm transition hover:bg-white sm:flex"
+          className="absolute right-3 top-1/2 z-20 hidden h-8 w-8 -translate-y-1/2 cursor-pointer appearance-none items-center justify-center rounded-full border border-solid border-transparent bg-white/90 text-gray-700 shadow-sm backdrop-blur-sm transition hover:bg-white sm:flex"
         >
           <Icon icon={ChevronRight} size="md" />
         </button>

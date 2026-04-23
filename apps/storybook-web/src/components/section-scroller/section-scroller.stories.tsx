@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import { SectionScroller, sectionScrollerItemClassName, Card, Text } from "@swiss-activities/ui";
+import { Page } from "../page";
 
 const meta = {
   title: "Sections/SectionScroller",
@@ -22,9 +23,11 @@ export const Default: Story = {
     )),
   },
   render: (args) => (
-    <div className="sa-container">
-      <SectionScroller {...args} className="py-6" />
-    </div>
+    <Page>
+      <div className="sa-container">
+        <SectionScroller {...args} className="pt-6" />
+      </div>
+    </Page>
   ),
 };
 
@@ -41,8 +44,10 @@ export const WithSubtitle: Story = {
     )),
   },
   render: (args) => (
-    <div className="sa-container">
-      <SectionScroller {...args} className="py-6" />
-    </div>
+    <Page>
+      <div className="sa-container">
+        <SectionScroller {...args} className="pt-6" />
+      </div>
+    </Page>
   ),
 };
