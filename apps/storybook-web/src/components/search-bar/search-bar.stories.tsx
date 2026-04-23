@@ -83,12 +83,10 @@ function SearchResults({ value }: { value: string }) {
 
 function SearchBarDemo({
   controls,
-  footer,
   mobileControls,
   mode = "default",
 }: {
   controls?: ReactNode;
-  footer?: ReactNode;
   mobileControls?: ReactNode;
   mode?: "default" | "main" | "mobile";
 }) {
@@ -107,7 +105,6 @@ function SearchBarDemo({
         }}
         controls={controls}
         mobileControls={mobileControls ?? controls}
-        footer={footer}
         empty={
           <div className="px-4 py-6">
             <Text>No results</Text>
@@ -152,13 +149,6 @@ export const Main: Story = {
           <Button type="outline-gray" size="sm" text="Personen" />
         </div>
       }
-      footer={
-        <Button
-          type="tertiary"
-          className="h-14 !w-full !bg-transparent lg:!h-[calc(100%-4px)] lg:hover:!underline"
-          text="In der Nähe"
-        />
-      }
     />
   ),
 };
@@ -174,24 +164,17 @@ export const Mobile: Story = {
     <div className="mx-auto max-w-md bg-white pt-6">
       <SearchBarDemo
         mode="mobile"
-      controls={
-        <div className="hidden gap-2 sm:flex">
-          <Button type="outline-gray" size="sm" text="Kalender" />
-          <Button type="outline-gray" size="sm" text="Personen" />
-        </div>
-      }
-      mobileControls={
-        <div className="flex flex-col gap-2 sm:hidden">
-          <Button type="outline-gray" size="sm" text="Kalender" />
-          <Button type="outline-gray" size="sm" text="Personen" />
-        </div>
-      }
-      footer={
-        <Button
-          type="tertiary"
-          className="flex h-14 !w-full items-center justify-center !bg-transparent"
-            text="In der Nähe"
-          />
+        controls={
+          <div className="hidden gap-2 sm:flex">
+            <Button type="outline-gray" size="sm" text="Kalender" />
+            <Button type="outline-gray" size="sm" text="Personen" />
+          </div>
+        }
+        mobileControls={
+          <div className="flex flex-col gap-2 sm:hidden">
+            <Button type="outline-gray" size="sm" text="Kalender" />
+            <Button type="outline-gray" size="sm" text="Personen" />
+          </div>
         }
       />
     </div>

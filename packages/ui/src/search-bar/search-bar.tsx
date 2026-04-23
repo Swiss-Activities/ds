@@ -218,7 +218,7 @@ export const SearchBar = forwardRef<HTMLDivElement, SearchBarProps>(
                   onClick={handleClear}
                   className="absolute end-2.5 top-1/2 m-0 flex -translate-y-1/2 cursor-pointer items-center justify-center rounded-full border-none bg-white p-2 text-base text-black transition duration-100 ease-in"
                 >
-                  <Icon icon={X} size="sm" />
+                  <Icon icon={X} />
                 </button>
               ) : null}
             </div>
@@ -257,8 +257,10 @@ export const SearchBar = forwardRef<HTMLDivElement, SearchBarProps>(
           <div
             className={cn(
               {
-                "absolute bottom-0 top-[3.375rem] h-[calc(450px+3.5rem)] w-full overflow-hidden rounded-xl border border-solid border-gray-200 bg-white shadow-xl transition duration-100 ease-in lg:min-w-[350px]":
+                "absolute bottom-0 top-[3.375rem] w-full overflow-hidden rounded-xl border border-solid border-gray-200 bg-white shadow-xl transition duration-100 ease-in lg:min-w-[350px]":
                   !isMobile,
+                "h-[calc(450px+3.5rem)]": !isMobile && hasFooter,
+                "h-[450px]": !isMobile && !hasFooter,
                 "pb-14": isMobile && hasFooter,
               },
               classNamePanel
@@ -266,8 +268,10 @@ export const SearchBar = forwardRef<HTMLDivElement, SearchBarProps>(
           >
             <div
               className={cn("flex flex-col", {
-                "h-[450px] overflow-y-scroll pt-2": !isMobile,
-                "space-y-2.5": isMobile,
+                "overflow-y-auto p-1": !isMobile,
+                "h-[450px]": !isMobile && hasFooter,
+                "h-full": !isMobile && !hasFooter,
+                "space-y-2.5 p-1": isMobile,
                 "pb-8": hasFooter,
                 "pb-0": !hasFooter,
               })}

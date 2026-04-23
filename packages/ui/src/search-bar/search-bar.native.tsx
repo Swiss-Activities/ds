@@ -119,7 +119,7 @@ export const SearchBar = forwardRef<any, SearchBarProps>(function SearchBar(
               onPress={handleClear}
               className="absolute right-2.5 top-1/2 z-10 -translate-y-1/2 rounded-full bg-white p-2"
             >
-              <Icon icon={X} size="sm" />
+              <Icon icon={X} />
             </TouchableOpacity>
           ) : null}
         </View>
