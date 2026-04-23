@@ -31,6 +31,7 @@ export * from "./loader";
 export * from "./rating";
 export * from "./review-card";
 export * from "./product-info-list";
+export * from "./search-bar";
 export * from "./skeleton";
 export * from "./slider";
 export * from "./text";
