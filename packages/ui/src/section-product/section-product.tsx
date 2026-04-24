@@ -125,13 +125,7 @@ export function SectionProduct({
   );
   const hasLowerSections = hasInfoItems || hasReviews || hasContent || hasRelatedActivities;
   const reviewsSectionClassName = "bg-bg py-8 lg:py-10";
-  const lowerSectionsStartClassName = hasInfoItems ? "pt-4 lg:pt-4" : "pt-8 lg:pt-10";
-  const lowerSectionsStackClassName = cn(
-    "grid grid-cols-1 gap-8 lg:gap-10",
-    hasInfoItems && (hasReviews || hasContent || hasRelatedActivities)
-      ? "pt-8 lg:pt-10"
-      : null
-  );
+  const lowerSectionsClassName = "grid grid-cols-1 gap-8 pt-8 lg:gap-10 lg:pt-10";
 
   return (
     <div {...props}>
@@ -197,7 +191,7 @@ export function SectionProduct({
       </section>
 
       {hasLowerSections ? (
-        <div className={lowerSectionsStartClassName}>
+        <div className={lowerSectionsClassName}>
           {hasInfoItems ? (
             <section>
               <div className={containerClassName}>
@@ -206,44 +200,42 @@ export function SectionProduct({
             </section>
           ) : null}
 
-          {hasReviews || hasContent || hasRelatedActivities ? (
-            <div className={lowerSectionsStackClassName}>
-              {hasReviews ? (
-                <section className={reviewsSectionClassName}>
-                  <div className={containerClassName}>
-                    <SectionReviewGrid
-                      title={reviewsTitle as NonNullable<typeof reviewsTitle>}
-                      subtitle={reviewsSubtitle}
-                      reviews={reviews ?? []}
-                      as="div"
-                    />
-                  </div>
-                </section>
-              ) : null}
+          {hasReviews ? (
+            <section className={reviewsSectionClassName}>
+              <div className={containerClassName}>
+                <SectionReviewGrid
+                  title={reviewsTitle as NonNullable<typeof reviewsTitle>}
+                  subtitle={reviewsSubtitle}
+                  reviews={reviews ?? []}
+                  as="div"
+                />
+              </div>
+            </section>
+          ) : null}
 
-              {hasContent ? (
-                <section>
-                  <div className={containerClassName}>
-                    <ContentBlocks
-                      items={contentItems ?? []}
-                      tocTitle={contentTocTitle}
-                    />
-                  </div>
-                </section>
-              ) : null}
+          {hasContent ? (
+            <section>
+              <div className={containerClassName}>
+                <ContentBlocks
+                  items={contentItems ?? []}
+                  tocTitle={contentTocTitle}
+                />
+              </div>
+            </section>
+          ) : null}
 
-              {hasRelatedActivities ? (
-                <div className={containerClassName}>
-                  <SectionActivityGrid
-                    title={relatedActivitiesTitle as NonNullable<
-                      typeof relatedActivitiesTitle
-                    >}
-                    action={relatedActivitiesAction}
-                    activities={relatedActivities ?? []}
-                  />
-                </div>
-              ) : null}
-            </div>
+          {hasRelatedActivities ? (
+            <section>
+              <div className={containerClassName}>
+                <SectionActivityGrid
+                  title={relatedActivitiesTitle as NonNullable<
+                    typeof relatedActivitiesTitle
+                  >}
+                  action={relatedActivitiesAction}
+                  activities={relatedActivities ?? []}
+                />
+              </div>
+            </section>
           ) : null}
         </div>
       ) : null}
