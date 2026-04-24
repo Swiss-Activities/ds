@@ -141,6 +141,8 @@ export const Button = forwardRef<any, ButtonProps>(function Button(props, ref) {
         resolvedType === "blue",
       "!border !border-blue !bg-transparent text-blue sm:hover:!border-blue sm:hover:!bg-blue sm:hover:text-white":
         resolvedType === "blue-outline",
+      "border-transparent bg-transparent text-inherit shadow-none hover:bg-transparent":
+        resolvedType === "ghost",
       "border-transparent bg-transparent sm:hover:border-gray-100 sm:hover:bg-gray-100":
         resolvedType === "transparent" || resolvedType === "danger",
       "border-solid border-[#A9A2A3] bg-[#A9A2A3] text-white":

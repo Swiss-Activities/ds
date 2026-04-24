@@ -27,7 +27,7 @@ export function ReviewCard({
 }: ReviewCardProps) {
   return (
     <Card className={cn("flex flex-col !p-4", className)} {...props}>
-      <div className="-mx-4 flex items-center gap-1.5 border-b border-solid border-gray-200 px-4 pb-3">
+      <div className="-mx-4 flex items-center gap-1.5 !border-b !border-t-0 !border-l-0 !border-r-0 !border-solid !border-gray-200 px-4 pb-3">
         {countryCode && <Flag countryCode={countryCode} />}
         <Text as="span" size="sm" bold black>
           {author}
@@ -39,11 +39,16 @@ export function ReviewCard({
       <div className="mt-3 flex items-center justify-between">
         <Rating score={rating} showScore={false} size="md" />
         {upvoteCount != null && (
-          <div className="flex items-stretch rounded-md border border-solid border-gray-200">
-            <Button variant="ghost" size="sm" onClick={onUpvote} className="!rounded-none !px-2.5 text-gray-400 hover:text-gray-600">
+          <div className="flex items-stretch overflow-hidden rounded-md !border !border-solid !border-gray-200">
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={onUpvote}
+              className="!rounded-none !border-none !px-2.5 !py-0 text-gray-400 hover:text-gray-600"
+            >
               <Icon icon={ThumbsUp} size="sm" />
             </Button>
-            <div className="flex items-center border-l border-solid border-gray-200 px-2.5">
+            <div className="flex items-center !border-l !border-r-0 !border-y-0 !border-solid !border-gray-200 px-2.5">
               <Text as="span" size="xs" gray>
                 {upvoteCount}
               </Text>

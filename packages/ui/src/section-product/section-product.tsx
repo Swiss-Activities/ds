@@ -123,17 +123,14 @@ export function SectionProduct({
   const hasRelatedActivities = Boolean(
     relatedActivities?.length && relatedActivitiesTitle
   );
-  const reviewsSectionClassName = cn(
-    "bg-bg pb-8 lg:pb-10",
-    hasInfoItems ? "pt-0" : "pt-6 lg:pt-10"
-  );
-  const contentSectionClassName = cn(
-    "pb-8 lg:pb-10",
-    hasInfoItems || hasReviews ? "pt-0" : "pt-6 lg:pt-10"
-  );
-  const relatedActivitiesClassName = cn(
-    containerClassName,
-    hasInfoItems || hasReviews || hasContent ? "" : "pt-6 lg:pt-10"
+  const hasLowerSections = hasInfoItems || hasReviews || hasContent || hasRelatedActivities;
+  const reviewsSectionClassName = "bg-bg py-8 lg:py-10";
+  const lowerSectionsStartClassName = hasInfoItems ? "pt-4 lg:pt-4" : "pt-8 lg:pt-10";
+  const lowerSectionsStackClassName = cn(
+    "grid grid-cols-1 gap-8 lg:gap-10",
+    hasInfoItems && (hasReviews || hasContent || hasRelatedActivities)
+      ? "pt-8 lg:pt-10"
+      : null
   );
 
   return (
@@ -199,47 +196,55 @@ export function SectionProduct({
         ) : null}
       </section>
 
-      {hasInfoItems ? (
-        <section className="pb-0 pt-4 lg:pb-10 lg:pt-4">
-          <div className={containerClassName}>
-            <ProductInfoList items={infoItems ?? []} />
-          </div>
-        </section>
-      ) : null}
+      {hasLowerSections ? (
+        <div className={lowerSectionsStartClassName}>
+          {hasInfoItems ? (
+            <section>
+              <div className={containerClassName}>
+                <ProductInfoList items={infoItems ?? []} />
+              </div>
+            </section>
+          ) : null}
 
-      {hasReviews ? (
-        <section className={reviewsSectionClassName}>
-          <div className={containerClassName}>
-            <SectionReviewGrid
-              title={reviewsTitle as NonNullable<typeof reviewsTitle>}
-              subtitle={reviewsSubtitle}
-              reviews={reviews ?? []}
-              as="div"
-            />
-          </div>
-        </section>
-      ) : null}
+          {hasReviews || hasContent || hasRelatedActivities ? (
+            <div className={lowerSectionsStackClassName}>
+              {hasReviews ? (
+                <section className={reviewsSectionClassName}>
+                  <div className={containerClassName}>
+                    <SectionReviewGrid
+                      title={reviewsTitle as NonNullable<typeof reviewsTitle>}
+                      subtitle={reviewsSubtitle}
+                      reviews={reviews ?? []}
+                      as="div"
+                    />
+                  </div>
+                </section>
+              ) : null}
 
-      {hasContent ? (
-        <section className={contentSectionClassName}>
-          <div className={containerClassName}>
-            <ContentBlocks
-              items={contentItems ?? []}
-              tocTitle={contentTocTitle}
-            />
-          </div>
-        </section>
-      ) : null}
+              {hasContent ? (
+                <section>
+                  <div className={containerClassName}>
+                    <ContentBlocks
+                      items={contentItems ?? []}
+                      tocTitle={contentTocTitle}
+                    />
+                  </div>
+                </section>
+              ) : null}
 
-      {hasRelatedActivities ? (
-        <div className={relatedActivitiesClassName}>
-          <SectionActivityGrid
-            title={relatedActivitiesTitle as NonNullable<
-              typeof relatedActivitiesTitle
-            >}
-            action={relatedActivitiesAction}
-            activities={relatedActivities ?? []}
-          />
+              {hasRelatedActivities ? (
+                <div className={containerClassName}>
+                  <SectionActivityGrid
+                    title={relatedActivitiesTitle as NonNullable<
+                      typeof relatedActivitiesTitle
+                    >}
+                    action={relatedActivitiesAction}
+                    activities={relatedActivities ?? []}
+                  />
+                </div>
+              ) : null}
+            </div>
+          ) : null}
         </div>
       ) : null}
     </div>
