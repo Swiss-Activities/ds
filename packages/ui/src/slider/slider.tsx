@@ -104,7 +104,7 @@ export function Slider({
     >
       <div
         ref={trackRef}
-        className="no-scrollbar h-full w-full snap-x snap-mandatory overflow-x-auto [display:flex]"
+        className="no-scrollbar h-full w-full snap-x snap-mandatory overflow-x-auto overflow-y-hidden [display:flex] [touch-action:pan-x]"
       >
         {allSlides.map((slide, i) => (
           <div

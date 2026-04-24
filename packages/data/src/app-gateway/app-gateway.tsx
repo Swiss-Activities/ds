@@ -3,7 +3,9 @@
 import {
   useCallback,
   useEffect,
+  useLayoutEffect,
   useMemo,
+  useRef,
   useState,
   type ReactNode,
 } from "react";
@@ -171,6 +173,7 @@ function AppGatewayContent<TSection, THero, TItemData>({
   const [data, setData] = useState<TGatewayHome | null>(null);
   const [isLoading, setIsLoading] = useState(false);
   const [isError, setIsError] = useState(false);
+  const previousSelectedItemId = useRef<string | null>(null);
 
   const { coords, ready: coordsReady } = useSilentCoordinates();
 
@@ -209,7 +212,6 @@ function AppGatewayContent<TSection, THero, TItemData>({
 
         setSelectedItemData(itemData);
         setSelectedItemId(id);
-        scrollToTop();
       } catch (error) {
         console.error("Failed to load selected app gateway item", error);
       } finally {
@@ -223,8 +225,16 @@ function AppGatewayContent<TSection, THero, TItemData>({
     setSelectedItemId(null);
     setSelectedItemData(null);
     setPendingItemId(null);
-    scrollToTop();
   }, []);
+
+  useLayoutEffect(() => {
+    const previousId = previousSelectedItemId.current;
+
+    if (previousId !== selectedItemId) {
+      previousSelectedItemId.current = selectedItemId;
+      scrollToTop();
+    }
+  }, [selectedItemId]);
 
   const fallbackHeroWithTabs = useMemo(
     () =>
@@ -394,7 +404,7 @@ function AppGatewayContent<TSection, THero, TItemData>({
 
   if (selectedItemId && renderItemView) {
     return (
-      <>
+      <div key={selectedItemId}>
         {renderItemView({
           selectedItemId,
           selectedItemData: selectedItemData ?? undefined,
@@ -403,7 +413,7 @@ function AppGatewayContent<TSection, THero, TItemData>({
           onBack: handleBack,
           onSelectItem: canSelectItem ? handleSelectItem : undefined,
         })}
-      </>
+      </div>
     );
   }
 
