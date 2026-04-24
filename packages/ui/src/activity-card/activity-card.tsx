@@ -25,6 +25,8 @@ export function ActivityCard({
   render,
   ...props
 }: ActivityCardProps) {
+  const hasPricingFooter = Boolean(price);
+
   return (
     <Card
       noPadding
@@ -50,17 +52,19 @@ export function ActivityCard({
         {score > 0 && (
           <Rating score={score} count={reviewCount} size="sm" className="mt-1" />
         )}
-        <div className="mt-auto">
-          <div className="-mx-3.5 mb-3 mt-2 h-px bg-gray-200" />
-          <div className="flex items-baseline justify-between">
-            <Text size="xs" gray className="font-medium">
-              {priceLabel}
-            </Text>
-            <Text size="default" bold>
-              {price}
-            </Text>
+        {hasPricingFooter ? (
+          <div className="mt-auto">
+            <div className="-mx-3.5 mb-3 mt-2 h-px bg-gray-200" />
+            <div className="flex items-baseline justify-between">
+              <Text size="xs" gray className="font-medium">
+                {priceLabel}
+              </Text>
+              <Text size="default" bold>
+                {price}
+              </Text>
+            </div>
           </div>
-        </div>
+        ) : null}
       </div>
       {loading ? (
         <div className="absolute inset-0 z-10 bg-white">
