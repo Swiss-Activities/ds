@@ -1,13 +1,14 @@
+import type { ReactNode } from "react";
 import type { ViewProps } from "react-native";
 import { ScrollView } from "react-native";
 import { Pressable, View } from "react-native-css/components";
 import Svg, { Defs, LinearGradient, Rect, Stop } from "react-native-svg";
-import { cn } from "../utils/cn";
 import { Icon } from "../icon/icon.native";
 import { ChevronLeft } from "../icons/index.native";
-import { Text } from "../text/text.native";
 import { Slider } from "../slider/slider.native";
+import { Text } from "../text/text.native";
 import { saColors } from "../tokens/colors";
+import { cn } from "../utils/cn";
 import type { BaseHeroProps, HeroTab } from "./hero.types";
 
 export type HeroProps = BaseHeroProps & Omit<ViewProps, "children">;
@@ -22,7 +23,13 @@ function TopFadeOverlay() {
         style={{ position: "absolute", left: 0, top: 0, bottom: 0 }}
       >
         <Defs>
-          <LinearGradient id="hero-top-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+          <LinearGradient
+            id="hero-top-gradient"
+            x1="0%"
+            y1="0%"
+            x2="0%"
+            y2="100%"
+          >
             <Stop offset="0%" stopColor={saColors.blue} stopOpacity={0.5} />
             <Stop offset="100%" stopColor={saColors.blue} stopOpacity={0} />
           </LinearGradient>
@@ -43,7 +50,13 @@ function BottomFadeOverlay() {
         style={{ position: "absolute", left: 0, top: 0, bottom: 0 }}
       >
         <Defs>
-          <LinearGradient id="hero-bottom-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+          <LinearGradient
+            id="hero-bottom-gradient"
+            x1="0%"
+            y1="0%"
+            x2="0%"
+            y2="100%"
+          >
             <Stop offset="0%" stopColor={saColors.blue} stopOpacity={0} />
             <Stop offset="100%" stopColor={saColors.blue} />
           </LinearGradient>
@@ -75,7 +88,11 @@ function FallbackTintOverlay() {
             <Stop offset="100%" stopColor={saColors.blue} stopOpacity={0} />
           </LinearGradient>
         </Defs>
-        <Rect width="100%" height="100%" fill="url(#hero-fallback-top-gradient)" />
+        <Rect
+          width="100%"
+          height="100%"
+          fill="url(#hero-fallback-top-gradient)"
+        />
       </Svg>
     </View>
   );
@@ -194,7 +211,7 @@ export function Hero({
         {isGallery ? (
           <Slider slides={images} className="absolute inset-0" />
         ) : (
-          image
+          (image as ReactNode)
         )}
         {hasBack && <TopFadeOverlay />}
         {isFallback && <FallbackTintOverlay />}
@@ -208,7 +225,7 @@ export function Hero({
           <View
             className={cn(
               isFallback
-                ? "absolute inset-0 z-20 flex items-start justify-center px-4 pt-14 pb-20"
+                ? "absolute inset-0 z-20 flex items-start justify-center px-4 pb-20 pt-14"
                 : "absolute inset-0 z-20 flex items-center justify-center px-4 py-6"
             )}
           >

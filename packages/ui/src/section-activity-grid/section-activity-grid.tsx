@@ -1,10 +1,13 @@
 "use client";
 
 import type { HTMLAttributes } from "react";
-import { cn } from "../utils/cn";
 import { ActivityCard } from "../activity-card";
+import {
+  SectionScroller,
+  sectionScrollerItemClassName,
+} from "../section-scroller";
 import { Skeleton } from "../skeleton";
-import { SectionScroller, sectionScrollerItemClassName } from "../section-scroller";
+import { cn } from "../utils/cn";
 import type {
   ActivityItem,
   BaseSectionActivityGridProps,
@@ -27,6 +30,12 @@ export function SectionActivityGrid({
     : Array.from({ length: skeletonAmount }, () => ({
         image: null,
         title: "",
+        type: "activity",
+        subtitle: undefined,
+        category: undefined,
+        dateRange: undefined,
+        distance: undefined,
+        meta: undefined,
         score: 0,
         reviewCount: 0,
         priceLabel: "",
@@ -60,6 +69,12 @@ export function SectionActivityGrid({
           <ActivityCard
             image={a.image}
             title={a.title}
+            type={a.type}
+            subtitle={a.subtitle}
+            category={a.category}
+            dateRange={a.dateRange}
+            distance={a.distance}
+            meta={a.meta}
             score={a.score}
             reviewCount={a.reviewCount}
             priceLabel={a.priceLabel}

@@ -4,6 +4,11 @@ import type { TGatewayHomeItem } from "../gateway/types";
 export type ActivityItemData = {
   image: ReactNode;
   title: string;
+  type: TGatewayHomeItem["type"];
+  subtitle?: string | null;
+  category?: string | null;
+  dateRange?: string | null;
+  distance?: string | null;
   score: number;
   reviewCount: number;
   priceLabel: string;
@@ -33,9 +38,16 @@ export const toActivityItem = (
 ): ActivityItemData => ({
   image: getImageUrl(item) ? renderImage(item) : null,
   title: item.title,
+  type: item.type,
+  subtitle: item.subtitle,
+  category: item.category,
+  dateRange: item.dateRangeFormatted,
+  distance: item.distanceKm == null ? null : `${item.distanceKm.toFixed(1)} km`,
   score: item.rating ?? 0,
   reviewCount: getReviewCount(item) ?? 0,
   priceLabel,
-  price: getPriceFormatted(item) ? `${fromLabel} ${getPriceFormatted(item)}` : "",
-  href: item.path,
+  price: getPriceFormatted(item)
+    ? `${fromLabel} ${getPriceFormatted(item)}`
+    : "",
+  href: item.path ?? "",
 });

@@ -1,23 +1,100 @@
 import type { HTMLAttributes } from "react";
-import { cn } from "../utils/cn";
 import { Card } from "../card";
-import { Text } from "../text";
-import { Rating } from "../rating";
+import { Icon } from "../icon/icon";
+import { Clock3, MapPin, Ticket } from "../icons";
 import { Loader } from "../loader";
-import { ActivityCardSkeletonContent } from "./activity-card-skeleton";
-import type { BaseActivityCardProps } from "./activity-card.types";
+import { Rating } from "../rating";
+import { Text } from "../text";
+import { cn } from "../utils/cn";
 import { renderImageValue } from "../utils/render-image";
+import { ActivityCardSkeletonContent } from "./activity-card-skeleton";
+import type {
+  ActivityCardMetaItem,
+  BaseActivityCardProps,
+} from "./activity-card.types";
 
 export type ActivityCardProps = BaseActivityCardProps &
   HTMLAttributes<HTMLDivElement>;
 
+function hasContent(value: ActivityCardMetaItem["label"]) {
+  return value !== null && value !== undefined && value !== "";
+}
+
+function ActivityCardMetaLine({ icon, label }: ActivityCardMetaItem) {
+  if (!hasContent(label)) {
+    return null;
+  }
+
+  return (
+    <Text
+      as="span"
+      size="xs"
+      gray
+      className="flex min-w-0 items-center gap-1.5 font-medium !leading-snug"
+    >
+      {icon ? (
+        <span className="relative -top-px flex shrink-0 text-gray-400">
+          {icon}
+        </span>
+      ) : null}
+      <span className="min-w-0">{label}</span>
+    </Text>
+  );
+}
+
+function getDefaultMeta({
+  type,
+  subtitle,
+  category,
+  dateRange,
+  distance,
+}: Pick<
+  BaseActivityCardProps,
+  "type" | "subtitle" | "category" | "dateRange" | "distance"
+>): ActivityCardMetaItem[] {
+  const isBookable = !type || type === "activity";
+
+  return [
+    !isBookable && hasContent(subtitle)
+      ? {
+          icon: <Icon icon={MapPin} size="sm" />,
+          label: subtitle,
+        }
+      : null,
+    !isBookable && hasContent(dateRange)
+      ? {
+          icon: <Icon icon={Clock3} size="sm" />,
+          label: dateRange,
+        }
+      : null,
+    !isBookable && hasContent(category)
+      ? {
+          icon: <Icon icon={Ticket} size="sm" />,
+          label: category,
+        }
+      : null,
+    hasContent(distance)
+      ? {
+          icon: <Icon icon={MapPin} size="sm" />,
+          label: distance,
+        }
+      : null,
+  ].filter(Boolean) as ActivityCardMetaItem[];
+}
+
 export function ActivityCard({
   image,
   title,
-  score,
-  reviewCount,
-  priceLabel,
-  price,
+  type = "activity",
+  subtitle,
+  category,
+  dateRange,
+  distance,
+  meta,
+  score = 0,
+  reviewCount = 0,
+  priceLabel = "",
+  price = "",
   loading = false,
   pending = false,
   renderImage,
@@ -25,7 +102,18 @@ export function ActivityCard({
   render,
   ...props
 }: ActivityCardProps) {
-  const hasPricingFooter = Boolean(price);
+  const normalizedScore = Number(score) || 0;
+  const isBookable = type === "activity";
+  const hasPricingFooter = isBookable && Boolean(price);
+  const metaItems =
+    meta ??
+    getDefaultMeta({
+      type,
+      subtitle,
+      category,
+      dateRange,
+      distance,
+    });
 
   return (
     <Card
@@ -45,12 +133,24 @@ export function ActivityCard({
           as="h3"
           size="default"
           bold
-          className="!text-left !text-base !leading-snug"
+          className="line-clamp-2 !text-left !text-base !leading-snug"
         >
           {title}
         </Text>
-        {score > 0 && (
-          <Rating score={score} count={reviewCount} size="sm" className="mt-1" />
+        {metaItems.length ? (
+          <div className="mt-1.5 space-y-1.5">
+            {metaItems.map((item, index) => (
+              <ActivityCardMetaLine key={index} {...item} />
+            ))}
+          </div>
+        ) : null}
+        {normalizedScore > 0 && (
+          <Rating
+            score={normalizedScore}
+            count={reviewCount ?? undefined}
+            size="sm"
+            className="mt-1"
+          />
         )}
         {hasPricingFooter ? (
           <div className="mt-auto">

@@ -1,10 +1,16 @@
 "use client";
 
 import { useCallback, useState } from "react";
-import type { ViewProps, NativeScrollEvent, NativeSyntheticEvent, LayoutChangeEvent } from "react-native";
+import type { ReactNode } from "react";
+import type {
+  ViewProps,
+  NativeScrollEvent,
+  NativeSyntheticEvent,
+  LayoutChangeEvent,
+} from "react-native";
 import { ScrollView, View } from "react-native-css/components";
-import { cn } from "../utils/cn";
 import { Text } from "../text/text.native";
+import { cn } from "../utils/cn";
 import type { BaseSliderProps } from "./slider.types";
 
 export type SliderProps = BaseSliderProps & Omit<ViewProps, "children">;
@@ -23,14 +29,11 @@ export function Slider({
     setWidth(e.nativeEvent.layout.width);
   }, []);
 
-  const onScroll = useCallback(
-    (e: NativeSyntheticEvent<NativeScrollEvent>) => {
-      const offsetX = e.nativeEvent.contentOffset.x;
-      const w = e.nativeEvent.layoutMeasurement.width;
-      if (w > 0) setIndex(Math.round(offsetX / w));
-    },
-    []
-  );
+  const onScroll = useCallback((e: NativeSyntheticEvent<NativeScrollEvent>) => {
+    const offsetX = e.nativeEvent.contentOffset.x;
+    const w = e.nativeEvent.layoutMeasurement.width;
+    if (w > 0) setIndex(Math.round(offsetX / w));
+  }, []);
 
   return (
     <View
@@ -47,7 +50,7 @@ export function Slider({
       >
         {slides.map((slide, i) => (
           <View key={i} style={width ? { width } : undefined}>
-            {slide}
+            {slide as ReactNode}
           </View>
         ))}
       </ScrollView>

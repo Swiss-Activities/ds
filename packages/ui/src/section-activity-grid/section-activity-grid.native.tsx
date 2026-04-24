@@ -3,11 +3,17 @@
 import { useEffect, useState } from "react";
 import type { ViewProps } from "react-native";
 import { View } from "react-native-css/components";
-import { cn } from "../utils/cn";
 import { ActivityCard } from "../activity-card/activity-card.native";
+import {
+  SectionScroller,
+  sectionScrollerItemClassName,
+} from "../section-scroller/section-scroller.native";
 import { Skeleton } from "../skeleton/skeleton.native";
-import { SectionScroller, sectionScrollerItemClassName } from "../section-scroller/section-scroller.native";
-import type { BaseSectionActivityGridProps } from "./section-activity-grid.types";
+import { cn } from "../utils/cn";
+import type {
+  ActivityItem,
+  BaseSectionActivityGridProps,
+} from "./section-activity-grid.types";
 
 export type SectionActivityGridProps = BaseSectionActivityGridProps &
   Omit<ViewProps, "children">;
@@ -22,11 +28,17 @@ export function SectionActivityGrid({
   ...props
 }: SectionActivityGridProps) {
   const [maxCardHeight, setMaxCardHeight] = useState(0);
-  const items = activities.length
+  const items: ActivityItem[] = activities.length
     ? activities
     : Array.from({ length: skeletonAmount }, () => ({
         image: null,
         title: "",
+        type: "activity",
+        subtitle: undefined,
+        category: undefined,
+        dateRange: undefined,
+        distance: undefined,
+        meta: undefined,
         score: 0,
         reviewCount: 0,
         priceLabel: "",
@@ -64,6 +76,12 @@ export function SectionActivityGrid({
           <ActivityCard
             image={a.image}
             title={a.title}
+            type={a.type}
+            subtitle={a.subtitle}
+            category={a.category}
+            dateRange={a.dateRange}
+            distance={a.distance}
+            meta={a.meta}
             score={a.score}
             reviewCount={a.reviewCount}
             priceLabel={a.priceLabel}
@@ -74,7 +92,9 @@ export function SectionActivityGrid({
             style={maxCardHeight ? { minHeight: maxCardHeight } : undefined}
             onLayout={(event) => {
               const height = Math.ceil(event.nativeEvent.layout.height);
-              setMaxCardHeight((current) => (height > current ? height : current));
+              setMaxCardHeight((current) =>
+                height > current ? height : current
+              );
             }}
           />
         </View>
