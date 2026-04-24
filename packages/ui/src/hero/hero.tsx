@@ -7,6 +7,7 @@ import { HorizontalScrollerTrack } from "../horizontal-scroller/horizontal-scrol
 import { Text } from "../text";
 import { Slider } from "../slider";
 import type { BaseHeroProps, HeroTab } from "./hero.types";
+import { renderImageValue } from "../utils/render-image";
 
 export type HeroProps = BaseHeroProps &
   Omit<HTMLAttributes<HTMLDivElement>, "children" | "title">;
@@ -90,6 +91,7 @@ export function Hero({
   title,
   image,
   images,
+  renderImage,
   children,
   overlay,
   search,
@@ -126,9 +128,14 @@ export function Hero({
         >
           <div className="absolute inset-0 [&_img]:absolute [&_img]:inset-0 [&_img]:h-full [&_img]:w-full [&_img]:object-cover">
             {isGallery ? (
-              <Slider slides={images} loop className="absolute inset-0" />
+              <Slider
+                slides={images}
+                renderImage={renderImage}
+                loop
+                className="absolute inset-0"
+              />
             ) : (
-              image
+              renderImageValue(image, renderImage)
             )}
           </div>
           {hasBack && (

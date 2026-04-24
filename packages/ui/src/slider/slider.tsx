@@ -6,12 +6,14 @@ import { cn } from "../utils/cn";
 import { Icon } from "../icon/icon";
 import { ChevronLeft, ChevronRight } from "../icons";
 import type { BaseSliderProps } from "./slider.types";
+import { renderImageValue } from "../utils/render-image";
 
 export type SliderProps = BaseSliderProps &
   Omit<HTMLAttributes<HTMLDivElement>, "children">;
 
 export function Slider({
   slides,
+  renderImage,
   showNav = true,
   showCounter = true,
   loop = false,
@@ -109,7 +111,7 @@ export function Slider({
             key={i}
             className="relative h-full min-w-full snap-start [&_img]:h-full [&_img]:w-full [&_img]:object-cover"
           >
-            {slide}
+            {renderImageValue(slide, renderImage)}
           </div>
         ))}
       </div>

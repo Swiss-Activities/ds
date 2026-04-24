@@ -13,6 +13,7 @@ import { SectionReviewGrid } from "../section-review-grid";
 import { ContentBlocks } from "../content-blocks";
 import { SectionActivityGrid } from "../section-activity-grid";
 import type { BaseSectionProductProps } from "./section-product.types";
+import { renderImageValue, type ImageValue, type RenderImage } from "../utils/render-image";
 
 function BackLink({
   label,
@@ -46,11 +47,13 @@ const mediaFlushClassName = "-mx-2 sm:-mx-4 lg:mx-0";
 
 function GalleryGrid({
   images,
+  renderImage,
   backLabel,
   backHref,
   onBack,
 }: {
-  images: import("react").ReactNode[];
+  images: ImageValue[];
+  renderImage?: RenderImage;
   backLabel?: string;
   backHref?: string;
   onBack?: () => void;
@@ -59,7 +62,12 @@ function GalleryGrid({
   return (
     <div className="hidden h-[360px] grid-cols-4 grid-rows-2 gap-1 overflow-hidden lg:rounded-lg md:grid">
       <div className="relative col-span-2 row-span-2 overflow-hidden lg:rounded-s-lg">
-        <Slider slides={images} loop className="absolute inset-0" />
+        <Slider
+          slides={images}
+          renderImage={renderImage}
+          loop
+          className="absolute inset-0"
+        />
         {backLabel && (
           <>
             <div className="pointer-events-none absolute inset-x-0 top-0 z-20 h-20 bg-gradient-to-b from-black/40 to-transparent lg:rounded-tl-lg" />
@@ -78,7 +86,7 @@ function GalleryGrid({
             i === 3 && "lg:rounded-br-lg"
           )}
         >
-          {img}
+          {renderImageValue(img, renderImage)}
         </div>
       ))}
     </div>
@@ -88,6 +96,7 @@ function GalleryGrid({
 export function SectionProduct({
   title,
   images,
+  renderImage,
   breadcrumbs,
   backLabel,
   backHref,
@@ -133,6 +142,7 @@ export function SectionProduct({
         <div className={cn(mediaFlushClassName, "md:hidden")}>
           <Hero
             images={images}
+            renderImage={renderImage}
             backLabel={backLabel}
             backHref={backHref}
             onBack={onBack}
@@ -142,6 +152,7 @@ export function SectionProduct({
           <div className={cn(mediaFlushClassName, "hidden md:block")}>
             <GalleryGrid
               images={images}
+              renderImage={renderImage}
               backLabel={backLabel}
               backHref={backHref}
               onBack={onBack}

@@ -1,7 +1,8 @@
-import type { ReactNode } from "react";
+import type { ImageValue, RenderImage } from "../utils/render-image";
 
 export type BaseSliderProps = {
-  slides: ReactNode[];
+  slides: ImageValue[];
+  renderImage?: RenderImage;
   showNav?: boolean;
   showCounter?: boolean;
   loop?: boolean;

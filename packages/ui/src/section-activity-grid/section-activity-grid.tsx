@@ -5,7 +5,10 @@ import { cn } from "../utils/cn";
 import { ActivityCard } from "../activity-card";
 import { Skeleton } from "../skeleton";
 import { SectionScroller, sectionScrollerItemClassName } from "../section-scroller";
-import type { BaseSectionActivityGridProps } from "./section-activity-grid.types";
+import type {
+  ActivityItem,
+  BaseSectionActivityGridProps,
+} from "./section-activity-grid.types";
 
 export type SectionActivityGridProps = BaseSectionActivityGridProps &
   Omit<HTMLAttributes<HTMLElement>, "children" | "title">;
@@ -19,7 +22,7 @@ export function SectionActivityGrid({
   className,
   ...props
 }: SectionActivityGridProps) {
-  const items = activities.length
+  const items: ActivityItem[] = activities.length
     ? activities
     : Array.from({ length: skeletonAmount }, () => ({
         image: null,
@@ -29,6 +32,7 @@ export function SectionActivityGrid({
         priceLabel: "",
         price: "",
         pending: false,
+        renderImage: undefined,
         render: undefined,
       }));
 
@@ -62,6 +66,7 @@ export function SectionActivityGrid({
             price={a.price}
             loading={loading}
             pending={a.pending}
+            renderImage={a.renderImage}
             render={a.render}
           />
         </li>

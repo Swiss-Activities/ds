@@ -5,10 +5,12 @@ import type { BaseProductInfoListProps } from "../product-info-list/product-info
 import type { BaseRatingProps } from "../rating/rating.types";
 import type { BaseSectionActivityGridProps } from "../section-activity-grid/section-activity-grid.types";
 import type { BaseSectionReviewGridProps } from "../section-review-grid/section-review-grid.types";
+import type { ImageValue, RenderImage } from "../utils/render-image";
 
 export type BaseSectionProductProps = {
   title: ReactNode;
-  images: ReactNode[];
+  images: ImageValue[];
+  renderImage?: RenderImage;
   breadcrumbs?: { label: string; href: string }[];
   backLabel?: string;
   backHref?: string;

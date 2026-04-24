@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import type { ImageValue, RenderImage } from "../utils/render-image";
 
 export type HeroVariant = "localized" | "fallback";
 
@@ -11,8 +12,9 @@ export type HeroTab = {
 
 export type BaseHeroProps = {
   title?: ReactNode;
-  image?: ReactNode;
-  images?: ReactNode[];
+  image?: ImageValue;
+  images?: ImageValue[];
+  renderImage?: RenderImage;
   children?: ReactNode;
   overlay?: ReactNode;
   search?: ReactNode;

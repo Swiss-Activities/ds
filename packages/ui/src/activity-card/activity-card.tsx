@@ -6,6 +6,7 @@ import { Rating } from "../rating";
 import { Loader } from "../loader";
 import { ActivityCardSkeletonContent } from "./activity-card-skeleton";
 import type { BaseActivityCardProps } from "./activity-card.types";
+import { renderImageValue } from "../utils/render-image";
 
 export type ActivityCardProps = BaseActivityCardProps &
   HTMLAttributes<HTMLDivElement>;
@@ -19,6 +20,7 @@ export function ActivityCard({
   price,
   loading = false,
   pending = false,
+  renderImage,
   className,
   render,
   ...props
@@ -34,7 +36,7 @@ export function ActivityCard({
       {...props}
     >
       <div className="aspect-[4/3] w-full shrink-0 overflow-hidden [&_img]:h-full [&_img]:w-full [&_img]:object-cover">
-        {image}
+        {renderImageValue(image, renderImage)}
       </div>
       <div className="flex flex-1 flex-col gap-1 p-3.5 pt-4">
         <Text
