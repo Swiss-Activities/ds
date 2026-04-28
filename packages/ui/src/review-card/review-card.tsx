@@ -24,6 +24,7 @@ export function ReviewCard({
   upvoteCount,
   onUpvote,
   translatedFrom,
+  translatedFromLabel,
   className,
   ...props
 }: ReviewCardProps) {
@@ -32,6 +33,7 @@ export function ReviewCard({
   });
   const showUpvoteAction = Boolean(onUpvote || upvoteCount != null);
   const showUpvoteCount = upvoteCount != null && !hideUpvoteCount;
+  const translationLabel = translatedFromLabel ?? translatedFrom;
 
   return (
     <Card className={cn("flex flex-col !p-4", className)} {...props}>
@@ -96,11 +98,11 @@ export function ReviewCard({
           ))}
         </div>
       )}
-      {translatedFrom && (
+      {translationLabel && (
         <div className="mt-3 flex items-center gap-1 text-gray-400">
           <Icon icon={Languages} size="sm" />
           <Text as="span" size="xs" gray>
-            Original in {translatedFrom}
+            {translationLabel}
           </Text>
         </div>
       )}

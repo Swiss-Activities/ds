@@ -30,6 +30,7 @@ export function SectionReviewGrid({
             upvoteCount={review.upvoteCount}
             onUpvote={review.onUpvote}
             translatedFrom={review.translatedFrom}
+            translatedFromLabel={review.translatedFromLabel}
           />
         </View>
       ))}

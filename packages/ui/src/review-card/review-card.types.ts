@@ -11,5 +11,6 @@ export type BaseReviewCardProps = {
   upvoteCount?: number;
   onUpvote?: () => void | Promise<void>;
   translatedFrom?: string;
+  translatedFromLabel?: ReactNode;
   className?: string;
 };
