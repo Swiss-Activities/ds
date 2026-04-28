@@ -5,6 +5,7 @@ export type TGatewayHomeItem = {
   imageUrl?: string | null;
   subtitle?: string | null;
   path?: string;
+  detailPath?: string | null;
   type: "activity" | "non-bookable" | "non-bookable-event";
   category?: string | null;
   distanceKm?: number | null;

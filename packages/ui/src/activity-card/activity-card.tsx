@@ -2,11 +2,12 @@ import type { HTMLAttributes } from "react";
 import { Card } from "../card";
 import { Icon } from "../icon/icon";
 import { Clock3, MapPin, Ticket } from "../icons";
+import { ImageFill } from "../image-fill";
 import { Loader } from "../loader";
 import { Rating } from "../rating";
 import { Text } from "../text";
 import { cn } from "../utils/cn";
-import { renderImageValue } from "../utils/render-image";
+import { isImageSource, renderImageValue } from "../utils/render-image";
 import { ActivityCardSkeletonContent } from "./activity-card-skeleton";
 import type {
   ActivityCardMetaItem,
@@ -105,6 +106,7 @@ export function ActivityCard({
   const normalizedScore = Number(score) || 0;
   const isBookable = type === "activity";
   const hasPricingFooter = isBookable && Boolean(price);
+  const shouldUseImageFill = !isBookable && isImageSource(image);
   const metaItems =
     meta ??
     getDefaultMeta({
@@ -125,8 +127,19 @@ export function ActivityCard({
       )}
       {...props}
     >
-      <div className="aspect-[4/3] w-full shrink-0 overflow-hidden [&_img]:h-full [&_img]:w-full [&_img]:object-cover">
-        {renderImageValue(image, renderImage)}
+      <div
+        className={cn(
+          "aspect-[4/3] w-full shrink-0 overflow-hidden",
+          shouldUseImageFill
+            ? "bg-gray-100"
+            : "[&_img]:h-full [&_img]:w-full [&_img]:object-cover"
+        )}
+      >
+        {shouldUseImageFill ? (
+          <ImageFill image={image} renderImage={renderImage} />
+        ) : (
+          renderImageValue(image, renderImage)
+        )}
       </div>
       <div className="flex flex-1 flex-col gap-1 p-3.5 pt-4">
         <Text

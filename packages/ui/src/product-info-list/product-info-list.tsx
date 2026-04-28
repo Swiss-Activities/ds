@@ -3,7 +3,10 @@ import { Button } from "../button";
 import { Card } from "../card";
 import { Text } from "../text";
 import { cn } from "../utils/cn";
-import type { BaseProductInfoListProps, ProductInfoListItem } from "./product-info-list.types";
+import type {
+  BaseProductInfoListProps,
+  ProductInfoListItem,
+} from "./product-info-list.types";
 
 export type ProductInfoListProps = BaseProductInfoListProps &
   Omit<HTMLAttributes<HTMLDivElement>, "children">;
@@ -50,14 +53,20 @@ function ProductInfoListContent({
       </Text>
       {subtitle ? (
         <div className="mt-0.5">
-          <ContentText gray className="!text-sm !leading-tight !text-gray-500 lg:!text-xs">
+          <ContentText
+            gray
+            className="!text-sm !leading-tight !text-gray-500 lg:!text-xs"
+          >
             {subtitle}
           </ContentText>
         </div>
       ) : null}
       {details ? (
         <div className="mt-0.5">
-          <ContentText gray className="!text-sm !leading-tight !text-gray-500 lg:!text-xs">
+          <ContentText
+            gray
+            className="!text-sm !leading-tight !text-gray-500 lg:!text-xs"
+          >
             {details}
           </ContentText>
         </div>
@@ -80,7 +89,7 @@ function ProductInfoListItemRow({
     tag,
     {
       className:
-        "flex w-full items-center gap-4 bg-transparent py-4 text-left text-current no-underline",
+        "flex w-full appearance-none items-center gap-4 !border-b-0 !border-l-0 !border-r-0 !border-solid !border-gray-200 bg-transparent py-4 text-left text-current no-underline first:!border-t-0",
       ...(href ? { href } : { type: "button" as const, onClick }),
     },
     <>
@@ -120,7 +129,7 @@ function ProductInfoListItemCard({
         return (
           <Button
             variant="ghost"
-            className={`${className} !h-full !justify-start !text-left !p-3`}
+            className={`${className} !h-full !justify-start !p-3 !text-left`}
             {...buttonProps}
           >
             {children}
@@ -132,10 +141,7 @@ function ProductInfoListItemCard({
         <div className="flex shrink-0 text-gray-700 [&_svg]:h-7 [&_svg]:w-7">
           {icon}
         </div>
-        <ProductInfoListContent
-          title={title}
-          subtitle={details ?? subtitle}
-        />
+        <ProductInfoListContent title={title} subtitle={details ?? subtitle} />
       </div>
     </Card>
   );
@@ -148,7 +154,7 @@ export function ProductInfoList({
 }: ProductInfoListProps) {
   return (
     <div className={cn("w-full", className)} {...props}>
-      <div className="divide-y divide-solid divide-gray-200 border-y border-solid border-gray-200 lg:hidden">
+      <div className="divide-y divide-solid divide-gray-200 border-y !border-l-0 !border-r-0 border-solid border-gray-200 lg:hidden [&>*]:!border-l-0 [&>*]:!border-r-0">
         {items.map((item, index) => (
           <ProductInfoListItemRow
             key={item.id ?? `${String(item.title)}-${index}`}

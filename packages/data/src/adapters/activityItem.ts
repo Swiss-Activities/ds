@@ -14,6 +14,7 @@ export type ActivityItemData = {
   priceLabel: string;
   price: string;
   href: string;
+  detailPath?: string | null;
 };
 
 export type RenderImage = (item: TGatewayHomeItem) => ReactNode;
@@ -50,4 +51,5 @@ export const toActivityItem = (
     ? `${fromLabel} ${getPriceFormatted(item)}`
     : "",
   href: item.path ?? "",
+  detailPath: item.detailPath,
 });
