@@ -2,11 +2,11 @@
 
 import type { HTMLAttributes } from "react";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { cn } from "../utils/cn";
 import { Icon } from "../icon/icon";
 import { ChevronLeft, ChevronRight } from "../icons";
-import type { BaseSliderProps } from "./slider.types";
+import { cn } from "../utils/cn";
 import { renderImageValue } from "../utils/render-image";
+import type { BaseSliderProps } from "./slider.types";
 
 export type SliderProps = BaseSliderProps &
   Omit<HTMLAttributes<HTMLDivElement>, "children">;
@@ -27,15 +27,12 @@ export function Slider({
 
   const allSlides = useMemo(
     () =>
-      loop && total > 1
-        ? [slides[total - 1], ...slides, slides[0]]
-        : slides,
+      loop && total > 1 ? [slides[total - 1], ...slides, slides[0]] : slides,
     [slides, loop, total]
   );
 
-  const realIndex = loop && total > 1
-    ? ((rawIndex - 1 + total) % total)
-    : rawIndex;
+  const realIndex =
+    loop && total > 1 ? (rawIndex - 1 + total) % total : rawIndex;
 
   useEffect(() => {
     if (!loop || total <= 1) return;
@@ -63,12 +60,16 @@ export function Slider({
         isJumping.current = true;
         el.scrollTo({ left: total * el.clientWidth, behavior: "instant" });
         setRawIndex(total);
-        requestAnimationFrame(() => { isJumping.current = false; });
+        requestAnimationFrame(() => {
+          isJumping.current = false;
+        });
       } else if (idx === allSlides.length - 1) {
         isJumping.current = true;
         el.scrollTo({ left: el.clientWidth, behavior: "instant" });
         setRawIndex(1);
-        requestAnimationFrame(() => { isJumping.current = false; });
+        requestAnimationFrame(() => {
+          isJumping.current = false;
+        });
       }
     };
 
@@ -104,7 +105,7 @@ export function Slider({
     >
       <div
         ref={trackRef}
-        className="no-scrollbar h-full w-full snap-x snap-mandatory overflow-x-auto overflow-y-hidden [display:flex] [touch-action:pan-x]"
+        className="no-scrollbar h-full w-full snap-x snap-mandatory overflow-x-auto overflow-y-hidden [display:flex] [touch-action:pan-x_pan-y]"
       >
         {allSlides.map((slide, i) => (
           <div

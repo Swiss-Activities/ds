@@ -57,7 +57,7 @@ export function HorizontalScrollerTrack({
     <ul
       ref={trackRef as React.RefObject<HTMLUListElement>}
       className={cn(
-        "no-scrollbar flex snap-x gap-2 overflow-x-auto overflow-y-hidden [touch-action:pan-x] [&>*]:snap-start",
+        "no-scrollbar flex snap-x gap-2 overflow-x-auto overflow-y-hidden [touch-action:pan-x_pan-y] [&>*]:snap-start",
         bleed && "-mx-4 px-4 sm:mx-0 sm:px-0",
         className
       )}
