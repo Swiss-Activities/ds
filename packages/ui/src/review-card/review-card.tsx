@@ -1,12 +1,12 @@
 import type { HTMLAttributes } from "react";
-import { cn } from "../utils/cn";
-import { Card } from "../card";
 import { Button } from "../button";
+import { Card } from "../card";
+import { Flag } from "../flag";
 import { Icon } from "../icon/icon";
 import { Languages, ThumbsUp } from "../icons";
-import { Text } from "../text";
 import { Rating } from "../rating";
-import { Flag } from "../flag";
+import { Text } from "../text";
+import { cn } from "../utils/cn";
 import type { BaseReviewCardProps } from "./review-card.types";
 
 export type ReviewCardProps = BaseReviewCardProps &
@@ -27,12 +27,21 @@ export function ReviewCard({
 }: ReviewCardProps) {
   return (
     <Card className={cn("flex flex-col !p-4", className)} {...props}>
-      <div className="-mx-4 flex items-center gap-1.5 !border-b !border-t-0 !border-l-0 !border-r-0 !border-solid !border-gray-200 px-4 pb-3">
-        {countryCode && <Flag countryCode={countryCode} />}
-        <Text as="span" size="sm" bold black>
-          {author}
-        </Text>
-        <Text as="span" size="sm" gray className="ms-auto">
+      <div className="-mx-4 flex flex-wrap items-center gap-x-2 gap-y-0.5 !border-b !border-l-0 !border-r-0 !border-t-0 !border-solid !border-gray-200 px-4 pb-3">
+        <span className="flex min-w-0 max-w-full items-center gap-1.5 whitespace-nowrap">
+          {countryCode && <Flag countryCode={countryCode} />}
+          <Text
+            as="span"
+            size="sm"
+            bold
+            black
+            className="min-w-0 max-w-full truncate"
+          >
+            {author}
+          </Text>
+        </span>
+        <span className="min-w-2 flex-1" aria-hidden="true" />
+        <Text as="span" size="sm" gray className="shrink-0">
           {date}
         </Text>
       </div>
@@ -48,7 +57,7 @@ export function ReviewCard({
             >
               <Icon icon={ThumbsUp} size="sm" />
             </Button>
-            <div className="flex items-center !border-l !border-r-0 !border-y-0 !border-solid !border-gray-200 px-2.5">
+            <div className="flex items-center !border-y-0 !border-l !border-r-0 !border-solid !border-gray-200 px-2.5">
               <Text as="span" size="xs" gray>
                 {upvoteCount}
               </Text>
