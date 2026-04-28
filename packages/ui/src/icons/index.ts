@@ -9,6 +9,7 @@ export {
   CloudRain,
   Filter,
   Flame,
+  ImageOff,
   Languages,
   Loader2,
   List,

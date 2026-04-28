@@ -66,6 +66,47 @@ const gatewayTypeActivities = [
   },
 ] satisfies SectionActivityGridProps["activities"];
 
+const imageFallbackActivities = [
+  {
+    type: "activity",
+    title: "Ticket Eiger Express ab Terminal Grindelwald",
+    image: {
+      src: "https://example.invalid/eiger-express.jpg",
+      alt: "Eiger Express",
+    },
+    score: 4.62,
+    reviewCount: 50,
+    priceLabel: "pro Person",
+    price: "ab CHF 37.60",
+  },
+  {
+    type: "non-bookable-event",
+    title: "Sammlungsfieber",
+    image: {
+      src: "https://example.invalid/sammlungsfieber.jpg",
+      alt: "Sammlungsfieber",
+    },
+    subtitle: "Kunstmuseum St.Gallen",
+    category: "Ausstellung",
+    dateRange: "Bis 31. Dez. 2028",
+  },
+  {
+    type: "activity",
+    title: "Static image renderer failure",
+    image: {
+      src: "https://example.invalid/static-renderer.jpg",
+      alt: "Static image renderer failure",
+    },
+    score: 4.8,
+    reviewCount: 24,
+    priceLabel: "pro Person",
+    price: "ab CHF 49",
+    renderImage: ({ src, alt }) => (
+      <img src={src} alt={alt ?? ""} className="h-full w-full object-cover" />
+    ),
+  },
+] satisfies SectionActivityGridProps["activities"];
+
 const meta = {
   title: "Sections/SectionActivityGrid",
   component: SectionActivityGrid,
@@ -108,6 +149,20 @@ export const GatewayTypes: Story = {
   args: {
     title: "Gateway card types",
     activities: gatewayTypeActivities,
+  },
+  render: (args) => (
+    <Page>
+      <div className="sa-container">
+        <SectionActivityGrid {...args} className="pt-6" />
+      </div>
+    </Page>
+  ),
+};
+
+export const ImageFallback: Story = {
+  args: {
+    title: "Image fallback",
+    activities: imageFallbackActivities,
   },
   render: (args) => (
     <Page>

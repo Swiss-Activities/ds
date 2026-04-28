@@ -1,7 +1,14 @@
-import type { HTMLAttributes } from "react";
+"use client";
+
+import {
+  useEffect,
+  useState,
+  type HTMLAttributes,
+  type SyntheticEvent,
+} from "react";
 import { Card } from "../card";
 import { Icon } from "../icon/icon";
-import { Clock3, MapPin, Ticket } from "../icons";
+import { Clock3, ImageOff, MapPin, Ticket } from "../icons";
 import { ImageFill } from "../image-fill";
 import { Loader } from "../loader";
 import { Rating } from "../rating";
@@ -40,6 +47,14 @@ function ActivityCardMetaLine({ icon, label }: ActivityCardMetaItem) {
       ) : null}
       <span className="min-w-0">{label}</span>
     </Text>
+  );
+}
+
+function ActivityCardImageFallback() {
+  return (
+    <div className="flex h-full w-full items-center justify-center bg-gray-100 text-gray-400">
+      <Icon icon={ImageOff} size="lg" />
+    </div>
   );
 }
 
@@ -103,10 +118,12 @@ export function ActivityCard({
   render,
   ...props
 }: ActivityCardProps) {
+  const [imageFailed, setImageFailed] = useState(false);
   const normalizedScore = Number(score) || 0;
   const isBookable = type === "activity";
   const hasPricingFooter = isBookable && Boolean(price);
   const shouldUseImageFill = !isBookable && isImageSource(image);
+  const showImageFallback = imageFailed || !image;
   const metaItems =
     meta ??
     getDefaultMeta({
@@ -116,6 +133,16 @@ export function ActivityCard({
       dateRange,
       distance,
     });
+
+  useEffect(() => {
+    setImageFailed(false);
+  }, [image]);
+
+  const handleImageError = (event: SyntheticEvent<HTMLDivElement, Event>) => {
+    if (event.target instanceof HTMLImageElement) {
+      setImageFailed(true);
+    }
+  };
 
   return (
     <Card
@@ -128,14 +155,17 @@ export function ActivityCard({
       {...props}
     >
       <div
+        onErrorCapture={handleImageError}
         className={cn(
           "aspect-[4/3] w-full shrink-0 overflow-hidden",
-          shouldUseImageFill
+          showImageFallback || shouldUseImageFill
             ? "bg-gray-100"
             : "[&_img]:h-full [&_img]:w-full [&_img]:object-cover"
         )}
       >
-        {shouldUseImageFill ? (
+        {showImageFallback ? (
+          <ActivityCardImageFallback />
+        ) : shouldUseImageFill ? (
           <ImageFill image={image} renderImage={renderImage} />
         ) : (
           renderImageValue(image, renderImage)

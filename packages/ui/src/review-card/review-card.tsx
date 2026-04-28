@@ -1,3 +1,5 @@
+"use client";
+
 import type { HTMLAttributes } from "react";
 import { Button } from "../button";
 import { Card } from "../card";
