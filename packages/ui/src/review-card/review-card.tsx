@@ -7,6 +7,7 @@ import { Languages, ThumbsUp } from "../icons";
 import { Rating } from "../rating";
 import { Text } from "../text";
 import { cn } from "../utils/cn";
+import { useReviewUpvote } from "./use-review-upvote";
 import type { BaseReviewCardProps } from "./review-card.types";
 
 export type ReviewCardProps = BaseReviewCardProps &
@@ -19,12 +20,19 @@ export function ReviewCard({
   rating,
   text,
   images,
+  hideUpvoteCount = false,
   upvoteCount,
   onUpvote,
   translatedFrom,
   className,
   ...props
 }: ReviewCardProps) {
+  const { hasUpvoted, handleUpvote, upvoteDisabled } = useReviewUpvote({
+    onUpvote,
+  });
+  const showUpvoteAction = Boolean(onUpvote || upvoteCount != null);
+  const showUpvoteCount = upvoteCount != null && !hideUpvoteCount;
+
   return (
     <Card className={cn("flex flex-col !p-4", className)} {...props}>
       <div className="-mx-4 flex flex-wrap items-center gap-x-2 gap-y-0.5 !border-b !border-l-0 !border-r-0 !border-t-0 !border-solid !border-gray-200 px-4 pb-3">
@@ -47,21 +55,29 @@ export function ReviewCard({
       </div>
       <div className="mt-3 flex items-center justify-between">
         <Rating score={rating} showScore={false} size="md" />
-        {upvoteCount != null && (
+        {showUpvoteAction && (
           <div className="flex items-stretch overflow-hidden rounded-md !border !border-solid !border-gray-200">
             <Button
-              variant="ghost"
+              variant={hasUpvoted ? "outline-gray" : "ghost"}
               size="sm"
-              onClick={onUpvote}
-              className="!rounded-none !border-none !px-2.5 !py-0 text-gray-400 hover:text-gray-600"
+              onClick={handleUpvote}
+              disabled={upvoteDisabled}
+              className={cn(
+                "!rounded-none !border-none !px-2.5 !py-0",
+                hasUpvoted
+                  ? "!bg-gray-100 text-gray-500"
+                  : "text-gray-400 hover:text-gray-600"
+              )}
             >
               <Icon icon={ThumbsUp} size="sm" />
             </Button>
-            <div className="flex items-center !border-y-0 !border-l !border-r-0 !border-solid !border-gray-200 px-2.5">
-              <Text as="span" size="xs" gray>
-                {upvoteCount}
-              </Text>
-            </div>
+            {showUpvoteCount && (
+              <div className="flex items-center !border-y-0 !border-l !border-r-0 !border-solid !border-gray-200 px-2.5">
+                <Text as="span" size="xs" gray>
+                  {upvoteCount}
+                </Text>
+              </div>
+            )}
           </div>
         )}
       </div>

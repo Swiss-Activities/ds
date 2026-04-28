@@ -1,13 +1,14 @@
 import type { ViewProps } from "react-native";
 import { View } from "react-native-css/components";
 import { Button } from "../button/button.native";
-import { cn } from "../utils/cn";
 import { Card } from "../card/card.native";
+import { Flag } from "../flag/flag.native";
 import { Icon } from "../icon/icon.native";
 import { Languages, ThumbsUp } from "../icons/index.native";
-import { Text } from "../text/text.native";
 import { Rating } from "../rating/rating.native";
-import { Flag } from "../flag/flag.native";
+import { Text } from "../text/text.native";
+import { cn } from "../utils/cn";
+import { useReviewUpvote } from "./use-review-upvote";
 import type { BaseReviewCardProps } from "./review-card.types";
 
 export type ReviewCardProps = BaseReviewCardProps &
@@ -20,12 +21,19 @@ export function ReviewCard({
   rating,
   text,
   images,
+  hideUpvoteCount = false,
   upvoteCount,
   onUpvote,
   translatedFrom,
   className,
   ...props
 }: ReviewCardProps) {
+  const { hasUpvoted, handleUpvote, upvoteDisabled } = useReviewUpvote({
+    onUpvote,
+  });
+  const showUpvoteAction = Boolean(onUpvote || upvoteCount != null);
+  const showUpvoteCount = upvoteCount != null && !hideUpvoteCount;
+
   return (
     <Card className={cn("flex flex-col !p-4", className)} {...props}>
       <View className="-mx-4 flex flex-row items-center gap-1.5 border-b border-solid border-gray-200 px-4 pb-3">
@@ -39,21 +47,29 @@ export function ReviewCard({
       </View>
       <View className="mt-3 flex flex-row items-center justify-between">
         <Rating score={rating} showScore={false} size="md" />
-        {upvoteCount != null && (
+        {showUpvoteAction && (
           <View className="flex flex-row items-stretch rounded-md border border-solid border-gray-200">
             <Button
-              variant="ghost"
+              variant={hasUpvoted ? "outline-gray" : "ghost"}
               size="sm"
-              onPress={onUpvote}
+              onPress={handleUpvote}
+              disabled={upvoteDisabled}
               className="!rounded-none !px-2.5"
-            >
-              <Icon icon={ThumbsUp} size="sm" color="#a1a1aa" />
-            </Button>
-            <View className="flex items-center justify-center border-l border-solid border-gray-200 px-2.5">
-              <Text as="span" size="xs" gray>
-                {upvoteCount}
-              </Text>
-            </View>
+              icon={
+                <Icon
+                  icon={ThumbsUp}
+                  size="sm"
+                  color={hasUpvoted ? "#71717a" : "#a1a1aa"}
+                />
+              }
+            />
+            {showUpvoteCount && (
+              <View className="flex items-center justify-center border-l border-solid border-gray-200 px-2.5">
+                <Text as="span" size="xs" gray>
+                  {upvoteCount}
+                </Text>
+              </View>
+            )}
           </View>
         )}
       </View>

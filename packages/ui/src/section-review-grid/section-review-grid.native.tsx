@@ -26,6 +26,7 @@ export function SectionReviewGrid({
             rating={review.rating}
             text={review.text}
             images={review.images}
+            hideUpvoteCount={review.hideUpvoteCount}
             upvoteCount={review.upvoteCount}
             onUpvote={review.onUpvote}
             translatedFrom={review.translatedFrom}

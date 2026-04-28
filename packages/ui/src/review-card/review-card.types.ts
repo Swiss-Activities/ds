@@ -7,8 +7,9 @@ export type BaseReviewCardProps = {
   rating: number;
   text: string;
   images?: ReactNode[];
+  hideUpvoteCount?: boolean;
   upvoteCount?: number;
-  onUpvote?: () => void;
+  onUpvote?: () => void | Promise<void>;
   translatedFrom?: string;
   className?: string;
 };
