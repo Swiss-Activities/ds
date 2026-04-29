@@ -112,8 +112,13 @@ export function Hero({
   const isLocalized = variant === "localized";
   const hasBottomFade = !!title || isFallback;
   const hasOverlayStack = !!overlay || !!search;
-  const localizedMediaClassName = "h-[196px] sm:h-[228px] lg:h-[264px]";
-  const localizedContentClassName = "h-[120px] sm:h-[132px] lg:h-[144px]";
+  const hasSearchOnlyOverlay = !!search && !overlay;
+  const hasTopFade = isFallback || hasSearchOnlyOverlay;
+  const hasLocalizedContent = isLocalized && !!children;
+  const localizedMediaClassName = hasLocalizedContent
+    ? "h-[196px] sm:h-[240px] lg:h-[288px]"
+    : "h-[196px] sm:h-[228px] lg:h-[264px]";
+  const localizedContentClassName = "h-[120px]";
   const fallbackMediaClassName = "h-[316px] sm:h-[360px] lg:h-[408px]";
 
   return (
@@ -141,7 +146,7 @@ export function Hero({
           {hasBack && (
             <div className="pointer-events-none absolute inset-x-0 top-0 z-20 h-20 bg-gradient-to-b from-blue/50 to-transparent" />
           )}
-          {isFallback ? (
+          {hasTopFade ? (
             <div className="pointer-events-none absolute inset-x-0 top-0 z-10 h-1/2 bg-gradient-to-b from-blue/55 to-transparent" />
           ) : null}
           {hasBottomFade && (
@@ -180,7 +185,7 @@ export function Hero({
               isLocalized
                 ? cn(
                     localizedContentClassName,
-                    "flex items-center px-4 py-3 sm:px-6 sm:py-4 lg:px-8 lg:py-5"
+                    "flex items-center px-4 pb-4 sm:px-6 sm:pb-6 lg:px-8 lg:pb-8"
                   )
                 : "p-4 sm:p-6 lg:p-8"
             )}
@@ -195,7 +200,9 @@ export function Hero({
             "pointer-events-none absolute inset-0 z-40 flex justify-center px-4 sm:px-8 md:px-10 lg:px-12",
             isFallback
               ? "items-start pt-12 lg:pt-16"
-              : "items-center py-6 sm:py-8 md:py-10 lg:py-12"
+              : hasSearchOnlyOverlay
+                ? "items-start pt-10 sm:pt-12 lg:pt-16"
+                : "items-center py-6 sm:py-8 md:py-10 lg:py-12"
           )}
         >
           <div
@@ -210,7 +217,12 @@ export function Hero({
               </div>
             ) : null}
             {search ? (
-              <div className="flex w-full items-center justify-center">
+              <div
+                className={cn(
+                  "flex w-full items-center justify-center",
+                  hasSearchOnlyOverlay && "mt-4"
+                )}
+              >
                 {search}
               </div>
             ) : null}
