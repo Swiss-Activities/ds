@@ -13,7 +13,14 @@ import { useSilentCoordinates } from "../hooks/useSilentCoordinates";
 import type { TGatewayHome } from "../gateway/types";
 import type { DataConfig } from "../types";
 
-export type AppGatewaySelectItem = (id: string) => void;
+export type AppGatewaySelectItemOptions = {
+  title?: string;
+};
+
+export type AppGatewaySelectItem = (
+  id: string,
+  options?: AppGatewaySelectItemOptions
+) => void;
 
 export type AppGatewayFallbackHeroArgs = {
   selectedTabId?: string;
@@ -56,6 +63,8 @@ export type AppGatewayRenderPageArgs<TSection> = {
 export type AppGatewayRenderItemViewArgs<TItemData = unknown> = {
   selectedItemId: string;
   selectedItemData?: TItemData;
+  selectedItemLabel?: string;
+  previousItemLabel?: string;
   pendingItemId?: string | null;
   selectedTabId?: string;
   onBack: () => void;
@@ -87,6 +96,12 @@ type AppGatewayContentProps<TSection, THero, TItemData> = BaseAppGatewayProps<
   THero,
   TItemData
 >;
+
+type SelectedItemHistoryEntry<TItemData> = {
+  id: string;
+  data: TItemData | null;
+  label: string | null;
+};
 
 const normalizeLocale = (locale?: string | null) =>
   locale ? locale.replace("_", "-") : undefined;
@@ -169,6 +184,12 @@ function AppGatewayContent<TSection, THero, TItemData>({
   const [selectedItemData, setSelectedItemData] = useState<TItemData | null>(
     null
   );
+  const [selectedItemLabel, setSelectedItemLabel] = useState<string | null>(
+    null
+  );
+  const [selectedItemHistory, setSelectedItemHistory] = useState<
+    SelectedItemHistoryEntry<TItemData>[]
+  >([]);
   const [pendingItemId, setPendingItemId] = useState<string | null>(null);
   const [country, setCountry] = useState<string | null>(null);
   const [countryFetched, setCountryFetched] = useState(false);
@@ -187,7 +208,7 @@ function AppGatewayContent<TSection, THero, TItemData>({
   const canSelectItem = Boolean(renderItemView);
 
   const handleSelectItem = useCallback(
-    async (id: string) => {
+    async (id: string, options?: AppGatewaySelectItemOptions) => {
       if (!canSelectItem) {
         return;
       }
@@ -197,8 +218,20 @@ function AppGatewayContent<TSection, THero, TItemData>({
       }
 
       if (!loadItem) {
+        if (selectedItemId) {
+          setSelectedItemHistory((current) => [
+            ...current,
+            {
+              id: selectedItemId,
+              data: selectedItemData,
+              label: selectedItemLabel,
+            },
+          ]);
+        }
+
         setSelectedItemData(null);
         setSelectedItemId(id);
+        setSelectedItemLabel(options?.title ?? null);
         scrollToTop();
         return;
       }
@@ -212,22 +245,54 @@ function AppGatewayContent<TSection, THero, TItemData>({
           return;
         }
 
+        if (selectedItemId) {
+          setSelectedItemHistory((current) => [
+            ...current,
+            {
+              id: selectedItemId,
+              data: selectedItemData,
+              label: selectedItemLabel,
+            },
+          ]);
+        }
+
         setSelectedItemData(itemData);
         setSelectedItemId(id);
+        setSelectedItemLabel(options?.title ?? null);
       } catch (error) {
         console.error("Failed to load selected app gateway item", error);
       } finally {
         setPendingItemId(null);
       }
     },
-    [canSelectItem, loadItem, pendingItemId, selectedItemId]
+    [
+      canSelectItem,
+      loadItem,
+      pendingItemId,
+      selectedItemData,
+      selectedItemId,
+      selectedItemLabel,
+    ]
   );
 
   const handleBack = useCallback(() => {
+    const previousItem = selectedItemHistory[selectedItemHistory.length - 1];
+
+    if (previousItem) {
+      setSelectedItemHistory((current) => current.slice(0, -1));
+      setSelectedItemId(previousItem.id);
+      setSelectedItemData(previousItem.data);
+      setSelectedItemLabel(previousItem.label);
+      setPendingItemId(null);
+      return;
+    }
+
     setSelectedItemId(null);
     setSelectedItemData(null);
+    setSelectedItemLabel(null);
+    setSelectedItemHistory([]);
     setPendingItemId(null);
-  }, []);
+  }, [selectedItemHistory]);
 
   useLayoutEffect(() => {
     const previousId = previousSelectedItemId.current;
@@ -410,6 +475,10 @@ function AppGatewayContent<TSection, THero, TItemData>({
         {renderItemView({
           selectedItemId,
           selectedItemData: selectedItemData ?? undefined,
+          selectedItemLabel: selectedItemLabel ?? undefined,
+          previousItemLabel:
+            selectedItemHistory[selectedItemHistory.length - 1]?.label ??
+            undefined,
           pendingItemId,
           selectedTabId,
           onBack: handleBack,

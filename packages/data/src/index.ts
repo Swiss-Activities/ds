@@ -11,6 +11,7 @@ export type {
   AppGatewayRenderItemViewArgs,
   AppGatewayRenderPageArgs,
   AppGatewaySelectItem,
+  AppGatewaySelectItemOptions,
   BaseAppGatewayProps,
 } from "./app-gateway";
 
