@@ -49,6 +49,8 @@ export type AppGatewayRenderPageArgs<TSection> = {
   hero: ReactNode;
   sections: TSection[];
   isGatewayLoading: boolean;
+  pendingItemId?: string | null;
+  onSelectItem?: AppGatewaySelectItem;
 };
 
 export type AppGatewayRenderItemViewArgs<TItemData = unknown> = {
@@ -424,6 +426,8 @@ function AppGatewayContent<TSection, THero, TItemData>({
           hero: fallbackHeroWithTabs,
           sections: fallbackSections,
           isGatewayLoading: false,
+          pendingItemId,
+          onSelectItem: canSelectItem ? handleSelectItem : undefined,
         })}
       </>
     );
@@ -436,6 +440,8 @@ function AppGatewayContent<TSection, THero, TItemData>({
           hero: renderLoadingHero ? renderLoadingHero() : fallbackHeroWithTabs,
           sections: fallbackSections,
           isGatewayLoading: true,
+          pendingItemId,
+          onSelectItem: canSelectItem ? handleSelectItem : undefined,
         })}
       </>
     );
@@ -456,6 +462,8 @@ function AppGatewayContent<TSection, THero, TItemData>({
           }),
           sections: mappedGatewayData.sections,
           isGatewayLoading: false,
+          pendingItemId,
+          onSelectItem: canSelectItem ? handleSelectItem : undefined,
         })}
       </>
     );
@@ -467,6 +475,8 @@ function AppGatewayContent<TSection, THero, TItemData>({
         hero: fallbackHeroWithTabs,
         sections: fallbackSections,
         isGatewayLoading: false,
+        pendingItemId,
+        onSelectItem: canSelectItem ? handleSelectItem : undefined,
       })}
     </>
   );
