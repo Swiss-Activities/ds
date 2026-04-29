@@ -57,3 +57,41 @@ export type TGatewayHomeParams = {
   lng?: number | null;
   country?: string;
 };
+
+export type TGatewayDetail = {
+  id?: string;
+  type?: string;
+  title?: string;
+  coverImage?: string | null;
+  description?: string | null;
+  dateStart?: string | null;
+  dateEnd?: string | null;
+  isPermanent?: boolean | null;
+  isActive?: boolean | null;
+  openingHoursText?: string | null;
+  admissionPricesText?: string | null;
+  priceInfoText?: string | null;
+  address?: string | null;
+  website?: string | null;
+  homepage?: string | null;
+  sourceUrl?: string | null;
+  phone?: string | null;
+  museumCategory?: string | null;
+  foundedYear?: number | null;
+  canton?: string | null;
+  tags?: string[];
+  photos?: string[];
+  badges?: string[];
+  amenities?: Record<string, boolean | number | null | undefined>;
+  venue?: {
+    title?: string | null;
+    address?: string | null;
+    openingHoursText?: string | null;
+    admissionPricesText?: string | null;
+    website?: string | null;
+    homepage?: string | null;
+    sourceUrl?: string | null;
+    photos?: string[];
+  } | null;
+  nearbySection?: TGatewayHomeCarouselSection | null;
+};

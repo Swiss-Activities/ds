@@ -9,12 +9,14 @@ import {
   useState,
   type ReactNode,
 } from "react";
+import { flushSync } from "react-dom";
 import { useSilentCoordinates } from "../hooks/useSilentCoordinates";
 import type { TGatewayHome } from "../gateway/types";
 import type { DataConfig } from "../types";
 
 export type AppGatewaySelectItemOptions = {
   title?: string;
+  skipHistory?: boolean;
 };
 
 export type AppGatewaySelectItem = (
@@ -89,6 +91,14 @@ export type BaseAppGatewayProps<TSection, THero, TItemData = unknown> =
   renderPage: (args: AppGatewayRenderPageArgs<TSection>) => ReactNode;
   renderItemView?: (args: AppGatewayRenderItemViewArgs<TItemData>) => ReactNode;
   loadItem?: (id: string) => Promise<TItemData | null>;
+  urlSelectedItemId?: string | null;
+  onSelectItemUrl?: (
+    id: string,
+    options?: AppGatewaySelectItemOptions
+  ) => void;
+  onBackItemUrl?: () => void;
+  preserveSelectedItemView?: boolean;
+  onGatewayData?: (data: TGatewayHome) => void;
 };
 
 type AppGatewayContentProps<TSection, THero, TItemData> = BaseAppGatewayProps<
@@ -176,6 +186,11 @@ function AppGatewayContent<TSection, THero, TItemData>({
   renderPage,
   renderItemView,
   loadItem,
+  urlSelectedItemId,
+  onSelectItemUrl,
+  onBackItemUrl,
+  preserveSelectedItemView = false,
+  onGatewayData,
 }: AppGatewayContentProps<TSection, THero, TItemData>) {
   const [selectedTabId, setSelectedTabId] = useState<string | undefined>(
     initialFallbackTabId
@@ -197,6 +212,10 @@ function AppGatewayContent<TSection, THero, TItemData>({
   const [isLoading, setIsLoading] = useState(false);
   const [isError, setIsError] = useState(false);
   const previousSelectedItemId = useRef<string | null>(null);
+  const pendingUrlSelectedItemId = useRef<string | null>(null);
+  const pendingUrlSelectedItemTimer = useRef<ReturnType<
+    typeof setTimeout
+  > | null>(null);
 
   const { coords, ready: coordsReady } = useSilentCoordinates();
 
@@ -206,6 +225,60 @@ function AppGatewayContent<TSection, THero, TItemData>({
   const isPreparing = enabled && (!countryFetched || !coordsReady);
 
   const canSelectItem = Boolean(renderItemView);
+
+  const clearPendingUrlSelectedItem = useCallback(() => {
+    pendingUrlSelectedItemId.current = null;
+
+    if (pendingUrlSelectedItemTimer.current) {
+      clearTimeout(pendingUrlSelectedItemTimer.current);
+      pendingUrlSelectedItemTimer.current = null;
+    }
+  }, []);
+
+  const markPendingUrlSelectedItem = useCallback(
+    (id: string) => {
+      clearPendingUrlSelectedItem();
+      pendingUrlSelectedItemId.current = id;
+      pendingUrlSelectedItemTimer.current = setTimeout(() => {
+        pendingUrlSelectedItemId.current = null;
+        pendingUrlSelectedItemTimer.current = null;
+      }, 1000);
+    },
+    [clearPendingUrlSelectedItem]
+  );
+
+  useEffect(
+    () => () => {
+      clearPendingUrlSelectedItem();
+    },
+    [clearPendingUrlSelectedItem]
+  );
+
+  const clearSelectedItem = useCallback(() => {
+    setSelectedItemId(null);
+    setSelectedItemData(null);
+    setSelectedItemLabel(null);
+    setSelectedItemHistory([]);
+    setPendingItemId(null);
+  }, []);
+
+  const restorePreviousItem = useCallback(
+    () => {
+      const previousItem = selectedItemHistory[selectedItemHistory.length - 1];
+
+      if (previousItem) {
+        setSelectedItemHistory((current) => current.slice(0, -1));
+        setSelectedItemId(previousItem.id);
+        setSelectedItemData(previousItem.data);
+        setSelectedItemLabel(previousItem.label);
+        setPendingItemId(null);
+        return;
+      }
+
+      clearSelectedItem();
+    },
+    [clearSelectedItem, selectedItemHistory]
+  );
 
   const handleSelectItem = useCallback(
     async (id: string, options?: AppGatewaySelectItemOptions) => {
@@ -217,26 +290,47 @@ function AppGatewayContent<TSection, THero, TItemData>({
         return;
       }
 
-      if (!loadItem) {
-        if (selectedItemId) {
-          setSelectedItemHistory((current) => [
-            ...current,
-            {
-              id: selectedItemId,
-              data: selectedItemData,
-              label: selectedItemLabel,
-            },
-          ]);
+      const commitSelectionState = (update: () => void) => {
+        if (options?.skipHistory) {
+          update();
+          return;
         }
 
-        setSelectedItemData(null);
-        setSelectedItemId(id);
-        setSelectedItemLabel(options?.title ?? null);
+        flushSync(update);
+      };
+
+      if (!loadItem) {
+        commitSelectionState(() => {
+          if (selectedItemId && !options?.skipHistory) {
+            setSelectedItemHistory((current) => [
+              ...current,
+              {
+                id: selectedItemId,
+                data: selectedItemData,
+                label: selectedItemLabel,
+              },
+            ]);
+          }
+
+          setSelectedItemData(null);
+          setSelectedItemId(id);
+          setSelectedItemLabel(options?.title ?? null);
+        });
+
+        if (!options?.skipHistory) {
+          markPendingUrlSelectedItem(id);
+          onSelectItemUrl?.(id, options);
+        }
         scrollToTop();
         return;
       }
 
       setPendingItemId(id);
+
+      if (!options?.skipHistory) {
+        markPendingUrlSelectedItem(id);
+        onSelectItemUrl?.(id, options);
+      }
 
       try {
         const itemData = await loadItem(id);
@@ -245,20 +339,23 @@ function AppGatewayContent<TSection, THero, TItemData>({
           return;
         }
 
-        if (selectedItemId) {
-          setSelectedItemHistory((current) => [
-            ...current,
-            {
-              id: selectedItemId,
-              data: selectedItemData,
-              label: selectedItemLabel,
-            },
-          ]);
-        }
+        commitSelectionState(() => {
+          if (selectedItemId && !options?.skipHistory) {
+            setSelectedItemHistory((current) => [
+              ...current,
+              {
+                id: selectedItemId,
+                data: selectedItemData,
+                label: selectedItemLabel,
+              },
+            ]);
+          }
 
-        setSelectedItemData(itemData);
-        setSelectedItemId(id);
-        setSelectedItemLabel(options?.title ?? null);
+          setSelectedItemData(itemData);
+          setSelectedItemId(id);
+          setSelectedItemLabel(options?.title ?? null);
+        });
+        scrollToTop();
       } catch (error) {
         console.error("Failed to load selected app gateway item", error);
       } finally {
@@ -267,7 +364,10 @@ function AppGatewayContent<TSection, THero, TItemData>({
     },
     [
       canSelectItem,
+      clearSelectedItem,
       loadItem,
+      markPendingUrlSelectedItem,
+      onSelectItemUrl,
       pendingItemId,
       selectedItemData,
       selectedItemId,
@@ -276,23 +376,67 @@ function AppGatewayContent<TSection, THero, TItemData>({
   );
 
   const handleBack = useCallback(() => {
-    const previousItem = selectedItemHistory[selectedItemHistory.length - 1];
+    scrollToTop();
 
-    if (previousItem) {
-      setSelectedItemHistory((current) => current.slice(0, -1));
-      setSelectedItemId(previousItem.id);
-      setSelectedItemData(previousItem.data);
-      setSelectedItemLabel(previousItem.label);
-      setPendingItemId(null);
+    if (onBackItemUrl) {
+      onBackItemUrl();
       return;
     }
 
-    setSelectedItemId(null);
-    setSelectedItemData(null);
-    setSelectedItemLabel(null);
-    setSelectedItemHistory([]);
-    setPendingItemId(null);
-  }, [selectedItemHistory]);
+    restorePreviousItem();
+  }, [onBackItemUrl, restorePreviousItem]);
+
+  useEffect(() => {
+    if (!canSelectItem) {
+      return;
+    }
+
+    const pendingUrlId = pendingUrlSelectedItemId.current;
+
+    if (pendingUrlId) {
+      if (urlSelectedItemId === pendingUrlId) {
+        clearPendingUrlSelectedItem();
+      } else if (
+        selectedItemId === pendingUrlId ||
+        pendingItemId === pendingUrlId
+      ) {
+        return;
+      } else {
+        clearPendingUrlSelectedItem();
+      }
+    }
+
+    if (!urlSelectedItemId) {
+      if (preserveSelectedItemView) {
+        return;
+      }
+
+      if (selectedItemId) {
+        clearSelectedItem();
+      }
+      return;
+    }
+
+    if (
+      urlSelectedItemId === selectedItemId ||
+      urlSelectedItemId === pendingItemId
+    ) {
+      return;
+    }
+
+    void handleSelectItem(urlSelectedItemId, {
+      skipHistory: true,
+    });
+  }, [
+    canSelectItem,
+    clearPendingUrlSelectedItem,
+    clearSelectedItem,
+    handleSelectItem,
+    pendingItemId,
+    preserveSelectedItemView,
+    selectedItemId,
+    urlSelectedItemId,
+  ]);
 
   useLayoutEffect(() => {
     const previousId = previousSelectedItemId.current;
@@ -400,6 +544,7 @@ function AppGatewayContent<TSection, THero, TItemData>({
         }
 
         setData(nextData);
+        onGatewayData?.(nextData);
         setIsLoading(false);
         setIsError(false);
       })
@@ -426,6 +571,7 @@ function AppGatewayContent<TSection, THero, TItemData>({
     countryFetched,
     enabled,
     normalizedLocale,
+    onGatewayData,
   ]);
 
   const mappedGatewayData = useMemo(() => {
