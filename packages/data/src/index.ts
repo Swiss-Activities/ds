@@ -5,6 +5,7 @@ export { AppGateway } from "./app-gateway";
 export type {
   AppGatewayFallbackHeroArgs,
   AppGatewayFallbackSectionsArgs,
+  AppGatewayContext,
   AppGatewayMapGatewayDataArgs,
   AppGatewayMappedData,
   AppGatewayRenderGatewayHeroArgs,

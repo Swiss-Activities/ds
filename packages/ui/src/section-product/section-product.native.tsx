@@ -28,6 +28,7 @@ export function SectionProduct({
   relatedActivitiesTitle,
   relatedActivitiesAction,
   relatedActivities,
+  relatedActivitiesRef: _relatedActivitiesRef,
   className,
   ...props
 }: SectionProductProps) {

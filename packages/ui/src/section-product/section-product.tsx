@@ -113,6 +113,7 @@ export function SectionProduct({
   relatedActivitiesTitle,
   relatedActivitiesAction,
   relatedActivities,
+  relatedActivitiesRef,
   className,
   ...props
 }: SectionProductProps) {
@@ -225,7 +226,7 @@ export function SectionProduct({
           ) : null}
 
           {hasRelatedActivities ? (
-            <section>
+            <section ref={relatedActivitiesRef}>
               <div className={containerClassName}>
                 <SectionActivityGrid
                   title={relatedActivitiesTitle as NonNullable<

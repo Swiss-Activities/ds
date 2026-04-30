@@ -1,4 +1,4 @@
-import type { ReactNode } from "react";
+import type { ReactNode, Ref } from "react";
 import type { BaseContentBlocksProps } from "../content-blocks/content-blocks.types";
 import type { BaseInfoBadgeProps } from "../info-badge/info-badge.types";
 import type { BaseProductInfoListProps } from "../product-info-list/product-info-list.types";
@@ -27,5 +27,6 @@ export type BaseSectionProductProps = {
   relatedActivitiesTitle?: BaseSectionActivityGridProps["title"];
   relatedActivitiesAction?: BaseSectionActivityGridProps["action"];
   relatedActivities?: BaseSectionActivityGridProps["activities"];
+  relatedActivitiesRef?: Ref<HTMLElement>;
   className?: string;
 };

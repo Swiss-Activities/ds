@@ -14,6 +14,13 @@ import { useSilentCoordinates } from "../hooks/useSilentCoordinates";
 import type { TGatewayHome } from "../gateway/types";
 import type { DataConfig } from "../types";
 
+export type AppGatewayContext = {
+  locale?: string;
+  country?: string | null;
+  lat?: number | null;
+  lng?: number | null;
+};
+
 export type AppGatewaySelectItemOptions = {
   title?: string;
   skipHistory?: boolean;
@@ -99,6 +106,7 @@ export type BaseAppGatewayProps<TSection, THero, TItemData = unknown> =
   onBackItemUrl?: () => void;
   preserveSelectedItemView?: boolean;
   onGatewayData?: (data: TGatewayHome) => void;
+  onGatewayContext?: (context: AppGatewayContext) => void;
 };
 
 type AppGatewayContentProps<TSection, THero, TItemData> = BaseAppGatewayProps<
@@ -191,6 +199,7 @@ function AppGatewayContent<TSection, THero, TItemData>({
   onBackItemUrl,
   preserveSelectedItemView = false,
   onGatewayData,
+  onGatewayContext,
 }: AppGatewayContentProps<TSection, THero, TItemData>) {
   const [selectedTabId, setSelectedTabId] = useState<string | undefined>(
     initialFallbackTabId
@@ -514,6 +523,28 @@ function AppGatewayContent<TSection, THero, TItemData>({
       cancelled = true;
     };
   }, [enabled, resolvedTraceUrl]);
+
+  useEffect(() => {
+    if (!enabled || !countryFetched || !coordsReady) {
+      return;
+    }
+
+    onGatewayContext?.({
+      locale: normalizedLocale,
+      country,
+      lat: coords?.latitude ?? null,
+      lng: coords?.longitude ?? null,
+    });
+  }, [
+    coords?.latitude,
+    coords?.longitude,
+    coordsReady,
+    country,
+    countryFetched,
+    enabled,
+    normalizedLocale,
+    onGatewayContext,
+  ]);
 
   useEffect(() => {
     if (!enabled) {

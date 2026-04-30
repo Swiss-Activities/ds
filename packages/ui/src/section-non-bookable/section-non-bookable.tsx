@@ -204,6 +204,7 @@ export function SectionNonBookable({
   relatedActivitiesTitle,
   relatedActivitiesAction,
   relatedActivities,
+  relatedActivitiesRef,
   className,
   ...props
 }: SectionNonBookableProps) {
@@ -276,7 +277,7 @@ export function SectionNonBookable({
         ) : null}
 
         {hasRelatedActivities ? (
-          <section className="mt-8 lg:mt-0">
+          <section ref={relatedActivitiesRef} className="mt-8 lg:mt-0">
             <div className={containerClassName}>
               <SectionActivityGrid
                 title={relatedActivitiesTitle}

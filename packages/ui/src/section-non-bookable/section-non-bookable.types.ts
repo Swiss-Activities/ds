@@ -1,4 +1,4 @@
-import type { ReactNode } from "react";
+import type { ReactNode, Ref } from "react";
 import type { BaseProductInfoListProps } from "../product-info-list/product-info-list.types";
 import type { BaseSectionActivityGridProps } from "../section-activity-grid/section-activity-grid.types";
 import type { ImageValue, RenderImage } from "../utils/render-image";
@@ -37,5 +37,6 @@ export type BaseSectionNonBookableProps = {
   relatedActivitiesTitle?: BaseSectionActivityGridProps["title"];
   relatedActivitiesAction?: BaseSectionActivityGridProps["action"];
   relatedActivities?: BaseSectionActivityGridProps["activities"];
+  relatedActivitiesRef?: Ref<HTMLElement>;
   className?: string;
 };

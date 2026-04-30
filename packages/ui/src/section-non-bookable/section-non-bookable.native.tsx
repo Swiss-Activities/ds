@@ -15,6 +15,7 @@ export function SectionNonBookable({
   description,
   highlights,
   detailSections,
+  relatedActivitiesRef: _relatedActivitiesRef,
   className,
   ...props
 }: SectionNonBookableProps) {
