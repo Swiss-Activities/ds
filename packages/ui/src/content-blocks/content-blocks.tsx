@@ -2,12 +2,15 @@
 
 import type { HTMLAttributes } from "react";
 import { memo, useEffect, useMemo, useRef } from "react";
+import { Accordion } from "../accordion";
 import { Icon } from "../icon/icon";
 import { List } from "../icons";
-import { cn } from "../utils/cn";
 import { Text } from "../text";
-import { Accordion } from "../accordion";
-import type { BaseContentBlocksProps, ContentBlockItem } from "./content-blocks.types";
+import { cn } from "../utils/cn";
+import type {
+  BaseContentBlocksProps,
+  ContentBlockItem,
+} from "./content-blocks.types";
 
 export type ContentBlocksProps = BaseContentBlocksProps &
   Omit<HTMLAttributes<HTMLDivElement>, "children">;
@@ -121,7 +124,14 @@ export const ContentBlocks = memo(function ContentBlocks({
   );
 
   return (
-    <div ref={containerRef} className={cn(className)} {...props}>
+    <div
+      ref={containerRef}
+      className={cn(
+        "[--sa-content-blocks-sticky-offset:var(--sticky-top,var(--h-header,0px))] [--sa-content-blocks-vh:var(--vh,100vh)]",
+        className
+      )}
+      {...props}
+    >
       <div className="lg:hidden">
         <Accordion items={accordionItems} />
       </div>
@@ -136,7 +146,7 @@ export const ContentBlocks = memo(function ContentBlocks({
             </div>
           ))}
         </div>
-        <div className="sticky top-6 h-max max-h-[calc(100vh-48px)] overflow-y-auto rounded-lg border border-solid border-gray-200 p-6 shadow-sm">
+        <div className="sticky top-[calc(var(--sa-content-blocks-sticky-offset)+24px)] h-max max-h-[calc(var(--sa-content-blocks-vh)-var(--sa-content-blocks-sticky-offset)-48px)] overflow-y-auto rounded-lg border border-solid border-gray-200 p-6 shadow-sm">
           <TocNav items={items} tocTitle={tocTitle} />
         </div>
       </div>

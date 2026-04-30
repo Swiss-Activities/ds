@@ -1,9 +1,9 @@
 import type { ViewProps } from "react-native";
 import { View } from "react-native-css/components";
-import { cn } from "../utils/cn";
+import { Breadcrumbs } from "../breadcrumbs/breadcrumbs.native";
 import { Hero } from "../hero/hero.native";
 import { Text } from "../text/text.native";
-import { Breadcrumbs } from "../breadcrumbs/breadcrumbs.native";
+import { cn } from "../utils/cn";
 import type { BaseSectionProductProps } from "./section-product.types";
 
 export type SectionProductProps = BaseSectionProductProps &
@@ -25,6 +25,7 @@ export function SectionProduct({
   reviews,
   contentItems,
   contentTocTitle,
+  contentBlocksClassName: _contentBlocksClassName,
   relatedActivitiesTitle,
   relatedActivitiesAction,
   relatedActivities,
@@ -34,11 +35,7 @@ export function SectionProduct({
 }: SectionProductProps) {
   return (
     <View className={cn("flex flex-col", className)} {...props}>
-      <Hero
-        images={images}
-        backLabel={backLabel}
-        onBack={onBack}
-      />
+      <Hero images={images} backLabel={backLabel} onBack={onBack} />
       <View className="px-4">
         {breadcrumbs && breadcrumbs.length > 0 && (
           <Breadcrumbs items={breadcrumbs} ignoreLast className="mt-3" />

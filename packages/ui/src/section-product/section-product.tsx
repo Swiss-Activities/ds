@@ -1,19 +1,23 @@
 import { createElement, type HTMLAttributes } from "react";
-import { cn } from "../utils/cn";
+import { Breadcrumbs } from "../breadcrumbs";
+import { ContentBlocks } from "../content-blocks";
 import { Hero } from "../hero";
 import { Icon } from "../icon/icon";
 import { ChevronLeft } from "../icons";
-import { Slider } from "../slider";
-import { Text } from "../text";
-import { Breadcrumbs } from "../breadcrumbs";
-import { Rating } from "../rating";
 import { InfoBadge } from "../info-badge";
 import { ProductInfoList } from "../product-info-list";
-import { SectionReviewGrid } from "../section-review-grid";
-import { ContentBlocks } from "../content-blocks";
+import { Rating } from "../rating";
 import { SectionActivityGrid } from "../section-activity-grid";
+import { SectionReviewGrid } from "../section-review-grid";
+import { Slider } from "../slider";
+import { Text } from "../text";
+import { cn } from "../utils/cn";
+import {
+  renderImageValue,
+  type ImageValue,
+  type RenderImage,
+} from "../utils/render-image";
 import type { BaseSectionProductProps } from "./section-product.types";
-import { renderImageValue, type ImageValue, type RenderImage } from "../utils/render-image";
 
 function BackLink({
   label,
@@ -60,7 +64,7 @@ function GalleryGrid({
 }) {
   const thumbs = images.slice(1, 5);
   return (
-    <div className="hidden h-[360px] grid-cols-4 grid-rows-2 gap-1 overflow-hidden lg:rounded-lg md:grid">
+    <div className="hidden h-[360px] grid-cols-4 grid-rows-2 gap-1 overflow-hidden md:grid lg:rounded-lg">
       <div className="relative col-span-2 row-span-2 overflow-hidden lg:rounded-s-lg">
         <Slider
           slides={images}
@@ -110,6 +114,7 @@ export function SectionProduct({
   reviews,
   contentItems,
   contentTocTitle,
+  contentBlocksClassName,
   relatedActivitiesTitle,
   relatedActivitiesAction,
   relatedActivities,
@@ -124,9 +129,11 @@ export function SectionProduct({
   const hasRelatedActivities = Boolean(
     relatedActivities?.length && relatedActivitiesTitle
   );
-  const hasLowerSections = hasInfoItems || hasReviews || hasContent || hasRelatedActivities;
+  const hasLowerSections =
+    hasInfoItems || hasReviews || hasContent || hasRelatedActivities;
   const reviewsSectionClassName = "bg-bg py-8 lg:py-10";
-  const lowerSectionsClassName = "grid grid-cols-1 gap-8 pt-8 lg:gap-10 lg:pt-10";
+  const lowerSectionsClassName =
+    "grid grid-cols-1 gap-8 pt-8 lg:gap-10 lg:pt-10";
 
   return (
     <div {...props}>
@@ -167,7 +174,10 @@ export function SectionProduct({
           <div className="mt-4 flex flex-wrap items-center gap-6 lg:mt-6">
             {rating ? <Rating {...rating} stacked /> : null}
             {badges?.map((badge, index) => (
-              <div key={`${badge.title}-${index}`} className="flex items-center gap-6">
+              <div
+                key={`${badge.title}-${index}`}
+                className="flex items-center gap-6"
+              >
                 {(rating || index > 0) && (
                   <div className="h-8 w-px bg-gray-200" />
                 )}
@@ -220,6 +230,7 @@ export function SectionProduct({
                 <ContentBlocks
                   items={contentItems ?? []}
                   tocTitle={contentTocTitle}
+                  className={contentBlocksClassName}
                 />
               </div>
             </section>
@@ -229,9 +240,11 @@ export function SectionProduct({
             <section ref={relatedActivitiesRef}>
               <div className={containerClassName}>
                 <SectionActivityGrid
-                  title={relatedActivitiesTitle as NonNullable<
-                    typeof relatedActivitiesTitle
-                  >}
+                  title={
+                    relatedActivitiesTitle as NonNullable<
+                      typeof relatedActivitiesTitle
+                    >
+                  }
                   action={relatedActivitiesAction}
                   activities={relatedActivities ?? []}
                 />

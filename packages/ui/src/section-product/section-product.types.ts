@@ -24,6 +24,7 @@ export type BaseSectionProductProps = {
   reviews?: BaseSectionReviewGridProps["reviews"];
   contentItems?: BaseContentBlocksProps["items"];
   contentTocTitle?: BaseContentBlocksProps["tocTitle"];
+  contentBlocksClassName?: BaseContentBlocksProps["className"];
   relatedActivitiesTitle?: BaseSectionActivityGridProps["title"];
   relatedActivitiesAction?: BaseSectionActivityGridProps["action"];
   relatedActivities?: BaseSectionActivityGridProps["activities"];
