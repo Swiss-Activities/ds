@@ -26,9 +26,6 @@ type ImageMeta = {
 };
 
 const defaultBackgroundColor = "#f3f4f6";
-const defaultMinLandscapeRatio = 1.15;
-const defaultMinLandscapeWidth = 960;
-
 function getAverageColor(image: HTMLImageElement) {
   try {
     const canvas = document.createElement("canvas");
@@ -50,27 +47,12 @@ function getAverageColor(image: HTMLImageElement) {
   }
 }
 
-function getNaturalImageStyle(meta: ImageMeta | null) {
-  if (!meta) {
-    return undefined;
-  }
-
-  return {
-    maxWidth: `${meta.width}px`,
-    maxHeight: `${meta.height}px`,
-  };
-}
-
 function useResolvedMode({
   mode,
   meta,
-  minLandscapeRatio,
-  minLandscapeWidth,
 }: {
   mode: NonNullable<BaseImageFillProps["mode"]>;
   meta: ImageMeta | null;
-  minLandscapeRatio: number;
-  minLandscapeWidth: number;
 }) {
   return useMemo(() => {
     if (mode !== "auto") {
@@ -82,11 +64,9 @@ function useResolvedMode({
     }
 
     const ratio = meta.width / meta.height;
-    const isGoodLandscape =
-      ratio >= minLandscapeRatio && meta.width >= minLandscapeWidth;
 
-    return isGoodLandscape ? "cover" : "contain";
-  }, [meta, minLandscapeRatio, minLandscapeWidth, mode]);
+    return ratio > 1 ? "cover" : "contain";
+  }, [meta, mode]);
 }
 
 function SourceImageFill({
@@ -95,8 +75,6 @@ function SourceImageFill({
   renderImage,
   mode = "auto",
   backgroundColor,
-  minLandscapeRatio = defaultMinLandscapeRatio,
-  minLandscapeWidth = defaultMinLandscapeWidth,
   imageClassName,
 }: {
   source: ImageSource;
@@ -104,16 +82,12 @@ function SourceImageFill({
   renderImage?: RenderImage;
   mode?: BaseImageFillProps["mode"];
   backgroundColor?: string;
-  minLandscapeRatio?: number;
-  minLandscapeWidth?: number;
   imageClassName?: string;
 }) {
   const [meta, setMeta] = useState<ImageMeta | null>(null);
   const resolvedMode = useResolvedMode({
     mode,
     meta,
-    minLandscapeRatio,
-    minLandscapeWidth,
   });
   const resolvedBackground =
     backgroundColor || meta?.color || defaultBackgroundColor;
@@ -179,10 +153,9 @@ function SourceImageFill({
       </div>
       <div
         className={cn(
-          "relative z-10 flex max-h-full max-w-full items-center justify-center [&_img]:max-h-full [&_img]:max-w-full [&_img]:object-contain",
+          "absolute inset-0 z-10 flex h-full w-full items-center justify-center [&_img]:h-full [&_img]:w-full [&_img]:object-contain",
           imageClassName
         )}
-        style={getNaturalImageStyle(meta)}
       >
         {renderImage ? (
           renderImage(imageWithAlt)
@@ -204,8 +177,6 @@ export function ImageFill({
   renderImage,
   mode = "auto",
   backgroundColor,
-  minLandscapeRatio = defaultMinLandscapeRatio,
-  minLandscapeWidth = defaultMinLandscapeWidth,
   className,
   imageClassName,
   ...props
@@ -222,8 +193,6 @@ export function ImageFill({
           renderImage={renderImage}
           mode={mode}
           backgroundColor={backgroundColor}
-          minLandscapeRatio={minLandscapeRatio}
-          minLandscapeWidth={minLandscapeWidth}
           imageClassName={imageClassName}
         />
       ) : image && isValidElement(image) ? (

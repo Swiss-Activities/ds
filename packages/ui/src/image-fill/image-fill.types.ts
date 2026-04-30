@@ -8,8 +8,6 @@ export type BaseImageFillProps = {
   renderImage?: RenderImage;
   mode?: ImageFillMode;
   backgroundColor?: string;
-  minLandscapeRatio?: number;
-  minLandscapeWidth?: number;
   className?: string;
   imageClassName?: string;
 };
