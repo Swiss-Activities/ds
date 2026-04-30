@@ -254,8 +254,8 @@ export function SectionNonBookable({
 
       <div className="grid gap-0 py-8 lg:gap-10 lg:py-10">
         {hasHighlights ? (
-          <section>
-            <div className={containerClassName}>
+          <section className="min-w-0">
+            <div className={cn(containerClassName, "min-w-0")}>
               <ProductInfoList
                 items={highlights ?? []}
                 className={
@@ -269,16 +269,16 @@ export function SectionNonBookable({
         ) : null}
 
         {hasDetailSections ? (
-          <section>
-            <div className={containerClassName}>
+          <section className="min-w-0">
+            <div className={cn(containerClassName, "min-w-0")}>
               <DetailSections sections={detailSections ?? []} />
             </div>
           </section>
         ) : null}
 
         {hasRelatedActivities ? (
-          <section ref={relatedActivitiesRef} className="mt-8 lg:mt-0">
-            <div className={containerClassName}>
+          <section ref={relatedActivitiesRef} className="mt-8 min-w-0 lg:mt-0">
+            <div className={cn(containerClassName, "min-w-0")}>
               <SectionActivityGrid
                 title={relatedActivitiesTitle}
                 action={relatedActivitiesAction}

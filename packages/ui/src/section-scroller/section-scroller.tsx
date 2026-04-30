@@ -1,13 +1,13 @@
 "use client";
 
 import type { HTMLAttributes } from "react";
-import { Icon } from "../icon/icon";
-import { cn } from "../utils/cn";
-import { ChevronLeft, ChevronRight } from "../icons";
-import { HorizontalScrollerRoot } from "../horizontal-scroller/horizontal-scroller.root";
-import { HorizontalScrollerTrack } from "../horizontal-scroller/horizontal-scroller.track";
-import { HorizontalScrollerTitle } from "../horizontal-scroller/horizontal-scroller.title";
 import { useHorizontalScroller } from "../horizontal-scroller/horizontal-scroller.context";
+import { HorizontalScrollerRoot } from "../horizontal-scroller/horizontal-scroller.root";
+import { HorizontalScrollerTitle } from "../horizontal-scroller/horizontal-scroller.title";
+import { HorizontalScrollerTrack } from "../horizontal-scroller/horizontal-scroller.track";
+import { Icon } from "../icon/icon";
+import { ChevronLeft, ChevronRight } from "../icons";
+import { cn } from "../utils/cn";
 import type { BaseSectionScrollerProps } from "./section-scroller.types";
 
 function NavButton({ direction }: { direction: "prev" | "next" }) {
@@ -51,9 +51,13 @@ export function SectionScroller({
           <div className="flex min-w-0 flex-1 flex-wrap items-center gap-x-4 gap-y-2">
             <HorizontalScrollerTitle>{title}</HorizontalScrollerTitle>
             {subtitle}
-            {action ? <div className="hidden shrink-0 sm:block">{action}</div> : null}
+            {action ? (
+              <div className="hidden shrink-0 sm:block">{action}</div>
+            ) : null}
           </div>
-          {action ? <div className="ml-auto shrink-0 sm:hidden">{action}</div> : null}
+          {action ? (
+            <div className="ml-auto shrink-0 sm:hidden">{action}</div>
+          ) : null}
           <div className="hidden gap-2 sm:flex">
             <NavButton direction="prev" />
             <NavButton direction="next" />
@@ -71,4 +75,4 @@ export function SectionScroller({
 }
 
 export const sectionScrollerItemClassName =
-  "w-[calc(66%-16px)] shrink-0 snap-start list-none sm:w-[calc(50%-13px)] md:w-[calc(33.333%-16px)] lg:w-[calc(25%-21px)]";
+  "min-w-0 w-[calc(66%-16px)] max-w-[calc(66%-16px)] shrink-0 snap-start list-none sm:w-[calc(50%-13px)] sm:max-w-[calc(50%-13px)] md:w-[calc(33.333%-16px)] md:max-w-[calc(33.333%-16px)] lg:w-[calc(25%-21px)] lg:max-w-[calc(25%-21px)]";

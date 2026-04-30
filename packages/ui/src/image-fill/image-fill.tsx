@@ -118,8 +118,12 @@ function SourceImageFill({
   const resolvedBackground =
     backgroundColor || meta?.color || defaultBackgroundColor;
 
-  const handleLoad = (event: SyntheticEvent<HTMLImageElement>) => {
-    const image = event.currentTarget;
+  const handleLoadCapture = (event: SyntheticEvent<HTMLElement>) => {
+    if (!(event.target instanceof HTMLImageElement)) {
+      return;
+    }
+
+    const image = event.target;
 
     setMeta({
       width: image.naturalWidth,
@@ -133,52 +137,46 @@ function SourceImageFill({
     alt: alt ?? source.alt ?? "",
   };
 
-  const probeImage = (
-    <img
-      src={source.src}
-      alt=""
-      aria-hidden="true"
-      onLoad={handleLoad}
-      className="pointer-events-none absolute h-px w-px opacity-0"
-    />
+  const backdropImage = renderImage ? (
+    renderImage({ ...source, alt: "" })
+  ) : (
+    <img src={source.src} alt="" />
   );
 
   if (resolvedMode === "cover") {
     return (
-      <>
-        {probeImage}
-        <div
-          className={cn(
-            "absolute inset-0 [&_img]:h-full [&_img]:w-full [&_img]:object-cover",
-            imageClassName
-          )}
-        >
-          {renderImage ? (
-            renderImage(imageWithAlt)
-          ) : (
-            <img
-              src={source.src}
-              alt={imageWithAlt.alt}
-              className="h-full w-full object-cover"
-            />
-          )}
-        </div>
-      </>
+      <div
+        onLoadCapture={handleLoadCapture}
+        className={cn(
+          "absolute inset-0 [&_img]:h-full [&_img]:w-full [&_img]:object-cover",
+          imageClassName
+        )}
+      >
+        {renderImage ? (
+          renderImage(imageWithAlt)
+        ) : (
+          <img
+            src={source.src}
+            alt={imageWithAlt.alt}
+            className="h-full w-full object-cover"
+          />
+        )}
+      </div>
     );
   }
 
   return (
     <div
+      onLoadCapture={handleLoadCapture}
       className="absolute inset-0 flex items-center justify-center overflow-hidden"
       style={{ backgroundColor: resolvedBackground }}
     >
-      <img
-        src={source.src}
-        alt=""
+      <div
         aria-hidden="true"
-        className="absolute inset-0 h-full w-full scale-110 object-cover opacity-25 blur-xl"
-      />
-      {probeImage}
+        className="pointer-events-none absolute inset-0 [&_img]:absolute [&_img]:inset-0 [&_img]:h-full [&_img]:w-full [&_img]:scale-110 [&_img]:object-cover [&_img]:opacity-25 [&_img]:blur-xl"
+      >
+        {backdropImage}
+      </div>
       <div
         className={cn(
           "relative z-10 flex max-h-full max-w-full items-center justify-center [&_img]:max-h-full [&_img]:max-w-full [&_img]:object-contain",
