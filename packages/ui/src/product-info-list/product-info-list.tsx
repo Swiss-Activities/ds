@@ -89,7 +89,7 @@ function ProductInfoListItemRow({
     tag,
     {
       className:
-        "flex w-full appearance-none items-center gap-4 !border-b-0 !border-l-0 !border-r-0 !border-solid !border-gray-200 bg-transparent py-4 text-left text-current no-underline first:!border-t-0",
+        "flex w-full appearance-none items-center gap-4 !border-b-0 !border-l-0 !border-r-0 !border-t !border-solid !border-gray-200 bg-transparent py-4 text-left text-current no-underline first:!border-t-0",
       ...(href ? { href } : { type: "button" as const, onClick }),
     },
     <>
@@ -154,7 +154,7 @@ export function ProductInfoList({
 }: ProductInfoListProps) {
   return (
     <div className={cn("w-full", className)} {...props}>
-      <div className="divide-y divide-solid divide-gray-200 border-y !border-l-0 !border-r-0 border-solid border-gray-200 lg:hidden [&>*]:!border-l-0 [&>*]:!border-r-0">
+      <div className="border-y !border-l-0 !border-r-0 border-solid border-gray-200 lg:hidden [&>*]:!border-l-0 [&>*]:!border-r-0">
         {items.map((item, index) => (
           <ProductInfoListItemRow
             key={item.id ?? `${String(item.title)}-${index}`}

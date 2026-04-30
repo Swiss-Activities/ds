@@ -28,6 +28,7 @@ export type {
   TGatewayWeatherCardItem,
   TGatewayHomeParams,
   TGatewayDetail,
+  TGatewayMovieShowtime,
 } from "./gateway/types";
 export type { GatewayStoreState } from "./gateway/store";
 
