@@ -121,28 +121,6 @@ type SelectedItemHistoryEntry<TItemData> = {
   label: string | null;
 };
 
-function getItemLoadErrorStatus(error: unknown) {
-  if (!error || typeof error !== "object") {
-    return undefined;
-  }
-
-  const response = "response" in error ? error.response : undefined;
-
-  if (!response || typeof response !== "object") {
-    return undefined;
-  }
-
-  return "status" in response && typeof response.status === "number"
-    ? response.status
-    : undefined;
-}
-
-function isItemLoadMissError(error: unknown) {
-  const status = getItemLoadErrorStatus(error);
-
-  return typeof status === "number" && status >= 400 && status < 500;
-}
-
 const normalizeLocale = (locale?: string | null) =>
   locale ? locale.replace("_", "-") : undefined;
 
@@ -237,7 +215,6 @@ function AppGatewayContent<TSection, THero, TItemData>({
     SelectedItemHistoryEntry<TItemData>[]
   >([]);
   const [pendingItemId, setPendingItemId] = useState<string | null>(null);
-  const [failedItemId, setFailedItemId] = useState<string | null>(null);
   const [country, setCountry] = useState<string | null>(null);
   const [countryFetched, setCountryFetched] = useState(false);
   const [data, setData] = useState<TGatewayHome | null>(null);
@@ -358,13 +335,16 @@ function AppGatewayContent<TSection, THero, TItemData>({
       }
 
       setPendingItemId(id);
-      setFailedItemId(null);
+
+      if (!options?.skipHistory) {
+        markPendingUrlSelectedItem(id);
+        onSelectItemUrl?.(id, options);
+      }
 
       try {
         const itemData = await loadItem(id);
 
         if (itemData == null) {
-          setFailedItemId(id);
           return;
         }
 
@@ -383,21 +363,9 @@ function AppGatewayContent<TSection, THero, TItemData>({
           setSelectedItemData(itemData);
           setSelectedItemId(id);
           setSelectedItemLabel(options?.title ?? null);
-          setFailedItemId(null);
         });
-
-        if (!options?.skipHistory) {
-          markPendingUrlSelectedItem(id);
-          onSelectItemUrl?.(id, options);
-        }
-
         scrollToTop();
       } catch (error) {
-        if (isItemLoadMissError(error)) {
-          setFailedItemId(id);
-          return;
-        }
-
         console.error("Failed to load selected app gateway item", error);
       } finally {
         setPendingItemId(null);
@@ -448,10 +416,6 @@ function AppGatewayContent<TSection, THero, TItemData>({
     }
 
     if (!urlSelectedItemId) {
-      if (failedItemId) {
-        setFailedItemId(null);
-      }
-
       if (preserveSelectedItemView) {
         return;
       }
@@ -460,14 +424,6 @@ function AppGatewayContent<TSection, THero, TItemData>({
         clearSelectedItem();
       }
       return;
-    }
-
-    if (failedItemId === urlSelectedItemId) {
-      return;
-    }
-
-    if (failedItemId) {
-      setFailedItemId(null);
     }
 
     if (
@@ -484,7 +440,6 @@ function AppGatewayContent<TSection, THero, TItemData>({
     canSelectItem,
     clearPendingUrlSelectedItem,
     clearSelectedItem,
-    failedItemId,
     handleSelectItem,
     pendingItemId,
     preserveSelectedItemView,
