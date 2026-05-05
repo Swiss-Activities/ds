@@ -1,4 +1,5 @@
 import type { ReactNode, Ref } from "react";
+import type { BreadcrumbsItem } from "../breadcrumbs/breadcrumbs.types";
 import type { BaseContentBlocksProps } from "../content-blocks/content-blocks.types";
 import type { BaseInfoBadgeProps } from "../info-badge/info-badge.types";
 import type { BaseProductInfoListProps } from "../product-info-list/product-info-list.types";
@@ -11,7 +12,7 @@ export type BaseSectionProductProps = {
   title: ReactNode;
   images: ImageValue[];
   renderImage?: RenderImage;
-  breadcrumbs?: { label: string; href: string }[];
+  breadcrumbs?: BreadcrumbsItem[];
   backLabel?: string;
   backHref?: string;
   onBack?: () => void;

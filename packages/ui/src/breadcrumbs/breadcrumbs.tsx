@@ -1,4 +1,4 @@
-import type { HTMLAttributes } from "react";
+import type { HTMLAttributes, MouseEvent } from "react";
 import { Icon } from "../icon/icon";
 import { ChevronRight } from "../icons";
 import { cn } from "../utils/cn";
@@ -31,6 +31,23 @@ export function Breadcrumbs({
       <div className="no-scrollbar flex max-w-full overflow-y-auto pe-10">
         {items.map((item, index) => {
           const isLast = ignoreLast && items.length === index + 1;
+          const handleClick = item.onClick
+            ? (event: MouseEvent<HTMLAnchorElement>) => {
+                if (
+                  event.defaultPrevented ||
+                  event.button !== 0 ||
+                  event.metaKey ||
+                  event.ctrlKey ||
+                  event.shiftKey ||
+                  event.altKey
+                ) {
+                  return;
+                }
+
+                event.preventDefault();
+                item.onClick?.();
+              }
+            : undefined;
 
           return (
             <span
@@ -39,6 +56,7 @@ export function Breadcrumbs({
             >
               <a
                 href={item.href}
+                onClick={handleClick}
                 tabIndex={isLast ? -1 : 0}
                 className={cn(
                   "focus-text whitespace-nowrap text-xs font-medium lg:text-sm lg:hover:underline",

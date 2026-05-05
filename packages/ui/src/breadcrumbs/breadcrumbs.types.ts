@@ -1,5 +1,11 @@
+export type BreadcrumbsItem = {
+  label: string;
+  href: string;
+  onClick?: () => void;
+};
+
 export type BaseBreadcrumbsProps = {
-  items: { label: string; href: string }[];
+  items: BreadcrumbsItem[];
   white?: boolean;
   ignoreLast?: boolean;
   gradient?: "white" | "gray" | false;
