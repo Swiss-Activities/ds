@@ -105,6 +105,7 @@ export type BaseAppGatewayProps<TSection, THero, TItemData = unknown> =
   ) => void;
   onBackItemUrl?: () => void;
   preserveSelectedItemView?: boolean;
+  useDevGateway?: boolean;
   onGatewayData?: (data: TGatewayHome) => void;
   onGatewayContext?: (context: AppGatewayContext) => void;
 };
@@ -143,6 +144,7 @@ async function fetchGatewayHome(
     lat?: number | null;
     lng?: number | null;
     country?: string | null;
+    dev?: boolean;
   }
 ): Promise<TGatewayHome> {
   const searchParams = new URLSearchParams();
@@ -163,7 +165,13 @@ async function fetchGatewayHome(
     searchParams.set("country", params.country);
   }
 
-  const response = await fetch(`${apiUrl}/gateway/home/?${searchParams.toString()}`);
+  if (params.dev) {
+    searchParams.set("dev", "true");
+  }
+
+  const response = await fetch(
+    `${apiUrl}/gateway/home/?${searchParams.toString()}`
+  );
 
   if (!response.ok) {
     throw new Error(`Gateway error: ${response.status}`);
@@ -198,6 +206,7 @@ function AppGatewayContent<TSection, THero, TItemData>({
   onSelectItemUrl,
   onBackItemUrl,
   preserveSelectedItemView = false,
+  useDevGateway = false,
   onGatewayData,
   onGatewayContext,
 }: AppGatewayContentProps<TSection, THero, TItemData>) {
@@ -568,6 +577,7 @@ function AppGatewayContent<TSection, THero, TItemData>({
       country,
       lat: coords?.latitude ?? null,
       lng: coords?.longitude ?? null,
+      dev: useDevGateway,
     })
       .then((nextData) => {
         if (cancelled) {
@@ -603,6 +613,7 @@ function AppGatewayContent<TSection, THero, TItemData>({
     enabled,
     normalizedLocale,
     onGatewayData,
+    useDevGateway,
   ]);
 
   const mappedGatewayData = useMemo(() => {

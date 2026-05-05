@@ -19,6 +19,7 @@ const fetchHome = async (
   if (params.lat != null) searchParams.set("lat", String(params.lat));
   if (params.lng != null) searchParams.set("lng", String(params.lng));
   if (params.country) searchParams.set("country", params.country);
+  if (params.dev) searchParams.set("dev", "true");
 
   const response = await fetch(
     `${apiUrl}/gateway/home/?${searchParams.toString()}`
@@ -85,6 +86,7 @@ export const useGetHome = ({
       params.lat,
       params.lng,
       params.country,
+      params.dev,
     ],
     queryFn: () => fetchHome(apiUrl, params),
     staleTime: Infinity,

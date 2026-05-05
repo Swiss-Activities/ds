@@ -56,6 +56,7 @@ export type TGatewayHomeParams = {
   lat?: number | null;
   lng?: number | null;
   country?: string;
+  dev?: boolean;
 };
 
 export type TGatewaySwimmingDetails = {
