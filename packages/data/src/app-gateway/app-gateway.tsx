@@ -19,6 +19,7 @@ export type AppGatewayContext = {
   country?: string | null;
   lat?: number | null;
   lng?: number | null;
+  destination?: string | null;
 };
 
 export type AppGatewaySelectItemOptions = {
@@ -106,6 +107,7 @@ export type BaseAppGatewayProps<TSection, THero, TItemData = unknown> =
   onBackItemUrl?: () => void;
   preserveSelectedItemView?: boolean;
   useDevGateway?: boolean;
+  selectedDestination?: string | null;
   onGatewayData?: (data: TGatewayHome) => void;
   onGatewayContext?: (context: AppGatewayContext) => void;
 };
@@ -137,7 +139,7 @@ async function fetchCountry(traceUrl?: string) {
   return match ? match[1].trim() : null;
 }
 
-async function fetchGatewayHome(
+async function fetchGatewayFeed(
   apiUrl: string,
   params: {
     locale?: string;
@@ -145,19 +147,23 @@ async function fetchGatewayHome(
     lng?: number | null;
     country?: string | null;
     dev?: boolean;
+    destination?: string | null;
   }
 ): Promise<TGatewayHome> {
   const searchParams = new URLSearchParams();
+  const path = params.destination
+    ? `destinations/${encodeURIComponent(params.destination)}`
+    : "home";
 
   if (params.locale) {
     searchParams.set("locale", params.locale);
   }
 
-  if (params.lat != null) {
+  if (!params.destination && params.lat != null) {
     searchParams.set("lat", String(params.lat));
   }
 
-  if (params.lng != null) {
+  if (!params.destination && params.lng != null) {
     searchParams.set("lng", String(params.lng));
   }
 
@@ -170,11 +176,11 @@ async function fetchGatewayHome(
   }
 
   const response = await fetch(
-    `${apiUrl}/gateway/home/?${searchParams.toString()}`
+    `${apiUrl}/gateway/${path}/?${searchParams.toString()}`
   );
 
   if (!response.ok) {
-    throw new Error(`Gateway error: ${response.status}`);
+    throw new Error(`Gateway ${path} error: ${response.status}`);
   }
 
   return response.json();
@@ -207,6 +213,7 @@ function AppGatewayContent<TSection, THero, TItemData>({
   onBackItemUrl,
   preserveSelectedItemView = false,
   useDevGateway = false,
+  selectedDestination = null,
   onGatewayData,
   onGatewayContext,
 }: AppGatewayContentProps<TSection, THero, TItemData>) {
@@ -543,6 +550,7 @@ function AppGatewayContent<TSection, THero, TItemData>({
       country,
       lat: coords?.latitude ?? null,
       lng: coords?.longitude ?? null,
+      destination: selectedDestination,
     });
   }, [
     coords?.latitude,
@@ -553,6 +561,7 @@ function AppGatewayContent<TSection, THero, TItemData>({
     enabled,
     normalizedLocale,
     onGatewayContext,
+    selectedDestination,
   ]);
 
   useEffect(() => {
@@ -572,12 +581,13 @@ function AppGatewayContent<TSection, THero, TItemData>({
     setIsLoading(true);
     setIsError(false);
 
-    fetchGatewayHome(apiUrl, {
+    fetchGatewayFeed(apiUrl, {
       locale: normalizedLocale,
       country,
       lat: coords?.latitude ?? null,
       lng: coords?.longitude ?? null,
       dev: useDevGateway,
+      destination: selectedDestination,
     })
       .then((nextData) => {
         if (cancelled) {
@@ -613,6 +623,7 @@ function AppGatewayContent<TSection, THero, TItemData>({
     enabled,
     normalizedLocale,
     onGatewayData,
+    selectedDestination,
     useDevGateway,
   ]);
 
