@@ -18,6 +18,16 @@ export type {
 
 export { useGetHome, getHome } from "./gateway/getHome";
 export { useGetCountry, getCountry } from "./gateway/getCountry";
+export {
+  getGatewayDetail,
+  getGatewayDetailForItem,
+  getGatewayDetailParamsForItem,
+} from "./gateway/getDetail";
+export {
+  useSearchSuggest,
+  getSearchSuggest,
+  type UseSearchSuggestOptions,
+} from "./gateway/getSearchSuggest";
 export { useGatewayStore } from "./gateway/store";
 export type {
   TGatewayHome,
@@ -27,6 +37,11 @@ export type {
   TGatewayHomeItem,
   TGatewayWeatherCardItem,
   TGatewayHomeParams,
+  TGatewaySearchSuggestion,
+  TGatewaySearchSuggest,
+  TGatewaySearchSuggestParams,
+  TGatewayDetailParams,
+  TGatewayDetailForItemOptions,
   TGatewayDetail,
   TGatewayMovieShowtime,
 } from "./gateway/types";

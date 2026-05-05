@@ -10,7 +10,9 @@ export const getCountry = async (traceUrl: string): Promise<string | null> => {
   return match ? match[1].trim() : null;
 };
 
-export const useGetCountry = () => {
+export const useGetCountry = ({
+  enabled = true,
+}: { enabled?: boolean } = {}) => {
   const { traceUrl } = useDataConfig();
 
   return useQuery({
@@ -18,6 +20,6 @@ export const useGetCountry = () => {
     queryFn: () => getCountry(traceUrl!),
     staleTime: Infinity,
     retry: false,
-    enabled: !!traceUrl,
+    enabled: enabled && !!traceUrl,
   });
 };

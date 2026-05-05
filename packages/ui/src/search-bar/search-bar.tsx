@@ -28,7 +28,6 @@ export const SearchBar = forwardRef<HTMLDivElement, SearchBarProps>(
       classNameInput,
       classNameInputWrapper,
       classNamePanel,
-      controls,
       defaultOpen = false,
       defaultValue = "",
       disabled = false,
@@ -36,7 +35,6 @@ export const SearchBar = forwardRef<HTMLDivElement, SearchBarProps>(
       footer,
       inputId,
       loading = false,
-      mobileControls,
       mode = "default",
       onClear,
       onOpenChange,
@@ -62,11 +60,12 @@ export const SearchBar = forwardRef<HTMLDivElement, SearchBarProps>(
     const isMobile = mode === "mobile";
     const isMain = mode === "main";
     const isOpen = isControlledOpen ? open : internalOpen;
-    const hasPanelContent = Boolean(children) || Boolean(empty) || Boolean(footer);
+    const hasPanelContent =
+      Boolean(children) || Boolean(empty) || Boolean(footer);
     const hasFooter = Boolean(footer);
     const shouldShowPanel =
       showPanel ?? (isOpen && hasPanelContent && inputValue.length > 0);
-    const shouldShowActions = Boolean(controls) || Boolean(searchButton) || !isMobile;
+    const shouldShowActions = Boolean(searchButton) || !isMobile;
 
     const setRootRef = (node: HTMLDivElement | null) => {
       rootRef.current = node;
@@ -224,15 +223,17 @@ export const SearchBar = forwardRef<HTMLDivElement, SearchBarProps>(
             </div>
             {shouldShowActions ? (
               <div className="flex shrink-0 items-center">
-                {controls}
                 {searchButton ?? (
                   <Button
                     type="primary"
                     size="sm"
-                    className={cn("me-[-3px] shrink-0 self-center !h-10 !max-h-none rounded-full", {
-                      "-me-px !px-6": isMain,
-                      "!w-10": !isMain,
-                    })}
+                    className={cn(
+                      "me-[-3px] !h-10 !max-h-none shrink-0 self-center rounded-full",
+                      {
+                        "-me-px !px-6": isMain,
+                        "!w-10": !isMain,
+                      }
+                    )}
                     icon={!isMain && <Icon icon={Search} />}
                     text={isMain ? "Suchen" : undefined}
                     onClick={handleSubmit}
@@ -248,11 +249,6 @@ export const SearchBar = forwardRef<HTMLDivElement, SearchBarProps>(
             />
           </div>
         </div>
-        {mobileControls ? (
-          <div className="mb-6 flex flex-col gap-2 px-4 sm:hidden">
-            {mobileControls}
-          </div>
-        ) : null}
         {shouldShowPanel ? (
           <div
             className={cn(

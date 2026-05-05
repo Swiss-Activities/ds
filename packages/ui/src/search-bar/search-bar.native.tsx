@@ -21,7 +21,6 @@ export const SearchBar = forwardRef<any, SearchBarProps>(function SearchBar(
     className,
     classNameInput,
     classNameInputWrapper,
-    controls,
     defaultOpen = false,
     defaultValue = "",
     disabled = false,
@@ -51,10 +50,11 @@ export const SearchBar = forwardRef<any, SearchBarProps>(function SearchBar(
   const inputValue = isControlledValue ? value : internalValue;
   const isOpen = isControlledOpen ? open : internalOpen;
   const isMobile = mode === "mobile";
-  const hasPanelContent = Boolean(children) || Boolean(empty) || Boolean(footer);
+  const hasPanelContent =
+    Boolean(children) || Boolean(empty) || Boolean(footer);
   const shouldShowPanel =
     showPanel ?? (isOpen && hasPanelContent && inputValue.length > 0);
-  const shouldShowActions = Boolean(controls) || Boolean(searchButton) || !isMobile;
+  const shouldShowActions = Boolean(searchButton) || !isMobile;
 
   const setOpen = (nextOpen: boolean) => {
     if (!isControlledOpen) {
@@ -125,7 +125,6 @@ export const SearchBar = forwardRef<any, SearchBarProps>(function SearchBar(
         </View>
         {shouldShowActions ? (
           <>
-            {controls}
             {searchButton ?? (
               <Button
                 type="primary"

@@ -18,7 +18,6 @@ export type BaseSearchBarProps = {
   classNameInput?: string;
   classNameInputWrapper?: string;
   classNamePanel?: string;
-  controls?: ReactNode;
   defaultOpen?: boolean;
   defaultValue?: string;
   disabled?: boolean;
@@ -26,7 +25,6 @@ export type BaseSearchBarProps = {
   footer?: ReactNode;
   inputId?: string;
   loading?: boolean;
-  mobileControls?: ReactNode;
   mode?: SearchBarMode;
   onClear?: () => void;
   onOpenChange?: (open: boolean) => void;

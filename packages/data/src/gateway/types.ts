@@ -59,6 +59,47 @@ export type TGatewayHomeParams = {
   dev?: boolean;
 };
 
+export type TGatewaySearchSuggestion = {
+  id: string;
+  title: string;
+  subtitle: string | null;
+  type:
+    | "activity"
+    | "category"
+    | "destination"
+    | "non-bookable"
+    | "point-of-interest";
+  imageUrl?: string | null;
+  path?: string | null;
+  category?: string | null;
+  distanceKm?: number | null;
+};
+
+export type TGatewaySearchSuggest = {
+  suggestions: TGatewaySearchSuggestion[];
+};
+
+export type TGatewaySearchSuggestParams = {
+  q?: string;
+  locale?: string;
+  lat?: number | null;
+  lng?: number | null;
+  country?: string | null;
+  dev?: boolean;
+};
+
+export type TGatewayDetailParams = {
+  path?: string | null;
+  id?: string;
+  type?: Exclude<TGatewayHomeItem["type"], "activity">;
+  dev?: boolean;
+};
+
+export type TGatewayDetailForItemOptions = {
+  dev?: boolean;
+  signal?: AbortSignal;
+};
+
 export type TGatewaySwimmingDetails = {
   waterType?: string | null;
   water_type?: string | null;

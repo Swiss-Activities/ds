@@ -123,7 +123,7 @@ export const SearchBarResultItem = forwardRef<
   );
 
   const sharedClassName = cn(
-    "group flex items-center rounded-lg px-3.5 py-2 text-left text-black transition duration-100 ease-in hover:bg-gray-50",
+    "group flex items-center rounded-lg p-2 text-left text-black transition duration-100 ease-in hover:bg-gray-50",
     className
   );
 

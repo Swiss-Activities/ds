@@ -1,6 +1,6 @@
-import { useState, type ReactNode } from "react";
+import { useState } from "react";
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { Button, SearchBar, SearchBarResultItem, Text } from "@swiss-activities/ui";
+import { SearchBar, SearchBarResultItem, Text } from "@swiss-activities/ui";
 
 const sampleResults = [
   {
@@ -72,22 +72,15 @@ function SearchResults({ value }: { value: string }) {
   return (
     <>
       {items.map((item) => (
-        <SearchBarResultItem
-          key={`${item.variant}-${item.title}`}
-          {...item}
-        />
+        <SearchBarResultItem key={`${item.variant}-${item.title}`} {...item} />
       ))}
     </>
   );
 }
 
 function SearchBarDemo({
-  controls,
-  mobileControls,
   mode = "default",
 }: {
-  controls?: ReactNode;
-  mobileControls?: ReactNode;
   mode?: "default" | "main" | "mobile";
 }) {
   const [value, setValue] = useState("");
@@ -103,8 +96,6 @@ function SearchBarDemo({
           // Story-only noop handler to mirror website submit behavior.
           console.log("submit", nextValue);
         }}
-        controls={controls}
-        mobileControls={mobileControls ?? controls}
         empty={
           <div className="px-4 py-6">
             <Text>No results</Text>
@@ -134,23 +125,7 @@ export const Default: Story = {
 };
 
 export const Main: Story = {
-  render: () => (
-    <SearchBarDemo
-      mode="main"
-      controls={
-        <div className="hidden gap-1 sm:flex">
-          <Button type="outline-gray" size="sm" text="Kalender" />
-          <Button type="outline-gray" size="sm" text="Personen" />
-        </div>
-      }
-      mobileControls={
-        <div className="flex flex-col gap-2 sm:hidden">
-          <Button type="outline-gray" size="sm" text="Kalender" />
-          <Button type="outline-gray" size="sm" text="Personen" />
-        </div>
-      }
-    />
-  ),
+  render: () => <SearchBarDemo mode="main" />,
 };
 
 export const Mobile: Story = {
@@ -162,21 +137,7 @@ export const Mobile: Story = {
   },
   render: () => (
     <div className="mx-auto max-w-md bg-white pt-6">
-      <SearchBarDemo
-        mode="mobile"
-        controls={
-          <div className="hidden gap-2 sm:flex">
-            <Button type="outline-gray" size="sm" text="Kalender" />
-            <Button type="outline-gray" size="sm" text="Personen" />
-          </div>
-        }
-        mobileControls={
-          <div className="flex flex-col gap-2 sm:hidden">
-            <Button type="outline-gray" size="sm" text="Kalender" />
-            <Button type="outline-gray" size="sm" text="Personen" />
-          </div>
-        }
-      />
+      <SearchBarDemo mode="mobile" />
     </div>
   ),
 };
@@ -210,7 +171,9 @@ export const ResultTypes: Story = {
           />
         </div>
         <div className="space-y-2">
-          <Text className="!text-xs !text-gray-400">SuggestActivityListing</Text>
+          <Text className="!text-xs !text-gray-400">
+            SuggestActivityListing
+          </Text>
           <SearchBarResultItem
             {...sampleResults[3]}
             className="bg-white hover:bg-white"
