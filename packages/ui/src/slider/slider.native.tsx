@@ -17,8 +17,12 @@ export type SliderProps = BaseSliderProps & Omit<ViewProps, "children">;
 
 export function Slider({
   slides,
+  renderImage: _renderImage,
+  showNav: _showNav,
   showCounter = true,
+  loop: _loop,
   className,
+  slideClassName: _slideClassName,
   ...props
 }: SliderProps) {
   const [index, setIndex] = useState(0);

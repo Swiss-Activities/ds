@@ -4,6 +4,7 @@ import { ContentBlocks } from "../content-blocks";
 import { Hero } from "../hero";
 import { Icon } from "../icon/icon";
 import { ChevronLeft } from "../icons";
+import { ImageFill } from "../image-fill";
 import { InfoBadge } from "../info-badge";
 import { ProductInfoList } from "../product-info-list";
 import { Rating } from "../rating";
@@ -48,6 +49,48 @@ export type SectionProductProps = BaseSectionProductProps &
 
 const containerClassName = "mx-auto max-w-[1232px] px-2 sm:px-4";
 const mediaFlushClassName = "-mx-2 sm:-mx-4 lg:mx-0";
+const galleryImageFillClassName = "[&_img]:!object-contain";
+
+type GalleryMediaProps = Pick<
+  BaseSectionProductProps,
+  "images" | "renderImage" | "backLabel" | "backHref" | "onBack"
+>;
+
+function GalleryBackOverlay({
+  backLabel,
+  backHref,
+  onBack,
+}: Pick<GalleryMediaProps, "backLabel" | "backHref" | "onBack">) {
+  if (!backLabel) {
+    return null;
+  }
+
+  return (
+    <>
+      <div className="pointer-events-none absolute inset-x-0 top-0 z-20 h-20 bg-gradient-to-b from-black/40 to-transparent lg:rounded-tl-lg" />
+      <div className="absolute left-3 top-3 z-30">
+        <BackLink label={backLabel} href={backHref} onClick={onBack} />
+      </div>
+    </>
+  );
+}
+
+function GalleryFillImage({
+  image,
+  renderImage,
+}: {
+  image: ImageValue;
+  renderImage?: RenderImage;
+}) {
+  return (
+    <ImageFill
+      image={image}
+      renderImage={renderImage}
+      mode="contain"
+      imageClassName={galleryImageFillClassName}
+    />
+  );
+}
 
 function GalleryGrid({
   images,
@@ -55,14 +98,9 @@ function GalleryGrid({
   backLabel,
   backHref,
   onBack,
-}: {
-  images: ImageValue[];
-  renderImage?: RenderImage;
-  backLabel?: string;
-  backHref?: string;
-  onBack?: () => void;
-}) {
+}: GalleryMediaProps) {
   const thumbs = images.slice(1, 5);
+
   return (
     <div className="hidden h-[360px] grid-cols-4 grid-rows-2 gap-1 overflow-hidden md:grid lg:rounded-lg">
       <div className="relative col-span-2 row-span-2 overflow-hidden lg:rounded-s-lg">
@@ -72,14 +110,11 @@ function GalleryGrid({
           loop
           className="absolute inset-0"
         />
-        {backLabel && (
-          <>
-            <div className="pointer-events-none absolute inset-x-0 top-0 z-20 h-20 bg-gradient-to-b from-black/40 to-transparent lg:rounded-tl-lg" />
-            <div className="absolute left-3 top-3 z-30">
-              <BackLink label={backLabel} href={backHref} onClick={onBack} />
-            </div>
-          </>
-        )}
+        <GalleryBackOverlay
+          backLabel={backLabel}
+          backHref={backHref}
+          onBack={onBack}
+        />
       </div>
       {thumbs.map((img, i) => (
         <div
@@ -94,6 +129,47 @@ function GalleryGrid({
         </div>
       ))}
     </div>
+  );
+}
+
+function SparseGallery({
+  images,
+  renderImage,
+  backLabel,
+  backHref,
+  onBack,
+}: GalleryMediaProps) {
+  const hasSlider = images.length > 1;
+
+  return (
+    <div className="relative hidden h-[360px] overflow-hidden bg-gray-100 md:block lg:rounded-lg">
+      {hasSlider ? (
+        <Slider
+          slides={images}
+          renderImage={(image) => (
+            <GalleryFillImage image={image} renderImage={renderImage} />
+          )}
+          loop
+          slideClassName="overflow-hidden"
+          className="absolute inset-0"
+        />
+      ) : (
+        <GalleryFillImage image={images[0]} renderImage={renderImage} />
+      )}
+      <GalleryBackOverlay
+        backLabel={backLabel}
+        backHref={backHref}
+        onBack={onBack}
+      />
+    </div>
+  );
+}
+
+function GalleryMedia(props: GalleryMediaProps) {
+  return props.images.length >= 5 ? (
+    <GalleryGrid {...props} />
+  ) : (
+    <SparseGallery {...props} />
   );
 }
 
@@ -149,7 +225,7 @@ export function SectionProduct({
         </div>
         {images && images.length > 0 && (
           <div className={cn(mediaFlushClassName, "hidden md:block")}>
-            <GalleryGrid
+            <GalleryMedia
               images={images}
               renderImage={renderImage}
               backLabel={backLabel}

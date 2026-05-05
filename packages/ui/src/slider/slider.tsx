@@ -18,6 +18,7 @@ export function Slider({
   showCounter = true,
   loop = false,
   className,
+  slideClassName,
   ...props
 }: SliderProps) {
   const trackRef = useRef<HTMLDivElement>(null);
@@ -110,7 +111,10 @@ export function Slider({
         {allSlides.map((slide, i) => (
           <div
             key={i}
-            className="relative h-full min-w-full snap-start [&_img]:h-full [&_img]:w-full [&_img]:object-cover"
+            className={cn(
+              "relative h-full min-w-full snap-start [&_img]:h-full [&_img]:w-full",
+              slideClassName ?? "[&_img]:object-cover"
+            )}
           >
             {renderImageValue(slide, renderImage)}
           </div>

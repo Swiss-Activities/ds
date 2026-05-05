@@ -7,4 +7,5 @@ export type BaseSliderProps = {
   showCounter?: boolean;
   loop?: boolean;
   className?: string;
+  slideClassName?: string;
 };
