@@ -103,7 +103,7 @@ export const Auto: Story = {
                 <Sheet.Header className="pb-3 pt-2">
                   <Sheet.Handle />
                 </Sheet.Header>
-                <Sheet.ScrollContent className="pb-6 pt-0">
+                <div className="px-4 pb-6 pt-0 lg:px-6">
                   <Sheet.Title className="text-xl font-semibold text-gray-950">
                     Travel date
                   </Sheet.Title>
@@ -122,7 +122,7 @@ export const Auto: Story = {
                       </button>
                     ))}
                   </div>
-                </Sheet.ScrollContent>
+                </div>
               </Sheet.Content>
             </Sheet.View>
           </Sheet.Portal>

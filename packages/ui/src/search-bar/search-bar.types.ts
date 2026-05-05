@@ -14,10 +14,12 @@ export type SearchBarResultVariant = (typeof searchBarResultVariants)[number];
 
 export type BaseSearchBarProps = {
   autoFocus?: boolean;
+  bottom?: ReactNode;
   children?: ReactNode;
   classNameInput?: string;
   classNameInputWrapper?: string;
   classNamePanel?: string;
+  classNameSheet?: string;
   defaultOpen?: boolean;
   defaultValue?: string;
   disabled?: boolean;
@@ -33,6 +35,8 @@ export type BaseSearchBarProps = {
   open?: boolean;
   placeholder?: string;
   searchButton?: ReactNode;
+  sheetCloseLabel?: string;
+  sheetTitle?: ReactNode;
   showClear?: boolean;
   showPanel?: boolean;
   value?: string;

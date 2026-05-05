@@ -1,6 +1,11 @@
 import { useState } from "react";
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { SearchBar, SearchBarResultItem, Text } from "@swiss-activities/ui";
+import {
+  Button,
+  SearchBar,
+  SearchBarResultItem,
+  Text,
+} from "@swiss-activities/ui";
 
 const sampleResults = [
   {
@@ -84,6 +89,7 @@ function SearchBarDemo({
   mode?: "default" | "main" | "mobile";
 }) {
   const [value, setValue] = useState("");
+  const isMobile = mode === "mobile";
 
   return (
     <div className="w-[min(100vw-2rem,720px)]">
@@ -96,6 +102,11 @@ function SearchBarDemo({
           // Story-only noop handler to mirror website submit behavior.
           console.log("submit", nextValue);
         }}
+        bottom={
+          isMobile ? (
+            <Button type="primary" className="w-full !rounded-lg" text="Suchen" />
+          ) : undefined
+        }
         empty={
           <div className="px-4 py-6">
             <Text>No results</Text>

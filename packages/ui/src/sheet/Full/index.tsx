@@ -1,20 +1,21 @@
 "use client";
 
 import React from "react";
-import { Sheet as SilkSheet, AutoFocusTarget } from "@silk-hq/components";
+import { AutoFocusTarget, Sheet as SilkSheet } from "@silk-hq/components";
 import {
+  Backdrop as SharedBackdrop,
+  CloseButton,
+  Content as SharedContent,
+  Description,
   Handle as SharedHandle,
   Header as SharedHeader,
-  Backdrop as SharedBackdrop,
+  Outlet,
+  Portal,
+  ScrollContent as SharedScrollContent,
   ScrollRoot as SharedScrollRoot,
   ScrollView as SharedScrollView,
-  ScrollContent as SharedScrollContent,
-  CloseButton,
-  Portal,
-  Trigger,
-  Outlet,
   Title,
-  Description,
+  Trigger,
 } from "../shared";
 import { cn } from "../../utils/cn";
 
@@ -32,7 +33,7 @@ const Root = React.forwardRef<React.ElementRef<typeof SilkSheet.Root>, RootProps
     );
   }
 );
-Root.displayName = "Sheet.Root";
+Root.displayName = "SheetFull.Root";
 
 type ViewProps = React.ComponentPropsWithoutRef<typeof SilkSheet.View>;
 
@@ -40,9 +41,13 @@ const View = React.forwardRef<React.ElementRef<typeof SilkSheet.View>, ViewProps
   ({ children, className, ...restProps }, ref) => {
     return (
       <SilkSheet.View
-        className={cn("fixed inset-x-0 bottom-0 z-[200]", className)}
+        className={cn(
+          "fixed inset-0 top-0 z-[200] h-[calc(100dvh+60px)]",
+          className
+        )}
         swipeOvershoot={false}
         nativeEdgeSwipePrevention={true}
+        onPresentAutoFocus={{ focus: true }}
         {...restProps}
         ref={ref}
       >
@@ -51,32 +56,7 @@ const View = React.forwardRef<React.ElementRef<typeof SilkSheet.View>, ViewProps
     );
   }
 );
-View.displayName = "Sheet.View";
-
-const Content = React.forwardRef<
-  React.ElementRef<typeof SilkSheet.Content>,
-  React.ComponentPropsWithoutRef<typeof SilkSheet.Content>
->(({ children, className, style, ...restProps }, ref) => {
-  return (
-    <SilkSheet.Content
-      className={cn(
-        "max-h-[95dvh] rounded-t-3xl bg-white",
-        className
-      )}
-      style={
-        {
-          ...style,
-          "--silk-default-height": "auto",
-        } as React.CSSProperties
-      }
-      {...restProps}
-      ref={ref}
-    >
-      {children}
-    </SilkSheet.Content>
-  );
-});
-Content.displayName = "Sheet.Content";
+View.displayName = "SheetFull.View";
 
 const Handle = React.forwardRef<
   React.ElementRef<typeof SilkSheet.Handle>,
@@ -91,14 +71,14 @@ const Handle = React.forwardRef<
     />
   );
 });
-Handle.displayName = "Sheet.Handle";
+Handle.displayName = "SheetFull.Handle";
 
-export const Sheet = {
+export const SheetFull = {
   Root,
   Portal,
   View,
   Backdrop: SharedBackdrop,
-  Content,
+  Content: SharedContent,
   Trigger,
   Handle,
   Header: SharedHeader,
