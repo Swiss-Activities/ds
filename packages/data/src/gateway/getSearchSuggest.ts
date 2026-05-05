@@ -1,6 +1,6 @@
 "use client";
 
-import { useQuery } from "@tanstack/react-query";
+import { keepPreviousData, useQuery } from "@tanstack/react-query";
 import { useSilentCoordinates } from "../hooks/useSilentCoordinates";
 import { useDataConfig } from "../provider";
 import { fetchGatewayProxy, normalizeGatewayLocale } from "./client";
@@ -83,6 +83,7 @@ export const useSearchSuggest = ({
     staleTime,
     refetchOnWindowFocus,
     refetchOnReconnect,
+    placeholderData: keepPreviousData,
   });
 
   return {
