@@ -145,6 +145,21 @@ export const WithAction: Story = {
   ),
 };
 
+export const ThreeItemsOnLarge: Story = {
+  args: {
+    title: heroTitles.sectionActivityGrid,
+    activities: getActivityItems(),
+    itemsPerRowLg: 3,
+  },
+  render: (args) => (
+    <Page>
+      <div className="sa-container">
+        <SectionActivityGrid {...args} className="pt-6" />
+      </div>
+    </Page>
+  ),
+};
+
 export const GatewayTypes: Story = {
   args: {
     title: "Gateway card types",

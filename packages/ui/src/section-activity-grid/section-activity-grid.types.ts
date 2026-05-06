@@ -4,6 +4,7 @@ import type {
   ActivityCardRender,
   ActivityCardType,
 } from "../activity-card/activity-card.types";
+import type { BaseSectionScrollerProps } from "../section-scroller/section-scroller.types";
 import type { ImageValue, RenderImage } from "../utils/render-image";
 
 export type ActivityItem = {
@@ -30,5 +31,6 @@ export type BaseSectionActivityGridProps = {
   activities: ActivityItem[];
   loading?: boolean;
   skeletonAmount?: number;
+  itemsPerRowLg?: BaseSectionScrollerProps["itemsPerRowLg"];
   className?: string;
 };

@@ -1,5 +1,10 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { SectionScroller, sectionScrollerItemClassName, Card, Text } from "@swiss-activities/ui";
+import {
+  Card,
+  SectionScroller,
+  Text,
+  sectionScrollerItemClassName,
+} from "@swiss-activities/ui";
 import { Page } from "../page";
 
 const meta = {
@@ -34,10 +39,35 @@ export const Default: Story = {
 export const WithSubtitle: Story = {
   args: {
     title: "With Subtitle",
-    subtitle: <Text as="span" size="xs" gray>12 items</Text>,
+    subtitle: (
+      <Text as="span" size="xs" gray>
+        12 items
+      </Text>
+    ),
     children: Array.from({ length: 12 }, (_, i) => (
       <li key={i} className={sectionScrollerItemClassName}>
         <Card className="flex h-[160px] items-center justify-center">
+          <Text gray>Item {i + 1}</Text>
+        </Card>
+      </li>
+    )),
+  },
+  render: (args) => (
+    <Page>
+      <div className="sa-container">
+        <SectionScroller {...args} className="pt-6" />
+      </div>
+    </Page>
+  ),
+};
+
+export const ThreeItemsOnLarge: Story = {
+  args: {
+    title: "Three Items On Large",
+    itemsPerRowLg: 3,
+    children: Array.from({ length: 8 }, (_, i) => (
+      <li key={i} className={sectionScrollerItemClassName}>
+        <Card className="flex h-[200px] items-center justify-center">
           <Text gray>Item {i + 1}</Text>
         </Card>
       </li>

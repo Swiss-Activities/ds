@@ -22,6 +22,7 @@ export function SectionActivityGrid({
   activities,
   loading = false,
   skeletonAmount = 4,
+  itemsPerRowLg,
   className,
   ...props
 }: SectionActivityGridProps) {
@@ -61,6 +62,7 @@ export function SectionActivityGrid({
     <SectionScroller
       title={titleNode}
       action={loading ? null : action}
+      itemsPerRowLg={itemsPerRowLg}
       className={cn(className)}
       {...props}
     >

@@ -1,9 +1,9 @@
 import type { ViewProps } from "react-native";
 import { View } from "react-native-css/components";
-import { cn } from "../utils/cn";
 import { HorizontalScrollerRoot } from "../horizontal-scroller/horizontal-scroller.root.native";
-import { HorizontalScrollerTrack } from "../horizontal-scroller/horizontal-scroller.track.native";
 import { HorizontalScrollerTitle } from "../horizontal-scroller/horizontal-scroller.title.native";
+import { HorizontalScrollerTrack } from "../horizontal-scroller/horizontal-scroller.track.native";
+import { cn } from "../utils/cn";
 import type { BaseSectionScrollerProps } from "./section-scroller.types";
 
 export type SectionScrollerProps = BaseSectionScrollerProps &
@@ -14,6 +14,7 @@ export function SectionScroller({
   subtitle,
   action,
   children,
+  itemsPerRowLg: _itemsPerRowLg,
   className,
   ...props
 }: SectionScrollerProps) {
@@ -21,15 +22,13 @@ export function SectionScroller({
     <View className={cn(className)} {...props}>
       <HorizontalScrollerRoot>
         <View className="mb-4 flex flex-row flex-wrap items-center gap-x-4 gap-y-2 px-4">
-          <View className="min-w-0 flex-1 flex flex-row flex-wrap items-center gap-x-4 gap-y-2">
-            <HorizontalScrollerTitle>
-              {title}
-            </HorizontalScrollerTitle>
+          <View className="flex min-w-0 flex-1 flex-row flex-wrap items-center gap-x-4 gap-y-2">
+            <HorizontalScrollerTitle>{title}</HorizontalScrollerTitle>
             {subtitle}
             {action}
           </View>
         </View>
-        <HorizontalScrollerTrack className="gap-4 px-4 pt-2 pb-4">
+        <HorizontalScrollerTrack className="gap-4 px-4 pb-4 pt-2">
           {children}
         </HorizontalScrollerTrack>
       </HorizontalScrollerRoot>

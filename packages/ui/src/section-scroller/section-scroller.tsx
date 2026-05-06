@@ -1,6 +1,6 @@
 "use client";
 
-import type { HTMLAttributes } from "react";
+import type { CSSProperties, HTMLAttributes } from "react";
 import { useHorizontalScroller } from "../horizontal-scroller/horizontal-scroller.context";
 import { HorizontalScrollerRoot } from "../horizontal-scroller/horizontal-scroller.root";
 import { HorizontalScrollerTitle } from "../horizontal-scroller/horizontal-scroller.title";
@@ -34,18 +34,33 @@ function NavButton({ direction }: { direction: "prev" | "next" }) {
 export type SectionScrollerProps = BaseSectionScrollerProps &
   Omit<HTMLAttributes<HTMLElement>, "children" | "title">;
 
+const lgItemWidths: Record<
+  NonNullable<SectionScrollerProps["itemsPerRowLg"]>,
+  string
+> = {
+  3: "calc((100% - 56px) / 3)",
+  4: "calc((100% - 84px) / 4)",
+};
+
 export function SectionScroller({
   title,
   subtitle,
   action,
   children,
   as: Tag = "section",
+  itemsPerRowLg = 4,
   noContainer: _noContainer,
   className,
+  style,
   ...props
 }: SectionScrollerProps) {
+  const mergedStyle = {
+    ...style,
+    "--section-scroller-item-width-lg": lgItemWidths[itemsPerRowLg],
+  } as CSSProperties;
+
   return (
-    <Tag className={cn(className)} {...props}>
+    <Tag className={cn(className)} style={mergedStyle} {...props}>
       <HorizontalScrollerRoot>
         <div className="mb-4 flex flex-wrap items-center gap-x-4 gap-y-2">
           <div className="flex min-w-0 flex-1 flex-wrap items-center gap-x-4 gap-y-2">
@@ -75,4 +90,4 @@ export function SectionScroller({
 }
 
 export const sectionScrollerItemClassName =
-  "min-w-0 w-[calc(66%-16px)] max-w-[calc(66%-16px)] shrink-0 snap-start list-none sm:w-[calc(50%-13px)] sm:max-w-[calc(50%-13px)] md:w-[calc(33.333%-16px)] md:max-w-[calc(33.333%-16px)] lg:w-[calc(25%-21px)] lg:max-w-[calc(25%-21px)]";
+  "min-w-0 w-[calc(66%-16px)] max-w-[calc(66%-16px)] shrink-0 snap-start list-none sm:w-[calc(50%-13px)] sm:max-w-[calc(50%-13px)] md:w-[calc(33.333%-16px)] md:max-w-[calc(33.333%-16px)] lg:w-[var(--section-scroller-item-width-lg)] lg:max-w-[var(--section-scroller-item-width-lg)]";
