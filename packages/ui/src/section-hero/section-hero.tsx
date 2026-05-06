@@ -19,7 +19,7 @@ function SectionHeroTags({ tags }: { tags?: SectionHeroTag[] }) {
   }
 
   return (
-    <ul className="mt-3 flex flex-wrap gap-2 p-0">
+    <ul className="flex flex-wrap gap-2 p-0">
       {tags.map((tag, index) => (
         <li
           key={tag.id ?? index}
@@ -62,7 +62,7 @@ export function SectionHero({
         {...props}
       >
         <div className="mx-auto max-w-[1232px] px-2 py-8 sm:px-4 lg:py-10">
-          <div className="max-w-4xl">
+          <div className="max-w-4xl space-y-6">
             {title ? (
               <Text
                 as="h1"
@@ -73,7 +73,7 @@ export function SectionHero({
               </Text>
             ) : null}
             {search ? (
-              <div className="mt-6 max-w-[640px] [&_[data-insights-index='search']]:max-w-none">
+              <div className="max-w-[640px] [&_[data-insights-index='search']]:max-w-none">
                 {search}
               </div>
             ) : null}

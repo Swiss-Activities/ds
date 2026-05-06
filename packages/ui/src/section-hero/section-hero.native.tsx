@@ -20,7 +20,7 @@ function SectionHeroTags({ tags }: { tags?: SectionHeroTag[] }) {
   }
 
   return (
-    <View className="mt-3 flex flex-row flex-wrap gap-2">
+    <View className="flex flex-row flex-wrap gap-2">
       {tags.map((tag, index) => (
         <View
           key={tag.id ?? index}
@@ -58,7 +58,10 @@ export function SectionHero({
   if (variant === "summary") {
     return (
       <View
-        className={cn("border-b border-gray-200 bg-white px-4 py-8", className)}
+        className={cn(
+          "space-y-6 border-b border-gray-200 bg-white px-4 py-8",
+          className
+        )}
         {...props}
       >
         {title ? (
@@ -66,7 +69,7 @@ export function SectionHero({
             {title}
           </Text>
         ) : null}
-        {search ? <View className="mt-6">{search}</View> : null}
+        {search ? <View>{search}</View> : null}
         <SectionHeroTags tags={tags} />
       </View>
     );
