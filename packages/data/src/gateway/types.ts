@@ -47,7 +47,18 @@ export type TGatewayHomeSection =
   | TGatewayHomeCarouselSection
   | TGatewayHomeWeatherCardSection;
 
+export type TGatewayActivityTypeContext = {
+  type: "activity-type";
+  id: string;
+  title: string;
+  slug: string;
+  description?: string | null;
+  imageUrl?: string | null;
+  numberOfActivities?: number;
+};
+
 export type TGatewayHome = {
+  context?: TGatewayActivityTypeContext;
   sections: TGatewayHomeSection[];
 };
 
@@ -65,6 +76,7 @@ export type TGatewaySearchSuggestion = {
   subtitle: string | null;
   type:
     | "activity"
+    | "activity-type"
     | "category"
     | "destination"
     | "non-bookable"

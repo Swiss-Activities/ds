@@ -20,6 +20,7 @@ export type AppGatewayContext = {
   lat?: number | null;
   lng?: number | null;
   destination?: string | null;
+  activityType?: string | null;
 };
 
 export type AppGatewaySelectItemOptions = {
@@ -108,6 +109,7 @@ export type BaseAppGatewayProps<TSection, THero, TItemData = unknown> =
   preserveSelectedItemView?: boolean;
   useDevGateway?: boolean;
   selectedDestination?: string | null;
+  selectedActivityType?: string | null;
   onGatewayData?: (data: TGatewayHome) => void;
   onGatewayContext?: (context: AppGatewayContext) => void;
 };
@@ -148,10 +150,14 @@ async function fetchGatewayFeed(
     country?: string | null;
     dev?: boolean;
     destination?: string | null;
+    activityType?: string | null;
   }
 ): Promise<TGatewayHome> {
   const searchParams = new URLSearchParams();
-  const path = params.destination
+  const isDestinationFeed = Boolean(params.destination && !params.activityType);
+  const path = params.activityType
+    ? `activity-types/${encodeURIComponent(params.activityType)}`
+    : params.destination
     ? `destinations/${encodeURIComponent(params.destination)}`
     : "home";
 
@@ -159,11 +165,11 @@ async function fetchGatewayFeed(
     searchParams.set("locale", params.locale);
   }
 
-  if (!params.destination && params.lat != null) {
+  if (!isDestinationFeed && params.lat != null) {
     searchParams.set("lat", String(params.lat));
   }
 
-  if (!params.destination && params.lng != null) {
+  if (!isDestinationFeed && params.lng != null) {
     searchParams.set("lng", String(params.lng));
   }
 
@@ -214,6 +220,7 @@ function AppGatewayContent<TSection, THero, TItemData>({
   preserveSelectedItemView = false,
   useDevGateway = false,
   selectedDestination = null,
+  selectedActivityType = null,
   onGatewayData,
   onGatewayContext,
 }: AppGatewayContentProps<TSection, THero, TItemData>) {
@@ -551,6 +558,7 @@ function AppGatewayContent<TSection, THero, TItemData>({
       lat: coords?.latitude ?? null,
       lng: coords?.longitude ?? null,
       destination: selectedDestination,
+      activityType: selectedActivityType,
     });
   }, [
     coords?.latitude,
@@ -561,6 +569,7 @@ function AppGatewayContent<TSection, THero, TItemData>({
     enabled,
     normalizedLocale,
     onGatewayContext,
+    selectedActivityType,
     selectedDestination,
   ]);
 
@@ -588,6 +597,7 @@ function AppGatewayContent<TSection, THero, TItemData>({
       lng: coords?.longitude ?? null,
       dev: useDevGateway,
       destination: selectedDestination,
+      activityType: selectedActivityType,
     })
       .then((nextData) => {
         if (cancelled) {
@@ -623,6 +633,7 @@ function AppGatewayContent<TSection, THero, TItemData>({
     enabled,
     normalizedLocale,
     onGatewayData,
+    selectedActivityType,
     selectedDestination,
     useDevGateway,
   ]);

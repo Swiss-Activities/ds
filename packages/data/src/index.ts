@@ -31,6 +31,7 @@ export {
 export { useGatewayStore } from "./gateway/store";
 export type {
   TGatewayHome,
+  TGatewayActivityTypeContext,
   TGatewayHomeSection,
   TGatewayHomeCarouselSection,
   TGatewayHomeWeatherCardSection,
