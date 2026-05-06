@@ -119,7 +119,9 @@ function TemperatureWithIcon({
 }) {
   return (
     <span className="inline-flex items-center gap-1.5 whitespace-nowrap">
-      <span className="inline-flex">{icon}</span>
+      <span className="inline-flex h-7 w-6 items-center justify-center">
+        {icon}
+      </span>
       {temperature}
     </span>
   );
