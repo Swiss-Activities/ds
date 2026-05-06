@@ -61,6 +61,12 @@ function LocalizedSectionHeroPreview() {
           <SectionHero
             title={heroTitles.hero}
             image={getHeroImage()}
+            search={
+              <SearchBar
+                mode="main"
+                placeholder="Search 12,000 Swiss things to do near Interlaken..."
+              />
+            }
             days={getWeatherDaysLong()}
             selected={selected}
             onSelect={(id) => {
@@ -119,7 +125,7 @@ function TemperatureWithIcon({
 }) {
   return (
     <span className="inline-flex items-center gap-1.5 whitespace-nowrap">
-      <span className="inline-flex h-7 w-6 items-center justify-center">
+      <span className="inline-flex h-6 w-6 items-center justify-center">
         {icon}
       </span>
       {temperature}

@@ -67,7 +67,7 @@ export function SectionHero({
               <Text
                 as="h1"
                 size="2xl"
-                className="max-w-3xl !text-[28px] !leading-tight sm:!text-[34px] lg:!text-[36px] [&_svg]:!h-7 [&_svg]:!w-6"
+                className="max-w-3xl !text-[28px] !leading-tight sm:!text-[34px] lg:!text-[36px] [&_svg]:!h-6 [&_svg]:!w-6"
               >
                 {title}
               </Text>
