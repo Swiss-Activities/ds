@@ -1,13 +1,42 @@
 "use client";
 
 import type { ViewProps } from "react-native";
-import { cn } from "../utils/cn";
+import { View } from "react-native-css/components";
 import { Hero } from "../hero/hero.native";
+import { Text } from "../text/index.native";
+import { cn } from "../utils/cn";
 import { Weather } from "../weather/weather.native";
-import type { BaseSectionHeroProps } from "./section-hero.types";
+import type {
+  BaseSectionHeroProps,
+  SectionHeroTag,
+} from "./section-hero.types";
 
 export type SectionHeroProps = BaseSectionHeroProps &
   Omit<ViewProps, "children">;
+
+function SectionHeroTags({ tags }: { tags?: SectionHeroTag[] }) {
+  if (!tags?.length) {
+    return null;
+  }
+
+  return (
+    <View className="mt-3 flex flex-row flex-wrap gap-2">
+      {tags.map((tag, index) => (
+        <View
+          key={tag.id ?? index}
+          className="flex min-h-7 flex-row items-center gap-1.5 rounded-full border border-gray-200 bg-gray-50 px-2.5 py-1"
+        >
+          {tag.icon ? (
+            <View className="flex shrink-0 text-gray-500">{tag.icon}</View>
+          ) : null}
+          <Text as="span" size="xs" bold gray>
+            {tag.label}
+          </Text>
+        </View>
+      ))}
+    </View>
+  );
+}
 
 export function SectionHero({
   title,
@@ -19,12 +48,30 @@ export function SectionHero({
   unit,
   selected,
   onSelect,
+  tags,
   tabs,
   selectedTabId,
   onSelectTab,
   className,
   ...props
 }: SectionHeroProps) {
+  if (variant === "summary") {
+    return (
+      <View
+        className={cn("border-b border-gray-200 bg-white px-4 py-8", className)}
+        {...props}
+      >
+        {title ? (
+          <Text as="h1" size="2xl" className="max-w-3xl">
+            {title}
+          </Text>
+        ) : null}
+        {search ? <View className="mt-6">{search}</View> : null}
+        <SectionHeroTags tags={tags} />
+      </View>
+    );
+  }
+
   return (
     <Hero
       title={title}
