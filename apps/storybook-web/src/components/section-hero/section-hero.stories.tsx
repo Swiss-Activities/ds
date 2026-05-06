@@ -105,6 +105,12 @@ function FallbackSectionHeroPreview() {
           <SectionHero
             image={getHeroImage()}
             overlay={<HeroOverlayPreview />}
+            search={
+              <SearchBar
+                mode="main"
+                placeholder="Search activities, cities, and mountain passes..."
+              />
+            }
             variant="fallback"
             tabs={tabs}
             selectedTabId={selectedTabId ?? initialTabId ?? undefined}
