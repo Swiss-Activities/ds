@@ -24,5 +24,7 @@ export type BaseSectionHeroProps = {
   tabs?: HeroTab[];
   selectedTabId?: string;
   onSelectTab?: (id: string) => void;
+  backLabel?: string;
+  onBack?: () => void;
   className?: string;
 };

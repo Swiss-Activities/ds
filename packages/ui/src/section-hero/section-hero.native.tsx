@@ -52,6 +52,8 @@ export function SectionHero({
   tabs,
   selectedTabId,
   onSelectTab,
+  backLabel,
+  onBack,
   className,
   ...props
 }: SectionHeroProps) {
@@ -61,7 +63,12 @@ export function SectionHero({
         className={cn("relative h-[220px] overflow-hidden bg-blue", className)}
         {...props}
       >
-        <Hero image={image} variant="localized" />
+        <Hero
+          image={image}
+          variant="localized"
+          backLabel={backLabel}
+          onBack={onBack}
+        />
         <View className="absolute inset-0 bg-blue/45" />
         <View className="absolute inset-0 flex items-center justify-center px-4">
           {title ? (
@@ -104,6 +111,8 @@ export function SectionHero({
       tabs={tabs}
       selectedTabId={selectedTabId}
       onSelectTab={onSelectTab}
+      backLabel={backLabel}
+      onBack={onBack}
       className={cn(className)}
       {...props}
     >

@@ -1,7 +1,9 @@
 "use client";
 
-import type { HTMLAttributes } from "react";
+import { createElement, type HTMLAttributes } from "react";
 import { Hero } from "../hero";
+import { Icon } from "../icon/icon";
+import { ChevronLeft } from "../icons";
 import { Text } from "../text";
 import { cn } from "../utils/cn";
 import { renderImageValue } from "../utils/render-image";
@@ -13,6 +15,28 @@ import type {
 
 export type SectionHeroProps = BaseSectionHeroProps &
   Omit<HTMLAttributes<HTMLDivElement>, "children" | "title">;
+
+function SectionHeroBackLink({
+  label,
+  onClick,
+}: {
+  label: string;
+  onClick?: () => void;
+}) {
+  return createElement(
+    "button",
+    {
+      className:
+        "flex cursor-pointer appearance-none items-center gap-2 border-none bg-transparent p-0 text-white no-underline",
+      type: "button" as const,
+      onClick,
+    },
+    <span className="flex h-6 w-6 items-center justify-center rounded-full border border-solid border-white bg-white/70 backdrop-blur-sm">
+      <Icon icon={ChevronLeft} size="sm" className="text-blue" />
+    </span>,
+    <span className="text-sm font-medium text-white">{label}</span>
+  );
+}
 
 function SectionHeroTags({ tags }: { tags?: SectionHeroTag[] }) {
   if (!tags?.length) {
@@ -50,6 +74,8 @@ export function SectionHero({
   tabs,
   selectedTabId,
   onSelectTab,
+  backLabel,
+  onBack,
   className,
   ...props
 }: SectionHeroProps) {
@@ -61,6 +87,17 @@ export function SectionHero({
             {renderImageValue(image)}
           </div>
           <div className="absolute inset-0 bg-blue/45" />
+          {backLabel ? (
+            <>
+              <div className="pointer-events-none absolute inset-x-0 top-0 z-20 h-20 bg-gradient-to-b from-blue/50 to-transparent" />
+              <div className="absolute left-3 top-3 z-30">
+                <SectionHeroBackLink
+                  label={backLabel}
+                  onClick={onBack}
+                />
+              </div>
+            </>
+          ) : null}
           <div className="relative z-10 flex h-full items-center justify-center px-4 text-center">
             {title ? (
               <Text as="h1" size="2xl" className="max-w-4xl !text-white">
@@ -114,6 +151,8 @@ export function SectionHero({
         tabs={tabs}
         selectedTabId={selectedTabId}
         onSelectTab={onSelectTab}
+        backLabel={backLabel}
+        onBack={onBack}
       >
         {variant === "localized" && days ? (
           <Weather
