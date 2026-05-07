@@ -118,6 +118,15 @@ export function getHomepageFilterGroups() {
   }));
 }
 
+export function getHomepageSectionFilterGroups() {
+  return getHomepageFilterGroups().map((group) => ({
+    id: group.id,
+    title: group.title,
+    param: group.id,
+    items: group.items,
+  }));
+}
+
 export function getHomepageFilterDrawerContent() {
   return (
     <div className="-mx-4 border-t border-solid border-gray-200 lg:mx-0 lg:border-t-0">

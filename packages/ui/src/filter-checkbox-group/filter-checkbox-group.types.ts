@@ -23,6 +23,6 @@ export type BaseFilterCheckboxGroupProps = {
   maxVisible?: number;
   moreLabel?: (remaining: number) => ReactNode;
   onItemToggle?: (id: string, nextValue: boolean) => void;
-  title: string;
+  title?: ReactNode;
   type?: "inline" | "accordion";
 };

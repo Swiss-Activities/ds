@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import { SectionFilters } from "@swiss-activities/ui";
 import {
-  getHomepageFilterDrawerContent,
   getHomepageFilters,
+  getHomepageSectionFilterGroups,
 } from "../../story-data";
 import { Page } from "../page";
 
@@ -14,7 +14,7 @@ const meta = {
   },
   args: {
     desktopDrawer: "left",
-    drawerContent: getHomepageFilterDrawerContent(),
+    filterGroups: getHomepageSectionFilterGroups(),
     items: getHomepageFilters(),
   },
 } satisfies Meta<typeof SectionFilters>;

@@ -134,7 +134,7 @@ function FilterCheckboxList({
 }
 
 export type FilterCheckboxGroupProps = BaseFilterCheckboxGroupProps &
-  Omit<HTMLAttributes<HTMLDivElement>, "children">;
+  Omit<HTMLAttributes<HTMLDivElement>, "children" | "title">;
 
 export function FilterCheckboxGroup({
   className,
@@ -177,9 +177,11 @@ export function FilterCheckboxGroup({
           className="m-0 flex w-full cursor-pointer appearance-none items-center justify-between gap-4 rounded-none !border-0 !bg-transparent px-4 py-4 text-left font-[inherit] text-current shadow-none"
           onClick={() => setOpen((current) => !current)}
         >
-          <Text as="span" size="lg" className="!text-[17px]">
-            {title}
-          </Text>
+          {title ? (
+            <Text as="span" size="lg" className="!text-[17px]">
+              {title}
+            </Text>
+          ) : null}
           <Icon
             icon={ChevronDown}
             size="default"
@@ -203,9 +205,11 @@ export function FilterCheckboxGroup({
       )}
       {...props}
     >
-      <Text as="h3" bold black>
-        {title}
-      </Text>
+      {title ? (
+        <Text as="h3" bold black>
+          {title}
+        </Text>
+      ) : null}
       {content}
     </div>
   );

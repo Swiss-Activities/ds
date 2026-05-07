@@ -31,6 +31,7 @@ export * from "./icons";
 export * from "./info-badge";
 export * from "./logo";
 export * from "./loader";
+export * from "./popover";
 export * from "./rating";
 export * from "./review-card";
 export * from "./product-info-list";

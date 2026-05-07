@@ -70,7 +70,11 @@ export function SectionFilters({
   desktopDrawerFrom,
   drawerTitle = "Filter",
   drawerContent,
+  filterGroups: _filterGroups,
+  filterGroupLessLabel: _filterGroupLessLabel,
+  filterGroupMoreLabel: _filterGroupMoreLabel,
   items,
+  onFilterGroupItemToggle: _onFilterGroupItemToggle,
   onItemClick,
   ...props
 }: SectionFiltersProps) {

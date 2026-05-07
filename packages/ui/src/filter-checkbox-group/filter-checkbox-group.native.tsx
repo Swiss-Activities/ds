@@ -138,9 +138,11 @@ export function FilterCheckboxGroup({
           onPress={() => setOpen((current) => !current)}
           className="flex flex-row items-center justify-between gap-4 px-4 py-4"
         >
-          <Text as="span" size="lg" className="!text-[17px]">
-            {title}
-          </Text>
+          {title ? (
+            <Text as="span" size="lg" className="!text-[17px]">
+              {title}
+            </Text>
+          ) : null}
           <View className={cn(open && "rotate-180")}>
             <Icon icon={ChevronDown} size="default" color="#a1a1aa" />
           </View>
@@ -152,9 +154,11 @@ export function FilterCheckboxGroup({
 
   return (
     <View className={cn("gap-2", className)} {...props}>
-      <Text as="h3" bold black>
-        {title}
-      </Text>
+      {title ? (
+        <Text as="h3" bold black>
+          {title}
+        </Text>
+      ) : null}
       {content}
     </View>
   );

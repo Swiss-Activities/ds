@@ -66,6 +66,8 @@
     "src/info-badge/index.ts",
     "src/info-badge/info-badge.tsx",
     "src/info-badge/info-badge.types.ts",
+    "src/popover/index.ts",
+    "src/popover/popover.tsx",
     "src/image-card/index.ts",
     "src/image-card/image-card.tsx",
     "src/image-card/image-card.types.ts",
