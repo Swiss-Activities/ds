@@ -35,6 +35,21 @@ export type TGatewayHomeCarouselSection = {
   data: TGatewayHomeItem[];
 };
 
+export type TGatewayActivityGridSection = {
+  id: string;
+  component: "activity_grid";
+  title: string;
+  data: Array<TGatewayHomeItem & { type: "activity" }>;
+  meta: {
+    pagination: {
+      page: number;
+      perPage: number;
+      total: number;
+      hasMore: boolean;
+    };
+  };
+};
+
 export type TGatewayHomeWeatherCardSection = {
   id: string;
   component: "weather_card";
@@ -45,6 +60,7 @@ export type TGatewayHomeWeatherCardSection = {
 
 export type TGatewayHomeSection =
   | TGatewayHomeCarouselSection
+  | TGatewayActivityGridSection
   | TGatewayHomeWeatherCardSection;
 
 export type TGatewayActivityTypeContext = {
@@ -59,7 +75,74 @@ export type TGatewayActivityTypeContext = {
 
 export type TGatewayHome = {
   context?: TGatewayActivityTypeContext;
+  staticSections?: TGatewayStaticSection[];
   sections: TGatewayHomeSection[];
+};
+
+export type TGatewayHeroStaticSection = {
+  id: string;
+  component: "hero";
+  variant?: "centered_title";
+  title: string;
+  imageUrl?: string | null;
+  description?: string | null;
+};
+
+export type TGatewayFilterItem = {
+  id: string;
+  label: string;
+  kind?: "plain" | "disclosure" | "removable";
+  param?: string;
+  value?: string;
+};
+
+export type TGatewayFilterOption = {
+  id: string;
+  label: string;
+  value: string;
+  count: number;
+  selected: boolean;
+  disabled?: boolean;
+};
+
+export type TGatewayFilterGroup = {
+  id: string;
+  type: "checkbox";
+  title: string;
+  param: "tags";
+  options: TGatewayFilterOption[];
+};
+
+export type TGatewayFilterConfig = {
+  endpoint: string;
+  items: TGatewayFilterItem[];
+  groups: TGatewayFilterGroup[];
+};
+
+export type TGatewayFilterStaticSection = TGatewayFilterConfig & {
+  id: string;
+  component: "filters";
+};
+
+export type TGatewayStaticSection =
+  | TGatewayHeroStaticSection
+  | TGatewayFilterStaticSection;
+
+export type TGatewayActivityTypeFilterParams = {
+  activityType: string;
+  locale?: string;
+  lat?: number | null;
+  lng?: number | null;
+  country?: string | null;
+  page?: number;
+  perPage?: number;
+  tags?: string[];
+  dev?: boolean;
+};
+
+export type TGatewayActivityTypeFilter = {
+  filters: TGatewayFilterConfig;
+  sections: TGatewayActivityGridSection[];
 };
 
 export type TGatewayHomeParams = {

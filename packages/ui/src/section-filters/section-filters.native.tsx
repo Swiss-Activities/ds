@@ -71,6 +71,7 @@ export function SectionFilters({
   drawerTitle = "Filter",
   drawerContent,
   items,
+  onItemClick,
   ...props
 }: SectionFiltersProps) {
   const [presented, setPresented] = useState(false);
@@ -103,6 +104,7 @@ export function SectionFilters({
                     <Icon icon={X} size="xs" color="#737373" />
                   ) : null
                 }
+                onPress={() => onItemClick?.(item)}
               />
             </React.Fragment>
           ))}
@@ -116,7 +118,10 @@ export function SectionFilters({
         onRequestClose={() => setPresented(false)}
       >
         <View style={styles.modalRoot}>
-          <Pressable style={styles.backdrop} onPress={() => setPresented(false)} />
+          <Pressable
+            style={styles.backdrop}
+            onPress={() => setPresented(false)}
+          />
           <View style={styles.sheet}>
             <View style={styles.handle} />
             <ScrollView>

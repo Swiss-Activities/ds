@@ -55,6 +55,7 @@ export function SectionFilters({
   drawerTitle = "Filter",
   drawerContent,
   items,
+  onItemClick,
   ...props
 }: SectionFiltersProps) {
   const [presented, setPresented] = useState(false);
@@ -76,13 +77,13 @@ export function SectionFilters({
   return (
     <>
       <section className={cn(className)} {...props}>
-        <div className="no-scrollbar overflow-x-auto py-2 [scrollbar-width:none]">
+        <div className="no-scrollbar overflow-x-auto py-4 [scrollbar-width:none]">
           <div className="flex min-w-max items-center gap-2">
             <Button
               type="pill"
               text={filterButtonLabel}
               icon={<Icon icon={Filter} size="xs" />}
-              className="shrink-0 whitespace-nowrap !bg-white lg:hover:!border-blue lg:hover:!bg-white lg:hover:!text-blue"
+              className="!min-h-[36px] shrink-0 whitespace-nowrap !bg-white lg:hover:!border-blue lg:hover:!bg-white lg:hover:!text-blue"
               onClick={() => setPresented(true)}
             />
             {items.map((item) => (
@@ -98,6 +99,7 @@ export function SectionFilters({
                   ) : null
                 }
                 className="shrink-0 whitespace-nowrap"
+                onClick={() => onItemClick?.(item)}
               />
             ))}
           </div>
@@ -119,10 +121,7 @@ export function SectionFilters({
               )}
             >
               <Sheet.Header
-                className={cn(
-                  "pb-4",
-                  isSideDrawer ? "pt-5" : "pt-2"
-                )}
+                className={cn("pb-4", isSideDrawer ? "pt-5" : "pt-2")}
               >
                 {!isSideDrawer ? <Sheet.Handle /> : null}
                 <Sheet.Title
@@ -134,8 +133,8 @@ export function SectionFilters({
                   {drawerTitle}
                 </Sheet.Title>
               </Sheet.Header>
-              <Sheet.ScrollRoot className="min-h-0 h-full">
-                <Sheet.ScrollView className="min-h-0 h-full">
+              <Sheet.ScrollRoot className="h-full min-h-0">
+                <Sheet.ScrollView className="h-full min-h-0">
                   <Sheet.ScrollContent className="py-3">
                     {drawerContent ?? (
                       <div className="grid gap-2">

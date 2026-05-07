@@ -4,6 +4,7 @@ import type { HTMLAttributes } from "react";
 import { Hero } from "../hero";
 import { Text } from "../text";
 import { cn } from "../utils/cn";
+import { renderImageValue } from "../utils/render-image";
 import { Weather } from "../weather";
 import type {
   BaseSectionHeroProps,
@@ -52,6 +53,26 @@ export function SectionHero({
   className,
   ...props
 }: SectionHeroProps) {
+  if (variant === "centered_title") {
+    return (
+      <section className={cn(className)} {...props}>
+        <div className="relative h-[196px] overflow-hidden bg-blue sm:h-[228px] lg:h-[264px] lg:rounded-lg">
+          <div className="absolute inset-0 [&_img]:absolute [&_img]:inset-0 [&_img]:h-full [&_img]:w-full [&_img]:object-cover">
+            {renderImageValue(image)}
+          </div>
+          <div className="absolute inset-0 bg-blue/45" />
+          <div className="relative z-10 flex h-full items-center justify-center px-4 text-center">
+            {title ? (
+              <Text as="h1" size="2xl" className="max-w-4xl !text-white">
+                {title}
+              </Text>
+            ) : null}
+          </div>
+        </div>
+      </section>
+    );
+  }
+
   if (variant === "summary") {
     return (
       <section

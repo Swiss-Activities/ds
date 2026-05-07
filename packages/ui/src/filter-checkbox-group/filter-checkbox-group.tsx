@@ -1,11 +1,6 @@
 "use client";
 
-import {
-  useEffect,
-  useMemo,
-  useState,
-  type HTMLAttributes,
-} from "react";
+import { useEffect, useMemo, useState, type HTMLAttributes } from "react";
 import { Button } from "../button";
 import { Checkbox } from "../checkbox";
 import { Icon } from "../icon/icon";
@@ -63,9 +58,7 @@ function FilterCheckboxLabel({
 }) {
   return (
     <span className="relative top-[2px] inline-block text-sm leading-5 text-gray-900">
-      <span className="me-2 inline-block">
-        {label}
-      </span>
+      <span className="me-2 inline-block">{label}</span>
       {typeof count === "number" ? (
         <span className="relative -top-px inline-flex h-max rounded bg-blue/10 px-1 py-1 text-[11px] leading-none text-blue">
           {count}
@@ -73,6 +66,16 @@ function FilterCheckboxLabel({
       ) : null}
     </span>
   );
+}
+
+function getSelectedState(items: FilterCheckboxGroupItem[]) {
+  return Object.fromEntries(
+    items.map((item) => [item.id, Boolean(item.selected)])
+  );
+}
+
+function getSelectedSignature(items: FilterCheckboxGroupItem[]) {
+  return items.map((item) => `${item.id}:${Boolean(item.selected)}`).join("|");
 }
 
 function FilterCheckboxList({
@@ -90,14 +93,11 @@ function FilterCheckboxList({
 }) {
   const [isAll, setIsAll] = useState(false);
   const [selectedById, setSelectedById] = useState<Record<string, boolean>>({});
+  const selectedSignature = getSelectedSignature(items);
 
   useEffect(() => {
-    setSelectedById(
-      Object.fromEntries(
-        items.map((item) => [item.id, Boolean(item.selected)])
-      )
-    );
-  }, [items]);
+    setSelectedById(getSelectedState(items));
+  }, [selectedSignature]);
 
   const visibleItems = items.slice(0, isAll ? items.length : maxVisible);
 
@@ -166,12 +166,15 @@ export function FilterCheckboxGroup({
   if (type === "accordion" && !shouldRenderInline) {
     return (
       <div
-        className={cn("border-b border-solid border-gray-200", className)}
+        className={cn(
+          "!border-l-0 !border-r-0 !border-t-0 border-b border-solid border-gray-200",
+          className
+        )}
         {...props}
       >
         <button
           type="button"
-          className="flex w-full items-center justify-between gap-4 px-4 py-4 text-left"
+          className="m-0 flex w-full cursor-pointer appearance-none items-center justify-between gap-4 rounded-none !border-0 !bg-transparent px-4 py-4 text-left font-[inherit] text-current shadow-none"
           onClick={() => setOpen((current) => !current)}
         >
           <Text as="span" size="lg" className="!text-[17px]">

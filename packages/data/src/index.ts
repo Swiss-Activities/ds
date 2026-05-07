@@ -28,16 +28,31 @@ export {
   getSearchSuggest,
   type UseSearchSuggestOptions,
 } from "./gateway/getSearchSuggest";
+export {
+  useActivityTypeFilter,
+  getActivityTypeFilter,
+  type UseActivityTypeFilterOptions,
+} from "./gateway/getActivityTypeFilter";
 export { useGatewayStore } from "./gateway/store";
 export type {
   TGatewayHome,
   TGatewayActivityTypeContext,
   TGatewayHomeSection,
   TGatewayHomeCarouselSection,
+  TGatewayActivityGridSection,
   TGatewayHomeWeatherCardSection,
   TGatewayHomeItem,
   TGatewayWeatherCardItem,
   TGatewayHomeParams,
+  TGatewayStaticSection,
+  TGatewayHeroStaticSection,
+  TGatewayFilterStaticSection,
+  TGatewayFilterConfig,
+  TGatewayFilterGroup,
+  TGatewayFilterItem,
+  TGatewayFilterOption,
+  TGatewayActivityTypeFilter,
+  TGatewayActivityTypeFilterParams,
   TGatewaySearchSuggestion,
   TGatewaySearchSuggest,
   TGatewaySearchSuggestParams,

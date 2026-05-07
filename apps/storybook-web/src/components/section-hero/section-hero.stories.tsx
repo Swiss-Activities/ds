@@ -122,6 +122,22 @@ function FallbackSectionHeroPreview() {
   );
 }
 
+function CenteredTitleSectionHeroPreview() {
+  return (
+    <Page>
+      <div className="sa-container">
+        <div className="-mx-2 sm:mx-0">
+          <SectionHero
+            variant="centered_title"
+            title="Paragliding"
+            image={getHeroImage()}
+          />
+        </div>
+      </div>
+    </Page>
+  );
+}
+
 function TemperatureWithIcon({
   icon,
   temperature,
@@ -191,6 +207,10 @@ export const Default: Story = {
 
 export const Fallback: Story = {
   render: () => <FallbackSectionHeroPreview />,
+};
+
+export const CenteredTitle: Story = {
+  render: () => <CenteredTitleSectionHeroPreview />,
 };
 
 export const SummarySunny: Story = {

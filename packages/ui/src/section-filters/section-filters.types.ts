@@ -4,6 +4,8 @@ export type SectionFilterItem = {
   id: string;
   label: string;
   kind?: "plain" | "disclosure" | "removable";
+  param?: string;
+  value?: string;
 };
 
 export type SectionFiltersBreakpoint = "sm" | "md" | "lg" | "xl" | "2xl";
@@ -18,4 +20,5 @@ export type BaseSectionFiltersProps = {
   drawerDescription?: ReactNode;
   drawerContent?: ReactNode;
   items: SectionFilterItem[];
+  onItemClick?: (item: SectionFilterItem) => void;
 };
