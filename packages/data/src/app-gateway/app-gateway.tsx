@@ -99,7 +99,10 @@ export type BaseAppGatewayProps<TSection, THero, TItemData = unknown> =
   ) => ReactNode;
   renderPage: (args: AppGatewayRenderPageArgs<TSection>) => ReactNode;
   renderItemView?: (args: AppGatewayRenderItemViewArgs<TItemData>) => ReactNode;
-  loadItem?: (id: string) => Promise<TItemData | null>;
+  loadItem?: (
+    id: string,
+    context?: AppGatewayContext
+  ) => Promise<TItemData | null>;
   urlSelectedItemId?: string | null;
   onSelectItemUrl?: (
     id: string,
@@ -196,6 +199,24 @@ function AppGatewayContent<TSection, THero, TItemData>({
     gatewayFeed;
 
   const canSelectItem = Boolean(renderItemView);
+  const loadItemContext = useMemo<AppGatewayContext>(
+    () => ({
+      locale: context.locale,
+      country: context.country,
+      lat: context.lat,
+      lng: context.lng,
+      destination: context.destination,
+      activityType: context.activityType,
+    }),
+    [
+      context.activityType,
+      context.country,
+      context.destination,
+      context.lat,
+      context.lng,
+      context.locale,
+    ]
+  );
 
   const clearPendingUrlSelectedItem = useCallback(() => {
     pendingUrlSelectedItemId.current = null;
@@ -304,7 +325,10 @@ function AppGatewayContent<TSection, THero, TItemData>({
       }
 
       try {
-        const itemData = await loadItem(id);
+        const itemData = await loadItem(
+          id,
+          contextReady ? loadItemContext : undefined
+        );
 
         if (itemData == null) {
           return;
@@ -336,6 +360,8 @@ function AppGatewayContent<TSection, THero, TItemData>({
     [
       canSelectItem,
       clearSelectedItem,
+      contextReady,
+      loadItemContext,
       loadItem,
       markPendingUrlSelectedItem,
       onSelectItemUrl,
@@ -359,6 +385,10 @@ function AppGatewayContent<TSection, THero, TItemData>({
 
   useEffect(() => {
     if (!canSelectItem) {
+      return;
+    }
+
+    if (loadItem && enabled && !contextReady) {
       return;
     }
 
@@ -402,7 +432,10 @@ function AppGatewayContent<TSection, THero, TItemData>({
     canSelectItem,
     clearPendingUrlSelectedItem,
     clearSelectedItem,
+    contextReady,
+    enabled,
     handleSelectItem,
+    loadItem,
     pendingItemId,
     preserveSelectedItemView,
     selectedItemId,

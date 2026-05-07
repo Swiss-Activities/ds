@@ -84,6 +84,10 @@ export {
   getGatewayDetailParamsForItem,
 } from "./gateway/getDetail";
 export {
+  getGatewayActivityDetail,
+  getGatewayActivityDetailPath,
+} from "./gateway/getActivityDetail";
+export {
   useSearchSuggest,
   getSearchSuggest,
   type UseSearchSuggestOptions,
@@ -131,6 +135,12 @@ export type {
   TGatewayDetailParams,
   TGatewayDetailForItemOptions,
   TGatewayDetail,
+  TGatewayActivityDetail,
+  TGatewayActivityDetailParams,
+  TGatewayActivityMeetingPoint,
+  TGatewayActivityProductContext,
+  TGatewayActivityReviewSummary,
+  TGatewayActivityWeatherContext,
   TGatewayMovieShowtime,
 } from "./gateway/types";
 export type { GatewayStoreState } from "./gateway/store";

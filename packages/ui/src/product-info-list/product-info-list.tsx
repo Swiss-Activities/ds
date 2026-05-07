@@ -26,7 +26,7 @@ function ContentText({
         as="span"
         size="sm"
         gray={gray}
-        className={cn("block !leading-snug", className)}
+        className={cn("block !leading-snug lg:line-clamp-2", className)}
       >
         {children}
       </Text>
@@ -47,7 +47,7 @@ function ProductInfoListContent({
         as="span"
         size="sm"
         black
-        className="block !text-sm !font-medium !leading-tight lg:!text-xs"
+        className="block !text-sm !font-medium !leading-tight lg:line-clamp-2 lg:!text-xs"
       >
         {title}
       </Text>

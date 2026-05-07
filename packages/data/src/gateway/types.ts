@@ -223,6 +223,73 @@ export type TGatewayDetailForItemOptions = {
   signal?: AbortSignal;
 };
 
+export type TGatewayActivityMeetingPoint = {
+  id?: string | null;
+  label?: string | null;
+  address?: string | null;
+  lat?: number | null;
+  lng?: number | null;
+  displayText?: string | null;
+  appGeoLink?: string | null;
+  webGeoLink?: string | null;
+  distanceKm?: number | null;
+};
+
+export type TGatewayActivityWeatherContext = {
+  plz: string;
+  locationName: string;
+  icon: string;
+  condition: "rainy" | "snowy" | "sunny" | "cloudy" | "foggy";
+  description: string;
+  temperature: number;
+  precipitation: number;
+  cloudCover: number;
+  isNight: boolean;
+  updatedAt: string;
+};
+
+export type TGatewayActivityReviewSummary = {
+  totalAmount: number;
+  totalAverage: number;
+  filteredAmount: number;
+  filteredAverage: number;
+};
+
+export type TGatewayActivityProductContext = {
+  openingHours?: string | null;
+  recommendedDurationHours?: number | null;
+  meetingPoint?: TGatewayActivityMeetingPoint | null;
+  weather?: TGatewayActivityWeatherContext | null;
+  rating?: {
+    score: number;
+    count: number;
+  } | null;
+};
+
+export type TGatewayActivityDetail = {
+  id: string;
+  type: "activity";
+  activity: Record<string, unknown>;
+  reviews: Record<string, unknown>[];
+  reviewSummary: TGatewayActivityReviewSummary;
+  productContext: TGatewayActivityProductContext;
+  meta: {
+    activitySource: "website-data-api";
+    reviewsSource: "website-data-api";
+    temporarySource: true;
+    note: string;
+  };
+};
+
+export type TGatewayActivityDetailParams = {
+  id: string;
+  locale?: string;
+  lat?: number | null;
+  lng?: number | null;
+  country?: string | null;
+  dev?: boolean;
+};
+
 export type TGatewaySwimmingDetails = {
   waterType?: string | null;
   water_type?: string | null;
