@@ -240,7 +240,7 @@ export type TGatewayActivityWeatherContext = {
   locationName: string;
   icon: string;
   condition: "rainy" | "snowy" | "sunny" | "cloudy" | "foggy";
-  description: string;
+  description?: string | null;
   temperature: number;
   precipitation: number;
   cloudCover: number;
