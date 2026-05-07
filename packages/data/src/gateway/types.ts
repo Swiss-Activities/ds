@@ -73,8 +73,22 @@ export type TGatewayActivityTypeContext = {
   numberOfActivities?: number;
 };
 
+export type TGatewayDestinationContext = {
+  type: "destination";
+  id: string;
+  title: string;
+  slug: string;
+  imageUrl?: string | null;
+  lat: number;
+  lng: number;
+};
+
+export type TGatewayDiscoveryContext =
+  | TGatewayActivityTypeContext
+  | TGatewayDestinationContext;
+
 export type TGatewayHome = {
-  context?: TGatewayActivityTypeContext;
+  context?: TGatewayDiscoveryContext;
   staticSections?: TGatewayStaticSection[];
   sections: TGatewayHomeSection[];
 };
@@ -128,8 +142,8 @@ export type TGatewayStaticSection =
   | TGatewayHeroStaticSection
   | TGatewayFilterStaticSection;
 
-export type TGatewayActivityTypeFilterParams = {
-  activityType: string;
+export type TGatewayFilterParams = {
+  endpoint: string;
   locale?: string;
   lat?: number | null;
   lng?: number | null;
@@ -140,10 +154,19 @@ export type TGatewayActivityTypeFilterParams = {
   dev?: boolean;
 };
 
-export type TGatewayActivityTypeFilter = {
+export type TGatewayFilter = {
   filters: TGatewayFilterConfig;
   sections: TGatewayActivityGridSection[];
 };
+
+export type TGatewayActivityTypeFilterParams = Omit<
+  TGatewayFilterParams,
+  "endpoint"
+> & {
+  activityType: string;
+};
+
+export type TGatewayActivityTypeFilter = TGatewayFilter;
 
 export type TGatewayHomeParams = {
   locale?: string;

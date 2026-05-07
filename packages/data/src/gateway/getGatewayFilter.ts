@@ -3,15 +3,11 @@
 import { keepPreviousData, useQuery } from "@tanstack/react-query";
 import { useSilentCoordinates } from "../hooks/useSilentCoordinates";
 import { useDataConfig } from "../provider";
-import { normalizeGatewayLocale } from "./client";
+import { fetchGatewayProxy, normalizeGatewayLocale } from "./client";
 import { useGetCountry } from "./getCountry";
-import { getGatewayFilter } from "./getGatewayFilter";
-import type {
-  TGatewayActivityTypeFilter,
-  TGatewayActivityTypeFilterParams,
-} from "./types";
+import type { TGatewayFilter, TGatewayFilterParams } from "./types";
 
-export type UseActivityTypeFilterOptions = TGatewayActivityTypeFilterParams & {
+export type UseGatewayFilterOptions = TGatewayFilterParams & {
   enabled?: boolean;
   retry?: boolean | number;
   staleTime?: number;
@@ -19,28 +15,32 @@ export type UseActivityTypeFilterOptions = TGatewayActivityTypeFilterParams & {
   refetchOnReconnect?: boolean;
 };
 
-export const getActivityTypeFilter = async (
-  apiUrl: string,
-  params: TGatewayActivityTypeFilterParams,
-  signal?: AbortSignal
-): Promise<TGatewayActivityTypeFilter> => {
-  const { activityType, ...queryParams } = params;
+export const getGatewayFilterPath = (endpoint: string) =>
+  endpoint
+    .replace(/^\/+/, "")
+    .replace(/^app\/v1\/+/, "")
+    .replace(/^gateway\/+/, "");
 
-  return getGatewayFilter(
+export const getGatewayFilter = async (
+  apiUrl: string,
+  params: TGatewayFilterParams,
+  signal?: AbortSignal
+): Promise<TGatewayFilter> => {
+  const { endpoint, ...queryParams } = params;
+
+  return fetchGatewayProxy<TGatewayFilter>({
     apiUrl,
-    {
-      endpoint: getActivityTypeFilterEndpoint(activityType),
+    path: getGatewayFilterPath(endpoint),
+    params: {
       ...queryParams,
+      tags: queryParams.tags?.join(","),
     },
-    signal
-  );
+    signal,
+  });
 };
 
-export const getActivityTypeFilterEndpoint = (activityType: string) =>
-  `/app/v1/activity-types/${encodeURIComponent(activityType)}/filter`;
-
-export const useActivityTypeFilter = ({
-  activityType,
+export const useGatewayFilter = ({
+  endpoint,
   locale,
   lat,
   lng,
@@ -54,7 +54,7 @@ export const useActivityTypeFilter = ({
   staleTime = 30_000,
   refetchOnWindowFocus = false,
   refetchOnReconnect = true,
-}: UseActivityTypeFilterOptions) => {
+}: UseGatewayFilterOptions) => {
   const { apiUrl, locale: configLocale } = useDataConfig();
   const { data: detectedCountry, isFetched: countryFetched } = useGetCountry({
     enabled,
@@ -64,13 +64,13 @@ export const useActivityTypeFilter = ({
   const resolvedCountry = country ?? detectedCountry ?? undefined;
   const resolvedLat = lat ?? coords?.latitude;
   const resolvedLng = lng ?? coords?.longitude;
-  const queryEnabled =
-    enabled && Boolean(activityType) && countryFetched && coordsReady;
-  const isPreparing = enabled && (!countryFetched || !coordsReady);
   const normalizedTags = tags.filter(Boolean);
+  const queryEnabled =
+    enabled && Boolean(endpoint) && countryFetched && coordsReady;
+  const isPreparing = enabled && (!countryFetched || !coordsReady);
 
-  const params: TGatewayActivityTypeFilterParams = {
-    activityType,
+  const params: TGatewayFilterParams = {
+    endpoint,
     ...(resolvedLocale ? { locale: resolvedLocale } : {}),
     ...(resolvedCountry ? { country: resolvedCountry } : {}),
     ...(resolvedLat != null ? { lat: resolvedLat } : {}),
@@ -84,8 +84,8 @@ export const useActivityTypeFilter = ({
   const result = useQuery({
     queryKey: [
       "get",
-      "gateway/app/v1/activity-types/filter",
-      params.activityType,
+      "gateway/app/v1/filter",
+      params.endpoint,
       params.locale,
       params.lat,
       params.lng,
@@ -95,7 +95,7 @@ export const useActivityTypeFilter = ({
       params.tags?.join(","),
       params.dev,
     ],
-    queryFn: ({ signal }) => getActivityTypeFilter(apiUrl, params, signal),
+    queryFn: ({ signal }) => getGatewayFilter(apiUrl, params, signal),
     enabled: queryEnabled,
     retry,
     staleTime,

@@ -43,10 +43,15 @@ export const isGatewayFilterStaticSection = (
   section: TGatewayStaticSection
 ): section is TGatewayFilterStaticSection => section.component === "filters";
 
+export const getGatewayStaticFilterSection = (
+  data: Pick<TGatewayHome, "staticSections">
+): TGatewayFilterStaticSection | null =>
+  data.staticSections?.find(isGatewayFilterStaticSection) ?? null;
+
 export const getGatewayStaticFilterConfig = (
   data: Pick<TGatewayHome, "staticSections">
 ): TGatewayFilterConfig | null => {
-  const section = data.staticSections?.find(isGatewayFilterStaticSection);
+  const section = getGatewayStaticFilterSection(data);
 
   if (!section) {
     return null;
@@ -56,6 +61,38 @@ export const getGatewayStaticFilterConfig = (
     endpoint: section.endpoint,
     items: section.items,
     groups: section.groups,
+  };
+};
+
+export const applyGatewayFilterSelection = (
+  config: TGatewayFilterConfig,
+  selectedValues: string[]
+): TGatewayFilterConfig => {
+  const selectedSet = new Set(selectedValues.filter(Boolean));
+  const labels = new Map<string, string>();
+
+  for (const group of config.groups) {
+    for (const option of group.options) {
+      labels.set(option.value, option.label);
+    }
+  }
+
+  return {
+    endpoint: config.endpoint,
+    items: Array.from(selectedSet).map((value) => ({
+      id: `tag:${value}`,
+      label: labels.get(value) ?? formatGatewayFilterValue(value),
+      kind: "removable",
+      param: "tags",
+      value,
+    })),
+    groups: config.groups.map((group) => ({
+      ...group,
+      options: group.options.map((option) => ({
+        ...option,
+        selected: selectedSet.has(option.value),
+      })),
+    })),
   };
 };
 
@@ -82,7 +119,8 @@ export const getGatewaySearchResultsSummary = (data: {
 export const getGatewaySectionActionHref = (
   section: TGatewayHomeCarouselSection | TGatewayHomeWeatherCardSection
 ) => {
-  const sectionWithAction = section as typeof section & GatewaySectionWithAction;
+  const sectionWithAction = section as typeof section &
+    GatewaySectionWithAction;
 
   return (
     sectionWithAction.actionPath ||
@@ -116,3 +154,11 @@ export const collectGatewayItemsById = (data: {
 
   return items;
 };
+
+function formatGatewayFilterValue(value: string) {
+  return value
+    .replace(/[_:-]+/g, " ")
+    .replace(/\s+/g, " ")
+    .trim()
+    .replace(/\b\w/g, (char) => char.toUpperCase());
+}

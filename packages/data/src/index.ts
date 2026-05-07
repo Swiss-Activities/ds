@@ -19,10 +19,12 @@ export type {
 export { useGetHome, getHome } from "./gateway/getHome";
 export { useGetCountry, getCountry } from "./gateway/getCountry";
 export {
+  applyGatewayFilterSelection,
   collectGatewayItemsById,
   getGatewaySearchResultsSummary,
   getGatewaySectionActionHref,
   getGatewayStaticFilterConfig,
+  getGatewayStaticFilterSection,
   isGatewayActivityGridSection,
   isGatewayActivitySection,
   isGatewayCarouselSection,
@@ -87,8 +89,15 @@ export {
   type UseSearchSuggestOptions,
 } from "./gateway/getSearchSuggest";
 export {
+  useGatewayFilter,
+  getGatewayFilter,
+  getGatewayFilterPath,
+  type UseGatewayFilterOptions,
+} from "./gateway/getGatewayFilter";
+export {
   useActivityTypeFilter,
   getActivityTypeFilter,
+  getActivityTypeFilterEndpoint,
   type UseActivityTypeFilterOptions,
 } from "./gateway/getActivityTypeFilter";
 export { useGatewayStore } from "./gateway/store";
@@ -110,8 +119,12 @@ export type {
   TGatewayFilterGroup,
   TGatewayFilterItem,
   TGatewayFilterOption,
+  TGatewayFilter,
+  TGatewayFilterParams,
   TGatewayActivityTypeFilter,
   TGatewayActivityTypeFilterParams,
+  TGatewayDestinationContext,
+  TGatewayDiscoveryContext,
   TGatewaySearchSuggestion,
   TGatewaySearchSuggest,
   TGatewaySearchSuggestParams,
