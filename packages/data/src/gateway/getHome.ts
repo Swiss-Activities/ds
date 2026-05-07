@@ -3,11 +3,8 @@
 import { useQuery } from "@tanstack/react-query";
 import { useSilentCoordinates } from "../hooks/useSilentCoordinates";
 import { useDataConfig } from "../provider";
-import {
-  fetchGatewayDirect,
-  fetchGatewayProxy,
-  normalizeGatewayLocale,
-} from "./client";
+import { normalizeGatewayLocale } from "./client";
+import { getGatewayFeed, getGatewayFeedDirect } from "./feed";
 import { useGetCountry } from "./getCountry";
 import type { TGatewayHome, TGatewayHomeParams } from "./types";
 
@@ -15,22 +12,14 @@ const fetchHome = async (
   apiUrl: string,
   params: TGatewayHomeParams
 ): Promise<TGatewayHome> => {
-  return fetchGatewayProxy<TGatewayHome>({
-    apiUrl,
-    path: "home",
-    params,
-  });
+  return getGatewayFeed(apiUrl, params);
 };
 
 export const getHome = async (
   gatewayUrl: string,
   params: TGatewayHomeParams
 ): Promise<TGatewayHome> => {
-  return fetchGatewayDirect<TGatewayHome>({
-    gatewayUrl,
-    path: "/app/v1/home",
-    params,
-  });
+  return getGatewayFeedDirect(gatewayUrl, params);
 };
 
 export const useGetHome = ({

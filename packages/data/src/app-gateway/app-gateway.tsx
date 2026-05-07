@@ -10,7 +10,7 @@ import {
   type ReactNode,
 } from "react";
 import { flushSync } from "react-dom";
-import { useSilentCoordinates } from "../hooks/useSilentCoordinates";
+import { useGatewayFeed } from "../gateway/feed";
 import type { TGatewayHome } from "../gateway/types";
 import type { DataConfig } from "../types";
 
@@ -126,72 +126,6 @@ type SelectedItemHistoryEntry<TItemData> = {
   label: string | null;
 };
 
-const normalizeLocale = (locale?: string | null) =>
-  locale ? locale.replace("_", "-") : undefined;
-
-async function fetchCountry(traceUrl?: string) {
-  if (!traceUrl) {
-    return null;
-  }
-
-  const response = await fetch(traceUrl);
-  const text = await response.text();
-  const match = text.match(/^loc=(.*)$/m);
-
-  return match ? match[1].trim() : null;
-}
-
-async function fetchGatewayFeed(
-  apiUrl: string,
-  params: {
-    locale?: string;
-    lat?: number | null;
-    lng?: number | null;
-    country?: string | null;
-    dev?: boolean;
-    destination?: string | null;
-    activityType?: string | null;
-  }
-): Promise<TGatewayHome> {
-  const searchParams = new URLSearchParams();
-  const isDestinationFeed = Boolean(params.destination && !params.activityType);
-  const path = params.activityType
-    ? `activity-types/${encodeURIComponent(params.activityType)}`
-    : params.destination
-    ? `destinations/${encodeURIComponent(params.destination)}`
-    : "home";
-
-  if (params.locale) {
-    searchParams.set("locale", params.locale);
-  }
-
-  if (!isDestinationFeed && params.lat != null) {
-    searchParams.set("lat", String(params.lat));
-  }
-
-  if (!isDestinationFeed && params.lng != null) {
-    searchParams.set("lng", String(params.lng));
-  }
-
-  if (params.country) {
-    searchParams.set("country", params.country);
-  }
-
-  if (params.dev) {
-    searchParams.set("dev", "true");
-  }
-
-  const response = await fetch(
-    `${apiUrl}/gateway/${path}/?${searchParams.toString()}`
-  );
-
-  if (!response.ok) {
-    throw new Error(`Gateway ${path} error: ${response.status}`);
-  }
-
-  return response.json();
-}
-
 function scrollToTop() {
   if (typeof window === "undefined") {
     return;
@@ -238,23 +172,28 @@ function AppGatewayContent<TSection, THero, TItemData>({
     SelectedItemHistoryEntry<TItemData>[]
   >([]);
   const [pendingItemId, setPendingItemId] = useState<string | null>(null);
-  const [country, setCountry] = useState<string | null>(null);
-  const [countryFetched, setCountryFetched] = useState(false);
-  const [data, setData] = useState<TGatewayHome | null>(null);
-  const [isLoading, setIsLoading] = useState(false);
-  const [isError, setIsError] = useState(false);
   const previousSelectedItemId = useRef<string | null>(null);
   const pendingUrlSelectedItemId = useRef<string | null>(null);
   const pendingUrlSelectedItemTimer = useRef<ReturnType<
     typeof setTimeout
   > | null>(null);
 
-  const { coords, ready: coordsReady } = useSilentCoordinates();
-
   const resolvedTraceUrl =
     traceUrl || "https://www.swissactivities.com/cdn-cgi/trace";
-  const normalizedLocale = normalizeLocale(locale);
-  const isPreparing = enabled && (!countryFetched || !coordsReady);
+  const gatewayFeed = useGatewayFeed({
+    apiUrl,
+    traceUrl: resolvedTraceUrl,
+    locale,
+    enabled,
+    retry: 3,
+    refetchOnWindowFocus: true,
+    refetchOnReconnect: true,
+    dev: useDevGateway,
+    destination: selectedDestination,
+    activityType: selectedActivityType,
+  });
+  const { data, isLoading, isError, isPreparing, context, contextReady } =
+    gatewayFeed;
 
   const canSelectItem = Boolean(renderItemView);
 
@@ -516,127 +455,45 @@ function AppGatewayContent<TSection, THero, TItemData>({
   );
 
   useEffect(() => {
-    if (!enabled) {
-      setCountryFetched(false);
-      setCountry(null);
-      return;
-    }
-
-    let cancelled = false;
-
-    fetchCountry(resolvedTraceUrl)
-      .then((nextCountry) => {
-        if (cancelled) {
-          return;
-        }
-
-        setCountry(nextCountry);
-        setCountryFetched(true);
-      })
-      .catch(() => {
-        if (cancelled) {
-          return;
-        }
-
-        setCountry(null);
-        setCountryFetched(true);
-      });
-
-    return () => {
-      cancelled = true;
-    };
-  }, [enabled, resolvedTraceUrl]);
-
-  useEffect(() => {
-    if (!enabled || !countryFetched || !coordsReady) {
+    if (!enabled || !contextReady) {
       return;
     }
 
     onGatewayContext?.({
-      locale: normalizedLocale,
-      country,
-      lat: coords?.latitude ?? null,
-      lng: coords?.longitude ?? null,
-      destination: selectedDestination,
-      activityType: selectedActivityType,
+      locale: context.locale,
+      country: context.country,
+      lat: context.lat,
+      lng: context.lng,
+      destination: context.destination,
+      activityType: context.activityType,
     });
   }, [
-    coords?.latitude,
-    coords?.longitude,
-    coordsReady,
-    country,
-    countryFetched,
+    context.activityType,
+    context.country,
+    context.destination,
+    context.lat,
+    context.lng,
+    context.locale,
+    contextReady,
     enabled,
-    normalizedLocale,
     onGatewayContext,
-    selectedActivityType,
-    selectedDestination,
   ]);
 
   useEffect(() => {
-    if (!enabled) {
-      setData(null);
-      setIsLoading(false);
-      setIsError(false);
+    if (!data) {
       return;
     }
 
-    if (!countryFetched || !coordsReady || !apiUrl) {
+    onGatewayData?.(data);
+  }, [data, onGatewayData]);
+
+  useEffect(() => {
+    if (!isError || !gatewayFeed.error) {
       return;
     }
 
-    let cancelled = false;
-
-    setIsLoading(true);
-    setIsError(false);
-
-    fetchGatewayFeed(apiUrl, {
-      locale: normalizedLocale,
-      country,
-      lat: coords?.latitude ?? null,
-      lng: coords?.longitude ?? null,
-      dev: useDevGateway,
-      destination: selectedDestination,
-      activityType: selectedActivityType,
-    })
-      .then((nextData) => {
-        if (cancelled) {
-          return;
-        }
-
-        setData(nextData);
-        onGatewayData?.(nextData);
-        setIsLoading(false);
-        setIsError(false);
-      })
-      .catch((error) => {
-        if (cancelled) {
-          return;
-        }
-
-        console.error("Failed to fetch app gateway data", error);
-        setData(null);
-        setIsLoading(false);
-        setIsError(true);
-      });
-
-    return () => {
-      cancelled = true;
-    };
-  }, [
-    apiUrl,
-    coords?.latitude,
-    coords?.longitude,
-    coordsReady,
-    country,
-    countryFetched,
-    enabled,
-    normalizedLocale,
-    onGatewayData,
-    selectedActivityType,
-    selectedDestination,
-    useDevGateway,
-  ]);
+    console.error("Failed to fetch app gateway data", gatewayFeed.error);
+  }, [gatewayFeed.error, isError]);
 
   const mappedGatewayData = useMemo(() => {
     if (!data) {

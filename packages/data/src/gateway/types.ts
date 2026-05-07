@@ -153,6 +153,11 @@ export type TGatewayHomeParams = {
   dev?: boolean;
 };
 
+export type TGatewayFeedParams = TGatewayHomeParams & {
+  destination?: string | null;
+  activityType?: string | null;
+};
+
 export type TGatewaySearchSuggestion = {
   id: string;
   title: string;

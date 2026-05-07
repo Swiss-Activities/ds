@@ -1,4 +1,9 @@
 import type { ReactNode } from "react";
+import {
+  getGatewayItemImageUrl,
+  getGatewayItemPriceFormatted,
+  getGatewayItemReviewCount,
+} from "../gateway/items";
 import type { TGatewayHomeItem } from "../gateway/types";
 
 export type ActivityItemData = {
@@ -19,12 +24,6 @@ export type ActivityItemData = {
 
 export type RenderImage = (item: TGatewayHomeItem) => ReactNode;
 
-const getImageUrl = (item: TGatewayHomeItem) => item.imageUrl ?? item.image_url;
-const getReviewCount = (item: TGatewayHomeItem) =>
-  item.reviewCount ?? item.review_count;
-const getPriceFormatted = (item: TGatewayHomeItem) =>
-  item.priceFormatted ?? item.price_formatted;
-
 export const toActivityItem = (
   item: TGatewayHomeItem,
   {
@@ -37,7 +36,7 @@ export const toActivityItem = (
     renderImage: RenderImage;
   }
 ): ActivityItemData => ({
-  image: getImageUrl(item) ? renderImage(item) : null,
+  image: getGatewayItemImageUrl(item) ? renderImage(item) : null,
   title: item.title,
   type: item.type,
   subtitle: item.subtitle,
@@ -45,10 +44,10 @@ export const toActivityItem = (
   dateRange: item.dateRangeFormatted,
   distance: item.distanceKm == null ? null : `${item.distanceKm.toFixed(1)} km`,
   score: item.rating ?? 0,
-  reviewCount: getReviewCount(item) ?? 0,
+  reviewCount: getGatewayItemReviewCount(item),
   priceLabel,
-  price: getPriceFormatted(item)
-    ? `${fromLabel} ${getPriceFormatted(item)}`
+  price: getGatewayItemPriceFormatted(item)
+    ? `${fromLabel} ${getGatewayItemPriceFormatted(item)}`
     : "",
   href: item.path ?? "",
   detailPath: item.detailPath,

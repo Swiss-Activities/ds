@@ -19,6 +19,64 @@ export type {
 export { useGetHome, getHome } from "./gateway/getHome";
 export { useGetCountry, getCountry } from "./gateway/getCountry";
 export {
+  collectGatewayItemsById,
+  getGatewaySearchResultsSummary,
+  getGatewaySectionActionHref,
+  getGatewayStaticFilterConfig,
+  isGatewayActivityGridSection,
+  isGatewayActivitySection,
+  isGatewayCarouselSection,
+  isGatewayFilterStaticSection,
+  isGatewayWeatherCardSection,
+} from "./gateway/sections";
+export {
+  getGatewayFeed,
+  getGatewayFeedDirect,
+  getGatewayFeedDirectPath,
+  getGatewayFeedPath,
+  getGatewayFeedQueryParams,
+  useGatewayFeed,
+  type UseGatewayFeedOptions,
+} from "./gateway/feed";
+export {
+  cacheGatewayDetail,
+  createGatewayDetailItemFromUrl,
+  getFallbackGatewayType,
+  getGatewayQueryTokens,
+  getGatewayQueryValue,
+  gatewaySelectionParams,
+  hydrateGatewayDetailItem,
+  isGatewayActivityId,
+  isGatewayDetailType,
+  isGatewayHomeItemType,
+  readCachedGatewayDetail,
+  scheduleGatewayTopScroll,
+  scrollToGatewayTop,
+  type TGatewaySelectedDetail,
+} from "./gateway/selection";
+export {
+  decodeGatewayHtmlEntities,
+  findGatewaySearchDestination,
+  formatGatewayDistance,
+  getGatewayActivityTypeValue,
+  getGatewayDestinationValue,
+  getGatewaySuggestionCategoryDetail,
+  normalizeGatewaySearchValue,
+} from "./gateway/suggestions";
+export {
+  formatGatewayDate,
+  formatGatewayItemCategory,
+  formatGatewayItemDateRange,
+  formatGatewayItemDistance,
+  getGatewayItemImageUrl,
+  getGatewayItemPriceFormatted,
+  getGatewayItemReviewCount,
+  getUsableGatewayImageUrl,
+  isFutureGatewayDate,
+  parseGatewayDate,
+  type GatewayDateRangeLabels,
+} from "./gateway/items";
+export {
   getGatewayDetail,
   getGatewayDetailForItem,
   getGatewayDetailParamsForItem,
@@ -44,6 +102,7 @@ export type {
   TGatewayHomeItem,
   TGatewayWeatherCardItem,
   TGatewayHomeParams,
+  TGatewayFeedParams,
   TGatewayStaticSection,
   TGatewayHeroStaticSection,
   TGatewayFilterStaticSection,
