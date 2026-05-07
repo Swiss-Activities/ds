@@ -77,29 +77,27 @@ export function SectionHero({
     return (
       <section
         className={cn(
-          "border-b border-solid border-gray-200 bg-white",
+          "overflow-hidden border-b border-solid border-gray-200 bg-white lg:rounded-lg",
           className
         )}
         {...props}
       >
-        <div className="mx-auto max-w-[1232px] px-2 py-8 sm:px-4 lg:py-10">
-          <div className="max-w-4xl space-y-6">
-            {title ? (
-              <Text
-                as="h1"
-                size="2xl"
-                className="max-w-3xl !text-[28px] !leading-tight sm:!text-[34px] lg:!text-[36px] [&_svg]:!h-6 [&_svg]:!w-6"
-              >
-                {title}
-              </Text>
-            ) : null}
-            {search ? (
-              <div className="max-w-[640px] [&_[data-insights-index='search']]:max-w-none">
-                {search}
-              </div>
-            ) : null}
-            <SectionHeroTags tags={tags} />
-          </div>
+        <div className="max-w-4xl space-y-6 px-4 py-8 sm:px-6 lg:px-8 lg:py-10">
+          {title ? (
+            <Text
+              as="h1"
+              size="2xl"
+              className="max-w-3xl !text-[28px] !leading-tight sm:!text-[34px] lg:!text-[36px] [&_svg]:!h-6 [&_svg]:!w-6"
+            >
+              {title}
+            </Text>
+          ) : null}
+          {search ? (
+            <div className="max-w-[640px] [&_[data-insights-index='search']]:max-w-none">
+              {search}
+            </div>
+          ) : null}
+          <SectionHeroTags tags={tags} />
         </div>
       </section>
     );

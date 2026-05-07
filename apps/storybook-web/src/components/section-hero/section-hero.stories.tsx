@@ -169,34 +169,39 @@ function SummarySectionHeroPreview({
 
   return (
     <Page>
-      <SectionHero
-        variant="summary"
-        title={
-          <>
-            {daypart} in {city}.{" "}
-            <TemperatureWithIcon icon={icon} temperature={temperature} /> and{" "}
-            {weather}. {count} outdoor experiences within 30 minutes of you.
-          </>
-        }
-        search={<SearchBar mode="main" placeholder={placeholder} />}
-        tags={[
-          {
-            id: "location",
-            icon: <Icon icon={MapPin} size="xs" />,
-            label: city,
-          },
-          {
-            id: "weather",
-            icon,
-            label: weather,
-          },
-          {
-            id: "time",
-            icon: <Icon icon={Clock3} size="xs" />,
-            label: "14:00",
-          },
-        ]}
-      />
+      <div className="sa-container">
+        <div className="-mx-2 sm:mx-0">
+          <SectionHero
+            variant="summary"
+            title={
+              <>
+                {daypart} in {city}.{" "}
+                <TemperatureWithIcon icon={icon} temperature={temperature} />{" "}
+                and {weather}. {count} outdoor experiences within 30 minutes of
+                you.
+              </>
+            }
+            search={<SearchBar mode="main" placeholder={placeholder} />}
+            tags={[
+              {
+                id: "location",
+                icon: <Icon icon={MapPin} size="xs" />,
+                label: city,
+              },
+              {
+                id: "weather",
+                icon,
+                label: weather,
+              },
+              {
+                id: "time",
+                icon: <Icon icon={Clock3} size="xs" />,
+                label: "14:00",
+              },
+            ]}
+          />
+        </div>
+      </div>
     </Page>
   );
 }
