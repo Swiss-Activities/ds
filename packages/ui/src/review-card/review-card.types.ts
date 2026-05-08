@@ -9,6 +9,7 @@ export type BaseReviewCardProps = {
   activity?: {
     label: ReactNode;
     href?: string;
+    onClick?: () => void;
   };
   activityPrefix?: ReactNode;
   images?: ReactNode[];

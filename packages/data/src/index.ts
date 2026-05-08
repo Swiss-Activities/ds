@@ -30,6 +30,7 @@ export {
   isGatewayCarouselSection,
   isGatewayFilterStaticSection,
   isGatewayHeroSection,
+  isGatewayReviewSection,
   isGatewayWeatherCardSection,
 } from "./gateway/sections";
 export {
@@ -108,6 +109,8 @@ export {
 export { useGatewayStore } from "./gateway/store";
 export type {
   TGatewayHome,
+  TGatewayActivityCardItem,
+  TGatewayActivityCarouselSection,
   TGatewayActivityTypeContext,
   TGatewayHomeSection,
   TGatewayHomeCarouselSection,
@@ -115,6 +118,8 @@ export type {
   TGatewayHomeWeatherCardSection,
   TGatewayHomeHeroSection,
   TGatewayHomeItem,
+  TGatewayReviewCarouselSection,
+  TGatewayReviewItem,
   TGatewayWeatherCardItem,
   TGatewayHomeParams,
   TGatewayFeedParams,

@@ -38,6 +38,8 @@ export function ReviewCard({
   const showUpvoteAction = Boolean(onUpvote || upvoteCount != null);
   const showUpvoteCount = upvoteCount != null && !hideUpvoteCount;
   const translationLabel = translatedFromLabel ?? translatedFrom;
+  const activityLabelClass =
+    "line-clamp-1 min-w-0 flex-1 font-medium text-gray-700 transition hover:text-black hover:underline";
 
   return (
     <Card className={cn("flex flex-col !p-4", className)} {...props}>
@@ -88,17 +90,34 @@ export function ReviewCard({
         )}
       </div>
       {activity ? (
-        <Text as="p" size="xs" gray className="mt-3">
-          {activityPrefix}{" "}
+        <Text
+          as="p"
+          size="xs"
+          gray
+          className="mt-3 flex min-w-0 items-baseline gap-1"
+        >
+          <span className="shrink-0">{activityPrefix}</span>
           {activity.href ? (
             <a
               href={activity.href}
-              className="font-medium text-gray-700 transition hover:text-black hover:underline"
+              className={activityLabelClass}
+              onClick={activity.onClick}
             >
               {activity.label}
             </a>
+          ) : activity.onClick ? (
+            <button
+              className={cn(
+                activityLabelClass,
+                "appearance-none border-none bg-transparent p-0 text-left"
+              )}
+              onClick={activity.onClick}
+              type="button"
+            >
+              {activity.label}
+            </button>
           ) : (
-            <span className="font-medium text-gray-700">{activity.label}</span>
+            <span className={activityLabelClass}>{activity.label}</span>
           )}
         </Text>
       ) : null}

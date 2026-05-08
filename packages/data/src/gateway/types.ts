@@ -6,7 +6,12 @@ export type TGatewayHomeItem = {
   subtitle?: string | null;
   path?: string;
   detailPath?: string | null;
-  type: "activity" | "non-bookable" | "non-bookable-event" | "blog-post";
+  type:
+    | "activity"
+    | "non-bookable"
+    | "non-bookable-event"
+    | "blog-post"
+    | "review";
   category?: string | null;
   distanceKm?: number | null;
   dateStart?: string | null;
@@ -17,6 +22,22 @@ export type TGatewayHomeItem = {
   rating?: number | null;
   review_count?: number | null;
   reviewCount?: number | null;
+  activityId?: string | null;
+  body?: string | null;
+  reviewerName?: string | null;
+  reviewerCountry?: string | null;
+};
+
+export type TGatewayActivityCardItem = TGatewayHomeItem & {
+  type: Exclude<TGatewayHomeItem["type"], "review">;
+};
+
+export type TGatewayReviewItem = TGatewayHomeItem & {
+  type: "review";
+  activityId: string;
+  body: string;
+  reviewerName: string;
+  reviewerCountry?: string | null;
 };
 
 export type TGatewayWeatherCardItem = {
@@ -35,11 +56,25 @@ export type TGatewayHomeCarouselSection = {
   data: TGatewayHomeItem[];
 };
 
+export type TGatewayActivityCarouselSection = Omit<
+  TGatewayHomeCarouselSection,
+  "data"
+> & {
+  data: TGatewayActivityCardItem[];
+};
+
+export type TGatewayReviewCarouselSection = Omit<
+  TGatewayHomeCarouselSection,
+  "data"
+> & {
+  data: TGatewayReviewItem[];
+};
+
 export type TGatewayActivityGridSection = {
   id: string;
   component: "activity_grid";
   title: string;
-  data: Array<TGatewayHomeItem & { type: "activity" }>;
+  data: Array<TGatewayActivityCardItem & { type: "activity" }>;
   meta: {
     pagination: {
       page: number;
@@ -226,7 +261,7 @@ export type TGatewaySearchSuggestParams = {
 export type TGatewayDetailParams = {
   path?: string | null;
   id?: string;
-  type?: Exclude<TGatewayHomeItem["type"], "activity" | "blog-post">;
+  type?: Exclude<TGatewayHomeItem["type"], "activity" | "blog-post" | "review">;
   dev?: boolean;
 };
 

@@ -127,12 +127,15 @@ export const isGatewayHomeItemType = (
     type === "activity" ||
     type === "non-bookable" ||
     type === "non-bookable-event" ||
-    type === "blog-post"
+    type === "blog-post" ||
+    type === "review"
   );
 };
 
 export const isGatewayDetailType = (type?: string) => {
-  return Boolean(type && type !== "activity" && type !== "blog-post");
+  return Boolean(
+    type && type !== "activity" && type !== "blog-post" && type !== "review"
+  );
 };
 
 export const scrollToGatewayTop = () => {

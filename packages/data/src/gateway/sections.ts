@@ -1,5 +1,6 @@
 import type {
   TGatewayActivityGridSection,
+  TGatewayActivityCarouselSection,
   TGatewayFilterConfig,
   TGatewayFilterStaticSection,
   TGatewayHome,
@@ -7,6 +8,7 @@ import type {
   TGatewayHomeHeroSection,
   TGatewayHomeItem,
   TGatewayHomeWeatherCardSection,
+  TGatewayReviewCarouselSection,
   TGatewayStaticSection,
 } from "./types";
 
@@ -30,10 +32,27 @@ export const isGatewayActivityGridSection = (
 ): section is TGatewayActivityGridSection =>
   section.component === "activity_grid";
 
+export const isGatewayReviewSection = (
+  section: GatewaySectionLike
+): section is TGatewayReviewCarouselSection => {
+  if (!isGatewayCarouselSection(section)) {
+    return false;
+  }
+
+  const data = (section as TGatewayHomeCarouselSection).data;
+
+  return (
+    Array.isArray(data) &&
+    data.length > 0 &&
+    data.every((item) => item.type === "review")
+  );
+};
+
 export const isGatewayActivitySection = (
   section: GatewaySectionLike
-): section is TGatewayHomeCarouselSection | TGatewayActivityGridSection =>
-  isGatewayCarouselSection(section) || isGatewayActivityGridSection(section);
+): section is TGatewayActivityCarouselSection | TGatewayActivityGridSection =>
+  isGatewayActivityGridSection(section) ||
+  (isGatewayCarouselSection(section) && !isGatewayReviewSection(section));
 
 export const isGatewayWeatherCardSection = (
   section: GatewaySectionLike
@@ -110,7 +129,7 @@ export const getGatewaySearchResultsSummary = (data: {
       typeof section === "object" &&
       isGatewayActivitySection(section as GatewaySectionLike)
     );
-  }) as Array<TGatewayHomeCarouselSection | TGatewayActivityGridSection>;
+  }) as Array<TGatewayActivityCarouselSection | TGatewayActivityGridSection>;
 
   return {
     moduleCount: activitySections.length,
@@ -151,7 +170,7 @@ export const collectGatewayItemsById = (data: {
     }
 
     for (const item of (
-      section as TGatewayHomeCarouselSection | TGatewayActivityGridSection
+      section as TGatewayActivityCarouselSection | TGatewayActivityGridSection
     ).data) {
       items.set(item.id, item);
     }

@@ -1,5 +1,5 @@
 import type { ViewProps } from "react-native";
-import { View } from "react-native-css/components";
+import { Pressable, View } from "react-native-css/components";
 import { Button } from "../button/button.native";
 import { Card } from "../card/card.native";
 import { Flag } from "../flag/flag.native";
@@ -78,9 +78,30 @@ export function ReviewCard({
         )}
       </View>
       {activity ? (
-        <Text as="p" size="xs" gray className="mt-3">
-          {activityPrefix} {activity.label}
-        </Text>
+        <View className="mt-3 flex min-w-0 flex-row items-center gap-1">
+          <Text as="span" size="xs" gray>
+            {activityPrefix}
+          </Text>
+          {activity.onClick ? (
+            <Pressable onPress={activity.onClick} className="min-w-0 flex-1">
+              <Text
+                size="xs"
+                numberOfLines={1}
+                className="font-medium !text-gray-700"
+              >
+                {activity.label}
+              </Text>
+            </Pressable>
+          ) : (
+            <Text
+              size="xs"
+              numberOfLines={1}
+              className="min-w-0 flex-1 font-medium !text-gray-700"
+            >
+              {activity.label}
+            </Text>
+          )}
+        </View>
       ) : null}
       <Text size="xs" numberOfLines={5} className="mt-3 !text-gray-700">
         {text}

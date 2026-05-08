@@ -52,6 +52,7 @@ export function SectionReviewGrid({
             activityPrefix={review.activityPrefix ?? activityPrefix}
             translatedFrom={review.translatedFrom}
             translatedFromLabel={review.translatedFromLabel}
+            className={review.className}
           />
         </li>
       ))}
