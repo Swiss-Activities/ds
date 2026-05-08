@@ -1,6 +1,7 @@
 import { createElement, type HTMLAttributes, type ReactNode } from "react";
 import { Button } from "../button";
 import { Card } from "../card";
+import { ExternalLink } from "../icons";
 import { Text } from "../text";
 import { cn } from "../utils/cn";
 import type {
@@ -89,7 +90,7 @@ function ProductInfoListItemRow({
     tag,
     {
       className:
-        "flex w-full appearance-none items-center gap-4 !border-b-0 !border-l-0 !border-r-0 !border-t !border-solid !border-gray-200 bg-transparent py-4 text-left text-current no-underline first:!border-t-0",
+        "flex w-full appearance-none items-start gap-4 !border-b-0 !border-l-0 !border-r-0 !border-t !border-solid !border-gray-200 bg-transparent py-4 text-left text-current no-underline first:!border-t-0",
       ...(href ? { href } : { type: "button" as const, onClick }),
     },
     <>
@@ -103,6 +104,12 @@ function ProductInfoListItemRow({
           details={details}
         />
       </div>
+      {href ? (
+        <ExternalLink
+          aria-hidden="true"
+          className="mt-0.5 h-4 w-4 shrink-0 text-gray-400"
+        />
+      ) : null}
     </>
   );
 }
@@ -129,7 +136,7 @@ function ProductInfoListItemCard({
         return (
           <Button
             variant="ghost"
-            className={`${className} !h-full !justify-start !p-3 !text-left`}
+            className={`${className} !flex !h-full !max-h-none !w-full !items-stretch !justify-start !p-3 !text-left`}
             {...buttonProps}
           >
             {children}
@@ -137,11 +144,17 @@ function ProductInfoListItemCard({
         );
       }}
     >
-      <div className="flex items-center gap-2">
+      <div className="grid h-full w-full grid-cols-[auto_minmax(0,1fr)_auto] items-start gap-2">
         <div className="flex shrink-0 text-gray-700 [&_svg]:h-7 [&_svg]:w-7">
           {icon}
         </div>
         <ProductInfoListContent title={title} subtitle={details ?? subtitle} />
+        {href ? (
+          <ExternalLink
+            aria-hidden="true"
+            className="h-4 w-4 shrink-0 text-gray-400"
+          />
+        ) : null}
       </div>
     </Card>
   );
@@ -162,7 +175,7 @@ export function ProductInfoList({
           />
         ))}
       </div>
-      <div className="hidden grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6 lg:grid lg:grid-cols-4 lg:gap-7">
+      <div className="hidden auto-rows-fr grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6 lg:grid lg:grid-cols-4 lg:gap-7">
         {items.map((item, index) => (
           <ProductInfoListItemCard
             key={item.id ?? `${String(item.title)}-${index}`}

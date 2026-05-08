@@ -7,6 +7,7 @@ export {
   Cloud,
   CloudLightning,
   CloudRain,
+  ExternalLink,
   Filter,
   Flame,
   ImageOff,
