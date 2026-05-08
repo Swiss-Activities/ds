@@ -11,17 +11,17 @@ export type SectionFeatureBandProps = BaseSectionFeatureBandProps &
 
 function FeatureBandItem({ item }: { item: SectionFeatureBandItem }) {
   return (
-    <div className="min-w-0 rounded-lg border border-solid border-white/10 bg-white/5 p-4 sm:p-5">
+    <div className="min-w-0">
       {item.icon ? (
-        <div className="mb-5 flex text-white [&_svg]:h-7 [&_svg]:w-7">
+        <div className="mb-4 flex text-white [&_svg]:h-6 [&_svg]:w-6">
           {item.icon}
         </div>
       ) : null}
-      <Text as="h3" size="md2" className="text-white">
+      <Text as="h3" size="sm" bold className="!text-white">
         {item.title}
       </Text>
       {item.description ? (
-        <Text size="sm" className="mt-2 max-w-sm !text-white/65">
+        <Text size="xs" className="mt-1.5 max-w-sm !text-white/60">
           {item.description}
         </Text>
       ) : null}
@@ -36,17 +36,19 @@ export function SectionFeatureBand({
   ...props
 }: SectionFeatureBandProps) {
   return (
-    <section className={cn("bg-blue py-8", className)} {...props}>
+    <section className={cn("py-6", className)} {...props}>
       <div className="sa-container">
-        {title ? (
-          <Text as="h2" size="lg" className="mb-6 text-white">
-            {title}
-          </Text>
-        ) : null}
-        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4 lg:gap-5">
-          {items.map((item) => (
-            <FeatureBandItem item={item} key={item.id} />
-          ))}
+        <div className="rounded-lg bg-blue px-5 py-6 sm:px-6 lg:px-8">
+          {title ? (
+            <Text as="h2" size="md2" className="mb-6 !text-white">
+              {title}
+            </Text>
+          ) : null}
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
+            {items.map((item) => (
+              <FeatureBandItem item={item} key={item.id} />
+            ))}
+          </div>
         </div>
       </div>
     </section>

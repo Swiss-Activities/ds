@@ -14,29 +14,28 @@ export function SectionFeatureBand({
   ...props
 }: SectionFeatureBandProps) {
   return (
-    <View className={cn("bg-blue px-4 py-8", className)} {...props}>
-      {title ? (
-        <Text as="h2" size="lg" className="mb-6 !text-white">
-          {title}
-        </Text>
-      ) : null}
-      <View className="gap-3">
-        {items.map((item) => (
-          <View
-            className="rounded-lg border border-solid border-white/10 bg-white/5 p-4"
-            key={item.id}
-          >
-            {item.icon ? <View className="mb-5">{item.icon}</View> : null}
-            <Text as="h3" size="md2" className="!text-white">
-              {item.title}
-            </Text>
-            {item.description ? (
-              <Text size="sm" className="mt-2 !text-white/65">
-                {item.description}
+    <View className={cn("py-6", className)} {...props}>
+      <View className="rounded-lg bg-blue p-5">
+        {title ? (
+          <Text as="h2" size="md2" className="mb-6 !text-white">
+            {title}
+          </Text>
+        ) : null}
+        <View className="gap-6">
+          {items.map((item) => (
+            <View className="min-w-0" key={item.id}>
+              {item.icon ? <View className="mb-4">{item.icon}</View> : null}
+              <Text as="h3" size="sm" bold className="!text-white">
+                {item.title}
               </Text>
-            ) : null}
-          </View>
-        ))}
+              {item.description ? (
+                <Text size="xs" className="mt-1.5 !text-white/60">
+                  {item.description}
+                </Text>
+              ) : null}
+            </View>
+          ))}
+        </View>
       </View>
     </View>
   );
