@@ -30,6 +30,7 @@ export * from "./section-grid/index.native";
 export * from "./section-hero/index.native";
 export * from "./section-non-bookable/index.native";
 export * from "./section-product/index.native";
+export * from "./section-region-explorer/index.native";
 export * from "./section-review-grid/index.native";
 export * from "./section-scroller/index.native";
 export * from "./skeleton/index.native";

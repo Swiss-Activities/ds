@@ -6,6 +6,7 @@ export * from "./section-grid";
 export * from "./section-hero";
 export * from "./section-non-bookable";
 export * from "./section-product";
+export * from "./section-region-explorer";
 export * from "./section-scroller";
 export * from "./section-review-grid";
 export * from "./badge";
