@@ -82,27 +82,38 @@ export function SectionHero({
   if (variant === "centered_title") {
     return (
       <section className={cn(className)} {...props}>
-        <div className="relative h-[196px] overflow-hidden bg-blue sm:h-[228px] lg:h-[264px] lg:rounded-lg">
-          <div className="absolute inset-0 [&_img]:absolute [&_img]:inset-0 [&_img]:h-full [&_img]:w-full [&_img]:object-cover">
-            {renderImageValue(image)}
-          </div>
-          <div className="absolute inset-0 bg-blue/45" />
-          {backLabel ? (
-            <>
+        <div className="relative h-[196px] bg-blue sm:h-[228px] lg:h-[264px] lg:rounded-lg">
+          <div className="absolute inset-0 overflow-hidden lg:rounded-lg">
+            <div className="absolute inset-0 [&_img]:absolute [&_img]:inset-0 [&_img]:h-full [&_img]:w-full [&_img]:object-cover">
+              {renderImageValue(image)}
+            </div>
+            <div className="absolute inset-0 bg-blue/45" />
+            {backLabel ? (
               <div className="pointer-events-none absolute inset-x-0 top-0 z-20 h-20 bg-gradient-to-b from-blue/50 to-transparent" />
-              <div className="absolute left-3 top-3 z-30">
-                <SectionHeroBackLink
-                  label={backLabel}
-                  onClick={onBack}
-                />
-              </div>
-            </>
+            ) : null}
+          </div>
+          {backLabel ? (
+            <div className="absolute left-3 top-3 z-30">
+              <SectionHeroBackLink
+                label={backLabel}
+                onClick={onBack}
+              />
+            </div>
           ) : null}
           <div className="relative z-10 flex h-full items-center justify-center px-4 text-center">
-            {title ? (
-              <Text as="h1" size="2xl" className="max-w-4xl !text-white">
-                {title}
-              </Text>
+            {title || search ? (
+              <div className="flex w-full max-w-3xl flex-col items-center gap-5">
+                {title ? (
+                  <Text as="h1" size="2xl" className="max-w-4xl !text-white">
+                    {title}
+                  </Text>
+                ) : null}
+                {search ? (
+                  <div className="w-full max-w-[640px] text-left">
+                    {search}
+                  </div>
+                ) : null}
+              </div>
             ) : null}
           </div>
         </div>
@@ -114,17 +125,17 @@ export function SectionHero({
     return (
       <section
         className={cn(
-          "border-b border-solid border-gray-200 bg-white lg:rounded-lg lg:border",
+          "border-0 border-solid border-gray-200 bg-white sm:border-b lg:rounded-lg lg:border",
           className
         )}
         {...props}
       >
-        <div className="max-w-4xl space-y-6 px-4 py-8 sm:px-6 lg:px-8 lg:py-10">
+        <div className="flex min-h-[316px] max-w-4xl flex-col justify-center space-y-6 px-4 py-8 sm:min-h-[360px] sm:px-6 lg:min-h-[408px] lg:space-y-8 lg:px-12 lg:py-10">
           {title ? (
             <Text
               as="h1"
               size="2xl"
-              className="max-w-3xl !text-[28px] !leading-tight sm:!text-[34px] lg:!text-[36px] [&_svg]:!h-6 [&_svg]:!w-6"
+              className="max-w-3xl !text-[28px] !font-semibold !leading-tight sm:!text-[34px] lg:!text-[36px] [&_svg]:!h-6 [&_svg]:!w-6"
             >
               {title}
             </Text>
