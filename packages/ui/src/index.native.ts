@@ -26,6 +26,7 @@ export * from "./review-card/index.native";
 export * from "./search-bar/index.native";
 export * from "./section-activity-grid/index.native";
 export * from "./section-filters/index.native";
+export * from "./section-feature-band/index.native";
 export * from "./section-grid/index.native";
 export * from "./section-hero/index.native";
 export * from "./section-non-bookable/index.native";

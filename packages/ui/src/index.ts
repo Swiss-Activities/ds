@@ -2,6 +2,7 @@ export * from "./accordion";
 export * from "./activity-card";
 export * from "./section-activity-grid";
 export * from "./section-filters";
+export * from "./section-feature-band";
 export * from "./section-grid";
 export * from "./section-hero";
 export * from "./section-non-bookable";

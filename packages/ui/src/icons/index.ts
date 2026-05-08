@@ -10,6 +10,8 @@ export {
   ExternalLink,
   Filter,
   Flame,
+  Globe,
+  House,
   ImageOff,
   Languages,
   Loader2,
@@ -25,6 +27,7 @@ export {
   Ticket,
   ThumbsUp,
   Trophy,
+  UserRound,
   X,
 } from "lucide-react";
 export type { LucideProps } from "lucide-react";

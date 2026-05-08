@@ -1,9 +1,7 @@
 import { useState } from "react";
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import {
-  Button,
   SectionRegionExplorer,
-  type RegionExplorerChip,
   type RegionExplorerTile,
 } from "@swiss-activities/ui";
 import { Page } from "../page";
@@ -37,29 +35,14 @@ const cantonTiles: RegionExplorerTile[] = [
   { id: "ti", label: "TI", position: { row: 6, column: 5 } },
 ];
 
-const regionChips: RegionExplorerChip[] = [
-  { id: "zurich", label: "Zurich region" },
-  { id: "bernese-oberland", label: "Bernese Oberland" },
-  { id: "lake-geneva", label: "Lake Geneva" },
-  { id: "lucerne", label: "Lucerne region" },
-  { id: "eastern-switzerland", label: "Eastern Switzerland" },
-  { id: "ticino", label: "Ticino" },
-  { id: "engadin", label: "Engadin" },
-];
-
 function InteractiveExample() {
   const [activeTileId, setActiveTileId] = useState("zh");
-  const [activeChipId, setActiveChipId] = useState("zurich");
 
   return (
     <SectionRegionExplorer
-      activeChipId={activeChipId}
       activeTileId={activeTileId}
-      chips={regionChips}
       className="py-6"
-      onChipClick={(chip) => setActiveChipId(chip.id)}
       onTileClick={(tile) => setActiveTileId(tile.id)}
-      subtitle="You are in Zurich"
       tiles={cantonTiles}
       title="Explore by region"
     />
@@ -80,14 +63,8 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {
     title: "Explore by region",
-    subtitle: "You are in Zurich",
     tiles: cantonTiles,
-    chips: regionChips,
     activeTileId: "zh",
-    activeChipId: "zurich",
-    action: (
-      <Button as="a" href="/map" size="sm" type="pill" text="Open full map" />
-    ),
   },
   render: (args) => (
     <Page>
