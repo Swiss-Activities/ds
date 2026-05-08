@@ -58,10 +58,22 @@ export type TGatewayHomeWeatherCardSection = {
   data: TGatewayWeatherCardItem[];
 };
 
+export type TGatewayHomeHeroSection = {
+  id: "hero";
+  component: "hero";
+  text: string;
+  destination: string | null;
+  weather: "sunny" | "rainy" | "snowy" | "cloudy" | "foggy" | null;
+  weatherLabel: string | null;
+  timeOfDay: "morning" | "afternoon" | "evening" | null;
+  timeOfDayLabel: string | null;
+};
+
 export type TGatewayHomeSection =
   | TGatewayHomeCarouselSection
   | TGatewayActivityGridSection
-  | TGatewayHomeWeatherCardSection;
+  | TGatewayHomeWeatherCardSection
+  | TGatewayHomeHeroSection;
 
 export type TGatewayActivityTypeContext = {
   type: "activity-type";

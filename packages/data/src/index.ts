@@ -29,6 +29,7 @@ export {
   isGatewayActivitySection,
   isGatewayCarouselSection,
   isGatewayFilterStaticSection,
+  isGatewayHeroSection,
   isGatewayWeatherCardSection,
 } from "./gateway/sections";
 export {
@@ -112,6 +113,7 @@ export type {
   TGatewayHomeCarouselSection,
   TGatewayActivityGridSection,
   TGatewayHomeWeatherCardSection,
+  TGatewayHomeHeroSection,
   TGatewayHomeItem,
   TGatewayWeatherCardItem,
   TGatewayHomeParams,

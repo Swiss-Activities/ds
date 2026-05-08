@@ -4,6 +4,7 @@ import type {
   TGatewayFilterStaticSection,
   TGatewayHome,
   TGatewayHomeCarouselSection,
+  TGatewayHomeHeroSection,
   TGatewayHomeItem,
   TGatewayHomeWeatherCardSection,
   TGatewayStaticSection,
@@ -38,6 +39,10 @@ export const isGatewayWeatherCardSection = (
   section: GatewaySectionLike
 ): section is TGatewayHomeWeatherCardSection =>
   section.component === "weather_card";
+
+export const isGatewayHeroSection = (
+  section: GatewaySectionLike
+): section is TGatewayHomeHeroSection => section.component === "hero";
 
 export const isGatewayFilterStaticSection = (
   section: TGatewayStaticSection

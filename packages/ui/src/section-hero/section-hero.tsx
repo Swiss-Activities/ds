@@ -114,7 +114,7 @@ export function SectionHero({
     return (
       <section
         className={cn(
-          "overflow-hidden border-b border-solid border-gray-200 bg-white lg:rounded-lg lg:border",
+          "border-b border-solid border-gray-200 bg-white lg:rounded-lg lg:border",
           className
         )}
         {...props}
