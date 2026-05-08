@@ -6,6 +6,11 @@ export type BaseReviewCardProps = {
   date: string;
   rating: number;
   text: string;
+  activity?: {
+    label: ReactNode;
+    href?: string;
+  };
+  activityPrefix?: ReactNode;
   images?: ReactNode[];
   hideUpvoteCount?: boolean;
   upvoteCount?: number;

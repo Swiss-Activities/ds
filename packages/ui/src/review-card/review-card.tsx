@@ -21,6 +21,8 @@ export function ReviewCard({
   date,
   rating,
   text,
+  activity,
+  activityPrefix = "on",
   images,
   hideUpvoteCount = false,
   upvoteCount,
@@ -85,6 +87,21 @@ export function ReviewCard({
           </div>
         )}
       </div>
+      {activity ? (
+        <Text as="p" size="xs" gray className="mt-3">
+          {activityPrefix}{" "}
+          {activity.href ? (
+            <a
+              href={activity.href}
+              className="font-medium text-gray-700 transition hover:text-black hover:underline"
+            >
+              {activity.label}
+            </a>
+          ) : (
+            <span className="font-medium text-gray-700">{activity.label}</span>
+          )}
+        </Text>
+      ) : null}
       <Text size="xs" className="mt-3 line-clamp-5 !text-gray-700">
         {text}
       </Text>

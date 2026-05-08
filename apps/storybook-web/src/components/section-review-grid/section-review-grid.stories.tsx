@@ -8,7 +8,7 @@ const homepageReviews: ReviewItem[] = [
     id: "rolf",
     author: "Rolf",
     countryCode: "CH",
-    location: "Zurich",
+    date: "Zurich",
     rating: 5,
     text: "Genau das, was ich am Sonntag gesucht habe - und ich wohne hier seit zehn Jahren.",
     activity: {
@@ -21,7 +21,7 @@ const homepageReviews: ReviewItem[] = [
     id: "sabine",
     author: "Sabine",
     countryCode: "CH",
-    location: "Bern",
+    date: "Bern",
     rating: 5,
     text: "Endlich eine Schweizer Seite, die nicht aussieht wie eine Touristen-Falle.",
     activity: {
@@ -34,7 +34,7 @@ const homepageReviews: ReviewItem[] = [
     id: "marc",
     author: "Marc",
     countryCode: "CH",
-    location: "Geneva",
+    date: "Geneva",
     rating: 5,
     text: "Bin auf das Maggiatal gestossen - nie davon gehoert, war ein perfekter Tag.",
     activity: {
@@ -54,12 +54,12 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const HomepageGrid: Story = {
+export const HomepageReviews: Story = {
   args: {
     title: "What other Swiss visitors say",
     reviews: homepageReviews,
-    variant: "grid",
     activityPrefix: "on",
+    itemsPerRowLg: 3,
   },
   render: (args) => (
     <Page>

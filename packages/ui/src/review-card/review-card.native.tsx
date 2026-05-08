@@ -20,6 +20,8 @@ export function ReviewCard({
   date,
   rating,
   text,
+  activity,
+  activityPrefix = "on",
   images,
   hideUpvoteCount = false,
   upvoteCount,
@@ -75,6 +77,11 @@ export function ReviewCard({
           </View>
         )}
       </View>
+      {activity ? (
+        <Text as="p" size="xs" gray className="mt-3">
+          {activityPrefix} {activity.label}
+        </Text>
+      ) : null}
       <Text size="xs" numberOfLines={5} className="mt-3 !text-gray-700">
         {text}
       </Text>
