@@ -6,7 +6,7 @@ export type TGatewayHomeItem = {
   subtitle?: string | null;
   path?: string;
   detailPath?: string | null;
-  type: "activity" | "non-bookable" | "non-bookable-event";
+  type: "activity" | "non-bookable" | "non-bookable-event" | "blog-post";
   category?: string | null;
   distanceKm?: number | null;
   dateStart?: string | null;
@@ -226,7 +226,7 @@ export type TGatewaySearchSuggestParams = {
 export type TGatewayDetailParams = {
   path?: string | null;
   id?: string;
-  type?: Exclude<TGatewayHomeItem["type"], "activity">;
+  type?: Exclude<TGatewayHomeItem["type"], "activity" | "blog-post">;
   dev?: boolean;
 };
 

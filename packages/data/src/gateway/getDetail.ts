@@ -19,7 +19,7 @@ export function getGatewayDetailParamsForItem(
     };
   }
 
-  if (!item.id || item.type === "activity") {
+  if (!item.id || item.type === "activity" || item.type === "blog-post") {
     return null;
   }
 

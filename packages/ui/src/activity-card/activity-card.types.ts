@@ -6,6 +6,7 @@ export const activityCardTypes = [
   "activity",
   "non-bookable",
   "non-bookable-event",
+  "blog-post",
 ] as const;
 
 export type ActivityCardType = (typeof activityCardTypes)[number];
