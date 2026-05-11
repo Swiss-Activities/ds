@@ -213,6 +213,43 @@ export const SearchBar = forwardRef<HTMLDivElement, SearchBarProps>(
 
     const renderInput = (inSheet = false) => {
       const isMobileLayout = isMobile || inSheet;
+      const inputField = (
+        <input
+          ref={inSheet ? sheetInputRef : inputRef}
+          id={inSheet && inputId ? `${inputId}-sheet` : inputId}
+          onBlur={() => {}}
+          onChange={handleChange}
+          onFocus={(event) => handleFocus(event, inSheet)}
+          onKeyDown={handleKeyDown}
+          value={inputValue}
+          type="text"
+          placeholder={placeholder}
+          autoComplete="off"
+          autoCorrect="off"
+          autoCapitalize="off"
+          spellCheck={false}
+          maxLength={512}
+          disabled={disabled}
+          className={cn(
+            "rounded-full border-transparent bg-white placeholder-gray-500 focus:!border-primary focus:!outline-primary focus-visible:!border-primary focus-visible:!outline-primary",
+            {
+              "mb-px me-2 ms-px mt-px w-full py-3.5 pe-6 ps-10 text-[13px]":
+                !isMobileLayout,
+              "w-full border border-solid border-gray-200 px-10 py-3 text-base focus:!border-gray-200 focus:!outline-none focus-visible:!border-gray-200 focus-visible:!outline-none":
+                isMobileLayout,
+              "text-sm": isMain && !inSheet,
+            },
+            classNameInput
+          )}
+        />
+      );
+      const focusInput = inSheet ? (
+        <SheetFull.AutoFocusTarget.Root asChild timing="present">
+          {inputField}
+        </SheetFull.AutoFocusTarget.Root>
+      ) : (
+        inputField
+      );
       const input = (
         <div className="relative flex">
           <div className={cn("relative flex w-full", classNameInputWrapper)}>
@@ -227,34 +264,7 @@ export const SearchBar = forwardRef<HTMLDivElement, SearchBarProps>(
             >
               <Icon icon={Search} size="md" />
             </div>
-            <input
-              ref={inSheet ? sheetInputRef : inputRef}
-              id={inSheet && inputId ? `${inputId}-sheet` : inputId}
-              onBlur={() => {}}
-              onChange={handleChange}
-              onFocus={(event) => handleFocus(event, inSheet)}
-              onKeyDown={handleKeyDown}
-              value={inputValue}
-              type="text"
-              placeholder={placeholder}
-              autoComplete="off"
-              autoCorrect="off"
-              autoCapitalize="off"
-              spellCheck={false}
-              maxLength={512}
-              disabled={disabled}
-              className={cn(
-                "rounded-full border-transparent bg-white placeholder-gray-500 focus:!border-primary focus:!outline-primary focus-visible:!border-primary focus-visible:!outline-primary",
-                {
-                  "mb-px me-2 ms-px mt-px w-full py-3.5 pe-6 ps-10 text-[13px]":
-                    !isMobileLayout,
-                  "w-full border border-solid border-gray-200 px-10 py-3 text-base focus:!border-gray-200 focus:!outline-none focus-visible:!border-gray-200 focus-visible:!outline-none":
-                    isMobileLayout,
-                  "text-sm": isMain && !inSheet,
-                },
-                classNameInput
-              )}
-            />
+            {focusInput}
             {showClear && inputValue !== "" ? (
               <button
                 type="button"
