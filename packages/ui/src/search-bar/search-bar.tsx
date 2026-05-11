@@ -225,7 +225,7 @@ export const SearchBar = forwardRef<HTMLDivElement, SearchBarProps>(
                 }
               )}
             >
-              <Icon icon={Search} />
+              <Icon icon={Search} size="md" />
             </div>
             <input
               ref={inSheet ? sheetInputRef : inputRef}
