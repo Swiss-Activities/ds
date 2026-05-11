@@ -1,6 +1,7 @@
 import type {
   TGatewayActivityGridSection,
   TGatewayActivityCarouselSection,
+  TGatewayFeatureBandSection,
   TGatewayFilterConfig,
   TGatewayFilterStaticSection,
   TGatewayHome,
@@ -62,6 +63,11 @@ export const isGatewayWeatherCardSection = (
 export const isGatewayHeroSection = (
   section: GatewaySectionLike
 ): section is TGatewayHomeHeroSection => section.component === "hero";
+
+export const isGatewayFeatureBandSection = (
+  section: GatewaySectionLike
+): section is TGatewayFeatureBandSection =>
+  section.component === "feature_band";
 
 export const isGatewayFilterStaticSection = (
   section: TGatewayStaticSection

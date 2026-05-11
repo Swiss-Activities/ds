@@ -14,7 +14,7 @@ export function SectionFeatureBand({
   ...props
 }: SectionFeatureBandProps) {
   return (
-    <View className={cn("py-6", className)} {...props}>
+    <View className={cn(className)} {...props}>
       <View className="rounded-lg bg-blue p-5">
         {title ? (
           <Text as="h2" size="md2" className="mb-6 !text-white">

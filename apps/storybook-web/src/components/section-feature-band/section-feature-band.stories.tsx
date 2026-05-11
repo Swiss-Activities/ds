@@ -48,7 +48,9 @@ export const Default: Story = {
   },
   render: (args) => (
     <Page>
-      <SectionFeatureBand {...args} />
+      <div className="sa-container">
+        <SectionFeatureBand {...args} className="pt-6" />
+      </div>
     </Page>
   ),
 };

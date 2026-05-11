@@ -36,19 +36,17 @@ export function SectionFeatureBand({
   ...props
 }: SectionFeatureBandProps) {
   return (
-    <section className={cn("py-6", className)} {...props}>
-      <div className="sa-container">
-        <div className="rounded-lg bg-blue px-5 py-6 sm:px-6 lg:px-8">
-          {title ? (
-            <Text as="h2" size="md2" className="mb-6 !text-white">
-              {title}
-            </Text>
-          ) : null}
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
-            {items.map((item) => (
-              <FeatureBandItem item={item} key={item.id} />
-            ))}
-          </div>
+    <section className={cn(className)} {...props}>
+      <div className="rounded-lg bg-blue px-5 py-6 sm:px-6 lg:px-8">
+        {title ? (
+          <Text as="h2" size="md2" className="mb-6 !text-white">
+            {title}
+          </Text>
+        ) : null}
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
+          {items.map((item) => (
+            <FeatureBandItem item={item} key={item.id} />
+          ))}
         </div>
       </div>
     </section>

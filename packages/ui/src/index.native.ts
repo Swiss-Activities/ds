@@ -21,6 +21,7 @@ export * from "./icons/index.native";
 export * from "./info-badge/index.native";
 export * from "./logo/index.native";
 export * from "./loader/index.native";
+export * from "./provider-icon/index.native";
 export * from "./rating/index.native";
 export * from "./review-card/index.native";
 export * from "./search-bar/index.native";

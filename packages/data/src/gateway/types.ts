@@ -49,6 +49,21 @@ export type TGatewayWeatherCardItem = {
   description: string;
 };
 
+export const gatewayLucideIconNames = [
+  "check",
+  "globe",
+  "house",
+  "user-round",
+] as const;
+
+export type TGatewayLucideIconName =
+  (typeof gatewayLucideIconNames)[number];
+
+export type TGatewayIcon = {
+  provider: "lucide";
+  name: TGatewayLucideIconName;
+};
+
 export type TGatewayHomeCarouselSection = {
   id: string;
   component: "carousel";
@@ -104,11 +119,26 @@ export type TGatewayHomeHeroSection = {
   timeOfDayLabel: string | null;
 };
 
+export type TGatewayFeatureBandItem = {
+  id: string;
+  icon: TGatewayIcon;
+  title: string;
+  description: string;
+};
+
+export type TGatewayFeatureBandSection = {
+  id: string;
+  component: "feature_band";
+  title?: string | null;
+  data: TGatewayFeatureBandItem[];
+};
+
 export type TGatewayHomeSection =
   | TGatewayHomeCarouselSection
   | TGatewayActivityGridSection
   | TGatewayHomeWeatherCardSection
-  | TGatewayHomeHeroSection;
+  | TGatewayHomeHeroSection
+  | TGatewayFeatureBandSection;
 
 export type TGatewayActivityTypeContext = {
   type: "activity-type";

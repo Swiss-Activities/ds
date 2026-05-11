@@ -28,6 +28,7 @@ export {
   isGatewayActivityGridSection,
   isGatewayActivitySection,
   isGatewayCarouselSection,
+  isGatewayFeatureBandSection,
   isGatewayFilterStaticSection,
   isGatewayHeroSection,
   isGatewayReviewSection,
@@ -107,6 +108,7 @@ export {
   type UseActivityTypeFilterOptions,
 } from "./gateway/getActivityTypeFilter";
 export { useGatewayStore } from "./gateway/store";
+export { gatewayLucideIconNames } from "./gateway/types";
 export type {
   TGatewayHome,
   TGatewayActivityCardItem,
@@ -136,9 +138,13 @@ export type {
   TGatewayActivityTypeFilterParams,
   TGatewayDestinationContext,
   TGatewayDiscoveryContext,
+  TGatewayFeatureBandItem,
+  TGatewayFeatureBandSection,
   TGatewaySearchSuggestion,
   TGatewaySearchSuggest,
   TGatewaySearchSuggestParams,
+  TGatewayIcon,
+  TGatewayLucideIconName,
   TGatewayDetailParams,
   TGatewayDetailForItemOptions,
   TGatewayDetail,

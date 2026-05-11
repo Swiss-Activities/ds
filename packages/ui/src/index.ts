@@ -37,6 +37,7 @@ export * from "./popover";
 export * from "./rating";
 export * from "./review-card";
 export * from "./product-info-list";
+export * from "./provider-icon";
 export * from "./search-bar";
 export * from "./skeleton";
 export * from "./slider";
