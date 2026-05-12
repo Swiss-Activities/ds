@@ -118,10 +118,12 @@ export function ActivityCard({
   const [imageLoaded, setImageLoaded] = useState(false);
   const normalizedScore = Number(score) || 0;
   const isBookable = type === "activity";
+  const imageSource = isImageSource(image) ? image : null;
+  const imageSourceKey = imageSource?.src ?? "";
   const hasPricingFooter = isBookable && Boolean(price);
-  const shouldUseImageFill = !isBookable && isImageSource(image);
+  const shouldUseImageFill = !isBookable && Boolean(imageSource);
   const showImageFallback = imageFailed || !image;
-  const showImageSkeleton = isImageSource(image) && !showImageFallback;
+  const showImageSkeleton = Boolean(imageSource) && !showImageFallback;
   const metaItems =
     meta ??
     getDefaultMeta({
@@ -135,7 +137,7 @@ export function ActivityCard({
   useEffect(() => {
     setImageFailed(false);
     setImageLoaded(false);
-  }, [image]);
+  }, [imageSourceKey]);
 
   const handleImageLoad = () => {
     setImageLoaded(true);
