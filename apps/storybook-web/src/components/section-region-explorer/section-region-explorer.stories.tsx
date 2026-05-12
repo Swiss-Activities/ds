@@ -1,4 +1,3 @@
-import { useState } from "react";
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import {
   SectionRegionExplorer,
@@ -204,20 +203,6 @@ const cantonTiles: RegionExplorerTile[] = [
   },
 ];
 
-function InteractiveExample() {
-  const [activeTileId, setActiveTileId] = useState("zh");
-
-  return (
-    <SectionRegionExplorer
-      activeTileId={activeTileId}
-      className="py-6"
-      onTileClick={(tile) => setActiveTileId(tile.id)}
-      tiles={cantonTiles}
-      title="Explore by region"
-    />
-  );
-}
-
 const meta = {
   title: "Sections/SectionRegionExplorer",
   component: SectionRegionExplorer,
@@ -258,16 +243,4 @@ export const List: Story = {
       </div>
     </Page>
   ),
-};
-
-export const Interactive: Story = {
-  render: () => {
-    return (
-      <Page>
-        <div className="sa-container">
-          <InteractiveExample />
-        </div>
-      </Page>
-    );
-  },
 };

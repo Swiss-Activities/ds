@@ -7,6 +7,7 @@ import type {
   ReactNode,
 } from "react";
 import { useMemo, useState } from "react";
+import { Card } from "../card";
 import { Text } from "../text";
 import { cn } from "../utils/cn";
 import { regionMapPaths } from "./region-explorer.map";
@@ -236,11 +237,11 @@ function RegionExplorerMap({
   return (
     <div className="relative rounded-3xl border border-solid border-gray-200 bg-gradient-to-br from-white to-gray-50 p-6 lg:p-10">
       {tooltipItem ? (
-        <div className="pointer-events-none absolute right-6 top-6 z-10 min-w-44 rounded-2xl border border-solid border-gray-200 bg-white p-4 shadow-lg transition">
+        <Card className="pointer-events-none absolute right-6 top-6 z-10 min-w-44 transition">
           <Text
             size="xs"
             bold
-            className="mb-0.5 uppercase tracking-widest !text-primary"
+            className="mb-0.5 uppercase tracking-widest !text-gray-500"
           >
             {getItemCode(tooltipItem)}
           </Text>
@@ -249,7 +250,7 @@ function RegionExplorerMap({
           </Text>
           {tooltipItem.count !== undefined && tooltipItem.count !== null ? (
             <div className="flex flex-col">
-              <Text size="lg" bold className="!text-primary">
+              <Text size="lg" bold>
                 {tooltipItem.count}
               </Text>
               <Text size="xs" className="!text-gray-500">
@@ -257,7 +258,7 @@ function RegionExplorerMap({
               </Text>
             </div>
           ) : null}
-        </div>
+        </Card>
       ) : null}
       <svg
         aria-label="Schweizer Regionen"
