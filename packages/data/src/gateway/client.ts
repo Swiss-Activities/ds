@@ -12,6 +12,29 @@ function normalizePath(path: string) {
   return path.replace(/^\/+|\/+$/g, "");
 }
 
+function logGatewayResponse({
+  data,
+  path,
+  source,
+  url,
+}: {
+  data: unknown;
+  path: string;
+  source: string;
+  url?: string;
+}) {
+  if (typeof window === "undefined") {
+    return;
+  }
+
+  console.info("[gateway response]", {
+    data,
+    path,
+    source,
+    url,
+  });
+}
+
 export function buildGatewaySearchParams(params: GatewayParams = {}) {
   const searchParams = new URLSearchParams();
 
@@ -47,16 +70,17 @@ export async function fetchGatewayProxy<T>({
 }): Promise<T> {
   const baseUrl = stripTrailingSlash(apiUrl || "/api");
   const searchParams = buildGatewaySearchParams(params);
-  const response = await fetch(
-    `${baseUrl}/gateway/${normalizePath(path)}/?${searchParams.toString()}`,
-    { signal }
-  );
+  const url = `${baseUrl}/gateway/${normalizePath(path)}/?${searchParams.toString()}`;
+  const response = await fetch(url, { signal });
 
   if (!response.ok) {
     throw new Error(`Gateway ${path} error: ${response.status}`);
   }
 
-  return response.json();
+  const data = (await response.json()) as T;
+  logGatewayResponse({ data, path, source: "proxy", url });
+
+  return data;
 }
 
 export async function fetchGatewayDirect<T>({
@@ -73,7 +97,8 @@ export async function fetchGatewayDirect<T>({
   const baseUrl = stripTrailingSlash(gatewayUrl);
   const searchParams = buildGatewaySearchParams(params);
   const normalizedPath = path.startsWith("/") ? path : `/${path}`;
-  const response = await fetch(`${baseUrl}${normalizedPath}?${searchParams}`, {
+  const url = `${baseUrl}${normalizedPath}?${searchParams}`;
+  const response = await fetch(url, {
     signal,
     headers: {
       "Content-Type": "application/json",
@@ -85,5 +110,12 @@ export async function fetchGatewayDirect<T>({
     throw new Error(`Gateway ${path} error: ${response.status}`);
   }
 
-  return response.json();
+  const data = (await response.json()) as T;
+  logGatewayResponse({ data, path, source: "direct", url });
+
+  return data;
 }
+
+export const logInitialGatewayResponse = (path: string, data: unknown) => {
+  logGatewayResponse({ data, path, source: "initial" });
+};
