@@ -5,7 +5,7 @@ export type RegionExplorerPosition = {
   column: number;
 };
 
-export type RegionExplorerVariant = "map" | "list";
+export type RegionExplorerVariant = "map" | "regions" | "cantons" | "list";
 
 export type RegionExplorerTone = "low" | "mid" | "high";
 

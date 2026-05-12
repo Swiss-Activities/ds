@@ -203,6 +203,100 @@ const cantonTiles: RegionExplorerTile[] = [
   },
 ];
 
+const regionTiles: RegionExplorerTile[] = [
+  {
+    id: "region-aargau",
+    label: "AG",
+    name: "Region Aargau",
+    count: 70,
+    href: "#aargau",
+  },
+  {
+    id: "region-bern",
+    label: "BE",
+    name: "Region Bern",
+    count: 76,
+    href: "#bern",
+  },
+  {
+    id: "region-basel",
+    label: "BS",
+    name: "Region Basel",
+    count: 54,
+    href: "#basel",
+  },
+  {
+    id: "region-jura-und-drei-seen-land",
+    label: "JU",
+    name: "Region Jura & Drei-Seen-Land",
+    count: 31,
+    href: "#jura",
+  },
+  {
+    id: "region-genf",
+    label: "GE",
+    name: "Region Genf",
+    count: 97,
+    href: "#genf",
+  },
+  {
+    id: "region-luzern-vierwaldstaettersee",
+    label: "LU",
+    name: "Region Luzern - Vierwaldstättersee",
+    count: 275,
+    href: "#luzern",
+  },
+  {
+    id: "region-fribourg",
+    label: "FR",
+    name: "Region Fribourg",
+    count: 17,
+    href: "#fribourg",
+  },
+  {
+    id: "region-genfersee",
+    label: "VD",
+    name: "Region Genfersee",
+    count: 85,
+    href: "#genfersee",
+  },
+  {
+    id: "region-ostschweiz-lichtenstein",
+    label: "SG",
+    name: "Region Ostschweiz / Liechtenstein",
+    count: 182,
+    href: "#ostschweiz",
+  },
+  {
+    id: "region-wallis",
+    label: "VS",
+    name: "Region Wallis",
+    count: 256,
+    href: "#wallis",
+  },
+  {
+    id: "region-zuerich",
+    label: "ZH",
+    name: "Region Zürich",
+    count: 311,
+    href: "#zuerich",
+  },
+  {
+    id: "region-graubuenden",
+    label: "GR",
+    name: "Region Graubünden",
+    count: 158,
+    href: "#graubuenden",
+  },
+  {
+    id: "region-tessin",
+    label: "TI",
+    name: "Region Tessin",
+    count: 102,
+    href: "#tessin",
+  },
+];
+
 const meta = {
   title: "Sections/SectionRegionExplorer",
   component: SectionRegionExplorer,
@@ -217,8 +311,24 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {
     title: "Explore by region",
+    tiles: regionTiles,
+    activeTileId: "region-zuerich",
+  },
+  render: (args) => (
+    <Page>
+      <div className="sa-container">
+        <SectionRegionExplorer {...args} className="py-6" />
+      </div>
+    </Page>
+  ),
+};
+
+export const Cantons: Story = {
+  args: {
+    title: "Explore by canton",
     tiles: cantonTiles,
     activeTileId: "zh",
+    variant: "cantons",
   },
   render: (args) => (
     <Page>

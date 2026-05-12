@@ -11,6 +11,8 @@ import { Card } from "../card";
 import { Text } from "../text";
 import { cn } from "../utils/cn";
 import { regionMapPaths } from "./region-explorer.map";
+import { tourismRegionDefinitions } from "./region-explorer.regions";
+import type { TourismRegionDefinition } from "./region-explorer.regions";
 import type {
   BaseRegionExplorerProps,
   RegionExplorerItem,
@@ -32,11 +34,36 @@ const getItemCode = (item: RegionExplorerItem) => {
 const getItemName = (item: RegionExplorerItem): ReactNode =>
   item.name ?? item.label;
 
+const getNodeText = (value: ReactNode) => {
+  if (typeof value === "string" || typeof value === "number") {
+    return String(value);
+  }
+
+  return "";
+};
+
 const getItemTone = (item?: RegionExplorerItem): RegionExplorerTone => {
   if (!item) return "low";
 
   return item.tone ?? "low";
 };
+
+const normalizeRegionKey = (value: string) =>
+  value
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/&/g, "and")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+
+const getItemSearchKeys = (item: RegionExplorerItem) =>
+  [item.id, item.code, getNodeText(item.label), getNodeText(item.name)]
+    .filter((value): value is string => Boolean(value))
+    .map((value) => normalizeRegionKey(value));
+
+const getItemAriaLabel = (item: RegionExplorerItem) =>
+  getNodeText(getItemName(item)) || getItemCode(item);
 
 const listItemClassName = ({
   active,
@@ -58,6 +85,10 @@ const mapToneClassName: Record<RegionExplorerTone, string> = {
   mid: "fill-primary/35",
   high: "fill-primary/55",
 };
+
+const mapPathsByCode = new Map<string, string>(
+  regionMapPaths.map((region) => [region.code, region.path])
+);
 
 function getListItemStyle(item: RegionExplorerItem): CSSProperties | undefined {
   if (!item.position) {
@@ -127,6 +158,194 @@ function RegionExplorerList({
           />
         ))}
       </div>
+    </div>
+  );
+}
+
+function getTourismRegionItem({
+  definition,
+  items,
+}: {
+  definition: TourismRegionDefinition;
+  items: RegionExplorerItem[];
+}) {
+  const aliases = new Set(definition.aliases.map(normalizeRegionKey));
+
+  return items.find((item) =>
+    getItemSearchKeys(item).some((key) => aliases.has(key))
+  );
+}
+
+function TourismRegionMapLink({
+  active,
+  definition,
+  item,
+  onBlur,
+  onFocus,
+  onItemClick,
+  onMouseEnter,
+  onMouseLeave,
+  paths,
+}: {
+  active: boolean;
+  definition: TourismRegionDefinition;
+  item?: RegionExplorerItem;
+  onBlur: () => void;
+  onFocus: () => void;
+  onItemClick?: RegionExplorerProps["onItemClick"];
+  onMouseEnter: () => void;
+  onMouseLeave: () => void;
+  paths: string[];
+}) {
+  const disabled = !item || item.disabled;
+  const ariaLabel = item ? getItemAriaLabel(item) : definition.label;
+  const pathClassName = cn(
+    "stroke-white stroke-2 transition duration-200 ease-in [stroke-linejoin:round]",
+    item ? mapToneClassName[getItemTone(item)] : "fill-gray-200",
+    disabled
+      ? "opacity-35"
+      : "cursor-pointer group-hover:fill-primary/85 group-hover:stroke-primary group-focus-visible:fill-primary/85 group-focus-visible:stroke-primary",
+    active && "fill-primary stroke-primary"
+  );
+  const pathElements = paths.map((path) => (
+    <path d={path} className={pathClassName} key={path} />
+  ));
+  const handleClick = () => {
+    if (item && !disabled) {
+      onItemClick?.(item);
+    }
+  };
+  const handleKeyDown = (event: KeyboardEvent<SVGGElement>) => {
+    if (!item || disabled) return;
+
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      handleClick();
+    }
+  };
+
+  if (item?.href && !disabled) {
+    return (
+      <a
+        aria-current={active ? "true" : undefined}
+        aria-label={ariaLabel}
+        className="group outline-none"
+        href={item.href}
+        onBlur={onBlur}
+        onClick={handleClick}
+        onFocus={onFocus}
+        onMouseEnter={onMouseEnter}
+        onMouseLeave={onMouseLeave}
+      >
+        {pathElements}
+      </a>
+    );
+  }
+
+  return (
+    <g
+      aria-label={ariaLabel}
+      aria-pressed={item ? active : undefined}
+      className="group outline-none"
+      onBlur={onBlur}
+      onClick={handleClick}
+      onFocus={onFocus}
+      onKeyDown={handleKeyDown}
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
+      role={item && !disabled ? "button" : "img"}
+      tabIndex={item && !disabled ? 0 : -1}
+    >
+      {pathElements}
+    </g>
+  );
+}
+
+function RegionExplorerTourismMap({
+  activeItemId,
+  items,
+  onItemClick,
+}: BaseRegionExplorerProps) {
+  const [focusedRegionId, setFocusedRegionId] = useState<string | null>(null);
+  const itemsByRegionId = useMemo(() => {
+    const map = new Map<string, RegionExplorerItem>();
+
+    for (const definition of tourismRegionDefinitions) {
+      const item = getTourismRegionItem({ definition, items });
+
+      if (item) {
+        map.set(definition.id, item);
+      }
+    }
+
+    return map;
+  }, [items]);
+  const activeItem = items.find((item) => isActive(item, activeItemId));
+  const focusedItem = focusedRegionId
+    ? itemsByRegionId.get(focusedRegionId)
+    : undefined;
+  const tooltipItem = focusedItem ?? activeItem;
+
+  return (
+    <div className="relative rounded-3xl border border-solid border-gray-200 bg-gradient-to-br from-white to-gray-50 p-6 lg:p-10">
+      {tooltipItem ? (
+        <Card className="pointer-events-none absolute right-6 top-6 z-10 min-w-44 transition">
+          <Text
+            size="xs"
+            bold
+            className="mb-0.5 uppercase tracking-widest !text-gray-500"
+          >
+            {getItemCode(tooltipItem)}
+          </Text>
+          <Text size="sm" bold className="mb-1">
+            {getItemName(tooltipItem)}
+          </Text>
+          {tooltipItem.count !== undefined && tooltipItem.count !== null ? (
+            <div className="flex flex-col">
+              <Text size="lg" bold>
+                {tooltipItem.count}
+              </Text>
+              <Text size="xs" className="!text-gray-500">
+                {tooltipItem.countLabel ?? "Angebote verfügbar"}
+              </Text>
+            </div>
+          ) : null}
+        </Card>
+      ) : null}
+      <svg
+        aria-label="Geographic map of Switzerland with tourism regions"
+        className="h-auto max-h-[450px] w-full"
+        role="img"
+        viewBox="0 0 1224 783"
+      >
+        <title>Switzerland tourism regions</title>
+        {tourismRegionDefinitions.map((definition) => {
+          const item = itemsByRegionId.get(definition.id);
+          const active = item ? isActive(item, activeItemId) : false;
+          const paths = definition.cantons
+            .map((canton) => mapPathsByCode.get(canton))
+            .filter(Boolean) as string[];
+
+          if (!paths.length) {
+            return null;
+          }
+
+          return (
+            <TourismRegionMapLink
+              active={active}
+              definition={definition}
+              item={item}
+              key={definition.id}
+              onBlur={() => setFocusedRegionId(null)}
+              onFocus={() => setFocusedRegionId(definition.id)}
+              onItemClick={onItemClick}
+              onMouseEnter={() => setFocusedRegionId(definition.id)}
+              onMouseLeave={() => setFocusedRegionId(null)}
+              paths={paths}
+            />
+          );
+        })}
+      </svg>
     </div>
   );
 }
@@ -215,7 +434,7 @@ function RegionMapLink({
   );
 }
 
-function RegionExplorerMap({
+function RegionExplorerCantonMap({
   activeItemId,
   items,
   onItemClick,
@@ -312,8 +531,14 @@ export function RegionExplorer({
           items={items}
           onItemClick={onItemClick}
         />
+      ) : variant === "cantons" ? (
+        <RegionExplorerCantonMap
+          activeItemId={activeItemId}
+          items={items}
+          onItemClick={onItemClick}
+        />
       ) : (
-        <RegionExplorerMap
+        <RegionExplorerTourismMap
           activeItemId={activeItemId}
           items={items}
           onItemClick={onItemClick}
