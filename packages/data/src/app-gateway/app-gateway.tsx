@@ -3,9 +3,7 @@
 import {
   useCallback,
   useEffect,
-  useLayoutEffect,
   useMemo,
-  useRef,
   useState,
   type ReactNode,
 } from "react";
@@ -130,14 +128,6 @@ type SelectedItemHistoryEntry<TItemData> = {
   label: string | null;
 };
 
-function scrollToTop() {
-  if (typeof window === "undefined") {
-    return;
-  }
-
-  window.scrollTo({ top: 0, behavior: "auto" });
-}
-
 function AppGatewayContent<TSection, THero, TItemData>({
   apiUrl,
   locale,
@@ -183,7 +173,6 @@ function AppGatewayContent<TSection, THero, TItemData>({
     SelectedItemHistoryEntry<TItemData>[]
   >([]);
   const [pendingItemId, setPendingItemId] = useState<string | null>(null);
-  const previousSelectedItemId = useRef<string | null>(null);
 
   const resolvedTraceUrl =
     traceUrl || "https://www.swissactivities.com/cdn-cgi/trace";
@@ -260,7 +249,6 @@ function AppGatewayContent<TSection, THero, TItemData>({
 
       if (serverSideItemNavigation && !options?.skipHistory) {
         setPendingItemId(id);
-        scrollToTop();
         return;
       }
 
@@ -291,7 +279,6 @@ function AppGatewayContent<TSection, THero, TItemData>({
           setSelectedItemLabel(options?.title ?? null);
         });
 
-        scrollToTop();
         return;
       }
 
@@ -323,7 +310,6 @@ function AppGatewayContent<TSection, THero, TItemData>({
           setSelectedItemId(id);
           setSelectedItemLabel(options?.title ?? null);
         });
-        scrollToTop();
       } catch (error) {
         console.error("Failed to load selected app gateway item", error);
       } finally {
@@ -345,8 +331,6 @@ function AppGatewayContent<TSection, THero, TItemData>({
   );
 
   const handleBack = useCallback(() => {
-    scrollToTop();
-
     if (onBackItemUrl) {
       onBackItemUrl();
       return;
@@ -371,15 +355,6 @@ function AppGatewayContent<TSection, THero, TItemData>({
     initialSelectedItemId,
     initialSelectedItemLabel,
   ]);
-
-  useLayoutEffect(() => {
-    const previousId = previousSelectedItemId.current;
-
-    if (previousId !== selectedItemId) {
-      previousSelectedItemId.current = selectedItemId;
-      scrollToTop();
-    }
-  }, [selectedItemId]);
 
   const fallbackHeroWithTabs = useMemo(
     () =>
