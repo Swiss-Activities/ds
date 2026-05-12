@@ -9,6 +9,10 @@ import {
 } from "react";
 import { Button } from "../button";
 import { FilterCheckboxGroup } from "../filter-checkbox-group";
+import { HorizontalScrollerNext } from "../horizontal-scroller/horizontal-scroller.next";
+import { HorizontalScrollerPrev } from "../horizontal-scroller/horizontal-scroller.prev";
+import { HorizontalScrollerRoot } from "../horizontal-scroller/horizontal-scroller.root";
+import { HorizontalScrollerTrack } from "../horizontal-scroller/horizontal-scroller.track";
 import { Icon } from "../icon/icon";
 import { ChevronDown, Filter, X } from "../icons";
 import { Popover, PopoverContent, PopoverTrigger } from "../popover";
@@ -324,33 +328,38 @@ export function SectionFilters({
   return (
     <>
       <section className={cn(className)} {...props}>
-        <div className="no-scrollbar overflow-x-auto py-4 [scrollbar-width:none]">
-          <div className="flex min-w-max items-center gap-2">
-            <Button
-              type="pill"
-              text={filterButtonLabel}
-              icon={<Icon icon={Filter} size="xs" />}
-              className="!min-h-[36px] shrink-0 whitespace-nowrap !bg-white lg:hover:!border-blue lg:hover:!bg-white lg:hover:!text-blue"
-              onClick={() => setPresented(true)}
-            />
-            {[...quickItems, ...removableItems].map((item) => (
-              <QuickFilterItem
-                key={item.id}
-                item={item}
-                group={getItemGroup(item, groupsById, groupsByParam)}
-                isDesktop={aboveDesktopDrawerBreakpoint}
-                lessLabel={filterGroupLessLabel}
-                moreLabel={filterGroupMoreLabel}
-                onItemClick={onItemClick}
-                onItemToggle={onFilterGroupItemToggle}
-                onOpenGroup={(group) => {
-                  setActiveQuickFilterGroupId(group.id);
-                  setQuickFilterPresented(true);
-                }}
+        <HorizontalScrollerRoot>
+          <HorizontalScrollerTrack className="py-4">
+            <li className="shrink-0 list-none">
+              <Button
+                type="pill"
+                text={filterButtonLabel}
+                icon={<Icon icon={Filter} size="xs" />}
+                className="!min-h-[36px] shrink-0 whitespace-nowrap !bg-white lg:hover:!border-blue lg:hover:!bg-white lg:hover:!text-blue"
+                onClick={() => setPresented(true)}
               />
+            </li>
+            {[...quickItems, ...removableItems].map((item) => (
+              <li key={item.id} className="shrink-0 list-none">
+                <QuickFilterItem
+                  item={item}
+                  group={getItemGroup(item, groupsById, groupsByParam)}
+                  isDesktop={aboveDesktopDrawerBreakpoint}
+                  lessLabel={filterGroupLessLabel}
+                  moreLabel={filterGroupMoreLabel}
+                  onItemClick={onItemClick}
+                  onItemToggle={onFilterGroupItemToggle}
+                  onOpenGroup={(group) => {
+                    setActiveQuickFilterGroupId(group.id);
+                    setQuickFilterPresented(true);
+                  }}
+                />
+              </li>
             ))}
-          </div>
-        </div>
+          </HorizontalScrollerTrack>
+          <HorizontalScrollerPrev variant="white" />
+          <HorizontalScrollerNext variant="white" />
+        </HorizontalScrollerRoot>
       </section>
 
       <Sheet.Root presented={presented} onPresentedChange={setPresented}>
