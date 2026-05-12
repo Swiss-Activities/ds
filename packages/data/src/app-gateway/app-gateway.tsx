@@ -245,6 +245,20 @@ function AppGatewayContent<TSection, THero, TItemData>({
     setPendingItemId(null);
   }, []);
 
+  useEffect(() => {
+    const clearPendingItem = () => {
+      setPendingItemId(null);
+    };
+
+    window.addEventListener("pagehide", clearPendingItem);
+    window.addEventListener("pageshow", clearPendingItem);
+
+    return () => {
+      window.removeEventListener("pagehide", clearPendingItem);
+      window.removeEventListener("pageshow", clearPendingItem);
+    };
+  }, []);
+
   const restorePreviousItem = useCallback(() => {
     const previousItem = selectedItemHistory[selectedItemHistory.length - 1];
 
