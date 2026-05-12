@@ -204,8 +204,8 @@ function TourismRegionMapLink({
     item ? mapToneClassName[getItemTone(item)] : "fill-gray-200",
     disabled
       ? "opacity-35"
-      : "cursor-pointer group-hover:fill-primary/85 group-hover:stroke-primary group-focus-visible:fill-primary/85 group-focus-visible:stroke-primary",
-    active && "fill-primary stroke-primary"
+      : "cursor-pointer group-hover:fill-primary/85 group-focus-visible:fill-primary/85",
+    active && "fill-primary"
   );
   const pathElements = paths.map((path) => (
     <path d={path} className={pathClassName} key={path} />
@@ -374,8 +374,8 @@ function RegionMapLink({
     mapToneClassName[getItemTone(item)],
     item.disabled
       ? "opacity-35"
-      : "cursor-pointer group-hover:fill-primary/85 group-hover:stroke-primary group-focus-visible:fill-primary/85 group-focus-visible:stroke-primary",
-    active && "fill-primary stroke-primary"
+      : "cursor-pointer group-hover:fill-primary/85 group-focus-visible:fill-primary/85",
+    active && "fill-primary"
   );
   const handleClick = () => {
     if (!item.disabled) {
