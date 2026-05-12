@@ -1,17 +1,13 @@
 "use client";
 
-import {
-  useEffect,
-  useState,
-  type HTMLAttributes,
-  type SyntheticEvent,
-} from "react";
+import { useEffect, useState, type HTMLAttributes } from "react";
 import { Card } from "../card";
 import { Icon } from "../icon/icon";
 import { Clock3, ImageOff, MapPin, Ticket } from "../icons";
 import { ImageFill } from "../image-fill";
 import { Loader } from "../loader";
 import { Rating } from "../rating";
+import { Skeleton } from "../skeleton";
 import { Text } from "../text";
 import { cn } from "../utils/cn";
 import { isImageSource, renderImageValue } from "../utils/render-image";
@@ -119,11 +115,13 @@ export function ActivityCard({
   ...props
 }: ActivityCardProps) {
   const [imageFailed, setImageFailed] = useState(false);
+  const [imageLoaded, setImageLoaded] = useState(false);
   const normalizedScore = Number(score) || 0;
   const isBookable = type === "activity";
   const hasPricingFooter = isBookable && Boolean(price);
   const shouldUseImageFill = !isBookable && isImageSource(image);
   const showImageFallback = imageFailed || !image;
+  const showImageSkeleton = isImageSource(image) && !showImageFallback;
   const metaItems =
     meta ??
     getDefaultMeta({
@@ -136,12 +134,16 @@ export function ActivityCard({
 
   useEffect(() => {
     setImageFailed(false);
+    setImageLoaded(false);
   }, [image]);
 
-  const handleImageError = (event: SyntheticEvent<HTMLDivElement, Event>) => {
-    if (event.target instanceof HTMLImageElement) {
-      setImageFailed(true);
-    }
+  const handleImageLoad = () => {
+    setImageLoaded(true);
+  };
+
+  const handleImageError = () => {
+    setImageFailed(true);
+    setImageLoaded(true);
   };
 
   return (
@@ -155,9 +157,8 @@ export function ActivityCard({
       {...props}
     >
       <div
-        onErrorCapture={handleImageError}
         className={cn(
-          "aspect-[4/3] w-full shrink-0 overflow-hidden",
+          "relative aspect-[4/3] w-full shrink-0 overflow-hidden",
           showImageFallback || shouldUseImageFill
             ? "bg-gray-100"
             : "[&_img]:h-full [&_img]:w-full [&_img]:object-cover"
@@ -166,10 +167,25 @@ export function ActivityCard({
         {showImageFallback ? (
           <ActivityCardImageFallback />
         ) : shouldUseImageFill ? (
-          <ImageFill image={image} renderImage={renderImage} />
+          <ImageFill
+            image={image}
+            renderImage={renderImage}
+            onImageLoad={handleImageLoad}
+            onImageError={handleImageError}
+          />
         ) : (
-          renderImageValue(image, renderImage)
+          renderImageValue(image, renderImage, {
+            onLoad: handleImageLoad,
+            onError: handleImageError,
+          })
         )}
+        {showImageSkeleton ? (
+          <Skeleton
+            full
+            loading={!imageLoaded && !loading}
+            classNameItems="!rounded-none"
+          />
+        ) : null}
       </div>
       <div className="flex flex-1 flex-col gap-1 p-3.5 pt-4">
         <Text

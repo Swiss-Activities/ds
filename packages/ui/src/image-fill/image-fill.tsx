@@ -76,6 +76,8 @@ function SourceImageFill({
   mode = "auto",
   backgroundColor,
   imageClassName,
+  onImageError,
+  onImageLoad,
 }: {
   source: ImageSource;
   alt?: string;
@@ -83,6 +85,8 @@ function SourceImageFill({
   mode?: BaseImageFillProps["mode"];
   backgroundColor?: string;
   imageClassName?: string;
+  onImageLoad?: () => void;
+  onImageError?: () => void;
 }) {
   const [meta, setMeta] = useState<ImageMeta | null>(null);
   const resolvedMode = useResolvedMode({
@@ -127,12 +131,18 @@ function SourceImageFill({
         )}
       >
         {renderImage ? (
-          renderImage(imageWithAlt)
+          renderImage({
+            ...imageWithAlt,
+            onLoad: onImageLoad,
+            onError: onImageError,
+          })
         ) : (
           <img
             src={source.src}
             alt={imageWithAlt.alt}
             className="h-full w-full object-cover"
+            onLoad={onImageLoad}
+            onError={onImageError}
           />
         )}
       </div>
@@ -158,12 +168,18 @@ function SourceImageFill({
         )}
       >
         {renderImage ? (
-          renderImage(imageWithAlt)
+          renderImage({
+            ...imageWithAlt,
+            onLoad: onImageLoad,
+            onError: onImageError,
+          })
         ) : (
           <img
             src={source.src}
             alt={imageWithAlt.alt}
             className="max-h-full max-w-full object-contain"
+            onLoad={onImageLoad}
+            onError={onImageError}
           />
         )}
       </div>
@@ -179,6 +195,8 @@ export function ImageFill({
   backgroundColor,
   className,
   imageClassName,
+  onImageError,
+  onImageLoad,
   ...props
 }: ImageFillProps) {
   return (
@@ -194,6 +212,8 @@ export function ImageFill({
           mode={mode}
           backgroundColor={backgroundColor}
           imageClassName={imageClassName}
+          onImageLoad={onImageLoad}
+          onImageError={onImageError}
         />
       ) : image && isValidElement(image) ? (
         <div

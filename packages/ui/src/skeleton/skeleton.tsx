@@ -23,13 +23,7 @@ export function Skeleton({
   const [fadeOut, setFadeOut] = useState(false);
 
   useEffect(() => {
-    if (!loading) {
-      setFadeOut(true);
-
-      const timer = setTimeout(() => {}, 500);
-
-      return () => clearTimeout(timer);
-    }
+    setFadeOut(!loading);
   }, [loading]);
 
   return (

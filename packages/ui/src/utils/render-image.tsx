@@ -5,11 +5,20 @@ export type ImageSource = {
   alt?: string;
 };
 
+export type RenderImageHandlers = {
+  onLoad?: () => void;
+  onError?: () => void;
+};
+
 export type ImageValue = ReactNode | ImageSource;
 
-export type RenderImage = (image: ImageSource) => ReactNode;
+export type RenderImage = (
+  image: ImageSource & RenderImageHandlers
+) => ReactNode;
 
-export function isImageSource(value: ImageValue | null | undefined): value is ImageSource {
+export function isImageSource(
+  value: ImageValue | null | undefined
+): value is ImageSource {
   return (
     typeof value === "object" &&
     value !== null &&
@@ -22,7 +31,8 @@ export function isImageSource(value: ImageValue | null | undefined): value is Im
 
 export function renderImageValue(
   value: ImageValue | null | undefined,
-  renderImage?: RenderImage
+  renderImage?: RenderImage,
+  handlers: RenderImageHandlers = {}
 ) {
   if (!value) {
     return null;
@@ -30,9 +40,14 @@ export function renderImageValue(
 
   if (isImageSource(value)) {
     return renderImage ? (
-      renderImage(value)
+      renderImage({ ...value, ...handlers })
     ) : (
-      <img src={value.src} alt={value.alt ?? ""} />
+      <img
+        src={value.src}
+        alt={value.alt ?? ""}
+        onLoad={handlers.onLoad}
+        onError={handlers.onError}
+      />
     );
   }
 

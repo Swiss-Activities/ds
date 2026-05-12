@@ -10,4 +10,6 @@ export type BaseImageFillProps = {
   backgroundColor?: string;
   className?: string;
   imageClassName?: string;
+  onImageLoad?: () => void;
+  onImageError?: () => void;
 };
