@@ -1,23 +1,24 @@
 import type { ReactNode } from "react";
+import type {
+  BaseRegionExplorerProps,
+  RegionExplorerItem,
+  RegionExplorerPosition,
+  RegionExplorerTone,
+  RegionExplorerVariant,
+} from "../region-explorer";
 
-export type RegionExplorerPosition = {
-  row: number;
-  column: number;
+export type {
+  RegionExplorerPosition,
+  RegionExplorerTone,
+  RegionExplorerVariant,
 };
 
-export type RegionExplorerTile = {
-  id: string;
-  label: ReactNode;
-  active?: boolean;
-  disabled?: boolean;
-  href?: string;
-  position?: RegionExplorerPosition;
-};
+export type RegionExplorerTile = RegionExplorerItem;
 
-export type BaseSectionRegionExplorerProps = {
+export type BaseSectionRegionExplorerProps = Omit<
+  BaseRegionExplorerProps,
+  "items"
+> & {
   title: ReactNode;
   tiles: RegionExplorerTile[];
-  activeTileId?: string;
-  onTileClick?: (tile: RegionExplorerTile) => void;
-  className?: string;
 };
