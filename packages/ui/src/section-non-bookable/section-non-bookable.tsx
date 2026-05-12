@@ -1,4 +1,10 @@
-import { createElement, type HTMLAttributes, type ReactNode } from "react";
+import {
+  createElement,
+  useEffect,
+  useState,
+  type HTMLAttributes,
+  type ReactNode,
+} from "react";
 import { Accordion } from "../accordion";
 import { Button } from "../button";
 import { Icon } from "../icon/icon";
@@ -6,8 +12,10 @@ import { Check, ChevronLeft, X } from "../icons";
 import { ImageFill } from "../image-fill";
 import { ProductInfoList } from "../product-info-list";
 import { SectionActivityGrid } from "../section-activity-grid";
+import { Skeleton } from "../skeleton";
 import { Text } from "../text";
 import { cn } from "../utils/cn";
+import { isImageSource } from "../utils/render-image";
 import type {
   BaseSectionNonBookableProps,
   NonBookableDetailSection,
@@ -56,11 +64,30 @@ function MediaGallery({
   "images" | "renderImage" | "backLabel" | "backHref" | "onBack"
 >) {
   const mainImage = images[0];
+  const imageSource = isImageSource(mainImage) ? mainImage : null;
+  const [imageLoaded, setImageLoaded] = useState(false);
+
+  useEffect(() => {
+    setImageLoaded(false);
+  }, [imageSource?.src]);
 
   return (
     <div className="relative">
       <div className="relative h-[292px] overflow-hidden bg-gray-100 md:h-[360px] lg:h-[392px] lg:rounded-lg">
-        <ImageFill image={mainImage} renderImage={renderImage} />
+        <ImageFill
+          image={mainImage}
+          mode="contain"
+          renderImage={renderImage}
+          onImageLoad={() => setImageLoaded(true)}
+          onImageError={() => setImageLoaded(true)}
+        />
+        {imageSource ? (
+          <Skeleton
+            full
+            loading={!imageLoaded}
+            classNameItems="!rounded-none"
+          />
+        ) : null}
         {backLabel ? (
           <>
             <div className="pointer-events-none absolute inset-x-0 top-0 z-10 h-24 bg-gradient-to-b from-black/45 to-transparent" />
