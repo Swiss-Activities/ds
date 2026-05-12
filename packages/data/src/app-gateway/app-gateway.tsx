@@ -21,6 +21,7 @@ export type AppGatewayContext = {
   lng?: number | null;
   destination?: string | null;
   activityType?: string | null;
+  region?: string | null;
 };
 
 export type AppGatewaySelectItemOptions = {
@@ -109,6 +110,7 @@ export type BaseAppGatewayProps<
   useDevGateway?: boolean;
   selectedDestination?: string | null;
   selectedActivityType?: string | null;
+  selectedRegion?: string | null;
   initialData?: TGatewayHome | null;
   initialContext?: AppGatewayContext | null;
   initialSelectedItemData?: TItemData | null;
@@ -149,6 +151,7 @@ function AppGatewayContent<TSection, THero, TItemData>({
   useDevGateway = false,
   selectedDestination = null,
   selectedActivityType = null,
+  selectedRegion = null,
   initialData = null,
   initialContext = null,
   initialSelectedItemData = null,
@@ -189,6 +192,7 @@ function AppGatewayContent<TSection, THero, TItemData>({
     dev: useDevGateway,
     destination: selectedDestination,
     activityType: selectedActivityType,
+    region: selectedRegion,
   });
   const data = initialData ?? gatewayFeed.data;
   const isLoading = initialData ? false : gatewayFeed.isLoading;
@@ -206,10 +210,11 @@ function AppGatewayContent<TSection, THero, TItemData>({
       getGatewayFeedDirectPath({
         destination: selectedDestination,
         activityType: selectedActivityType,
+        region: selectedRegion,
       }),
       initialData
     );
-  }, [initialData, selectedActivityType, selectedDestination]);
+  }, [initialData, selectedActivityType, selectedDestination, selectedRegion]);
 
   const loadItemContext = useMemo<AppGatewayContext>(
     () => ({
@@ -219,6 +224,7 @@ function AppGatewayContent<TSection, THero, TItemData>({
       lng: context.lng,
       destination: context.destination,
       activityType: context.activityType,
+      region: context.region,
     }),
     [
       context.activityType,
@@ -227,6 +233,7 @@ function AppGatewayContent<TSection, THero, TItemData>({
       context.lat,
       context.lng,
       context.locale,
+      context.region,
     ]
   );
 
@@ -420,6 +427,7 @@ function AppGatewayContent<TSection, THero, TItemData>({
       lng: context.lng,
       destination: context.destination,
       activityType: context.activityType,
+      region: context.region,
     });
   }, [
     context.activityType,
@@ -428,6 +436,7 @@ function AppGatewayContent<TSection, THero, TItemData>({
     context.lat,
     context.lng,
     context.locale,
+    context.region,
     contextReady,
     enabled,
     onGatewayContext,

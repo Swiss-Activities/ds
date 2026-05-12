@@ -31,6 +31,7 @@ export {
   isGatewayFeatureBandSection,
   isGatewayFilterStaticSection,
   isGatewayHeroSection,
+  isGatewayRegionMapSection,
   isGatewayReviewSection,
   isGatewayWeatherCardSection,
 } from "./gateway/sections";
@@ -122,6 +123,9 @@ export type {
   TGatewayHomeItem,
   TGatewayReviewCarouselSection,
   TGatewayReviewItem,
+  TGatewayRegionContext,
+  TGatewayRegionMapItem,
+  TGatewayRegionMapSection,
   TGatewayWeatherCardItem,
   TGatewayHomeParams,
   TGatewayFeedParams,

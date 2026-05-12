@@ -5,6 +5,7 @@ export const gatewaySelectionParams = {
   type: "type",
   destination: "destination",
   activityType: "activityType",
+  region: "region",
   tags: "tags",
 } as const;
 
@@ -77,7 +78,9 @@ export const readCachedGatewayDetail = (id: string) => {
   }
 
   try {
-    const value = window.sessionStorage.getItem(`${gatewayDetailCacheKey}${id}`);
+    const value = window.sessionStorage.getItem(
+      `${gatewayDetailCacheKey}${id}`
+    );
 
     if (!value) {
       return null;
@@ -97,9 +100,7 @@ export const getGatewayQueryValue = (value: string | string[] | undefined) => {
   return Array.isArray(value) ? value[0] : value;
 };
 
-export const getGatewayQueryTokens = (
-  value: string | string[] | undefined
-) => {
+export const getGatewayQueryTokens = (value: string | string[] | undefined) => {
   const queryValue = getGatewayQueryValue(value);
 
   if (!queryValue) {

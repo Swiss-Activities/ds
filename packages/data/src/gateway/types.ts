@@ -56,8 +56,7 @@ export const gatewayLucideIconNames = [
   "user-round",
 ] as const;
 
-export type TGatewayLucideIconName =
-  (typeof gatewayLucideIconNames)[number];
+export type TGatewayLucideIconName = (typeof gatewayLucideIconNames)[number];
 
 export type TGatewayIcon = {
   provider: "lucide";
@@ -133,12 +132,28 @@ export type TGatewayFeatureBandSection = {
   data: TGatewayFeatureBandItem[];
 };
 
+export type TGatewayRegionMapItem = {
+  id: string;
+  title: string;
+  path?: string | null;
+  slug?: string | null;
+  numberOfActivities?: number | null;
+};
+
+export type TGatewayRegionMapSection = {
+  id: string;
+  component: "region_map";
+  title: string;
+  data: TGatewayRegionMapItem[];
+};
+
 export type TGatewayHomeSection =
   | TGatewayHomeCarouselSection
   | TGatewayActivityGridSection
   | TGatewayHomeWeatherCardSection
   | TGatewayHomeHeroSection
-  | TGatewayFeatureBandSection;
+  | TGatewayFeatureBandSection
+  | TGatewayRegionMapSection;
 
 export type TGatewayActivityTypeContext = {
   type: "activity-type";
@@ -160,9 +175,20 @@ export type TGatewayDestinationContext = {
   lng: number;
 };
 
+export type TGatewayRegionContext = {
+  type: "region";
+  id: string;
+  title: string;
+  slug: string;
+  description?: string | null;
+  imageUrl?: string | null;
+  numberOfActivities?: number;
+};
+
 export type TGatewayDiscoveryContext =
   | TGatewayActivityTypeContext
-  | TGatewayDestinationContext;
+  | TGatewayDestinationContext
+  | TGatewayRegionContext;
 
 export type TGatewayHome = {
   context?: TGatewayDiscoveryContext;
@@ -256,6 +282,7 @@ export type TGatewayHomeParams = {
 export type TGatewayFeedParams = TGatewayHomeParams & {
   destination?: string | null;
   activityType?: string | null;
+  region?: string | null;
 };
 
 export type TGatewaySearchSuggestion = {

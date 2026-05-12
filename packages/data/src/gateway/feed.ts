@@ -26,13 +26,18 @@ export type UseGatewayFeedOptions = TGatewayFeedParams & {
 export const getGatewayFeedPath = ({
   destination,
   activityType,
-}: Pick<TGatewayFeedParams, "destination" | "activityType">) => {
+  region,
+}: Pick<TGatewayFeedParams, "destination" | "activityType" | "region">) => {
   if (activityType) {
     return `activity-types/${encodeURIComponent(activityType)}`;
   }
 
   if (destination) {
     return `destinations/${encodeURIComponent(destination)}`;
+  }
+
+  if (region) {
+    return `regions/${encodeURIComponent(region)}`;
   }
 
   return "home";
@@ -45,13 +50,15 @@ export const getGatewayFeedDirectPath = (params: TGatewayFeedParams) => {
 export const getGatewayFeedQueryParams = (
   params: TGatewayFeedParams
 ): GatewayParams => {
-  const isDestinationFeed = Boolean(params.destination && !params.activityType);
+  const isLocationDetailFeed = Boolean(
+    !params.activityType && (params.destination || params.region)
+  );
   const locale = normalizeGatewayLocale(params.locale);
 
   return {
     ...(locale ? { locale } : {}),
-    ...(!isDestinationFeed && params.lat != null ? { lat: params.lat } : {}),
-    ...(!isDestinationFeed && params.lng != null ? { lng: params.lng } : {}),
+    ...(!isLocationDetailFeed && params.lat != null ? { lat: params.lat } : {}),
+    ...(!isLocationDetailFeed && params.lng != null ? { lng: params.lng } : {}),
     ...(params.country ? { country: params.country } : {}),
     ...(params.dev ? { dev: params.dev } : {}),
   };
@@ -92,6 +99,7 @@ export const useGatewayFeed = ({
   country,
   destination,
   activityType,
+  region,
   dev,
   enabled = true,
   retry = 3,
@@ -123,6 +131,7 @@ export const useGatewayFeed = ({
     ...(resolvedLng != null ? { lng: resolvedLng } : {}),
     ...(destination ? { destination } : {}),
     ...(activityType ? { activityType } : {}),
+    ...(region ? { region } : {}),
     ...(dev ? { dev } : {}),
   };
 
@@ -136,6 +145,7 @@ export const useGatewayFeed = ({
       params.country,
       params.destination,
       params.activityType,
+      params.region,
       params.dev,
     ],
     queryFn: ({ signal }) => getGatewayFeed(apiUrl, params, signal),
@@ -155,6 +165,7 @@ export const useGatewayFeed = ({
       lng: resolvedLng ?? null,
       destination: destination ?? null,
       activityType: activityType ?? null,
+      region: region ?? null,
     },
     contextReady,
     isPreparing,
