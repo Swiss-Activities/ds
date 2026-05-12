@@ -82,15 +82,16 @@ export type AppGatewayRenderItemViewArgs<TItemData = unknown> = {
   onSelectItem?: AppGatewaySelectItem;
 };
 
-export type BaseAppGatewayProps<TSection, THero, TItemData = unknown> =
-  DataConfig & {
+export type BaseAppGatewayProps<
+  TSection,
+  THero,
+  TItemData = unknown,
+> = DataConfig & {
   enabled?: boolean;
   initialFallbackTabId?: string;
   renderFallbackHero: (args: AppGatewayFallbackHeroArgs) => ReactNode;
   renderLoadingHero?: () => ReactNode;
-  buildFallbackSections: (
-    args: AppGatewayFallbackSectionsArgs
-  ) => TSection[];
+  buildFallbackSections: (args: AppGatewayFallbackSectionsArgs) => TSection[];
   mapGatewayData: (
     args: AppGatewayMapGatewayDataArgs
   ) => AppGatewayMappedData<TSection, THero>;
@@ -103,16 +104,16 @@ export type BaseAppGatewayProps<TSection, THero, TItemData = unknown> =
     id: string,
     context?: AppGatewayContext
   ) => Promise<TItemData | null>;
-  urlSelectedItemId?: string | null;
-  onSelectItemUrl?: (
-    id: string,
-    options?: AppGatewaySelectItemOptions
-  ) => void;
   onBackItemUrl?: () => void;
-  preserveSelectedItemView?: boolean;
+  serverSideItemNavigation?: boolean;
   useDevGateway?: boolean;
   selectedDestination?: string | null;
   selectedActivityType?: string | null;
+  initialData?: TGatewayHome | null;
+  initialContext?: AppGatewayContext | null;
+  initialSelectedItemData?: TItemData | null;
+  initialSelectedItemId?: string | null;
+  initialSelectedItemLabel?: string | null;
   onGatewayData?: (data: TGatewayHome) => void;
   onGatewayContext?: (context: AppGatewayContext) => void;
 };
@@ -151,35 +152,38 @@ function AppGatewayContent<TSection, THero, TItemData>({
   renderPage,
   renderItemView,
   loadItem,
-  urlSelectedItemId,
-  onSelectItemUrl,
   onBackItemUrl,
-  preserveSelectedItemView = false,
+  serverSideItemNavigation = false,
   useDevGateway = false,
   selectedDestination = null,
   selectedActivityType = null,
+  initialData = null,
+  initialContext = null,
+  initialSelectedItemData = null,
+  initialSelectedItemId = null,
+  initialSelectedItemLabel = null,
   onGatewayData,
   onGatewayContext,
 }: AppGatewayContentProps<TSection, THero, TItemData>) {
+  const canSelectItem = Boolean(renderItemView);
+  const selectedItemInitialId = canSelectItem ? initialSelectedItemId : null;
   const [selectedTabId, setSelectedTabId] = useState<string | undefined>(
     initialFallbackTabId
   );
-  const [selectedItemId, setSelectedItemId] = useState<string | null>(null);
+  const [selectedItemId, setSelectedItemId] = useState<string | null>(
+    selectedItemInitialId
+  );
   const [selectedItemData, setSelectedItemData] = useState<TItemData | null>(
-    null
+    selectedItemInitialId ? initialSelectedItemData : null
   );
   const [selectedItemLabel, setSelectedItemLabel] = useState<string | null>(
-    null
+    selectedItemInitialId ? initialSelectedItemLabel : null
   );
   const [selectedItemHistory, setSelectedItemHistory] = useState<
     SelectedItemHistoryEntry<TItemData>[]
   >([]);
   const [pendingItemId, setPendingItemId] = useState<string | null>(null);
   const previousSelectedItemId = useRef<string | null>(null);
-  const pendingUrlSelectedItemId = useRef<string | null>(null);
-  const pendingUrlSelectedItemTimer = useRef<ReturnType<
-    typeof setTimeout
-  > | null>(null);
 
   const resolvedTraceUrl =
     traceUrl || "https://www.swissactivities.com/cdn-cgi/trace";
@@ -187,7 +191,7 @@ function AppGatewayContent<TSection, THero, TItemData>({
     apiUrl,
     traceUrl: resolvedTraceUrl,
     locale,
-    enabled,
+    enabled: enabled && !initialData,
     retry: 3,
     refetchOnWindowFocus: true,
     refetchOnReconnect: true,
@@ -195,10 +199,13 @@ function AppGatewayContent<TSection, THero, TItemData>({
     destination: selectedDestination,
     activityType: selectedActivityType,
   });
-  const { data, isLoading, isError, isPreparing, context, contextReady } =
-    gatewayFeed;
+  const data = initialData ?? gatewayFeed.data;
+  const isLoading = initialData ? false : gatewayFeed.isLoading;
+  const isError = initialData ? false : gatewayFeed.isError;
+  const isPreparing = initialData ? false : gatewayFeed.isPreparing;
+  const context = initialContext ?? gatewayFeed.context;
+  const contextReady = initialData ? true : gatewayFeed.contextReady;
 
-  const canSelectItem = Boolean(renderItemView);
   const loadItemContext = useMemo<AppGatewayContext>(
     () => ({
       locale: context.locale,
@@ -218,34 +225,6 @@ function AppGatewayContent<TSection, THero, TItemData>({
     ]
   );
 
-  const clearPendingUrlSelectedItem = useCallback(() => {
-    pendingUrlSelectedItemId.current = null;
-
-    if (pendingUrlSelectedItemTimer.current) {
-      clearTimeout(pendingUrlSelectedItemTimer.current);
-      pendingUrlSelectedItemTimer.current = null;
-    }
-  }, []);
-
-  const markPendingUrlSelectedItem = useCallback(
-    (id: string) => {
-      clearPendingUrlSelectedItem();
-      pendingUrlSelectedItemId.current = id;
-      pendingUrlSelectedItemTimer.current = setTimeout(() => {
-        pendingUrlSelectedItemId.current = null;
-        pendingUrlSelectedItemTimer.current = null;
-      }, 1000);
-    },
-    [clearPendingUrlSelectedItem]
-  );
-
-  useEffect(
-    () => () => {
-      clearPendingUrlSelectedItem();
-    },
-    [clearPendingUrlSelectedItem]
-  );
-
   const clearSelectedItem = useCallback(() => {
     setSelectedItemId(null);
     setSelectedItemData(null);
@@ -254,23 +233,20 @@ function AppGatewayContent<TSection, THero, TItemData>({
     setPendingItemId(null);
   }, []);
 
-  const restorePreviousItem = useCallback(
-    () => {
-      const previousItem = selectedItemHistory[selectedItemHistory.length - 1];
+  const restorePreviousItem = useCallback(() => {
+    const previousItem = selectedItemHistory[selectedItemHistory.length - 1];
 
-      if (previousItem) {
-        setSelectedItemHistory((current) => current.slice(0, -1));
-        setSelectedItemId(previousItem.id);
-        setSelectedItemData(previousItem.data);
-        setSelectedItemLabel(previousItem.label);
-        setPendingItemId(null);
-        return;
-      }
+    if (previousItem) {
+      setSelectedItemHistory((current) => current.slice(0, -1));
+      setSelectedItemId(previousItem.id);
+      setSelectedItemData(previousItem.data);
+      setSelectedItemLabel(previousItem.label);
+      setPendingItemId(null);
+      return;
+    }
 
-      clearSelectedItem();
-    },
-    [clearSelectedItem, selectedItemHistory]
-  );
+    clearSelectedItem();
+  }, [clearSelectedItem, selectedItemHistory]);
 
   const handleSelectItem = useCallback(
     async (id: string, options?: AppGatewaySelectItemOptions) => {
@@ -279,6 +255,12 @@ function AppGatewayContent<TSection, THero, TItemData>({
       }
 
       if (id === selectedItemId || id === pendingItemId) {
+        return;
+      }
+
+      if (serverSideItemNavigation && !options?.skipHistory) {
+        setPendingItemId(id);
+        scrollToTop();
         return;
       }
 
@@ -309,20 +291,11 @@ function AppGatewayContent<TSection, THero, TItemData>({
           setSelectedItemLabel(options?.title ?? null);
         });
 
-        if (!options?.skipHistory) {
-          markPendingUrlSelectedItem(id);
-          onSelectItemUrl?.(id, options);
-        }
         scrollToTop();
         return;
       }
 
       setPendingItemId(id);
-
-      if (!options?.skipHistory) {
-        markPendingUrlSelectedItem(id);
-        onSelectItemUrl?.(id, options);
-      }
 
       try {
         const itemData = await loadItem(
@@ -363,12 +336,11 @@ function AppGatewayContent<TSection, THero, TItemData>({
       contextReady,
       loadItemContext,
       loadItem,
-      markPendingUrlSelectedItem,
-      onSelectItemUrl,
       pendingItemId,
       selectedItemData,
       selectedItemId,
       selectedItemLabel,
+      serverSideItemNavigation,
     ]
   );
 
@@ -384,62 +356,20 @@ function AppGatewayContent<TSection, THero, TItemData>({
   }, [onBackItemUrl, restorePreviousItem]);
 
   useEffect(() => {
-    if (!canSelectItem) {
+    if (!canSelectItem || !initialSelectedItemId || !initialSelectedItemData) {
       return;
     }
 
-    if (loadItem && enabled && !contextReady) {
-      return;
-    }
-
-    const pendingUrlId = pendingUrlSelectedItemId.current;
-
-    if (pendingUrlId) {
-      if (urlSelectedItemId === pendingUrlId) {
-        clearPendingUrlSelectedItem();
-      } else if (
-        selectedItemId === pendingUrlId ||
-        pendingItemId === pendingUrlId
-      ) {
-        return;
-      } else {
-        clearPendingUrlSelectedItem();
-      }
-    }
-
-    if (!urlSelectedItemId) {
-      if (preserveSelectedItemView) {
-        return;
-      }
-
-      if (selectedItemId) {
-        clearSelectedItem();
-      }
-      return;
-    }
-
-    if (
-      urlSelectedItemId === selectedItemId ||
-      urlSelectedItemId === pendingItemId
-    ) {
-      return;
-    }
-
-    void handleSelectItem(urlSelectedItemId, {
-      skipHistory: true,
-    });
+    setSelectedItemId(initialSelectedItemId);
+    setSelectedItemData(initialSelectedItemData);
+    setSelectedItemLabel(initialSelectedItemLabel);
+    setSelectedItemHistory([]);
+    setPendingItemId(null);
   }, [
     canSelectItem,
-    clearPendingUrlSelectedItem,
-    clearSelectedItem,
-    contextReady,
-    enabled,
-    handleSelectItem,
-    loadItem,
-    pendingItemId,
-    preserveSelectedItemView,
-    selectedItemId,
-    urlSelectedItemId,
+    initialSelectedItemData,
+    initialSelectedItemId,
+    initialSelectedItemLabel,
   ]);
 
   useLayoutEffect(() => {
@@ -561,13 +491,7 @@ function AppGatewayContent<TSection, THero, TItemData>({
         shouldUseFallbackHero: false,
       };
     }
-  }, [
-    canSelectItem,
-    data,
-    handleSelectItem,
-    mapGatewayData,
-    pendingItemId,
-  ]);
+  }, [canSelectItem, data, handleSelectItem, mapGatewayData, pendingItemId]);
 
   if (selectedItemId && renderItemView) {
     return (
