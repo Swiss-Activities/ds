@@ -4,6 +4,7 @@ import {
   ActivityIndicator as NativeActivityIndicator,
   Pressable,
   View,
+  type ViewStyle,
 } from "react-native";
 
 import { dsMobileTokens } from "../tokens/mobile";
@@ -37,6 +38,16 @@ export const Button: React.FC<React.PropsWithChildren<MobileButtonProps>> = ({
   onPress,
   onLongPress,
 }) => {
+  const buttonTokens = dsMobileTokens.components.button;
+  const tokenVariant =
+    variant === ButtonVariant.CTA
+      ? buttonTokens.variants.cta
+      : variant === ButtonVariant.SECONDARY
+        ? buttonTokens.variants.secondary
+        : variant === ButtonVariant.TERTIARY
+          ? buttonTokens.variants.tertiary
+          : buttonTokens.variants.default;
+
   const press = () => {
     if (!isDisabled) {
       onPress();
@@ -51,7 +62,26 @@ export const Button: React.FC<React.PropsWithChildren<MobileButtonProps>> = ({
 
   return (
     <Pressable disabled={isDisabled} onPress={press} onLongPress={longPress}>
-      {({ pressed }) => (
+      {({ pressed }) => {
+        const stateVariant = isDisabled
+          ? buttonTokens.variants.disabled
+          : pressed
+            ? {
+                background: tokenVariant.pressedBackground,
+                border: tokenVariant.pressedBorder,
+                text: tokenVariant.pressedText,
+              }
+            : tokenVariant;
+        const buttonStyle: ViewStyle = {
+          minHeight: isNarrow ? 36 : buttonTokens.minHeight,
+          borderRadius: buttonTokens.radius,
+          borderColor: stateVariant.border,
+          backgroundColor: stateVariant.background,
+          paddingHorizontal: isNarrow ? 10 : buttonTokens.paddingX,
+          paddingVertical: isNarrow ? 4 : buttonTokens.paddingY,
+        };
+
+        return (
         <View
           {...nativeClassName(
             clsx(
@@ -92,6 +122,7 @@ export const Button: React.FC<React.PropsWithChildren<MobileButtonProps>> = ({
               }
             )
           )}
+          style={buttonStyle}
         >
           <Text
             classNames={clsx("text-center text-sm", {
@@ -107,6 +138,13 @@ export const Button: React.FC<React.PropsWithChildren<MobileButtonProps>> = ({
               "text-dark":
                 variant === ButtonVariant.TERTIARY && pressed && !isDisabled,
             })}
+            style={{
+              color: stateVariant.text,
+              fontFamily: buttonTokens.font.family,
+              fontSize: buttonTokens.font.size,
+              lineHeight: buttonTokens.font.lineHeight,
+              opacity: isLoading ? 0 : 1,
+            }}
             weight={TextWeight.MEDIUM}
           >
             {children}
@@ -119,16 +157,13 @@ export const Button: React.FC<React.PropsWithChildren<MobileButtonProps>> = ({
             >
               <NativeActivityIndicator
                 size="small"
-                color={
-                  variant === ButtonVariant.DEFAULT
-                    ? dsMobileTokens.colors.sa.blue
-                    : dsMobileTokens.colors.white
-                }
+                color={stateVariant.text}
               />
             </View>
           )}
         </View>
-      )}
+        );
+      }}
     </Pressable>
   );
 };

@@ -1,4 +1,5 @@
 export * from "./animations";
+export * from "./components";
 export * from "./colors";
 export * from "./mobile";
 export * from "./radius";

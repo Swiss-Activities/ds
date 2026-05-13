@@ -1,4 +1,5 @@
 import { grayColors, saColors } from "./colors";
+import { componentTokens } from "./components";
 import { saRadius } from "./radius";
 import { textTypographyTokens } from "./typography";
 
@@ -52,6 +53,7 @@ export const dsMobileTokens = {
       elevation: 1,
     },
   },
+  components: componentTokens,
 } as const;
 
 export type DsMobileTokens = typeof dsMobileTokens;

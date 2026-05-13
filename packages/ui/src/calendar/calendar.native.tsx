@@ -1,10 +1,9 @@
 import { useEffect, useMemo, useState } from "react";
 import type { ViewProps } from "react-native";
 import { ChevronLeft, ChevronRight } from "lucide-react-native";
-import { Pressable, View } from "react-native-css/components";
-import { Text } from "../text/text.native";
-import { grayColors } from "../tokens/colors";
-import { cn } from "../utils/cn";
+import { Pressable, Text, View } from "react-native";
+import { dsMobileTokens } from "../tokens/mobile";
+import { fontFamilies } from "../tokens/typography";
 import {
   addMonths,
   getCalendarMonths,
@@ -28,8 +27,10 @@ function CalendarDay({
   day: CalendarDayModel | null;
   onSelect: (day: CalendarDayModel) => void;
 }) {
+  const tokens = dsMobileTokens.components.calendar;
+
   if (!day) {
-    return <View className="h-8 w-8" />;
+    return <View style={{ height: tokens.daySize, width: tokens.daySize }} />;
   }
 
   return (
@@ -41,22 +42,36 @@ function CalendarDay({
         selected: day.isSelected,
       }}
       disabled={day.isDisabled}
-      className={cn(
-        "h-8 w-8 items-center justify-center rounded-md border border-transparent",
-        day.isDisabled ? "opacity-40" : "opacity-100",
-        day.isToday && !day.isSelected && "bg-gray-100",
-        day.isSelected && "bg-blue opacity-100",
-      )}
+      style={{
+        alignItems: "center",
+        borderColor: "transparent",
+        borderWidth: 1,
+        justifyContent: "center",
+        opacity: day.isDisabled ? 0.4 : 1,
+        height: tokens.daySize,
+        width: tokens.daySize,
+        borderRadius: tokens.dayRadius,
+        backgroundColor: day.isSelected
+          ? tokens.selectedBackground
+          : day.isToday && !day.isSelected
+            ? tokens.todayBackground
+            : "transparent",
+      }}
       onPress={() => onSelect(day)}
     >
       <Text
-        size="sm"
-        className={cn(
-          "font-normal text-gray-700",
-          (day.isDisabled || day.isOutside) && "text-gray-500",
-          day.isToday && !day.isSelected && "text-gray-900",
-          day.isSelected && "text-white",
-        )}
+        style={{
+          color: day.isSelected
+            ? tokens.selectedText
+            : day.isToday && !day.isSelected
+              ? tokens.todayText
+              : day.isDisabled || day.isOutside
+                ? tokens.mutedText
+                : tokens.text,
+          fontFamily: fontFamilies.sans.native.regular,
+          fontSize: 14,
+          lineHeight: 23,
+        }}
       >
         {day.day}
       </Text>
@@ -72,25 +87,40 @@ function CalendarMonth({
   onSelect: (day: CalendarDayModel) => void;
 }) {
   return (
-    <View className="mt-4">
-      <View className="mb-2 flex-row">
+    <View style={{ marginTop: 16 }}>
+      <View style={{ flexDirection: "row", marginBottom: 8 }}>
         {month.weekdayLabels.map((weekday) => (
           <View
-            className="h-8 flex-1 items-center justify-center"
             key={`${month.key}-${weekday}`}
+            style={{
+              alignItems: "center",
+              flex: 1,
+              height: 32,
+              justifyContent: "center",
+            }}
           >
-            <Text size="xs" gray className="font-normal">
+            <Text
+              style={{
+                color: dsMobileTokens.components.calendar.mutedText,
+                fontFamily: fontFamilies.sans.native.regular,
+                fontSize: 12,
+                lineHeight: 20,
+              }}
+            >
               {weekday}
             </Text>
           </View>
         ))}
       </View>
       {month.weeks.map((week, weekIndex) => (
-        <View className="mb-1 flex-row" key={`${month.key}-week-${weekIndex}`}>
+        <View
+          key={`${month.key}-week-${weekIndex}`}
+          style={{ flexDirection: "row", marginBottom: 4 }}
+        >
           {week.map((day, dayIndex) => (
             <View
-              className="flex-1 items-center justify-center"
               key={day?.date ?? `${month.key}-empty-${weekIndex}-${dayIndex}`}
+              style={{ alignItems: "center", flex: 1, justifyContent: "center" }}
             >
               <CalendarDay day={day} onSelect={onSelect} />
             </View>
@@ -103,7 +133,8 @@ function CalendarMonth({
 
 export function Calendar({
   availableDates,
-  className,
+  className: _className,
+  style,
   disabled = false,
   disablePastDates = true,
   hideNavigation = false,
@@ -122,6 +153,7 @@ export function Calendar({
   weekStartsOn = 1,
   ...props
 }: CalendarProps) {
+  const tokens = dsMobileTokens.components.calendar;
   const startMonth = useMemo(
     () => getMonthStart(toLocalDate(initialMonth)),
     [initialMonth],
@@ -193,24 +225,46 @@ export function Calendar({
   };
 
   return (
-    <View className={cn("w-full p-3", className)} {...props}>
-      <View className="relative items-center justify-center pt-1">
+    <View style={[{ padding: 12, width: "100%" }, style]} {...props}>
+      <View
+        style={{
+          alignItems: "center",
+          justifyContent: "center",
+          paddingTop: 4,
+        }}
+      >
         {!hideNavigation && (
           <Pressable
             accessibilityLabel="Previous month"
             accessibilityRole="button"
             accessibilityState={{ disabled: !canGoPrevious }}
-            className={cn(
-              "absolute left-1 h-7 w-7 items-center justify-center rounded-md border border-gray-200 bg-transparent",
-              !canGoPrevious && "opacity-30",
-            )}
+            style={{
+              alignItems: "center",
+              backgroundColor: "transparent",
+              borderColor: tokens.navigationBorder,
+              borderRadius: tokens.dayRadius,
+              borderWidth: 1,
+              height: 28,
+              justifyContent: "center",
+              left: 4,
+              opacity: canGoPrevious ? 1 : 0.3,
+              position: "absolute",
+              width: 28,
+            }}
             disabled={!canGoPrevious}
             onPress={() => setActiveMonth(addMonths(activeMonth, -1))}
           >
-            <ChevronLeft color={grayColors["900"]} size={16} />
+            <ChevronLeft color={tokens.navigationIcon} size={16} />
           </Pressable>
         )}
-        <Text size="sm" className="font-medium text-black">
+        <Text
+          style={{
+            color: "#000000",
+            fontFamily: fontFamilies.sans.native.medium,
+            fontSize: 14,
+            lineHeight: 23,
+          }}
+        >
           {currentMonth?.label}
         </Text>
         {!hideNavigation && (
@@ -218,14 +272,23 @@ export function Calendar({
             accessibilityLabel="Next month"
             accessibilityRole="button"
             accessibilityState={{ disabled: !canGoNext }}
-            className={cn(
-              "absolute right-1 h-7 w-7 items-center justify-center rounded-md border border-gray-200 bg-transparent",
-              !canGoNext && "opacity-30",
-            )}
+            style={{
+              alignItems: "center",
+              backgroundColor: "transparent",
+              borderColor: tokens.navigationBorder,
+              borderRadius: tokens.dayRadius,
+              borderWidth: 1,
+              height: 28,
+              justifyContent: "center",
+              opacity: canGoNext ? 1 : 0.3,
+              position: "absolute",
+              right: 4,
+              width: 28,
+            }}
             disabled={!canGoNext}
             onPress={() => setActiveMonth(addMonths(activeMonth, 1))}
           >
-            <ChevronRight color={grayColors["900"]} size={16} />
+            <ChevronRight color={tokens.navigationIcon} size={16} />
           </Pressable>
         )}
       </View>
