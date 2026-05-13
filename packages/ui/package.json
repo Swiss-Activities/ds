@@ -22,6 +22,14 @@
       "types": "./src/index.native.ts",
       "default": "./src/index.native.ts"
     },
+    "./native-compat": {
+      "react-native": {
+        "types": "./src/native-compat/index.ts",
+        "default": "./src/native-compat/index.ts"
+      },
+      "types": "./src/native-compat/index.ts",
+      "default": "./src/native-compat/index.ts"
+    },
     "./tokens": {
       "types": "./src/tokens/index.ts",
       "default": "./src/tokens/index.ts"
