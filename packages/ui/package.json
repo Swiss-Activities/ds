@@ -42,6 +42,14 @@
       "types": "./src/tokens/typography.ts",
       "default": "./src/tokens/typography.ts"
     },
+    "./tokens/mobile": {
+      "types": "./src/tokens/mobile.ts",
+      "default": "./src/tokens/mobile.ts"
+    },
+    "./tokens/tailwind": {
+      "require": "./src/tokens/tailwind.cjs",
+      "default": "./src/tokens/tailwind.cjs"
+    },
     "./icons": {
       "react-native": {
         "types": "./src/icons/index.native.ts",

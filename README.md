@@ -42,11 +42,16 @@ import {
   textTypographyTokens,
   typographyRoles,
 } from '@swiss-activities/ui/tokens/typography'
+import { dsMobileTokens } from '@swiss-activities/ui/tokens/mobile'
 ```
 
 Use `textTypographyTokens` when matching an existing DS `Text` size, and
 `typographyRoles` for semantic layout roles such as `heroTitle`, `sectionTitle`,
 `body`, `caption`, and `button`.
+
+React Native apps can import `dsMobileTokens` from
+`@swiss-activities/ui/tokens/mobile`. CommonJS config files such as Tailwind can
+load `dsTailwindTokens` from `@swiss-activities/ui/tokens/tailwind`.
 
 ## Consuming In A Client Repo
 
