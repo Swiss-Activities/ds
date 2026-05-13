@@ -83,13 +83,7 @@ export function SectionHero({
 
   if (variant === "summary") {
     return (
-      <View
-        className={cn(
-          "space-y-6 border-b border-gray-200 bg-white px-4 py-8",
-          className
-        )}
-        {...props}
-      >
+      <View className={cn("space-y-6 bg-white", className)} {...props}>
         {title ? (
           <Text as="h1" size="2xl" className="max-w-3xl">
             {title}

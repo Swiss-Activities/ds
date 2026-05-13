@@ -94,10 +94,7 @@ export function SectionHero({
           </div>
           {backLabel ? (
             <div className="absolute left-3 top-3 z-30">
-              <SectionHeroBackLink
-                label={backLabel}
-                onClick={onBack}
-              />
+              <SectionHeroBackLink label={backLabel} onClick={onBack} />
             </div>
           ) : null}
           <div className="relative z-10 flex h-full items-center justify-center px-4 text-center">
@@ -109,9 +106,7 @@ export function SectionHero({
                   </Text>
                 ) : null}
                 {search ? (
-                  <div className="w-full max-w-[640px] text-left">
-                    {search}
-                  </div>
+                  <div className="w-full max-w-[640px] text-left">{search}</div>
                 ) : null}
               </div>
             ) : null}
@@ -123,14 +118,8 @@ export function SectionHero({
 
   if (variant === "summary") {
     return (
-      <section
-        className={cn(
-          "border-0 border-solid border-gray-200 bg-white sm:border-b lg:rounded-lg lg:border",
-          className
-        )}
-        {...props}
-      >
-        <div className="flex min-h-[316px] max-w-4xl flex-col justify-center space-y-6 px-4 py-8 sm:min-h-[360px] sm:px-6 lg:min-h-[408px] lg:space-y-8 lg:px-12 lg:py-10">
+      <section className={cn("bg-white", className)} {...props}>
+        <div className="flex max-w-4xl flex-col space-y-6 lg:space-y-8">
           {title ? (
             <Text
               as="h1"
