@@ -30,6 +30,14 @@
       "types": "./src/native-compat/index.ts",
       "default": "./src/native-compat/index.ts"
     },
+    "./calendar": {
+      "react-native": {
+        "types": "./src/calendar/index.native.ts",
+        "default": "./src/calendar/index.native.ts"
+      },
+      "types": "./src/calendar/index.ts",
+      "default": "./src/calendar/index.ts"
+    },
     "./tokens": {
       "types": "./src/tokens/index.ts",
       "default": "./src/tokens/index.ts"
