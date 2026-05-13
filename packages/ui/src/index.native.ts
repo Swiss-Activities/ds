@@ -3,6 +3,7 @@ export * from "./activity-card/index.native";
 export * from "./badge/index.native";
 export * from "./breadcrumbs/index.native";
 export * from "./button/index.native";
+export * from "./calendar/index.native";
 export * from "./card/index.native";
 export * from "./checkbox/index.native";
 export * from "./conditional-wrapper/index.native";

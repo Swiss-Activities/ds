@@ -15,6 +15,7 @@ export * from "./badge";
 export * from "./horizontal-scroller";
 export * from "./breadcrumbs";
 export * from "./button";
+export * from "./calendar";
 export * from "./conditional-wrapper";
 export * from "./card";
 export * from "./checkbox";
