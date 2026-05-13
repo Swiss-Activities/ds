@@ -30,6 +30,29 @@ bun run storybook:native
 - Native components use NativeWind classes via `Button.native.tsx` and Expo config in `apps/storybook-native`.
 - This repo is designed to work well as a Git submodule inside product repos.
 
+## Typography Tokens
+
+Typography is defined in `packages/ui/src/tokens/typography.ts`. The tokens keep
+the current web Tailwind classes as the source output and expose matching native
+styles for React Native consumers.
+
+```ts
+import {
+  getNativeTextTypographyStyle,
+  textTypographyTokens,
+  typographyRoles,
+} from '@swiss-activities/ui/tokens/typography'
+import { dsMobileTokens } from '@swiss-activities/ui/tokens/mobile'
+```
+
+Use `textTypographyTokens` when matching an existing DS `Text` size, and
+`typographyRoles` for semantic layout roles such as `heroTitle`, `sectionTitle`,
+`body`, `caption`, and `button`.
+
+React Native apps can import `dsMobileTokens` from
+`@swiss-activities/ui/tokens/mobile`. CommonJS config files such as Tailwind can
+load `dsTailwindTokens` from `@swiss-activities/ui/tokens/tailwind`.
+
 ## Consuming In A Client Repo
 
 If this repo is added as a submodule at `./ds`, add the UI package as a dependency:

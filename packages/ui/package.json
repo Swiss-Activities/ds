@@ -22,6 +22,22 @@
       "types": "./src/index.native.ts",
       "default": "./src/index.native.ts"
     },
+    "./native-compat": {
+      "react-native": {
+        "types": "./src/native-compat/index.ts",
+        "default": "./src/native-compat/index.ts"
+      },
+      "types": "./src/native-compat/index.ts",
+      "default": "./src/native-compat/index.ts"
+    },
+    "./calendar": {
+      "react-native": {
+        "types": "./src/calendar/index.native.ts",
+        "default": "./src/calendar/index.native.ts"
+      },
+      "types": "./src/calendar/index.ts",
+      "default": "./src/calendar/index.ts"
+    },
     "./tokens": {
       "types": "./src/tokens/index.ts",
       "default": "./src/tokens/index.ts"
@@ -37,6 +53,18 @@
     "./tokens/screens": {
       "types": "./src/tokens/screens.ts",
       "default": "./src/tokens/screens.ts"
+    },
+    "./tokens/typography": {
+      "types": "./src/tokens/typography.ts",
+      "default": "./src/tokens/typography.ts"
+    },
+    "./tokens/mobile": {
+      "types": "./src/tokens/mobile.ts",
+      "default": "./src/tokens/mobile.ts"
+    },
+    "./tokens/tailwind": {
+      "require": "./src/tokens/tailwind.cjs",
+      "default": "./src/tokens/tailwind.cjs"
     },
     "./icons": {
       "react-native": {
