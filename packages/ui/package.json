@@ -38,6 +38,10 @@
       "types": "./src/tokens/screens.ts",
       "default": "./src/tokens/screens.ts"
     },
+    "./tokens/typography": {
+      "types": "./src/tokens/typography.ts",
+      "default": "./src/tokens/typography.ts"
+    },
     "./icons": {
       "react-native": {
         "types": "./src/icons/index.native.ts",
