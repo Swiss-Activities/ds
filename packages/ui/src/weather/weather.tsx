@@ -254,10 +254,11 @@ function ScrollBackButton({ variant }: { variant: WeatherColorVariant }) {
 
   return (
     <button
+      type="button"
       onClick={scrollPrev}
       tabIndex={canScrollLeft ? 0 : -1}
       className={cn(
-        "absolute inset-y-0 start-0 z-10 flex w-10 cursor-pointer items-center justify-start rounded-none bg-gradient-to-r to-transparent ps-2 transition-opacity",
+        "absolute inset-y-0 start-0 z-10 flex w-10 cursor-pointer appearance-none items-center justify-start rounded-none border-0 bg-gradient-to-r to-transparent p-0 ps-2 transition-opacity",
         s.gradient,
         canScrollLeft ? "opacity-100" : "pointer-events-none opacity-0"
       )}
