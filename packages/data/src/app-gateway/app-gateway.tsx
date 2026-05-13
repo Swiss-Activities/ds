@@ -8,8 +8,6 @@ import {
   type ReactNode,
 } from "react";
 import { flushSync } from "react-dom";
-import { logInitialGatewayResponse } from "../gateway/client";
-import { getGatewayFeedDirectPath } from "../gateway/feed";
 import { useGatewayFeed } from "../gateway/feed";
 import type { TGatewayHome } from "../gateway/types";
 import type { DataConfig } from "../types";
@@ -200,21 +198,6 @@ function AppGatewayContent<TSection, THero, TItemData>({
   const isPreparing = initialData ? false : gatewayFeed.isPreparing;
   const context = initialContext ?? gatewayFeed.context;
   const contextReady = initialData ? true : gatewayFeed.contextReady;
-
-  useEffect(() => {
-    if (!initialData) {
-      return;
-    }
-
-    logInitialGatewayResponse(
-      getGatewayFeedDirectPath({
-        destination: selectedDestination,
-        activityType: selectedActivityType,
-        region: selectedRegion,
-      }),
-      initialData
-    );
-  }, [initialData, selectedActivityType, selectedDestination, selectedRegion]);
 
   const loadItemContext = useMemo<AppGatewayContext>(
     () => ({

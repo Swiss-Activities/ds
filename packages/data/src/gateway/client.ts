@@ -12,29 +12,6 @@ function normalizePath(path: string) {
   return path.replace(/^\/+|\/+$/g, "");
 }
 
-function logGatewayResponse({
-  data,
-  path,
-  source,
-  url,
-}: {
-  data: unknown;
-  path: string;
-  source: string;
-  url?: string;
-}) {
-  if (typeof window === "undefined") {
-    return;
-  }
-
-  console.info("[gateway response]", {
-    data,
-    path,
-    source,
-    url,
-  });
-}
-
 export function buildGatewaySearchParams(params: GatewayParams = {}) {
   const searchParams = new URLSearchParams();
 
@@ -77,10 +54,7 @@ export async function fetchGatewayProxy<T>({
     throw new Error(`Gateway ${path} error: ${response.status}`);
   }
 
-  const data = (await response.json()) as T;
-  logGatewayResponse({ data, path, source: "proxy", url });
-
-  return data;
+  return (await response.json()) as T;
 }
 
 export async function fetchGatewayDirect<T>({
@@ -110,12 +84,5 @@ export async function fetchGatewayDirect<T>({
     throw new Error(`Gateway ${path} error: ${response.status}`);
   }
 
-  const data = (await response.json()) as T;
-  logGatewayResponse({ data, path, source: "direct", url });
-
-  return data;
+  return (await response.json()) as T;
 }
-
-export const logInitialGatewayResponse = (path: string, data: unknown) => {
-  logGatewayResponse({ data, path, source: "initial" });
-};
