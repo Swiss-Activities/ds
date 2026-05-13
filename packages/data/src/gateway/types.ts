@@ -394,6 +394,26 @@ export type TGatewayActivityDetailParams = {
   dev?: boolean;
 };
 
+export type TGatewayBlogPostDetail = {
+  id: string;
+  type: "blog-post";
+  title: string;
+  imageUrl?: string | null;
+  path: string;
+  overview: Record<string, unknown>;
+  meta: {
+    overviewSource: "website-data-api";
+    temporarySource: true;
+    note: string;
+  };
+};
+
+export type TGatewayBlogPostDetailParams = {
+  id: string;
+  locale?: string;
+  dev?: boolean;
+};
+
 export type TGatewaySwimmingDetails = {
   waterType?: string | null;
   water_type?: string | null;
@@ -481,7 +501,7 @@ export type TGatewayMovieDetails = {
   showtimes?: TGatewayMovieShowtime[] | null;
 };
 
-export type TGatewayDetail = {
+export type TGatewayNonBookableDetail = {
   id?: string;
   type?: string;
   title?: string;
@@ -526,3 +546,5 @@ export type TGatewayDetail = {
   } | null;
   nearbySection?: TGatewayHomeCarouselSection | null;
 };
+
+export type TGatewayDetail = TGatewayNonBookableDetail | TGatewayBlogPostDetail;

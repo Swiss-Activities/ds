@@ -1,6 +1,13 @@
 import { createElement, type HTMLAttributes } from "react";
 import { Breadcrumbs } from "../breadcrumbs";
 import { ContentBlocks } from "../content-blocks";
+import {
+  detailContainerClassName,
+  detailDescriptionTextClassName,
+  detailDescriptionWrapperClassName,
+  detailMediaFlushClassName,
+  detailTitleClassName,
+} from "../detail-layout/classes";
 import { Hero } from "../hero";
 import { Icon } from "../icon/icon";
 import { ChevronLeft } from "../icons";
@@ -47,8 +54,6 @@ function BackLink({
 export type SectionProductProps = BaseSectionProductProps &
   Omit<HTMLAttributes<HTMLDivElement>, "children" | "title">;
 
-const containerClassName = "mx-auto max-w-[1232px] px-2 sm:px-4";
-const mediaFlushClassName = "-mx-2 sm:-mx-4 lg:mx-0";
 const galleryImageFillClassName = "[&_img]:!object-contain";
 
 type GalleryMediaProps = Pick<
@@ -213,8 +218,8 @@ export function SectionProduct({
 
   return (
     <div {...props}>
-      <section className={cn(containerClassName, className)}>
-        <div className={cn(mediaFlushClassName, "md:hidden")}>
+      <section className={cn(detailContainerClassName, className)}>
+        <div className={cn(detailMediaFlushClassName, "md:hidden")}>
           <Hero
             images={images}
             renderImage={renderImage}
@@ -224,7 +229,7 @@ export function SectionProduct({
           />
         </div>
         {images && images.length > 0 && (
-          <div className={cn(mediaFlushClassName, "hidden md:block")}>
+          <div className={cn(detailMediaFlushClassName, "hidden md:block")}>
             <GalleryMedia
               images={images}
               renderImage={renderImage}
@@ -242,7 +247,11 @@ export function SectionProduct({
           />
         )}
         {title && (
-          <Text as="h1" size="xl" className="mt-3 lg:mt-6">
+          <Text
+            as="h1"
+            size="xl"
+            className={cn(detailTitleClassName, "mt-3 lg:mt-6")}
+          >
             {title}
           </Text>
         )}
@@ -268,11 +277,18 @@ export function SectionProduct({
         )}
         {description ? (
           typeof description === "string" ? (
-            <Text className="mt-4 max-w-screen-sm text-balance lg:mt-6">
+            <Text
+              className={cn(
+                detailDescriptionWrapperClassName,
+                detailDescriptionTextClassName
+              )}
+            >
               {description}
             </Text>
           ) : (
-            <div className="mt-4 lg:mt-6">{description}</div>
+            <div className={detailDescriptionWrapperClassName}>
+              {description}
+            </div>
           )
         ) : null}
       </section>
@@ -281,7 +297,7 @@ export function SectionProduct({
         <div className={lowerSectionsClassName}>
           {hasInfoItems ? (
             <section>
-              <div className={containerClassName}>
+              <div className={detailContainerClassName}>
                 <ProductInfoList items={infoItems ?? []} />
               </div>
             </section>
@@ -289,7 +305,7 @@ export function SectionProduct({
 
           {hasReviews ? (
             <section className={reviewsSectionClassName}>
-              <div className={containerClassName}>
+              <div className={detailContainerClassName}>
                 <SectionReviewGrid
                   title={reviewsTitle as NonNullable<typeof reviewsTitle>}
                   subtitle={reviewsSubtitle}
@@ -302,7 +318,7 @@ export function SectionProduct({
 
           {hasContent ? (
             <section>
-              <div className={containerClassName}>
+              <div className={detailContainerClassName}>
                 <ContentBlocks
                   items={contentItems ?? []}
                   tocTitle={contentTocTitle}
@@ -314,7 +330,7 @@ export function SectionProduct({
 
           {hasRelatedActivities ? (
             <section ref={relatedActivitiesRef}>
-              <div className={containerClassName}>
+              <div className={detailContainerClassName}>
                 <SectionActivityGrid
                   title={
                     relatedActivitiesTitle as NonNullable<

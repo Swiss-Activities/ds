@@ -92,6 +92,10 @@ export {
   getGatewayActivityDetailPath,
 } from "./gateway/getActivityDetail";
 export {
+  getGatewayBlogPostDetail,
+  getGatewayBlogPostDetailPath,
+} from "./gateway/getBlogPostDetail";
+export {
   useSearchSuggest,
   getSearchSuggest,
   type UseSearchSuggestOptions,
@@ -152,8 +156,11 @@ export type {
   TGatewayDetailParams,
   TGatewayDetailForItemOptions,
   TGatewayDetail,
+  TGatewayNonBookableDetail,
   TGatewayActivityDetail,
   TGatewayActivityDetailParams,
+  TGatewayBlogPostDetail,
+  TGatewayBlogPostDetailParams,
   TGatewayActivityMeetingPoint,
   TGatewayActivityProductContext,
   TGatewayActivityReviewSummary,

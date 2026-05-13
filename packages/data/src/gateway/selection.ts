@@ -44,16 +44,22 @@ export const hydrateGatewayDetailItem = (
   return {
     ...item,
     title: item.title || detail.title || "",
-    imageUrl: item.imageUrl ?? detail.coverImage ?? null,
+    imageUrl:
+      item.imageUrl ??
+      ("imageUrl" in detail ? detail.imageUrl : null) ??
+      ("coverImage" in detail ? detail.coverImage : null) ??
+      ("cover_image" in detail ? detail.cover_image : null) ??
+      null,
     subtitle:
       item.subtitle ??
-      detail.venue?.title ??
-      detail.address ??
-      detail.canton ??
+      ("venue" in detail ? detail.venue?.title : null) ??
+      ("address" in detail ? detail.address : null) ??
+      ("canton" in detail ? detail.canton : null) ??
       null,
     category: item.category ?? detail.type ?? null,
-    dateStart: item.dateStart ?? detail.dateStart ?? null,
-    dateEnd: item.dateEnd ?? detail.dateEnd ?? null,
+    dateStart:
+      item.dateStart ?? ("dateStart" in detail ? detail.dateStart : null),
+    dateEnd: item.dateEnd ?? ("dateEnd" in detail ? detail.dateEnd : null),
   };
 };
 

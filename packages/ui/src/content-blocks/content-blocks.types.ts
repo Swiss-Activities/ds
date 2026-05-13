@@ -9,5 +9,6 @@ export type ContentBlockItem = {
 export type BaseContentBlocksProps = {
   items: ContentBlockItem[];
   tocTitle?: string;
+  variant?: "default" | "article";
   className?: string;
 };

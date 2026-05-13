@@ -61,9 +61,31 @@ const TocNav = memo(function TocNav({
   );
 });
 
+const ContentBlockList = memo(function ContentBlockList({
+  items,
+  className,
+}: {
+  items: BaseContentBlocksProps["items"];
+  className?: string;
+}) {
+  return (
+    <div className={cn("flex flex-col gap-10", className)}>
+      {items.map((item) => (
+        <div key={item.id}>
+          <Text id={item.id} as="h2" size="lg" className="mb-4">
+            {item.title}
+          </Text>
+          <BlockContent content={item.content} />
+        </div>
+      ))}
+    </div>
+  );
+});
+
 export const ContentBlocks = memo(function ContentBlocks({
   items,
   tocTitle = "Inhaltsverzeichnis",
+  variant = "default",
   className,
   ...props
 }: ContentBlocksProps) {
@@ -132,20 +154,15 @@ export const ContentBlocks = memo(function ContentBlocks({
       )}
       {...props}
     >
-      <div className="lg:hidden">
-        <Accordion items={accordionItems} />
-      </div>
-      <div className="hidden grid-cols-3 gap-8 lg:grid xl:gap-16">
-        <div className="col-span-2 flex flex-col gap-10">
-          {items.map((item) => (
-            <div key={item.id}>
-              <Text id={item.id} as="h2" size="lg" className="mb-4">
-                {item.title}
-              </Text>
-              <BlockContent content={item.content} />
-            </div>
-          ))}
+      {variant === "article" ? (
+        <ContentBlockList items={items} className="gap-8 lg:hidden" />
+      ) : (
+        <div className="lg:hidden">
+          <Accordion items={accordionItems} />
         </div>
+      )}
+      <div className="hidden grid-cols-3 gap-8 lg:grid xl:gap-16">
+        <ContentBlockList items={items} className="col-span-2" />
         <div className="sticky top-[calc(var(--sa-content-blocks-sticky-offset)+24px)] h-max max-h-[calc(var(--sa-content-blocks-vh)-var(--sa-content-blocks-sticky-offset)-48px)] overflow-y-auto rounded-lg border border-solid border-gray-200 p-6 shadow-sm">
           <TocNav items={items} tocTitle={tocTitle} />
         </div>

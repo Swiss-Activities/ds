@@ -5,6 +5,7 @@ export * from "./section-filters";
 export * from "./section-feature-band";
 export * from "./section-grid";
 export * from "./section-hero";
+export * from "./section-blog-detail";
 export * from "./section-non-bookable";
 export * from "./section-product";
 export * from "./section-region-explorer";

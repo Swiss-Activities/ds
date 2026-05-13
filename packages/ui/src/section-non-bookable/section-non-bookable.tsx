@@ -1,6 +1,12 @@
 import { createElement, type HTMLAttributes, type ReactNode } from "react";
 import { Accordion } from "../accordion";
 import { Button } from "../button";
+import { SectionDetailHeader } from "../detail-layout";
+import {
+  detailContainerClassName,
+  detailMediaFlushClassName,
+  detailSingleMediaClassName,
+} from "../detail-layout/classes";
 import { Icon } from "../icon/icon";
 import { Check, ChevronLeft, X } from "../icons";
 import { ProductInfoList } from "../product-info-list";
@@ -16,9 +22,6 @@ import type {
 
 export type SectionNonBookableProps = BaseSectionNonBookableProps &
   Omit<HTMLAttributes<HTMLDivElement>, "children" | "title">;
-
-const containerClassName = "mx-auto max-w-[1232px] px-2 sm:px-4";
-const mediaFlushClassName = "-mx-2 sm:-mx-4 lg:mx-0";
 
 function BackLink({
   label,
@@ -59,11 +62,8 @@ function MediaGallery({
 
   return (
     <div className="relative">
-      <div className="relative h-[292px] overflow-hidden bg-gray-100 md:h-[360px] lg:h-[392px] lg:rounded-lg">
-        <SectionNonBookableMedia
-          image={mainImage}
-          renderImage={renderImage}
-        />
+      <div className={detailSingleMediaClassName}>
+        <SectionNonBookableMedia image={mainImage} renderImage={renderImage} />
         {backLabel ? (
           <>
             <div className="pointer-events-none absolute inset-x-0 top-0 z-10 h-24 bg-gradient-to-b from-black/45 to-transparent" />
@@ -220,8 +220,8 @@ export function SectionNonBookable({
 
   return (
     <div className={cn("bg-white", className)} {...props}>
-      <section className={containerClassName}>
-        <div className={mediaFlushClassName}>
+      <section className={detailContainerClassName}>
+        <div className={detailMediaFlushClassName}>
           <MediaGallery
             images={images}
             renderImage={renderImage}
@@ -230,35 +230,19 @@ export function SectionNonBookable({
             onBack={onBack}
           />
         </div>
-        <div className="pt-4 lg:pt-6">
-          <div className="min-w-0">
-            <Text as="h1" size="xl" className="max-w-4xl">
-              {title}
-            </Text>
-            {description ? (
-              <div className="mt-4 max-w-3xl lg:mt-5">
-                {typeof description === "string" ? (
-                  <Text className="text-balance !leading-relaxed text-gray-700">
-                    {description}
-                  </Text>
-                ) : (
-                  description
-                )}
-              </div>
-            ) : null}
-            {hasSourceLink ? (
-              <div className="mt-4">
-                <SourceLink href={sourceHref}>{sourceLabel}</SourceLink>
-              </div>
-            ) : null}
-          </div>
-        </div>
+        <SectionDetailHeader title={title} description={description}>
+          {hasSourceLink ? (
+            <div className="mt-4">
+              <SourceLink href={sourceHref}>{sourceLabel}</SourceLink>
+            </div>
+          ) : null}
+        </SectionDetailHeader>
       </section>
 
       <div className="grid gap-0 py-8 lg:gap-10 lg:py-10">
         {hasHighlights ? (
           <section className="min-w-0">
-            <div className={cn(containerClassName, "min-w-0")}>
+            <div className={cn(detailContainerClassName, "min-w-0")}>
               <ProductInfoList
                 items={highlights ?? []}
                 className={
@@ -273,7 +257,7 @@ export function SectionNonBookable({
 
         {hasDetailSections ? (
           <section className="min-w-0">
-            <div className={cn(containerClassName, "min-w-0")}>
+            <div className={cn(detailContainerClassName, "min-w-0")}>
               <DetailSections sections={detailSections ?? []} />
             </div>
           </section>
@@ -281,7 +265,7 @@ export function SectionNonBookable({
 
         {hasRelatedActivities ? (
           <section ref={relatedActivitiesRef} className="mt-8 min-w-0 lg:mt-0">
-            <div className={cn(containerClassName, "min-w-0")}>
+            <div className={cn(detailContainerClassName, "min-w-0")}>
               <SectionActivityGrid
                 title={relatedActivitiesTitle}
                 action={relatedActivitiesAction}
