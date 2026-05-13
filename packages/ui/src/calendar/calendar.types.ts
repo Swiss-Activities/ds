@@ -27,6 +27,7 @@ export type CalendarDayModel = {
   day: number;
   isAvailable: boolean;
   isDisabled: boolean;
+  isOutside: boolean;
   isSelected: boolean;
   isToday: boolean;
 };
@@ -45,6 +46,7 @@ export type BaseCalendarProps = {
   className?: string;
   disabled?: boolean;
   disablePastDates?: boolean;
+  hideNavigation?: boolean;
   initialMonth?: Date | CalendarDateValue;
   locale?: CalendarLocale;
   maxDate?: Date | CalendarDateValue;
@@ -52,8 +54,11 @@ export type BaseCalendarProps = {
   months?: number;
   onSelectDate?: (date: CalendarDateValue) => void;
   onSelectDay?: (date: CalendarDateValue) => void;
+  onVisibleMonthChange?: (month: Date) => void;
   selectedDate?: CalendarDateValue;
   selectedDay?: CalendarDateValue;
+  showOutsideDays?: boolean;
+  visibleMonth?: Date | CalendarDateValue;
   weekStartsOn?: CalendarWeekStartsOn;
 };
 

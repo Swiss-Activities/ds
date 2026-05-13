@@ -1,9 +1,16 @@
 "use client";
 
-import { useMemo, type HTMLAttributes } from "react";
+import { useEffect, useMemo, useState, type HTMLAttributes } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Text } from "../text";
 import { cn } from "../utils/cn";
-import { getCalendarMonths } from "./calendar.shared";
+import {
+  addMonths,
+  getCalendarMonths,
+  getMonthStart,
+  isSameCalendarMonth,
+  toLocalDate,
+} from "./calendar.shared";
 import type {
   BaseCalendarProps,
   CalendarDayModel,
@@ -19,10 +26,10 @@ function CalendarDay({
   onSelect,
 }: {
   day: CalendarDayModel | null;
-  onSelect: (date: string) => void;
+  onSelect: (day: CalendarDayModel) => void;
 }) {
   if (!day) {
-    return <span aria-hidden="true" className="h-10 w-10" />;
+    return <span aria-hidden="true" className="h-8 w-8" />;
   }
 
   return (
@@ -31,17 +38,17 @@ function CalendarDay({
       aria-label={day.date}
       aria-pressed={day.isSelected}
       className={cn(
-        "flex h-10 w-10 items-center justify-center rounded-md border border-transparent text-sm font-medium transition",
+        "flex h-8 w-8 items-center justify-center rounded-md border border-transparent p-0 text-sm font-normal transition hover:no-underline",
         day.isDisabled
-          ? "cursor-not-allowed text-gray-300"
-          : "cursor-pointer text-gray-700 hover:bg-light hover:text-primary",
-        day.isToday && !day.isSelected && "border-gray-300 text-gray-900",
-        day.isSelected &&
-          "border-primary bg-primary text-white hover:bg-primary hover:text-white",
+          ? "cursor-not-allowed text-gray-500 opacity-50"
+          : "cursor-pointer text-gray-700 hover:bg-gray-100",
+        day.isOutside && "text-gray-500 opacity-50",
+        day.isToday && !day.isSelected && "bg-gray-100 text-gray-900",
+        day.isSelected && "!bg-blue !text-gray-50 opacity-100",
       )}
       disabled={day.isDisabled}
       type="button"
-      onClick={() => onSelect(day.date)}
+      onClick={() => onSelect(day)}
     >
       {day.day}
     </button>
@@ -53,21 +60,18 @@ function CalendarMonth({
   onSelect,
 }: {
   month: CalendarMonthModel;
-  onSelect: (date: string) => void;
+  onSelect: (day: CalendarDayModel) => void;
 }) {
   return (
-    <section className="border-t border-gray-200 pt-6 first:border-t-0 first:pt-0">
-      <Text as="h3" bold className="mb-4 text-gray-900">
-        {month.label}
-      </Text>
-      <div role="grid" aria-label={month.label} className="space-y-2">
+    <section className="space-y-1">
+      <div role="grid" aria-label={month.label} className="space-y-1">
         <div role="row" className="grid grid-cols-7 gap-1">
           {month.weekdayLabels.map((weekday) => (
             <Text
               as="span"
               size="xs"
               gray
-              className="flex h-8 items-center justify-center text-center font-medium uppercase"
+              className="flex h-8 w-8 items-center justify-center rounded-md text-center font-normal"
               key={`${month.key}-${weekday}`}
               role="columnheader"
             >
@@ -102,6 +106,7 @@ export function Calendar({
   className,
   disabled = false,
   disablePastDates = true,
+  hideNavigation = false,
   initialMonth,
   locale,
   maxDate,
@@ -109,50 +114,124 @@ export function Calendar({
   months = 12,
   onSelectDate,
   onSelectDay,
+  onVisibleMonthChange,
   selectedDate,
   selectedDay,
+  showOutsideDays = true,
+  visibleMonth,
   weekStartsOn = 1,
   ...props
 }: CalendarProps) {
+  const startMonth = useMemo(
+    () => getMonthStart(toLocalDate(initialMonth)),
+    [initialMonth],
+  );
+  const [internalVisibleMonth, setInternalVisibleMonth] = useState(startMonth);
+  const controlledVisibleMonth = visibleMonth
+    ? getMonthStart(toLocalDate(visibleMonth))
+    : undefined;
+  const activeMonth = controlledVisibleMonth ?? internalVisibleMonth;
+  const maxVisibleMonth = addMonths(startMonth, Math.max(1, months) - 1);
+
+  useEffect(() => {
+    if (!visibleMonth) {
+      setInternalVisibleMonth(startMonth);
+    }
+  }, [startMonth, visibleMonth]);
+
+  const setActiveMonth = (month: Date) => {
+    const nextMonth = getMonthStart(month);
+
+    if (!visibleMonth) {
+      setInternalVisibleMonth(nextMonth);
+    }
+
+    onVisibleMonthChange?.(nextMonth);
+  };
+
   const calendarMonths = useMemo(
     () =>
       getCalendarMonths({
         availableDates,
         disabled,
         disablePastDates,
-        initialMonth,
+        initialMonth: activeMonth,
         locale,
         maxDate,
         minDate,
-        months,
+        months: 1,
         selectedDate,
         selectedDay,
+        showOutsideDays,
         weekStartsOn,
       }),
     [
+      activeMonth,
       availableDates,
       disabled,
       disablePastDates,
-      initialMonth,
       locale,
       maxDate,
       minDate,
-      months,
       selectedDate,
       selectedDay,
+      showOutsideDays,
       weekStartsOn,
     ],
   );
   const handleSelect = onSelectDate ?? onSelectDay ?? (() => {});
+  const currentMonth = calendarMonths[0];
+  const canGoPrevious = !isSameCalendarMonth(activeMonth, startMonth);
+  const canGoNext = !isSameCalendarMonth(activeMonth, maxVisibleMonth);
+
+  const selectDay = (day: CalendarDayModel) => {
+    if (day.isOutside) {
+      setActiveMonth(toLocalDate(day.date));
+    }
+
+    handleSelect(day.date);
+  };
 
   return (
-    <div
-      {...props}
-      className={cn("flex w-full max-w-[360px] flex-col gap-6", className)}
-    >
-      {calendarMonths.map((month) => (
-        <CalendarMonth key={month.key} month={month} onSelect={handleSelect} />
-      ))}
+    <div {...props} className={cn("w-full max-w-[360px] p-3", className)}>
+      <div className="relative flex items-center justify-center pt-1">
+        {!hideNavigation && (
+          <button
+            aria-label="Previous month"
+            className={cn(
+              "absolute start-1 flex h-7 w-7 items-center justify-center rounded-md border border-gray-200 bg-transparent p-0 opacity-80 transition hover:opacity-100",
+              !canGoPrevious &&
+                "cursor-not-allowed opacity-30 hover:opacity-30",
+            )}
+            disabled={!canGoPrevious}
+            type="button"
+            onClick={() => setActiveMonth(addMonths(activeMonth, -1))}
+          >
+            <ChevronLeft aria-hidden="true" className="h-4 w-4" />
+          </button>
+        )}
+        <Text as="h3" size="sm" className="font-medium text-black">
+          {currentMonth?.label}
+        </Text>
+        {!hideNavigation && (
+          <button
+            aria-label="Next month"
+            className={cn(
+              "absolute end-1 flex h-7 w-7 items-center justify-center rounded-md border border-gray-200 bg-transparent p-0 opacity-80 transition hover:opacity-100",
+              !canGoNext && "cursor-not-allowed opacity-30 hover:opacity-30",
+            )}
+            disabled={!canGoNext}
+            type="button"
+            onClick={() => setActiveMonth(addMonths(activeMonth, 1))}
+          >
+            <ChevronRight aria-hidden="true" className="h-4 w-4" />
+          </button>
+        )}
+      </div>
+
+      {currentMonth && (
+        <CalendarMonth month={currentMonth} onSelect={selectDay} />
+      )}
     </div>
   );
 }

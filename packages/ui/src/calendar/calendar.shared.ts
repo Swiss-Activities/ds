@@ -38,7 +38,7 @@ function padDatePart(value: number) {
   return String(value).padStart(2, "0");
 }
 
-function toLocalDate(value?: Date | string) {
+export function toLocalDate(value?: Date | string) {
   if (!value) return new Date();
 
   if (value instanceof Date) {
@@ -59,22 +59,26 @@ function toLocalDate(value?: Date | string) {
   return new Date(date.getFullYear(), date.getMonth(), date.getDate());
 }
 
-function toDateKey(date: Date) {
+export function toDateKey(date: Date) {
   return `${date.getFullYear()}-${padDatePart(date.getMonth() + 1)}-${padDatePart(
     date.getDate(),
   )}`;
 }
 
-function getMonthStart(date: Date) {
+export function getMonthStart(date: Date) {
   return new Date(date.getFullYear(), date.getMonth(), 1);
 }
 
-function addMonths(date: Date, months: number) {
+export function addMonths(date: Date, months: number) {
   return new Date(date.getFullYear(), date.getMonth() + months, 1);
 }
 
 function getDaysInMonth(year: number, month: number) {
   return new Date(year, month + 1, 0).getDate();
+}
+
+export function isSameCalendarMonth(a: Date, b: Date) {
+  return a.getFullYear() === b.getFullYear() && a.getMonth() === b.getMonth();
 }
 
 function rotateWeekdayLabels(
@@ -128,6 +132,7 @@ function buildCalendarMonth({
   monthDate,
   options,
   selectedDate,
+  showOutsideDays,
   todayKey,
   weekStartsOn,
 }: {
@@ -137,6 +142,7 @@ function buildCalendarMonth({
   options: Required<Pick<BaseCalendarProps, "disabled" | "disablePastDates">> &
     Pick<BaseCalendarProps, "availableDates" | "maxDate" | "minDate">;
   selectedDate?: string;
+  showOutsideDays: boolean;
   todayKey: string;
   weekStartsOn: CalendarWeekStartsOn;
 }): CalendarMonthModel {
@@ -163,6 +169,34 @@ function buildCalendarMonth({
     const day = cellIndex - leadingDays + 1;
 
     if (day < 1 || day > daysInMonth) {
+      if (showOutsideDays) {
+        const outsideDate = new Date(year, month, day);
+        const outsideDateKey = toDateKey(outsideDate);
+        const outsideAvailability = options.availableDates?.[outsideDateKey];
+        const isDisabled = isDateDisabled({
+          availability: outsideAvailability,
+          availabilityRequired,
+          dateKey: outsideDateKey,
+          disabled: options.disabled,
+          disablePastDates: options.disablePastDates,
+          maxDateKey,
+          minDateKey,
+          todayKey,
+        });
+
+        days.push({
+          date: outsideDateKey,
+          day: outsideDate.getDate(),
+          isAvailable:
+            !availabilityRequired || resolveAvailability(outsideAvailability),
+          isDisabled,
+          isOutside: true,
+          isSelected: selectedDate === outsideDateKey,
+          isToday: todayKey === outsideDateKey,
+        });
+        continue;
+      }
+
       days.push(null);
       continue;
     }
@@ -186,6 +220,7 @@ function buildCalendarMonth({
       day,
       isAvailable: !availabilityRequired || resolveAvailability(availability),
       isDisabled,
+      isOutside: false,
       isSelected: selectedDate === dateKey,
       isToday: todayKey === dateKey,
     });
@@ -218,6 +253,7 @@ export function getCalendarMonths({
   months = 12,
   selectedDate,
   selectedDay,
+  showOutsideDays = true,
   weekStartsOn = 1,
 }: BaseCalendarProps) {
   const monthCount = Math.max(1, months);
@@ -239,6 +275,7 @@ export function getCalendarMonths({
         minDate,
       },
       selectedDate: selected,
+      showOutsideDays,
       todayKey,
       weekStartsOn,
     }),
