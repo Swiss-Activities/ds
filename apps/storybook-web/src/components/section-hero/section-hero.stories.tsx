@@ -180,6 +180,9 @@ function SummarySectionHeroPreview({
             </>
           }
           search={<SearchBar mode="main" placeholder={placeholder} />}
+          days={getWeatherDaysLong()}
+          weatherTitle={city}
+          weatherDescription={weather}
           tags={[
             {
               id: "location",

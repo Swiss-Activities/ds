@@ -2,23 +2,30 @@
 
 import type { HTMLAttributes } from "react";
 import { useCallback, useEffect, useRef, useState } from "react";
-import { cn } from "../utils/cn";
-import { Text } from "../text";
 import { Button } from "../button";
-import { Icon } from "../icon/icon";
-import { ChevronLeft, ChevronRight } from "../icons";
+import { Card } from "../card";
+import { useHorizontalScroller } from "../horizontal-scroller/horizontal-scroller.context";
 import { HorizontalScrollerRoot } from "../horizontal-scroller/horizontal-scroller.root";
 import { HorizontalScrollerTrack } from "../horizontal-scroller/horizontal-scroller.track";
-import { useHorizontalScroller } from "../horizontal-scroller/horizontal-scroller.context";
-import type { BaseWeatherProps, WeatherDay, WeatherVariant } from "./weather.types";
+import { Icon } from "../icon/icon";
+import { ChevronLeft, ChevronRight } from "../icons";
+import { Text } from "../text";
+import { cn } from "../utils/cn";
+import type {
+  BaseWeatherProps,
+  WeatherDay,
+  WeatherVariant,
+} from "./weather.types";
 
 export type WeatherProps = BaseWeatherProps &
-  Omit<HTMLAttributes<HTMLDivElement>, "children">;
+  Omit<HTMLAttributes<HTMLDivElement>, "children" | "title">;
 
 const MIN_ITEM_WIDTH = 72;
 const BUTTON_WIDTH = 36;
 const GAP = 8;
 const EDGE_SAFETY = 1;
+
+type WeatherColorVariant = Exclude<WeatherVariant, "compact">;
 
 const styles = {
   dark: {
@@ -56,7 +63,7 @@ function WeatherDayCard({
   day: WeatherDay;
   unit: string;
   width?: number;
-  variant: WeatherVariant;
+  variant: WeatherColorVariant;
   isSelected: boolean;
   onSelect?: () => void;
 }) {
@@ -68,15 +75,15 @@ function WeatherDayCard({
         {day.label}
       </Text>
       <div className="flex w-full items-center justify-between">
-        <div className={cn("[&_svg]:h-6 [&_svg]:w-6", s.icon)}>
-          {day.icon}
-        </div>
+        <div className={cn("[&_svg]:h-6 [&_svg]:w-6", s.icon)}>{day.icon}</div>
         <div className="flex flex-col items-end">
           <Text as="span" size="xs" className={s.low}>
-            {day.low}{unit}
+            {day.low}
+            {unit}
           </Text>
           <Text as="span" size="xs" bold className={s.high}>
-            {day.high}{unit}
+            {day.high}
+            {unit}
           </Text>
         </div>
       </div>
@@ -108,7 +115,118 @@ function WeatherDayCard({
   );
 }
 
-function NextButton({ hasOverflow, variant }: { hasOverflow: boolean; variant: WeatherVariant }) {
+function WeatherCompactDayCard({
+  day,
+  isCurrent,
+  unit,
+}: {
+  day: WeatherDay;
+  isCurrent: boolean;
+  unit: string;
+}) {
+  return (
+    <div className="flex min-w-0 flex-col items-center px-0.5 py-1.5 text-center">
+      <span
+        className={cn(
+          "mb-1 h-1.5 w-1.5 rounded-full",
+          isCurrent ? "bg-primary" : "bg-transparent"
+        )}
+      />
+      <Text as="span" size="xs2" className="max-w-full truncate !text-gray-600">
+        {day.label}
+      </Text>
+      <div className="mt-1 flex h-6 items-center justify-center [&_svg]:!h-5 [&_svg]:!w-5">
+        {day.icon}
+      </div>
+      <Text as="span" size="xs" bold className="mt-0.5 !text-gray-900">
+        {day.high}
+        {unit}
+      </Text>
+      <Text as="span" size="xs" className="!text-gray-400">
+        {day.low}
+        {unit}
+      </Text>
+    </div>
+  );
+}
+
+function CompactWeather({
+  days,
+  description,
+  title,
+  unit,
+  className,
+  ...props
+}: WeatherProps & { unit: string }) {
+  const currentDay = days[0];
+
+  if (!currentDay) {
+    return null;
+  }
+
+  return (
+    <Card className={cn("!p-4", className)} {...props}>
+      <div className="flex items-center gap-3">
+        <div className="flex shrink-0 items-center justify-center [&_svg]:!h-12 [&_svg]:!w-12">
+          {currentDay.icon}
+        </div>
+        <div className="min-w-0">
+          <Text as="p" size="xl" bold className="!leading-none !text-gray-900">
+            {currentDay.high}
+            {unit}
+          </Text>
+          {title || description ? (
+            <div className="mt-1 flex min-w-0 items-baseline gap-1.5">
+              {title ? (
+                <Text
+                  as="span"
+                  size="sm"
+                  bold
+                  className="shrink-0 truncate !text-gray-900"
+                >
+                  {title}
+                </Text>
+              ) : null}
+              {description ? (
+                <Text
+                  as="span"
+                  size="sm"
+                  className="min-w-0 truncate !text-gray-500"
+                >
+                  {description}
+                </Text>
+              ) : null}
+            </div>
+          ) : null}
+        </div>
+      </div>
+      <div className="mt-4 pt-3">
+        <div className="grid grid-cols-7 gap-1">
+          {days.slice(0, 7).map((day, index) => {
+            const id = day.id ?? String(index);
+
+            return (
+              <WeatherCompactDayCard
+                key={id}
+                day={day}
+                isCurrent={index === 0}
+                unit={unit}
+              />
+            );
+          })}
+        </div>
+      </div>
+    </Card>
+  );
+}
+
+function NextButton({
+  hasOverflow,
+  variant,
+}: {
+  hasOverflow: boolean;
+  variant: WeatherColorVariant;
+}) {
   const { canScrollRight, scrollNext } = useHorizontalScroller();
   const s = styles[variant];
 
@@ -130,7 +248,7 @@ function NextButton({ hasOverflow, variant }: { hasOverflow: boolean; variant: W
   );
 }
 
-function ScrollBackButton({ variant }: { variant: WeatherVariant }) {
+function ScrollBackButton({ variant }: { variant: WeatherColorVariant }) {
   const { canScrollLeft, scrollPrev } = useHorizontalScroller();
   const s = styles[variant];
 
@@ -155,6 +273,8 @@ function ScrollBackButton({ variant }: { variant: WeatherVariant }) {
 
 export function Weather({
   days,
+  description,
+  title,
   unit = "°",
   variant = "dark",
   selected,
@@ -162,6 +282,20 @@ export function Weather({
   className,
   ...props
 }: WeatherProps) {
+  if (variant === "compact") {
+    return (
+      <CompactWeather
+        days={days}
+        description={description}
+        title={title}
+        unit={unit}
+        selected={selected}
+        className={className}
+        {...props}
+      />
+    );
+  }
+
   const containerRef = useRef<HTMLDivElement>(null);
   const [itemWidth, setItemWidth] = useState<number | undefined>();
   const [hasOverflow, setHasOverflow] = useState(false);
@@ -171,14 +305,19 @@ export function Weather({
     if (!el) return;
 
     const containerWidth = el.clientWidth;
-    const fitsAll = days.length <= Math.floor((containerWidth + GAP) / (MIN_ITEM_WIDTH + GAP));
+    const fitsAll =
+      days.length <=
+      Math.floor((containerWidth + GAP) / (MIN_ITEM_WIDTH + GAP));
 
     setHasOverflow(!fitsAll);
 
     const available = fitsAll
       ? containerWidth
       : containerWidth - BUTTON_WIDTH - GAP - EDGE_SAFETY;
-    const count = Math.max(1, Math.floor((available + GAP) / (MIN_ITEM_WIDTH + GAP)));
+    const count = Math.max(
+      1,
+      Math.floor((available + GAP) / (MIN_ITEM_WIDTH + GAP))
+    );
     const w = (available - (count - 1) * GAP) / count;
     setItemWidth(Math.max(w, MIN_ITEM_WIDTH));
   }, [days.length]);

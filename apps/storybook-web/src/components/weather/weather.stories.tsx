@@ -62,6 +62,23 @@ export const Light: Story = {
   },
 };
 
+export const Compact: Story = {
+  args: {
+    variant: "compact",
+    title: "Zurich",
+    description: "Clear",
+    days,
+    selected: "today",
+  },
+  decorators: [
+    (Story) => (
+      <div className="w-[390px] bg-gray-50 p-4">
+        <Story />
+      </div>
+    ),
+  ],
+};
+
 export const NonInteractive: Story = {
   args: {
     variant: "dark",

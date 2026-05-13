@@ -112,6 +112,10 @@ export type TGatewayHomeHeroSection = {
   component: "hero";
   text: string;
   destination: string | null;
+  forecast?: {
+    title: string;
+    data: TGatewayWeatherCardItem[];
+  } | null;
   weather: "sunny" | "rainy" | "snowy" | "cloudy" | "foggy" | null;
   weatherLabel: string | null;
   timeOfDay: "morning" | "afternoon" | "evening" | null;

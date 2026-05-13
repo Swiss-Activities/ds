@@ -8,11 +8,13 @@ export type WeatherDay = {
   id?: string;
 };
 
-export const weatherVariants = ["light", "dark"] as const;
+export const weatherVariants = ["light", "dark", "compact"] as const;
 export type WeatherVariant = (typeof weatherVariants)[number];
 
 export type BaseWeatherProps = {
   days: WeatherDay[];
+  description?: string;
+  title?: string;
   unit?: string;
   variant?: WeatherVariant;
   selected?: string;

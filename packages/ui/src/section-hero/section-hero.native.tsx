@@ -46,6 +46,8 @@ export function SectionHero({
   variant = "localized",
   days,
   unit,
+  weatherDescription: _weatherDescription,
+  weatherTitle: _weatherTitle,
   selected,
   onSelect,
   tags,

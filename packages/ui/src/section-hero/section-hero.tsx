@@ -68,6 +68,8 @@ export function SectionHero({
   variant = "localized",
   days,
   unit,
+  weatherDescription,
+  weatherTitle,
   selected,
   onSelect,
   tags,
@@ -117,24 +119,55 @@ export function SectionHero({
   }
 
   if (variant === "summary") {
+    const hasWeather = Boolean(days?.length);
+    const mobileWeather = hasWeather ? (
+      <Weather
+        days={days ?? []}
+        unit={unit}
+        variant="light"
+        selected={selected}
+        onSelect={onSelect}
+      />
+    ) : null;
+    const desktopWeather = hasWeather ? (
+      <Weather
+        days={days ?? []}
+        description={weatherDescription}
+        title={weatherTitle}
+        unit={unit}
+        variant="compact"
+        selected={selected}
+      />
+    ) : null;
+
     return (
       <section className={cn("bg-white", className)} {...props}>
-        <div className="flex max-w-4xl flex-col space-y-6 lg:space-y-8">
-          {title ? (
-            <Text
-              as="h1"
-              size="2xl"
-              className="max-w-3xl !text-[28px] !font-semibold !leading-tight sm:!text-[34px] lg:!text-[36px] [&_svg]:!h-6 [&_svg]:!w-6"
-            >
-              {title}
-            </Text>
-          ) : null}
-          {search ? (
-            <div className="max-w-[640px] [&_[data-insights-index='search']]:max-w-none">
-              {search}
+        <div className="grid min-w-0 gap-6 lg:grid-cols-7 lg:items-start lg:gap-8">
+          <div className="flex min-w-0 flex-col space-y-6 lg:col-span-5 lg:space-y-8">
+            {title ? (
+              <Text
+                as="h1"
+                size="2xl"
+                className="w-full max-w-3xl !text-[28px] !font-semibold !leading-tight sm:!text-[34px] lg:!text-[36px] [&_svg]:!h-6 [&_svg]:!w-6"
+              >
+                {title}
+              </Text>
+            ) : null}
+            {search ? (
+              <div className="max-w-[640px] [&_[data-insights-index='search']]:max-w-none">
+                {search}
+              </div>
+            ) : null}
+            <SectionHeroTags tags={tags} />
+            {mobileWeather ? (
+              <div className="lg:hidden">{mobileWeather}</div>
+            ) : null}
+          </div>
+          {desktopWeather ? (
+            <div className="hidden lg:col-span-2 lg:block">
+              {desktopWeather}
             </div>
           ) : null}
-          <SectionHeroTags tags={tags} />
         </div>
       </section>
     );
