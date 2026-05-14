@@ -1,22 +1,45 @@
-import type { TextProps as NativeTextProps } from "react-native";
+import type { StyleProp, TextProps as NativeTextProps, TextStyle } from "react-native";
 import { Text as NativeText } from "react-native-css/components";
 import { cn } from "../utils/cn";
 import type { BaseTextProps } from "./text.types";
-import { resolveTextVariantSize, textStyles } from "./text.variants.shared";
+import {
+  type TextVariant,
+  resolveTextVariantStyle,
+} from "./text.native.variant";
+import {
+  type TextVariantSize,
+  resolveTextVariantSize,
+  textStyles,
+} from "./text.variants.shared";
 
-export type TextProps = BaseTextProps & Omit<NativeTextProps, "children">;
+export type { TextVariant } from "./text.native.variant";
+
+export type TextProps = BaseTextProps &
+  Omit<NativeTextProps, "children"> & {
+    variant?: TextVariant;
+  };
 
 export function Text({
   children = null,
   className,
-  size = "sm",
+  size,
   as = "p",
   bold = false,
   black = false,
   gray = false,
+  variant,
+  style,
   ...props
 }: TextProps) {
-  const normalizedSize = resolveTextVariantSize(size);
+  const variantStyle = resolveTextVariantStyle(variant);
+  const normalizedSize: TextVariantSize = variant
+    ? "none"
+    : resolveTextVariantSize(size);
+  const composedStyle: StyleProp<TextStyle> = variantStyle
+    ? style
+      ? [variantStyle, style]
+      : variantStyle
+    : style;
 
   return (
     <NativeText
@@ -29,6 +52,7 @@ export function Text({
         }),
         className
       )}
+      style={composedStyle}
       {...props}
     >
       {children ?? ""}

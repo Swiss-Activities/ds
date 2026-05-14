@@ -102,6 +102,22 @@
       "types": "./src/tokens/animations.ts",
       "default": "./src/tokens/animations.ts"
     },
+    "./tokens/spacing": {
+      "types": "./src/tokens/spacing.ts",
+      "default": "./src/tokens/spacing.ts"
+    },
+    "./tokens/motion": {
+      "types": "./src/tokens/motion.ts",
+      "default": "./src/tokens/motion.ts"
+    },
+    "./tokens/zIndex": {
+      "types": "./src/tokens/zIndex.ts",
+      "default": "./src/tokens/zIndex.ts"
+    },
+    "./tokens/components": {
+      "types": "./src/tokens/components.ts",
+      "default": "./src/tokens/components.ts"
+    },
     "./text/text.types": {
       "types": "./src/text/text.types.ts",
       "default": "./src/text/text.types.ts"

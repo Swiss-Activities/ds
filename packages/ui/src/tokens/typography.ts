@@ -229,6 +229,56 @@ export const typographyRoles = {
       lineHeight: 20,
     },
   },
+  displayLg: textTypographyTokens["3xl"],
+  displayMd: textTypographyTokens["2xl"],
+  h1: textTypographyTokens["2xl"],
+  h2: textTypographyTokens.xl,
+  h3: textTypographyTokens.lg,
+  h4: textTypographyTokens.default,
+  bodyLg: textTypographyTokens.display,
+  bodySm: textTypographyTokens.sm2,
+  label: {
+    webClassName: "text-[13px] leading-tight font-medium text-gray-700",
+    native: {
+      fontFamily: fontFamilies.sans.native.medium,
+      fontSize: 13,
+      lineHeight: 18,
+      color: grayColors["700"],
+    },
+  },
+  link: {
+    webClassName: "text-[14px] leading-relaxed font-medium underline",
+    native: {
+      fontFamily: fontFamilies.sans.native.medium,
+      fontSize: 14,
+      lineHeight: 22,
+    },
+  },
+  overline: {
+    webClassName: "text-[11px] leading-tight font-semibold uppercase tracking-wider text-gray-500",
+    native: {
+      fontFamily: fontFamilies.sans.native.semibold,
+      fontSize: 11,
+      lineHeight: 14,
+      color: grayColors["500"],
+    },
+  },
+  buttonLg: {
+    webClassName: "text-[16px] font-medium",
+    native: {
+      fontFamily: fontFamilies.sans.native.medium,
+      fontSize: 16,
+      lineHeight: 22,
+    },
+  },
+  buttonSm: {
+    webClassName: "text-[13px] font-medium",
+    native: {
+      fontFamily: fontFamilies.sans.native.medium,
+      fontSize: 13,
+      lineHeight: 18,
+    },
+  },
 } as const satisfies Record<string, TypographyToken>;
 
 export type TypographyRole = keyof typeof typographyRoles;
