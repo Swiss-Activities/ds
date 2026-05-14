@@ -1,0 +1,48 @@
+{
+  "name": "@swiss-activities/native-ui",
+  "version": "0.1.0",
+  "private": true,
+  "description": "React Native components for SwissActivities. Pulls tokens from @swiss-activities/tokens and has zero web-only deps (no class-variance-authority, no @base-ui/react, no @silk-hq/components, no lucide-react). Consumed directly by the mobile-app. Web counterparts live in @swiss-activities/ui.",
+  "type": "module",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "default": "./src/index.ts"
+    },
+    "./native-compat": {
+      "types": "./src/native-compat/index.ts",
+      "default": "./src/native-compat/index.ts"
+    },
+    "./text": {
+      "types": "./src/native-compat/text.tsx",
+      "default": "./src/native-compat/text.tsx"
+    },
+    "./button": {
+      "types": "./src/native-compat/button.tsx",
+      "default": "./src/native-compat/button.tsx"
+    },
+    "./font": {
+      "types": "./src/native-compat/font.ts",
+      "default": "./src/native-compat/font.ts"
+    }
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "peerDependencies": {
+    "@swiss-activities/tokens": "*",
+    "react": "^18.0.0 || ^19.0.0",
+    "react-native": ">=0.82.0"
+  },
+  "dependencies": {
+    "clsx": "^2.1.1"
+  },
+  "devDependencies": {
+    "@types/react": "~19.2.14",
+    "react": "19.2.5",
+    "react-native": "0.83.0",
+    "typescript": "~6.0.2"
+  }
+}

@@ -1,11 +1,6 @@
-export {
-  extractMobileTextSizeClass,
-  getMobileFontScalingPercent,
-  getMobileFontSize,
-  getResponsiveFontValue,
-  mobileFontStyles,
-} from "./font";
-export { Button, ButtonVariant } from "./button";
-export type { MobileButtonProps } from "./button";
-export { Text, TextWeight } from "./text";
-export type { MobileTextProps } from "./text";
+// Back-compat shim. The native-compat layer (Text, Button, font
+// helpers) now lives in `@swiss-activities/native-ui`. Existing
+// imports `@swiss-activities/ui/native-compat` keep working so this
+// is non-breaking, but prefer the new package for net-new code so
+// the mobile-app's resolver never reaches the web-side `ui` graph.
+export * from "@swiss-activities/native-ui/native-compat";

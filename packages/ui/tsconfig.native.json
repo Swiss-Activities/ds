@@ -14,11 +14,7 @@
   "include": [
     "nativewind-env.d.ts",
     "src/index.native.ts",
-    "src/native-compat/button.tsx",
-    "src/native-compat/font.ts",
     "src/native-compat/index.ts",
-    "src/native-compat/native-class-name.ts",
-    "src/native-compat/text.tsx",
     "src/breadcrumbs/index.native.ts",
     "src/breadcrumbs/breadcrumbs.native.tsx",
     "src/breadcrumbs/breadcrumbs.types.ts",

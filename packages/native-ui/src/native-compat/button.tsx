@@ -8,7 +8,7 @@ import {
   type ViewStyle,
 } from "react-native";
 
-import { dsMobileTokens } from "../tokens/mobile";
+import { dsMobileTokens } from "@swiss-activities/tokens/mobile";
 import { nativeClassName } from "./native-class-name";
 import { Text, TextWeight } from "./text";
 

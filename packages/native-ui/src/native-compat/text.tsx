@@ -13,7 +13,7 @@ import {
   mobileFontStyles,
 } from "./font";
 import { nativeClassName } from "./native-class-name";
-import { grayColors, saColors } from "../tokens/colors";
+import { grayColors, saColors } from "@swiss-activities/tokens/colors";
 
 export enum TextWeight {
   DEFAULT = "default",

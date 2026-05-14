@@ -1,7 +1,7 @@
 import { Dimensions, Platform, StatusBar, StyleSheet } from "react-native";
 
-import { dsMobileTokens } from "../tokens/mobile";
-import { fontFamilies } from "../tokens/typography";
+import { dsMobileTokens } from "@swiss-activities/tokens/mobile";
+import { fontFamilies } from "@swiss-activities/tokens/typography";
 
 const MIN_IOS_SCREEN_HEIGHT_FOR_SCALING = 760;
 const MAX_IOS_SCREEN_HEIGHT_FOR_SCALING = 1000;

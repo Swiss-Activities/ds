@@ -150,12 +150,16 @@
     "typecheck": "bun run typecheck:web && bun run typecheck:native"
   },
   "peerDependencies": {
+    "@swiss-activities/native-ui": "*",
     "@swiss-activities/tokens": "*",
     "react": "^18.0.0 || ^19.0.0",
     "react-native": ">=0.82.0",
     "react-native-svg": ">=15.0.0"
   },
   "peerDependenciesMeta": {
+    "@swiss-activities/native-ui": {
+      "optional": true
+    },
     "react-native": {
       "optional": true
     },
