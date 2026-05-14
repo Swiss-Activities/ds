@@ -4,6 +4,7 @@ import {
   ActivityIndicator as NativeActivityIndicator,
   Pressable,
   View,
+  type TextStyle,
   type ViewStyle,
 } from "react-native";
 
@@ -73,6 +74,8 @@ export const Button: React.FC<React.PropsWithChildren<MobileButtonProps>> = ({
               }
             : tokenVariant;
         const buttonStyle: ViewStyle = {
+          alignItems: "center",
+          justifyContent: "center",
           minHeight: isNarrow ? 36 : buttonTokens.minHeight,
           borderRadius: buttonTokens.radius,
           borderColor: stateVariant.border,
@@ -80,88 +83,102 @@ export const Button: React.FC<React.PropsWithChildren<MobileButtonProps>> = ({
           paddingHorizontal: isNarrow ? 10 : buttonTokens.paddingX,
           paddingVertical: isNarrow ? 4 : buttonTokens.paddingY,
         };
+        const labelStyle: TextStyle = {
+          color: stateVariant.text,
+          fontFamily: buttonTokens.font.family,
+          fontSize: buttonTokens.font.size,
+          includeFontPadding: false,
+          lineHeight: buttonTokens.font.lineHeight,
+          opacity: isLoading ? 0 : 1,
+          textAlign: "center",
+          textAlignVertical: "center",
+        };
 
         return (
-        <View
-          {...nativeClassName(
-            clsx(
-              "relative flex min-h-[48px] items-center justify-center rounded-lg border border-solid px-3.5 py-2.5",
-              classNames,
-              {
-                "px-4 py-3": !isNarrow,
-                "min-h-[36px] px-2.5 py-1": isNarrow,
-                "border-gray-400 bg-white":
-                  variant === ButtonVariant.DEFAULT && !isDisabled && !pressed,
-                "border-gray-500 bg-gray-500":
-                  variant === ButtonVariant.DEFAULT && pressed && !isDisabled,
-                "border-primary bg-primary":
-                  variant === ButtonVariant.CTA && !isDisabled && !pressed,
-                "border-gray-300 bg-gray-300":
-                  isDisabled &&
-                  (variant === ButtonVariant.DEFAULT ||
-                    variant === ButtonVariant.CTA ||
-                    variant === ButtonVariant.SECONDARY),
-                "border-dark bg-dark":
-                  variant === ButtonVariant.CTA && pressed && !isDisabled,
-                "border-blue bg-blue":
-                  variant === ButtonVariant.SECONDARY &&
-                  !isDisabled &&
-                  !pressed &&
-                  !isLoading,
-                "border-blue bg-blue opacity-80":
-                  variant === ButtonVariant.SECONDARY &&
-                  pressed &&
-                  !isDisabled &&
-                  !isLoading,
-                "border-transparent bg-transparent":
-                  variant === ButtonVariant.TERTIARY ||
-                  (variant === ButtonVariant.SECONDARY &&
-                    !pressed &&
+          <View
+            {...nativeClassName(
+              clsx(
+                "relative flex min-h-[48px] items-center justify-center rounded-lg border border-solid px-3.5 py-2.5",
+                classNames,
+                {
+                  "px-4 py-3": !isNarrow,
+                  "min-h-[36px] px-2.5 py-1": isNarrow,
+                  "border-gray-400 bg-white":
+                    variant === ButtonVariant.DEFAULT &&
                     !isDisabled &&
-                    isLoading),
-              }
-            )
-          )}
-          style={buttonStyle}
-        >
-          <Text
-            classNames={clsx("text-center text-sm", {
-              "opacity-0": isLoading,
-              "text-gray-700":
-                variant === ButtonVariant.DEFAULT && !pressed && !isDisabled,
-              "text-gray-500": variant === ButtonVariant.DEFAULT && isDisabled,
-              "text-white":
-                (variant === ButtonVariant.DEFAULT && pressed && !isDisabled) ||
-                variant === ButtonVariant.CTA ||
-                variant === ButtonVariant.SECONDARY,
-              "text-primary": variant === ButtonVariant.TERTIARY && !pressed,
-              "text-dark":
-                variant === ButtonVariant.TERTIARY && pressed && !isDisabled,
-            })}
-            style={{
-              color: stateVariant.text,
-              fontFamily: buttonTokens.font.family,
-              fontSize: buttonTokens.font.size,
-              lineHeight: buttonTokens.font.lineHeight,
-              opacity: isLoading ? 0 : 1,
-            }}
-            weight={TextWeight.MEDIUM}
+                    !pressed,
+                  "border-gray-500 bg-gray-500":
+                    variant === ButtonVariant.DEFAULT &&
+                    pressed &&
+                    !isDisabled,
+                  "border-primary bg-primary":
+                    variant === ButtonVariant.CTA &&
+                    !isDisabled &&
+                    !pressed,
+                  "border-gray-300 bg-gray-300":
+                    isDisabled &&
+                    (variant === ButtonVariant.DEFAULT ||
+                      variant === ButtonVariant.CTA ||
+                      variant === ButtonVariant.SECONDARY),
+                  "border-dark bg-dark":
+                    variant === ButtonVariant.CTA && pressed && !isDisabled,
+                  "border-blue bg-blue":
+                    variant === ButtonVariant.SECONDARY &&
+                    !isDisabled &&
+                    !pressed &&
+                    !isLoading,
+                  "border-blue bg-blue opacity-80":
+                    variant === ButtonVariant.SECONDARY &&
+                    pressed &&
+                    !isDisabled &&
+                    !isLoading,
+                  "border-transparent bg-transparent":
+                    variant === ButtonVariant.TERTIARY ||
+                    (variant === ButtonVariant.SECONDARY &&
+                      !pressed &&
+                      !isDisabled &&
+                      isLoading),
+                }
+              )
+            )}
+            style={buttonStyle}
           >
-            {children}
-          </Text>
-          {isLoading && (
-            <View
-              {...nativeClassName(
-                "absolute inset-0 bottom-0 top-0 items-center justify-center"
-              )}
+            <Text
+              allowFontScaling={false}
+              classNames={clsx("text-center text-sm", {
+                "opacity-0": isLoading,
+                "text-gray-700":
+                  variant === ButtonVariant.DEFAULT &&
+                  !pressed &&
+                  !isDisabled,
+                "text-gray-500":
+                  variant === ButtonVariant.DEFAULT && isDisabled,
+                "text-white":
+                  (variant === ButtonVariant.DEFAULT &&
+                    pressed &&
+                    !isDisabled) ||
+                  variant === ButtonVariant.CTA ||
+                  variant === ButtonVariant.SECONDARY,
+                "text-primary": variant === ButtonVariant.TERTIARY && !pressed,
+                "text-dark":
+                  variant === ButtonVariant.TERTIARY && pressed && !isDisabled,
+              })}
+              isFontScalingNeeded={false}
+              style={labelStyle}
+              weight={TextWeight.MEDIUM}
             >
-              <NativeActivityIndicator
-                size="small"
-                color={stateVariant.text}
-              />
-            </View>
-          )}
-        </View>
+              {children}
+            </Text>
+            {isLoading && (
+              <View
+                {...nativeClassName(
+                  "absolute inset-0 bottom-0 top-0 items-center justify-center"
+                )}
+              >
+                <NativeActivityIndicator size="small" color={stateVariant.text} />
+              </View>
+            )}
+          </View>
         );
       }}
     </Pressable>

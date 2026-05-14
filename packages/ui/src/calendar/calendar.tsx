@@ -1,8 +1,15 @@
 'use client';
 
-import { useEffect, useMemo, useState, type HTMLAttributes } from 'react';
+import {
+  useEffect,
+  useMemo,
+  useState,
+  type CSSProperties,
+  type HTMLAttributes,
+} from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { Text } from '../text';
+import { componentTokens } from '../tokens/components';
 import { cn } from '../utils/cn';
 import {
   addMonths,
@@ -22,6 +29,8 @@ import { calendarComponentId } from './calendar.types';
 
 export type CalendarProps = BaseCalendarProps &
   Omit<HTMLAttributes<HTMLDivElement>, 'onSelect'>;
+
+const availabilityTokens = componentTokens.calendar.availability;
 
 function CalendarDay({
   day,
@@ -44,6 +53,33 @@ function CalendarDay({
   }
 
   const price = getPriceLabel(day.availability);
+  const availabilityDayStyle: CSSProperties | undefined = isAvailabilityVariant
+    ? {
+        backgroundColor:
+          day.isSelected && day.isAvailable && !day.isOutside
+            ? availabilityTokens.selectedBackground
+            : day.isAvailable && !day.isOutside
+              ? availabilityTokens.availableBackground
+              : availabilityTokens.unavailableBackground,
+        borderRadius: availabilityTokens.dayRadius,
+        color:
+          day.isSelected && day.isAvailable && !day.isOutside
+            ? availabilityTokens.selectedText
+            : day.isDisabled || day.isOutside
+              ? availabilityTokens.mutedText
+              : availabilityTokens.text,
+        fontSize: availabilityTokens.dayFontSize,
+        lineHeight: `${availabilityTokens.dayLineHeight}px`,
+        minHeight: availabilityTokens.dayHeight,
+      }
+    : undefined;
+  const availabilityPriceStyle: CSSProperties = {
+    color: day.isSelected
+      ? availabilityTokens.selectedPriceText
+      : availabilityTokens.priceText,
+    fontSize: availabilityTokens.priceFontSize,
+    lineHeight: `${availabilityTokens.priceLineHeight}px`,
+  };
 
   return (
     <button
@@ -77,6 +113,7 @@ function CalendarDay({
             : '!bg-blue !text-gray-50 opacity-100'),
       )}
       disabled={day.isDisabled}
+      style={availabilityDayStyle}
       type="button"
       onClick={() => onSelect(day)}
     >
@@ -87,6 +124,7 @@ function CalendarDay({
             'mt-0.5 block max-w-full truncate text-[9px] font-semibold leading-none text-gray-600',
             day.isSelected && 'text-white/80',
           )}
+          style={availabilityPriceStyle}
         >
           {price}
         </span>
@@ -117,11 +155,29 @@ function CalendarMonth({
   variant: CalendarVariant;
 }) {
   const isAvailabilityVariant = variant === 'availability';
+  const availabilityWeekdayStyle: CSSProperties | undefined =
+    isAvailabilityVariant
+      ? {
+          color: availabilityTokens.weekdayText,
+          fontSize: availabilityTokens.weekdayFontSize,
+          height: availabilityTokens.weekdayHeight,
+          lineHeight: `${availabilityTokens.weekdayLineHeight}px`,
+        }
+      : undefined;
+  const availabilityGridStyle: CSSProperties | undefined = isAvailabilityVariant
+    ? {
+        gap: availabilityTokens.dayGap,
+      }
+    : undefined;
 
   return (
     <section className={cn('space-y-1', isAvailabilityVariant && 'p-1 pt-2')}>
       <div role="grid" aria-label={month.label} className="space-y-1">
-        <div role="row" className="grid grid-cols-7 gap-1">
+        <div
+          role="row"
+          className="grid grid-cols-7 gap-1"
+          style={availabilityGridStyle}
+        >
           {month.weekdayLabels.map((weekday) => (
             <Text
               as="span"
@@ -135,6 +191,7 @@ function CalendarMonth({
               )}
               key={`${month.key}-${weekday}`}
               role="columnheader"
+              style={availabilityWeekdayStyle}
             >
               {weekday}
             </Text>
@@ -145,6 +202,7 @@ function CalendarMonth({
             role="row"
             className="grid grid-cols-7 gap-1"
             key={`${month.key}-week-${weekIndex}`}
+            style={availabilityGridStyle}
           >
             {week.map((day, dayIndex) => (
               <span
@@ -246,6 +304,34 @@ export function Calendar({
   const currentMonth = calendarMonths[0];
   const canGoPrevious = !isSameCalendarMonth(activeMonth, startMonth);
   const canGoNext = !isSameCalendarMonth(activeMonth, maxVisibleMonth);
+  const availabilityHeaderStyle: CSSProperties | undefined =
+    isAvailabilityVariant
+      ? {
+          backgroundColor: availabilityTokens.headerBackground,
+          borderColor: availabilityTokens.containerBorder,
+          height: availabilityTokens.headerHeight,
+        }
+      : undefined;
+  const availabilityNavigationStyle: CSSProperties | undefined =
+    isAvailabilityVariant
+      ? {
+          color: componentTokens.calendar.navigationIcon,
+          width: availabilityTokens.navigationCellWidth,
+        }
+      : undefined;
+  const availabilityMonthStyle: CSSProperties | undefined =
+    isAvailabilityVariant
+      ? {
+          fontSize: availabilityTokens.monthFontSize,
+          lineHeight: `${availabilityTokens.monthLineHeight}px`,
+        }
+      : undefined;
+  const availabilityGridWrapStyle: CSSProperties | undefined =
+    isAvailabilityVariant
+      ? {
+          borderColor: availabilityTokens.containerBorder,
+        }
+      : undefined;
 
   const selectDay = (day: CalendarDayModel) => {
     if (day.isOutside) {
@@ -270,6 +356,7 @@ export function Calendar({
           isAvailabilityVariant &&
             'h-12 rounded-t-[10px] border border-gray-200 bg-white p-0',
         )}
+        style={availabilityHeaderStyle}
       >
         {!hideNavigation && (
           <button
@@ -282,6 +369,7 @@ export function Calendar({
                 'cursor-not-allowed opacity-30 hover:opacity-30',
             )}
             disabled={!canGoPrevious}
+            style={availabilityNavigationStyle}
             type="button"
             onClick={() => setActiveMonth(addMonths(activeMonth, -1))}
           >
@@ -292,6 +380,7 @@ export function Calendar({
           as="h3"
           size={isAvailabilityVariant ? 'default' : 'sm'}
           className="font-medium text-black"
+          style={availabilityMonthStyle}
         >
           {currentMonth?.label}
         </Text>
@@ -305,6 +394,7 @@ export function Calendar({
               !canGoNext && 'cursor-not-allowed opacity-30 hover:opacity-30',
             )}
             disabled={!canGoNext}
+            style={availabilityNavigationStyle}
             type="button"
             onClick={() => setActiveMonth(addMonths(activeMonth, 1))}
           >
@@ -319,6 +409,7 @@ export function Calendar({
             isAvailabilityVariant &&
               'rounded-b-[10px] border-x border-b border-gray-200 bg-white',
           )}
+          style={availabilityGridWrapStyle}
         >
           <CalendarMonth
             month={currentMonth}

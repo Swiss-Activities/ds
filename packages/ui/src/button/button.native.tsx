@@ -1,5 +1,5 @@
 import React from "react";
-import { type TouchableOpacityProps } from "react-native";
+import { type TextStyle, type TouchableOpacityProps } from "react-native";
 import { Text, TouchableOpacity, View } from "react-native-css/components";
 import { forwardRef } from "react";
 import { Loader } from "../loader/index.native";
@@ -45,6 +45,12 @@ function getSpinnerColor(variant: ButtonVariant, selected: boolean) {
 
   return "#002f49";
 }
+
+const labelTextStyle: TextStyle = {
+  includeFontPadding: false,
+  textAlign: "center",
+  textAlignVertical: "center",
+};
 
 export const Button = forwardRef<any, ButtonProps>(function Button(
   {
@@ -117,7 +123,13 @@ export const Button = forwardRef<any, ButtonProps>(function Button(
           size="sm"
         />
       ) : isTextOnly && !leadingIcon && !trailingIcon && text == null ? (
-        <Text className={textClassName}>{children}</Text>
+        <Text
+          allowFontScaling={false}
+          className={textClassName}
+          style={labelTextStyle}
+        >
+          {children}
+        </Text>
       ) : (
         <View
           className={cn("flex flex-row justify-center", {
@@ -137,7 +149,12 @@ export const Button = forwardRef<any, ButtonProps>(function Button(
           <View className="flex flex-row items-center">
             {labelNodes.map((child, index) =>
               typeof child === "string" || typeof child === "number" ? (
-                <Text className={textClassName} key={`button-text-${index}`}>
+                <Text
+                  allowFontScaling={false}
+                  className={textClassName}
+                  key={`button-text-${index}`}
+                  style={labelTextStyle}
+                >
                   {child}
                 </Text>
               ) : (
