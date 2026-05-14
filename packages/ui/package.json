@@ -150,6 +150,7 @@
     "typecheck": "bun run typecheck:web && bun run typecheck:native"
   },
   "peerDependencies": {
+    "@swiss-activities/tokens": "*",
     "react": "^18.0.0 || ^19.0.0",
     "react-native": ">=0.82.0",
     "react-native-svg": ">=15.0.0"
@@ -174,7 +175,6 @@
   "dependencies": {
     "@base-ui/react": "^1.4.1",
     "@silk-hq/components": "^0.10.0",
-    "@swiss-activities/tokens": "workspace:*",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "lucide-react": "^0.542.0",
