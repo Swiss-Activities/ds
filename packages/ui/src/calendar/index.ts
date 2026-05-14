@@ -1,5 +1,5 @@
-export { Calendar } from "./calendar";
-export type { CalendarProps } from "./calendar";
+export { Calendar } from './calendar';
+export type { CalendarProps } from './calendar';
 export type {
   CalendarAvailability,
   CalendarAvailabilityMap,
@@ -7,5 +7,6 @@ export type {
   CalendarDayModel,
   CalendarLocale,
   CalendarMonthModel,
+  CalendarVariant,
   CalendarWeekStartsOn,
-} from "./calendar.types";
+} from './calendar.types';

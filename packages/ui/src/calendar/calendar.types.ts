@@ -6,6 +6,7 @@ export type CalendarAvailability =
       available?: boolean;
       capacity?: number | string | null;
       disabled?: boolean;
+      price?: number | string | null;
     }
   | null
   | undefined;
@@ -22,7 +23,10 @@ export type CalendarLocale = {
   weekdays?: readonly string[];
 };
 
+export type CalendarVariant = 'default' | 'availability';
+
 export type CalendarDayModel = {
+  availability: CalendarAvailability;
   date: CalendarDateValue;
   day: number;
   isAvailable: boolean;
@@ -58,8 +62,9 @@ export type BaseCalendarProps = {
   selectedDate?: CalendarDateValue;
   selectedDay?: CalendarDateValue;
   showOutsideDays?: boolean;
+  variant?: CalendarVariant;
   visibleMonth?: Date | CalendarDateValue;
   weekStartsOn?: CalendarWeekStartsOn;
 };
 
-export const calendarComponentId = "sa-calendar";
+export const calendarComponentId = 'sa-calendar';

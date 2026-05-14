@@ -1,77 +1,138 @@
-"use client";
+'use client';
 
-import { useEffect, useMemo, useState, type HTMLAttributes } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
-import { Text } from "../text";
-import { cn } from "../utils/cn";
+import { useEffect, useMemo, useState, type HTMLAttributes } from 'react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { Text } from '../text';
+import { cn } from '../utils/cn';
 import {
   addMonths,
   getCalendarMonths,
   getMonthStart,
   isSameCalendarMonth,
   toLocalDate,
-} from "./calendar.shared";
+} from './calendar.shared';
 import type {
   BaseCalendarProps,
+  CalendarAvailability,
   CalendarDayModel,
   CalendarMonthModel,
-} from "./calendar.types";
-import { calendarComponentId } from "./calendar.types";
+  CalendarVariant,
+} from './calendar.types';
+import { calendarComponentId } from './calendar.types';
 
 export type CalendarProps = BaseCalendarProps &
-  Omit<HTMLAttributes<HTMLDivElement>, "onSelect">;
+  Omit<HTMLAttributes<HTMLDivElement>, 'onSelect'>;
 
 function CalendarDay({
   day,
   onSelect,
+  variant,
 }: {
   day: CalendarDayModel | null;
   onSelect: (day: CalendarDayModel) => void;
+  variant: CalendarVariant;
 }) {
+  const isAvailabilityVariant = variant === 'availability';
+
   if (!day) {
-    return <span aria-hidden="true" className="h-8 w-8" />;
+    return (
+      <span
+        aria-hidden="true"
+        className={isAvailabilityVariant ? 'h-[54px] w-full' : 'h-8 w-8'}
+      />
+    );
   }
+
+  const price = getPriceLabel(day.availability);
 
   return (
     <button
-      aria-current={day.isToday ? "date" : undefined}
+      aria-current={day.isToday ? 'date' : undefined}
       aria-label={day.date}
       aria-pressed={day.isSelected}
       className={cn(
-        "flex h-8 w-8 items-center justify-center rounded-md border border-transparent p-0 text-sm font-normal transition hover:no-underline",
-        day.isDisabled
-          ? "cursor-not-allowed text-gray-500 opacity-50"
-          : "cursor-pointer text-gray-700 hover:bg-gray-100",
-        day.isOutside && "text-gray-500 opacity-50",
-        day.isToday && !day.isSelected && "bg-gray-100 text-gray-900",
-        day.isSelected && "!bg-blue !text-gray-50 opacity-100",
+        isAvailabilityVariant
+          ? 'flex h-[54px] w-full flex-col items-center justify-center rounded-md border border-transparent p-0 text-lg font-medium leading-tight transition hover:no-underline'
+          : 'flex h-8 w-8 items-center justify-center rounded-md border border-transparent p-0 text-sm font-normal transition hover:no-underline',
+        isAvailabilityVariant && day.isAvailable && !day.isOutside
+          ? 'bg-[#a7f3cf] text-gray-900'
+          : null,
+        isAvailabilityVariant && (day.isDisabled || day.isOutside)
+          ? 'cursor-not-allowed bg-transparent text-gray-400'
+          : null,
+        !isAvailabilityVariant && day.isDisabled
+          ? 'cursor-not-allowed text-gray-500 opacity-50'
+          : null,
+        !isAvailabilityVariant && !day.isDisabled
+          ? 'cursor-pointer text-gray-700 hover:bg-gray-100'
+          : null,
+        !isAvailabilityVariant && day.isOutside && 'text-gray-500 opacity-50',
+        !isAvailabilityVariant &&
+          day.isToday &&
+          !day.isSelected &&
+          'bg-gray-100 text-gray-900',
+        day.isSelected &&
+          (isAvailabilityVariant
+            ? '!bg-primary !text-white opacity-100'
+            : '!bg-blue !text-gray-50 opacity-100'),
       )}
       disabled={day.isDisabled}
       type="button"
       onClick={() => onSelect(day)}
     >
       {day.day}
+      {isAvailabilityVariant && price && day.isAvailable && !day.isOutside ? (
+        <span
+          className={cn(
+            'mt-0.5 block max-w-full truncate text-[10px] font-semibold leading-none text-gray-600',
+            day.isSelected && 'text-white/80',
+          )}
+        >
+          {price}
+        </span>
+      ) : null}
     </button>
   );
+}
+
+function getPriceLabel(availability: CalendarAvailability) {
+  if (!availability || typeof availability === 'boolean') return null;
+  if (availability.price == null || availability.price === '') return null;
+
+  const price = String(availability.price).trim();
+
+  if (!price) return null;
+  if (/^[A-Z]{3}\s/i.test(price)) return price;
+
+  return `CHF ${price}`;
 }
 
 function CalendarMonth({
   month,
   onSelect,
+  variant,
 }: {
   month: CalendarMonthModel;
   onSelect: (day: CalendarDayModel) => void;
+  variant: CalendarVariant;
 }) {
+  const isAvailabilityVariant = variant === 'availability';
+
   return (
-    <section className="space-y-1">
+    <section className={cn('space-y-1', isAvailabilityVariant && 'p-1 pt-2')}>
       <div role="grid" aria-label={month.label} className="space-y-1">
         <div role="row" className="grid grid-cols-7 gap-1">
           {month.weekdayLabels.map((weekday) => (
             <Text
               as="span"
               size="xs"
-              gray
-              className="flex h-8 w-8 items-center justify-center rounded-md text-center font-normal"
+              gray={!isAvailabilityVariant}
+              className={cn(
+                'flex h-8 items-center justify-center rounded-md text-center',
+                isAvailabilityVariant
+                  ? 'w-full font-medium uppercase text-gray-900'
+                  : 'w-8 font-normal',
+              )}
               key={`${month.key}-${weekday}`}
               role="columnheader"
             >
@@ -91,7 +152,7 @@ function CalendarMonth({
                 key={day?.date ?? `${month.key}-empty-${weekIndex}-${dayIndex}`}
                 role="gridcell"
               >
-                <CalendarDay day={day} onSelect={onSelect} />
+                <CalendarDay day={day} onSelect={onSelect} variant={variant} />
               </span>
             ))}
           </div>
@@ -118,10 +179,12 @@ export function Calendar({
   selectedDate,
   selectedDay,
   showOutsideDays = true,
+  variant = 'default',
   visibleMonth,
   weekStartsOn = 1,
   ...props
 }: CalendarProps) {
+  const isAvailabilityVariant = variant === 'availability';
   const startMonth = useMemo(
     () => getMonthStart(toLocalDate(initialMonth)),
     [initialMonth],
@@ -193,15 +256,30 @@ export function Calendar({
   };
 
   return (
-    <div {...props} className={cn("w-full max-w-[360px] p-3", className)}>
-      <div className="relative flex items-center justify-center pt-1">
+    <div
+      {...props}
+      className={cn(
+        'w-full p-3',
+        isAvailabilityVariant ? 'max-w-none p-0' : 'max-w-[360px]',
+        className,
+      )}
+    >
+      <div
+        className={cn(
+          'relative flex items-center justify-center pt-1',
+          isAvailabilityVariant &&
+            'h-14 rounded-t-[10px] border border-gray-200 bg-white p-0',
+        )}
+      >
         {!hideNavigation && (
           <button
             aria-label="Previous month"
             className={cn(
-              "absolute start-1 flex h-7 w-7 items-center justify-center rounded-md border border-gray-200 bg-transparent p-0 opacity-80 transition hover:opacity-100",
+              'absolute start-1 flex h-7 w-7 items-center justify-center rounded-md border border-gray-200 bg-transparent p-0 opacity-80 transition hover:opacity-100',
+              isAvailabilityVariant &&
+                'start-0 h-full w-14 rounded-none border-0 border-e',
               !canGoPrevious &&
-                "cursor-not-allowed opacity-30 hover:opacity-30",
+                'cursor-not-allowed opacity-30 hover:opacity-30',
             )}
             disabled={!canGoPrevious}
             type="button"
@@ -210,15 +288,21 @@ export function Calendar({
             <ChevronLeft aria-hidden="true" className="h-4 w-4" />
           </button>
         )}
-        <Text as="h3" size="sm" className="font-medium text-black">
+        <Text
+          as="h3"
+          size={isAvailabilityVariant ? 'lg' : 'sm'}
+          className="font-medium text-black"
+        >
           {currentMonth?.label}
         </Text>
         {!hideNavigation && (
           <button
             aria-label="Next month"
             className={cn(
-              "absolute end-1 flex h-7 w-7 items-center justify-center rounded-md border border-gray-200 bg-transparent p-0 opacity-80 transition hover:opacity-100",
-              !canGoNext && "cursor-not-allowed opacity-30 hover:opacity-30",
+              'absolute end-1 flex h-7 w-7 items-center justify-center rounded-md border border-gray-200 bg-transparent p-0 opacity-80 transition hover:opacity-100',
+              isAvailabilityVariant &&
+                'end-0 h-full w-14 rounded-none border-0 border-s',
+              !canGoNext && 'cursor-not-allowed opacity-30 hover:opacity-30',
             )}
             disabled={!canGoNext}
             type="button"
@@ -230,7 +314,18 @@ export function Calendar({
       </div>
 
       {currentMonth && (
-        <CalendarMonth month={currentMonth} onSelect={selectDay} />
+        <div
+          className={cn(
+            isAvailabilityVariant &&
+              'rounded-b-[10px] border-x border-b border-gray-200 bg-white',
+          )}
+        >
+          <CalendarMonth
+            month={currentMonth}
+            onSelect={selectDay}
+            variant={variant}
+          />
+        </div>
       )}
     </div>
   );

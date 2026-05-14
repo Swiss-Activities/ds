@@ -5,37 +5,37 @@ import type {
   CalendarLocale,
   CalendarMonthModel,
   CalendarWeekStartsOn,
-} from "./calendar.types";
+} from './calendar.types';
 
 const defaultMonthLabels = [
-  "January",
-  "February",
-  "March",
-  "April",
-  "May",
-  "June",
-  "July",
-  "August",
-  "September",
-  "October",
-  "November",
-  "December",
+  'January',
+  'February',
+  'March',
+  'April',
+  'May',
+  'June',
+  'July',
+  'August',
+  'September',
+  'October',
+  'November',
+  'December',
 ] as const;
 
 const defaultWeekdayLabels = [
-  "Sun",
-  "Mon",
-  "Tue",
-  "Wed",
-  "Thu",
-  "Fri",
-  "Sat",
+  'Sun',
+  'Mon',
+  'Tue',
+  'Wed',
+  'Thu',
+  'Fri',
+  'Sat',
 ] as const;
 
 const isoDatePattern = /^(\d{4})-(\d{2})-(\d{2})$/;
 
 function padDatePart(value: number) {
-  return String(value).padStart(2, "0");
+  return String(value).padStart(2, '0');
 }
 
 export function toLocalDate(value?: Date | string) {
@@ -90,10 +90,10 @@ function rotateWeekdayLabels(
 
 function resolveAvailability(availability: CalendarAvailability) {
   if (availability == null) return false;
-  if (typeof availability === "boolean") return availability;
+  if (typeof availability === 'boolean') return availability;
   if (availability.disabled) return false;
   if (availability.available === false) return false;
-  if (availability.capacity === "none") return false;
+  if (availability.capacity === 'none') return false;
 
   return true;
 }
@@ -139,8 +139,8 @@ function buildCalendarMonth({
   availabilityRequired: boolean;
   locale?: CalendarLocale;
   monthDate: Date;
-  options: Required<Pick<BaseCalendarProps, "disabled" | "disablePastDates">> &
-    Pick<BaseCalendarProps, "availableDates" | "maxDate" | "minDate">;
+  options: Required<Pick<BaseCalendarProps, 'disabled' | 'disablePastDates'>> &
+    Pick<BaseCalendarProps, 'availableDates' | 'maxDate' | 'minDate'>;
   selectedDate?: string;
   showOutsideDays: boolean;
   todayKey: string;
@@ -185,6 +185,7 @@ function buildCalendarMonth({
         });
 
         days.push({
+          availability: outsideAvailability,
           date: outsideDateKey,
           day: outsideDate.getDate(),
           isAvailable:
@@ -216,6 +217,7 @@ function buildCalendarMonth({
     });
 
     days.push({
+      availability,
       date: dateKey,
       day,
       isAvailable: !availabilityRequired || resolveAvailability(availability),
@@ -226,7 +228,7 @@ function buildCalendarMonth({
     });
   }
 
-  const weeks: CalendarMonthModel["weeks"] = [];
+  const weeks: CalendarMonthModel['weeks'] = [];
 
   for (let weekIndex = 0; weekIndex < days.length; weekIndex += 7) {
     weeks.push(days.slice(weekIndex, weekIndex + 7));
