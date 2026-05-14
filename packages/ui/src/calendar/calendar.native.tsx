@@ -108,6 +108,7 @@ function CalendarDay({
       onPress={() => onSelect(day)}
     >
       <Text
+        allowFontScaling={false}
         style={{
           color: isAvailabilityVariant
             ? availabilityTextColor
@@ -121,20 +122,23 @@ function CalendarDay({
           fontFamily: isAvailabilityVariant
             ? fontFamilies.sans.native.medium
             : fontFamilies.sans.native.regular,
-          fontSize: isAvailabilityVariant ? 18 : 14,
-          lineHeight: isAvailabilityVariant ? 22 : 23,
+          fontSize: isAvailabilityVariant ? availabilityTokens.dayFontSize : 14,
+          lineHeight: isAvailabilityVariant
+            ? availabilityTokens.dayLineHeight
+            : 23,
         }}
       >
         {day.day}
       </Text>
       {isAvailabilityVariant && price && day.isAvailable && !day.isOutside ? (
         <Text
+          allowFontScaling={false}
           numberOfLines={1}
           style={{
             color: availabilityPriceColor,
             fontFamily: fontFamilies.sans.native.semibold,
-            fontSize: 10,
-            lineHeight: 13,
+            fontSize: availabilityTokens.priceFontSize,
+            lineHeight: availabilityTokens.priceLineHeight,
             marginTop: 2,
           }}
         >
@@ -176,11 +180,14 @@ function CalendarMonth({
             style={{
               alignItems: 'center',
               flex: 1,
-              height: 32,
+              height: isAvailabilityVariant
+                ? availabilityTokens.weekdayHeight
+                : 32,
               justifyContent: 'center',
             }}
           >
             <Text
+              allowFontScaling={false}
               style={{
                 color: isAvailabilityVariant
                   ? availabilityTokens.weekdayText
@@ -188,8 +195,12 @@ function CalendarMonth({
                 fontFamily: isAvailabilityVariant
                   ? fontFamilies.sans.native.medium
                   : fontFamilies.sans.native.regular,
-                fontSize: 12,
-                lineHeight: 20,
+                fontSize: isAvailabilityVariant
+                  ? availabilityTokens.weekdayFontSize
+                  : 12,
+                lineHeight: isAvailabilityVariant
+                  ? availabilityTokens.weekdayLineHeight
+                  : 20,
                 textTransform: isAvailabilityVariant ? 'uppercase' : 'none',
               }}
             >
@@ -271,7 +282,9 @@ function CalendarNavigationButton({
     >
       <Icon
         color={tokens.navigationIcon}
-        size={isAvailabilityVariant ? 24 : 16}
+        size={
+          isAvailabilityVariant ? tokens.availability.navigationIconSize : 16
+        }
       />
     </Pressable>
   );
@@ -417,11 +430,12 @@ export function Calendar({
             ) : null}
             <View style={{ alignItems: 'center', flex: 1 }}>
               <Text
+                allowFontScaling={false}
                 style={{
                   color: '#000000',
                   fontFamily: fontFamilies.sans.native.medium,
-                  fontSize: 18,
-                  lineHeight: 25,
+                  fontSize: tokens.availability.monthFontSize,
+                  lineHeight: tokens.availability.monthLineHeight,
                 }}
               >
                 {currentMonth?.label}
@@ -472,6 +486,7 @@ export function Calendar({
               </View>
             )}
             <Text
+              allowFontScaling={false}
               style={{
                 color: '#000000',
                 fontFamily: fontFamilies.sans.native.medium,

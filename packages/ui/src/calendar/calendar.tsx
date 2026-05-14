@@ -38,7 +38,7 @@ function CalendarDay({
     return (
       <span
         aria-hidden="true"
-        className={isAvailabilityVariant ? 'h-[54px] w-full' : 'h-8 w-8'}
+        className={isAvailabilityVariant ? 'h-11 w-full' : 'h-8 w-8'}
       />
     );
   }
@@ -52,7 +52,7 @@ function CalendarDay({
       aria-pressed={day.isSelected}
       className={cn(
         isAvailabilityVariant
-          ? 'flex h-[54px] w-full flex-col items-center justify-center rounded-md border border-transparent p-0 text-lg font-medium leading-tight transition hover:no-underline'
+          ? 'flex h-11 w-full flex-col items-center justify-center rounded-md border border-transparent p-0 text-base font-medium leading-tight transition hover:no-underline'
           : 'flex h-8 w-8 items-center justify-center rounded-md border border-transparent p-0 text-sm font-normal transition hover:no-underline',
         isAvailabilityVariant && day.isAvailable && !day.isOutside
           ? 'bg-[#a7f3cf] text-gray-900'
@@ -84,7 +84,7 @@ function CalendarDay({
       {isAvailabilityVariant && price && day.isAvailable && !day.isOutside ? (
         <span
           className={cn(
-            'mt-0.5 block max-w-full truncate text-[10px] font-semibold leading-none text-gray-600',
+            'mt-0.5 block max-w-full truncate text-[9px] font-semibold leading-none text-gray-600',
             day.isSelected && 'text-white/80',
           )}
         >
@@ -268,7 +268,7 @@ export function Calendar({
         className={cn(
           'relative flex items-center justify-center pt-1',
           isAvailabilityVariant &&
-            'h-14 rounded-t-[10px] border border-gray-200 bg-white p-0',
+            'h-12 rounded-t-[10px] border border-gray-200 bg-white p-0',
         )}
       >
         {!hideNavigation && (
@@ -277,7 +277,7 @@ export function Calendar({
             className={cn(
               'absolute start-1 flex h-7 w-7 items-center justify-center rounded-md border border-gray-200 bg-transparent p-0 opacity-80 transition hover:opacity-100',
               isAvailabilityVariant &&
-                'start-0 h-full w-14 rounded-none border-0 border-e',
+                'start-0 h-full w-12 rounded-none border-0 border-e',
               !canGoPrevious &&
                 'cursor-not-allowed opacity-30 hover:opacity-30',
             )}
@@ -290,7 +290,7 @@ export function Calendar({
         )}
         <Text
           as="h3"
-          size={isAvailabilityVariant ? 'lg' : 'sm'}
+          size={isAvailabilityVariant ? 'default' : 'sm'}
           className="font-medium text-black"
         >
           {currentMonth?.label}
@@ -301,7 +301,7 @@ export function Calendar({
             className={cn(
               'absolute end-1 flex h-7 w-7 items-center justify-center rounded-md border border-gray-200 bg-transparent p-0 opacity-80 transition hover:opacity-100',
               isAvailabilityVariant &&
-                'end-0 h-full w-14 rounded-none border-0 border-s',
+                'end-0 h-full w-12 rounded-none border-0 border-s',
               !canGoNext && 'cursor-not-allowed opacity-30 hover:opacity-30',
             )}
             disabled={!canGoNext}
