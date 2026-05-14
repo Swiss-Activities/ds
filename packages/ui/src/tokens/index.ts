@@ -1,10 +1,5 @@
-export * from "./animations";
-export * from "./components";
-export * from "./colors";
-export * from "./mobile";
-export * from "./motion";
-export * from "./radius";
-export * from "./screens";
-export * from "./spacing";
-export * from "./typography";
-export * from "./zIndex";
+// Back-compat shim. Tokens now live in `@swiss-activities/tokens`; this
+// barrel kept so `import ... from '@swiss-activities/ui/tokens'` keeps
+// working for existing consumers. Prefer the dedicated package for new
+// imports — it has zero React/CVA deps.
+export * from "@swiss-activities/tokens";

@@ -1,0 +1,65 @@
+{
+  "name": "@swiss-activities/tokens",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Platform-neutral design tokens (colors, spacing, typography, motion, zIndex, components, mobile aggregator). Pure TS — zero React, zero CVA, zero peer deps. Consumed by both @swiss-activities/ui (web) and the mobile-app (native).",
+  "type": "module",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "default": "./src/index.ts"
+    },
+    "./animations": {
+      "types": "./src/animations.ts",
+      "default": "./src/animations.ts"
+    },
+    "./colors": {
+      "types": "./src/colors.ts",
+      "default": "./src/colors.ts"
+    },
+    "./components": {
+      "types": "./src/components.ts",
+      "default": "./src/components.ts"
+    },
+    "./mobile": {
+      "types": "./src/mobile.ts",
+      "default": "./src/mobile.ts"
+    },
+    "./motion": {
+      "types": "./src/motion.ts",
+      "default": "./src/motion.ts"
+    },
+    "./radius": {
+      "types": "./src/radius.ts",
+      "default": "./src/radius.ts"
+    },
+    "./screens": {
+      "types": "./src/screens.ts",
+      "default": "./src/screens.ts"
+    },
+    "./spacing": {
+      "types": "./src/spacing.ts",
+      "default": "./src/spacing.ts"
+    },
+    "./typography": {
+      "types": "./src/typography.ts",
+      "default": "./src/typography.ts"
+    },
+    "./zIndex": {
+      "types": "./src/zIndex.ts",
+      "default": "./src/zIndex.ts"
+    },
+    "./tailwind": {
+      "require": "./src/tailwind.cjs",
+      "default": "./src/tailwind.cjs"
+    }
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "typescript": "~6.0.2"
+  }
+}
