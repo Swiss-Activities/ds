@@ -38,6 +38,14 @@
       "types": "./src/calendar/index.ts",
       "default": "./src/calendar/index.ts"
     },
+    "./card": {
+      "react-native": {
+        "types": "./src/card/index.native.ts",
+        "default": "./src/card/index.native.ts"
+      },
+      "types": "./src/card/index.ts",
+      "default": "./src/card/index.ts"
+    },
     "./tokens": {
       "types": "./src/tokens/index.ts",
       "default": "./src/tokens/index.ts"
