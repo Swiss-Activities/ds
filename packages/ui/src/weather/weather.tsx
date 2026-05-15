@@ -1,7 +1,6 @@
 "use client";
 
 import type { HTMLAttributes } from "react";
-import { useCallback, useEffect, useRef, useState } from "react";
 import { Button } from "../button";
 import { Card } from "../card";
 import { useHorizontalScroller } from "../horizontal-scroller/horizontal-scroller.context";
@@ -20,10 +19,9 @@ import type {
 export type WeatherProps = BaseWeatherProps &
   Omit<HTMLAttributes<HTMLDivElement>, "children" | "title">;
 
-const MIN_ITEM_WIDTH = 72;
 const BUTTON_WIDTH = 36;
-const GAP = 8;
-const EDGE_SAFETY = 1;
+const WEATHER_DAY_ITEM_CLASS_NAME =
+  "w-[calc((100%_-_1rem)/3)] xs:w-[calc((100%_-_1.5rem)/4)] sm:w-[calc((100%_-_3rem)/7)]";
 
 type WeatherColorVariant = Exclude<WeatherVariant, "compact">;
 
@@ -55,14 +53,12 @@ const styles = {
 function WeatherDayCard({
   day,
   unit,
-  width,
   variant,
   isSelected,
   onSelect,
 }: {
   day: WeatherDay;
   unit: string;
-  width?: number;
   variant: WeatherColorVariant;
   isSelected: boolean;
   onSelect?: () => void;
@@ -91,7 +87,7 @@ function WeatherDayCard({
   );
 
   const cardClasses = cn(
-    "flex flex-col items-start gap-1 rounded-lg border border-solid px-2.5 py-2",
+    "flex w-full flex-col items-start gap-1 rounded-lg border border-solid px-2.5 py-2",
     isSelected ? s.cardSelected : s.card
   );
 
@@ -101,18 +97,13 @@ function WeatherDayCard({
         variant="ghost"
         onClick={onSelect}
         className={cn(cardClasses, "cursor-pointer appearance-none text-left")}
-        style={width ? { width } : undefined}
       >
         {content}
       </Button>
     );
   }
 
-  return (
-    <div className={cardClasses} style={width ? { width } : undefined}>
-      {content}
-    </div>
-  );
+  return <div className={cardClasses}>{content}</div>;
 }
 
 function WeatherCompactDayCard({
@@ -221,29 +212,24 @@ function CompactWeather({
 }
 
 function NextButton({
-  hasOverflow,
   label,
   variant,
 }: {
-  hasOverflow: boolean;
   label?: string;
   variant: WeatherColorVariant;
 }) {
-  const { canScrollRight, scrollNext } = useHorizontalScroller();
+  const { scrollNext } = useHorizontalScroller();
   const s = styles[variant];
-
-  if (!hasOverflow) return null;
 
   return (
     <button
       type="button"
       aria-label={label}
       onClick={scrollNext}
-      tabIndex={canScrollRight ? 0 : -1}
+      tabIndex={0}
       className={cn(
         "flex shrink-0 cursor-pointer items-center justify-center self-stretch rounded-lg border border-solid px-2.5 transition",
-        s.button,
-        !canScrollRight && s.buttonInvisible
+        s.button
       )}
       style={{ width: BUTTON_WIDTH }}
     >
@@ -310,41 +296,10 @@ export function Weather({
     );
   }
 
-  const containerRef = useRef<HTMLDivElement>(null);
-  const [itemWidth, setItemWidth] = useState<number | undefined>();
-  const [hasOverflow, setHasOverflow] = useState(false);
-
-  const measure = useCallback(() => {
-    const el = containerRef.current;
-    if (!el) return;
-
-    const containerWidth = el.clientWidth;
-    const fitsAll =
-      days.length <=
-      Math.floor((containerWidth + GAP) / (MIN_ITEM_WIDTH + GAP));
-
-    setHasOverflow(!fitsAll);
-
-    const available = fitsAll
-      ? containerWidth
-      : containerWidth - BUTTON_WIDTH - GAP - EDGE_SAFETY;
-    const count = Math.max(
-      1,
-      Math.floor((available + GAP) / (MIN_ITEM_WIDTH + GAP))
-    );
-    const w = (available - (count - 1) * GAP) / count;
-    setItemWidth(Math.max(w, MIN_ITEM_WIDTH));
-  }, [days.length]);
-
-  useEffect(() => {
-    measure();
-    const observer = new ResizeObserver(measure);
-    if (containerRef.current) observer.observe(containerRef.current);
-    return () => observer.disconnect();
-  }, [measure]);
+  const showNavigation = days.length > 4;
 
   return (
-    <div ref={containerRef} className={cn(className)}>
+    <div className={cn(className)}>
       <HorizontalScrollerRoot className="flex gap-2" {...props}>
         <div className="relative flex-1 overflow-hidden">
           <ScrollBackButton label={previousLabel} variant={variant} />
@@ -352,11 +307,16 @@ export function Weather({
             {days.map((day, i) => {
               const id = day.id ?? String(i);
               return (
-                <li key={id} className="shrink-0 list-none">
+                <li
+                  key={id}
+                  className={cn(
+                    "shrink-0 list-none",
+                    WEATHER_DAY_ITEM_CLASS_NAME
+                  )}
+                >
                   <WeatherDayCard
                     day={day}
                     unit={unit}
-                    width={itemWidth}
                     variant={variant}
                     isSelected={selected === id}
                     onSelect={onSelect ? () => onSelect(id) : undefined}
@@ -366,11 +326,9 @@ export function Weather({
             })}
           </HorizontalScrollerTrack>
         </div>
-        <NextButton
-          hasOverflow={hasOverflow}
-          label={nextLabel}
-          variant={variant}
-        />
+        {showNavigation ? (
+          <NextButton label={nextLabel} variant={variant} />
+        ) : null}
       </HorizontalScrollerRoot>
     </div>
   );

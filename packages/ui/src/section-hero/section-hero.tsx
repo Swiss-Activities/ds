@@ -38,17 +38,23 @@ function SectionHeroBackLink({
   );
 }
 
-function SectionHeroTags({ tags }: { tags?: SectionHeroTag[] }) {
+function SectionHeroTags({
+  className,
+  tags,
+}: {
+  className?: string;
+  tags?: SectionHeroTag[];
+}) {
   if (!tags?.length) {
     return null;
   }
 
   return (
-    <ul className="flex flex-wrap gap-2 p-0">
+    <ul className={cn("flex flex-wrap gap-2 p-0", className)}>
       {tags.map((tag, index) => (
         <li
           key={tag.id ?? index}
-          className="m-0 flex min-h-7 list-none items-center gap-1.5 rounded-full border border-solid border-gray-200 bg-gray-50 px-2.5 py-1 text-xs font-medium text-gray-600 [&_svg]:!h-3.5 [&_svg]:!w-3.5"
+          className="m-0 flex min-h-7 list-none items-center gap-1.5 rounded-full border border-dashed border-gray-200 bg-gray-50 px-2.5 py-1 text-xs font-medium text-gray-600 [&_svg]:!h-3.5 [&_svg]:!w-3.5"
         >
           {tag.icon ? (
             <span className="flex shrink-0 text-gray-500">{tag.icon}</span>
@@ -147,24 +153,32 @@ export function SectionHero({
     return (
       <section className={cn("bg-white", className)} {...props}>
         <div className="grid min-w-0 gap-6 lg:grid-cols-7 lg:items-start lg:gap-8">
-          <div className="flex min-w-0 flex-col space-y-6 lg:col-span-5 lg:space-y-8">
+          <div className="flex min-w-0 flex-col lg:col-span-5">
             {title ? (
               <Text
                 as="h1"
                 size="2xl"
-                className="w-full max-w-3xl !text-[28px] !font-semibold !leading-tight sm:!text-[34px] lg:!text-[36px] [&_svg]:!h-6 [&_svg]:!w-6"
+                className="w-full !text-[24px] !font-semibold !leading-tight sm:!text-[30px] lg:!text-[32px] [&_svg]:!h-5 [&_svg]:!w-5"
               >
                 {title}
               </Text>
             ) : null}
             {search ? (
-              <div className="max-w-[640px] [&_[data-insights-index='search']]:max-w-none">
+              <div
+                className={cn(
+                  "max-w-[640px] [&_[data-insights-index='search']]:max-w-none",
+                  title && "mt-6"
+                )}
+              >
                 {search}
               </div>
             ) : null}
-            <SectionHeroTags tags={tags} />
+            <SectionHeroTags
+              tags={tags}
+              className={cn(search ? "mt-4" : title && "mt-6")}
+            />
             {mobileWeather ? (
-              <div className="lg:hidden">{mobileWeather}</div>
+              <div className="mt-6 lg:hidden">{mobileWeather}</div>
             ) : null}
           </div>
           {desktopWeather ? (

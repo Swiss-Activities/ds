@@ -87,9 +87,7 @@ function FilterGroupContent({
       maxVisible={maxVisible}
       lessLabel={lessLabel}
       moreLabel={moreLabel}
-      onItemToggle={(id, nextValue) =>
-        onItemToggle?.(group, id, nextValue)
-      }
+      onItemToggle={(id, nextValue) => onItemToggle?.(group, id, nextValue)}
     />
   );
 }
@@ -284,7 +282,9 @@ export function SectionFilters({
         .map((group) => [group.param, group])
     );
   }, [filterGroups]);
-  const configuredQuickItems = items.filter((item) => item.kind !== "removable");
+  const configuredQuickItems = items.filter(
+    (item) => item.kind !== "removable"
+  );
   const quickItems =
     configuredQuickItems.length > 0
       ? configuredQuickItems
@@ -295,8 +295,9 @@ export function SectionFilters({
           param: group.param,
         }));
   const removableItems = items.filter((item) => item.kind === "removable");
-  const activeQuickFilterGroup =
-    activeQuickFilterGroupId ? groupsById.get(activeQuickFilterGroupId) : null;
+  const activeQuickFilterGroup = activeQuickFilterGroupId
+    ? groupsById.get(activeQuickFilterGroupId)
+    : null;
   const resolvedDrawerContent =
     drawerContent ??
     (filterGroups.length > 0 ? (
@@ -328,38 +329,40 @@ export function SectionFilters({
   return (
     <>
       <section className={cn(className)} {...props}>
-        <HorizontalScrollerRoot>
-          <HorizontalScrollerTrack className="py-4">
-            <li className="shrink-0 list-none">
-              <Button
-                type="pill"
-                text={filterButtonLabel}
-                icon={<Icon icon={Filter} size="xs" />}
-                className="!min-h-[36px] shrink-0 whitespace-nowrap !bg-white lg:hover:!border-blue lg:hover:!bg-white lg:hover:!text-blue"
-                onClick={() => setPresented(true)}
-              />
-            </li>
-            {[...quickItems, ...removableItems].map((item) => (
-              <li key={item.id} className="shrink-0 list-none">
-                <QuickFilterItem
-                  item={item}
-                  group={getItemGroup(item, groupsById, groupsByParam)}
-                  isDesktop={aboveDesktopDrawerBreakpoint}
-                  lessLabel={filterGroupLessLabel}
-                  moreLabel={filterGroupMoreLabel}
-                  onItemClick={onItemClick}
-                  onItemToggle={onFilterGroupItemToggle}
-                  onOpenGroup={(group) => {
-                    setActiveQuickFilterGroupId(group.id);
-                    setQuickFilterPresented(true);
-                  }}
+        <div className="pb-4 pt-8">
+          <HorizontalScrollerRoot>
+            <HorizontalScrollerTrack className="-my-2 py-2">
+              <li className="shrink-0 list-none">
+                <Button
+                  type="pill"
+                  text={filterButtonLabel}
+                  icon={<Icon icon={Filter} size="xs" />}
+                  className="!min-h-[36px] shrink-0 whitespace-nowrap !bg-white lg:hover:!border-blue lg:hover:!bg-white lg:hover:!text-blue"
+                  onClick={() => setPresented(true)}
                 />
               </li>
-            ))}
-          </HorizontalScrollerTrack>
-          <HorizontalScrollerPrev variant="white" />
-          <HorizontalScrollerNext variant="white" />
-        </HorizontalScrollerRoot>
+              {[...quickItems, ...removableItems].map((item) => (
+                <li key={item.id} className="shrink-0 list-none">
+                  <QuickFilterItem
+                    item={item}
+                    group={getItemGroup(item, groupsById, groupsByParam)}
+                    isDesktop={aboveDesktopDrawerBreakpoint}
+                    lessLabel={filterGroupLessLabel}
+                    moreLabel={filterGroupMoreLabel}
+                    onItemClick={onItemClick}
+                    onItemToggle={onFilterGroupItemToggle}
+                    onOpenGroup={(group) => {
+                      setActiveQuickFilterGroupId(group.id);
+                      setQuickFilterPresented(true);
+                    }}
+                  />
+                </li>
+              ))}
+            </HorizontalScrollerTrack>
+            <HorizontalScrollerPrev variant="white" />
+            <HorizontalScrollerNext variant="white" />
+          </HorizontalScrollerRoot>
+        </div>
       </section>
 
       <Sheet.Root presented={presented} onPresentedChange={setPresented}>
