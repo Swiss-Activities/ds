@@ -281,7 +281,7 @@ function TourismRegionSidebarItem({
 }) {
   const disabled = !item || item.disabled;
   const className = cn(
-    "flex w-full items-center justify-between gap-2 rounded-lg px-2.5 py-1.5 text-left text-xs no-underline transition",
+    "flex h-full min-h-0 w-full items-center justify-between gap-2 overflow-hidden rounded-md px-3 text-left text-xs no-underline transition",
     disabled
       ? "pointer-events-none opacity-40"
       : "cursor-pointer hover:bg-primary/10 hover:text-primary focus-visible:bg-primary/10 focus-visible:text-primary",
@@ -372,7 +372,7 @@ function RegionExplorerTourismMap({
   const tooltipItem = focusedItem ?? activeItem;
 
   return (
-    <div className="relative rounded-3xl border border-solid border-gray-200 bg-gradient-to-br from-white to-gray-50 p-6 lg:p-10">
+    <div className="relative rounded-3xl border border-solid border-gray-200 bg-gradient-to-br from-white to-gray-50 p-6 lg:p-10 xl:p-2">
       {tooltipItem ? (
         <Card className="pointer-events-none absolute right-6 top-6 z-10 min-w-44 transition xl:hidden">
           <Text
@@ -397,44 +397,46 @@ function RegionExplorerTourismMap({
           ) : null}
         </Card>
       ) : null}
-      <div className="grid gap-5 xl:grid-cols-[minmax(0,1fr)_240px] xl:items-stretch">
-        <svg
-          aria-label="Geographic map of Switzerland with tourism regions"
-          className="h-auto max-h-[450px] w-full"
-          role="img"
-          viewBox="0 0 1224 783"
-        >
-          <title>Switzerland tourism regions</title>
-          {tourismRegionDefinitions.map((definition) => {
-            const item = itemsByRegionId.get(definition.id);
-            const active = item
-              ? isActive(item, activeItemId) ||
-                focusedRegionId === definition.id
-              : focusedRegionId === definition.id;
-            const path = tourismRegionPathById.get(definition.id);
+      <div className="grid gap-5 xl:grid-cols-[minmax(0,1fr)_300px] xl:items-stretch xl:gap-2">
+        <div className="min-w-0 xl:flex xl:items-center xl:p-8">
+          <svg
+            aria-label="Geographic map of Switzerland with tourism regions"
+            className="h-auto max-h-[450px] w-full"
+            role="img"
+            viewBox="0 0 1224 783"
+          >
+            <title>Switzerland tourism regions</title>
+            {tourismRegionDefinitions.map((definition) => {
+              const item = itemsByRegionId.get(definition.id);
+              const active = item
+                ? isActive(item, activeItemId) ||
+                  focusedRegionId === definition.id
+                : focusedRegionId === definition.id;
+              const path = tourismRegionPathById.get(definition.id);
 
-            if (!path) {
-              return null;
-            }
+              if (!path) {
+                return null;
+              }
 
-            return (
-              <TourismRegionMapLink
-                active={active}
-                definition={definition}
-                item={item}
-                key={definition.id}
-                onBlur={() => setFocusedRegionId(null)}
-                onFocus={() => setFocusedRegionId(definition.id)}
-                onItemClick={onItemClick}
-                onMouseEnter={() => setFocusedRegionId(definition.id)}
-                onMouseLeave={() => setFocusedRegionId(null)}
-                path={path}
-              />
-            );
-          })}
-        </svg>
-        <aside className="hidden h-full rounded-2xl bg-white/75 p-2 shadow-sm ring-1 ring-gray-200 xl:flex xl:flex-col">
-          <div className="grid flex-1 content-evenly gap-0.5">
+              return (
+                <TourismRegionMapLink
+                  active={active}
+                  definition={definition}
+                  item={item}
+                  key={definition.id}
+                  onBlur={() => setFocusedRegionId(null)}
+                  onFocus={() => setFocusedRegionId(definition.id)}
+                  onItemClick={onItemClick}
+                  onMouseEnter={() => setFocusedRegionId(definition.id)}
+                  onMouseLeave={() => setFocusedRegionId(null)}
+                  path={path}
+                />
+              );
+            })}
+          </svg>
+        </div>
+        <aside className="hidden h-full min-h-[450px] overflow-hidden rounded-2xl bg-white/75 p-2 shadow-sm ring-1 ring-gray-200 xl:flex xl:flex-col">
+          <div className="grid flex-1 grid-rows-[repeat(13,minmax(0,1fr))] gap-1">
             {tourismRegionDefinitions.map((definition) => {
               const item = itemsByRegionId.get(definition.id);
               const active = item
