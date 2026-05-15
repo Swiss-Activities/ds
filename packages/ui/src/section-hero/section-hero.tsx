@@ -167,7 +167,7 @@ export function SectionHero({
               <div
                 className={cn(
                   "max-w-[640px] [&_[data-insights-index='search']]:max-w-none",
-                  title && "mt-6"
+                  title && "mt-6 lg:mt-8"
                 )}
               >
                 {search}
