@@ -13,6 +13,7 @@ import { cn } from "../utils/cn";
 import { regionMapPaths } from "./region-explorer.map";
 import { tourismRegionDefinitions } from "./region-explorer.regions";
 import type { TourismRegionDefinition } from "./region-explorer.regions";
+import { tourismRegionMapPaths } from "./region-explorer.tourism-map";
 import type {
   BaseRegionExplorerProps,
   RegionExplorerItem,
@@ -88,6 +89,10 @@ const mapToneClassName: Record<RegionExplorerTone, string> = {
 
 const mapPathsByCode = new Map<string, string>(
   regionMapPaths.map((region) => [region.code, region.path])
+);
+
+const tourismRegionPathById = new Map<string, string>(
+  tourismRegionMapPaths.map((region) => [region.id, region.path])
 );
 
 function getListItemStyle(item: RegionExplorerItem): CSSProperties | undefined {
@@ -185,7 +190,7 @@ function TourismRegionMapLink({
   onItemClick,
   onMouseEnter,
   onMouseLeave,
-  paths,
+  path,
 }: {
   active: boolean;
   definition: TourismRegionDefinition;
@@ -195,21 +200,19 @@ function TourismRegionMapLink({
   onItemClick?: RegionExplorerProps["onItemClick"];
   onMouseEnter: () => void;
   onMouseLeave: () => void;
-  paths: string[];
+  path: string;
 }) {
   const disabled = !item || item.disabled;
   const ariaLabel = item ? getItemAriaLabel(item) : definition.label;
+  const tone = getItemTone(item);
   const pathClassName = cn(
     "stroke-white stroke-2 transition duration-200 ease-in [stroke-linejoin:round]",
-    item ? mapToneClassName[getItemTone(item)] : "fill-gray-200",
+    item ? mapToneClassName[tone] : "fill-gray-200",
     disabled
       ? "opacity-35"
       : "cursor-pointer group-hover:fill-primary/85 group-focus-visible:fill-primary/85",
     active && "fill-primary"
   );
-  const pathElements = paths.map((path) => (
-    <path d={path} className={pathClassName} key={path} />
-  ));
   const handleClick = () => {
     if (item && !disabled) {
       onItemClick?.(item);
@@ -237,7 +240,7 @@ function TourismRegionMapLink({
         onMouseEnter={onMouseEnter}
         onMouseLeave={onMouseLeave}
       >
-        {pathElements}
+        <path d={path} className={pathClassName} />
       </a>
     );
   }
@@ -256,7 +259,7 @@ function TourismRegionMapLink({
       role={item && !disabled ? "button" : "img"}
       tabIndex={item && !disabled ? 0 : -1}
     >
-      {pathElements}
+      <path d={path} className={pathClassName} />
     </g>
   );
 }
@@ -322,11 +325,9 @@ function RegionExplorerTourismMap({
         {tourismRegionDefinitions.map((definition) => {
           const item = itemsByRegionId.get(definition.id);
           const active = item ? isActive(item, activeItemId) : false;
-          const paths = definition.cantons
-            .map((canton) => mapPathsByCode.get(canton))
-            .filter(Boolean) as string[];
+          const path = tourismRegionPathById.get(definition.id);
 
-          if (!paths.length) {
+          if (!path) {
             return null;
           }
 
@@ -341,7 +342,7 @@ function RegionExplorerTourismMap({
               onItemClick={onItemClick}
               onMouseEnter={() => setFocusedRegionId(definition.id)}
               onMouseLeave={() => setFocusedRegionId(null)}
-              paths={paths}
+              path={path}
             />
           );
         })}
