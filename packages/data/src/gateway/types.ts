@@ -63,11 +63,18 @@ export type TGatewayIcon = {
   name: TGatewayLucideIconName;
 };
 
+export type TGatewaySectionAlternate = {
+  id: string;
+  title: string;
+  pillarSlug?: string | null;
+};
+
 export type TGatewayHomeCarouselSection = {
   id: string;
   component: "carousel";
   title: string;
   pillarSlug?: string | null;
+  alternates?: TGatewaySectionAlternate[];
   data: TGatewayHomeItem[];
 };
 
@@ -90,6 +97,7 @@ export type TGatewayActivityGridSection = {
   component: "activity_grid";
   title: string;
   pillarSlug?: string | null;
+  alternates?: TGatewaySectionAlternate[];
   data: Array<TGatewayActivityCardItem & { type: "activity" }>;
   meta: {
     pagination: {
