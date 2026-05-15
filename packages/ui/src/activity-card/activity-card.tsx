@@ -46,6 +46,30 @@ function ActivityCardMetaLine({ icon, label }: ActivityCardMetaItem) {
   );
 }
 
+function ActivityCardInlineDistance({
+  label,
+}: {
+  label: ActivityCardMetaItem["label"];
+}) {
+  if (!hasContent(label)) {
+    return null;
+  }
+
+  return (
+    <Text
+      as="span"
+      size="xs"
+      gray
+      className="flex min-w-0 items-center gap-1.5 font-medium !leading-none"
+    >
+      <span className="flex shrink-0 text-gray-400">
+        <Icon icon={MapPin} size="sm" />
+      </span>
+      <span className="min-w-0 truncate">{label}</span>
+    </Text>
+  );
+}
+
 function ActivityCardImageFallback() {
   return (
     <div className="flex h-full w-full items-center justify-center bg-gray-100 text-gray-400">
@@ -124,7 +148,9 @@ export function ActivityCard({
   const shouldUseImageFill = !isBookable && Boolean(imageSource);
   const showImageFallback = imageFailed || !image;
   const showImageSkeleton = Boolean(imageSource) && !showImageFallback;
-  const metaItems =
+  const shouldPairDistanceWithRating =
+    normalizedScore > 0 && hasContent(distance);
+  const resolvedMetaItems =
     meta ??
     getDefaultMeta({
       type,
@@ -133,6 +159,9 @@ export function ActivityCard({
       dateRange,
       distance,
     });
+  const metaItems = shouldPairDistanceWithRating
+    ? resolvedMetaItems.filter((item) => item.label !== distance)
+    : resolvedMetaItems;
 
   useEffect(() => {
     setImageFailed(false);
@@ -205,14 +234,25 @@ export function ActivityCard({
             ))}
           </div>
         ) : null}
-        {normalizedScore > 0 && (
-          <Rating
-            score={normalizedScore}
-            count={reviewCount ?? undefined}
-            size="sm"
-            className="mt-1"
-          />
-        )}
+        {normalizedScore > 0 ? (
+          shouldPairDistanceWithRating ? (
+            <div className="mt-1.5 flex min-w-0 flex-wrap items-center gap-x-3 gap-y-1">
+              <Rating
+                score={normalizedScore}
+                count={reviewCount ?? undefined}
+                size="sm"
+              />
+              <ActivityCardInlineDistance label={distance} />
+            </div>
+          ) : (
+            <Rating
+              score={normalizedScore}
+              count={reviewCount ?? undefined}
+              size="sm"
+              className="mt-1"
+            />
+          )
+        ) : null}
         {hasPricingFooter ? (
           <div className="mt-auto">
             <div className="-mx-3.5 mb-3 mt-2 h-px bg-gray-200" />
