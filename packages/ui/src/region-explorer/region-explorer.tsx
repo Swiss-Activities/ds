@@ -397,7 +397,7 @@ function RegionExplorerTourismMap({
           ) : null}
         </Card>
       ) : null}
-      <div className="grid gap-5 xl:grid-cols-[minmax(0,1fr)_240px] xl:items-center">
+      <div className="grid gap-5 xl:grid-cols-[minmax(0,1fr)_240px] xl:items-stretch">
         <svg
           aria-label="Geographic map of Switzerland with tourism regions"
           className="h-auto max-h-[450px] w-full"
@@ -433,8 +433,8 @@ function RegionExplorerTourismMap({
             );
           })}
         </svg>
-        <aside className="hidden rounded-2xl bg-white/75 p-2 shadow-sm ring-1 ring-gray-200 xl:block">
-          <div className="grid gap-1">
+        <aside className="hidden h-full rounded-2xl bg-white/75 p-2 shadow-sm ring-1 ring-gray-200 xl:flex xl:flex-col">
+          <div className="grid flex-1 content-evenly gap-0.5">
             {tourismRegionDefinitions.map((definition) => {
               const item = itemsByRegionId.get(definition.id);
               const active = item
