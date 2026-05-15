@@ -156,13 +156,13 @@ function CompactWeather({
   }
 
   return (
-    <Card className={cn("!p-4", className)} {...props}>
+    <Card className={cn("!p-5", className)} {...props}>
       <div className="flex items-center gap-3">
         <div className="flex shrink-0 items-center justify-center [&_svg]:!h-12 [&_svg]:!w-12">
           {currentDay.icon}
         </div>
         <div className="min-w-0">
-          <Text as="p" size="xl" bold className="!leading-none !text-gray-900">
+          <Text as="p" size="lg" bold black className="!leading-none">
             {currentDay.high}
             {unit}
           </Text>
@@ -173,7 +173,8 @@ function CompactWeather({
                   as="span"
                   size="sm"
                   bold
-                  className="shrink-0 truncate !text-gray-900"
+                  black
+                  className="shrink-0 truncate"
                 >
                   {title}
                 </Text>
@@ -191,7 +192,7 @@ function CompactWeather({
           ) : null}
         </div>
       </div>
-      <div className="mt-4 pt-3">
+      <div className="mt-3 pt-1">
         <div className="grid grid-cols-7 gap-1">
           {days.slice(0, 7).map((day, index) => {
             const id = day.id ?? String(index);
