@@ -48,6 +48,8 @@ export function SectionHero({
   unit,
   weatherDescription: _weatherDescription,
   weatherTitle: _weatherTitle,
+  weatherPreviousLabel: _weatherPreviousLabel,
+  weatherNextLabel: _weatherNextLabel,
   selected,
   onSelect,
   tags,

@@ -17,6 +17,8 @@ export type BaseWeatherProps = {
   title?: string;
   unit?: string;
   variant?: WeatherVariant;
+  previousLabel?: string;
+  nextLabel?: string;
   selected?: string;
   onSelect?: (id: string) => void;
   className?: string;

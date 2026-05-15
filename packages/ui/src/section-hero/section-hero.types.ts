@@ -20,6 +20,8 @@ export type BaseSectionHeroProps = {
   unit?: string;
   weatherDescription?: string;
   weatherTitle?: string;
+  weatherPreviousLabel?: string;
+  weatherNextLabel?: string;
   selected?: string;
   onSelect?: (id: string) => void;
   tags?: SectionHeroTag[];

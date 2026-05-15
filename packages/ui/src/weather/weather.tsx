@@ -44,7 +44,7 @@ const styles = {
     cardSelected: "border-primary bg-white",
     label: "!text-gray-900",
     icon: "text-gray-700",
-    low: "!text-gray-400",
+    low: "!text-gray-500",
     high: "!text-gray-900",
     button: "border-gray-200 bg-white text-gray-500 hover:bg-gray-50",
     buttonInvisible: "pointer-events-none invisible",
@@ -142,7 +142,7 @@ function WeatherCompactDayCard({
         {day.high}
         {unit}
       </Text>
-      <Text as="span" size="xs" className="!text-gray-400">
+      <Text as="span" size="xs" className="!text-gray-500">
         {day.low}
         {unit}
       </Text>
@@ -222,9 +222,11 @@ function CompactWeather({
 
 function NextButton({
   hasOverflow,
+  label,
   variant,
 }: {
   hasOverflow: boolean;
+  label?: string;
   variant: WeatherColorVariant;
 }) {
   const { canScrollRight, scrollNext } = useHorizontalScroller();
@@ -234,6 +236,8 @@ function NextButton({
 
   return (
     <button
+      type="button"
+      aria-label={label}
       onClick={scrollNext}
       tabIndex={canScrollRight ? 0 : -1}
       className={cn(
@@ -248,13 +252,20 @@ function NextButton({
   );
 }
 
-function ScrollBackButton({ variant }: { variant: WeatherColorVariant }) {
+function ScrollBackButton({
+  label,
+  variant,
+}: {
+  label?: string;
+  variant: WeatherColorVariant;
+}) {
   const { canScrollLeft, scrollPrev } = useHorizontalScroller();
   const s = styles[variant];
 
   return (
     <button
       type="button"
+      aria-label={label}
       onClick={scrollPrev}
       tabIndex={canScrollLeft ? 0 : -1}
       className={cn(
@@ -278,6 +289,8 @@ export function Weather({
   title,
   unit = "°",
   variant = "dark",
+  previousLabel,
+  nextLabel,
   selected,
   onSelect,
   className,
@@ -334,7 +347,7 @@ export function Weather({
     <div ref={containerRef} className={cn(className)}>
       <HorizontalScrollerRoot className="flex gap-2" {...props}>
         <div className="relative flex-1 overflow-hidden">
-          <ScrollBackButton variant={variant} />
+          <ScrollBackButton label={previousLabel} variant={variant} />
           <HorizontalScrollerTrack className="gap-2">
             {days.map((day, i) => {
               const id = day.id ?? String(i);
@@ -353,7 +366,11 @@ export function Weather({
             })}
           </HorizontalScrollerTrack>
         </div>
-        <NextButton hasOverflow={hasOverflow} variant={variant} />
+        <NextButton
+          hasOverflow={hasOverflow}
+          label={nextLabel}
+          variant={variant}
+        />
       </HorizontalScrollerRoot>
     </div>
   );

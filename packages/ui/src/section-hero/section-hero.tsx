@@ -70,6 +70,8 @@ export function SectionHero({
   unit,
   weatherDescription,
   weatherTitle,
+  weatherPreviousLabel,
+  weatherNextLabel,
   selected,
   onSelect,
   tags,
@@ -125,6 +127,8 @@ export function SectionHero({
         days={days ?? []}
         unit={unit}
         variant="light"
+        previousLabel={weatherPreviousLabel}
+        nextLabel={weatherNextLabel}
         selected={selected}
         onSelect={onSelect}
       />
