@@ -67,6 +67,7 @@ export type TGatewayHomeCarouselSection = {
   id: string;
   component: "carousel";
   title: string;
+  pillarSlug?: string | null;
   data: TGatewayHomeItem[];
 };
 
@@ -88,6 +89,7 @@ export type TGatewayActivityGridSection = {
   id: string;
   component: "activity_grid";
   title: string;
+  pillarSlug?: string | null;
   data: Array<TGatewayActivityCardItem & { type: "activity" }>;
   meta: {
     pagination: {
