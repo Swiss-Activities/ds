@@ -61,7 +61,7 @@ export function SectionHero({
   className,
   ...props
 }: SectionHeroProps) {
-  if (variant === "centered_title") {
+  if (variant === "centered_title" || variant === "image_summary") {
     return (
       <View
         className={cn("relative h-[220px] overflow-hidden bg-blue", className)}

@@ -89,6 +89,76 @@ export function SectionHero({
   className,
   ...props
 }: SectionHeroProps) {
+  if (variant === "image_summary") {
+    const hasWeather = Boolean(days?.length);
+    const mobileWeather = hasWeather ? (
+      <Weather
+        days={days ?? []}
+        unit={unit}
+        variant="dark"
+        previousLabel={weatherPreviousLabel}
+        nextLabel={weatherNextLabel}
+        selected={selected}
+        onSelect={onSelect}
+      />
+    ) : null;
+    const desktopWeather = hasWeather ? (
+      <Weather
+        days={days ?? []}
+        description={weatherDescription}
+        title={weatherTitle}
+        unit={unit}
+        variant="compact"
+        selected={selected}
+      />
+    ) : null;
+
+    return (
+      <section className={cn(className)} {...props}>
+        <div className="relative overflow-hidden bg-blue lg:rounded-lg">
+          <div className="relative min-h-[200px] overflow-hidden sm:min-h-[252px] lg:min-h-[360px]">
+            <div className="absolute inset-0 [&_img]:absolute [&_img]:inset-0 [&_img]:h-full [&_img]:w-full [&_img]:object-cover">
+              {renderImageValue(image)}
+            </div>
+            <div className="absolute inset-0 bg-blue/35" />
+            <div className="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-2/3 bg-gradient-to-t from-blue/85 to-transparent" />
+            {backLabel ? (
+              <div className="pointer-events-none absolute inset-x-0 top-0 z-20 h-20 bg-gradient-to-b from-blue/50 to-transparent" />
+            ) : null}
+            {backLabel ? (
+              <div className="absolute left-3 top-3 z-30">
+                <SectionHeroBackLink label={backLabel} onClick={onBack} />
+              </div>
+            ) : null}
+            <div className="relative z-20 grid min-h-[200px] items-center gap-6 px-4 py-8 text-center sm:min-h-[252px] sm:px-6 lg:min-h-[360px] lg:grid-cols-7 lg:px-10 lg:py-12 lg:text-left xl:px-12">
+              <div className="flex min-w-0 flex-col items-center lg:col-span-5 lg:items-start">
+                {title ? (
+                  <Text
+                    as="h1"
+                    size="2xl"
+                    className="max-w-4xl !text-white drop-shadow-sm"
+                  >
+                    {title}
+                  </Text>
+                ) : null}
+              </div>
+              {desktopWeather ? (
+                <div className="hidden lg:col-span-2 lg:block">
+                  {desktopWeather}
+                </div>
+              ) : null}
+            </div>
+          </div>
+          {mobileWeather ? (
+            <div className="px-4 pb-4 sm:px-6 sm:pb-6 lg:hidden">
+              {mobileWeather}
+            </div>
+          ) : null}
+        </div>
+      </section>
+    );
+  }
+
   if (variant === "centered_title") {
     return (
       <section className={cn(className)} {...props}>

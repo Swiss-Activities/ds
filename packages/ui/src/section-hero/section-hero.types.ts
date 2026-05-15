@@ -2,7 +2,11 @@ import type { ReactNode } from "react";
 import type { HeroTab, HeroVariant } from "../hero/hero.types";
 import type { WeatherDay } from "../weather/weather.types";
 
-export type SectionHeroVariant = HeroVariant | "summary" | "centered_title";
+export type SectionHeroVariant =
+  | HeroVariant
+  | "summary"
+  | "centered_title"
+  | "image_summary";
 
 export type SectionHeroTag = {
   id?: string;
