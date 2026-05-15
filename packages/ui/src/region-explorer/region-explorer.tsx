@@ -185,7 +185,7 @@ function TourismRegionMapLink({
   onItemClick,
   onMouseEnter,
   onMouseLeave,
-  paths,
+  path,
 }: {
   active: boolean;
   definition: TourismRegionDefinition;
@@ -195,21 +195,18 @@ function TourismRegionMapLink({
   onItemClick?: RegionExplorerProps["onItemClick"];
   onMouseEnter: () => void;
   onMouseLeave: () => void;
-  paths: string[];
+  path: string;
 }) {
   const disabled = !item || item.disabled;
   const ariaLabel = item ? getItemAriaLabel(item) : definition.label;
   const pathClassName = cn(
-    "stroke-white stroke-2 transition duration-200 ease-in [stroke-linejoin:round]",
+    "transition duration-200 ease-in",
     item ? mapToneClassName[getItemTone(item)] : "fill-gray-200",
     disabled
       ? "opacity-35"
       : "cursor-pointer group-hover:fill-primary/85 group-focus-visible:fill-primary/85",
     active && "fill-primary"
   );
-  const pathElements = paths.map((path) => (
-    <path d={path} className={pathClassName} key={path} />
-  ));
   const handleClick = () => {
     if (item && !disabled) {
       onItemClick?.(item);
@@ -237,7 +234,7 @@ function TourismRegionMapLink({
         onMouseEnter={onMouseEnter}
         onMouseLeave={onMouseLeave}
       >
-        {pathElements}
+        <path d={path} className={pathClassName} />
       </a>
     );
   }
@@ -256,7 +253,7 @@ function TourismRegionMapLink({
       role={item && !disabled ? "button" : "img"}
       tabIndex={item && !disabled ? 0 : -1}
     >
-      {pathElements}
+      <path d={path} className={pathClassName} />
     </g>
   );
 }
@@ -325,6 +322,7 @@ function RegionExplorerTourismMap({
           const paths = definition.cantons
             .map((canton) => mapPathsByCode.get(canton))
             .filter(Boolean) as string[];
+          const path = paths.join(" ");
 
           if (!paths.length) {
             return null;
@@ -341,7 +339,7 @@ function RegionExplorerTourismMap({
               onItemClick={onItemClick}
               onMouseEnter={() => setFocusedRegionId(definition.id)}
               onMouseLeave={() => setFocusedRegionId(null)}
-              paths={paths}
+              path={path}
             />
           );
         })}
