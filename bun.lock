@@ -109,12 +109,20 @@
       "name": "@swiss-activities/dummy-data",
       "version": "0.1.0",
     },
+    "packages/tokens": {
+      "name": "@swiss-activities/tokens",
+      "version": "0.1.0",
+      "devDependencies": {
+        "typescript": "~6.0.2",
+      },
+    },
     "packages/ui": {
       "name": "@swiss-activities/ui",
       "version": "0.1.0",
       "dependencies": {
         "@base-ui/react": "^1.4.1",
         "@silk-hq/components": "^0.10.0",
+        "@swiss-activities/tokens": "*",
         "class-variance-authority": "^0.7.1",
         "clsx": "^2.1.1",
         "lucide-react": "^0.542.0",
@@ -761,6 +769,8 @@
     "@swiss-activities/storybook-native": ["@swiss-activities/storybook-native@workspace:apps/storybook-native"],
 
     "@swiss-activities/storybook-web": ["@swiss-activities/storybook-web@workspace:apps/storybook-web"],
+
+    "@swiss-activities/tokens": ["@swiss-activities/tokens@workspace:packages/tokens"],
 
     "@swiss-activities/ui": ["@swiss-activities/ui@workspace:packages/ui"],
 

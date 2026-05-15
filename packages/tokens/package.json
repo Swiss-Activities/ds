@@ -1,0 +1,37 @@
+{
+  "name": "@swiss-activities/tokens",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Platform-neutral SwissActivities design tokens.",
+  "type": "module",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "default": "./src/index.ts"
+    },
+    "./animations": {
+      "types": "./src/animations.ts",
+      "default": "./src/animations.ts"
+    },
+    "./colors": {
+      "types": "./src/colors.ts",
+      "default": "./src/colors.ts"
+    },
+    "./radius": {
+      "types": "./src/radius.ts",
+      "default": "./src/radius.ts"
+    },
+    "./screens": {
+      "types": "./src/screens.ts",
+      "default": "./src/screens.ts"
+    }
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "typescript": "~6.0.2"
+  }
+}
