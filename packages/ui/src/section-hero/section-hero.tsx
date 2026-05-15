@@ -136,7 +136,7 @@ export function SectionHero({
                   <Text
                     as="h1"
                     size="2xl"
-                    className="max-w-4xl !text-white drop-shadow-sm"
+                    className="max-w-4xl text-balance !text-white drop-shadow-sm"
                   >
                     {title}
                   </Text>
@@ -181,7 +181,11 @@ export function SectionHero({
             {title || search ? (
               <div className="flex w-full max-w-3xl flex-col items-center gap-5">
                 {title ? (
-                  <Text as="h1" size="2xl" className="max-w-4xl !text-white">
+                  <Text
+                    as="h1"
+                    size="2xl"
+                    className="max-w-4xl text-balance !text-white"
+                  >
                     {title}
                   </Text>
                 ) : null}
@@ -228,7 +232,7 @@ export function SectionHero({
               <Text
                 as="h1"
                 size="2xl"
-                className="w-full !text-[24px] !font-semibold !leading-tight sm:!text-[30px] lg:!text-[32px] [&_svg]:!h-5 [&_svg]:!w-5"
+                className="w-full text-balance !text-[24px] !font-semibold !leading-tight sm:!text-[30px] lg:!text-[32px] [&_svg]:!h-5 [&_svg]:!w-5"
               >
                 {title}
               </Text>
