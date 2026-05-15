@@ -232,7 +232,7 @@ export function SectionHero({
               <Text
                 as="h1"
                 size="2xl"
-                className="w-full text-balance !text-[24px] !font-semibold !leading-tight sm:!text-[30px] lg:!text-[32px] [&_svg]:!h-5 [&_svg]:!w-5"
+                className="w-full text-balance !text-[24px] !font-semibold !leading-tight !text-black sm:!text-[30px] lg:!text-[32px] [&_svg]:!h-5 [&_svg]:!w-5"
               >
                 {title}
               </Text>
