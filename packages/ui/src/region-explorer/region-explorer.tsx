@@ -264,6 +264,88 @@ function TourismRegionMapLink({
   );
 }
 
+function TourismRegionSidebarItem({
+  active,
+  definition,
+  item,
+  onItemClick,
+  onRegionBlur,
+  onRegionFocus,
+}: {
+  active: boolean;
+  definition: TourismRegionDefinition;
+  item?: RegionExplorerItem;
+  onItemClick?: RegionExplorerProps["onItemClick"];
+  onRegionBlur: () => void;
+  onRegionFocus: () => void;
+}) {
+  const disabled = !item || item.disabled;
+  const className = cn(
+    "flex w-full items-center justify-between gap-2 rounded-lg px-2.5 py-1.5 text-left text-xs no-underline transition",
+    disabled
+      ? "pointer-events-none opacity-40"
+      : "cursor-pointer hover:bg-primary/10 hover:text-primary focus-visible:bg-primary/10 focus-visible:text-primary",
+    active
+      ? "bg-primary text-white hover:bg-primary hover:text-white"
+      : "text-gray-700"
+  );
+  const content = (
+    <>
+      <span className="min-w-0 truncate font-medium">
+        {item ? getItemName(item) : definition.label}
+      </span>
+      {item?.count !== undefined && item.count !== null ? (
+        <span
+          className={cn(
+            "shrink-0 rounded-full px-1.5 py-0.5 text-[10px] font-semibold leading-none",
+            active ? "bg-white/20 text-white" : "bg-gray-100 text-gray-500"
+          )}
+        >
+          {item.count}
+        </span>
+      ) : null}
+    </>
+  );
+  const handleClick = () => {
+    if (item && !disabled) {
+      onItemClick?.(item);
+    }
+  };
+
+  if (item?.href && !disabled) {
+    return (
+      <a
+        aria-current={active ? "true" : undefined}
+        className={className}
+        href={item.href}
+        onBlur={onRegionBlur}
+        onClick={handleClick}
+        onFocus={onRegionFocus}
+        onMouseEnter={onRegionFocus}
+        onMouseLeave={onRegionBlur}
+      >
+        {content}
+      </a>
+    );
+  }
+
+  return (
+    <button
+      aria-pressed={item ? active : undefined}
+      className={className}
+      disabled={disabled}
+      onBlur={onRegionBlur}
+      onClick={handleClick}
+      onFocus={onRegionFocus}
+      onMouseEnter={onRegionFocus}
+      onMouseLeave={onRegionBlur}
+      type="button"
+    >
+      {content}
+    </button>
+  );
+}
+
 function RegionExplorerTourismMap({
   activeItemId,
   items,
@@ -292,7 +374,7 @@ function RegionExplorerTourismMap({
   return (
     <div className="relative rounded-3xl border border-solid border-gray-200 bg-gradient-to-br from-white to-gray-50 p-6 lg:p-10">
       {tooltipItem ? (
-        <Card className="pointer-events-none absolute right-6 top-6 z-10 min-w-44 transition">
+        <Card className="pointer-events-none absolute right-6 top-6 z-10 min-w-44 transition xl:hidden">
           <Text
             size="xs"
             bold
@@ -315,38 +397,66 @@ function RegionExplorerTourismMap({
           ) : null}
         </Card>
       ) : null}
-      <svg
-        aria-label="Geographic map of Switzerland with tourism regions"
-        className="h-auto max-h-[450px] w-full"
-        role="img"
-        viewBox="0 0 1224 783"
-      >
-        <title>Switzerland tourism regions</title>
-        {tourismRegionDefinitions.map((definition) => {
-          const item = itemsByRegionId.get(definition.id);
-          const active = item ? isActive(item, activeItemId) : false;
-          const path = tourismRegionPathById.get(definition.id);
+      <div className="grid gap-5 xl:grid-cols-[minmax(0,1fr)_240px] xl:items-center">
+        <svg
+          aria-label="Geographic map of Switzerland with tourism regions"
+          className="h-auto max-h-[450px] w-full"
+          role="img"
+          viewBox="0 0 1224 783"
+        >
+          <title>Switzerland tourism regions</title>
+          {tourismRegionDefinitions.map((definition) => {
+            const item = itemsByRegionId.get(definition.id);
+            const active = item
+              ? isActive(item, activeItemId) ||
+                focusedRegionId === definition.id
+              : focusedRegionId === definition.id;
+            const path = tourismRegionPathById.get(definition.id);
 
-          if (!path) {
-            return null;
-          }
+            if (!path) {
+              return null;
+            }
 
-          return (
-            <TourismRegionMapLink
-              active={active}
-              definition={definition}
-              item={item}
-              key={definition.id}
-              onBlur={() => setFocusedRegionId(null)}
-              onFocus={() => setFocusedRegionId(definition.id)}
-              onItemClick={onItemClick}
-              onMouseEnter={() => setFocusedRegionId(definition.id)}
-              onMouseLeave={() => setFocusedRegionId(null)}
-              path={path}
-            />
-          );
-        })}
-      </svg>
+            return (
+              <TourismRegionMapLink
+                active={active}
+                definition={definition}
+                item={item}
+                key={definition.id}
+                onBlur={() => setFocusedRegionId(null)}
+                onFocus={() => setFocusedRegionId(definition.id)}
+                onItemClick={onItemClick}
+                onMouseEnter={() => setFocusedRegionId(definition.id)}
+                onMouseLeave={() => setFocusedRegionId(null)}
+                path={path}
+              />
+            );
+          })}
+        </svg>
+        <aside className="hidden rounded-2xl bg-white/75 p-2 shadow-sm ring-1 ring-gray-200 xl:block">
+          <div className="grid gap-1">
+            {tourismRegionDefinitions.map((definition) => {
+              const item = itemsByRegionId.get(definition.id);
+              const active = item
+                ? isActive(item, activeItemId) ||
+                  focusedRegionId === definition.id
+                : focusedRegionId === definition.id;
+
+              return (
+                <TourismRegionSidebarItem
+                  active={active}
+                  definition={definition}
+                  item={item}
+                  key={definition.id}
+                  onItemClick={onItemClick}
+                  onRegionBlur={() => setFocusedRegionId(null)}
+                  onRegionFocus={() => setFocusedRegionId(definition.id)}
+                />
+              );
+            })}
+          </div>
+        </aside>
+      </div>
     </div>
   );
 }
