@@ -38,6 +38,7 @@ const lgItemWidths: Record<
   NonNullable<SectionScrollerProps["itemsPerRowLg"]>,
   string
 > = {
+  1: "100%",
   3: "calc((100% - 56px) / 3)",
   4: "calc((100% - 84px) / 4)",
 };

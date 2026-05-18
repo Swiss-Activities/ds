@@ -10,6 +10,7 @@ import {
 } from "../detail-layout/classes";
 import { Icon } from "../icon/icon";
 import { ChevronLeft } from "../icons";
+import { SectionActivityGrid } from "../section-activity-grid";
 import { SectionNonBookableMedia } from "../section-non-bookable/section-non-bookable-media";
 import { cn } from "../utils/cn";
 import type { BaseSectionBlogDetailProps } from "./section-blog-detail.types";
@@ -53,10 +54,30 @@ export function SectionBlogDetail({
   contentItems,
   contentTocTitle,
   contentBlocksClassName,
+  relatedActivitiesTitle,
+  relatedActivitiesAction,
+  relatedActivities,
+  relatedActivitiesRef,
   className,
   ...props
 }: SectionBlogDetailProps) {
   const hasContent = Boolean(contentItems?.length);
+  const hasRelatedActivities = Boolean(
+    relatedActivities?.length && relatedActivitiesTitle
+  );
+  const relatedActivitiesGrid = hasRelatedActivities ? (
+    <section ref={relatedActivitiesRef} className="min-w-0 lg:pt-6">
+      <SectionActivityGrid
+        title={relatedActivitiesTitle}
+        action={relatedActivitiesAction}
+        activities={(relatedActivities ?? []).map((activity) => ({
+          ...activity,
+          variant: "compactLg" as const,
+        }))}
+        itemsPerRowLg={1}
+      />
+    </section>
+  ) : null;
 
   return (
     <article className={cn("section-last lg:mt-8", className)} {...props}>
@@ -97,7 +118,18 @@ export function SectionBlogDetail({
           </button>
         ) : null}
 
-        <SectionDetailHeader title={title} description={description} />
+        {relatedActivitiesGrid ? (
+          <div className="grid gap-8 lg:grid-cols-3 xl:gap-16">
+            <SectionDetailHeader
+              title={title}
+              description={description}
+              className="lg:col-span-2"
+            />
+            {relatedActivitiesGrid}
+          </div>
+        ) : (
+          <SectionDetailHeader title={title} description={description} />
+        )}
       </section>
 
       {hasContent ? (

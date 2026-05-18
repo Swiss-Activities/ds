@@ -415,6 +415,7 @@ export type TGatewayBlogPostDetail = {
   title: string;
   imageUrl?: string | null;
   path: string;
+  relatedActivities: Array<TGatewayActivityCardItem & { type: "activity" }>;
   overview: Record<string, unknown>;
   meta: {
     overviewSource: "website-data-api";

@@ -77,6 +77,7 @@ export function SectionActivityGrid({
             image={a.image}
             title={a.title}
             type={a.type}
+            variant={a.variant}
             subtitle={a.subtitle}
             category={a.category}
             dateRange={a.dateRange}

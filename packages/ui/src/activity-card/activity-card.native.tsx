@@ -42,6 +42,7 @@ export function ActivityCard({
   image,
   title,
   type = "activity",
+  variant: _variant = "default",
   subtitle,
   category,
   dateRange,

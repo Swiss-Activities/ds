@@ -11,6 +11,8 @@ export const activityCardTypes = [
 
 export type ActivityCardType = (typeof activityCardTypes)[number];
 
+export type ActivityCardVariant = "default" | "compactLg";
+
 export type ActivityCardRender = CardRender;
 
 export type ActivityCardMetaItem = {
@@ -23,6 +25,7 @@ export type BaseActivityCardProps = {
   title: string;
   description?: ReactNode;
   type?: ActivityCardType;
+  variant?: ActivityCardVariant;
   subtitle?: ReactNode;
   category?: ReactNode;
   dateRange?: ReactNode;

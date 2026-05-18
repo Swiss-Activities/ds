@@ -6,7 +6,7 @@ export type BaseSectionScrollerProps = {
   action?: ReactNode;
   children: ReactNode;
   as?: "section" | "div";
-  itemsPerRowLg?: 3 | 4;
+  itemsPerRowLg?: 1 | 3 | 4;
   noContainer?: boolean;
   className?: string;
 };

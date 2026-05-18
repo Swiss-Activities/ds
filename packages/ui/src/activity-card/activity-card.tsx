@@ -78,6 +78,60 @@ function ActivityCardImageFallback() {
   );
 }
 
+function ActivityCardCompactOverlay({
+  title,
+  distance,
+  normalizedScore,
+  reviewCount,
+  priceLabel,
+  price,
+  shouldPairDistanceWithRating,
+}: {
+  title: BaseActivityCardProps["title"];
+  distance: BaseActivityCardProps["distance"];
+  normalizedScore: number;
+  reviewCount: BaseActivityCardProps["reviewCount"];
+  priceLabel: BaseActivityCardProps["priceLabel"];
+  price: BaseActivityCardProps["price"];
+  shouldPairDistanceWithRating: boolean;
+}) {
+  return (
+    <div className="pointer-events-none absolute inset-x-0 bottom-0 z-10 hidden bg-gradient-to-t from-black/85 via-black/55 to-transparent p-3 pt-10 text-white lg:block">
+      <Text
+        as="h3"
+        size="sm"
+        bold
+        className="line-clamp-2 !text-left !text-white !leading-snug"
+      >
+        {title}
+      </Text>
+      <div className="mt-1 flex min-w-0 flex-wrap items-center gap-x-2 gap-y-1 text-white">
+        {normalizedScore > 0 ? (
+          <Rating
+            score={normalizedScore}
+            count={reviewCount ?? undefined}
+            size="sm"
+            className="[&_span]:!text-white"
+          />
+        ) : null}
+        {shouldPairDistanceWithRating ? (
+          <ActivityCardInlineDistance label={distance} />
+        ) : null}
+      </div>
+      {price ? (
+        <div className="mt-2 flex items-end justify-between gap-3">
+          <Text size="xs" className="!text-white/75">
+            {priceLabel}
+          </Text>
+          <Text size="sm" bold className="shrink-0 !text-white">
+            {price}
+          </Text>
+        </div>
+      ) : null}
+    </div>
+  );
+}
+
 function getDefaultMeta({
   type,
   subtitle,
@@ -123,6 +177,7 @@ export function ActivityCard({
   title,
   description,
   type = "activity",
+  variant = "default",
   subtitle,
   category,
   dateRange,
@@ -142,6 +197,7 @@ export function ActivityCard({
   const [imageFailed, setImageFailed] = useState(false);
   const [imageLoaded, setImageLoaded] = useState(false);
   const normalizedScore = Number(score) || 0;
+  const isCompactLg = variant === "compactLg";
   const isBookable = type === "activity";
   const imageSource = isImageSource(image) ? image : null;
   const imageSourceKey = imageSource?.src ?? "";
@@ -184,6 +240,7 @@ export function ActivityCard({
       render={render}
       className={cn(
         "group relative flex h-full w-full flex-col overflow-hidden lg:hover:shadow-md",
+        isCompactLg && "lg:aspect-video lg:h-auto lg:min-h-0",
         className
       )}
       {...props}
@@ -191,6 +248,7 @@ export function ActivityCard({
       <div
         className={cn(
           "relative aspect-[4/3] w-full shrink-0 overflow-hidden",
+          isCompactLg && "lg:h-full lg:aspect-auto",
           showImageFallback || shouldUseImageFill
             ? "bg-gray-100"
             : "[&_img]:h-full [&_img]:w-full [&_img]:object-cover"
@@ -218,13 +276,32 @@ export function ActivityCard({
             classNameItems="!rounded-none"
           />
         ) : null}
+        {isCompactLg ? (
+          <ActivityCardCompactOverlay
+            title={title}
+            distance={distance}
+            normalizedScore={normalizedScore}
+            reviewCount={reviewCount}
+            priceLabel={priceLabel}
+            price={price}
+            shouldPairDistanceWithRating={shouldPairDistanceWithRating}
+          />
+        ) : null}
       </div>
-      <div className="flex flex-1 flex-col gap-1 p-3.5 pt-4">
+      <div
+        className={cn(
+          "flex flex-1 flex-col gap-1 p-3.5 pt-4",
+          isCompactLg && "lg:hidden"
+        )}
+      >
         <Text
           as="h3"
           size="default"
           bold
-          className="line-clamp-2 !text-left !text-base !leading-snug"
+          className={cn(
+            "line-clamp-2 !text-left !text-base !leading-snug",
+            isCompactLg && "lg:!text-sm"
+          )}
         >
           {title}
         </Text>
@@ -232,13 +309,18 @@ export function ActivityCard({
           <Text
             size="sm"
             gray
-            className="line-clamp-3 !text-left !leading-snug"
+            className={cn(
+              "line-clamp-3 !text-left !leading-snug",
+              isCompactLg && "lg:hidden"
+            )}
           >
             {description}
           </Text>
         ) : null}
         {metaItems.length ? (
-          <div className="mt-1.5 space-y-1.5">
+          <div
+            className={cn("mt-1.5 space-y-1.5", isCompactLg && "lg:mt-1")}
+          >
             {metaItems.map((item, index) => (
               <ActivityCardMetaLine key={index} {...item} />
             ))}
@@ -246,7 +328,12 @@ export function ActivityCard({
         ) : null}
         {normalizedScore > 0 ? (
           shouldPairDistanceWithRating ? (
-            <div className="mt-1.5 flex min-w-0 flex-wrap items-center gap-x-3 gap-y-1">
+            <div
+              className={cn(
+                "mt-1.5 flex min-w-0 flex-wrap items-center gap-x-3 gap-y-1",
+                isCompactLg && "lg:mt-1"
+              )}
+            >
               <Rating
                 score={normalizedScore}
                 count={reviewCount ?? undefined}
@@ -259,18 +346,27 @@ export function ActivityCard({
               score={normalizedScore}
               count={reviewCount ?? undefined}
               size="sm"
-              className="mt-1"
+              className={cn("mt-1", isCompactLg && "lg:mt-0.5")}
             />
           )
         ) : null}
         {hasPricingFooter ? (
           <div className="mt-auto">
-            <div className="-mx-3.5 mb-3 mt-2 h-px bg-gray-200" />
+            <div
+              className={cn(
+                "-mx-3.5 mb-3 mt-2 h-px bg-gray-200",
+                isCompactLg && "lg:-mx-3 lg:mb-2 lg:mt-1.5"
+              )}
+            />
             <div className="flex items-baseline justify-between">
               <Text size="xs" gray className="font-medium">
                 {priceLabel}
               </Text>
-              <Text size="default" bold>
+              <Text
+                size="default"
+                bold
+                className={cn(isCompactLg && "lg:!text-sm")}
+              >
                 {price}
               </Text>
             </div>

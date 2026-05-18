@@ -3,6 +3,7 @@ import type {
   ActivityCardMetaItem,
   ActivityCardRender,
   ActivityCardType,
+  ActivityCardVariant,
 } from "../activity-card/activity-card.types";
 import type { BaseSectionScrollerProps } from "../section-scroller/section-scroller.types";
 import type { ImageValue, RenderImage } from "../utils/render-image";
@@ -12,6 +13,7 @@ export type ActivityItem = {
   title: string;
   description?: ReactNode;
   type?: ActivityCardType;
+  variant?: ActivityCardVariant;
   subtitle?: ReactNode;
   category?: ReactNode;
   dateRange?: ReactNode;
