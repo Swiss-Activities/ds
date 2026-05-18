@@ -96,6 +96,7 @@ export function SectionHero({
         days={days ?? []}
         unit={unit}
         variant="dark"
+        sizing="fixed"
         previousLabel={weatherPreviousLabel}
         nextLabel={weatherNextLabel}
         selected={selected}
@@ -207,6 +208,7 @@ export function SectionHero({
         days={days ?? []}
         unit={unit}
         variant="light"
+        sizing="fixed"
         previousLabel={weatherPreviousLabel}
         nextLabel={weatherNextLabel}
         selected={selected}
@@ -283,6 +285,7 @@ export function SectionHero({
           <Weather
             days={days}
             unit={unit}
+            sizing="fixed"
             selected={selected}
             onSelect={onSelect}
           />

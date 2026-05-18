@@ -10,6 +10,7 @@ export type WeatherDay = {
 
 export const weatherVariants = ["light", "dark", "compact"] as const;
 export type WeatherVariant = (typeof weatherVariants)[number];
+export type WeatherSizing = "auto" | "fixed";
 
 export type BaseWeatherProps = {
   days: WeatherDay[];
@@ -17,6 +18,7 @@ export type BaseWeatherProps = {
   title?: string;
   unit?: string;
   variant?: WeatherVariant;
+  sizing?: WeatherSizing;
   previousLabel?: string;
   nextLabel?: string;
   selected?: string;
