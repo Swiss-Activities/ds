@@ -1,10 +1,10 @@
 # Swiss Activities Design System Monorepo
 
-Shared UI components for web and mobile with:
+Web UI components with:
 
 - `packages/ui`: shared component source
 - `apps/storybook-web`: web Storybook (React + Vite)
-- `apps/storybook-native`: native Storybook (Expo + React Native)
+- `packages/tokens`: framework-independent design tokens
 
 ## Quick Start
 
@@ -18,16 +18,9 @@ Run web Storybook:
 bun run storybook:web
 ```
 
-Run native Storybook (Expo):
-
-```bash
-bun run storybook:native
-```
-
 ## Notes
 
 - Web components use Tailwind CSS classes.
-- Native components use NativeWind classes via `Button.native.tsx` and Expo config in `apps/storybook-native`.
 - This repo is designed to work well as a Git submodule inside product repos.
 
 ## Consuming In A Client Repo

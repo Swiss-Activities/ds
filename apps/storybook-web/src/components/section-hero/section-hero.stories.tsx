@@ -161,7 +161,6 @@ function SummarySectionHeroPreview({
   daypart,
   placeholder,
   temperature,
-  time,
   weather,
   weatherIcon,
 }: SummaryHeroStoryData) {

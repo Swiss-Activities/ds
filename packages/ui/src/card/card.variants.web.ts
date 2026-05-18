@@ -1,5 +1,5 @@
 import { cva } from "class-variance-authority";
-import { sharedCardBaseStyles } from "./card.variants.shared";
+import { sharedCardBaseStyles } from "./card.variants";
 
 export const cardStyles = cva(
   `${sharedCardBaseStyles} border border-solid border-gray-200`,

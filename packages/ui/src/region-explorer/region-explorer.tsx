@@ -87,10 +87,6 @@ const mapToneClassName: Record<RegionExplorerTone, string> = {
   high: "fill-primary/55",
 };
 
-const mapPathsByCode = new Map<string, string>(
-  regionMapPaths.map((region) => [region.code, region.path])
-);
-
 const tourismRegionPathById = new Map<string, string>(
   tourismRegionMapPaths.map((region) => [region.id, region.path])
 );

@@ -170,7 +170,7 @@ function ColorsReference() {
         </h1>
         <p className="mt-3 max-w-3xl text-sm text-gray-600 sm:text-base">
           Use this as a quick reference for brand and neutral colors across web
-          and native components. Every swatch lets you copy the HEX value, CSS
+          components. Every swatch lets you copy the HEX value, CSS
           variable, or Tailwind class.
         </p>
 

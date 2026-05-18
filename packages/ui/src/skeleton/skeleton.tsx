@@ -7,7 +7,7 @@ import type { BaseSkeletonProps } from "./skeleton.types";
 import {
   skeletonContainerStyles,
   skeletonItemStyles,
-} from "./skeleton.variants.shared";
+} from "./skeleton.variants";
 
 export type SkeletonProps = BaseSkeletonProps & HTMLAttributes<HTMLSpanElement>;
 

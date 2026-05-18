@@ -1,7 +1,7 @@
 import type { HTMLAttributes } from "react";
 import { cn } from "../utils/cn";
 import type { BaseBadgeProps } from "./badge.types";
-import { badgeStyles } from "./badge.variants.shared";
+import { badgeStyles } from "./badge.variants";
 
 export type BadgeProps = BaseBadgeProps & HTMLAttributes<HTMLSpanElement>;
 

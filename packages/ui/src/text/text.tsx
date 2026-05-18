@@ -1,7 +1,7 @@
 import { createElement, forwardRef, type HTMLAttributes } from "react";
 import { cn } from "../utils/cn";
 import type { BaseTextProps } from "./text.types";
-import { resolveTextVariantSize, textStyles } from "./text.variants.shared";
+import { resolveTextVariantSize, textStyles } from "./text.variants";
 
 export type TextProps = BaseTextProps & HTMLAttributes<HTMLElement>;
 

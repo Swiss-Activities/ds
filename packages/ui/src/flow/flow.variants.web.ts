@@ -1,3 +1,3 @@
-import { sharedFlowStyles } from "./flow.variants.shared";
+import { sharedFlowStyles } from "./flow.variants";
 
 export const flowStyles = sharedFlowStyles;

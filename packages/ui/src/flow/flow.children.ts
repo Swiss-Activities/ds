@@ -7,7 +7,7 @@ import {
 } from "react";
 import { buttonComponentId } from "../button/button.types";
 import { cn } from "../utils/cn";
-import { sharedFlowButtonSpacingStyles } from "./flow.variants.shared";
+import { sharedFlowButtonSpacingStyles } from "./flow.variants";
 
 type FlowComponentType = { saComponent?: string };
 

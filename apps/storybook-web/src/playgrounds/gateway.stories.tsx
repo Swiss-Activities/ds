@@ -298,9 +298,13 @@ function GatewayPlayground() {
             title={section.title}
             className="py-6"
             activities={section.data
-              .filter((item) => !!(item.priceFormatted ?? item.price_formatted))
-              .map((item) =>
-                toActivityItem(item, {
+              .filter(
+                (item) =>
+                  item.type !== "review" &&
+                  !!(item.priceFormatted ?? item.price_formatted)
+              )
+              .map((item) => {
+                const activity = toActivityItem(item, {
                   priceLabel: "pro Person",
                   fromLabel: "ab",
                   renderImage: (gatewayItem) =>
@@ -310,8 +314,13 @@ function GatewayPlayground() {
                         alt={gatewayItem.title}
                       />
                     ) : null,
-                })
-              )}
+                });
+
+                return {
+                  ...activity,
+                  type: activity.type === "review" ? undefined : activity.type,
+                };
+              })}
           />
         </div>
       ))}

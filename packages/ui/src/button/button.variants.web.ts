@@ -6,7 +6,7 @@ import {
   sharedButtonDisabledStyles,
   sharedButtonSizeStyles,
   sharedButtonVariantStyles,
-} from "./button.variants.shared";
+} from "./button.variants";
 
 const webButtonVariantStyles = Object.fromEntries(
   buttonVariants.map((variant) => [
