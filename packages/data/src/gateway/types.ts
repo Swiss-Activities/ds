@@ -1,6 +1,7 @@
 export type TGatewayHomeItem = {
   id: string;
   title: string;
+  description?: string | null;
   image_url?: string | null;
   imageUrl?: string | null;
   subtitle?: string | null;

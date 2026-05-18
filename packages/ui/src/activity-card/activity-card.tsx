@@ -121,6 +121,7 @@ function getDefaultMeta({
 export function ActivityCard({
   image,
   title,
+  description,
   type = "activity",
   subtitle,
   category,
@@ -227,6 +228,15 @@ export function ActivityCard({
         >
           {title}
         </Text>
+        {hasContent(description) ? (
+          <Text
+            size="sm"
+            gray
+            className="line-clamp-3 !text-left !leading-snug"
+          >
+            {description}
+          </Text>
+        ) : null}
         {metaItems.length ? (
           <div className="mt-1.5 space-y-1.5">
             {metaItems.map((item, index) => (

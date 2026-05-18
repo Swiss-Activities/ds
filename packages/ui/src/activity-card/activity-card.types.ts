@@ -21,6 +21,7 @@ export type ActivityCardMetaItem = {
 export type BaseActivityCardProps = {
   image: ImageValue | null;
   title: string;
+  description?: ReactNode;
   type?: ActivityCardType;
   subtitle?: ReactNode;
   category?: ReactNode;

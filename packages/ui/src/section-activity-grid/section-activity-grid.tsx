@@ -32,6 +32,7 @@ export function SectionActivityGrid({
         image: null,
         title: "",
         type: "activity",
+        description: undefined,
         subtitle: undefined,
         category: undefined,
         dateRange: undefined,
@@ -71,6 +72,7 @@ export function SectionActivityGrid({
           <ActivityCard
             image={a.image}
             title={a.title}
+            description={a.description}
             type={a.type}
             subtitle={a.subtitle}
             category={a.category}

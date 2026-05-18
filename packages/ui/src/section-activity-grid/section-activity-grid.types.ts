@@ -10,6 +10,7 @@ import type { ImageValue, RenderImage } from "../utils/render-image";
 export type ActivityItem = {
   image: ImageValue | null;
   title: string;
+  description?: ReactNode;
   type?: ActivityCardType;
   subtitle?: ReactNode;
   category?: ReactNode;
