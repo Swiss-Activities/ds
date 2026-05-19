@@ -19,6 +19,7 @@ export type AppGatewayContext = {
   lng?: number | null;
   destination?: string | null;
   activityType?: string | null;
+  nonBookable?: string | null;
   region?: string | null;
 };
 
@@ -108,6 +109,7 @@ export type BaseAppGatewayProps<
   useDevGateway?: boolean;
   selectedDestination?: string | null;
   selectedActivityType?: string | null;
+  selectedNonBookable?: string | null;
   selectedRegion?: string | null;
   initialData?: TGatewayHome | null;
   initialContext?: AppGatewayContext | null;
@@ -149,6 +151,7 @@ function AppGatewayContent<TSection, THero, TItemData>({
   useDevGateway = false,
   selectedDestination = null,
   selectedActivityType = null,
+  selectedNonBookable = null,
   selectedRegion = null,
   initialData = null,
   initialContext = null,
@@ -190,6 +193,7 @@ function AppGatewayContent<TSection, THero, TItemData>({
     dev: useDevGateway,
     destination: selectedDestination,
     activityType: selectedActivityType,
+    nonBookable: selectedNonBookable,
     region: selectedRegion,
   });
   const data = initialData ?? gatewayFeed.data;
@@ -207,6 +211,7 @@ function AppGatewayContent<TSection, THero, TItemData>({
       lng: context.lng,
       destination: context.destination,
       activityType: context.activityType,
+      nonBookable: context.nonBookable,
       region: context.region,
     }),
     [
@@ -216,6 +221,7 @@ function AppGatewayContent<TSection, THero, TItemData>({
       context.lat,
       context.lng,
       context.locale,
+      context.nonBookable,
       context.region,
     ]
   );
@@ -424,6 +430,7 @@ function AppGatewayContent<TSection, THero, TItemData>({
       lng: context.lng,
       destination: context.destination,
       activityType: context.activityType,
+      nonBookable: context.nonBookable,
       region: context.region,
     });
   }, [
@@ -433,6 +440,7 @@ function AppGatewayContent<TSection, THero, TItemData>({
     context.lat,
     context.lng,
     context.locale,
+    context.nonBookable,
     context.region,
     contextReady,
     enabled,

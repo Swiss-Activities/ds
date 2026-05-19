@@ -5,6 +5,7 @@ export const gatewaySelectionParams = {
   type: "type",
   destination: "destination",
   activityType: "activityType",
+  nonBookable: "nonBookable",
   region: "region",
   tags: "tags",
 } as const;

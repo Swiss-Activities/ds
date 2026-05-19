@@ -68,6 +68,7 @@ export type TGatewaySectionAlternate = {
   id: string;
   title: string;
   pillarSlug?: string | null;
+  pillarPath?: string | null;
 };
 
 export type TGatewayHomeCarouselSection = {
@@ -200,10 +201,21 @@ export type TGatewayRegionContext = {
   numberOfActivities?: number;
 };
 
+export type TGatewayNonBookableContext = {
+  type: "non-bookable";
+  id?: string | null;
+  title: string;
+  category: string;
+  description?: string | null;
+  imageUrl?: string | null;
+  numberOfItems?: number;
+};
+
 export type TGatewayDiscoveryContext =
   | TGatewayActivityTypeContext
   | TGatewayDestinationContext
-  | TGatewayRegionContext;
+  | TGatewayRegionContext
+  | TGatewayNonBookableContext;
 
 export type TGatewayHome = {
   context?: TGatewayDiscoveryContext;
@@ -297,6 +309,7 @@ export type TGatewayHomeParams = {
 export type TGatewayFeedParams = TGatewayHomeParams & {
   destination?: string | null;
   activityType?: string | null;
+  nonBookable?: string | null;
   region?: string | null;
 };
 

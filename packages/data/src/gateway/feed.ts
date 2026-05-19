@@ -26,10 +26,18 @@ export type UseGatewayFeedOptions = TGatewayFeedParams & {
 export const getGatewayFeedPath = ({
   destination,
   activityType,
+  nonBookable,
   region,
-}: Pick<TGatewayFeedParams, "destination" | "activityType" | "region">) => {
+}: Pick<
+  TGatewayFeedParams,
+  "destination" | "activityType" | "nonBookable" | "region"
+>) => {
   if (activityType) {
     return `activity-types/${encodeURIComponent(activityType)}`;
+  }
+
+  if (nonBookable) {
+    return `non-bookable/${encodeURIComponent(nonBookable)}`;
   }
 
   if (destination) {
@@ -99,6 +107,7 @@ export const useGatewayFeed = ({
   country,
   destination,
   activityType,
+  nonBookable,
   region,
   dev,
   enabled = true,
@@ -131,6 +140,7 @@ export const useGatewayFeed = ({
     ...(resolvedLng != null ? { lng: resolvedLng } : {}),
     ...(destination ? { destination } : {}),
     ...(activityType ? { activityType } : {}),
+    ...(nonBookable ? { nonBookable } : {}),
     ...(region ? { region } : {}),
     ...(dev ? { dev } : {}),
   };
@@ -145,6 +155,7 @@ export const useGatewayFeed = ({
       params.country,
       params.destination,
       params.activityType,
+      params.nonBookable,
       params.region,
       params.dev,
     ],
@@ -165,6 +176,7 @@ export const useGatewayFeed = ({
       lng: resolvedLng ?? null,
       destination: destination ?? null,
       activityType: activityType ?? null,
+      nonBookable: nonBookable ?? null,
       region: region ?? null,
     },
     contextReady,
