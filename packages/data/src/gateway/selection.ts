@@ -6,6 +6,7 @@ export const gatewaySelectionParams = {
   destination: "destination",
   activityType: "activityType",
   nonBookable: "nonBookable",
+  poi: "poi",
   region: "region",
   tags: "tags",
 } as const;
@@ -135,6 +136,7 @@ export const isGatewayHomeItemType = (
     type === "activity" ||
     type === "non-bookable" ||
     type === "non-bookable-event" ||
+    type === "point-of-interest" ||
     type === "blog-post" ||
     type === "review"
   );
@@ -142,7 +144,11 @@ export const isGatewayHomeItemType = (
 
 export const isGatewayDetailType = (type?: string) => {
   return Boolean(
-    type && type !== "activity" && type !== "blog-post" && type !== "review"
+    type &&
+    type !== "activity" &&
+    type !== "blog-post" &&
+    type !== "point-of-interest" &&
+    type !== "review"
   );
 };
 

@@ -1,8 +1,6 @@
 import type { TGatewaySearchSuggestion } from "./types";
 
-export const decodeGatewayHtmlEntities = (
-  value: string | null | undefined
-) => {
+export const decodeGatewayHtmlEntities = (value: string | null | undefined) => {
   if (!value) {
     return value ?? null;
   }
@@ -71,6 +69,16 @@ export const getGatewayActivityTypeValue = (
   }
 
   return getSuggestionPathValue(suggestion, "activity-types");
+};
+
+export const getGatewayPointOfInterestValue = (
+  suggestion?: TGatewaySearchSuggestion | null
+) => {
+  if (!suggestion || suggestion.type !== "point-of-interest") {
+    return null;
+  }
+
+  return getSuggestionPathValue(suggestion, "pois");
 };
 
 export const findGatewaySearchDestination = (

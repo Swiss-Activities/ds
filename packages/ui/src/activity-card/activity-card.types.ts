@@ -6,6 +6,7 @@ export const activityCardTypes = [
   "activity",
   "non-bookable",
   "non-bookable-event",
+  "point-of-interest",
   "blog-post",
 ] as const;
 

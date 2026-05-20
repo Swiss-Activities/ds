@@ -11,6 +11,7 @@ export type TGatewayHomeItem = {
     | "activity"
     | "non-bookable"
     | "non-bookable-event"
+    | "point-of-interest"
     | "blog-post"
     | "review";
   category?: string | null;
@@ -211,11 +212,22 @@ export type TGatewayNonBookableContext = {
   numberOfItems?: number;
 };
 
+export type TGatewayPointOfInterestContext = {
+  type: "point-of-interest";
+  id: string;
+  title: string;
+  slug: string;
+  imageUrl?: string | null;
+  lat: number;
+  lng: number;
+};
+
 export type TGatewayDiscoveryContext =
   | TGatewayActivityTypeContext
   | TGatewayDestinationContext
   | TGatewayRegionContext
-  | TGatewayNonBookableContext;
+  | TGatewayNonBookableContext
+  | TGatewayPointOfInterestContext;
 
 export type TGatewayHome = {
   context?: TGatewayDiscoveryContext;
@@ -311,6 +323,7 @@ export type TGatewayFeedParams = TGatewayHomeParams & {
   activityType?: string | null;
   nonBookable?: string | null;
   region?: string | null;
+  poi?: string | null;
 };
 
 export type TGatewaySearchSuggestion = {

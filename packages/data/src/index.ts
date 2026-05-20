@@ -66,6 +66,7 @@ export {
   formatGatewayDistance,
   getGatewayActivityTypeValue,
   getGatewayDestinationValue,
+  getGatewayPointOfInterestValue,
   getGatewaySuggestionCategoryDetail,
   normalizeGatewaySearchValue,
 } from "./gateway/suggestions";

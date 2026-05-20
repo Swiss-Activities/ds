@@ -20,6 +20,7 @@ export type AppGatewayContext = {
   destination?: string | null;
   activityType?: string | null;
   nonBookable?: string | null;
+  poi?: string | null;
   region?: string | null;
 };
 
@@ -110,6 +111,7 @@ export type BaseAppGatewayProps<
   selectedDestination?: string | null;
   selectedActivityType?: string | null;
   selectedNonBookable?: string | null;
+  selectedPoi?: string | null;
   selectedRegion?: string | null;
   initialData?: TGatewayHome | null;
   initialContext?: AppGatewayContext | null;
@@ -152,6 +154,7 @@ function AppGatewayContent<TSection, THero, TItemData>({
   selectedDestination = null,
   selectedActivityType = null,
   selectedNonBookable = null,
+  selectedPoi = null,
   selectedRegion = null,
   initialData = null,
   initialContext = null,
@@ -194,6 +197,7 @@ function AppGatewayContent<TSection, THero, TItemData>({
     destination: selectedDestination,
     activityType: selectedActivityType,
     nonBookable: selectedNonBookable,
+    poi: selectedPoi,
     region: selectedRegion,
   });
   const data = initialData ?? gatewayFeed.data;
@@ -212,6 +216,7 @@ function AppGatewayContent<TSection, THero, TItemData>({
       destination: context.destination,
       activityType: context.activityType,
       nonBookable: context.nonBookable,
+      poi: context.poi,
       region: context.region,
     }),
     [
@@ -222,6 +227,7 @@ function AppGatewayContent<TSection, THero, TItemData>({
       context.lng,
       context.locale,
       context.nonBookable,
+      context.poi,
       context.region,
     ]
   );
