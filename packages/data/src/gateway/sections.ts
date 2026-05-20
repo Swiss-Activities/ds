@@ -32,7 +32,8 @@ export const isGatewayCarouselSection = (
 export const isGatewayActivityGridSection = (
   section: GatewaySectionLike
 ): section is TGatewayActivityGridSection =>
-  section.component === "activity_grid";
+  section.component === "activity_grid" ||
+  section.component === "non_bookable_grid";
 
 export const isGatewayReviewSection = (
   section: GatewaySectionLike

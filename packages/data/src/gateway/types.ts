@@ -97,11 +97,11 @@ export type TGatewayReviewCarouselSection = Omit<
 
 export type TGatewayActivityGridSection = {
   id: string;
-  component: "activity_grid";
+  component: "activity_grid" | "non_bookable_grid";
   title: string;
   pillarSlug?: string | null;
   alternates?: TGatewaySectionAlternate[];
-  data: Array<TGatewayActivityCardItem & { type: "activity" }>;
+  data: TGatewayActivityCardItem[];
   meta: {
     pagination: {
       page: number;
