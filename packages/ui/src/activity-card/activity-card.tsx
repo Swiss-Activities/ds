@@ -101,7 +101,7 @@ function ActivityCardCompactOverlay({
         as="h3"
         size="sm"
         bold
-        className="line-clamp-2 !text-left !text-white !leading-snug"
+        className="line-clamp-2 !text-left !leading-snug !text-white"
       >
         {title}
       </Text>
@@ -248,7 +248,7 @@ export function ActivityCard({
       <div
         className={cn(
           "relative aspect-[4/3] w-full shrink-0 overflow-hidden",
-          isCompactLg && "lg:h-full lg:aspect-auto",
+          isCompactLg && "lg:aspect-auto lg:h-full",
           showImageFallback || shouldUseImageFill
             ? "bg-gray-100"
             : "[&_img]:h-full [&_img]:w-full [&_img]:object-cover"
@@ -273,6 +273,7 @@ export function ActivityCard({
           <Skeleton
             full
             loading={!imageLoaded && !loading}
+            className="z-20"
             classNameItems="!rounded-none"
           />
         ) : null}
@@ -318,9 +319,7 @@ export function ActivityCard({
           </Text>
         ) : null}
         {metaItems.length ? (
-          <div
-            className={cn("mt-1.5 space-y-1.5", isCompactLg && "lg:mt-1")}
-          >
+          <div className={cn("mt-1.5 space-y-1.5", isCompactLg && "lg:mt-1")}>
             {metaItems.map((item, index) => (
               <ActivityCardMetaLine key={index} {...item} />
             ))}

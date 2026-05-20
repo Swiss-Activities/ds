@@ -60,12 +60,10 @@ function useResolvedMode({
     }
 
     if (!meta) {
-      return "contain";
+      return null;
     }
 
-    const ratio = meta.width / meta.height;
-
-    return ratio > 1 ? "cover" : "contain";
+    return meta.height > meta.width ? "contain" : "cover";
   }, [meta, mode]);
 }
 
@@ -114,6 +112,31 @@ function SourceImageFill({
     ...source,
     alt: alt ?? source.alt ?? "",
   };
+
+  if (!resolvedMode) {
+    return (
+      <div
+        onLoadCapture={handleLoadCapture}
+        className="absolute inset-0 overflow-hidden"
+        style={{ backgroundColor: resolvedBackground }}
+      >
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-0 opacity-0 [&_img]:h-full [&_img]:w-full"
+        >
+          {renderImage ? (
+            renderImage({
+              ...source,
+              alt: "",
+              onError: onImageError,
+            })
+          ) : (
+            <img src={source.src} alt="" onError={onImageError} />
+          )}
+        </div>
+      </div>
+    );
+  }
 
   const backdropImage = renderImage ? (
     renderImage({ ...source, alt: "" })
@@ -206,6 +229,7 @@ export function ImageFill({
     >
       {isImageSource(image) ? (
         <SourceImageFill
+          key={image.src}
           source={image}
           alt={alt}
           renderImage={renderImage}
