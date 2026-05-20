@@ -3,7 +3,7 @@
 import { keepPreviousData, useQuery } from "@tanstack/react-query";
 import { useSilentCoordinates } from "../hooks/useSilentCoordinates";
 import { useDataConfig } from "../provider";
-import { normalizeGatewayLocale } from "./client";
+import { getGatewayContextParams, normalizeGatewayLocale } from "./client";
 import { useGetCountry } from "./getCountry";
 import { getGatewayFilter } from "./getGatewayFilter";
 import type {
@@ -71,10 +71,12 @@ export const useActivityTypeFilter = ({
 
   const params: TGatewayActivityTypeFilterParams = {
     activityType,
-    ...(resolvedLocale ? { locale: resolvedLocale } : {}),
-    ...(resolvedCountry ? { country: resolvedCountry } : {}),
-    ...(resolvedLat != null ? { lat: resolvedLat } : {}),
-    ...(resolvedLng != null ? { lng: resolvedLng } : {}),
+    ...getGatewayContextParams({
+      locale: resolvedLocale,
+      country: resolvedCountry,
+      lat: resolvedLat,
+      lng: resolvedLng,
+    }),
     page,
     perPage,
     ...(normalizedTags.length > 0 ? { tags: normalizedTags } : {}),

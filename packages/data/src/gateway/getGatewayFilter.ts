@@ -3,7 +3,11 @@
 import { keepPreviousData, useQuery } from "@tanstack/react-query";
 import { useSilentCoordinates } from "../hooks/useSilentCoordinates";
 import { useDataConfig } from "../provider";
-import { fetchGatewayProxy, normalizeGatewayLocale } from "./client";
+import {
+  fetchGatewayProxy,
+  getGatewayContextParams,
+  normalizeGatewayLocale,
+} from "./client";
 import { useGetCountry } from "./getCountry";
 import type { TGatewayFilter, TGatewayFilterParams } from "./types";
 
@@ -71,10 +75,12 @@ export const useGatewayFilter = ({
 
   const params: TGatewayFilterParams = {
     endpoint,
-    ...(resolvedLocale ? { locale: resolvedLocale } : {}),
-    ...(resolvedCountry ? { country: resolvedCountry } : {}),
-    ...(resolvedLat != null ? { lat: resolvedLat } : {}),
-    ...(resolvedLng != null ? { lng: resolvedLng } : {}),
+    ...getGatewayContextParams({
+      locale: resolvedLocale,
+      country: resolvedCountry,
+      lat: resolvedLat,
+      lng: resolvedLng,
+    }),
     page,
     perPage,
     ...(normalizedTags.length > 0 ? { tags: normalizedTags } : {}),

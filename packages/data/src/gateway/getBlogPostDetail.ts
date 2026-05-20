@@ -1,6 +1,6 @@
 "use client";
 
-import { fetchGatewayProxy, normalizeGatewayLocale } from "./client";
+import { fetchGatewayProxy, getGatewayContextParams } from "./client";
 import type {
   TGatewayBlogPostDetail,
   TGatewayBlogPostDetailParams,
@@ -14,14 +14,14 @@ export const getGatewayBlogPostDetail = async (
   params: TGatewayBlogPostDetailParams,
   signal?: AbortSignal
 ): Promise<TGatewayBlogPostDetail> => {
-  const { id, locale, ...queryParams } = params;
+  const { id, locale, lat, lng, country, ...queryParams } = params;
 
   return fetchGatewayProxy<TGatewayBlogPostDetail>({
     apiUrl,
     path: getGatewayBlogPostDetailPath(id),
     params: {
       ...queryParams,
-      ...(locale ? { locale: normalizeGatewayLocale(locale) } : {}),
+      ...getGatewayContextParams({ locale, lat, lng, country }),
     },
     signal,
   });

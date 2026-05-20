@@ -1,6 +1,6 @@
 "use client";
 
-import { fetchGatewayProxy, normalizeGatewayLocale } from "./client";
+import { fetchGatewayProxy, getGatewayContextParams } from "./client";
 import type {
   TGatewayActivityDetail,
   TGatewayActivityDetailParams,
@@ -14,14 +14,14 @@ export const getGatewayActivityDetail = async (
   params: TGatewayActivityDetailParams,
   signal?: AbortSignal
 ): Promise<TGatewayActivityDetail> => {
-  const { id, locale, ...queryParams } = params;
+  const { id, locale, lat, lng, country, ...queryParams } = params;
 
   return fetchGatewayProxy<TGatewayActivityDetail>({
     apiUrl,
     path: getGatewayActivityDetailPath(id),
     params: {
       ...queryParams,
-      ...(locale ? { locale: normalizeGatewayLocale(locale) } : {}),
+      ...getGatewayContextParams({ locale, lat, lng, country }),
     },
     signal,
   });

@@ -360,6 +360,10 @@ export type TGatewayDetailParams = {
   path?: string | null;
   id?: string;
   type?: Exclude<TGatewayHomeItem["type"], "activity" | "blog-post" | "review">;
+  locale?: string;
+  lat?: number | null;
+  lng?: number | null;
+  country?: string | null;
   dev?: boolean;
 };
 
@@ -453,6 +457,9 @@ export type TGatewayBlogPostDetail = {
 export type TGatewayBlogPostDetailParams = {
   id: string;
   locale?: string;
+  lat?: number | null;
+  lng?: number | null;
+  country?: string | null;
   dev?: boolean;
 };
 

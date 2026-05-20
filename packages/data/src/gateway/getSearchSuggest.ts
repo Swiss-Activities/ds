@@ -3,7 +3,11 @@
 import { keepPreviousData, useQuery } from "@tanstack/react-query";
 import { useSilentCoordinates } from "../hooks/useSilentCoordinates";
 import { useDataConfig } from "../provider";
-import { fetchGatewayProxy, normalizeGatewayLocale } from "./client";
+import {
+  fetchGatewayProxy,
+  getGatewayContextParams,
+  normalizeGatewayLocale,
+} from "./client";
 import { useGetCountry } from "./getCountry";
 import type {
   TGatewaySearchSuggest,
@@ -59,10 +63,12 @@ export const useSearchSuggest = ({
 
   const params: TGatewaySearchSuggestParams = {
     ...(query ? { q: query } : {}),
-    ...(resolvedLocale ? { locale: resolvedLocale } : {}),
-    ...(resolvedCountry ? { country: resolvedCountry } : {}),
-    ...(resolvedLat != null ? { lat: resolvedLat } : {}),
-    ...(resolvedLng != null ? { lng: resolvedLng } : {}),
+    ...getGatewayContextParams({
+      locale: resolvedLocale,
+      country: resolvedCountry,
+      lat: resolvedLat,
+      lng: resolvedLng,
+    }),
     ...(dev ? { dev } : {}),
   };
 

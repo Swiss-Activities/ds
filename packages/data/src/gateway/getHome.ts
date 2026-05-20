@@ -3,7 +3,7 @@
 import { useQuery } from "@tanstack/react-query";
 import { useSilentCoordinates } from "../hooks/useSilentCoordinates";
 import { useDataConfig } from "../provider";
-import { normalizeGatewayLocale } from "./client";
+import { getGatewayContextParams } from "./client";
 import { getGatewayFeed, getGatewayFeedDirect } from "./feed";
 import { useGetCountry } from "./getCountry";
 import type { TGatewayHome, TGatewayHomeParams } from "./types";
@@ -43,9 +43,12 @@ export const useGetHome = ({
   const isPreparing = enabled && (!countryFetched || !coordsReady);
 
   const params: TGatewayHomeParams = {
-    locale: normalizeGatewayLocale(locale),
-    ...(country ? { country } : {}),
-    ...(coords ? { lat: coords.latitude, lng: coords.longitude } : {}),
+    ...getGatewayContextParams({
+      locale,
+      country,
+      lat: coords?.latitude,
+      lng: coords?.longitude,
+    }),
   };
 
   const query = useQuery({

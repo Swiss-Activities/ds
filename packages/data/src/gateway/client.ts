@@ -1,8 +1,30 @@
 export type GatewayParamValue = string | number | boolean | null | undefined;
 export type GatewayParams = Record<string, GatewayParamValue>;
+export type GatewayContextParams = {
+  locale?: string | null;
+  lat?: number | null;
+  lng?: number | null;
+  country?: string | null;
+};
 
 export const normalizeGatewayLocale = (locale?: string | null) =>
   locale ? locale.replace("_", "-") : undefined;
+
+export function getGatewayContextParams({
+  locale,
+  lat,
+  lng,
+  country,
+}: GatewayContextParams): GatewayParams {
+  const normalizedLocale = normalizeGatewayLocale(locale);
+
+  return {
+    ...(normalizedLocale ? { locale: normalizedLocale } : {}),
+    ...(lat != null ? { lat } : {}),
+    ...(lng != null ? { lng } : {}),
+    ...(country ? { country } : {}),
+  };
+}
 
 function stripTrailingSlash(value: string) {
   return value.replace(/\/+$/, "");

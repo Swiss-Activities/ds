@@ -5,6 +5,7 @@ import { useSilentCoordinates } from "../hooks/useSilentCoordinates";
 import {
   fetchGatewayDirect,
   fetchGatewayProxy,
+  getGatewayContextParams,
   normalizeGatewayLocale,
   type GatewayParams,
 } from "./client";
@@ -63,16 +64,8 @@ export const getGatewayFeedDirectPath = (params: TGatewayFeedParams) => {
 export const getGatewayFeedQueryParams = (
   params: TGatewayFeedParams
 ): GatewayParams => {
-  const isLocationDetailFeed = Boolean(
-    !params.activityType && (params.destination || params.poi || params.region)
-  );
-  const locale = normalizeGatewayLocale(params.locale);
-
   return {
-    ...(locale ? { locale } : {}),
-    ...(!isLocationDetailFeed && params.lat != null ? { lat: params.lat } : {}),
-    ...(!isLocationDetailFeed && params.lng != null ? { lng: params.lng } : {}),
-    ...(params.country ? { country: params.country } : {}),
+    ...getGatewayContextParams(params),
     ...(params.dev ? { dev: params.dev } : {}),
   };
 };
@@ -140,10 +133,12 @@ export const useGatewayFeed = ({
   const isPreparing = enabled && !contextReady;
 
   const params: TGatewayFeedParams = {
-    ...(resolvedLocale ? { locale: resolvedLocale } : {}),
-    ...(resolvedCountry ? { country: resolvedCountry } : {}),
-    ...(resolvedLat != null ? { lat: resolvedLat } : {}),
-    ...(resolvedLng != null ? { lng: resolvedLng } : {}),
+    ...getGatewayContextParams({
+      locale: resolvedLocale,
+      country: resolvedCountry,
+      lat: resolvedLat,
+      lng: resolvedLng,
+    }),
     ...(destination ? { destination } : {}),
     ...(activityType ? { activityType } : {}),
     ...(nonBookable ? { nonBookable } : {}),

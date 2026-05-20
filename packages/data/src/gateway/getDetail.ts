@@ -1,6 +1,6 @@
 "use client";
 
-import { fetchGatewayProxy } from "./client";
+import { fetchGatewayProxy, getGatewayContextParams } from "./client";
 import type {
   TGatewayDetail,
   TGatewayDetailForItemOptions,
@@ -40,10 +40,15 @@ export const getGatewayDetail = async (
   params: TGatewayDetailParams,
   signal?: AbortSignal
 ): Promise<TGatewayDetail> => {
+  const { locale, lat, lng, country, ...queryParams } = params;
+
   return fetchGatewayProxy<TGatewayDetail>({
     apiUrl,
     path: "detail",
-    params,
+    params: {
+      ...queryParams,
+      ...getGatewayContextParams({ locale, lat, lng, country }),
+    },
     signal,
   });
 };
