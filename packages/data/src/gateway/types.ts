@@ -77,6 +77,7 @@ export type TGatewayHomeCarouselSection = {
   component: "carousel";
   title: string;
   pillarSlug?: string | null;
+  pillarPath?: string | null;
   alternates?: TGatewaySectionAlternate[];
   data: TGatewayHomeItem[];
 };
