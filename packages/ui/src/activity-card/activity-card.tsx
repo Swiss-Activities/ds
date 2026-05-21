@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState, type HTMLAttributes } from "react";
+import type { HTMLAttributes } from "react";
 import { Card } from "../card";
 import { Icon } from "../icon/icon";
 import { Clock3, ImageOff, MapPin, Ticket } from "../icons";
@@ -9,6 +9,7 @@ import { Loader } from "../loader";
 import { Rating } from "../rating";
 import { Skeleton } from "../skeleton";
 import { Text } from "../text";
+import { useImageLoadState } from "../use-image-load-state";
 import { cn } from "../utils/cn";
 import { isImageSource, renderImageValue } from "../utils/render-image";
 import { ActivityCardSkeletonContent } from "./activity-card-skeleton";
@@ -194,8 +195,6 @@ export function ActivityCard({
   render,
   ...props
 }: ActivityCardProps) {
-  const [imageFailed, setImageFailed] = useState(false);
-  const [imageLoaded, setImageLoaded] = useState(false);
   const normalizedScore = Number(score) || 0;
   const isCompactLg = variant === "compactLg";
   const isBookable = type === "activity";
@@ -203,6 +202,16 @@ export function ActivityCard({
   const imageSourceKey = imageSource?.src ?? "";
   const hasPricingFooter = isBookable && Boolean(price);
   const shouldUseImageFill = !isBookable && Boolean(imageSource);
+  const {
+    imageContainerRef,
+    imageFailed,
+    imageLoaded,
+    handleImageError,
+    handleImageLoad,
+  } = useImageLoadState<HTMLDivElement>({
+    sourceKey: imageSourceKey,
+    markFailedOnError: true,
+  });
   const showImageFallback = imageFailed || !image;
   const showImageSkeleton = Boolean(imageSource) && !showImageFallback;
   const shouldPairDistanceWithRating =
@@ -220,20 +229,6 @@ export function ActivityCard({
     ? resolvedMetaItems.filter((item) => item.label !== distance)
     : resolvedMetaItems;
 
-  useEffect(() => {
-    setImageFailed(false);
-    setImageLoaded(false);
-  }, [imageSourceKey]);
-
-  const handleImageLoad = () => {
-    setImageLoaded(true);
-  };
-
-  const handleImageError = () => {
-    setImageFailed(true);
-    setImageLoaded(true);
-  };
-
   return (
     <Card
       noPadding
@@ -246,6 +241,7 @@ export function ActivityCard({
       {...props}
     >
       <div
+        ref={imageContainerRef}
         className={cn(
           "relative aspect-[4/3] w-full shrink-0 overflow-hidden",
           isCompactLg && "lg:aspect-auto lg:h-full",

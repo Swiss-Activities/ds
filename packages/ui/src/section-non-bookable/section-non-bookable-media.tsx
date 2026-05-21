@@ -1,8 +1,8 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import { ImageFill } from "../image-fill";
 import { Skeleton } from "../skeleton";
+import { useImageLoadState } from "../use-image-load-state";
 import {
   isImageSource,
   type ImageValue,
@@ -19,20 +19,23 @@ export function SectionNonBookableMedia({
   renderImage,
 }: SectionNonBookableMediaProps) {
   const imageSource = isImageSource(image) ? image : null;
-  const [imageLoaded, setImageLoaded] = useState(false);
-
-  useEffect(() => {
-    setImageLoaded(false);
-  }, [imageSource?.src]);
+  const {
+    imageContainerRef,
+    imageLoaded,
+    handleImageError,
+    handleImageLoad,
+  } = useImageLoadState<HTMLDivElement>({
+    sourceKey: imageSource?.src,
+  });
 
   return (
-    <>
+    <div ref={imageContainerRef} className="relative h-full w-full">
       <ImageFill
         image={image}
         mode="contain"
         renderImage={renderImage}
-        onImageLoad={() => setImageLoaded(true)}
-        onImageError={() => setImageLoaded(true)}
+        onImageLoad={handleImageLoad}
+        onImageError={handleImageError}
       />
       {imageSource ? (
         <Skeleton
@@ -41,6 +44,6 @@ export function SectionNonBookableMedia({
           classNameItems="!rounded-none"
         />
       ) : null}
-    </>
+    </div>
   );
 }

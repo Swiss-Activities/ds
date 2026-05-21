@@ -2,11 +2,14 @@
 
 import {
   isValidElement,
+  useCallback,
   useMemo,
+  useRef,
   useState,
   type HTMLAttributes,
   type SyntheticEvent,
 } from "react";
+import { useImageSync } from "../use-image-load-state";
 import { cn } from "../utils/cn";
 import {
   isImageSource,
@@ -86,6 +89,7 @@ function SourceImageFill({
   onImageLoad?: () => void;
   onImageError?: () => void;
 }) {
+  const probeContainerRef = useRef<HTMLDivElement>(null);
   const [meta, setMeta] = useState<ImageMeta | null>(null);
   const resolvedMode = useResolvedMode({
     mode,
@@ -94,18 +98,40 @@ function SourceImageFill({
   const resolvedBackground =
     backgroundColor || meta?.color || defaultBackgroundColor;
 
-  const handleLoadCapture = (event: SyntheticEvent<HTMLElement>) => {
-    if (!(event.target instanceof HTMLImageElement)) {
-      return;
-    }
-
-    const image = event.target;
-
+  const applyImageMeta = useCallback((image: HTMLImageElement) => {
     setMeta({
       width: image.naturalWidth,
       height: image.naturalHeight,
       color: getAverageColor(image),
     });
+  }, []);
+
+  const handleLoadCapture = useCallback(
+    (event: SyntheticEvent<HTMLElement>) => {
+      if (!(event.target instanceof HTMLImageElement)) {
+        return;
+      }
+
+      applyImageMeta(event.target);
+    },
+    [applyImageMeta]
+  );
+
+  const syncProbeImage = useCallback(() => {
+    const image = probeContainerRef.current?.querySelector("img");
+
+    if (image?.complete && image.naturalWidth > 0) {
+      applyImageMeta(image);
+    }
+  }, [applyImageMeta]);
+  useImageSync(mode === "auto" && !meta, syncProbeImage);
+
+  const handleVisibleLoadCapture = (event: SyntheticEvent<HTMLElement>) => {
+    if (!(event.target instanceof HTMLImageElement)) {
+      return;
+    }
+
+    applyImageMeta(event.target);
   };
 
   const imageWithAlt = {
@@ -116,6 +142,7 @@ function SourceImageFill({
   if (!resolvedMode) {
     return (
       <div
+        ref={probeContainerRef}
         onLoadCapture={handleLoadCapture}
         className="absolute inset-0 overflow-hidden"
         style={{ backgroundColor: resolvedBackground }}
@@ -124,15 +151,13 @@ function SourceImageFill({
           aria-hidden="true"
           className="pointer-events-none absolute inset-0 opacity-0 [&_img]:h-full [&_img]:w-full"
         >
-          {renderImage ? (
-            renderImage({
-              ...source,
-              alt: "",
-              onError: onImageError,
-            })
-          ) : (
-            <img src={source.src} alt="" onError={onImageError} />
-          )}
+          <img
+            src={source.src}
+            alt=""
+            loading="eager"
+            decoding="async"
+            onError={onImageError}
+          />
         </div>
       </div>
     );
@@ -147,7 +172,7 @@ function SourceImageFill({
   if (resolvedMode === "cover") {
     return (
       <div
-        onLoadCapture={handleLoadCapture}
+        onLoadCapture={handleVisibleLoadCapture}
         className={cn(
           "absolute inset-0 [&_img]:h-full [&_img]:w-full [&_img]:object-cover",
           imageClassName
@@ -174,7 +199,7 @@ function SourceImageFill({
 
   return (
     <div
-      onLoadCapture={handleLoadCapture}
+      onLoadCapture={handleVisibleLoadCapture}
       className="absolute inset-0 flex items-center justify-center overflow-hidden"
       style={{ backgroundColor: resolvedBackground }}
     >
