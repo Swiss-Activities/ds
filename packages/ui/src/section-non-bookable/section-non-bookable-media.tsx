@@ -30,20 +30,23 @@ export function SectionNonBookableMedia({
 
   return (
     <div ref={imageContainerRef} className="relative h-full w-full">
-      <ImageFill
-        image={image}
-        mode="contain"
-        renderImage={renderImage}
-        onImageLoad={handleImageLoad}
-        onImageError={handleImageError}
-      />
       {imageSource ? (
         <Skeleton
           full
           loading={!imageLoaded}
+          className="z-0"
           classNameItems="!rounded-none"
         />
       ) : null}
+      <ImageFill
+        image={image}
+        mode="contain"
+        renderImage={renderImage}
+        backgroundColor="transparent"
+        className="relative z-10"
+        onImageLoad={handleImageLoad}
+        onImageError={handleImageError}
+      />
     </div>
   );
 }

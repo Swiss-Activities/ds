@@ -3,13 +3,13 @@
 import {
   isValidElement,
   useCallback,
+  useEffect,
   useMemo,
   useRef,
   useState,
   type HTMLAttributes,
   type SyntheticEvent,
 } from "react";
-import { useImageSync } from "../use-image-load-state";
 import { cn } from "../utils/cn";
 import {
   isImageSource,
@@ -124,7 +124,20 @@ function SourceImageFill({
       applyImageMeta(image);
     }
   }, [applyImageMeta]);
-  useImageSync(mode === "auto" && !meta, syncProbeImage);
+
+  useEffect(() => {
+    if (mode !== "auto" || meta) {
+      return;
+    }
+
+    const frame = window.requestAnimationFrame(syncProbeImage);
+    window.addEventListener("pageshow", syncProbeImage);
+
+    return () => {
+      window.cancelAnimationFrame(frame);
+      window.removeEventListener("pageshow", syncProbeImage);
+    };
+  }, [meta, mode, source.src, syncProbeImage]);
 
   const handleVisibleLoadCapture = (event: SyntheticEvent<HTMLElement>) => {
     if (!(event.target instanceof HTMLImageElement)) {

@@ -250,29 +250,32 @@ export function ActivityCard({
             : "[&_img]:h-full [&_img]:w-full [&_img]:object-cover"
         )}
       >
-        {showImageFallback ? (
-          <ActivityCardImageFallback />
-        ) : shouldUseImageFill ? (
-          <ImageFill
-            image={image}
-            renderImage={renderImage}
-            onImageLoad={handleImageLoad}
-            onImageError={handleImageError}
-          />
-        ) : (
-          renderImageValue(image, renderImage, {
-            onLoad: handleImageLoad,
-            onError: handleImageError,
-          })
-        )}
         {showImageSkeleton ? (
           <Skeleton
             full
             loading={!imageLoaded && !loading}
-            className="z-20"
+            className="z-0"
             classNameItems="!rounded-none"
           />
         ) : null}
+        <div className="relative z-10 h-full w-full">
+          {showImageFallback ? (
+            <ActivityCardImageFallback />
+          ) : shouldUseImageFill ? (
+            <ImageFill
+              image={image}
+              renderImage={renderImage}
+              backgroundColor="transparent"
+              onImageLoad={handleImageLoad}
+              onImageError={handleImageError}
+            />
+          ) : (
+            renderImageValue(image, renderImage, {
+              onLoad: handleImageLoad,
+              onError: handleImageError,
+            })
+          )}
+        </div>
         {isCompactLg ? (
           <ActivityCardCompactOverlay
             title={title}
