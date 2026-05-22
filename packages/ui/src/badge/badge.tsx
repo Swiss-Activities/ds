@@ -8,11 +8,12 @@ export type BadgeProps = BaseBadgeProps & HTMLAttributes<HTMLSpanElement>;
 export function Badge({
   children = null,
   className,
+  size = "default",
   variant = "overlay",
   ...props
 }: BadgeProps) {
   return (
-    <span className={cn(badgeStyles({ variant }), className)} {...props}>
+    <span className={cn(badgeStyles({ size, variant }), className)} {...props}>
       {children ?? ""}
     </span>
   );

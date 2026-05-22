@@ -1,6 +1,9 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import { Badge } from "@swiss-activities/ui";
-import { badgeVariants } from "@swiss-activities/ui/badge/badge.types";
+import {
+  badgeSizes,
+  badgeVariants,
+} from "@swiss-activities/ui/badge/badge.types";
 
 const meta = {
   title: "Components/Badge",
@@ -11,6 +14,10 @@ const meta = {
   argTypes: {
     variant: {
       options: [...badgeVariants],
+      control: "inline-radio",
+    },
+    size: {
+      options: [...badgeSizes],
       control: "inline-radio",
     },
   },
@@ -35,8 +42,17 @@ export const Info: Story = {
 
 export const Glass: Story = {
   args: {
+    size: "lg",
     variant: "glass",
     children: "Official partner SBB",
+  },
+};
+
+export const Dark: Story = {
+  args: {
+    size: "lg",
+    variant: "dark",
+    children: "12'500 booked",
   },
 };
 
