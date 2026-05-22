@@ -3,6 +3,7 @@ import {
   Card,
   SectionScroller,
   Text,
+  sectionScrollerGridItemClassName,
   sectionScrollerItemClassName,
 } from "@swiss-activities/ui";
 import { Page } from "../page";
@@ -76,6 +77,31 @@ export const ThreeItemsOnLarge: Story = {
   render: (args) => (
     <Page>
       <div className="sa-container">
+        <SectionScroller {...args} className="pt-6" />
+      </div>
+    </Page>
+  ),
+};
+
+export const GridDesktopWithoutHeader: Story = {
+  args: {
+    desktopLayout: "grid",
+    hideHeader: true,
+    itemsPerRowLg: 3,
+    children: Array.from({ length: 6 }, (_, i) => (
+      <li key={i} className={sectionScrollerGridItemClassName}>
+        <Card className="flex h-[200px] items-center justify-center">
+          <Text gray>Item {i + 1}</Text>
+        </Card>
+      </li>
+    )),
+  },
+  render: (args) => (
+    <Page>
+      <div className="sa-container">
+        <Text as="h2" size="lg" className="mb-4">
+          External Header
+        </Text>
         <SectionScroller {...args} className="pt-6" />
       </div>
     </Page>

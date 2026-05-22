@@ -8,7 +8,10 @@ import { HorizontalScrollerTrack } from "../horizontal-scroller/horizontal-scrol
 import { Icon } from "../icon/icon";
 import { ChevronLeft, ChevronRight } from "../icons";
 import { cn } from "../utils/cn";
-import type { BaseSectionScrollerProps } from "./section-scroller.types";
+import type {
+  BaseSectionScrollerProps,
+  SectionScrollerDesktopLayout,
+} from "./section-scroller.types";
 
 function NavButton({ direction }: { direction: "prev" | "next" }) {
   const { canScrollLeft, canScrollRight, scrollPrev, scrollNext } =
@@ -43,45 +46,76 @@ const lgItemWidths: Record<
   4: "calc((100% - 84px) / 4)",
 };
 
+const lgGridColumns: Record<
+  NonNullable<SectionScrollerProps["itemsPerRowLg"]>,
+  string
+> = {
+  1: "lg:grid-cols-1",
+  3: "lg:grid-cols-3",
+  4: "lg:grid-cols-4",
+};
+
+const desktopTrackClassNames: Record<SectionScrollerDesktopLayout, string> = {
+  grid: "lg:mx-0 lg:my-0 lg:grid lg:snap-none lg:overflow-visible lg:px-0 lg:py-0 lg:[scroll-padding-inline:0] lg:[&>*]:snap-none",
+  scroll: "",
+};
+
 export function SectionScroller({
   title,
   subtitle,
   action,
   children,
   as: Tag = "section",
+  desktopLayout = "scroll",
+  hideHeader = false,
   itemsPerRowLg = 4,
   noContainer: _noContainer,
+  showControls = true,
   className,
   style,
+  trackClassName,
   ...props
 }: SectionScrollerProps) {
+  const controls = showControls && !hideHeader;
+  const hasHeader = !hideHeader && (title || subtitle || action || controls);
   const mergedStyle = {
     ...style,
     "--section-scroller-item-width-lg": lgItemWidths[itemsPerRowLg],
   } as CSSProperties;
 
   return (
-    <Tag className={cn(className)} style={mergedStyle} {...props}>
-      <HorizontalScrollerRoot>
-        <div className="mb-4 flex flex-wrap items-center gap-x-4 gap-y-2">
-          <div className="flex min-w-0 flex-1 flex-wrap items-center gap-x-4 gap-y-2">
-            <HorizontalScrollerTitle>{title}</HorizontalScrollerTitle>
-            {subtitle}
+    <Tag className={cn("min-w-0", className)} style={mergedStyle} {...props}>
+      <HorizontalScrollerRoot className="min-w-0">
+        {hasHeader ? (
+          <div className="mb-4 flex flex-wrap items-center gap-x-4 gap-y-2">
+            <div className="flex min-w-0 flex-1 flex-wrap items-center gap-x-4 gap-y-2">
+              {title ? (
+                <HorizontalScrollerTitle>{title}</HorizontalScrollerTitle>
+              ) : null}
+              {subtitle}
+              {action ? (
+                <div className="hidden shrink-0 sm:block">{action}</div>
+              ) : null}
+            </div>
             {action ? (
-              <div className="hidden shrink-0 sm:block">{action}</div>
+              <div className="ml-auto shrink-0 sm:hidden">{action}</div>
+            ) : null}
+            {controls ? (
+              <div className="hidden gap-2 sm:flex">
+                <NavButton direction="prev" />
+                <NavButton direction="next" />
+              </div>
             ) : null}
           </div>
-          {action ? (
-            <div className="ml-auto shrink-0 sm:hidden">{action}</div>
-          ) : null}
-          <div className="hidden gap-2 sm:flex">
-            <NavButton direction="prev" />
-            <NavButton direction="next" />
-          </div>
-        </div>
+        ) : null}
         <HorizontalScrollerTrack
           bleed
-          className="-mx-2 -my-2 snap-x gap-4 px-2 py-2 [scroll-padding-inline:0.5rem] sm:-mx-px sm:gap-6 sm:px-px sm:[scroll-padding-inline:1px] lg:gap-7"
+          className={cn(
+            "-mx-2 -my-2 snap-x gap-4 px-2 py-2 [scroll-padding-inline:0.5rem] sm:-mx-px sm:gap-6 sm:px-px sm:[scroll-padding-inline:1px] lg:gap-7",
+            desktopTrackClassNames[desktopLayout],
+            desktopLayout === "grid" && lgGridColumns[itemsPerRowLg],
+            trackClassName
+          )}
         >
           {children}
         </HorizontalScrollerTrack>
@@ -92,3 +126,5 @@ export function SectionScroller({
 
 export const sectionScrollerItemClassName =
   "min-w-0 w-[calc(66%-16px)] max-w-[calc(66%-16px)] shrink-0 snap-start list-none sm:w-[calc(50%-13px)] sm:max-w-[calc(50%-13px)] md:w-[calc(33.333%-16px)] md:max-w-[calc(33.333%-16px)] lg:w-[var(--section-scroller-item-width-lg)] lg:max-w-[var(--section-scroller-item-width-lg)]";
+
+export const sectionScrollerGridItemClassName = `${sectionScrollerItemClassName} lg:w-auto lg:max-w-none lg:shrink lg:snap-none`;
