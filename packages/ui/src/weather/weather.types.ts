@@ -6,6 +6,8 @@ export type WeatherDay = {
   low: number;
   high: number;
   id?: string;
+  date?: string;
+  href?: string;
 };
 
 export const weatherVariants = ["light", "dark", "compact"] as const;

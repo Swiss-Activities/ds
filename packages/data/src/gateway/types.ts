@@ -43,6 +43,7 @@ export type TGatewayReviewItem = TGatewayHomeItem & {
 };
 
 export type TGatewayWeatherCardItem = {
+  date?: string;
   day: string;
   dayFull: string;
   tempMin: number;
@@ -316,6 +317,7 @@ export type TGatewayHomeParams = {
   lat?: number | null;
   lng?: number | null;
   country?: string;
+  date?: string | null;
   dev?: boolean;
 };
 

@@ -22,6 +22,7 @@ export type AppGatewayContext = {
   nonBookable?: string | null;
   poi?: string | null;
   region?: string | null;
+  date?: string | null;
 };
 
 export type AppGatewaySelectItemOptions = {
@@ -113,6 +114,7 @@ export type BaseAppGatewayProps<
   selectedNonBookable?: string | null;
   selectedPoi?: string | null;
   selectedRegion?: string | null;
+  selectedDate?: string | null;
   initialData?: TGatewayHome | null;
   initialContext?: AppGatewayContext | null;
   initialSelectedItemData?: TItemData | null;
@@ -156,6 +158,7 @@ function AppGatewayContent<TSection, THero, TItemData>({
   selectedNonBookable = null,
   selectedPoi = null,
   selectedRegion = null,
+  selectedDate = null,
   initialData = null,
   initialContext = null,
   initialSelectedItemData = null,
@@ -199,6 +202,7 @@ function AppGatewayContent<TSection, THero, TItemData>({
     nonBookable: selectedNonBookable,
     poi: selectedPoi,
     region: selectedRegion,
+    date: selectedDate,
   });
   const data = initialData ?? gatewayFeed.data;
   const isLoading = initialData ? false : gatewayFeed.isLoading;
@@ -218,6 +222,7 @@ function AppGatewayContent<TSection, THero, TItemData>({
       nonBookable: context.nonBookable,
       poi: context.poi,
       region: context.region,
+      date: context.date,
     }),
     [
       context.activityType,
@@ -229,6 +234,7 @@ function AppGatewayContent<TSection, THero, TItemData>({
       context.nonBookable,
       context.poi,
       context.region,
+      context.date,
     ]
   );
 
@@ -438,6 +444,7 @@ function AppGatewayContent<TSection, THero, TItemData>({
       activityType: context.activityType,
       nonBookable: context.nonBookable,
       region: context.region,
+      date: context.date,
     });
   }, [
     context.activityType,
@@ -448,6 +455,7 @@ function AppGatewayContent<TSection, THero, TItemData>({
     context.locale,
     context.nonBookable,
     context.region,
+    context.date,
     contextReady,
     enabled,
     onGatewayContext,

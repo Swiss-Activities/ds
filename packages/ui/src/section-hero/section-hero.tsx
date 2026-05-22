@@ -111,6 +111,7 @@ export function SectionHero({
         unit={unit}
         variant="compact"
         selected={selected}
+        onSelect={onSelect}
       />
     ) : null;
 
@@ -223,13 +224,14 @@ export function SectionHero({
         unit={unit}
         variant="compact"
         selected={selected}
+        onSelect={onSelect}
       />
     ) : null;
 
     return (
       <section className={cn("bg-white", className)} {...props}>
-        <div className="grid min-w-0 gap-6 lg:grid-cols-7 lg:items-start lg:gap-8">
-          <div className="flex min-w-0 flex-col lg:col-span-5">
+        <div className="grid min-w-0 gap-6 lg:grid-cols-[minmax(0,2fr)_minmax(0,1fr)] lg:items-start lg:gap-8">
+          <div className="flex min-w-0 flex-col">
             {title ? (
               <Text
                 as="h1"
@@ -258,7 +260,7 @@ export function SectionHero({
             ) : null}
           </div>
           {desktopWeather ? (
-            <div className="hidden lg:col-span-2 lg:block">
+            <div className="hidden lg:block">
               {desktopWeather}
             </div>
           ) : null}

@@ -101,15 +101,31 @@ function WeatherDayCard({
   const cardClasses = cn(
     "flex flex-col items-start gap-1 rounded-lg border border-solid px-2.5 py-2",
     width ? undefined : "w-full",
-    isSelected ? s.cardSelected : s.card
+    isSelected ? cn(s.cardSelected, "!border-primary") : s.card
   );
 
   const style = width ? { width } : undefined;
+
+  if (day.href) {
+    return (
+      <Button
+        as="a"
+        href={day.href}
+        variant="ghost"
+        aria-current={isSelected ? "date" : undefined}
+        className={cn(cardClasses, "cursor-pointer appearance-none text-left")}
+        style={style}
+      >
+        {content}
+      </Button>
+    );
+  }
 
   if (onSelect) {
     return (
       <Button
         variant="ghost"
+        aria-pressed={isSelected}
         onClick={onSelect}
         className={cn(cardClasses, "cursor-pointer appearance-none text-left")}
         style={style}
@@ -128,21 +144,17 @@ function WeatherDayCard({
 
 function WeatherCompactDayCard({
   day,
-  isCurrent,
+  isActive,
+  onSelect,
   unit,
 }: {
   day: WeatherDay;
-  isCurrent: boolean;
+  isActive: boolean;
+  onSelect?: () => void;
   unit: string;
 }) {
-  return (
-    <div className="flex min-w-0 flex-col items-center px-0.5 py-1.5 text-center">
-      <span
-        className={cn(
-          "mb-1 h-1.5 w-1.5 rounded-full",
-          isCurrent ? "bg-primary" : "bg-transparent"
-        )}
-      />
+  const content = (
+    <>
       <Text as="span" size="xs2" className="max-w-full truncate !text-gray-600">
         {day.label}
       </Text>
@@ -157,8 +169,42 @@ function WeatherCompactDayCard({
         {day.low}
         {unit}
       </Text>
-    </div>
+    </>
   );
+  const className = cn(
+    "flex min-w-0 flex-col items-center rounded-md border border-solid px-1.5 py-2 text-center transition",
+    isActive ? "border-primary" : "border-transparent",
+    onSelect &&
+      "w-full cursor-pointer appearance-none bg-transparent [font:inherit] hover:border-gray-200 hover:bg-gray-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary",
+    onSelect && isActive && "hover:border-primary"
+  );
+
+  if (day.href) {
+    return (
+      <a
+        href={day.href}
+        aria-current={isActive ? "date" : undefined}
+        className={className}
+      >
+        {content}
+      </a>
+    );
+  }
+
+  if (onSelect) {
+    return (
+      <button
+        type="button"
+        aria-pressed={isActive}
+        onClick={onSelect}
+        className={className}
+      >
+        {content}
+      </button>
+    );
+  }
+
+  return <div className={className}>{content}</div>;
 }
 
 function CompactWeather({
@@ -166,6 +212,8 @@ function CompactWeather({
   description,
   title,
   unit,
+  selected,
+  onSelect,
   className,
   ...props
 }: WeatherProps & { unit: string }) {
@@ -216,12 +264,14 @@ function CompactWeather({
         <div className="grid grid-cols-7 gap-1">
           {days.slice(0, 7).map((day, index) => {
             const id = day.id ?? String(index);
+            const isActive = selected ? selected === id : index === 0;
 
             return (
               <WeatherCompactDayCard
                 key={id}
                 day={day}
-                isCurrent={index === 0}
+                isActive={isActive}
+                onSelect={onSelect ? () => onSelect(id) : undefined}
                 unit={unit}
               />
             );
@@ -361,6 +411,7 @@ function WeatherScroller({
           <HorizontalScrollerTrack className="gap-2">
             {days.map((day, i) => {
               const id = day.id ?? String(i);
+              const isActive = selected ? selected === id : i === 0;
               return (
                 <li
                   key={id}
@@ -374,7 +425,7 @@ function WeatherScroller({
                     unit={unit}
                     width={isFixedSizing ? undefined : itemWidth}
                     variant={variant}
-                    isSelected={selected === id}
+                    isSelected={isActive}
                     onSelect={onSelect ? () => onSelect(id) : undefined}
                   />
                 </li>
@@ -412,6 +463,7 @@ export function Weather({
         title={title}
         unit={unit}
         selected={selected}
+        onSelect={onSelect}
         className={className}
         {...props}
       />

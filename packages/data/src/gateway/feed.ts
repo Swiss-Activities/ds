@@ -64,8 +64,15 @@ export const getGatewayFeedDirectPath = (params: TGatewayFeedParams) => {
 export const getGatewayFeedQueryParams = (
   params: TGatewayFeedParams
 ): GatewayParams => {
+  const supportsDate =
+    !params.activityType &&
+    !params.nonBookable &&
+    !params.poi &&
+    !params.region;
+
   return {
     ...getGatewayContextParams(params),
+    ...(supportsDate && params.date ? { date: params.date } : {}),
     ...(params.dev ? { dev: params.dev } : {}),
   };
 };
@@ -108,6 +115,7 @@ export const useGatewayFeed = ({
   nonBookable,
   poi,
   region,
+  date,
   dev,
   enabled = true,
   retry = 3,
@@ -144,6 +152,7 @@ export const useGatewayFeed = ({
     ...(nonBookable ? { nonBookable } : {}),
     ...(poi ? { poi } : {}),
     ...(region ? { region } : {}),
+    ...(date ? { date } : {}),
     ...(dev ? { dev } : {}),
   };
 
@@ -160,6 +169,7 @@ export const useGatewayFeed = ({
       params.nonBookable,
       params.poi,
       params.region,
+      params.date,
       params.dev,
     ],
     queryFn: ({ signal }) => getGatewayFeed(apiUrl, params, signal),
@@ -182,6 +192,7 @@ export const useGatewayFeed = ({
       nonBookable: nonBookable ?? null,
       poi: poi ?? null,
       region: region ?? null,
+      date: date ?? null,
     },
     contextReady,
     isPreparing,
