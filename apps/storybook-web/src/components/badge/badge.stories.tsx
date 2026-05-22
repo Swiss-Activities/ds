@@ -33,6 +33,13 @@ export const Info: Story = {
   },
 };
 
+export const Glass: Story = {
+  args: {
+    variant: "glass",
+    children: "Official partner SBB",
+  },
+};
+
 export const Overlay: Story = {
   args: {
     variant: "overlay",
