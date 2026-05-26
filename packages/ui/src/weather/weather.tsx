@@ -325,6 +325,7 @@ function ScrollBackButton({
       aria-label={label}
       onClick={scrollPrev}
       tabIndex={canScrollLeft ? 0 : -1}
+      style={{ backgroundColor: "transparent" }}
       className={cn(
         "absolute inset-y-0 start-0 z-10 flex w-10 cursor-pointer appearance-none items-center justify-start rounded-none border-0 bg-gradient-to-r to-transparent p-0 ps-2 transition-opacity",
         s.gradient,
