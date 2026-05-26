@@ -280,12 +280,23 @@ function FilterGroupsContent({
 function getItemGroup(
   item: SectionFilterItem,
   groupsById: Map<string, SectionFilterGroup>,
-  groupsByParam: Map<string, SectionFilterGroup>
+  groupsByParam: Map<string, SectionFilterGroup>,
+  groupsByOptionValue: Map<string, SectionFilterGroup>
 ) {
   const groupById = groupsById.get(item.id);
 
   if (groupById) {
     return groupById;
+  }
+
+  if (item.param && item.value) {
+    const groupByOptionValue = groupsByOptionValue.get(
+      `${item.param}:${item.value}`
+    );
+
+    if (groupByOptionValue) {
+      return groupByOptionValue;
+    }
   }
 
   if (item.param) {
@@ -305,6 +316,7 @@ type QuickFilterItemProps = {
   item: SectionFilterItem;
   lessLabel: BaseSectionFiltersProps["filterGroupLessLabel"];
   moreLabel: NonNullable<BaseSectionFiltersProps["filterGroupMoreLabel"]>;
+  size?: "xs" | "sm" | "md";
   onItemClick?: BaseSectionFiltersProps["onItemClick"];
   onItemToggle?: BaseSectionFiltersProps["onFilterGroupItemToggle"];
   onOpenGroup: (group: SectionFilterGroup) => void;
@@ -317,12 +329,17 @@ function QuickFilterItem({
   item,
   lessLabel,
   moreLabel,
+  size,
   onItemClick,
   onItemToggle,
   onOpenGroup,
   searchPlaceholder,
 }: QuickFilterItemProps) {
-  const hasSelectedOptions = group?.items.some((option) => option.selected);
+  const selectedOptionCount =
+    group?.items.filter((option) => option.selected).length ?? 0;
+  const hasSelectedOptions = selectedOptionCount > 0;
+  const hasSelectedDisclosureOptions =
+    item.kind === "disclosure" && hasSelectedOptions;
   const iconRight =
     item.kind === "disclosure" ? (
       <Icon icon={ChevronDown} size="xs" />
@@ -331,17 +348,37 @@ function QuickFilterItem({
     ) : null;
   const buttonClassName = cn(
     "shrink-0 whitespace-nowrap",
-    hasSelectedOptions && "!border-blue !text-blue"
+    item.kind === "removable" && "!min-h-[30px] !px-2.5 !py-1 !text-xs",
+    hasSelectedDisclosureOptions && "relative !border-blue !text-blue"
+  );
+  const removableLabel =
+    item.kind === "removable" && group ? (
+      <>
+        {group.title}: {item.label}
+      </>
+    ) : (
+      item.label
+    );
+  const labelWithSelectedCount = (
+    <>
+      <span>{item.label}</span>
+      {hasSelectedDisclosureOptions ? (
+        <span className="absolute -right-1 -top-0.5 flex h-4 min-w-4 items-center justify-center rounded-full bg-blue px-1 text-[10px] font-semibold leading-none text-white shadow-sm">
+          {selectedOptionCount}
+        </span>
+      ) : null}
+    </>
   );
 
   if (group && item.kind === "disclosure") {
     const trigger = (
       <Button
         type="filter"
-        text={item.label}
         iconRight={iconRight}
         className={buttonClassName}
-      />
+      >
+        {labelWithSelectedCount}
+      </Button>
     );
 
     if (isDesktop) {
@@ -370,22 +407,25 @@ function QuickFilterItem({
     return (
       <Button
         type="filter"
-        text={item.label}
         iconRight={iconRight}
         className={buttonClassName}
         onClick={() => onOpenGroup(group)}
-      />
+      >
+        {labelWithSelectedCount}
+      </Button>
     );
   }
 
   return (
     <Button
       type="filter"
-      text={item.label}
+      size={size}
       iconRight={iconRight}
       className={buttonClassName}
       onClick={() => onItemClick?.(item)}
-    />
+    >
+      {removableLabel}
+    </Button>
   );
 }
 
@@ -404,6 +444,7 @@ export function SectionFilters({
   filterGroupLessLabel = "Show less",
   filterGroupMoreLabel = (remaining) => `Show ${remaining} more`,
   filterGroupSearchPlaceholder,
+  selectedFiltersLabel = "Applied filters",
   items,
   onFilterGroupItemToggle,
   onItemClick,
@@ -445,6 +486,22 @@ export function SectionFilters({
         .filter((group) => paramCounts.get(group.param) === 1)
         .map((group) => [group.param, group])
     );
+  }, [filterGroups]);
+  const groupsByOptionValue = useMemo(() => {
+    const groups = new Map<string, SectionFilterGroup>();
+
+    for (const group of filterGroups) {
+      for (const option of group.items) {
+        const value = option.value ?? option.id;
+        const key = `${group.param}:${value}`;
+
+        if (!groups.has(key)) {
+          groups.set(key, group);
+        }
+      }
+    }
+
+    return groups;
   }, [filterGroups]);
   const configuredQuickItems = items.filter(
     (item) => item.kind !== "removable"
@@ -506,11 +563,16 @@ export function SectionFilters({
                   onClick={() => setPresented(true)}
                 />
               </li>
-              {[...quickItems, ...removableItems].map((item) => (
+              {quickItems.map((item) => (
                 <li key={item.id} className="shrink-0 list-none">
                   <QuickFilterItem
                     item={item}
-                    group={getItemGroup(item, groupsById, groupsByParam)}
+                    group={getItemGroup(
+                      item,
+                      groupsById,
+                      groupsByParam,
+                      groupsByOptionValue
+                    )}
                     isDesktop={aboveDesktopDrawerBreakpoint}
                     lessLabel={filterGroupLessLabel}
                     moreLabel={filterGroupMoreLabel}
@@ -528,6 +590,48 @@ export function SectionFilters({
             <HorizontalScrollerPrev variant="white" />
             <HorizontalScrollerNext variant="white" />
           </HorizontalScrollerRoot>
+          {removableItems.length > 0 ? (
+            <div className="mt-2">
+              <Text
+                as="p"
+                size="xs"
+                bold
+                className="mb-1.5 !text-gray-600"
+              >
+                {selectedFiltersLabel}
+              </Text>
+              <HorizontalScrollerRoot>
+                <HorizontalScrollerTrack className="-my-2 py-2">
+                  {removableItems.map((item) => (
+                    <li key={item.id} className="shrink-0 list-none">
+                      <QuickFilterItem
+                        item={item}
+                        group={getItemGroup(
+                          item,
+                          groupsById,
+                          groupsByParam,
+                          groupsByOptionValue
+                        )}
+                        isDesktop={aboveDesktopDrawerBreakpoint}
+                        lessLabel={filterGroupLessLabel}
+                        moreLabel={filterGroupMoreLabel}
+                        size="sm"
+                        onItemClick={onItemClick}
+                        onItemToggle={onFilterGroupItemToggle}
+                        onOpenGroup={(group) => {
+                          setActiveQuickFilterGroupId(group.id);
+                          setQuickFilterPresented(true);
+                        }}
+                        searchPlaceholder={filterGroupSearchPlaceholder}
+                      />
+                    </li>
+                  ))}
+                </HorizontalScrollerTrack>
+                <HorizontalScrollerPrev variant="white" />
+                <HorizontalScrollerNext variant="white" />
+              </HorizontalScrollerRoot>
+            </div>
+          ) : null}
         </div>
       </section>
 
