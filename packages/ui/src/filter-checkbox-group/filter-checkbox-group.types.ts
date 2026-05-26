@@ -12,7 +12,10 @@ export type FilterCheckboxGroupItem = {
   disabled?: boolean;
   id: string;
   label: ReactNode;
+  lat?: number | null;
+  lng?: number | null;
   selected?: boolean;
+  value?: string;
 };
 
 export type BaseFilterCheckboxGroupProps = {
@@ -22,7 +25,12 @@ export type BaseFilterCheckboxGroupProps = {
   lessLabel?: ReactNode;
   maxVisible?: number;
   moreLabel?: (remaining: number) => ReactNode;
-  onItemToggle?: (id: string, nextValue: boolean) => void;
+  onItemToggle?: (
+    id: string,
+    nextValue: boolean,
+    item: FilterCheckboxGroupItem
+  ) => void;
+  selectionMode?: "multiple" | "single";
   title?: ReactNode;
   type?: "inline" | "accordion";
 };

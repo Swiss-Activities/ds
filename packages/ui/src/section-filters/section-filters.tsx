@@ -1,20 +1,23 @@
 "use client";
 
 import {
+  isValidElement,
   useEffect,
   useMemo,
   useRef,
   useState,
   type HTMLAttributes,
+  type ReactNode,
 } from "react";
 import { Button } from "../button";
 import { FilterCheckboxGroup } from "../filter-checkbox-group";
+import type { FilterCheckboxGroupItem } from "../filter-checkbox-group";
 import { HorizontalScrollerNext } from "../horizontal-scroller/horizontal-scroller.next";
 import { HorizontalScrollerPrev } from "../horizontal-scroller/horizontal-scroller.prev";
 import { HorizontalScrollerRoot } from "../horizontal-scroller/horizontal-scroller.root";
 import { HorizontalScrollerTrack } from "../horizontal-scroller/horizontal-scroller.track";
 import { Icon } from "../icon/icon";
-import { ChevronDown, Filter, X } from "../icons";
+import { Check, ChevronDown, Filter, Search, X } from "../icons";
 import { Popover, PopoverContent, PopoverTrigger } from "../popover";
 import { Sheet } from "../sheet";
 import { Text } from "../text";
@@ -57,6 +60,137 @@ function useMinBreakpoint(breakpoint: SectionFiltersBreakpoint) {
   return matches;
 }
 
+function getNodeText(node: ReactNode): string {
+  if (typeof node === "string" || typeof node === "number") {
+    return String(node);
+  }
+
+  if (Array.isArray(node)) {
+    return node.map(getNodeText).join(" ");
+  }
+
+  if (isValidElement<{ children?: ReactNode }>(node)) {
+    return getNodeText(node.props.children);
+  }
+
+  return "";
+}
+
+type FilterDropdownGroupProps = {
+  group: SectionFilterGroup;
+  inlineFrom?: SectionFiltersBreakpoint;
+  onItemToggle?: BaseSectionFiltersProps["onFilterGroupItemToggle"];
+  searchPlaceholder?: string;
+  showTitle?: boolean;
+  type?: "inline" | "accordion";
+};
+
+function FilterDropdownGroup({
+  group,
+  onItemToggle,
+  searchPlaceholder,
+  showTitle = true,
+  type = "inline",
+}: FilterDropdownGroupProps) {
+  const [open, setOpen] = useState(false);
+  const [query, setQuery] = useState("");
+
+  useEffect(() => {
+    setQuery("");
+  }, [group.id]);
+
+  const normalizedQuery = query.trim().toLocaleLowerCase();
+  const filteredItems = normalizedQuery
+    ? group.items.filter((item) =>
+        getNodeText(item.label).toLocaleLowerCase().includes(normalizedQuery)
+      )
+    : group.items;
+  const visibleItems = [...filteredItems].sort(
+    (a, b) => Number(Boolean(b.selected)) - Number(Boolean(a.selected))
+  );
+  const searchLabel = searchPlaceholder ?? getNodeText(group.title);
+  const isAccordion = type === "accordion";
+
+  const content = (
+    <>
+      <div className={cn("space-y-3", !isAccordion && "px-4 pb-3 pt-4")}>
+        {showTitle && !isAccordion ? (
+          <Text as="h3" bold black>
+            {group.title}
+          </Text>
+        ) : null}
+        <div className="relative">
+          <Icon
+            icon={Search}
+            size="sm"
+            className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-gray-500"
+          />
+          <input
+            type="search"
+            value={query}
+            placeholder={searchPlaceholder}
+            aria-label={searchLabel}
+            className="m-0 h-10 w-full appearance-none rounded-lg border border-solid border-gray-200 bg-white py-2 pl-9 pr-3 text-sm text-gray-950 outline-none transition placeholder:text-gray-500 focus:border-primary focus:ring-0 [&::-webkit-search-cancel-button]:hidden [&::-webkit-search-decoration]:hidden [&::-webkit-search-results-button]:hidden [&::-webkit-search-results-decoration]:hidden"
+            onChange={(event) => setQuery(event.currentTarget.value)}
+          />
+        </div>
+      </div>
+      <div
+        className={cn(
+          "grid gap-1",
+          isAccordion ? "mt-3" : "px-4 pb-4"
+        )}
+      >
+        {visibleItems.map((item) => {
+          const selected = Boolean(item.selected);
+
+          return (
+            <Button
+              key={item.id}
+              type="select"
+              selected={selected}
+              disabled={item.disabled}
+              onClick={() => onItemToggle?.(group, item.id, !selected, item)}
+            >
+              <span className="min-w-0 flex-1 truncate">{item.label}</span>
+              {selected ? (
+                <span className="ms-3 flex shrink-0">
+                  <Icon icon={Check} size="sm" className="group-hover:hidden" />
+                  <Icon icon={X} size="sm" className="hidden group-hover:block" />
+                </span>
+              ) : null}
+            </Button>
+          );
+        })}
+      </div>
+    </>
+  );
+
+  if (isAccordion) {
+    return (
+      <div className="!border-l-0 !border-r-0 !border-t-0 border-b border-solid border-gray-200">
+        <button
+          type="button"
+          className="m-0 flex w-full cursor-pointer appearance-none items-center justify-between gap-4 rounded-none !border-0 !bg-transparent px-4 py-4 text-left font-[inherit] text-current shadow-none"
+          onClick={() => setOpen((current) => !current)}
+        >
+          <Text as="span" size="lg" className="!text-[17px]">
+            {group.title}
+          </Text>
+          <Icon
+            icon={ChevronDown}
+            size="default"
+            className={cn("text-gray-400 transition", open && "rotate-180")}
+          />
+        </button>
+        {open ? <div className="space-y-3 px-4 pb-4">{content}</div> : null}
+      </div>
+    );
+  }
+
+  return <div>{content}</div>;
+}
+
 type FilterGroupContentProps = {
   group: SectionFilterGroup;
   inlineFrom?: SectionFiltersBreakpoint;
@@ -64,6 +198,7 @@ type FilterGroupContentProps = {
   maxVisible?: number;
   moreLabel: NonNullable<BaseSectionFiltersProps["filterGroupMoreLabel"]>;
   onItemToggle?: BaseSectionFiltersProps["onFilterGroupItemToggle"];
+  searchPlaceholder?: BaseSectionFiltersProps["filterGroupSearchPlaceholder"];
   showTitle?: boolean;
   type?: "inline" | "accordion";
 };
@@ -75,9 +210,23 @@ function FilterGroupContent({
   maxVisible,
   moreLabel,
   onItemToggle,
+  searchPlaceholder,
   showTitle = true,
   type = "inline",
 }: FilterGroupContentProps) {
+  if (group.type === "dropdown") {
+    return (
+      <FilterDropdownGroup
+        group={group}
+        inlineFrom={inlineFrom}
+        onItemToggle={onItemToggle}
+        searchPlaceholder={searchPlaceholder}
+        showTitle={showTitle}
+        type={type}
+      />
+    );
+  }
+
   return (
     <FilterCheckboxGroup
       title={showTitle ? group.title : undefined}
@@ -87,7 +236,10 @@ function FilterGroupContent({
       maxVisible={maxVisible}
       lessLabel={lessLabel}
       moreLabel={moreLabel}
-      onItemToggle={(id, nextValue) => onItemToggle?.(group, id, nextValue)}
+      selectionMode={group.type === "radio" ? "single" : "multiple"}
+      onItemToggle={(id, nextValue, item) =>
+        onItemToggle?.(group, id, nextValue, item)
+      }
     />
   );
 }
@@ -97,6 +249,7 @@ type FilterGroupsContentProps = {
   lessLabel: BaseSectionFiltersProps["filterGroupLessLabel"];
   moreLabel: NonNullable<BaseSectionFiltersProps["filterGroupMoreLabel"]>;
   onItemToggle?: BaseSectionFiltersProps["onFilterGroupItemToggle"];
+  searchPlaceholder?: BaseSectionFiltersProps["filterGroupSearchPlaceholder"];
 };
 
 function FilterGroupsContent({
@@ -104,6 +257,7 @@ function FilterGroupsContent({
   lessLabel,
   moreLabel,
   onItemToggle,
+  searchPlaceholder,
 }: FilterGroupsContentProps) {
   return (
     <div className="-mx-4 !border-b-0 !border-l-0 !border-r-0 border-t border-solid border-gray-200 lg:mx-0 lg:border-t-0">
@@ -116,6 +270,7 @@ function FilterGroupsContent({
           lessLabel={lessLabel}
           moreLabel={moreLabel}
           onItemToggle={onItemToggle}
+          searchPlaceholder={searchPlaceholder}
         />
       ))}
     </div>
@@ -153,6 +308,7 @@ type QuickFilterItemProps = {
   onItemClick?: BaseSectionFiltersProps["onItemClick"];
   onItemToggle?: BaseSectionFiltersProps["onFilterGroupItemToggle"];
   onOpenGroup: (group: SectionFilterGroup) => void;
+  searchPlaceholder?: BaseSectionFiltersProps["filterGroupSearchPlaceholder"];
 };
 
 function QuickFilterItem({
@@ -164,6 +320,7 @@ function QuickFilterItem({
   onItemClick,
   onItemToggle,
   onOpenGroup,
+  searchPlaceholder,
 }: QuickFilterItemProps) {
   const hasSelectedOptions = group?.items.some((option) => option.selected);
   const iconRight =
@@ -191,13 +348,19 @@ function QuickFilterItem({
       return (
         <Popover>
           <PopoverTrigger render={trigger} />
-          <PopoverContent>
+          <PopoverContent
+            className={cn(
+              group.type === "dropdown" &&
+                "!max-h-[min(60vh,380px)] !overflow-y-auto !p-0"
+            )}
+          >
             <FilterGroupContent
               group={group}
               lessLabel={lessLabel}
               maxVisible={8}
               moreLabel={moreLabel}
               onItemToggle={onItemToggle}
+              searchPlaceholder={searchPlaceholder}
             />
           </PopoverContent>
         </Popover>
@@ -240,6 +403,7 @@ export function SectionFilters({
   filterGroups = [],
   filterGroupLessLabel = "Show less",
   filterGroupMoreLabel = (remaining) => `Show ${remaining} more`,
+  filterGroupSearchPlaceholder,
   items,
   onFilterGroupItemToggle,
   onItemClick,
@@ -306,6 +470,7 @@ export function SectionFilters({
         lessLabel={filterGroupLessLabel}
         moreLabel={filterGroupMoreLabel}
         onItemToggle={onFilterGroupItemToggle}
+        searchPlaceholder={filterGroupSearchPlaceholder}
       />
     ) : (
       <div className="grid gap-2">
@@ -332,7 +497,7 @@ export function SectionFilters({
         <div className="pb-4 pt-8">
           <HorizontalScrollerRoot>
             <HorizontalScrollerTrack className="-my-2 py-2">
-              <li className="shrink-0 list-none">
+              <li className="shrink-0 list-none lg:hidden">
                 <Button
                   type="pill"
                   text={filterButtonLabel}
@@ -355,6 +520,7 @@ export function SectionFilters({
                       setActiveQuickFilterGroupId(group.id);
                       setQuickFilterPresented(true);
                     }}
+                    searchPlaceholder={filterGroupSearchPlaceholder}
                   />
                 </li>
               ))}
@@ -434,6 +600,7 @@ export function SectionFilters({
                         maxVisible={8}
                         moreLabel={filterGroupMoreLabel}
                         onItemToggle={onFilterGroupItemToggle}
+                        searchPlaceholder={filterGroupSearchPlaceholder}
                         showTitle={false}
                       />
                     ) : null}

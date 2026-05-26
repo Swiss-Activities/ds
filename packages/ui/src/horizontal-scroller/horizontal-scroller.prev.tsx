@@ -20,8 +20,10 @@ function DefaultArrowButton({
   return (
     <div className="absolute start-0 top-0 flex h-full items-center">
       <button
+        type="button"
+        style={{ backgroundColor: "transparent" }}
         className={cn(
-          "pointer-events-auto relative flex w-8 cursor-pointer items-center justify-center border-none",
+          "pointer-events-auto relative m-0 flex w-8 cursor-pointer appearance-none items-center justify-center rounded-none border-none p-0 shadow-none",
           {
             "h-full bg-transparent from-white text-black":
               variant === "white" || variant === "white-button",

@@ -261,13 +261,15 @@ export type TGatewayFilterOption = {
   count: number;
   selected: boolean;
   disabled?: boolean;
+  lat?: number;
+  lng?: number;
 };
 
 export type TGatewayFilterGroup = {
   id: string;
-  type: "checkbox";
+  type: "checkbox" | "radio" | "dropdown";
   title: string;
-  param: "tags";
+  param: "tags" | "radiusKm" | "destination";
   options: TGatewayFilterOption[];
 };
 
@@ -295,6 +297,7 @@ export type TGatewayFilterParams = {
   page?: number;
   perPage?: number;
   tags?: string[];
+  destination?: string | null;
   dev?: boolean;
 };
 

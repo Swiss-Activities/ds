@@ -129,6 +129,8 @@ export const Button = forwardRef<any, ButtonProps>(function Button(props, ref) {
     {
       "!border border-gray-400 bg-white text-gray-700 sm:hover:border-gray-500 sm:hover:bg-gray-500 sm:hover:text-white":
         resolvedType === "secondary",
+      "!border border-transparent bg-white text-gray-900 sm:hover:border-gray-50 sm:hover:bg-gray-50":
+        resolvedType === "select",
       "!border border-primary bg-primary text-white hover:text-white sm:hover:border-dark sm:hover:bg-dark":
         resolvedType === "primary" || resolvedType === "pill-primary",
       "!border !border-transparent text-primary sm:hover:underline":
@@ -170,6 +172,8 @@ export const Button = forwardRef<any, ButtonProps>(function Button(props, ref) {
         resolvedType === "instruction",
       "!min-h-[36px] !px-2.5 !py-1 !text-xs lg:!text-[14px]": size === "sm",
       "!min-h-[24px] !px-2 !py-0.5 !text-xs": size === "xs",
+      "!min-h-[40px] w-full justify-between !px-3 !py-2 text-left":
+        resolvedType === "select",
       "!pointer-events-none": loading,
     },
     className

@@ -16,6 +16,7 @@ export const buttonVariants = [
   "pill-primary",
   "primary",
   "secondary",
+  "select",
   "tertiary",
   "transparent",
   "white",

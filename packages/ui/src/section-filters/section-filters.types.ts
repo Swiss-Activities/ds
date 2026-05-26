@@ -14,6 +14,7 @@ export type SectionFilterGroup = {
   items: FilterCheckboxGroupItem[];
   param: string;
   title: ReactNode;
+  type?: "checkbox" | "radio" | "dropdown";
 };
 
 export type SectionFiltersBreakpoint = "sm" | "md" | "lg" | "xl" | "2xl";
@@ -30,11 +31,13 @@ export type BaseSectionFiltersProps = {
   filterGroups?: SectionFilterGroup[];
   filterGroupLessLabel?: ReactNode;
   filterGroupMoreLabel?: (remaining: number) => ReactNode;
+  filterGroupSearchPlaceholder?: string;
   items: SectionFilterItem[];
   onFilterGroupItemToggle?: (
     group: SectionFilterGroup,
     itemId: string,
-    nextValue: boolean
+    nextValue: boolean,
+    item: FilterCheckboxGroupItem
   ) => void;
   onItemClick?: (item: SectionFilterItem) => void;
 };

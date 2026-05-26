@@ -37,6 +37,13 @@ export const sharedButtonVariantStyles: Record<
     webInteraction:
       "sm:hover:border-gray-500 sm:hover:bg-gray-500 sm:hover:text-white focus-visible:outline-gray-500",
   },
+  select: {
+    container:
+      "min-h-[40px] w-full justify-between border border-transparent bg-white px-3 py-2",
+    text: "text-left text-sm font-medium text-gray-900",
+    webInteraction:
+      "sm:hover:border-gray-50 sm:hover:bg-gray-50 focus-visible:outline-primary",
+  },
   tertiary: {
     container: "border border-transparent bg-transparent",
     text: "text-primary",

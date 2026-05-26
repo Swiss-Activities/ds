@@ -84,12 +84,14 @@ function FilterCheckboxList({
   maxVisible,
   moreLabel,
   onItemToggle,
+  selectionMode,
 }: {
   items: FilterCheckboxGroupItem[];
   lessLabel: BaseFilterCheckboxGroupProps["lessLabel"];
   maxVisible: number;
   moreLabel: NonNullable<BaseFilterCheckboxGroupProps["moreLabel"]>;
   onItemToggle?: BaseFilterCheckboxGroupProps["onItemToggle"];
+  selectionMode: NonNullable<BaseFilterCheckboxGroupProps["selectionMode"]>;
 }) {
   const [isAll, setIsAll] = useState(false);
   const [selectedById, setSelectedById] = useState<Record<string, boolean>>({});
@@ -112,10 +114,10 @@ function FilterCheckboxList({
           className="py-1"
           onChange={(nextValue) => {
             setSelectedById((current) => ({
-              ...current,
+              ...(selectionMode === "single" && nextValue ? {} : current),
               [item.id]: nextValue,
             }));
-            onItemToggle?.(item.id, nextValue);
+            onItemToggle?.(item.id, nextValue, item);
           }}
         />
       ))}
@@ -144,6 +146,7 @@ export function FilterCheckboxGroup({
   maxVisible = 5,
   moreLabel = (remaining) => `Show ${remaining} more`,
   onItemToggle,
+  selectionMode = "multiple",
   title,
   type = "inline",
   ...props
@@ -158,9 +161,10 @@ export function FilterCheckboxGroup({
         maxVisible={maxVisible}
         moreLabel={moreLabel}
         onItemToggle={onItemToggle}
+        selectionMode={selectionMode}
       />
     ),
-    [items, lessLabel, maxVisible, moreLabel, onItemToggle]
+    [items, lessLabel, maxVisible, moreLabel, onItemToggle, selectionMode]
   );
 
   if (type === "accordion" && !shouldRenderInline) {

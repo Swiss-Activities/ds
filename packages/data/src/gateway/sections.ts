@@ -102,31 +102,69 @@ export const getGatewayStaticFilterConfig = (
 
 export const applyGatewayFilterSelection = (
   config: TGatewayFilterConfig,
-  selectedValues: string[]
+  selection:
+    | string[]
+    | {
+        destination?: string | null;
+        tags?: string[];
+      }
 ): TGatewayFilterConfig => {
-  const selectedSet = new Set(selectedValues.filter(Boolean));
+  const selectedTags = Array.isArray(selection)
+    ? selection
+    : (selection.tags ?? []);
+  const selectedDestination = Array.isArray(selection)
+    ? null
+    : (selection.destination ?? null);
+  const selectedSet = new Set(selectedTags.filter(Boolean));
   const labels = new Map<string, string>();
+  let selectedDestinationLabel: string | null = null;
 
   for (const group of config.groups) {
     for (const option of group.options) {
-      labels.set(option.value, option.label);
+      if (group.param === "destination") {
+        if (option.value === selectedDestination) {
+          selectedDestinationLabel = option.label;
+        }
+      } else {
+        labels.set(option.value, option.label);
+      }
     }
   }
 
   return {
     endpoint: config.endpoint,
-    items: Array.from(selectedSet).map((value) => ({
-      id: `tag:${value}`,
-      label: labels.get(value) ?? formatGatewayFilterValue(value),
-      kind: "removable",
-      param: "tags",
-      value,
-    })),
+    items: [
+      ...Array.from(selectedSet).map((value) => ({
+        id: `tag:${value}`,
+        label: labels.get(value) ?? formatGatewayFilterValue(value),
+        kind: "removable" as const,
+        param: "tags",
+        value,
+      })),
+      ...(selectedDestination
+        ? [
+            {
+              id: `destination:${selectedDestination}`,
+              label:
+                selectedDestinationLabel ??
+                formatGatewayFilterValue(selectedDestination),
+              kind: "removable" as const,
+              param: "destination",
+              value: selectedDestination,
+            },
+          ]
+        : []),
+    ],
     groups: config.groups.map((group) => ({
       ...group,
       options: group.options.map((option) => ({
         ...option,
-        selected: selectedSet.has(option.value),
+        selected:
+          group.param === "destination"
+            ? option.value === selectedDestination
+            : group.param === "tags"
+              ? selectedSet.has(option.value)
+              : option.selected,
       })),
     })),
   };
