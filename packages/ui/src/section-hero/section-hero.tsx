@@ -132,7 +132,7 @@ export function SectionHero({
                 <SectionHeroBackLink label={backLabel} onClick={onBack} />
               </div>
             ) : null}
-            <div className="relative z-20 grid min-h-[200px] items-center gap-6 px-4 py-8 text-center sm:min-h-[252px] sm:px-6 lg:min-h-[360px] lg:grid-cols-7 lg:px-10 lg:py-12 lg:text-left xl:px-12">
+            <div className="relative z-20 grid min-h-[200px] items-center gap-6 px-4 py-8 text-center sm:min-h-[252px] sm:px-6 lg:min-h-[360px] lg:grid-cols-8 lg:gap-8 lg:px-10 lg:py-12 lg:text-left xl:px-12">
               <div className="flex min-w-0 flex-col items-center lg:col-span-5 lg:items-start">
                 {title ? (
                   <Text
@@ -145,7 +145,7 @@ export function SectionHero({
                 ) : null}
               </div>
               {desktopWeather ? (
-                <div className="hidden lg:col-span-2 lg:block">
+                <div className="hidden lg:col-span-3 lg:block">
                   {desktopWeather}
                 </div>
               ) : null}
