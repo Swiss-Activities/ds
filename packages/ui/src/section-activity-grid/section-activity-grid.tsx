@@ -68,7 +68,12 @@ export function SectionActivityGrid({
       {...props}
     >
       {items.map((a, i) => (
-        <li key={i} className={sectionScrollerItemClassName}>
+        <li
+          key={i}
+          className={sectionScrollerItemClassName}
+          data-section-activity-item
+          data-section-activity-item-index={i}
+        >
           <ActivityCard
             image={a.image}
             title={a.title}

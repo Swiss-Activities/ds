@@ -81,7 +81,12 @@ export function SectionGrid({
         )}
       >
         {items.map((a, i) => (
-          <li key={i} className="min-w-0 list-none">
+          <li
+            key={i}
+            className="min-w-0 list-none"
+            data-section-activity-item
+            data-section-activity-item-index={i}
+          >
             <ActivityCard
               image={a.image}
               title={a.title}
