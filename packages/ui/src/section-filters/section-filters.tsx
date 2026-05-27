@@ -348,7 +348,8 @@ function QuickFilterItem({
     ) : null;
   const buttonClassName = cn(
     "shrink-0 whitespace-nowrap",
-    item.kind === "removable" && "!min-h-[30px] !px-2.5 !py-1 !text-xs",
+    item.kind === "removable" &&
+      "!min-h-[36px] !px-3 !py-1.5 !text-xs sm:!text-sm lg:!min-h-[30px] lg:!px-2.5 lg:!py-1 lg:!text-xs",
     hasSelectedDisclosureOptions && "relative !border-blue !text-blue"
   );
   const removableLabel =
@@ -563,8 +564,32 @@ export function SectionFilters({
                   onClick={() => setPresented(true)}
                 />
               </li>
+              {removableItems.map((item) => (
+                <li key={item.id} className="shrink-0 list-none lg:hidden">
+                  <QuickFilterItem
+                    item={item}
+                    group={getItemGroup(
+                      item,
+                      groupsById,
+                      groupsByParam,
+                      groupsByOptionValue
+                    )}
+                    isDesktop={aboveDesktopDrawerBreakpoint}
+                    lessLabel={filterGroupLessLabel}
+                    moreLabel={filterGroupMoreLabel}
+                    size="sm"
+                    onItemClick={onItemClick}
+                    onItemToggle={onFilterGroupItemToggle}
+                    onOpenGroup={(group) => {
+                      setActiveQuickFilterGroupId(group.id);
+                      setQuickFilterPresented(true);
+                    }}
+                    searchPlaceholder={filterGroupSearchPlaceholder}
+                  />
+                </li>
+              ))}
               {quickItems.map((item) => (
-                <li key={item.id} className="shrink-0 list-none">
+                <li key={item.id} className="hidden shrink-0 list-none lg:list-item">
                   <QuickFilterItem
                     item={item}
                     group={getItemGroup(
@@ -591,7 +616,7 @@ export function SectionFilters({
             <HorizontalScrollerNext variant="white" />
           </HorizontalScrollerRoot>
           {removableItems.length > 0 ? (
-            <div className="mt-2">
+            <div className="mt-2 hidden lg:block">
               <Text
                 as="p"
                 size="xs"
