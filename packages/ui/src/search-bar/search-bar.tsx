@@ -59,6 +59,8 @@ export const SearchBar = forwardRef<HTMLDivElement, SearchBarProps>(
     const rootRef = useRef<HTMLDivElement | null>(null);
     const inputRef = useRef<HTMLInputElement | null>(null);
     const sheetInputRef = useRef<HTMLInputElement | null>(null);
+    const suppressMobileSheetFocusRef = useRef(false);
+    const suppressMobileSheetFocusTimeoutRef = useRef<number | null>(null);
     const isControlledValue = value !== undefined;
     const isControlledOpen = open !== undefined;
     const [internalValue, setInternalValue] = useState(defaultValue);
@@ -97,6 +99,24 @@ export const SearchBar = forwardRef<HTMLDivElement, SearchBarProps>(
       onOpenChange?.(nextOpen);
     };
 
+    const clearMobileSheetFocusSuppression = () => {
+      suppressMobileSheetFocusRef.current = false;
+
+      if (suppressMobileSheetFocusTimeoutRef.current != null) {
+        window.clearTimeout(suppressMobileSheetFocusTimeoutRef.current);
+        suppressMobileSheetFocusTimeoutRef.current = null;
+      }
+    };
+
+    const suppressMobileSheetFocus = () => {
+      clearMobileSheetFocusSuppression();
+      suppressMobileSheetFocusRef.current = true;
+      suppressMobileSheetFocusTimeoutRef.current = window.setTimeout(() => {
+        suppressMobileSheetFocusRef.current = false;
+        suppressMobileSheetFocusTimeoutRef.current = null;
+      }, 500);
+    };
+
     const setInputValue = (nextValue: string) => {
       if (!isControlledValue) {
         setInternalValue(nextValue);
@@ -116,6 +136,15 @@ export const SearchBar = forwardRef<HTMLDivElement, SearchBarProps>(
         query.removeEventListener("change", handleChange);
       };
     }, []);
+
+    useEffect(
+      () => () => {
+        if (suppressMobileSheetFocusTimeoutRef.current != null) {
+          window.clearTimeout(suppressMobileSheetFocusTimeoutRef.current);
+        }
+      },
+      []
+    );
 
     useEffect(() => {
       if (!autoFocus) return;
@@ -204,15 +233,34 @@ export const SearchBar = forwardRef<HTMLDivElement, SearchBarProps>(
       event: FocusEvent<HTMLInputElement>,
       inSheet = false
     ) => {
+      if (
+        shouldUseMobileSheet &&
+        !inSheet &&
+        suppressMobileSheetFocusRef.current
+      ) {
+        return;
+      }
+
       setOpen(true);
 
       if (shouldUseMobileSheet && !inSheet) {
-        event.currentTarget.blur();
+        return;
       }
+    };
+
+    const handleMobileSheetPresentedChange = (nextPresented: boolean) => {
+      if (!nextPresented) {
+        suppressMobileSheetFocus();
+        sheetInputRef.current?.blur();
+        inputRef.current?.blur();
+      }
+
+      setOpen(nextPresented);
     };
 
     const renderInput = (inSheet = false) => {
       const isMobileLayout = isMobile || inSheet;
+      const isMobileSheetTrigger = shouldUseMobileSheet && !inSheet;
       const inputField = (
         <input
           ref={inSheet ? sheetInputRef : inputRef}
@@ -230,6 +278,21 @@ export const SearchBar = forwardRef<HTMLDivElement, SearchBarProps>(
           spellCheck={false}
           maxLength={512}
           disabled={disabled}
+          onPointerDown={
+            !inSheet && shouldUseMobileSheet
+              ? clearMobileSheetFocusSuppression
+              : undefined
+          }
+          style={
+            isMobileSheetTrigger
+              ? {
+                  fontSize: 16,
+                  transform: "scale(0.875)",
+                  transformOrigin: "left center",
+                  width: "114.285714%",
+                }
+              : undefined
+          }
           className={cn(
             "rounded-full border-transparent bg-white placeholder-gray-500 focus:!border-primary focus:!outline-primary focus-visible:!border-primary focus-visible:!outline-primary",
             {
@@ -238,6 +301,7 @@ export const SearchBar = forwardRef<HTMLDivElement, SearchBarProps>(
               "w-full border border-solid border-gray-200 px-10 py-3 text-base focus:!border-gray-200 focus:!outline-none focus-visible:!border-gray-200 focus-visible:!outline-none":
                 isMobileLayout,
               "text-sm": isMain && !inSheet,
+              "!ps-12": isMobileSheetTrigger,
             },
             classNameInput
           )}
@@ -255,7 +319,7 @@ export const SearchBar = forwardRef<HTMLDivElement, SearchBarProps>(
           <div className={cn("relative flex w-full", classNameInputWrapper)}>
             <div
               className={cn(
-                "absolute top-1/2 flex -translate-y-1/2 items-center justify-center",
+                "pointer-events-none absolute top-1/2 z-10 flex -translate-y-1/2 items-center justify-center",
                 {
                   "start-3.5": isMobileLayout,
                   "start-4": !isMobileLayout,
@@ -376,10 +440,14 @@ export const SearchBar = forwardRef<HTMLDivElement, SearchBarProps>(
         ) : null}
         <SheetFull.Root
           presented={shouldShowMobileSheet}
-          onPresentedChange={setOpen}
+          onPresentedChange={handleMobileSheetPresentedChange}
         >
           <SheetFull.Portal>
-            <SheetFull.View contentPlacement="bottom" className="!h-[100dvh]">
+            <SheetFull.View
+              contentPlacement="bottom"
+              className="!h-[100dvh]"
+              onDismissAutoFocus={{ focus: false }}
+            >
               <SheetFull.Backdrop />
               <SheetFull.CloseButton label={sheetCloseLabel} />
               <SheetFull.Content
