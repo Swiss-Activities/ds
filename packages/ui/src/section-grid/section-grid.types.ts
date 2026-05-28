@@ -7,7 +7,7 @@ export type BaseSectionGridProps = {
   activities: ActivityItem[];
   loading?: boolean;
   skeletonAmount?: number;
-  itemsPerRowLg?: 1 | 2 | 3 | 4 | "auto";
+  itemsPerRowLg?: 1 | 2 | 3 | 4 | "auto" | "auto-fill";
   className?: string;
   onActivityHover?: (activity: ActivityItem | null) => void;
 };

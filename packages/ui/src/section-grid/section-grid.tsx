@@ -20,6 +20,7 @@ const columnClasses: Record<
   3: "lg:grid-cols-3",
   4: "lg:grid-cols-4",
   auto: "lg:grid-cols-[repeat(auto-fit,minmax(280px,1fr))]",
+  "auto-fill": "lg:grid-cols-[repeat(auto-fill,minmax(220px,1fr))]",
 };
 
 export function SectionGrid({

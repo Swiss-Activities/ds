@@ -22,6 +22,7 @@ export * from "./content-blocks";
 export * from "./filter-checkbox-group";
 export * from "./flag";
 export * from "./flow";
+export * from "./full-screen-app";
 export * from "./header";
 export * from "./hero";
 export * from "./image-fill";
