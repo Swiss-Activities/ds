@@ -300,6 +300,7 @@ export type TGatewayFilterParams = {
   perPage?: number;
   tags?: string[];
   destination?: string | null;
+  view?: "list" | "map" | null;
   dev?: boolean;
 };
 
@@ -332,6 +333,7 @@ export type TGatewayFeedParams = TGatewayHomeParams & {
   nonBookable?: string | null;
   region?: string | null;
   poi?: string | null;
+  view?: "list" | "map" | null;
 };
 
 export type TGatewaySearchSuggestion = {

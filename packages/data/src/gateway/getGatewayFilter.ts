@@ -53,6 +53,7 @@ export const useGatewayFilter = ({
   perPage = 20,
   tags = [],
   destination = null,
+  view = null,
   dev,
   enabled = true,
   retry = false,
@@ -86,6 +87,7 @@ export const useGatewayFilter = ({
     perPage,
     ...(normalizedTags.length > 0 ? { tags: normalizedTags } : {}),
     ...(destination ? { destination } : {}),
+    ...(view ? { view } : {}),
     ...(dev ? { dev } : {}),
   };
 
@@ -102,6 +104,7 @@ export const useGatewayFilter = ({
       params.perPage,
       params.tags?.join(","),
       params.destination,
+      params.view,
       params.dev,
     ],
     queryFn: ({ signal }) => getGatewayFilter(apiUrl, params, signal),

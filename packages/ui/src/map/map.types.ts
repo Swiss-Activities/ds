@@ -15,6 +15,13 @@ export type MapCenter = {
   lng: number;
 };
 
+export type MapBounds = {
+  east: number;
+  north: number;
+  south: number;
+  west: number;
+};
+
 export type MapProps = {
   apiKey?: string;
   center?: MapCenter;
@@ -23,5 +30,6 @@ export type MapProps = {
   height?: number | string;
   markers?: MapPoint[];
   options?: google.maps.MapOptions;
+  onBoundsChange?: (bounds: MapBounds) => void;
   zoom?: number;
 };

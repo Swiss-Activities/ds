@@ -73,6 +73,7 @@ export const getGatewayFeedQueryParams = (
   return {
     ...getGatewayContextParams(params),
     ...(supportsDate && params.date ? { date: params.date } : {}),
+    ...(params.activityType && params.view ? { view: params.view } : {}),
     ...(params.dev ? { dev: params.dev } : {}),
   };
 };
@@ -116,6 +117,7 @@ export const useGatewayFeed = ({
   poi,
   region,
   date,
+  view,
   dev,
   enabled = true,
   retry = 3,
@@ -153,6 +155,7 @@ export const useGatewayFeed = ({
     ...(poi ? { poi } : {}),
     ...(region ? { region } : {}),
     ...(date ? { date } : {}),
+    ...(activityType && view ? { view } : {}),
     ...(dev ? { dev } : {}),
   };
 
@@ -170,6 +173,7 @@ export const useGatewayFeed = ({
       params.poi,
       params.region,
       params.date,
+      params.view,
       params.dev,
     ],
     queryFn: ({ signal }) => getGatewayFeed(apiUrl, params, signal),

@@ -48,6 +48,7 @@ export const useActivityTypeFilter = ({
   page = 1,
   perPage = 20,
   tags = [],
+  view = null,
   dev,
   enabled = true,
   retry = false,
@@ -80,6 +81,7 @@ export const useActivityTypeFilter = ({
     page,
     perPage,
     ...(normalizedTags.length > 0 ? { tags: normalizedTags } : {}),
+    ...(view ? { view } : {}),
     ...(dev ? { dev } : {}),
   };
 
@@ -95,6 +97,7 @@ export const useActivityTypeFilter = ({
       params.page,
       params.perPage,
       params.tags?.join(","),
+      params.view,
       params.dev,
     ],
     queryFn: ({ signal }) => getActivityTypeFilter(apiUrl, params, signal),

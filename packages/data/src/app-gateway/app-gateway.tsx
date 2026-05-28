@@ -115,6 +115,7 @@ export type BaseAppGatewayProps<
   selectedPoi?: string | null;
   selectedRegion?: string | null;
   selectedDate?: string | null;
+  selectedView?: "list" | "map" | null;
   initialData?: TGatewayHome | null;
   initialContext?: AppGatewayContext | null;
   initialSelectedItemData?: TItemData | null;
@@ -159,6 +160,7 @@ function AppGatewayContent<TSection, THero, TItemData>({
   selectedPoi = null,
   selectedRegion = null,
   selectedDate = null,
+  selectedView = null,
   initialData = null,
   initialContext = null,
   initialSelectedItemData = null,
@@ -203,6 +205,7 @@ function AppGatewayContent<TSection, THero, TItemData>({
     poi: selectedPoi,
     region: selectedRegion,
     date: selectedDate,
+    view: selectedView,
   });
   const data = initialData ?? gatewayFeed.data;
   const isLoading = initialData ? false : gatewayFeed.isLoading;

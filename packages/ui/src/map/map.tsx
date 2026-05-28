@@ -6,7 +6,7 @@ import {
   OverlayViewF,
   useJsApiLoader,
 } from "@react-google-maps/api";
-import type { ComponentType } from "react";
+import { useCallback, useRef, type ComponentType } from "react";
 import {
   Binoculars,
   Castle,
@@ -21,7 +21,7 @@ import {
 import type { LucideProps } from "../icons";
 import { Icon } from "../icon/icon";
 import { cn } from "../utils/cn";
-import type { MapCenter, MapPoint, MapProps } from "./map.types";
+import type { MapBounds, MapCenter, MapPoint, MapProps } from "./map.types";
 
 const DEFAULT_CENTER = { lat: 46.8182, lng: 8.2275 };
 const DEFAULT_ZOOM = 8;
@@ -154,6 +154,18 @@ function resolveCenter(
   return center ?? markers?.[0] ?? DEFAULT_CENTER;
 }
 
+function toMapBounds(bounds: google.maps.LatLngBounds): MapBounds {
+  const northEast = bounds.getNorthEast();
+  const southWest = bounds.getSouthWest();
+
+  return {
+    east: northEast.lng(),
+    north: northEast.lat(),
+    south: southWest.lat(),
+    west: southWest.lng(),
+  };
+}
+
 function MapFallback({
   className,
   fallback,
@@ -212,13 +224,24 @@ export function Map({
   fallback,
   height,
   markers = [],
+  onBoundsChange,
   options,
   zoom = DEFAULT_ZOOM,
 }: MapProps) {
+  const mapRef = useRef<google.maps.Map | null>(null);
   const { isLoaded, loadError } = useJsApiLoader({
     googleMapsApiKey: apiKey ?? "",
     id: SCRIPT_ID,
   });
+  const emitBoundsChange = useCallback(() => {
+    const bounds = mapRef.current?.getBounds();
+
+    if (!bounds) {
+      return;
+    }
+
+    onBoundsChange?.(toMapBounds(bounds));
+  }, [onBoundsChange]);
 
   if (!apiKey || loadError || !isLoaded) {
     return (
@@ -234,6 +257,14 @@ export function Map({
       <GoogleMap
         center={resolveCenter(center, markers)}
         mapContainerClassName="h-full w-full"
+        onIdle={emitBoundsChange}
+        onLoad={(map) => {
+          mapRef.current = map;
+          emitBoundsChange();
+        }}
+        onUnmount={() => {
+          mapRef.current = null;
+        }}
         options={{ ...DEFAULT_MAP_OPTIONS, ...options }}
         zoom={zoom}
       >
