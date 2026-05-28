@@ -11,7 +11,6 @@ import {
 } from "react";
 import { Button } from "../button";
 import { FilterCheckboxGroup } from "../filter-checkbox-group";
-import type { FilterCheckboxGroupItem } from "../filter-checkbox-group";
 import { HorizontalScrollerNext } from "../horizontal-scroller/horizontal-scroller.next";
 import { HorizontalScrollerPrev } from "../horizontal-scroller/horizontal-scroller.prev";
 import { HorizontalScrollerRoot } from "../horizontal-scroller/horizontal-scroller.root";

@@ -6,7 +6,6 @@ import {
   useRef,
   useState,
   type ChangeEvent,
-  type FocusEvent,
   type HTMLAttributes,
   type KeyboardEvent,
 } from "react";
@@ -229,10 +228,7 @@ export const SearchBar = forwardRef<HTMLDivElement, SearchBarProps>(
       handleSubmit();
     };
 
-    const handleFocus = (
-      event: FocusEvent<HTMLInputElement>,
-      inSheet = false
-    ) => {
+    const handleFocus = (inSheet = false) => {
       if (
         shouldUseMobileSheet &&
         !inSheet &&
@@ -267,7 +263,7 @@ export const SearchBar = forwardRef<HTMLDivElement, SearchBarProps>(
           id={inSheet && inputId ? `${inputId}-sheet` : inputId}
           onBlur={() => {}}
           onChange={handleChange}
-          onFocus={(event) => handleFocus(event, inSheet)}
+          onFocus={() => handleFocus(inSheet)}
           onKeyDown={handleKeyDown}
           value={inputValue}
           type="text"
