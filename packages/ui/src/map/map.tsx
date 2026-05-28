@@ -30,6 +30,95 @@ const MARKER_OFFSET = (width: number, height: number) => ({
   x: -(width / 2),
   y: -height,
 });
+const SA_MAP_STYLES: google.maps.MapTypeStyle[] = [
+  {
+    elementType: "geometry",
+    stylers: [{ color: "#f4f1ea" }],
+  },
+  {
+    elementType: "labels.icon",
+    stylers: [{ visibility: "off" }],
+  },
+  {
+    elementType: "labels.text.fill",
+    stylers: [{ color: "#73716c" }],
+  },
+  {
+    elementType: "labels.text.stroke",
+    stylers: [{ color: "#f7f5ef" }],
+  },
+  {
+    featureType: "administrative",
+    elementType: "geometry.stroke",
+    stylers: [{ color: "#d7d3c8" }],
+  },
+  {
+    featureType: "administrative.land_parcel",
+    stylers: [{ visibility: "off" }],
+  },
+  {
+    featureType: "administrative.neighborhood",
+    stylers: [{ visibility: "off" }],
+  },
+  {
+    featureType: "landscape.man_made",
+    elementType: "geometry",
+    stylers: [{ color: "#f0ede6" }],
+  },
+  {
+    featureType: "landscape.natural",
+    elementType: "geometry",
+    stylers: [{ color: "#e9f3dc" }],
+  },
+  {
+    featureType: "poi",
+    stylers: [{ visibility: "off" }],
+  },
+  {
+    featureType: "poi.park",
+    elementType: "geometry",
+    stylers: [{ color: "#d8efc7" }],
+  },
+  {
+    featureType: "road",
+    elementType: "geometry",
+    stylers: [{ color: "#ffffff" }],
+  },
+  {
+    featureType: "road",
+    elementType: "geometry.stroke",
+    stylers: [{ color: "#dedbd2" }],
+  },
+  {
+    featureType: "road",
+    elementType: "labels.text.fill",
+    stylers: [{ color: "#8b8982" }],
+  },
+  {
+    featureType: "road.highway",
+    elementType: "geometry",
+    stylers: [{ color: "#fefefe" }],
+  },
+  {
+    featureType: "road.local",
+    elementType: "labels",
+    stylers: [{ visibility: "off" }],
+  },
+  {
+    featureType: "transit",
+    stylers: [{ visibility: "off" }],
+  },
+  {
+    featureType: "water",
+    elementType: "geometry",
+    stylers: [{ color: "#cfe8f3" }],
+  },
+  {
+    featureType: "water",
+    elementType: "labels.text.fill",
+    stylers: [{ color: "#78919b" }],
+  },
+];
 const DEFAULT_MAP_OPTIONS: NonNullable<MapProps["options"]> = {
   clickableIcons: false,
   disableDefaultUI: true,
@@ -40,6 +129,7 @@ const DEFAULT_MAP_OPTIONS: NonNullable<MapProps["options"]> = {
   scaleControl: false,
   scrollwheel: true,
   streetViewControl: false,
+  styles: SA_MAP_STYLES,
   zoomControl: false,
 };
 const categoryMarkerIcons: Record<string, ComponentType<LucideProps>> = {
