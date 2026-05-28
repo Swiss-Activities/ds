@@ -348,7 +348,7 @@ function QuickFilterItem({
   const buttonClassName = cn(
     "shrink-0 whitespace-nowrap",
     item.kind === "removable" &&
-      "!min-h-[36px] !px-3 !py-1.5 !text-xs sm:!text-sm lg:!min-h-[30px] lg:!px-2.5 lg:!py-1 lg:!text-xs",
+      "!min-h-[36px] !px-3 !py-1.5 !text-xs sm:!text-sm",
     hasSelectedDisclosureOptions && "relative !border-blue !text-blue"
   );
   const removableLabel =
@@ -518,6 +518,39 @@ export function SectionFilters({
           param: group.param,
         }));
   const removableItems = items.filter((item) => item.kind === "removable");
+  const appliedFilterScroller =
+    removableItems.length > 0 ? (
+      <HorizontalScrollerRoot className="min-w-0">
+        <HorizontalScrollerTrack className="-my-2 py-2">
+          {removableItems.map((item) => (
+            <li key={item.id} className="shrink-0 list-none">
+              <QuickFilterItem
+                item={item}
+                group={getItemGroup(
+                  item,
+                  groupsById,
+                  groupsByParam,
+                  groupsByOptionValue
+                )}
+                isDesktop={aboveDesktopDrawerBreakpoint}
+                lessLabel={filterGroupLessLabel}
+                moreLabel={filterGroupMoreLabel}
+                size="sm"
+                onItemClick={onItemClick}
+                onItemToggle={onFilterGroupItemToggle}
+                onOpenGroup={(group) => {
+                  setActiveQuickFilterGroupId(group.id);
+                  setQuickFilterPresented(true);
+                }}
+                searchPlaceholder={filterGroupSearchPlaceholder}
+              />
+            </li>
+          ))}
+        </HorizontalScrollerTrack>
+        <HorizontalScrollerPrev variant="white" />
+        <HorizontalScrollerNext variant="white" />
+      </HorizontalScrollerRoot>
+    ) : null;
   const activeQuickFilterGroup = activeQuickFilterGroupId
     ? groupsById.get(activeQuickFilterGroupId)
     : null;
@@ -555,7 +588,7 @@ export function SectionFilters({
       <section className={cn(className)} {...props}>
         <div className="pt-4">
           {hideQuickFilters ? (
-            <div className="flex items-center justify-between gap-3">
+            <div className="flex min-w-0 items-center gap-3">
               <Button
                 type="pill"
                 text={filterButtonLabel}
@@ -563,6 +596,11 @@ export function SectionFilters({
                 className="!min-h-[36px] shrink-0 whitespace-nowrap !bg-white lg:hover:!border-blue lg:hover:!bg-white lg:hover:!text-blue"
                 onClick={() => setPresented(true)}
               />
+              {appliedFilterScroller ? (
+                <div className="min-w-0 flex-1">{appliedFilterScroller}</div>
+              ) : action ? (
+                <div className="min-w-0 flex-1" />
+              ) : null}
               {action ? <div className="shrink-0">{action}</div> : null}
             </div>
           ) : (
@@ -629,46 +667,9 @@ export function SectionFilters({
               <HorizontalScrollerNext variant="white" />
             </HorizontalScrollerRoot>
           )}
-          {removableItems.length > 0 ? (
-            <div className={cn("mt-2", hideQuickFilters ? "block" : "hidden lg:block")}>
-              <Text
-                as="p"
-                size="xs"
-                bold
-                className="mb-1.5 !text-gray-600"
-              >
-                {selectedFiltersLabel}
-              </Text>
-              <HorizontalScrollerRoot>
-                <HorizontalScrollerTrack className="-my-2 py-2">
-                  {removableItems.map((item) => (
-                    <li key={item.id} className="shrink-0 list-none">
-                      <QuickFilterItem
-                        item={item}
-                        group={getItemGroup(
-                          item,
-                          groupsById,
-                          groupsByParam,
-                          groupsByOptionValue
-                        )}
-                        isDesktop={aboveDesktopDrawerBreakpoint}
-                        lessLabel={filterGroupLessLabel}
-                        moreLabel={filterGroupMoreLabel}
-                        size="sm"
-                        onItemClick={onItemClick}
-                        onItemToggle={onFilterGroupItemToggle}
-                        onOpenGroup={(group) => {
-                          setActiveQuickFilterGroupId(group.id);
-                          setQuickFilterPresented(true);
-                        }}
-                        searchPlaceholder={filterGroupSearchPlaceholder}
-                      />
-                    </li>
-                  ))}
-                </HorizontalScrollerTrack>
-                <HorizontalScrollerPrev variant="white" />
-                <HorizontalScrollerNext variant="white" />
-              </HorizontalScrollerRoot>
+          {removableItems.length > 0 && !hideQuickFilters ? (
+            <div className="mt-2 hidden lg:block">
+              {appliedFilterScroller}
             </div>
           ) : null}
         </div>

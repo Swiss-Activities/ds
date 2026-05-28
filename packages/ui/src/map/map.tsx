@@ -467,6 +467,7 @@ export function Map({
   markers = [],
   onBoundsChange,
   options,
+  recenterKey,
   zoom = DEFAULT_ZOOM,
 }: MapProps) {
   const mapRef = useRef<google.maps.Map | null>(null);
@@ -517,6 +518,14 @@ export function Map({
       setSelectedMarkerId(null);
     }
   }, [markers, selectedMarkerId]);
+
+  useEffect(() => {
+    if (!mapRef.current || recenterKey === undefined) {
+      return;
+    }
+
+    mapRef.current.panTo(resolveCenter(center, markers));
+  }, [center, markers, recenterKey]);
 
   if (!apiKey || loadError || !isLoaded) {
     return (

@@ -35,23 +35,25 @@ export function SectionGrid({
 }: SectionGridProps) {
   const items: ActivityItem[] = activities.length
     ? activities
-    : Array.from({ length: skeletonAmount }, () => ({
-        image: null,
-        title: "",
-        type: "activity",
-        subtitle: undefined,
-        category: undefined,
-        dateRange: undefined,
-        distance: undefined,
-        meta: undefined,
-        score: 0,
-        reviewCount: 0,
-        priceLabel: "",
-        price: "",
-        pending: false,
-        renderImage: undefined,
-        render: undefined,
-      }));
+    : loading
+      ? Array.from({ length: skeletonAmount }, () => ({
+          image: null,
+          title: "",
+          type: "activity",
+          subtitle: undefined,
+          category: undefined,
+          dateRange: undefined,
+          distance: undefined,
+          meta: undefined,
+          score: 0,
+          reviewCount: 0,
+          priceLabel: "",
+          price: "",
+          pending: false,
+          renderImage: undefined,
+          render: undefined,
+        }))
+      : [];
 
   const titleNode = loading ? (
     <Skeleton

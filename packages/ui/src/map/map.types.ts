@@ -36,5 +36,6 @@ export type MapProps = {
   markers?: MapPoint[];
   options?: google.maps.MapOptions;
   onBoundsChange?: (bounds: MapBounds) => void;
+  recenterKey?: number;
   zoom?: number;
 };

@@ -14,6 +14,7 @@ const triggerActiveStyles =
 
 export function SegmentedControl<T extends string>({
   className,
+  iconOnly = false,
   onChange,
   options,
   size = "md",
@@ -39,7 +40,13 @@ export function SegmentedControl<T extends string>({
             className={cn(
               segmentedControlTriggerStyles,
               isPill ? "rounded-full" : "rounded-md",
-              size === "sm" ? "min-h-8 px-3 py-1" : "min-h-9 px-3.5 py-1.5",
+              size === "sm"
+                ? iconOnly
+                  ? "size-8 p-1"
+                  : "min-h-8 px-3 py-1"
+                : iconOnly
+                  ? "size-9 p-1.5"
+                  : "min-h-9 px-3.5 py-1.5",
               !selected && "hover:bg-gray-50 hover:text-gray-950",
               selected && triggerActiveStyles,
               option.disabled && "line-through opacity-50"
@@ -52,7 +59,7 @@ export function SegmentedControl<T extends string>({
             {option.icon ? (
               <span className="flex text-current">{option.icon}</span>
             ) : null}
-            <span>{option.label}</span>
+            <span className={cn(iconOnly && "sr-only")}>{option.label}</span>
           </button>
         );
       })}
