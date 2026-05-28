@@ -20,6 +20,7 @@ export type SectionFilterGroup = {
 export type SectionFiltersBreakpoint = "sm" | "md" | "lg" | "xl" | "2xl";
 
 export type BaseSectionFiltersProps = {
+  action?: ReactNode;
   className?: string;
   drawerPlacement?: "bottom" | "left" | "right";
   filterButtonLabel?: ReactNode;
@@ -32,6 +33,7 @@ export type BaseSectionFiltersProps = {
   filterGroupLessLabel?: ReactNode;
   filterGroupMoreLabel?: (remaining: number) => ReactNode;
   filterGroupSearchPlaceholder?: string;
+  hideQuickFilters?: boolean;
   selectedFiltersLabel?: ReactNode;
   items: SectionFilterItem[];
   onFilterGroupItemToggle?: (

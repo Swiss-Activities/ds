@@ -7,6 +7,8 @@ export type TGatewayHomeItem = {
   subtitle?: string | null;
   path?: string;
   detailPath?: string | null;
+  lat?: number | null;
+  lng?: number | null;
   type:
     | "activity"
     | "non-bookable"

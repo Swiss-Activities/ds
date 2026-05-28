@@ -42,6 +42,7 @@ export * from "./product-info-list";
 export * from "./provider-icon";
 export * from "./region-explorer";
 export * from "./search-bar";
+export * from "./segmented-control";
 export * from "./skeleton";
 export * from "./slider";
 export * from "./text";

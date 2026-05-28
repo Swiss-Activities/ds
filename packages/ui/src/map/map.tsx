@@ -37,6 +37,7 @@ const DEFAULT_MAP_OPTIONS: NonNullable<MapProps["options"]> = {
   keyboardShortcuts: false,
   mapTypeControl: false,
   scaleControl: false,
+  scrollwheel: false,
   streetViewControl: false,
   zoomControl: false,
 };

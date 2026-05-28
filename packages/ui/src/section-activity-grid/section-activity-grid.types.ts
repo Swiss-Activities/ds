@@ -6,6 +6,7 @@ import type {
   ActivityCardVariant,
 } from "../activity-card/activity-card.types";
 import type { BaseSectionScrollerProps } from "../section-scroller/section-scroller.types";
+import type { MapPoint } from "../map";
 import type { ImageValue, RenderImage } from "../utils/render-image";
 
 export type ActivityItem = {
@@ -23,6 +24,7 @@ export type ActivityItem = {
   reviewCount?: number | null;
   priceLabel?: string;
   price?: string | null;
+  mapPoint?: MapPoint | null;
   pending?: boolean;
   renderImage?: RenderImage;
   render?: ActivityCardRender;
