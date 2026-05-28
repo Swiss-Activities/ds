@@ -9,6 +9,7 @@ export type BaseSectionGridProps = {
   skeletonAmount?: number;
   itemsPerRowLg?: 1 | 2 | 3 | 4 | "auto";
   className?: string;
+  onActivityHover?: (activity: ActivityItem | null) => void;
 };
 
 export type { ActivityItem as SectionGridItem };

@@ -30,6 +30,7 @@ export function SectionGrid({
   skeletonAmount = 8,
   itemsPerRowLg = 4,
   className,
+  onActivityHover,
   ...props
 }: SectionGridProps) {
   const items: ActivityItem[] = activities.length
@@ -89,6 +90,8 @@ export function SectionGrid({
             className="min-w-0 list-none"
             data-section-activity-item
             data-section-activity-item-index={i}
+            onMouseEnter={() => onActivityHover?.(loading ? null : a)}
+            onMouseLeave={() => onActivityHover?.(null)}
           >
             <ActivityCard
               image={a.image}

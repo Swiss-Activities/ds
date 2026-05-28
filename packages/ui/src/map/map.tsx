@@ -6,7 +6,14 @@ import {
   OverlayViewF,
   useJsApiLoader,
 } from "@react-google-maps/api";
-import { useCallback, useRef, type ComponentType } from "react";
+import {
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+  type ComponentType,
+} from "react";
 import {
   Binoculars,
   Castle,
@@ -17,8 +24,10 @@ import {
   Store,
   Ticket,
   Trees,
+  X,
 } from "../icons";
 import type { LucideProps } from "../icons";
+import { ActivityCard } from "../activity-card";
 import { Icon } from "../icon/icon";
 import { cn } from "../utils/cn";
 import type { MapBounds, MapCenter, MapPoint, MapProps } from "./map.types";
@@ -30,6 +39,11 @@ const MARKER_OFFSET = (width: number, height: number) => ({
   x: -(width / 2),
   y: -height,
 });
+const MARKER_COLLISION_PADDING = 6;
+const MARKER_ICON_SIZE = { height: 36, width: 36 };
+const MARKER_PRICE_SIZE = { height: 30, width: 88 };
+const POPUP_EDGE_PADDING = 12;
+const POPUP_GAP = 10;
 const SA_MAP_STYLES: google.maps.MapTypeStyle[] = [
   {
     elementType: "geometry",
@@ -166,6 +180,172 @@ function toMapBounds(bounds: google.maps.LatLngBounds): MapBounds {
   };
 }
 
+function getMapSize(map: google.maps.Map | null) {
+  const container = map?.getDiv();
+
+  if (!container) {
+    return null;
+  }
+
+  return {
+    height: container.clientHeight,
+    width: container.clientWidth,
+  };
+}
+
+function getMarkerSize(marker: MapPoint) {
+  return marker.priceLabel ? MARKER_PRICE_SIZE : MARKER_ICON_SIZE;
+}
+
+function getMarkerRect(
+  marker: MapPoint,
+  bounds: MapBounds,
+  size: { height: number; width: number }
+) {
+  const longitudeSpan =
+    bounds.east >= bounds.west
+      ? bounds.east - bounds.west
+      : 360 - bounds.west + bounds.east;
+  const latitudeSpan = bounds.north - bounds.south;
+
+  if (longitudeSpan <= 0 || latitudeSpan <= 0) {
+    return null;
+  }
+
+  const longitudeOffset =
+    marker.lng >= bounds.west
+      ? marker.lng - bounds.west
+      : 360 - bounds.west + marker.lng;
+  const markerSize = getMarkerSize(marker);
+  const x = (longitudeOffset / longitudeSpan) * size.width;
+  const y = ((bounds.north - marker.lat) / latitudeSpan) * size.height;
+
+  return {
+    bottom: y + MARKER_COLLISION_PADDING,
+    left: x - markerSize.width / 2 - MARKER_COLLISION_PADDING,
+    right: x + markerSize.width / 2 + MARKER_COLLISION_PADDING,
+    top: y - markerSize.height - MARKER_COLLISION_PADDING,
+  };
+}
+
+function getPopupOffset({
+  bounds,
+  marker,
+  popup,
+  size,
+}: {
+  bounds: MapBounds | null;
+  marker: MapPoint;
+  popup: { height: number; width: number };
+  size: { height: number; width: number } | null;
+}) {
+  const markerSize = getMarkerSize(marker);
+  const fallbackOffset = {
+    x: -(popup.width / 2),
+    y: -(popup.height + markerSize.height + POPUP_GAP),
+  };
+
+  if (!bounds || !size) {
+    return fallbackOffset;
+  }
+
+  const rect = getMarkerRect(marker, bounds, size);
+
+  if (!rect) {
+    return fallbackOffset;
+  }
+
+  const markerCenterX = (rect.left + rect.right) / 2;
+  let x = -(popup.width / 2);
+  const popupLeft = markerCenterX + x;
+  const popupRight = popupLeft + popup.width;
+
+  if (popupLeft < POPUP_EDGE_PADDING) {
+    x += POPUP_EDGE_PADDING - popupLeft;
+  } else if (popupRight > size.width - POPUP_EDGE_PADDING) {
+    x -= popupRight - (size.width - POPUP_EDGE_PADDING);
+  }
+
+  const hasRoomAbove = rect.top >= popup.height + POPUP_GAP;
+
+  return {
+    x,
+    y: hasRoomAbove
+      ? -(popup.height + markerSize.height + POPUP_GAP)
+      : POPUP_GAP,
+  };
+}
+
+function overlapsRect(
+  a: NonNullable<ReturnType<typeof getMarkerRect>>,
+  b: NonNullable<ReturnType<typeof getMarkerRect>>
+) {
+  return (
+    a.left < b.right &&
+    a.right > b.left &&
+    a.top < b.bottom &&
+    a.bottom > b.top
+  );
+}
+
+function getDeclutteredMarkers({
+  activeMarkerId,
+  bounds,
+  markers,
+  selectedMarkerId,
+  size,
+}: {
+  activeMarkerId?: string | null;
+  bounds: MapBounds | null;
+  markers: MapPoint[];
+  selectedMarkerId?: string | null;
+  size: { height: number; width: number } | null;
+}) {
+  if (!bounds || !size) {
+    return markers;
+  }
+
+  const visibleMarkers: MapPoint[] = [];
+  const visibleRects: Array<NonNullable<ReturnType<typeof getMarkerRect>>> = [];
+  const priorityMarkerIds = [activeMarkerId, selectedMarkerId].filter(
+    Boolean
+  ) as string[];
+  const sortedMarkers = priorityMarkerIds.length
+    ? [...markers].sort((a, b) => {
+        const priorityA = priorityMarkerIds.indexOf(a.id);
+        const priorityB = priorityMarkerIds.indexOf(b.id);
+
+        if (priorityA === -1 && priorityB === -1) return 0;
+        if (priorityA === -1) return 1;
+        if (priorityB === -1) return -1;
+        return priorityA - priorityB;
+      })
+    : markers;
+
+  sortedMarkers.forEach((marker) => {
+    const rect = getMarkerRect(marker, bounds, size);
+
+    if (!rect) {
+      visibleMarkers.push(marker);
+      return;
+    }
+
+    const isPriority = priorityMarkerIds.includes(marker.id);
+
+    if (
+      !isPriority &&
+      visibleRects.some((visibleRect) => overlapsRect(rect, visibleRect))
+    ) {
+      return;
+    }
+
+    visibleMarkers.push(marker);
+    visibleRects.push(rect);
+  });
+
+  return visibleMarkers;
+}
+
 function MapFallback({
   className,
   fallback,
@@ -191,12 +371,29 @@ function resolveMarkerIcon(marker: MapPoint) {
   return MapPin;
 }
 
-function MapMarker({ marker }: { marker: MapPoint }) {
+function MapMarker({
+  isActive,
+  marker,
+  onClick,
+}: {
+  isActive?: boolean;
+  marker: MapPoint;
+  onClick: () => void;
+}) {
   if (marker.priceLabel) {
     return (
       <div
         aria-label={marker.title}
-        className="cursor-pointer rounded-full border border-gray-300 bg-white px-3 py-1.5 text-[13px] font-bold leading-none text-gray-950 shadow-[0_5px_8px_rgba(0,0,0,0.16)] transition-colors duration-150 hover:border-primary hover:bg-primary hover:text-white"
+        onClick={(event) => {
+          event.stopPropagation();
+          onClick();
+        }}
+        className={cn(
+          "cursor-pointer rounded-full border px-3 py-1.5 text-[13px] font-bold leading-none shadow-[0_5px_8px_rgba(0,0,0,0.16)] transition-colors duration-150 hover:border-gray-950 hover:bg-gray-950 hover:text-white",
+          isActive
+            ? "border-gray-950 bg-gray-950 text-white"
+            : "border-gray-300 bg-white text-gray-950"
+        )}
       >
         {marker.priceLabel}
       </div>
@@ -206,7 +403,16 @@ function MapMarker({ marker }: { marker: MapPoint }) {
   return (
     <div
       aria-label={marker.title}
-      className="flex size-9 cursor-pointer items-center justify-center rounded-full border border-gray-300 bg-white text-gray-950 shadow-[0_5px_8px_rgba(0,0,0,0.16)] transition-colors duration-150 hover:border-primary hover:bg-primary hover:text-white"
+      onClick={(event) => {
+        event.stopPropagation();
+        onClick();
+      }}
+      className={cn(
+        "flex size-9 cursor-pointer items-center justify-center rounded-full border shadow-[0_5px_8px_rgba(0,0,0,0.16)] transition-colors duration-150 hover:border-gray-950 hover:bg-gray-950 hover:text-white",
+        isActive
+          ? "border-gray-950 bg-gray-950 text-white"
+          : "border-gray-300 bg-white text-gray-950"
+      )}
     >
       <Icon
         icon={resolveMarkerIcon(marker)}
@@ -217,7 +423,42 @@ function MapMarker({ marker }: { marker: MapPoint }) {
   );
 }
 
+function MapMarkerPopup({
+  marker,
+  onClose,
+}: {
+  marker: MapPoint;
+  onClose: () => void;
+}) {
+  const card = marker.card ?? {
+    image: null,
+    title: marker.title,
+    type: marker.type ?? "non-bookable",
+  };
+
+  return (
+    <div className="relative w-[280px] max-w-[calc(100vw-2rem)] rounded-xl border border-gray-950 bg-white shadow-[0_10px_24px_rgba(0,0,0,0.2)]">
+      <button
+        type="button"
+        aria-label="Close"
+        onClick={(event) => {
+          event.stopPropagation();
+          onClose();
+        }}
+        className="absolute right-2 top-2 z-10 flex size-8 items-center justify-center rounded-full bg-white text-gray-950 shadow-sm transition hover:bg-gray-950 hover:text-white"
+      >
+        <Icon icon={X} size="sm" />
+      </button>
+      <ActivityCard
+        {...card}
+        className="border-none shadow-none"
+      />
+    </div>
+  );
+}
+
 export function Map({
+  activeMarkerId,
   apiKey,
   center,
   className,
@@ -229,6 +470,12 @@ export function Map({
   zoom = DEFAULT_ZOOM,
 }: MapProps) {
   const mapRef = useRef<google.maps.Map | null>(null);
+  const [selectedMarkerId, setSelectedMarkerId] = useState<string | null>(null);
+  const [mapBounds, setMapBounds] = useState<MapBounds | null>(null);
+  const [mapSize, setMapSize] = useState<{
+    height: number;
+    width: number;
+  } | null>(null);
   const { isLoaded, loadError } = useJsApiLoader({
     googleMapsApiKey: apiKey ?? "",
     id: SCRIPT_ID,
@@ -240,8 +487,36 @@ export function Map({
       return;
     }
 
-    onBoundsChange?.(toMapBounds(bounds));
+    const nextBounds = toMapBounds(bounds);
+
+    setMapBounds(nextBounds);
+    setMapSize(getMapSize(mapRef.current));
+    onBoundsChange?.(nextBounds);
   }, [onBoundsChange]);
+  const visibleMarkers = useMemo(
+    () =>
+      getDeclutteredMarkers({
+        activeMarkerId,
+        bounds: mapBounds,
+        markers,
+        selectedMarkerId,
+        size: mapSize,
+      }),
+    [activeMarkerId, mapBounds, mapSize, markers, selectedMarkerId]
+  );
+  const selectedMarker = useMemo(
+    () => markers.find((marker) => marker.id === selectedMarkerId) ?? null,
+    [markers, selectedMarkerId]
+  );
+
+  useEffect(() => {
+    if (
+      selectedMarkerId &&
+      !markers.some((marker) => marker.id === selectedMarkerId)
+    ) {
+      setSelectedMarkerId(null);
+    }
+  }, [markers, selectedMarkerId]);
 
   if (!apiKey || loadError || !isLoaded) {
     return (
@@ -265,20 +540,54 @@ export function Map({
         onUnmount={() => {
           mapRef.current = null;
         }}
+        onClick={() => setSelectedMarkerId(null)}
         options={{ ...DEFAULT_MAP_OPTIONS, ...options }}
         zoom={zoom}
       >
-        {markers.map((marker) => (
+        {visibleMarkers.map((marker) => (
           <OverlayViewF
             key={marker.id}
             position={{ lat: marker.lat, lng: marker.lng }}
             mapPaneName={OverlayView.OVERLAY_MOUSE_TARGET}
             getPixelPositionOffset={MARKER_OFFSET}
-            zIndex={marker.priceLabel ? 20 : 10}
+            zIndex={
+              marker.id === activeMarkerId || marker.id === selectedMarkerId
+                ? 30
+                : marker.priceLabel
+                  ? 20
+                  : 10
+            }
           >
-            <MapMarker marker={marker} />
+            <MapMarker
+              marker={marker}
+              isActive={
+                marker.id === activeMarkerId || marker.id === selectedMarkerId
+              }
+              onClick={() => setSelectedMarkerId(marker.id)}
+            />
           </OverlayViewF>
         ))}
+        {selectedMarker ? (
+          <OverlayViewF
+            key={`popup-${selectedMarker.id}`}
+            position={{ lat: selectedMarker.lat, lng: selectedMarker.lng }}
+            mapPaneName={OverlayView.OVERLAY_MOUSE_TARGET}
+            getPixelPositionOffset={(width, height) =>
+              getPopupOffset({
+                bounds: mapBounds,
+                marker: selectedMarker,
+                popup: { height, width },
+                size: mapSize,
+              })
+            }
+            zIndex={40}
+          >
+            <MapMarkerPopup
+              marker={selectedMarker}
+              onClose={() => setSelectedMarkerId(null)}
+            />
+          </OverlayViewF>
+        ) : null}
       </GoogleMap>
     </div>
   );

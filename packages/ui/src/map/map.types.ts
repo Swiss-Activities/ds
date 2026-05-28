@@ -1,6 +1,10 @@
 import type { ReactNode } from "react";
+import type { BaseActivityCardProps } from "../activity-card/activity-card.types";
+
+export type MapMarkerCard = Omit<BaseActivityCardProps, "className">;
 
 export type MapPoint = {
+  card?: MapMarkerCard;
   category?: string | null;
   id: string;
   priceLabel?: string | null;
@@ -23,6 +27,7 @@ export type MapBounds = {
 };
 
 export type MapProps = {
+  activeMarkerId?: string | null;
   apiKey?: string;
   center?: MapCenter;
   className?: string;
