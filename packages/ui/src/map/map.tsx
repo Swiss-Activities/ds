@@ -34,10 +34,11 @@ const DEFAULT_MAP_OPTIONS: NonNullable<MapProps["options"]> = {
   clickableIcons: false,
   disableDefaultUI: true,
   fullscreenControl: false,
+  gestureHandling: "greedy",
   keyboardShortcuts: false,
   mapTypeControl: false,
   scaleControl: false,
-  scrollwheel: false,
+  scrollwheel: true,
   streetViewControl: false,
   zoomControl: false,
 };
