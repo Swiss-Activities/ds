@@ -1,10 +1,13 @@
 import type { ReactNode } from "react";
 
 export type MapPoint = {
+  category?: string | null;
   id: string;
+  priceLabel?: string | null;
   title: string;
   lat: number;
   lng: number;
+  type?: "activity" | "non-bookable" | "point-of-interest" | null;
 };
 
 export type MapCenter = {

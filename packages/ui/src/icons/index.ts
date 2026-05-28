@@ -1,4 +1,6 @@
 export {
+  Binoculars,
+  Castle,
   Check,
   ChevronDown,
   ChevronLeft,
@@ -13,6 +15,7 @@ export {
   Globe,
   House,
   ImageOff,
+  Landmark,
   Languages,
   Loader2,
   List,
@@ -21,6 +24,7 @@ export {
   Plus,
   Search,
   Store,
+  Trees,
   Star,
   StarHalf,
   Sun,

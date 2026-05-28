@@ -1,12 +1,35 @@
 "use client";
 
-import { GoogleMap, MarkerF, useJsApiLoader } from "@react-google-maps/api";
+import {
+  GoogleMap,
+  OverlayView,
+  OverlayViewF,
+  useJsApiLoader,
+} from "@react-google-maps/api";
+import type { ComponentType } from "react";
+import {
+  Binoculars,
+  Castle,
+  Flame,
+  Landmark,
+  MapPin,
+  Mountain,
+  Store,
+  Ticket,
+  Trees,
+} from "../icons";
+import type { LucideProps } from "../icons";
+import { Icon } from "../icon/icon";
 import { cn } from "../utils/cn";
-import type { MapCenter, MapProps } from "./map.types";
+import type { MapCenter, MapPoint, MapProps } from "./map.types";
 
 const DEFAULT_CENTER = { lat: 46.8182, lng: 8.2275 };
 const DEFAULT_ZOOM = 8;
 const SCRIPT_ID = "swiss-activities-google-map";
+const MARKER_OFFSET = (width: number, height: number) => ({
+  x: -(width / 2),
+  y: -height,
+});
 const DEFAULT_MAP_OPTIONS: NonNullable<MapProps["options"]> = {
   clickableIcons: false,
   disableDefaultUI: true,
@@ -16,6 +39,15 @@ const DEFAULT_MAP_OPTIONS: NonNullable<MapProps["options"]> = {
   scaleControl: false,
   streetViewControl: false,
   zoomControl: false,
+};
+const categoryMarkerIcons: Record<string, ComponentType<LucideProps>> = {
+  "castles-ruins": Castle,
+  exhibitions: Store,
+  fireplaces: Flame,
+  museums: Landmark,
+  parks: Trees,
+  playgrounds: Trees,
+  viewpoints: Mountain,
 };
 
 function resolveHeight(height: MapProps["height"]) {
@@ -44,6 +76,39 @@ function MapFallback({
       style={{ height: resolveHeight(height) }}
     >
       {fallback ?? null}
+    </div>
+  );
+}
+
+function resolveMarkerIcon(marker: MapPoint) {
+  if (marker.type === "activity") return Ticket;
+  if (marker.type === "point-of-interest") return Binoculars;
+  if (marker.category) return categoryMarkerIcons[marker.category] ?? MapPin;
+  return MapPin;
+}
+
+function MapMarker({ marker }: { marker: MapPoint }) {
+  if (marker.priceLabel) {
+    return (
+      <div
+        aria-label={marker.title}
+        className="cursor-pointer rounded-full border border-gray-300 bg-white px-3 py-1.5 text-[13px] font-bold leading-none text-gray-950 shadow-[0_5px_8px_rgba(0,0,0,0.16)] transition-colors duration-150 hover:border-primary hover:bg-primary hover:text-white"
+      >
+        {marker.priceLabel}
+      </div>
+    );
+  }
+
+  return (
+    <div
+      aria-label={marker.title}
+      className="flex size-9 cursor-pointer items-center justify-center rounded-full border border-gray-300 bg-white text-gray-950 shadow-[0_5px_8px_rgba(0,0,0,0.16)] transition-colors duration-150 hover:border-primary hover:bg-primary hover:text-white"
+    >
+      <Icon
+        icon={resolveMarkerIcon(marker)}
+        size="sm"
+        strokeWidth={2.2}
+      />
     </div>
   );
 }
@@ -81,11 +146,15 @@ export function Map({
         zoom={zoom}
       >
         {markers.map((marker) => (
-          <MarkerF
+          <OverlayViewF
             key={marker.id}
             position={{ lat: marker.lat, lng: marker.lng }}
-            title={marker.title}
-          />
+            mapPaneName={OverlayView.OVERLAY_MOUSE_TARGET}
+            getPixelPositionOffset={MARKER_OFFSET}
+            zIndex={marker.priceLabel ? 20 : 10}
+          >
+            <MapMarker marker={marker} />
+          </OverlayViewF>
         ))}
       </GoogleMap>
     </div>
