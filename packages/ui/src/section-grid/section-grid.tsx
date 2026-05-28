@@ -95,6 +95,7 @@ export function SectionGrid({
           >
             <ActivityCard
               image={a.image}
+              images={a.images}
               title={a.title}
               type={a.type}
               subtitle={a.subtitle}

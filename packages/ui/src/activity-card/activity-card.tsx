@@ -8,6 +8,7 @@ import { ImageFill } from "../image-fill";
 import { Loader } from "../loader";
 import { Rating } from "../rating";
 import { Skeleton } from "../skeleton";
+import { Slider } from "../slider";
 import { Text } from "../text";
 import { useImageLoadState } from "../use-image-load-state";
 import { cn } from "../utils/cn";
@@ -175,6 +176,7 @@ function getDefaultMeta({
 
 export function ActivityCard({
   image,
+  images,
   title,
   description,
   type = "activity",
@@ -200,6 +202,10 @@ export function ActivityCard({
   const isBookable = type === "activity";
   const imageSource = isImageSource(image) ? image : null;
   const imageSourceKey = imageSource?.src ?? "";
+  const sliderImages = (images?.length ? images : image ? [image] : []).filter(
+    Boolean
+  );
+  const hasImageSlider = isBookable && sliderImages.length > 1;
   const hasPricingFooter = isBookable && Boolean(price);
   const shouldUseImageFill = !isBookable && Boolean(imageSource);
   const {
@@ -261,19 +267,32 @@ export function ActivityCard({
         <div className="relative z-10 h-full w-full">
           {showImageFallback ? (
             <ActivityCardImageFallback />
-          ) : shouldUseImageFill ? (
-            <ImageFill
-              image={image}
+          ) : hasImageSlider ? (
+            <Slider
+              slides={sliderImages}
               renderImage={renderImage}
-              backgroundColor="transparent"
-              onImageLoad={handleImageLoad}
-              onImageError={handleImageError}
+              showCounter={false}
+              showIndicators
+              showNavOnHover
+              loop={false}
             />
           ) : (
-            renderImageValue(image, renderImage, {
-              onLoad: handleImageLoad,
-              onError: handleImageError,
-            })
+            <>
+              {shouldUseImageFill ? (
+                <ImageFill
+                  image={image}
+                  renderImage={renderImage}
+                  backgroundColor="transparent"
+                  onImageLoad={handleImageLoad}
+                  onImageError={handleImageError}
+                />
+              ) : (
+                renderImageValue(image, renderImage, {
+                  onLoad: handleImageLoad,
+                  onError: handleImageError,
+                })
+              )}
+            </>
           )}
         </div>
         {isCompactLg ? (

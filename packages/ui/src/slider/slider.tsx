@@ -15,7 +15,9 @@ export function Slider({
   slides,
   renderImage,
   showNav = true,
+  showNavOnHover = false,
   showCounter = true,
+  showIndicators = false,
   loop = false,
   className,
   slideClassName,
@@ -96,8 +98,17 @@ export function Slider({
     if (rawIndex < allSlides.length - 1) goTo(rawIndex + 1);
   }, [rawIndex, allSlides.length, goTo]);
 
-  const showPrev = rawIndex > (loop ? 0 : 0) && realIndex > 0;
-  const showNext = loop || rawIndex < allSlides.length - 1;
+  const canGoPrev = rawIndex > (loop ? 0 : 0) && realIndex > 0;
+  const canGoNext = loop || rawIndex < allSlides.length - 1;
+  const visibleIndicatorCount = Math.min(total, 5);
+  const indicatorStart = useMemo(() => {
+    if (total <= visibleIndicatorCount) return 0;
+
+    return Math.min(Math.max(realIndex - 2, 0), total - visibleIndicatorCount);
+  }, [realIndex, total, visibleIndicatorCount]);
+  const indicatorStep = 12;
+  const indicatorWidth =
+    visibleIndicatorCount * 6 + Math.max(visibleIndicatorCount - 1, 0) * 6;
 
   return (
     <div
@@ -120,23 +131,98 @@ export function Slider({
           </div>
         ))}
       </div>
-      {showNav && showPrev && (
+      {showNav && total > 1 && (
         <button
           type="button"
-          onClick={goPrev}
-          className="absolute left-3 top-1/2 z-20 hidden h-8 w-8 -translate-y-1/2 cursor-pointer appearance-none items-center justify-center rounded-full border border-solid border-transparent bg-white/90 text-gray-700 shadow-sm backdrop-blur-sm transition hover:bg-white sm:flex"
+          aria-hidden={!canGoPrev}
+          aria-disabled={!canGoPrev}
+          tabIndex={canGoPrev ? 0 : -1}
+          onClick={(event) => {
+            event.preventDefault();
+            event.stopPropagation();
+            if (canGoPrev) {
+              goPrev();
+            }
+          }}
+          className={cn(
+            "absolute left-3 top-1/2 z-20 hidden h-8 w-8 -translate-y-1/2 cursor-pointer appearance-none items-center justify-center rounded-full border border-solid border-transparent bg-white/90 text-gray-700 shadow-sm backdrop-blur-sm transition hover:bg-white sm:flex",
+            showNavOnHover && "lg:opacity-0 lg:group-hover:opacity-100",
+            !canGoPrev &&
+              "cursor-default opacity-0 hover:bg-white/90 lg:!opacity-0"
+          )}
         >
           <Icon icon={ChevronLeft} size="md" />
         </button>
       )}
-      {showNav && showNext && (
+      {showNav && total > 1 && (
         <button
           type="button"
-          onClick={goNext}
-          className="absolute right-3 top-1/2 z-20 hidden h-8 w-8 -translate-y-1/2 cursor-pointer appearance-none items-center justify-center rounded-full border border-solid border-transparent bg-white/90 text-gray-700 shadow-sm backdrop-blur-sm transition hover:bg-white sm:flex"
+          aria-hidden={!canGoNext}
+          aria-disabled={!canGoNext}
+          tabIndex={canGoNext ? 0 : -1}
+          onClick={(event) => {
+            event.preventDefault();
+            event.stopPropagation();
+            if (canGoNext) {
+              goNext();
+            }
+          }}
+          className={cn(
+            "absolute right-3 top-1/2 z-20 hidden h-8 w-8 -translate-y-1/2 cursor-pointer appearance-none items-center justify-center rounded-full border border-solid border-transparent bg-white/90 text-gray-700 shadow-sm backdrop-blur-sm transition hover:bg-white sm:flex",
+            showNavOnHover && "lg:opacity-0 lg:group-hover:opacity-100",
+            !canGoNext &&
+              "cursor-default opacity-0 hover:bg-white/90 lg:!opacity-0"
+          )}
         >
           <Icon icon={ChevronRight} size="md" />
         </button>
+      )}
+      {showIndicators && total > 1 && (
+        <>
+          <div className="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-10 bg-gradient-to-t from-black/35 via-black/15 to-transparent" />
+          <div className="pointer-events-none absolute inset-x-0 bottom-1.5 z-20 flex justify-center">
+            <div
+              className="h-3 overflow-hidden"
+              style={{ width: indicatorWidth }}
+            >
+              <div
+                className="flex items-center gap-1.5 transition-transform duration-200 ease-out"
+                style={{
+                  transform: `translateX(-${indicatorStart * indicatorStep}px)`,
+                }}
+              >
+                {slides.map((_, index) => {
+                  const visiblePosition = index - indicatorStart;
+                  const isVisibleEdge =
+                    visibleIndicatorCount === 5 &&
+                    visiblePosition >= 0 &&
+                    visiblePosition < visibleIndicatorCount &&
+                    (visiblePosition === 0 ||
+                      visiblePosition === visibleIndicatorCount - 1);
+                  const isActive = index === realIndex;
+
+                  return (
+                    <span
+                      key={index}
+                      className="flex size-1.5 shrink-0 items-center justify-center"
+                    >
+                      <span
+                        className={cn(
+                          "block rounded-full bg-white shadow-sm transition-all duration-150",
+                          isActive
+                            ? "size-1.5 opacity-100"
+                            : isVisibleEdge
+                              ? "size-1 opacity-70"
+                              : "size-1.5 opacity-80"
+                        )}
+                      />
+                    </span>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
+        </>
       )}
       {showCounter && total > 1 && (
         <span className="absolute bottom-3 right-3 z-20 rounded-full bg-white/90 px-2 py-0.5 text-xs font-medium text-blue shadow-sm backdrop-blur-sm">

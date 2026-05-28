@@ -4,6 +4,17 @@ export type TGatewayHomeItem = {
   description?: string | null;
   image_url?: string | null;
   imageUrl?: string | null;
+  imageUrls?: string[];
+  images?: Array<
+    | string
+    | {
+        alt?: string | null;
+        alternativeText?: string | null;
+        imageUrl?: string | null;
+        src?: string | null;
+        url?: string | null;
+      }
+  >;
   subtitle?: string | null;
   path?: string;
   detailPath?: string | null;

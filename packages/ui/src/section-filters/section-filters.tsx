@@ -553,7 +553,7 @@ export function SectionFilters({
   return (
     <>
       <section className={cn(className)} {...props}>
-        <div className="pb-4 pt-8">
+        <div className="pt-4">
           {hideQuickFilters ? (
             <div className="flex items-center justify-between gap-3">
               <Button

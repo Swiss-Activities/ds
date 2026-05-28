@@ -76,6 +76,7 @@ export function SectionActivityGrid({
         >
           <ActivityCard
             image={a.image}
+            images={a.images}
             title={a.title}
             description={a.description}
             type={a.type}

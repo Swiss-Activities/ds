@@ -23,6 +23,7 @@ export type ActivityCardMetaItem = {
 
 export type BaseActivityCardProps = {
   image: ImageValue | null;
+  images?: ImageValue[];
   title: string;
   description?: ReactNode;
   type?: ActivityCardType;
