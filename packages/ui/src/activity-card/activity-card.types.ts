@@ -12,7 +12,7 @@ export const activityCardTypes = [
 
 export type ActivityCardType = (typeof activityCardTypes)[number];
 
-export type ActivityCardVariant = "default" | "compactLg";
+export type ActivityCardVariant = "default" | "compact" | "compactLg";
 
 export type ActivityCardRender = CardRender;
 

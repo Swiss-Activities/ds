@@ -1,12 +1,6 @@
 "use client";
 
 import {
-  GoogleMap,
-  OverlayView,
-  OverlayViewF,
-  useJsApiLoader,
-} from "@react-google-maps/api";
-import {
   useCallback,
   useEffect,
   useMemo,
@@ -14,6 +8,14 @@ import {
   useState,
   type ComponentType,
 } from "react";
+import {
+  GoogleMap,
+  OverlayView,
+  OverlayViewF,
+  useJsApiLoader,
+} from "@react-google-maps/api";
+import { ActivityCard } from "../activity-card";
+import { Icon } from "../icon/icon";
 import {
   Binoculars,
   Castle,
@@ -27,8 +29,6 @@ import {
   X,
 } from "../icons";
 import type { LucideProps } from "../icons";
-import { ActivityCard } from "../activity-card";
-import { Icon } from "../icon/icon";
 import { cn } from "../utils/cn";
 import type { MapBounds, MapCenter, MapPoint, MapProps } from "./map.types";
 
@@ -281,10 +281,7 @@ function overlapsRect(
   b: NonNullable<ReturnType<typeof getMarkerRect>>
 ) {
   return (
-    a.left < b.right &&
-    a.right > b.left &&
-    a.top < b.bottom &&
-    a.bottom > b.top
+    a.left < b.right && a.right > b.left && a.top < b.bottom && a.bottom > b.top
   );
 }
 
@@ -414,11 +411,7 @@ function MapMarker({
           : "border-gray-300 bg-white text-gray-950"
       )}
     >
-      <Icon
-        icon={resolveMarkerIcon(marker)}
-        size="sm"
-        strokeWidth={2.2}
-      />
+      <Icon icon={resolveMarkerIcon(marker)} size="sm" strokeWidth={2.2} />
     </div>
   );
 }
@@ -437,7 +430,7 @@ function MapMarkerPopup({
   };
 
   return (
-    <div className="relative w-[280px] max-w-[calc(100vw-2rem)] rounded-xl border border-gray-950 bg-white shadow-[0_10px_24px_rgba(0,0,0,0.2)]">
+    <div className="relative w-[260px] max-w-[calc(100vw-2rem)] rounded-xl border border-gray-950 bg-white shadow-[0_10px_24px_rgba(0,0,0,0.2)]">
       <button
         type="button"
         aria-label="Close"
@@ -451,6 +444,7 @@ function MapMarkerPopup({
       </button>
       <ActivityCard
         {...card}
+        variant="compact"
         className="border-none shadow-none"
       />
     </div>

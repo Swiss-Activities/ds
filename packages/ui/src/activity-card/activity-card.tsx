@@ -88,6 +88,7 @@ function ActivityCardCompactOverlay({
   priceLabel,
   price,
   shouldPairDistanceWithRating,
+  alwaysVisible,
 }: {
   title: BaseActivityCardProps["title"];
   distance: BaseActivityCardProps["distance"];
@@ -96,9 +97,15 @@ function ActivityCardCompactOverlay({
   priceLabel: BaseActivityCardProps["priceLabel"];
   price: BaseActivityCardProps["price"];
   shouldPairDistanceWithRating: boolean;
+  alwaysVisible: boolean;
 }) {
   return (
-    <div className="pointer-events-none absolute inset-x-0 bottom-0 z-10 hidden bg-gradient-to-t from-black/85 via-black/55 to-transparent p-3 pt-10 text-white lg:block">
+    <div
+      className={cn(
+        "pointer-events-none absolute inset-x-0 bottom-0 z-10 bg-gradient-to-t from-black/85 via-black/55 to-transparent p-3 pt-10 text-white",
+        alwaysVisible ? "block" : "hidden lg:block"
+      )}
+    >
       <Text
         as="h3"
         size="sm"
@@ -198,7 +205,9 @@ export function ActivityCard({
   ...props
 }: ActivityCardProps) {
   const normalizedScore = Number(score) || 0;
+  const isCompact = variant === "compact";
   const isCompactLg = variant === "compactLg";
+  const hasCompactOverlay = isCompact || isCompactLg;
   const isBookable = type === "activity";
   const imageSource = isImageSource(image) ? image : null;
   const imageSourceKey = imageSource?.src ?? "";
@@ -241,6 +250,7 @@ export function ActivityCard({
       render={render}
       className={cn(
         "group relative flex h-full w-full flex-col overflow-hidden lg:hover:shadow-md",
+        isCompact && "aspect-video h-auto min-h-0",
         isCompactLg && "lg:aspect-video lg:h-auto lg:min-h-0",
         className
       )}
@@ -250,6 +260,7 @@ export function ActivityCard({
         ref={imageContainerRef}
         className={cn(
           "relative aspect-[4/3] w-full shrink-0 overflow-hidden",
+          isCompact && "aspect-auto h-full",
           isCompactLg && "lg:aspect-auto lg:h-full",
           showImageFallback || shouldUseImageFill
             ? "bg-gray-100"
@@ -295,7 +306,7 @@ export function ActivityCard({
             </>
           )}
         </div>
-        {isCompactLg ? (
+        {hasCompactOverlay ? (
           <ActivityCardCompactOverlay
             title={title}
             distance={distance}
@@ -304,12 +315,14 @@ export function ActivityCard({
             priceLabel={priceLabel}
             price={price}
             shouldPairDistanceWithRating={shouldPairDistanceWithRating}
+            alwaysVisible={isCompact}
           />
         ) : null}
       </div>
       <div
         className={cn(
           "flex flex-1 flex-col gap-1 p-3.5 pt-4",
+          isCompact && "hidden",
           isCompactLg && "lg:hidden"
         )}
       >
