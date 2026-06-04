@@ -1,7 +1,7 @@
 import { createElement, type HTMLAttributes, type ReactNode } from "react";
 import { Button } from "../button";
 import { Card } from "../card";
-import { ExternalLink } from "../icons";
+import { ChevronRight } from "../icons";
 import { Text } from "../text";
 import { cn } from "../utils/cn";
 import type {
@@ -84,14 +84,21 @@ function ProductInfoListItemRow({
   href,
   onClick,
 }: ProductInfoListItem) {
-  const tag = href ? "a" : "button";
+  const isActionable = Boolean(href || onClick);
+  const tag = href ? "a" : isActionable ? "button" : "div";
 
   return createElement(
     tag,
     {
-      className:
+      className: cn(
         "flex w-full appearance-none items-start gap-4 !border-b-0 !border-l-0 !border-r-0 !border-t !border-solid !border-gray-200 bg-transparent py-4 text-left text-current no-underline first:!border-t-0",
-      ...(href ? { href } : { type: "button" as const, onClick }),
+        isActionable ? "cursor-pointer" : "cursor-default"
+      ),
+      ...(href
+        ? { href }
+        : isActionable
+          ? { type: "button" as const, onClick }
+          : {}),
     },
     <>
       <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-solid border-gray-200 bg-white text-gray-900 shadow-sm [&_svg]:h-5 [&_svg]:w-5">
@@ -104,8 +111,8 @@ function ProductInfoListItemRow({
           details={details}
         />
       </div>
-      {href ? (
-        <ExternalLink
+      {isActionable ? (
+        <ChevronRight
           aria-hidden="true"
           className="mt-0.5 h-4 w-4 shrink-0 text-gray-400"
         />
@@ -122,16 +129,26 @@ function ProductInfoListItemCard({
   href,
   onClick,
 }: ProductInfoListItem) {
+  const isActionable = Boolean(href || onClick);
+
   return (
     <Card
       noPadding
       className="h-full rounded-2xl"
       render={({ className, children }) => {
+        if (!isActionable) {
+          return (
+            <div
+              className={`${className} flex h-full w-full items-stretch justify-start p-3 text-left`}
+            >
+              {children}
+            </div>
+          );
+        }
+
         const buttonProps = href
           ? { as: "a" as const, href }
-          : onClick
-            ? { onClick }
-            : { as: "div" as const };
+          : { onClick };
 
         return (
           <Button
@@ -149,8 +166,8 @@ function ProductInfoListItemCard({
           {icon}
         </div>
         <ProductInfoListContent title={title} subtitle={details ?? subtitle} />
-        {href ? (
-          <ExternalLink
+        {isActionable ? (
+          <ChevronRight
             aria-hidden="true"
             className="h-4 w-4 shrink-0 text-gray-400"
           />
