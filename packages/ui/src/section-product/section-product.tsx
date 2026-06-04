@@ -210,6 +210,7 @@ export function SectionProduct({
   const hasRelatedActivities = Boolean(
     relatedActivities?.length && relatedActivitiesTitle
   );
+  const shouldStackInfoAndContent = hasInfoItems && hasContent && !hasReviews;
   const hasLowerSections =
     hasInfoItems || hasReviews || hasContent || hasRelatedActivities;
   const reviewsSectionClassName = "bg-bg py-8 lg:py-10";
@@ -295,38 +296,56 @@ export function SectionProduct({
 
       {hasLowerSections ? (
         <div className={lowerSectionsClassName}>
-          {hasInfoItems ? (
+          {shouldStackInfoAndContent ? (
             <section>
               <div className={detailContainerClassName}>
-                <ProductInfoList items={infoItems ?? []} />
-              </div>
-            </section>
-          ) : null}
-
-          {hasReviews ? (
-            <section className={reviewsSectionClassName}>
-              <div className={detailContainerClassName}>
-                <SectionReviewGrid
-                  title={reviewsTitle as NonNullable<typeof reviewsTitle>}
-                  subtitle={reviewsSubtitle}
-                  reviews={reviews ?? []}
-                  as="div"
+                <ProductInfoList
+                  items={infoItems ?? []}
+                  className="[&>div:first-child]:!border-b-0"
                 />
-              </div>
-            </section>
-          ) : null}
-
-          {hasContent ? (
-            <section>
-              <div className={detailContainerClassName}>
                 <ContentBlocks
                   items={contentItems ?? []}
                   tocTitle={contentTocTitle}
-                  className={contentBlocksClassName}
+                  className={cn("lg:mt-10", contentBlocksClassName)}
                 />
               </div>
             </section>
-          ) : null}
+          ) : (
+            <>
+              {hasInfoItems ? (
+                <section>
+                  <div className={detailContainerClassName}>
+                    <ProductInfoList items={infoItems ?? []} />
+                  </div>
+                </section>
+              ) : null}
+
+              {hasReviews ? (
+                <section className={reviewsSectionClassName}>
+                  <div className={detailContainerClassName}>
+                    <SectionReviewGrid
+                      title={reviewsTitle as NonNullable<typeof reviewsTitle>}
+                      subtitle={reviewsSubtitle}
+                      reviews={reviews ?? []}
+                      as="div"
+                    />
+                  </div>
+                </section>
+              ) : null}
+
+              {hasContent ? (
+                <section>
+                  <div className={detailContainerClassName}>
+                    <ContentBlocks
+                      items={contentItems ?? []}
+                      tocTitle={contentTocTitle}
+                      className={contentBlocksClassName}
+                    />
+                  </div>
+                </section>
+              ) : null}
+            </>
+          )}
 
           {hasRelatedActivities ? (
             <section ref={relatedActivitiesRef}>

@@ -36,6 +36,7 @@ export * from "./info-badge";
 export * from "./logo";
 export * from "./loader";
 export * from "./map";
+export * from "./map-results-app";
 export * from "./popover";
 export * from "./rating";
 export * from "./review-card";
