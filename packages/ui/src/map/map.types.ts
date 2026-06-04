@@ -34,6 +34,7 @@ export type MapProps = {
   fallback?: ReactNode;
   height?: number | string;
   markers?: MapPoint[];
+  markersInteractive?: boolean;
   options?: google.maps.MapOptions;
   onBoundsChange?: (bounds: MapBounds) => void;
   recenterKey?: number;

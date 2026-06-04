@@ -375,18 +375,27 @@ function MapMarker({
 }: {
   isActive?: boolean;
   marker: MapPoint;
-  onClick: () => void;
+  onClick?: () => void;
 }) {
+  const isInteractive = Boolean(onClick);
+
   if (marker.priceLabel) {
     return (
       <div
         aria-label={marker.title}
-        onClick={(event) => {
-          event.stopPropagation();
-          onClick();
-        }}
+        onClick={
+          onClick
+            ? (event) => {
+                event.stopPropagation();
+                onClick();
+              }
+            : undefined
+        }
         className={cn(
-          "cursor-pointer rounded-full border px-3 py-1.5 text-[13px] font-bold leading-none shadow-[0_5px_8px_rgba(0,0,0,0.16)] transition-colors duration-150 hover:border-gray-950 hover:bg-gray-950 hover:text-white",
+          "rounded-full border px-3 py-1.5 text-[13px] font-bold leading-none shadow-[0_5px_8px_rgba(0,0,0,0.16)] transition-colors duration-150",
+          isInteractive
+            ? "cursor-pointer hover:border-gray-950 hover:bg-gray-950 hover:text-white"
+            : "cursor-default",
           isActive
             ? "border-gray-950 bg-gray-950 text-white"
             : "border-gray-300 bg-white text-gray-950"
@@ -400,12 +409,19 @@ function MapMarker({
   return (
     <div
       aria-label={marker.title}
-      onClick={(event) => {
-        event.stopPropagation();
-        onClick();
-      }}
+      onClick={
+        onClick
+          ? (event) => {
+              event.stopPropagation();
+              onClick();
+            }
+          : undefined
+      }
       className={cn(
-        "flex size-9 cursor-pointer items-center justify-center rounded-full border shadow-[0_5px_8px_rgba(0,0,0,0.16)] transition-colors duration-150 hover:border-gray-950 hover:bg-gray-950 hover:text-white",
+        "flex size-9 items-center justify-center rounded-full border shadow-[0_5px_8px_rgba(0,0,0,0.16)] transition-colors duration-150",
+        isInteractive
+          ? "cursor-pointer hover:border-gray-950 hover:bg-gray-950 hover:text-white"
+          : "cursor-default",
         isActive
           ? "border-gray-950 bg-gray-950 text-white"
           : "border-gray-300 bg-white text-gray-950"
@@ -459,6 +475,7 @@ export function Map({
   fallback,
   height,
   markers = [],
+  markersInteractive = true,
   onBoundsChange,
   options,
   recenterKey,
@@ -500,18 +517,26 @@ export function Map({
     [activeMarkerId, mapBounds, mapSize, markers, selectedMarkerId]
   );
   const selectedMarker = useMemo(
-    () => markers.find((marker) => marker.id === selectedMarkerId) ?? null,
-    [markers, selectedMarkerId]
+    () =>
+      markersInteractive
+        ? markers.find((marker) => marker.id === selectedMarkerId) ?? null
+        : null,
+    [markers, markersInteractive, selectedMarkerId]
   );
 
   useEffect(() => {
+    if (!markersInteractive) {
+      setSelectedMarkerId(null);
+      return;
+    }
+
     if (
       selectedMarkerId &&
       !markers.some((marker) => marker.id === selectedMarkerId)
     ) {
       setSelectedMarkerId(null);
     }
-  }, [markers, selectedMarkerId]);
+  }, [markers, markersInteractive, selectedMarkerId]);
 
   useEffect(() => {
     if (!mapRef.current || recenterKey === undefined) {
@@ -543,7 +568,11 @@ export function Map({
         onUnmount={() => {
           mapRef.current = null;
         }}
-        onClick={() => setSelectedMarkerId(null)}
+        onClick={() => {
+          if (markersInteractive) {
+            setSelectedMarkerId(null);
+          }
+        }}
         options={{ ...DEFAULT_MAP_OPTIONS, ...options }}
         zoom={zoom}
       >
@@ -566,7 +595,11 @@ export function Map({
               isActive={
                 marker.id === activeMarkerId || marker.id === selectedMarkerId
               }
-              onClick={() => setSelectedMarkerId(marker.id)}
+              onClick={
+                markersInteractive
+                  ? () => setSelectedMarkerId(marker.id)
+                  : undefined
+              }
             />
           </OverlayViewF>
         ))}
