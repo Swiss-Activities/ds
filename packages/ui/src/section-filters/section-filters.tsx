@@ -679,7 +679,7 @@ export function SectionFilters({
         <Sheet.Portal>
           <Sheet.View
             contentPlacement={resolvedPlacement}
-            className={cn(isSideDrawer && "inset-0")}
+            className={cn("z-[220]", isSideDrawer && "inset-0")}
           >
             <Sheet.Backdrop />
             <Sheet.CloseButton />
@@ -724,7 +724,7 @@ export function SectionFilters({
         }}
       >
         <Sheet.Portal>
-          <Sheet.View contentPlacement="bottom">
+          <Sheet.View contentPlacement="bottom" className="z-[220]">
             <Sheet.Backdrop />
             <Sheet.CloseButton />
             <Sheet.Content className="grid max-h-[85dvh] grid-rows-[min-content_1fr] overflow-hidden bg-white">
