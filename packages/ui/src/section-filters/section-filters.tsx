@@ -520,7 +520,7 @@ export function SectionFilters({
   const removableItems = items.filter((item) => item.kind === "removable");
   const appliedFilterScroller =
     removableItems.length > 0 ? (
-      <HorizontalScrollerRoot className="min-w-0">
+      <HorizontalScrollerRoot className="w-full min-w-0 max-w-full overflow-hidden">
         <HorizontalScrollerTrack className="-my-2 py-2">
           {removableItems.map((item) => (
             <li key={item.id} className="shrink-0 list-none">
@@ -588,7 +588,7 @@ export function SectionFilters({
       <section className={cn(className)} {...props}>
         <div className="pt-4">
           {hideQuickFilters ? (
-            <div className="flex min-w-0 items-center gap-3">
+            <div className="grid min-w-0 grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-3">
               <Button
                 type="pill"
                 text={filterButtonLabel}
@@ -597,7 +597,9 @@ export function SectionFilters({
                 onClick={() => setPresented(true)}
               />
               {appliedFilterScroller ? (
-                <div className="min-w-0 flex-1">{appliedFilterScroller}</div>
+                <div className="min-w-0 flex-1 overflow-hidden">
+                  {appliedFilterScroller}
+                </div>
               ) : action ? (
                 <div className="min-w-0 flex-1" />
               ) : null}
