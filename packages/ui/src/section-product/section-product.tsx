@@ -112,7 +112,6 @@ function GalleryGrid({
         <Slider
           slides={images}
           renderImage={renderImage}
-          loop
           className="absolute inset-0"
         />
         <GalleryBackOverlay
@@ -154,7 +153,6 @@ function SparseGallery({
           renderImage={(image) => (
             <GalleryFillImage image={image} renderImage={renderImage} />
           )}
-          loop
           slideClassName="overflow-hidden"
           className="absolute inset-0"
         />
