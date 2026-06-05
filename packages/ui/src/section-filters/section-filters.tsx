@@ -16,7 +16,7 @@ import { HorizontalScrollerPrev } from "../horizontal-scroller/horizontal-scroll
 import { HorizontalScrollerRoot } from "../horizontal-scroller/horizontal-scroller.root";
 import { HorizontalScrollerTrack } from "../horizontal-scroller/horizontal-scroller.track";
 import { Icon } from "../icon/icon";
-import { Check, ChevronDown, Filter, Search, X } from "../icons";
+import { ChevronDown, Filter, Search, X } from "../icons";
 import { Popover, PopoverContent, PopoverTrigger } from "../popover";
 import { Sheet } from "../sheet";
 import { Text } from "../text";
@@ -35,6 +35,7 @@ const breakpointMinWidths: Record<SectionFiltersBreakpoint, number> = {
   xl: 1280,
   "2xl": 1536,
 };
+const maxDropdownFilterItems = 5;
 
 function useMinBreakpoint(breakpoint: SectionFiltersBreakpoint) {
   const [matches, setMatches] = useState(false);
@@ -78,14 +79,79 @@ function getNodeText(node: ReactNode): string {
 type FilterDropdownGroupProps = {
   group: SectionFilterGroup;
   inlineFrom?: SectionFiltersBreakpoint;
+  noResultsLabel: ReactNode;
   onItemToggle?: BaseSectionFiltersProps["onFilterGroupItemToggle"];
   searchPlaceholder?: string;
   showTitle?: boolean;
   type?: "inline" | "accordion";
 };
 
+function FilterDropdownLabel({ label }: { label: SectionFilterItem["label"] }) {
+  return (
+    <span className="relative top-[2px] inline-block text-sm leading-5 text-gray-900">
+      <span className="inline-block">{label}</span>
+    </span>
+  );
+}
+
+function FilterDropdownRadioItem({
+  disabled,
+  label,
+  selected,
+  onChange,
+}: {
+  disabled?: boolean;
+  label: SectionFilterItem["label"];
+  selected: boolean;
+  onChange: (nextValue: boolean) => void;
+}) {
+  return (
+    <button
+      type="button"
+      disabled={disabled}
+      aria-pressed={selected}
+      className={cn(
+        "m-0 flex w-full cursor-pointer appearance-none items-start gap-2.5 border-0 bg-transparent p-0 py-1 text-left font-[inherit] text-current shadow-none",
+        disabled && "pointer-events-none cursor-not-allowed opacity-50"
+      )}
+      onClick={() => onChange(!selected)}
+    >
+      <span
+        aria-hidden="true"
+        className={cn(
+          "mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full border border-solid bg-white transition",
+          selected ? "border-primary" : "border-gray-500",
+          !disabled && "hover:border-gray-700"
+        )}
+      >
+        <span
+          className={cn(
+            "h-2.5 w-2.5 rounded-full bg-primary transition",
+            selected ? "opacity-100" : "opacity-0"
+          )}
+        />
+      </span>
+      <span className="flex min-w-0 flex-1 flex-col">
+        <FilterDropdownLabel label={label} />
+      </span>
+    </button>
+  );
+}
+
+function getDropdownSelectedState(items: SectionFilterGroup["items"]) {
+  return Object.fromEntries(
+    items.map((item) => [item.id, Boolean(item.selected)])
+  );
+}
+
+function getDropdownSelectedSignature(items: SectionFilterGroup["items"]) {
+  return items.map((item) => `${item.id}:${Boolean(item.selected)}`).join("|");
+}
+
 function FilterDropdownGroup({
   group,
+  inlineFrom,
+  noResultsLabel,
   onItemToggle,
   searchPlaceholder,
   showTitle = true,
@@ -93,10 +159,18 @@ function FilterDropdownGroup({
 }: FilterDropdownGroupProps) {
   const [open, setOpen] = useState(false);
   const [query, setQuery] = useState("");
+  const [selectedById, setSelectedById] = useState<Record<string, boolean>>({});
+  const selectedSignature = getDropdownSelectedSignature(group.items);
+  const shouldRenderInline =
+    useMinBreakpoint(inlineFrom ?? "2xl") && Boolean(inlineFrom);
 
   useEffect(() => {
     setQuery("");
   }, [group.id]);
+
+  useEffect(() => {
+    setSelectedById(getDropdownSelectedState(group.items));
+  }, [group.items, selectedSignature]);
 
   const normalizedQuery = query.trim().toLocaleLowerCase();
   const filteredItems = normalizedQuery
@@ -104,15 +178,25 @@ function FilterDropdownGroup({
         getNodeText(item.label).toLocaleLowerCase().includes(normalizedQuery)
       )
     : group.items;
-  const visibleItems = [...filteredItems].sort(
-    (a, b) => Number(Boolean(b.selected)) - Number(Boolean(a.selected))
-  );
+  const visibleItems = [...filteredItems]
+    .sort(
+      (a, b) =>
+        Number(Boolean(selectedById[b.id])) -
+        Number(Boolean(selectedById[a.id]))
+    )
+    .slice(0, maxDropdownFilterItems);
   const searchLabel = searchPlaceholder ?? getNodeText(group.title);
-  const isAccordion = type === "accordion";
+  const isAccordion = type === "accordion" && !shouldRenderInline;
 
   const content = (
     <>
-      <div className={cn("space-y-3", !isAccordion && "px-4 pb-3 pt-4")}>
+      <div
+        className={cn(
+          "space-y-3",
+          !isAccordion && "pb-3",
+          type === "inline" && "px-4 pt-4"
+        )}
+      >
         {showTitle && !isAccordion ? (
           <Text as="h3" bold black>
             {group.title}
@@ -136,31 +220,35 @@ function FilterDropdownGroup({
       </div>
       <div
         className={cn(
-          "grid gap-1",
-          isAccordion ? "mt-3" : "px-4 pb-4"
+          "flex flex-col",
+          isAccordion ? "mt-3" : type === "inline" ? "px-4 pb-4" : ""
         )}
       >
-        {visibleItems.map((item) => {
-          const selected = Boolean(item.selected);
+        {visibleItems.length > 0 ? (
+          visibleItems.map((item) => {
+            const selected = Boolean(selectedById[item.id]);
 
-          return (
-            <Button
-              key={item.id}
-              type="select"
-              selected={selected}
-              disabled={item.disabled}
-              onClick={() => onItemToggle?.(group, item.id, !selected, item)}
-            >
-              <span className="min-w-0 flex-1 truncate">{item.label}</span>
-              {selected ? (
-                <span className="ms-3 flex shrink-0">
-                  <Icon icon={Check} size="sm" className="group-hover:hidden" />
-                  <Icon icon={X} size="sm" className="hidden group-hover:block" />
-                </span>
-              ) : null}
-            </Button>
-          );
-        })}
+            return (
+              <FilterDropdownRadioItem
+                key={item.id}
+                label={item.label}
+                selected={selected}
+                disabled={item.disabled}
+                onChange={(nextValue) => {
+                  setSelectedById((current) => ({
+                    ...(nextValue ? {} : current),
+                    [item.id]: nextValue,
+                  }));
+                  onItemToggle?.(group, item.id, nextValue, item);
+                }}
+              />
+            );
+          })
+        ) : (
+          <Text size="sm" gray className="py-2">
+            {noResultsLabel}
+          </Text>
+        )}
       </div>
     </>
   );
@@ -187,7 +275,18 @@ function FilterDropdownGroup({
     );
   }
 
-  return <div>{content}</div>;
+  return (
+    <div
+      className={cn(
+        type === "accordion" &&
+          inlineFrom &&
+          shouldRenderInline &&
+          "py-3 first:pt-0"
+      )}
+    >
+      {content}
+    </div>
+  );
 }
 
 type FilterGroupContentProps = {
@@ -196,6 +295,7 @@ type FilterGroupContentProps = {
   lessLabel: BaseSectionFiltersProps["filterGroupLessLabel"];
   maxVisible?: number;
   moreLabel: NonNullable<BaseSectionFiltersProps["filterGroupMoreLabel"]>;
+  noResultsLabel: BaseSectionFiltersProps["filterGroupNoResultsLabel"];
   onItemToggle?: BaseSectionFiltersProps["onFilterGroupItemToggle"];
   searchPlaceholder?: BaseSectionFiltersProps["filterGroupSearchPlaceholder"];
   showTitle?: boolean;
@@ -208,6 +308,7 @@ function FilterGroupContent({
   lessLabel,
   maxVisible,
   moreLabel,
+  noResultsLabel,
   onItemToggle,
   searchPlaceholder,
   showTitle = true,
@@ -218,6 +319,7 @@ function FilterGroupContent({
       <FilterDropdownGroup
         group={group}
         inlineFrom={inlineFrom}
+        noResultsLabel={noResultsLabel}
         onItemToggle={onItemToggle}
         searchPlaceholder={searchPlaceholder}
         showTitle={showTitle}
@@ -247,6 +349,7 @@ type FilterGroupsContentProps = {
   groups: SectionFilterGroup[];
   lessLabel: BaseSectionFiltersProps["filterGroupLessLabel"];
   moreLabel: NonNullable<BaseSectionFiltersProps["filterGroupMoreLabel"]>;
+  noResultsLabel: BaseSectionFiltersProps["filterGroupNoResultsLabel"];
   onItemToggle?: BaseSectionFiltersProps["onFilterGroupItemToggle"];
   searchPlaceholder?: BaseSectionFiltersProps["filterGroupSearchPlaceholder"];
 };
@@ -255,6 +358,7 @@ function FilterGroupsContent({
   groups,
   lessLabel,
   moreLabel,
+  noResultsLabel,
   onItemToggle,
   searchPlaceholder,
 }: FilterGroupsContentProps) {
@@ -268,6 +372,7 @@ function FilterGroupsContent({
           inlineFrom="lg"
           lessLabel={lessLabel}
           moreLabel={moreLabel}
+          noResultsLabel={noResultsLabel}
           onItemToggle={onItemToggle}
           searchPlaceholder={searchPlaceholder}
         />
@@ -315,6 +420,7 @@ type QuickFilterItemProps = {
   item: SectionFilterItem;
   lessLabel: BaseSectionFiltersProps["filterGroupLessLabel"];
   moreLabel: NonNullable<BaseSectionFiltersProps["filterGroupMoreLabel"]>;
+  noResultsLabel: BaseSectionFiltersProps["filterGroupNoResultsLabel"];
   size?: "xs" | "sm" | "md";
   onItemClick?: BaseSectionFiltersProps["onItemClick"];
   onItemToggle?: BaseSectionFiltersProps["onFilterGroupItemToggle"];
@@ -328,6 +434,7 @@ function QuickFilterItem({
   item,
   lessLabel,
   moreLabel,
+  noResultsLabel,
   size,
   onItemClick,
   onItemToggle,
@@ -372,11 +479,7 @@ function QuickFilterItem({
 
   if (group && item.kind === "disclosure") {
     const trigger = (
-      <Button
-        type="filter"
-        iconRight={iconRight}
-        className={buttonClassName}
-      >
+      <Button type="filter" iconRight={iconRight} className={buttonClassName}>
         {labelWithSelectedCount}
       </Button>
     );
@@ -396,6 +499,7 @@ function QuickFilterItem({
               lessLabel={lessLabel}
               maxVisible={8}
               moreLabel={moreLabel}
+              noResultsLabel={noResultsLabel}
               onItemToggle={onItemToggle}
               searchPlaceholder={searchPlaceholder}
             />
@@ -444,6 +548,7 @@ export function SectionFilters({
   filterGroups = [],
   filterGroupLessLabel = "Show less",
   filterGroupMoreLabel = (remaining) => `Show ${remaining} more`,
+  filterGroupNoResultsLabel = "No results",
   filterGroupSearchPlaceholder,
   hideQuickFilters = false,
   selectedFiltersLabel = "Applied filters",
@@ -535,6 +640,7 @@ export function SectionFilters({
                 isDesktop={aboveDesktopDrawerBreakpoint}
                 lessLabel={filterGroupLessLabel}
                 moreLabel={filterGroupMoreLabel}
+                noResultsLabel={filterGroupNoResultsLabel}
                 size="sm"
                 onItemClick={onItemClick}
                 onItemToggle={onFilterGroupItemToggle}
@@ -561,6 +667,7 @@ export function SectionFilters({
         groups={filterGroups}
         lessLabel={filterGroupLessLabel}
         moreLabel={filterGroupMoreLabel}
+        noResultsLabel={filterGroupNoResultsLabel}
         onItemToggle={onFilterGroupItemToggle}
         searchPlaceholder={filterGroupSearchPlaceholder}
       />
@@ -630,6 +737,7 @@ export function SectionFilters({
                       isDesktop={aboveDesktopDrawerBreakpoint}
                       lessLabel={filterGroupLessLabel}
                       moreLabel={filterGroupMoreLabel}
+                      noResultsLabel={filterGroupNoResultsLabel}
                       size="sm"
                       onItemClick={onItemClick}
                       onItemToggle={onFilterGroupItemToggle}
@@ -642,7 +750,10 @@ export function SectionFilters({
                   </li>
                 ))}
                 {quickItems.map((item) => (
-                  <li key={item.id} className="hidden shrink-0 list-none lg:list-item">
+                  <li
+                    key={item.id}
+                    className="hidden shrink-0 list-none lg:list-item"
+                  >
                     <QuickFilterItem
                       item={item}
                       group={getItemGroup(
@@ -654,6 +765,7 @@ export function SectionFilters({
                       isDesktop={aboveDesktopDrawerBreakpoint}
                       lessLabel={filterGroupLessLabel}
                       moreLabel={filterGroupMoreLabel}
+                      noResultsLabel={filterGroupNoResultsLabel}
                       onItemClick={onItemClick}
                       onItemToggle={onFilterGroupItemToggle}
                       onOpenGroup={(group) => {
@@ -670,9 +782,7 @@ export function SectionFilters({
             </HorizontalScrollerRoot>
           )}
           {removableItems.length > 0 && !hideQuickFilters ? (
-            <div className="mt-2 hidden lg:block">
-              {appliedFilterScroller}
-            </div>
+            <div className="mt-2 hidden lg:block">{appliedFilterScroller}</div>
           ) : null}
         </div>
       </section>
@@ -745,6 +855,7 @@ export function SectionFilters({
                         lessLabel={filterGroupLessLabel}
                         maxVisible={8}
                         moreLabel={filterGroupMoreLabel}
+                        noResultsLabel={filterGroupNoResultsLabel}
                         onItemToggle={onFilterGroupItemToggle}
                         searchPlaceholder={filterGroupSearchPlaceholder}
                         showTitle={false}

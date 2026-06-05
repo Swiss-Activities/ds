@@ -32,6 +32,7 @@ export type BaseSectionFiltersProps = {
   filterGroups?: SectionFilterGroup[];
   filterGroupLessLabel?: ReactNode;
   filterGroupMoreLabel?: (remaining: number) => ReactNode;
+  filterGroupNoResultsLabel?: ReactNode;
   filterGroupSearchPlaceholder?: string;
   hideQuickFilters?: boolean;
   selectedFiltersLabel?: ReactNode;
