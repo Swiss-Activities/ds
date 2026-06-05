@@ -191,6 +191,8 @@ export function SectionProduct({
   reviewsTitle,
   reviewsSubtitle,
   reviews,
+  reviewsContent,
+  reviewsSectionClassName: reviewsSectionClassNameOverride,
   contentItems,
   contentTocTitle,
   contentBlocksClassName,
@@ -203,7 +205,9 @@ export function SectionProduct({
 }: SectionProductProps) {
   const hasBadges = Boolean(badges?.length);
   const hasInfoItems = Boolean(infoItems?.length);
-  const hasReviews = Boolean(reviews?.length && reviewsTitle);
+  const hasReviews = Boolean(
+    reviewsContent || (reviews?.length && reviewsTitle)
+  );
   const hasContent = Boolean(contentItems?.length);
   const hasRelatedActivities = Boolean(
     relatedActivities?.length && relatedActivitiesTitle
@@ -319,14 +323,21 @@ export function SectionProduct({
               ) : null}
 
               {hasReviews ? (
-                <section className={reviewsSectionClassName}>
+                <section
+                  className={cn(
+                    reviewsSectionClassName,
+                    reviewsSectionClassNameOverride
+                  )}
+                >
                   <div className={detailContainerClassName}>
-                    <SectionReviewGrid
-                      title={reviewsTitle as NonNullable<typeof reviewsTitle>}
-                      subtitle={reviewsSubtitle}
-                      reviews={reviews ?? []}
-                      as="div"
-                    />
+                    {reviewsContent ?? (
+                      <SectionReviewGrid
+                        title={reviewsTitle as NonNullable<typeof reviewsTitle>}
+                        subtitle={reviewsSubtitle}
+                        reviews={reviews ?? []}
+                        as="div"
+                      />
+                    )}
                   </div>
                 </section>
               ) : null}

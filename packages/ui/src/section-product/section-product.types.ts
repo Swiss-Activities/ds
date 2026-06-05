@@ -23,6 +23,8 @@ export type BaseSectionProductProps = {
   reviewsTitle?: BaseSectionReviewGridProps["title"];
   reviewsSubtitle?: BaseSectionReviewGridProps["subtitle"];
   reviews?: BaseSectionReviewGridProps["reviews"];
+  reviewsContent?: ReactNode;
+  reviewsSectionClassName?: string;
   contentItems?: BaseContentBlocksProps["items"];
   contentTocTitle?: BaseContentBlocksProps["tocTitle"];
   contentBlocksClassName?: BaseContentBlocksProps["className"];

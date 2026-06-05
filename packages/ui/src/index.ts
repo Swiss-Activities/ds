@@ -11,6 +11,7 @@ export * from "./section-product";
 export * from "./section-region-explorer";
 export * from "./section-scroller";
 export * from "./section-review-grid";
+export * from "./section-reviews";
 export * from "./badge";
 export * from "./horizontal-scroller";
 export * from "./breadcrumbs";

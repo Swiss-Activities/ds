@@ -383,7 +383,7 @@ export function ActivityCard({
         </Text>
         {hasContent(description) ? (
           <Text
-            size="sm"
+            size={type === "blog-post" ? "sm2" : "sm"}
             gray
             className={cn(
               "line-clamp-3 !text-left !leading-snug",
