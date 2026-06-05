@@ -12,7 +12,11 @@ import { Slider } from "../slider";
 import { Text } from "../text";
 import { useImageLoadState } from "../use-image-load-state";
 import { cn } from "../utils/cn";
-import { isImageSource, renderImageValue } from "../utils/render-image";
+import {
+  isImageSource,
+  renderImageValue,
+  type ImageValue,
+} from "../utils/render-image";
 import { ActivityCardSkeletonContent } from "./activity-card-skeleton";
 import type {
   ActivityCardMetaItem,
@@ -24,6 +28,44 @@ export type ActivityCardProps = BaseActivityCardProps &
 
 function hasContent(value: ActivityCardMetaItem["label"]) {
   return value !== null && value !== undefined && value !== "";
+}
+
+function getImageValueDedupKey(image: ImageValue) {
+  if (!isImageSource(image)) {
+    return null;
+  }
+
+  const trimmed = image.src.trim();
+
+  try {
+    const url = new URL(trimmed);
+    url.hash = "";
+    url.search = "";
+    url.hostname = url.hostname.toLowerCase();
+
+    return url.toString();
+  } catch {
+    return trimmed.split("#")[0]!.split("?")[0]!.trim();
+  }
+}
+
+function uniqueImageValues(imageValues: ImageValue[]) {
+  const seen = new Set<string>();
+
+  return imageValues.filter((image) => {
+    const key = getImageValueDedupKey(image);
+
+    if (!key) {
+      return true;
+    }
+
+    if (seen.has(key)) {
+      return false;
+    }
+
+    seen.add(key);
+    return true;
+  });
 }
 
 function ActivityCardMetaLine({ icon, label }: ActivityCardMetaItem) {
@@ -211,8 +253,10 @@ export function ActivityCard({
   const isBookable = type === "activity";
   const imageSource = isImageSource(image) ? image : null;
   const imageSourceKey = imageSource?.src ?? "";
-  const sliderImages = (images?.length ? images : image ? [image] : []).filter(
-    Boolean
+  const sliderImages = uniqueImageValues(
+    (images?.length ? images : image ? [image] : []).filter(
+      (value): value is ImageValue => Boolean(value)
+    )
   );
   const hasImageSlider = isBookable && sliderImages.length > 1;
   const hasPricingFooter = isBookable && Boolean(price);
