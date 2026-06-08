@@ -15,9 +15,11 @@
     "build:storybook:web": "bun run --cwd apps/storybook-web build-storybook",
     "storybook:web": "bun run --cwd apps/storybook-web storybook",
     "lint:web": "bun run --cwd apps/storybook-web lint",
+    "test:data": "bun run --cwd packages/data test",
     "typecheck:tokens": "bun run --cwd packages/tokens typecheck",
+    "typecheck:data": "bun run --cwd packages/data typecheck",
     "typecheck:ui": "bun run --cwd packages/ui typecheck",
-    "typecheck": "bun run typecheck:tokens && bun run typecheck:ui && bun run --cwd apps/storybook-web typecheck"
+    "typecheck": "bun run typecheck:tokens && bun run typecheck:data && bun run typecheck:ui && bun run --cwd apps/storybook-web typecheck"
   },
   "workspaces": [
     "apps/*",

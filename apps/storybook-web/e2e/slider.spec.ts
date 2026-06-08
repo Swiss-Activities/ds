@@ -55,12 +55,18 @@ test.describe("Slider", () => {
     await expect(counter(page)).toHaveText("1/12");
   });
 
-  test("prev button hidden on first slide", async ({ page }) => {
-    const count = await navButtons(page).count();
-    expect(count).toBe(1);
+  test("prev button disabled on first slide", async ({ page }) => {
+    await expect(navButtons(page).first()).toHaveAttribute(
+      "aria-disabled",
+      "true"
+    );
+    await expect(navButtons(page).last()).toHaveAttribute(
+      "aria-disabled",
+      "false"
+    );
   });
 
-  test("next button hidden on last slide", async ({ page }) => {
+  test("next button disabled on last slide", async ({ page }) => {
     const t = track(page);
     await t.evaluate((el) => {
       el.scrollTo({ left: el.scrollWidth, behavior: "instant" });
@@ -68,8 +74,14 @@ test.describe("Slider", () => {
     await page.waitForTimeout(300);
 
     await expect(counter(page)).toHaveText("12/12");
-    const count = await navButtons(page).count();
-    expect(count).toBe(1);
+    await expect(navButtons(page).first()).toHaveAttribute(
+      "aria-disabled",
+      "false"
+    );
+    await expect(navButtons(page).last()).toHaveAttribute(
+      "aria-disabled",
+      "true"
+    );
   });
 
   test("programmatic scroll updates counter", async ({ page }) => {
