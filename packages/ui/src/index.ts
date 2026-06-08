@@ -24,6 +24,8 @@ export * from "./filter-checkbox-group";
 export * from "./flag";
 export * from "./flow";
 export * from "./full-screen-app";
+export * from "./gateway-filters";
+export * from "./gateway-map-results";
 export * from "./header";
 export * from "./hero";
 export * from "./image-fill";
