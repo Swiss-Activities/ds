@@ -1,19 +1,9 @@
 import { useCallback, useState } from "react";
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import {
-  SectionActivityGrid,
-  SectionHero,
-  gatewayHomepageHeroFallbackImage,
-  renderWeatherIcon,
-} from "@swiss-activities/ui";
 import { grayColors, saColors } from "@swiss-activities/ui/tokens";
-import {
-  toActivityItem,
-  type TGatewayHome,
-  type TGatewayHomeCarouselSection,
-  type TGatewayHomeWeatherCardSection,
-} from "@swiss-activities/data";
+import type { AppGatewayContext, TGatewayHome } from "@swiss-activities/data";
 import { Field, Input, Select, SubmitButton } from "./form";
+import { GatewayPlaygroundRenderer } from "./gateway-renderer";
 
 const DEFAULT_GATEWAY_URL = "https://www.swissactivities.com/api/gateway/home";
 
@@ -62,14 +52,6 @@ const COUNTRIES = [
   { value: "CN", label: "China" },
 ];
 
-const isCarouselSection = (
-  section: TGatewayHome["sections"][number]
-): section is TGatewayHomeCarouselSection => section.component === "carousel";
-
-const isWeatherCardSection = (
-  section: TGatewayHome["sections"][number]
-): section is TGatewayHomeWeatherCardSection => section.component === "weather_card";
-
 function GatewayPlayground() {
   const [gatewayUrl, setGatewayUrl] = useState(DEFAULT_GATEWAY_URL);
   const [locale, setLocale] = useState("de_CH");
@@ -90,7 +72,12 @@ function GatewayPlayground() {
   }, [gatewayUrl, locale, country, lat, lng]);
 
   const requestUrl = buildUrl();
-  const weatherSection = data?.sections.find(isWeatherCardSection) ?? null;
+  const gatewayContext: AppGatewayContext = {
+    locale,
+    country: country || null,
+    lat: lat ? Number(lat) : null,
+    lng: lng ? Number(lng) : null,
+  };
 
   const fetchData = useCallback(async () => {
     setLoading(true);
@@ -113,7 +100,7 @@ function GatewayPlayground() {
     <main
       style={{
         minHeight: "100vh",
-        backgroundColor: saColors.bg,
+        backgroundColor: "#fff",
         fontFamily: "Inter, system-ui, sans-serif",
       }}
     >
@@ -265,65 +252,13 @@ function GatewayPlayground() {
         )}
       </div>
 
-      {weatherSection ? (
-        <div className="sa-container" style={{ marginBottom: 32 }}>
-          <SectionHero
-            title={weatherSection.title}
-            image={
-              <img
-                src={weatherSection.imageUrl || gatewayHomepageHeroFallbackImage}
-                alt={weatherSection.title}
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  objectFit: "cover",
-                  display: "block",
-                }}
-              />
-            }
-            days={weatherSection.data.map((item) => ({
-              id: item.dayFull,
-              label: item.day,
-              low: item.tempMin,
-              high: item.tempMax,
-              icon: renderWeatherIcon(item.icon),
-            }))}
-          />
-        </div>
+      {data ? (
+        <GatewayPlaygroundRenderer
+          data={data}
+          context={gatewayContext}
+          locale={locale}
+        />
       ) : null}
-
-      {data?.sections.filter(isCarouselSection).map((section) => (
-        <div key={section.id} className="sa-container">
-          <SectionActivityGrid
-            title={section.title}
-            className="py-6"
-            activities={section.data
-              .filter(
-                (item) =>
-                  item.type !== "review" &&
-                  !!(item.priceFormatted ?? item.price_formatted)
-              )
-              .map((item) => {
-                const activity = toActivityItem(item, {
-                  priceLabel: "pro Person",
-                  fromLabel: "ab",
-                  renderImage: (gatewayItem) =>
-                    (gatewayItem.imageUrl ?? gatewayItem.image_url) ? (
-                      <img
-                        src={(gatewayItem.imageUrl ?? gatewayItem.image_url) as string}
-                        alt={gatewayItem.title}
-                      />
-                    ) : null,
-                });
-
-                return {
-                  ...activity,
-                  type: activity.type === "review" ? undefined : activity.type,
-                };
-              })}
-          />
-        </div>
-      ))}
     </main>
   );
 }
