@@ -21,10 +21,17 @@ export { useGetCountry, getCountry } from "./gateway/getCountry";
 export {
   applyGatewayFilterSelection,
   collectGatewayItemsById,
+  getGatewayGridPageScrollIndex,
+  getGatewayGridPageStateItems,
+  getGatewayInitialDataPath,
+  getGatewayPillarSelection,
   getGatewaySearchResultsSummary,
   getGatewaySectionActionHref,
+  getGatewaySectionAlternates,
+  getGatewaySectionPillarPath,
   getGatewayStaticFilterConfig,
   getGatewayStaticFilterSection,
+  getValidGatewayPage,
   isGatewayActivityGridSection,
   isGatewayActivitySection,
   isGatewayCarouselSection,
@@ -34,6 +41,8 @@ export {
   isGatewayRegionMapSection,
   isGatewayReviewSection,
   isGatewayWeatherCardSection,
+  supportsGatewayDateParam,
+  type GatewayPillarSelection,
 } from "./gateway/sections";
 export {
   getGatewayFeed,
@@ -172,6 +181,28 @@ export type { GatewayStoreState } from "./gateway/store";
 
 export { toActivityItem } from "./adapters/activityItem";
 export type { ActivityItemData, RenderImage } from "./adapters/activityItem";
+export {
+  getGatewayActivityItemImages,
+  toGatewayActivityItemData,
+  uniqueGatewayActivityItemImages,
+} from "./adapters/gatewayActivityItem";
+export type {
+  GatewayActivityItemData,
+  GatewayActivityItemImage,
+  GatewayActivityItemLabels,
+  GatewayActivityMapPoint,
+} from "./adapters/gatewayActivityItem";
+export {
+  getGatewayRegionPathSlug,
+  getGatewayRegionSlug,
+  toGatewayRegionMapTiles,
+} from "./adapters/gatewayRegionMap";
+export type { GatewayRegionMapTileData } from "./adapters/gatewayRegionMap";
+export {
+  getGatewayReviewActivityPrefix,
+  toGatewayReviewItems,
+} from "./adapters/gatewayReviewItem";
+export type { GatewayReviewItemData } from "./adapters/gatewayReviewItem";
 
 export { useGeolocation } from "./hooks/useGeolocation";
 export { useSilentCoordinates } from "./hooks/useSilentCoordinates";

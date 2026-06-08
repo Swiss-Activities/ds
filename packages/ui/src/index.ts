@@ -26,6 +26,7 @@ export * from "./flow";
 export * from "./full-screen-app";
 export * from "./gateway-filters";
 export * from "./gateway-map-results";
+export * from "./gateway-section-title";
 export * from "./header";
 export * from "./hero";
 export * from "./image-fill";

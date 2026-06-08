@@ -25,6 +25,19 @@ type GatewaySectionWithAction = {
   url?: string | null;
 };
 
+type GatewaySectionWithAlternates<TAlternate> = {
+  alternates?: TAlternate[];
+};
+
+type GatewayGridPageStateLike<TItem> = {
+  pages: Record<number, TItem[]>;
+};
+
+export type GatewayPillarSelection = {
+  type: "activity-types" | "non-bookable";
+  value: string;
+};
+
 export const isGatewayCarouselSection = (
   section: GatewaySectionLike
 ): section is TGatewayHomeCarouselSection => section.component === "carousel";
@@ -204,6 +217,120 @@ export const getGatewaySectionActionHref = (
     null
   );
 };
+
+export const getGatewaySectionPillarPath = (
+  section: object
+) => {
+  const sectionWithPillar = section as { pillarPath?: string | null };
+
+  if (typeof sectionWithPillar.pillarPath !== "string") {
+    return null;
+  }
+
+  return sectionWithPillar.pillarPath;
+};
+
+export const getGatewaySectionAlternates = <
+  TAlternate extends { pillarPath?: string | null },
+>(
+  section: GatewaySectionWithAlternates<TAlternate>,
+  getPillarPathHref: (pillarPath?: string | null) => string | null
+) =>
+  section.alternates?.map((alternate) => ({
+    ...alternate,
+    href: getPillarPathHref(alternate.pillarPath),
+  }));
+
+export const getGatewayPillarSelection = (
+  pillarPath?: string | null
+): GatewayPillarSelection | null => {
+  if (!pillarPath) {
+    return null;
+  }
+
+  const parts = pillarPath.split("?")[0]?.split("/").filter(Boolean) ?? [];
+  const resourceIndex = parts.findIndex(
+    (part) => part === "activity-types" || part === "non-bookable"
+  );
+
+  if (resourceIndex < 0) {
+    return null;
+  }
+
+  const value = parts[resourceIndex + 1];
+
+  if (!value) {
+    return null;
+  }
+
+  return {
+    type: parts[resourceIndex] as GatewayPillarSelection["type"],
+    value: decodeURIComponent(value),
+  };
+};
+
+export const getGatewayGridPageStateItems = <TItem>(
+  state?: GatewayGridPageStateLike<TItem>
+) =>
+  Object.entries(state?.pages ?? {})
+    .sort(([a], [b]) => Number(a) - Number(b))
+    .flatMap(([, items]) => items);
+
+export const getGatewayGridPageScrollIndex = <TItem>({
+  baseCount,
+  page,
+  pages,
+}: {
+  baseCount: number;
+  page: number;
+  pages: Record<number, TItem[]>;
+}) =>
+  baseCount +
+  Object.entries(pages).reduce((count, [pageNumber, items]) => {
+    return Number(pageNumber) < page ? count + items.length : count;
+  }, 0);
+
+export const getValidGatewayPage = (page: number | null | undefined) =>
+  Number.isFinite(page) && page && page > 1 ? page : 1;
+
+export const getGatewayInitialDataPath = ({
+  activityType,
+  nonBookable,
+  poi,
+  destination,
+  region,
+}: {
+  activityType?: string | null;
+  nonBookable?: string | null;
+  poi?: string | null;
+  destination?: string | null;
+  region?: string | null;
+}) => {
+  if (activityType) {
+    return `/app/v1/activity-types/${encodeURIComponent(activityType)}`;
+  }
+
+  if (nonBookable) {
+    return `/app/v1/non-bookable/${encodeURIComponent(nonBookable)}`;
+  }
+
+  if (poi) {
+    return `/app/v1/pois/${encodeURIComponent(poi)}`;
+  }
+
+  if (destination) {
+    return `/app/v1/destinations/${encodeURIComponent(destination)}`;
+  }
+
+  if (region) {
+    return `/app/v1/regions/${encodeURIComponent(region)}`;
+  }
+
+  return "/app/v1/home";
+};
+
+export const supportsGatewayDateParam = (path: string) =>
+  path === "/app/v1/home" || path.startsWith("/app/v1/destinations/");
 
 export const collectGatewayItemsById = (data: {
   sections?: unknown[];
