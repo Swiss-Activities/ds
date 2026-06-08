@@ -1,21 +1,15 @@
-import type { ReactNode } from "react";
 import {
   AppGateway,
   GatewayProvider,
-  applyGatewayFilterSelection,
-  getGatewayStaticFilterConfig,
-  isGatewayActivitySection,
-  isGatewayFeatureBandSection,
-  isGatewayHeroSection,
-  isGatewayRegionMapSection,
-  isGatewayReviewSection,
-  isGatewayWeatherCardSection,
-  toGatewayActivityItemData,
-  toGatewayRegionMapTiles,
-  toGatewayReviewItems,
+  mapGatewayHomeData,
   type AppGatewayContext,
-  type TGatewayActivityCardItem,
   type TGatewayFilterConfig,
+  type GatewayHomeActivitySectionData,
+  type GatewayHomeFeatureBandSectionData,
+  type GatewayHomeHeroData,
+  type GatewayHomeRegionMapSectionData,
+  type GatewayHomeReviewSectionData,
+  type GatewayHomeSectionData,
   type TGatewayHome,
   type TGatewayWeatherCardItem,
 } from "@swiss-activities/data";
@@ -90,23 +84,6 @@ const toWeatherDays = (
     icon: renderWeatherIcon(item.icon),
   }));
 
-const toPreviewActivity = (
-  item: TGatewayActivityCardItem,
-  locale: string
-): ActivityItem => {
-  const activity = toGatewayActivityItemData(item, {
-    locale,
-    labels: playgroundGatewayLabels,
-    priceLabel: "pro Person",
-    fromLabel: "ab",
-  });
-
-  return {
-    ...activity,
-    type: activity.type,
-  };
-};
-
 const renderImage = (src?: string | null, alt = "") =>
   src ? (
     <img
@@ -121,166 +98,131 @@ const renderImage = (src?: string | null, alt = "") =>
     />
   ) : null;
 
-function renderGatewayHero(data: TGatewayHome) {
-  const staticHero = data.staticSections?.find(
-    (section) => section.component === "hero"
+function renderGatewayHero(hero: GatewayHomeHeroData | null) {
+  if (!hero) {
+    return null;
+  }
+
+  return (
+    <div className="sa-container py-6">
+      <SectionHero
+        title={hero.title}
+        image={renderImage(
+          hero.imageUrl ?? gatewayHomepageHeroFallbackImage,
+          hero.title
+        )}
+        days={toWeatherDays(hero.days)}
+        unit="°"
+        weatherTitle={hero.weatherTitle ?? undefined}
+        weatherDescription={hero.weatherDescription ?? undefined}
+        variant={hero.variant}
+      />
+    </div>
   );
-  const weatherCard = data.sections.find(isGatewayWeatherCardSection);
-  const hero = data.sections.find(isGatewayHeroSection);
-
-  if (staticHero) {
-    return (
-      <div className="sa-container py-6">
-        <SectionHero
-          title={staticHero.title}
-          image={renderImage(staticHero.imageUrl, staticHero.title)}
-          variant={staticHero.variant ?? "centered_title"}
-        />
-      </div>
-    );
-  }
-
-  if (weatherCard) {
-    return (
-      <div className="sa-container py-6">
-        <SectionHero
-          title={weatherCard.title}
-          image={renderImage(
-            weatherCard.imageUrl ?? gatewayHomepageHeroFallbackImage,
-            weatherCard.title
-          )}
-          days={toWeatherDays(weatherCard.data)}
-          unit="°"
-          weatherTitle={weatherCard.title}
-          weatherDescription={weatherCard.data[0]?.description}
-          variant="image_summary"
-        />
-      </div>
-    );
-  }
-
-  if (hero) {
-    return (
-      <div className="sa-container py-6">
-        <SectionHero
-          title={hero.text}
-          days={toWeatherDays(hero.forecast?.data)}
-          unit="°"
-          weatherTitle={hero.forecast?.title}
-          weatherDescription={hero.forecast?.data[0]?.description}
-          variant="summary"
-        />
-      </div>
-    );
-  }
-
-  return null;
 }
 
-function renderGatewaySections(data: TGatewayHome, locale: string) {
-  const filterConfig = getGatewayStaticFilterConfig(data);
-  const sections: ReactNode[] = [];
+const toPreviewActivity = (
+  section: GatewayHomeActivitySectionData
+): ActivityItem[] =>
+  section.items.map(({ itemData }) => ({
+    ...itemData,
+    type: itemData.type,
+  }));
 
-  if (filterConfig) {
-    sections.push(
-      <div key="gateway-filters" className="sa-container py-4">
+function renderGatewayReviewSection(section: GatewayHomeReviewSectionData) {
+  return (
+    <div className="sa-container">
+      <SectionReviewGrid
+        title={section.title}
+        reviews={section.reviews.map((review) => ({
+          id: review.id,
+          author: review.author,
+          countryCode: review.countryCode,
+          date: review.date,
+          rating: review.rating,
+          text: review.text,
+          activityPrefix: review.activityPrefix,
+          activity: {
+            label: review.activityTitle,
+            href: "#",
+          },
+        }))}
+        className="py-6"
+      />
+    </div>
+  );
+}
+
+function renderGatewayFeatureBandSection(
+  section: GatewayHomeFeatureBandSectionData
+) {
+  return (
+    <div className="sa-container">
+      <SectionFeatureBand
+        title={section.title}
+        items={section.items.map((item) => ({
+          id: item.id,
+          icon: <ProviderIcon icon={item.icon} />,
+          title: item.title,
+          description: item.description,
+        }))}
+        className="py-6"
+      />
+    </div>
+  );
+}
+
+function renderGatewayRegionMapSection(
+  section: GatewayHomeRegionMapSectionData
+) {
+  return (
+    <div className="sa-container">
+      <SectionRegionExplorer
+        title={section.title}
+        tiles={section.tiles}
+        className="py-6"
+      />
+    </div>
+  );
+}
+
+function renderGatewayActivitySection(section: GatewayHomeActivitySectionData) {
+  return (
+    <div className="sa-container">
+      <SectionActivityGrid
+        title={section.title}
+        className="py-6"
+        activities={toPreviewActivity(section)}
+      />
+    </div>
+  );
+}
+
+function renderGatewaySection(section: GatewayHomeSectionData) {
+  if (section.component === "filters") {
+    return (
+      <div className="sa-container py-4">
         <GatewayFilters
-          filters={applyGatewayFilterSelection(
-            getPlaygroundFilterConfig(filterConfig),
-            {
-              destination: null,
-              tags: [],
-            }
-          )}
+          filters={getPlaygroundFilterConfig(section.filterConfig)}
           labels={playgroundFilterLabels}
         />
       </div>
     );
   }
 
-  data.sections.forEach((section, sectionIndex) => {
-    const sectionKey = `${section.id}-${sectionIndex}`;
+  if (section.component === "reviews") {
+    return renderGatewayReviewSection(section);
+  }
 
-    if (isGatewayHeroSection(section) || isGatewayWeatherCardSection(section)) {
-      return;
-    }
+  if (section.component === "feature_band") {
+    return renderGatewayFeatureBandSection(section);
+  }
 
-    if (isGatewayReviewSection(section)) {
-      sections.push(
-        <div key={sectionKey} className="sa-container">
-          <SectionReviewGrid
-            title={section.title}
-            reviews={toGatewayReviewItems(section.data, locale).map(
-              (review) => ({
-                id: review.id,
-                author: review.author,
-                countryCode: review.countryCode,
-                date: review.date,
-                rating: review.rating,
-                text: review.text,
-                activityPrefix: review.activityPrefix,
-                activity: {
-                  label: review.activityTitle,
-                  href: "#",
-                },
-              })
-            )}
-            className="py-6"
-          />
-        </div>
-      );
-      return;
-    }
+  if (section.component === "region_map") {
+    return renderGatewayRegionMapSection(section);
+  }
 
-    if (isGatewayFeatureBandSection(section)) {
-      sections.push(
-        <div key={sectionKey} className="sa-container">
-          <SectionFeatureBand
-            title={section.title}
-            items={section.data.map((item) => ({
-              id: item.id,
-              icon: <ProviderIcon icon={item.icon} />,
-              title: item.title,
-              description: item.description,
-            }))}
-            className="py-6"
-          />
-        </div>
-      );
-      return;
-    }
-
-    if (isGatewayRegionMapSection(section)) {
-      sections.push(
-        <div key={sectionKey} className="sa-container">
-          <SectionRegionExplorer
-            title={section.title}
-            tiles={toGatewayRegionMapTiles(section.data)}
-            className="py-6"
-          />
-        </div>
-      );
-      return;
-    }
-
-    if (!isGatewayActivitySection(section)) {
-      return;
-    }
-
-    sections.push(
-      <div key={sectionKey} className="sa-container">
-        <SectionActivityGrid
-          title={section.title}
-          className="py-6"
-          activities={section.data.map((item) =>
-            toPreviewActivity(item, locale)
-          )}
-        />
-      </div>
-    );
-  });
-
-  return sections;
+  return renderGatewayActivitySection(section);
 }
 
 export function GatewayPlaygroundRenderer({
@@ -290,7 +232,7 @@ export function GatewayPlaygroundRenderer({
 }: GatewayPlaygroundRendererProps) {
   return (
     <GatewayProvider apiUrl="" gatewayUrl="" locale={locale}>
-      <AppGateway<ReactNode, ReactNode>
+      <AppGateway<GatewayHomeSectionData, GatewayHomeHeroData>
         apiUrl=""
         gatewayUrl=""
         locale={locale}
@@ -300,14 +242,22 @@ export function GatewayPlaygroundRenderer({
         renderFallbackHero={() => null}
         buildFallbackSections={() => []}
         mapGatewayData={({ data: gatewayData }) => ({
-          hero: renderGatewayHero(gatewayData),
-          sections: renderGatewaySections(gatewayData, locale),
+          ...mapGatewayHomeData(gatewayData, {
+            locale,
+            labels: playgroundGatewayLabels,
+            priceLabel: "pro Person",
+            fromLabel: "ab",
+          }),
         })}
-        renderGatewayHero={({ hero }) => hero}
+        renderGatewayHero={({ hero }) => renderGatewayHero(hero)}
         renderPage={({ hero, sections }) => (
           <>
             {hero}
-            {sections}
+            {sections.map((section, index) => (
+              <div key={`${section.id}-${index}`}>
+                {renderGatewaySection(section)}
+              </div>
+            ))}
           </>
         )}
       />

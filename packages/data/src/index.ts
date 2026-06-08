@@ -203,6 +203,27 @@ export {
   toGatewayReviewItems,
 } from "./adapters/gatewayReviewItem";
 export type { GatewayReviewItemData } from "./adapters/gatewayReviewItem";
+export {
+  mapGatewayHomeData,
+  mapGatewayHomeSections,
+  toGatewayDestinationImageHero,
+  toGatewayHomeHero,
+  toGatewayStaticHero,
+  toGatewaySummaryHero,
+  toGatewayWeatherHero,
+} from "./adapters/gatewayHome";
+export type {
+  GatewayHomeActivitySectionData,
+  GatewayHomeActivitySectionItemData,
+  GatewayHomeData,
+  GatewayHomeFeatureBandSectionData,
+  GatewayHomeFilterSectionData,
+  GatewayHomeHeroData,
+  GatewayHomeRegionMapSectionData,
+  GatewayHomeReviewSectionData,
+  GatewayHomeSectionData,
+  GatewayHomeSelection,
+} from "./adapters/gatewayHome";
 
 export { useGeolocation } from "./hooks/useGeolocation";
 export { useSilentCoordinates } from "./hooks/useSilentCoordinates";
