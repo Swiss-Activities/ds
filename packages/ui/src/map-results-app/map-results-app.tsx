@@ -12,11 +12,29 @@ import { SheetWithDetent } from "../sheet";
 import { cn } from "../utils/cn";
 import type { MapResultsAppProps } from "./map-results-app.types";
 
-const MOBILE_MAP_SHEET_DETENTS = ["124px", "calc(64dvh + 60px)"];
+const MOBILE_MAP_SHEET_PREVIEW_HEIGHT = 124;
+const MOBILE_MAP_SHEET_MIDDLE_HEIGHT_RATIO = 0.64;
+const MOBILE_MAP_SHEET_MIDDLE_HEIGHT_OFFSET = 60;
+const MOBILE_MAP_SHEET_VIEW_OVERSCAN = 60;
+const MOBILE_MAP_SHEET_PREVIEW_VISIBLE_HEIGHT =
+  MOBILE_MAP_SHEET_PREVIEW_HEIGHT - MOBILE_MAP_SHEET_VIEW_OVERSCAN;
+const MOBILE_MAP_SHEET_DETENTS = [
+  `${MOBILE_MAP_SHEET_PREVIEW_HEIGHT}px`,
+  `calc(${MOBILE_MAP_SHEET_MIDDLE_HEIGHT_RATIO * 100}dvh + ${MOBILE_MAP_SHEET_MIDDLE_HEIGHT_OFFSET}px)`,
+];
 const MOBILE_MAP_SHEET_PREVIEW_DETENT = 1;
 const MOBILE_MAP_SHEET_DEFAULT_HEADER_HEIGHT = 72;
 const MOBILE_MAP_SHEET_RADIUS = 28;
 const MOBILE_MAP_SHEET_SHADOW_OPACITY = 0.16;
+
+function getMobileMapSheetMiddleHeight() {
+  const viewportHeight = window.visualViewport?.height ?? window.innerHeight;
+
+  return Math.round(
+    viewportHeight * MOBILE_MAP_SHEET_MIDDLE_HEIGHT_RATIO +
+      MOBILE_MAP_SHEET_MIDDLE_HEIGHT_OFFSET
+  );
+}
 
 export function MapResultsApp({
   className,
@@ -31,12 +49,19 @@ export function MapResultsApp({
   ...props
 }: MapResultsAppProps) {
   const mobileMapHeaderRef = useRef<HTMLDivElement>(null);
+  const mobileMapFrameRef = useRef<number | null>(null);
   const [mobileMapHeaderHeight, setMobileMapHeaderHeight] = useState(
     MOBILE_MAP_SHEET_DEFAULT_HEADER_HEIGHT
+  );
+  const [mobileMapBottomOffset, setMobileMapBottomOffset] = useState(
+    MOBILE_MAP_SHEET_PREVIEW_VISIBLE_HEIGHT
   );
   const [mobileMapSheetTopProgress, setMobileMapSheetTopProgress] =
     useState(0);
   const [mobileMapScrollResetKey, setMobileMapScrollResetKey] = useState(0);
+  const mobileMapStyle: CSSProperties = {
+    bottom: `${Math.round(mobileMapBottomOffset)}px`,
+  };
   const mobileMapSheetRadius =
     MOBILE_MAP_SHEET_RADIUS * (1 - mobileMapSheetTopProgress);
   const mobileMapSheetShapeStyle: CSSProperties = {
@@ -50,7 +75,62 @@ export function MapResultsApp({
     })`,
   };
 
-  const updateMobileMapSheetTopProgress = useCallback(
+  const updateMobileMapBottomOffset = useCallback(() => {
+    const sheetNode = document.querySelector<HTMLElement>(
+      "[data-mobile-map-sheet-content]"
+    );
+
+    if (!sheetNode) {
+      return;
+    }
+
+    const visibleSheetHeight = Math.max(
+      0,
+      window.innerHeight - sheetNode.getBoundingClientRect().top
+    );
+    const middleVisibleHeight = Math.max(
+      MOBILE_MAP_SHEET_PREVIEW_VISIBLE_HEIGHT,
+      getMobileMapSheetMiddleHeight() - MOBILE_MAP_SHEET_VIEW_OVERSCAN
+    );
+    const nextOffset = Math.min(visibleSheetHeight, middleVisibleHeight);
+
+    setMobileMapBottomOffset((currentOffset) =>
+      Math.abs(currentOffset - nextOffset) < 1 ? currentOffset : nextOffset
+    );
+  }, []);
+
+  const syncMobileMapBottomOffset = useCallback(
+    (durationMs = 300) => {
+      if (mobileMapFrameRef.current !== null) {
+        cancelAnimationFrame(mobileMapFrameRef.current);
+      }
+
+      const startedAt = performance.now();
+
+      const updateUntilSettled = () => {
+        updateMobileMapBottomOffset();
+
+        if (performance.now() - startedAt < durationMs) {
+          mobileMapFrameRef.current = requestAnimationFrame(updateUntilSettled);
+          return;
+        }
+
+        mobileMapFrameRef.current = null;
+      };
+
+      mobileMapFrameRef.current = requestAnimationFrame(updateUntilSettled);
+    },
+    [updateMobileMapBottomOffset]
+  );
+
+  const cancelMobileMapBottomOffsetSync = useCallback(() => {
+    if (mobileMapFrameRef.current !== null) {
+      cancelAnimationFrame(mobileMapFrameRef.current);
+      mobileMapFrameRef.current = null;
+    }
+  }, []);
+
+  const updateMobileMapSheetTravel = useCallback(
     ({
       progress,
       progressAtDetents,
@@ -75,16 +155,41 @@ export function MapResultsApp({
           ? currentProgress
           : nextProgress
       );
+      syncMobileMapBottomOffset();
     },
-    []
+    [syncMobileMapBottomOffset]
   );
 
   useEffect(() => {
     if (open) {
       setMobileMapSheetTopProgress(0);
+      setMobileMapBottomOffset(MOBILE_MAP_SHEET_PREVIEW_VISIBLE_HEIGHT);
       setMobileMapScrollResetKey((key) => key + 1);
+      syncMobileMapBottomOffset();
     }
-  }, [open, resetKey]);
+  }, [open, resetKey, syncMobileMapBottomOffset]);
+
+  useEffect(() => {
+    if (!open) {
+      return;
+    }
+
+    const updateMiddleHeight = () => syncMobileMapBottomOffset(100);
+    const visualViewport = window.visualViewport;
+
+    updateMiddleHeight();
+    window.addEventListener("resize", updateMiddleHeight);
+    visualViewport?.addEventListener("resize", updateMiddleHeight);
+
+    return () => {
+      window.removeEventListener("resize", updateMiddleHeight);
+      visualViewport?.removeEventListener("resize", updateMiddleHeight);
+    };
+  }, [open, syncMobileMapBottomOffset]);
+
+  useEffect(() => {
+    return cancelMobileMapBottomOffsetSync;
+  }, [cancelMobileMapBottomOffsetSync]);
 
   useEffect(() => {
     if (!open || !mobileMapHeaderRef.current) {
@@ -129,7 +234,13 @@ export function MapResultsApp({
         <div className="hidden min-h-0 overflow-y-auto px-4 py-6 sm:px-6 lg:block lg:px-8">
           {desktopList}
         </div>
-        <div className="absolute inset-0 min-h-0 min-w-0 lg:static">{map}</div>
+        <div
+          data-mobile-map-results-map
+          className="absolute inset-x-0 top-0 min-h-0 min-w-0 lg:static"
+          style={mobileMapStyle}
+        >
+          {map}
+        </div>
         <SheetWithDetent.Root
           defaultActiveDetent={MOBILE_MAP_SHEET_PREVIEW_DETENT}
           defaultPresented
@@ -148,7 +259,7 @@ export function MapResultsApp({
               }
               onClickOutside={{ dismiss: false }}
               onEscapeKeyDown={{ dismiss: false }}
-              onTravel={updateMobileMapSheetTopProgress}
+              onTravel={updateMobileMapSheetTravel}
               swipeDismissal={false}
               swipeOvershoot
             >
