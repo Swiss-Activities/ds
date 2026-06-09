@@ -93,6 +93,14 @@ export {
   type GatewayDateRangeLabels,
 } from "./gateway/items";
 export {
+  assertGatewayDetailContract,
+  assertGatewayHomeContract,
+  GATEWAY_DETAIL_CONTRACT_VERSION,
+  GATEWAY_HOME_CONTRACT_VERSION,
+  getGatewayDetailContractErrors,
+  getGatewayHomeContractErrors,
+} from "./gateway/contract";
+export {
   getGatewayDetail,
   getGatewayDetailForItem,
   getGatewayDetailParamsForItem,
