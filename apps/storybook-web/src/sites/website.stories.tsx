@@ -1,5 +1,6 @@
 import { useState } from "react";
 import type { Meta, StoryObj } from "@storybook/react-vite";
+import { WebsiteGatewayPageRenderer } from "@swiss-activities/data";
 import { Languages } from "@swiss-activities/ui/icons";
 import {
   Icon,
@@ -13,13 +14,10 @@ import {
   SiteFooterAppLinks,
   SiteFooterPaymentMethods,
   Text,
-  Website,
   type SiteFooterProps,
   type SiteHeaderProps,
 } from "@swiss-activities/ui";
 import { gatewayHomeResponse } from "../fixtures/gateway-home-response";
-import { GatewayPlaygroundRenderer } from "../playgrounds/gateway-renderer";
-import { gatewayPageContext } from "../pages/gateway-page";
 
 const languageOptions = [
   { value: "de_CH", label: "Deutsch", shortLabel: "DE" },
@@ -231,18 +229,14 @@ function WebsiteStory() {
   };
 
   return (
-    <Website
+    <WebsiteGatewayPageRenderer
       header={header}
-      gateway={
-        <div className="lg:pt-8">
-          <GatewayPlaygroundRenderer
-            data={gatewayHomeResponse}
-            context={gatewayPageContext}
-            heroSearch={<StorySearch mode="main" />}
-            locale="de_CH"
-          />
-        </div>
-      }
+      heroSearch={<StorySearch mode="main" />}
+      locale="de_CH"
+      page={{
+        type: "home",
+        data: gatewayHomeResponse,
+      }}
       footer={footer}
     />
   );

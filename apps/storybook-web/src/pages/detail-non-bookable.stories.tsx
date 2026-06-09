@@ -1,15 +1,24 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
+import { WebsiteGatewayPageContent } from "@swiss-activities/data";
 import { gatewayDetailNonBookableResponse } from "../fixtures/gateway-detail-non-bookable-response";
-import { GatewayNonBookableDetailPage } from "./detail-page";
 
 const meta = {
   title: "Pages/Detail - Non Bookable",
   parameters: { layout: "fullscreen" },
   args: {
-    detail: gatewayDetailNonBookableResponse,
+    locale: "de_CH",
+    page: {
+      type: "detail-non-bookable",
+      id: "3088ee86-2451-4ae6-a685-6c2c528ec72f",
+      detail: gatewayDetailNonBookableResponse,
+    },
   },
-  render: (args) => <GatewayNonBookableDetailPage {...args} />,
-} satisfies Meta<typeof GatewayNonBookableDetailPage>;
+  render: (args) => (
+    <main className="min-h-screen bg-white lg:pt-8">
+      <WebsiteGatewayPageContent {...args} />
+    </main>
+  ),
+} satisfies Meta<typeof WebsiteGatewayPageContent>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;

@@ -6,8 +6,11 @@ const meta = {
   title: "Pages/Homepage",
   parameters: { layout: "fullscreen" },
   args: {
-    data: gatewayHomeResponse,
     locale: "de_CH",
+    page: {
+      type: "home",
+      data: gatewayHomeResponse,
+    },
   },
   render: (args) => <GatewayPage {...args} />,
 } satisfies Meta<GatewayPageStoryArgs>;

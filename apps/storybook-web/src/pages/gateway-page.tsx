@@ -1,9 +1,12 @@
-import type { AppGatewayContext, TGatewayHome } from "@swiss-activities/data";
-import { GatewayPlaygroundRenderer } from "../playgrounds/gateway-renderer";
+import {
+  WebsiteGatewayPageContent,
+  type AppGatewayContext,
+  type WebsiteGatewayPage,
+} from "@swiss-activities/data";
 
 export type GatewayPageStoryArgs = {
-  data: TGatewayHome;
   locale: string;
+  page: WebsiteGatewayPage;
 };
 
 export const gatewayPageContext: AppGatewayContext = {
@@ -13,13 +16,15 @@ export const gatewayPageContext: AppGatewayContext = {
   locale: "de_CH",
 };
 
-export function GatewayPage({ data, locale }: GatewayPageStoryArgs) {
+export function GatewayPage({ locale, page }: GatewayPageStoryArgs) {
   return (
     <main className="min-h-screen bg-white lg:pt-8">
-      <GatewayPlaygroundRenderer
-        data={data}
-        context={gatewayPageContext}
+      <WebsiteGatewayPageContent
         locale={locale}
+        page={{
+          ...page,
+          context: page.context ?? gatewayPageContext,
+        }}
       />
     </main>
   );

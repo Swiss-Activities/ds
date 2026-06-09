@@ -6,8 +6,11 @@ const meta = {
   title: "Pages/Overview - Non Bookable",
   parameters: { layout: "fullscreen" },
   args: {
-    data: gatewayOverviewNonBookableResponse,
     locale: "de_CH",
+    page: {
+      type: "overview-non-bookable",
+      data: gatewayOverviewNonBookableResponse,
+    },
   },
   render: (args) => <GatewayPage {...args} />,
 } satisfies Meta<GatewayPageStoryArgs>;

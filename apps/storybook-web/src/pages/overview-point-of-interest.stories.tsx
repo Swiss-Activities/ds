@@ -6,8 +6,11 @@ const meta = {
   title: "Pages/Overview - Point of Interest",
   parameters: { layout: "fullscreen" },
   args: {
-    data: gatewayOverviewPointOfInterestResponse,
     locale: "de_CH",
+    page: {
+      type: "overview-point-of-interest",
+      data: gatewayOverviewPointOfInterestResponse,
+    },
   },
   render: (args) => <GatewayPage {...args} />,
 } satisfies Meta<GatewayPageStoryArgs>;

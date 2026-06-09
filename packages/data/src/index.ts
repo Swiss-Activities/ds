@@ -236,5 +236,7 @@ export type {
   GatewayHomeSelection,
 } from "./adapters/gatewayHome";
 
+export * from "./website-gateway";
+
 export { useGeolocation } from "./hooks/useGeolocation";
 export { useSilentCoordinates } from "./hooks/useSilentCoordinates";

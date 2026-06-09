@@ -53,6 +53,9 @@
     "packages/data": {
       "name": "@swiss-activities/data",
       "version": "0.1.0",
+      "dependencies": {
+        "@swiss-activities/ui": "*",
+      },
       "devDependencies": {
         "@tanstack/react-query": "^5.99.2",
         "@types/react": "^19.2.14",

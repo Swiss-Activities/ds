@@ -6,8 +6,11 @@ const meta = {
   title: "Pages/Overview - Activity Type",
   parameters: { layout: "fullscreen" },
   args: {
-    data: gatewayOverviewActivityTypeResponse,
     locale: "de_CH",
+    page: {
+      type: "overview-activity-type",
+      data: gatewayOverviewActivityTypeResponse,
+    },
   },
   render: (args) => <GatewayPage {...args} />,
 } satisfies Meta<GatewayPageStoryArgs>;
