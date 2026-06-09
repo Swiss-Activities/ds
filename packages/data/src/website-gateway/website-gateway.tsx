@@ -1092,25 +1092,14 @@ export function WebsiteGatewayPageRenderer({
   locale = "de_CH",
   page,
 }: WebsiteGatewayPageRendererProps) {
-  const footerWithPageSpacing = footer
-    ? {
-        ...footer,
-        className: ["mt-12 lg:mt-16", footer.className]
-          .filter(Boolean)
-          .join(" "),
-      }
-    : undefined;
-  const footerSlotWithPageSpacing = footerSlot ? (
-    <div className="mt-12 lg:mt-16">{footerSlot}</div>
-  ) : undefined;
-
   return (
     <Website
       afterFooter={afterFooter}
       className={className}
       dir={dir}
-      footer={footerWithPageSpacing}
-      footerSlot={footerSlotWithPageSpacing}
+      footer={footer}
+      footerSlot={footerSlot}
+      footerSpacing="page"
       gateway={
         <div className="lg:pt-8">
           <WebsiteGatewayPageContent

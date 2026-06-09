@@ -7,6 +7,7 @@ export type WebsiteProps = {
   className?: string;
   dir?: "ltr" | "rtl";
   footer?: SiteFooterProps;
+  footerSpacing?: "page";
   footerSlot?: ReactNode;
   gateway: ReactNode;
   header?: SiteHeaderProps;
