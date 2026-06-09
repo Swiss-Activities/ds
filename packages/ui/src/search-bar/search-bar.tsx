@@ -291,9 +291,9 @@ export const SearchBar = forwardRef<HTMLDivElement, SearchBarProps>(
               : undefined
           }
           className={cn(
-            "rounded-full border-transparent bg-white placeholder-gray-500 focus:!border-primary focus:!outline-primary focus-visible:!border-primary focus-visible:!outline-primary",
+            "rounded-full border-transparent bg-white placeholder-gray-500 focus:!border-primary focus:!outline-none focus-visible:!border-primary focus-visible:!outline-none",
             {
-              "mb-px me-2 ms-px mt-px w-full py-3.5 pe-6 ps-10 text-[13px]":
+              "mb-px me-2 ms-px mt-px h-auto min-h-12 w-full py-3.5 pe-6 ps-10 text-[13px]":
                 !isMobileLayout,
               "w-full border border-solid border-gray-200 px-10 py-3 text-base focus:!border-gray-200 focus:!outline-none focus-visible:!border-gray-200 focus-visible:!outline-none":
                 isMobileLayout,
