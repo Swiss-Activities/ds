@@ -1,18 +1,7 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import type { Meta, StoryObj } from "@storybook/react-vite";
+import { Languages } from "@swiss-activities/ui/icons";
 import {
-  Languages,
-  List,
-  MapPin,
-  Mountain,
-  Search,
-  Store,
-  Ticket,
-  UserRound,
-} from "@swiss-activities/ui/icons";
-import {
-  Button,
-  Card,
   Icon,
   SearchBar,
   SearchBarResultItem,
@@ -23,7 +12,6 @@ import {
   SelectValue,
   SiteFooterAppLinks,
   SiteFooterPaymentMethods,
-  SiteMobileMenu,
   Text,
   Website,
   type SiteFooterProps,
@@ -162,145 +150,9 @@ const headerBase: Omit<
     menu: "Menü",
   },
   logoHref: "#",
-  primaryItems: [
-    {
-      id: "map",
-      className: "hidden lg:flex",
-      href: "#",
-      icon: <Icon icon={MapPin} size="sm" />,
-      label: "Karte",
-    },
-    {
-      id: "activities",
-      className: "!relative !hidden !max-w-none lg:!flex",
-      href: "#",
-      icon: <Icon icon={Mountain} size="sm" />,
-      label: <span className="hidden lg:block">Aktivitäten</span>,
-    },
-    {
-      id: "journal",
-      className: "hidden lg:flex",
-      href: "#",
-      icon: <Icon icon={List} size="sm" />,
-      label: "Reiseplaner",
-    },
-    {
-      id: "voucher",
-      className: "hidden lg:flex",
-      href: "#",
-      icon: <Icon icon={Ticket} size="sm" />,
-      label: "Gutschein",
-      showTextFrom: "xl",
-    },
-  ],
-  actionItems: [
-    {
-      id: "chat",
-      className: "hidden xs:flex",
-      href: "#",
-      icon: <Icon icon={Store} size="sm" />,
-      label: "Chat",
-      showTextFrom: "xl",
-    },
-    {
-      id: "cart",
-      href: "#",
-      icon: <Icon icon={Ticket} size="sm" />,
-      label: "",
-    },
-  ],
-  menuGroups: [
-    {
-      id: "locations",
-      title: "Regionen",
-      icon: <Icon icon={MapPin} size="sm" />,
-      links: [
-        { id: "interlaken", label: "Interlaken", href: "#" },
-        { id: "zurich", label: "Zürich", href: "#" },
-        { id: "lucerne", label: "Luzern", href: "#" },
-        { id: "zermatt", label: "Zermatt", href: "#" },
-      ],
-    },
-    {
-      id: "types",
-      title: "Aktivitäten",
-      icon: <Icon icon={Mountain} size="sm" />,
-      links: [
-        { id: "paragliding", label: "Paragliding", href: "#" },
-        { id: "boat", label: "Bootsfahrten", href: "#" },
-        { id: "tickets", label: "Bahntickets", href: "#" },
-        { id: "food", label: "Food & Drink", href: "#" },
-      ],
-    },
-  ],
-  mobileMenu: (
-    <SiteMobileMenu
-      account={{
-        action: {
-          id: "account",
-          href: "#",
-          icon: <Icon icon={UserRound} size="sm" />,
-          label: "Einloggen",
-        },
-        avatar: <Icon icon={UserRound} size="sm" />,
-      }}
-      groups={[
-        {
-          id: "primary",
-          items: [
-            {
-              id: "map",
-              href: "#",
-              icon: <Icon icon={MapPin} size="sm" />,
-              label: "Karte",
-            },
-            {
-              id: "activities",
-              icon: <Icon icon={Mountain} size="sm" />,
-              label: "Aktivitäten",
-              children: [
-                { id: "paragliding", label: "Paragliding", href: "#" },
-                { id: "boat", label: "Bootsfahrten", href: "#" },
-                { id: "tickets", label: "Bahntickets", href: "#" },
-              ],
-            },
-          ],
-        },
-        {
-          id: "secondary",
-          items: [
-            {
-              id: "journal",
-              href: "#",
-              icon: <Icon icon={List} size="sm" />,
-              label: "Reiseplaner",
-            },
-            {
-              id: "voucher",
-              href: "#",
-              icon: <Icon icon={Ticket} size="sm" />,
-              label: "Gutschein",
-            },
-          ],
-        },
-      ]}
-    />
-  ),
 };
 
 const footer: SiteFooterProps = {
-  newsletter: (
-    <div className="sa-container pb-8 pt-10 lg:pb-12">
-      <Card>
-        <Text as="p" size="lg" bold black>
-          Reiseideen aus der Schweiz
-        </Text>
-        <Text className="mt-2 text-gray-600">
-          Erhalte saisonale Tipps, neue Aktivitäten und ausgewählte Angebote.
-        </Text>
-      </Card>
-    </div>
-  ),
   languageSelector: <StoryLanguageSelect long />,
   sections: [
     {
@@ -373,50 +225,10 @@ const footer: SiteFooterProps = {
 };
 
 function WebsiteStory() {
-  const [hasScrolled, setHasScrolled] = useState(false);
-  const visibilityClassName = hasScrolled
-    ? "pointer-events-auto opacity-100"
-    : "pointer-events-none opacity-0";
   const header: SiteHeaderProps = {
     ...headerBase,
-    gatewaySearch: (
-      <div
-        className={`me-auto hidden w-full max-w-xl transition duration-200 sm:block ${visibilityClassName}`}
-      >
-        <StorySearch />
-      </div>
-    ),
     languageSelector: <StoryLanguageSelect />,
-    searchButton: (
-      <Button
-        className={`ms-3 xs:me-1 sm:hidden ${visibilityClassName}`}
-        icon={<Icon icon={Search} size="sm" />}
-        aria-label="Jetzt suchen"
-        size="sm"
-        type="transparent"
-      />
-    ),
-    userSlot: (
-      <Button
-        className="user-button"
-        icon={<Icon icon={UserRound} size="sm" />}
-        aria-label="Account"
-        size="sm"
-        type="outline-gray"
-      />
-    ),
   };
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setHasScrolled(window.scrollY > 180);
-    };
-
-    handleScroll();
-    window.addEventListener("scroll", handleScroll, { passive: true });
-
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   return (
     <Website
