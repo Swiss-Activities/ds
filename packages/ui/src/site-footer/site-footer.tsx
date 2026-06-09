@@ -197,7 +197,7 @@ export function SiteFooterPaymentMethods({
 export function SiteFooter({
   affiliateWidget = null,
   appLinks = null,
-  brand = <Logo />,
+  brand = <Logo size="sm" />,
   bottomText = null,
   className,
   languageSelector = null,

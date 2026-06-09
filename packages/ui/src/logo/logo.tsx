@@ -25,7 +25,7 @@ export function Logo({
   const img = (
     <img
       alt={alt}
-      className={cn("inline-block shrink-0", !children && className)}
+      className={cn("inline-block h-[revert] max-w-none shrink-0", !children && className)}
       height={dimensions.height}
       src={src}
       width={dimensions.width}
