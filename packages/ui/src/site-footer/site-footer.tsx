@@ -235,7 +235,7 @@ export function SiteFooter({
             footerBlockPadding
           )}
         >
-          <div className="w-full max-w-[250px] space-y-8">
+          <div className="flex w-full max-w-[250px] flex-col gap-8">
             {brand}
             {languageSelector}
           </div>
