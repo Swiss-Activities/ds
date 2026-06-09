@@ -37,6 +37,7 @@ import { List, MapPin } from "@swiss-activities/ui/icons";
 type GatewayPlaygroundRendererProps = {
   data: TGatewayHome;
   context: AppGatewayContext;
+  heroSearch?: ReactNode;
   locale: string;
 };
 
@@ -203,7 +204,10 @@ function PlaygroundSection({
   );
 }
 
-function renderGatewayHero(hero: GatewayHomeHeroData | null) {
+function renderGatewayHero(
+  hero: GatewayHomeHeroData | null,
+  search?: ReactNode
+) {
   if (!hero) {
     return null;
   }
@@ -224,6 +228,7 @@ function renderGatewayHero(hero: GatewayHomeHeroData | null) {
             unit="°"
             weatherTitle={hero.weatherTitle ?? undefined}
             weatherDescription={hero.weatherDescription ?? undefined}
+            search={search}
             variant={hero.variant}
           />
         </div>
@@ -464,6 +469,7 @@ function GatewayPlaygroundPage({
 export function GatewayPlaygroundRenderer({
   context,
   data,
+  heroSearch,
   locale,
 }: GatewayPlaygroundRendererProps) {
   return (
@@ -485,7 +491,7 @@ export function GatewayPlaygroundRenderer({
             fromLabel: "ab",
           }),
         })}
-        renderGatewayHero={({ hero }) => renderGatewayHero(hero)}
+        renderGatewayHero={({ hero }) => renderGatewayHero(hero, heroSearch)}
         renderPage={({ hero, sections }) => (
           <GatewayPlaygroundPage data={data} hero={hero} sections={sections} />
         )}

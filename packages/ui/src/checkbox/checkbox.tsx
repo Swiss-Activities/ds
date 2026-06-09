@@ -1,7 +1,7 @@
 "use client";
 
+import { Checkbox as CheckboxPrimitive } from "@base-ui/react/checkbox";
 import {
-  type InputHTMLAttributes,
   type ReactNode,
   useEffect,
   useId,
@@ -15,8 +15,8 @@ import type { BaseCheckboxProps } from "./checkbox.types";
 
 export type CheckboxProps = BaseCheckboxProps &
   Omit<
-    InputHTMLAttributes<HTMLInputElement>,
-    "children" | "onChange" | "size" | "title" | "type"
+    CheckboxPrimitive.Root.Props,
+    "children" | "checked" | "className" | "defaultChecked" | "onCheckedChange" | "title"
   >;
 
 function renderTitle(title: ReactNode) {
@@ -63,33 +63,33 @@ export function Checkbox({
         className
       )}
     >
-      <input
+      <CheckboxPrimitive.Root
         {...props}
         id={resolvedId}
         name={name}
         disabled={disabled}
         required={required}
-        type="checkbox"
         checked={value}
-        onChange={(event) => {
-          const nextValue = event.target.checked;
+        onCheckedChange={(nextChecked) => {
+          const nextValue = nextChecked === true;
           setValue(nextValue);
           onChange(nextValue);
         }}
-        className="sr-only"
-      />
-      <span
-        aria-hidden="true"
         className={cn(
-          "mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded border border-solid transition",
+          "peer relative mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded border border-solid shadow-xs outline-none transition after:absolute after:-inset-x-3 after:-inset-y-2 focus-visible:border-primary disabled:cursor-not-allowed disabled:opacity-50",
           value
             ? "border-primary bg-primary text-white"
             : "border-gray-500 bg-white text-transparent",
           !disabled && "hover:border-gray-700"
         )}
       >
-        <Icon icon={Check} size="xs" strokeWidth={2.4} />
-      </span>
+        <CheckboxPrimitive.Indicator
+          data-slot="checkbox-indicator"
+          className="grid place-content-center text-current transition-none"
+        >
+          <Icon icon={Check} size="xs" strokeWidth={2.4} />
+        </CheckboxPrimitive.Indicator>
+      </CheckboxPrimitive.Root>
       <span className="flex min-w-0 flex-1 flex-col">
         {title ? renderTitle(title) : null}
         {help ? (

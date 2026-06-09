@@ -1,16 +1,21 @@
-import type { InputHTMLAttributes, SelectHTMLAttributes, ReactNode } from "react";
+import {
+  Children,
+  isValidElement,
+  type ChangeEvent,
+  type InputHTMLAttributes,
+  type ReactElement,
+  type ReactNode,
+  type SelectHTMLAttributes,
+} from "react";
+import {
+  Input as BaseInput,
+  Select as BaseSelect,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@swiss-activities/ui";
 import { grayColors, saColors } from "@swiss-activities/ui/tokens";
-
-const inputStyle = {
-  width: "100%",
-  padding: "10px 14px",
-  fontSize: 15,
-  borderRadius: 8,
-  border: `1px solid ${saColors.border}`,
-  outline: "none",
-  boxSizing: "border-box" as const,
-  backgroundColor: "white",
-};
 
 const labelStyle = {
   display: "block" as const,
@@ -42,29 +47,58 @@ export function Field({
 }
 
 export function Input(props: InputHTMLAttributes<HTMLInputElement>) {
-  return <input {...props} style={{ ...inputStyle, ...props.style }} />;
+  return (
+    <BaseInput
+      {...props}
+      className="h-[42px] rounded-lg text-[15px]"
+      style={{ ...props.style }}
+    />
+  );
 }
 
 export function Select({
   children,
+  onChange,
+  value,
   ...props
 }: SelectHTMLAttributes<HTMLSelectElement>) {
+  const options = Children.toArray(children).filter(
+    (child): child is ReactElement<{ children?: ReactNode; value?: string }> =>
+      isValidElement(child)
+  );
+  const selectedValue = String(value ?? props.defaultValue ?? "");
+  const selectedOption = options.find(
+    (option) => String(option.props.value) === selectedValue
+  );
+
   return (
-    <select
-      {...props}
-      style={{
-        ...inputStyle,
-        appearance: "none",
-        backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%236b7280'%3E%3Cpath fill-rule='evenodd' d='M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z'/%3E%3C/svg%3E")`,
-        backgroundRepeat: "no-repeat",
-        backgroundPosition: "right 10px center",
-        backgroundSize: "20px",
-        paddingRight: 36,
-        ...props.style,
+    <BaseSelect
+      value={selectedValue}
+      onValueChange={(nextValue) => {
+        onChange?.({
+          currentTarget: { value: String(nextValue) },
+          target: { value: String(nextValue) },
+        } as unknown as ChangeEvent<HTMLSelectElement>);
       }}
     >
-      {children}
-    </select>
+      <SelectTrigger
+        id={props.id}
+        className="h-[42px] w-full rounded-lg px-3 text-[15px]"
+        style={props.style}
+      >
+        <SelectValue>{selectedOption?.props.children}</SelectValue>
+      </SelectTrigger>
+      <SelectContent>
+        {options.map((option) => (
+          <SelectItem
+            key={String(option.props.value)}
+            value={String(option.props.value)}
+          >
+            {option.props.children}
+          </SelectItem>
+        ))}
+      </SelectContent>
+    </BaseSelect>
   );
 }
 

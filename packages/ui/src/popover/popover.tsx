@@ -1,33 +1,34 @@
 "use client";
 
 import * as React from "react";
-import { Popover as BasePopover } from "@base-ui/react/popover";
+import { Popover as PopoverPrimitive } from "@base-ui/react/popover";
 import { cn } from "../utils/cn";
 
-export const Popover = BasePopover.Root;
-export const PopoverTrigger = BasePopover.Trigger;
-export const PopoverPortal = BasePopover.Portal;
+export const Popover = PopoverPrimitive.Root;
+export const PopoverTrigger = PopoverPrimitive.Trigger;
+export const PopoverPortal = PopoverPrimitive.Portal;
 
 type PopoverPositionerProps = React.ComponentPropsWithoutRef<
-  typeof BasePopover.Positioner
+  typeof PopoverPrimitive.Positioner
 >;
 
 export const PopoverPositioner = React.forwardRef<
-  React.ElementRef<typeof BasePopover.Positioner>,
+  React.ElementRef<typeof PopoverPrimitive.Positioner>,
   PopoverPositionerProps
 >(({ className, ...props }, ref) => (
-  <BasePopover.Positioner
+  <PopoverPrimitive.Positioner
     ref={ref}
-    className={cn("z-[210]", className)}
+    className={cn("isolate z-[210]", className)}
     {...props}
   />
 ));
 PopoverPositioner.displayName = "PopoverPositioner";
 
 type PopoverContentProps = React.ComponentPropsWithoutRef<
-  typeof BasePopover.Popup
+  typeof PopoverPrimitive.Popup
 > & {
   align?: PopoverPositionerProps["align"];
+  alignOffset?: PopoverPositionerProps["alignOffset"];
   collisionPadding?: PopoverPositionerProps["collisionPadding"];
   side?: PopoverPositionerProps["side"];
   sideOffset?: PopoverPositionerProps["sideOffset"];
@@ -35,12 +36,13 @@ type PopoverContentProps = React.ComponentPropsWithoutRef<
 };
 
 export const PopoverContent = React.forwardRef<
-  React.ElementRef<typeof BasePopover.Popup>,
+  React.ElementRef<typeof PopoverPrimitive.Popup>,
   PopoverContentProps
 >(
   (
     {
       align = "start",
+      alignOffset = 0,
       className,
       collisionPadding = 16,
       positionerClassName,
@@ -53,13 +55,15 @@ export const PopoverContent = React.forwardRef<
     <PopoverPortal>
       <PopoverPositioner
         align={align}
+        alignOffset={alignOffset}
         collisionPadding={collisionPadding}
         side={side}
         sideOffset={sideOffset}
         className={positionerClassName}
       >
-        <BasePopover.Popup
+        <PopoverPrimitive.Popup
           ref={ref}
+          data-slot="popover-content"
           className={cn(
             "w-[min(360px,calc(100vw-32px))] rounded-lg border border-solid border-gray-200 bg-white p-4 shadow-lg outline-none",
             className
@@ -72,6 +76,19 @@ export const PopoverContent = React.forwardRef<
 );
 PopoverContent.displayName = "PopoverContent";
 
-export const PopoverTitle = BasePopover.Title;
-export const PopoverDescription = BasePopover.Description;
-export const PopoverClose = BasePopover.Close;
+export function PopoverHeader({
+  className,
+  ...props
+}: React.ComponentProps<"div">) {
+  return (
+    <div
+      data-slot="popover-header"
+      className={cn("flex flex-col gap-1 text-sm", className)}
+      {...props}
+    />
+  );
+}
+
+export const PopoverTitle = PopoverPrimitive.Title;
+export const PopoverDescription = PopoverPrimitive.Description;
+export const PopoverClose = PopoverPrimitive.Close;

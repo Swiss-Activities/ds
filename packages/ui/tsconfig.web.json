@@ -74,6 +74,8 @@
     "src/image-card/index.ts",
     "src/image-card/image-card.tsx",
     "src/image-card/image-card.types.ts",
+    "src/input/index.ts",
+    "src/input/input.tsx",
     "src/rating/index.ts",
     "src/rating/rating.tsx",
     "src/rating/rating.types.ts",
@@ -87,6 +89,8 @@
     "src/segmented-control/index.ts",
     "src/segmented-control/segmented-control.tsx",
     "src/segmented-control/segmented-control.types.ts",
+    "src/select/index.ts",
+    "src/select/select.tsx",
     "src/product-info-list/index.ts",
     "src/product-info-list/product-info-list.tsx",
     "src/product-info-list/product-info-list.types.ts",
@@ -135,6 +139,17 @@
     "src/section-review-grid/section-review-grid.types.ts",
     "src/section-scroller/index.ts",
     "src/section-scroller/section-scroller.tsx",
-    "src/section-scroller/section-scroller.types.ts"
+    "src/section-scroller/section-scroller.types.ts",
+    "src/site-footer/index.ts",
+    "src/site-footer/site-footer.tsx",
+    "src/site-footer/site-footer.types.ts",
+    "src/site-header/index.ts",
+    "src/site-header/site-mobile-menu.tsx",
+    "src/site-header/site-mobile-menu.types.ts",
+    "src/site-header/site-header.tsx",
+    "src/site-header/site-header.types.ts",
+    "src/website/index.ts",
+    "src/website/website.tsx",
+    "src/website/website.types.ts"
   ]
 }

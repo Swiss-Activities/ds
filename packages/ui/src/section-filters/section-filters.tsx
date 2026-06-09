@@ -16,6 +16,7 @@ import { HorizontalScrollerPrev } from "../horizontal-scroller/horizontal-scroll
 import { HorizontalScrollerRoot } from "../horizontal-scroller/horizontal-scroller.root";
 import { HorizontalScrollerTrack } from "../horizontal-scroller/horizontal-scroller.track";
 import { Icon } from "../icon/icon";
+import { Input } from "../input";
 import { ChevronDown, Filter, Search, X } from "../icons";
 import { Popover, PopoverContent, PopoverTrigger } from "../popover";
 import { Sheet } from "../sheet";
@@ -208,7 +209,7 @@ function FilterDropdownGroup({
             size="sm"
             className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-gray-500"
           />
-          <input
+          <Input
             type="search"
             value={query}
             placeholder={searchPlaceholder}

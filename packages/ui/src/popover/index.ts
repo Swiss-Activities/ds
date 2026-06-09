@@ -3,6 +3,7 @@ export {
   PopoverClose,
   PopoverContent,
   PopoverDescription,
+  PopoverHeader,
   PopoverPortal,
   PopoverPositioner,
   PopoverTitle,

@@ -11,6 +11,7 @@ import {
 } from "react";
 import { Button } from "../button";
 import { Icon } from "../icon/icon";
+import { Input } from "../input";
 import { Search, X } from "../icons";
 import { SheetFull } from "../sheet/Full";
 import { Skeleton } from "../skeleton";
@@ -258,7 +259,7 @@ export const SearchBar = forwardRef<HTMLDivElement, SearchBarProps>(
       const isMobileLayout = isMobile || inSheet;
       const isMobileSheetTrigger = shouldUseMobileSheet && !inSheet;
       const inputField = (
-        <input
+        <Input
           ref={inSheet ? sheetInputRef : inputRef}
           id={inSheet && inputId ? `${inputId}-sheet` : inputId}
           onBlur={() => {}}

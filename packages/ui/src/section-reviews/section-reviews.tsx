@@ -17,8 +17,16 @@ import {
 } from "../filter-checkbox-group";
 import { Flag } from "../flag";
 import { Icon } from "../icon/icon";
+import { Input } from "../input";
 import { Check, ChevronDown, Filter, Search, ThumbsUp } from "../icons";
 import { Rating } from "../rating";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "../select";
 import { Sheet } from "../sheet";
 import { Text } from "../text";
 import { cn } from "../utils/cn";
@@ -278,7 +286,7 @@ function ReviewsSearch({
       <span className="pointer-events-none absolute start-3 top-1/2 flex -translate-y-1/2 text-gray-400">
         <Icon icon={Search} size="sm" />
       </span>
-      <input
+      <Input
         className="h-10 w-full rounded-full border border-solid border-gray-200 bg-white py-0 pe-4 ps-10 text-sm text-gray-950 outline-none transition placeholder:text-gray-500 focus:border-primary focus:outline-none focus:ring-0 lg:max-w-xs [&::-webkit-search-cancel-button]:hidden [&::-webkit-search-decoration]:hidden [&::-webkit-search-results-button]:hidden [&::-webkit-search-results-decoration]:hidden"
         placeholder={labels.searchPlaceholder}
         value={search}
@@ -301,24 +309,23 @@ function ReviewsSort({
   onSortChange: (sort: SectionReviewsSort) => void;
 }) {
   return (
-    <label className="relative shrink-0">
-      <select
-        className="h-10 cursor-pointer appearance-none rounded-full border border-solid border-gray-200 bg-white py-0 pe-9 ps-3 text-sm font-medium text-gray-700 outline-none transition hover:bg-gray-50 focus:border-primary focus:outline-none focus:ring-0"
-        value={sort}
-        onChange={(event: ChangeEvent<HTMLSelectElement>) =>
-          onSortChange(event.currentTarget.value as SectionReviewsSort)
-        }
-      >
+    <Select
+      value={sort}
+      onValueChange={(value) => onSortChange(value as SectionReviewsSort)}
+    >
+      <SelectTrigger className="h-10 shrink-0 px-3 text-gray-700">
+        <SelectValue>
+          {labels[sortOptions.find((option) => option.value === sort)?.labelKey ?? "sortDateDesc"]}
+        </SelectValue>
+      </SelectTrigger>
+      <SelectContent align="end">
         {sortOptions.map((option) => (
-          <option key={option.value} value={option.value}>
+          <SelectItem key={option.value} value={option.value}>
             {labels[option.labelKey]}
-          </option>
+          </SelectItem>
         ))}
-      </select>
-      <span className="pointer-events-none absolute end-3 top-1/2 -translate-y-1/2 text-gray-500">
-        <Icon icon={ChevronDown} size="sm" />
-      </span>
-    </label>
+      </SelectContent>
+    </Select>
   );
 }
 
