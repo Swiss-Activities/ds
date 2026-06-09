@@ -618,7 +618,7 @@ export function SectionReviews({
   return (
     <div className={cn(className)} {...props}>
       <div className="grid grid-cols-1 gap-8">
-        <div className="grid grid-cols-1 gap-8 lg:grid-cols-[1.25fr,4fr] lg:gap-x-24 lg:gap-y-8">
+        <div className="grid grid-cols-1 gap-8 lg:grid-cols-[minmax(260px,1.25fr)_minmax(0,4fr)] lg:gap-x-24 lg:gap-y-8">
           <div className="flex flex-col items-center justify-center space-y-4 rounded-l p-6 lg:p-8">
             <span className="text-6xl font-bold text-black lg:text-7xl">
               {averageRating.toFixed(1)}

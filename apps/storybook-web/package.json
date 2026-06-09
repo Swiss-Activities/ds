@@ -9,6 +9,7 @@
     "typecheck": "tsc -p tsconfig.app.json --noEmit && tsc -p tsconfig.node.json --noEmit",
     "lint": "eslint .",
     "preview": "vite preview",
+    "refresh:gateway-fixtures": "node scripts/refresh-gateway-fixtures.mjs",
     "storybook": "rm -rf node_modules/.cache && storybook dev -p 6006",
     "build-storybook": "storybook build -o dist"
   },

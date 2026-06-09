@@ -17,6 +17,7 @@ const sectionComponents = new Set([
   "hero",
   "non_bookable_grid",
   "region_map",
+  "suggested_types",
   "weather_card",
 ]);
 
@@ -179,6 +180,18 @@ const assertSectionContract = (
     section.data.forEach((item, index) => {
       if (!item.slug && !item.path) {
         errors.push(`${path}.data[${index}] must include slug or path`);
+      }
+    });
+    return;
+  }
+
+  if (section.component === "suggested_types") {
+    section.data.forEach((item, index) => {
+      const itemPath = `${path}.data[${index}]`;
+      for (const key of ["id", "title"]) {
+        if (!hasString(item, key)) {
+          errors.push(`${itemPath}.${key} must be a non-empty string`);
+        }
       }
     });
     return;

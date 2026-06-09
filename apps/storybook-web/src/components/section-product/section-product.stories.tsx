@@ -6,6 +6,7 @@ import {
 } from "@swiss-activities/dummy-data";
 import {
   SectionProduct,
+  SectionReviews,
 } from "@swiss-activities/ui";
 import {
   getContentBlocks,
@@ -13,7 +14,8 @@ import {
   getProductInfoBadges,
   getProductInfoCards,
   getRelatedActivityItems,
-  getSectionProductReviews,
+  getSectionReviewsItems,
+  getSectionReviewsLabels,
 } from "../../story-data";
 import { Page } from "../page";
 
@@ -22,7 +24,8 @@ const infoCards = getProductInfoCards();
 
 function SectionProductStoryPage(args: Story["args"]) {
   const heroGallery = useMemo(() => getHeroGallery(), []);
-  const reviews = useMemo(() => getSectionProductReviews(), []);
+  const reviews = useMemo(() => getSectionReviewsItems(), []);
+  const reviewLabels = useMemo(() => getSectionReviewsLabels(), []);
   const contentItems = useMemo(() => getContentBlocks(), []);
   const relatedActivities = useMemo(() => getRelatedActivityItems(), []);
 
@@ -35,8 +38,14 @@ function SectionProductStoryPage(args: Story["args"]) {
         badges={infoBadges}
         description="Reise mit diesem Jungfraujoch Ticket ab Interlaken auf das Jungfraujoch. Auch bekannt als Top of Europe liegt das Jungfraujoch mit Europas hochstem Bahnhof auf 3454 m u. M."
         infoItems={infoCards}
-        reviewsTitle="Bewertungen"
-        reviews={reviews}
+        reviewsContent={
+          <SectionReviews
+            averageRating={4.8}
+            labels={reviewLabels}
+            reviewCount={204}
+            reviews={reviews}
+          />
+        }
         contentItems={contentItems}
         relatedActivitiesTitle={heroTitles.relatedActivities}
         relatedActivities={relatedActivities}

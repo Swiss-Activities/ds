@@ -21,6 +21,8 @@ import {
   Icon,
   Text,
   renderWeatherIcon,
+  type SectionReviewsLabels,
+  type SectionReviewsReview,
 } from "@swiss-activities/ui";
 import {
   Clock3,
@@ -220,6 +222,62 @@ export function getReviewItems() {
 
 export function getSectionProductReviews() {
   return mapReviewItems(sectionProductReviews);
+}
+
+export function getSectionReviewsLabels(): SectionReviewsLabels {
+  return {
+    clearFilters: "Filter löschen",
+    close: "Schliessen",
+    filter: "Filter",
+    general: "Allgemein",
+    helpfulQuestion: "Hilfreich?",
+    helpfulSelected: "Hilfreich",
+    lessFilters: "Weniger anzeigen",
+    noResults: "Keine Bewertungen gefunden",
+    participants: "Teilnehmer",
+    participantLabels: {
+      couple: "Paar",
+      group: "Gruppe",
+      single: "Allein",
+    },
+    rating: "Bewertung",
+    ratingEqual: (rating) => `${rating} Sterne`,
+    ratingSingular: "Bewertung",
+    reset: "Zurücksetzen",
+    results: "Ergebnisse",
+    reviewsPlural: "Bewertungen",
+    searchPlaceholder: "Bewertungen suchen",
+    sortDateAsc: "Älteste zuerst",
+    sortDateDesc: "Neueste zuerst",
+    sortRatingAsc: "Niedrigste Bewertung",
+    sortRatingDesc: "Höchste Bewertung",
+    textOnly: "Nur mit Text",
+    title: "Bewertungen",
+    viewMore: "Mehr anzeigen",
+  };
+}
+
+export function getSectionReviewsItems(): SectionReviewsReview[] {
+  const categories = ["couple", "group", "single"];
+
+  return sectionProductReviews.map((item, index) => ({
+    author: item.author,
+    category: categories[index % categories.length],
+    countryCode: item.countryCode,
+    date: `2026-05-${String(28 - index).padStart(2, "0")}`,
+    id: `section-product-review-${index + 1}`,
+    rating: item.rating,
+    searchTerms: [
+      item.author,
+      item.countryCode,
+      categories[index % categories.length],
+    ].filter((value): value is string => Boolean(value)),
+    text: item.text,
+    translatedFromLabel: item.translatedFrom
+      ? `Übersetzt aus ${item.translatedFrom}`
+      : undefined,
+    upvoteCount: item.upvoteCount,
+  }));
 }
 
 export function getContentBlocks() {

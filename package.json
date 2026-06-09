@@ -15,6 +15,7 @@
     "build:storybook:web": "bun run --cwd apps/storybook-web build-storybook",
     "storybook:web": "bun run --cwd apps/storybook-web storybook",
     "lint:web": "bun run --cwd apps/storybook-web lint",
+    "refresh:gateway-fixtures": "bun run --cwd apps/storybook-web refresh:gateway-fixtures",
     "test:data": "bun run --cwd packages/data test",
     "typecheck:tokens": "bun run --cwd packages/tokens typecheck",
     "typecheck:data": "bun run --cwd packages/data typecheck",

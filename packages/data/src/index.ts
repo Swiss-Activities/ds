@@ -40,6 +40,7 @@ export {
   isGatewayHeroSection,
   isGatewayRegionMapSection,
   isGatewayReviewSection,
+  isGatewaySuggestedTypesSection,
   isGatewayWeatherCardSection,
   supportsGatewayDateParam,
   type GatewayPillarSelection,
@@ -148,6 +149,8 @@ export type {
   TGatewayRegionContext,
   TGatewayRegionMapItem,
   TGatewayRegionMapSection,
+  TGatewaySuggestedTypeItem,
+  TGatewaySuggestedTypesSection,
   TGatewayWeatherCardItem,
   TGatewayHomeParams,
   TGatewayFeedParams,
@@ -189,16 +192,16 @@ export type { GatewayStoreState } from "./gateway/store";
 
 export { toActivityItem } from "./adapters/activityItem";
 export type { ActivityItemData, RenderImage } from "./adapters/activityItem";
-export {
-  getGatewayActivityItemImages,
-  toGatewayActivityItemData,
-  uniqueGatewayActivityItemImages,
-} from "./adapters/gatewayActivityItem";
 export type {
   GatewayActivityItemData,
   GatewayActivityItemImage,
   GatewayActivityItemLabels,
   GatewayActivityMapPoint,
+} from "./adapters/gatewayActivityItem";
+export {
+  getGatewayActivityItemImages,
+  toGatewayActivityItemData,
+  uniqueGatewayActivityItemImages,
 } from "./adapters/gatewayActivityItem";
 export {
   getGatewayRegionPathSlug,

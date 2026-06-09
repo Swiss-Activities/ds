@@ -80,7 +80,7 @@ export function SectionBlogDetail({
   ) : null;
 
   return (
-    <article className={cn("section-last lg:mt-8", className)} {...props}>
+    <article className={cn("section-last", className)} {...props}>
       <section className={detailContainerClassName}>
         {image ? (
           <div className={detailMediaFlushClassName}>

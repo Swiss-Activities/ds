@@ -1,12 +1,12 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { gatewayHomeResponse } from "../fixtures/gateway-home-response";
+import { gatewayOverviewNonBookableResponse } from "../fixtures/gateway-overview-non-bookable-response";
 import { GatewayPage, type GatewayPageStoryArgs } from "./gateway-page";
 
 const meta = {
-  title: "Pages/Homepage",
+  title: "Pages/Overview - Non Bookable",
   parameters: { layout: "fullscreen" },
   args: {
-    data: gatewayHomeResponse,
+    data: gatewayOverviewNonBookableResponse,
     locale: "de_CH",
   },
   render: (args) => <GatewayPage {...args} />,

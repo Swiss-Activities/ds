@@ -1,6 +1,7 @@
 export type TGatewayHomeItem = {
   id: string;
   title: string;
+  bookingActivityId?: number | string | null;
   description?: string | null;
   image_url?: string | null;
   imageUrl?: string | null;
@@ -17,6 +18,7 @@ export type TGatewayHomeItem = {
   >;
   subtitle?: string | null;
   path?: string;
+  webPath?: string | null;
   detailPath?: string | null;
   lat?: number | null;
   lng?: number | null;
@@ -29,11 +31,17 @@ export type TGatewayHomeItem = {
     | "review";
   category?: string | null;
   distanceKm?: number | null;
+  availabilityNote?: string | null;
   dateStart?: string | null;
   dateEnd?: string | null;
   dateRangeFormatted?: string | null;
   price_formatted?: string | null;
   priceFormatted?: string | null;
+  startingPrice?: {
+    amount?: number | null;
+    currency?: string | null;
+    formatted?: string | null;
+  } | null;
   rating?: number | null;
   review_count?: number | null;
   reviewCount?: number | null;
@@ -90,8 +98,10 @@ export type TGatewayHomeCarouselSection = {
   id: string;
   component: "carousel";
   title: string;
+  subtitle?: string | null;
   pillarSlug?: string | null;
   pillarPath?: string | null;
+  appliedRadiusKm?: number | null;
   alternates?: TGatewaySectionAlternate[];
   data: TGatewayHomeItem[];
 };
@@ -124,6 +134,8 @@ export type TGatewayActivityGridSection = {
       total: number;
       hasMore: boolean;
     };
+    nearestKm?: number | null;
+    appliedRadiusKm?: number | null;
   };
 };
 
@@ -167,7 +179,9 @@ export type TGatewayFeatureBandSection = {
 export type TGatewayRegionMapItem = {
   id: string;
   title: string;
+  imageUrl?: string | null;
   path?: string | null;
+  webPath?: string | null;
   slug?: string | null;
   numberOfActivities?: number | null;
 };
@@ -179,13 +193,32 @@ export type TGatewayRegionMapSection = {
   data: TGatewayRegionMapItem[];
 };
 
+export type TGatewaySuggestedTypeItem = {
+  id: string;
+  title: string;
+  iconUrl?: string | null;
+  imageUrl?: string | null;
+  href?: string | null;
+  webPath?: string | null;
+  weatherFit?: string | null;
+  betterOn?: string | null;
+};
+
+export type TGatewaySuggestedTypesSection = {
+  id: string;
+  component: "suggested_types";
+  title: string;
+  data: TGatewaySuggestedTypeItem[];
+};
+
 export type TGatewayHomeSection =
   | TGatewayHomeCarouselSection
   | TGatewayActivityGridSection
   | TGatewayHomeWeatherCardSection
   | TGatewayHomeHeroSection
   | TGatewayFeatureBandSection
-  | TGatewayRegionMapSection;
+  | TGatewayRegionMapSection
+  | TGatewaySuggestedTypesSection;
 
 export type TGatewayActivityTypeContext = {
   type: "activity-type";
@@ -594,6 +627,10 @@ export type TGatewayNonBookableDetail = {
   museumCategory?: string | null;
   foundedYear?: number | null;
   canton?: string | null;
+  location?: {
+    lat?: number | null;
+    lng?: number | null;
+  } | null;
   tags?: string[];
   photos?: string[];
   badges?: string[];

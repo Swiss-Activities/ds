@@ -1,12 +1,12 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { gatewayHomeResponse } from "../fixtures/gateway-home-response";
+import { gatewayOverviewPointOfInterestResponse } from "../fixtures/gateway-overview-point-of-interest-response";
 import { GatewayPage, type GatewayPageStoryArgs } from "./gateway-page";
 
 const meta = {
-  title: "Pages/Homepage",
+  title: "Pages/Overview - Point of Interest",
   parameters: { layout: "fullscreen" },
   args: {
-    data: gatewayHomeResponse,
+    data: gatewayOverviewPointOfInterestResponse,
     locale: "de_CH",
   },
   render: (args) => <GatewayPage {...args} />,

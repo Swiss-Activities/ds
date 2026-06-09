@@ -12,6 +12,7 @@ import type {
   TGatewayRegionMapSection,
   TGatewayReviewCarouselSection,
   TGatewayStaticSection,
+  TGatewaySuggestedTypesSection,
 } from "./types";
 
 type GatewaySectionLike = {
@@ -87,6 +88,11 @@ export const isGatewayFeatureBandSection = (
 export const isGatewayRegionMapSection = (
   section: GatewaySectionLike
 ): section is TGatewayRegionMapSection => section.component === "region_map";
+
+export const isGatewaySuggestedTypesSection = (
+  section: GatewaySectionLike
+): section is TGatewaySuggestedTypesSection =>
+  section.component === "suggested_types";
 
 export const isGatewayFilterStaticSection = (
   section: TGatewayStaticSection
