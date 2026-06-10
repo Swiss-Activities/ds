@@ -367,7 +367,13 @@ function renderGatewayHero(
   const isSummaryHero = hero.variant === "summary";
 
   return (
-    <section className={isSummaryHero ? "pt-6 sm:pt-8 lg:pt-10" : undefined}>
+    // Elevated so the search suggestion panel stacks above later sections
+    // (sliders create their own transform stacking contexts).
+    <section
+      className={
+        isSummaryHero ? "relative z-10 pt-6 sm:pt-8 lg:pt-10" : "relative z-10"
+      }
+    >
       <div className="sa-container">
         <div className={isSummaryHero ? undefined : homepageHeroFlushClassName}>
           <SectionHero

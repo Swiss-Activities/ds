@@ -293,7 +293,9 @@ export function ActivityCard({
       noPadding
       render={render}
       className={cn(
-        "group relative flex h-full w-full flex-col overflow-hidden lg:hover:shadow-md",
+        // isolate: card-internal z-indexes (image layer, overlays) must not
+        // compete with page-level layers like the search suggestion panel.
+        "group relative isolate flex h-full w-full flex-col overflow-hidden lg:hover:shadow-md",
         isCompact && "aspect-video h-auto min-h-0",
         isCompactLg && "lg:aspect-video lg:h-auto lg:min-h-0",
         className

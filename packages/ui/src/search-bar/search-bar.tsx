@@ -401,7 +401,7 @@ export const SearchBar = forwardRef<HTMLDivElement, SearchBarProps>(
           <div
             className={cn(
               {
-                "absolute bottom-0 top-[3.375rem] w-full overflow-hidden rounded-xl border border-solid border-gray-200 bg-white shadow-xl transition duration-100 ease-in lg:min-w-[350px]":
+                "absolute bottom-0 top-[3.375rem] z-50 w-full overflow-hidden rounded-xl border border-solid border-gray-200 bg-white shadow-xl transition duration-100 ease-in lg:min-w-[350px]":
                   !isMobile,
                 "h-[calc(450px+3.5rem)]": !isMobile && hasFooter,
                 "h-[450px]": !isMobile && !hasFooter,
