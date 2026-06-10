@@ -10,7 +10,10 @@ import type {
   GatewayHomeReviewSectionData,
   GatewayHomeSectionData,
 } from "../adapters/gatewayHome";
-import { toGatewayActivityItemData } from "../adapters/gatewayActivityItem";
+import {
+  toGatewayActivityItemData,
+  type GatewayActivityItemData,
+} from "../adapters/gatewayActivityItem";
 import { AppGateway, type AppGatewayContext } from "../app-gateway";
 import { GatewayProvider } from "../gateway-provider";
 import type {
@@ -400,26 +403,27 @@ function renderGatewayHero(
   );
 }
 
+// The gateway ships fully localized permalinks (webPath/path/urls) per item;
+// activity cards link straight to them. Other item types follow later.
+const toLinkedActivityItem = (itemData: GatewayActivityItemData): ActivityItem => {
+  const href = itemData.type === "activity" ? itemData.path : null;
+
+  return {
+    ...itemData,
+    type: itemData.type,
+    render: href
+      ? ({ className, children }) => (
+          <a href={href} className={className}>
+            {children}
+          </a>
+        )
+      : undefined,
+  };
+};
+
 const toPreviewActivity = (
   section: GatewayHomeActivitySectionData
-): ActivityItem[] =>
-  section.items.map(({ itemData }) => {
-    // The gateway ships fully localized permalinks (webPath/path) per item;
-    // activity cards link straight to them. Other item types follow later.
-    const href = itemData.type === "activity" ? itemData.path : null;
-
-    return {
-      ...itemData,
-      type: itemData.type,
-      render: href
-        ? ({ className, children }) => (
-            <a href={href} className={className}>
-              {children}
-            </a>
-          )
-        : undefined,
-    };
-  });
+): ActivityItem[] => section.items.map(({ itemData }) => toLinkedActivityItem(itemData));
 
 function renderGatewayReviewSection(
   section: GatewayHomeReviewSectionData,
@@ -956,7 +960,10 @@ function formatPrice(value: number | null) {
   return value ? `CHF ${value}` : "";
 }
 
-function toActivityCardItem(value: unknown): TGatewayActivityCardItem | null {
+function toActivityCardItem(
+  value: unknown,
+  localeKey = "de_CH"
+): TGatewayActivityCardItem | null {
   if (!isRecord(value)) {
     return null;
   }
@@ -974,27 +981,38 @@ function toActivityCardItem(value: unknown): TGatewayActivityCardItem | null {
     title,
     type: "activity",
     imageUrl: imageUrl || null,
-    priceFormatted: formatPrice(getNumber(value, ["summary", "startingPrice"])),
+    priceFormatted:
+      getString(value, ["summary", "startingPrice", "formatted"]) ??
+      formatPrice(getNumber(value, ["summary", "startingPrice"])),
     rating: getNumber(value, ["rating", "average_rating"]),
     reviewCount: getNumber(value, ["rating", "num_ratings"]),
-    path: getString(value, ["urls", "de_CH"]) || "#",
+    path:
+      getString(value, ["urls", localeKey]) ??
+      getString(value, ["urls", "de_CH"]) ??
+      null,
     subtitle: getString(value, ["location", "title"]) || null,
   };
 }
 
-function getRelatedActivities(detail: TGatewayActivityDetail): ActivityItem[] {
+function getRelatedActivities(
+  detail: TGatewayActivityDetail,
+  locale = "de_CH"
+): ActivityItem[] {
+  const localeKey = locale.replace("-", "_");
   return getArray(detail.activity, ["similarActivities"])
     .flatMap((item) => {
-      const gatewayItem = toActivityCardItem(item);
+      const gatewayItem = toActivityCardItem(item, localeKey);
 
       return gatewayItem
         ? [
-            toGatewayActivityItemData(gatewayItem, {
-              locale: "de_CH",
-              labels: gatewayLabels,
-              priceLabel,
-              fromLabel,
-            }),
+            toLinkedActivityItem(
+              toGatewayActivityItemData(gatewayItem, {
+                locale: localeKey,
+                labels: gatewayLabels,
+                priceLabel,
+                fromLabel,
+              })
+            ),
           ]
         : [];
     })
@@ -1166,7 +1184,7 @@ export function WebsiteGatewayActivityDetail({
       contentItems={getActivityContentItems(detail)}
       contentTocTitle="Inhaltsverzeichnis"
       relatedActivitiesTitle="Weitere Aktivitäten"
-      relatedActivities={getRelatedActivities(detail)}
+      relatedActivities={getRelatedActivities(detail, locale)}
     />
   );
 }
