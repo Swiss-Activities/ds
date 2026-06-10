@@ -84,6 +84,7 @@ const ContentBlockList = memo(function ContentBlockList({
 
 export const ContentBlocks = memo(function ContentBlocks({
   items,
+  lead,
   tocTitle = "Inhaltsverzeichnis",
   variant = "default",
   className,
@@ -155,14 +156,21 @@ export const ContentBlocks = memo(function ContentBlocks({
       {...props}
     >
       {variant === "article" ? (
-        <ContentBlockList items={items} className="gap-8 lg:hidden" />
+        <div className="lg:hidden">
+          {lead ? <div className="mb-8">{lead}</div> : null}
+          <ContentBlockList items={items} className="gap-8" />
+        </div>
       ) : (
         <div className="lg:hidden">
+          {lead ? <div className="mb-8">{lead}</div> : null}
           <Accordion items={accordionItems} />
         </div>
       )}
       <div className="hidden grid-cols-3 gap-8 lg:grid xl:gap-16">
-        <ContentBlockList items={items} className="col-span-2" />
+        <div className="col-span-2 flex flex-col gap-10">
+          {lead}
+          <ContentBlockList items={items} />
+        </div>
         <div className="sticky top-[calc(var(--sa-content-blocks-sticky-offset)+24px)] h-max max-h-[calc(var(--sa-content-blocks-vh)-var(--sa-content-blocks-sticky-offset)-48px)] overflow-y-auto rounded-lg border border-solid border-gray-200 p-6 shadow-sm">
           <TocNav items={items} tocTitle={tocTitle} />
         </div>

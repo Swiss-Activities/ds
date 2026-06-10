@@ -163,12 +163,16 @@ export function WebsiteGatewayListingContent({
       };
     });
 
+  // Without chapters there is nothing for a TOC — render the parts plain.
+  if (items.length === 0) {
+    return intro ? <ListingContentParts parts={intro.parts} /> : null;
+  }
+
   return (
-    <div className="grid gap-10">
-      {intro ? <ListingContentParts parts={intro.parts} /> : null}
-      {items.length ? (
-        <ContentBlocks items={items} tocTitle="Inhaltsverzeichnis" />
-      ) : null}
-    </div>
+    <ContentBlocks
+      lead={intro ? <ListingContentParts parts={intro.parts} /> : undefined}
+      items={items}
+      tocTitle="Inhaltsverzeichnis"
+    />
   );
 }
