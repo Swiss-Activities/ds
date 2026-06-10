@@ -9,7 +9,7 @@ import type { TGatewayListingContentBlock } from "../gateway/types";
 // a plain intro above it. Image blocks render side by side (legacy
 // website/modules/components/Content behaviour).
 
-type ListingContentPart =
+export type ListingContentPart =
   | { kind: "html"; html: string }
   | { kind: "images"; images: TGatewayListingContentBlock["images"] }
   | { kind: "youtube"; url: string };
@@ -79,7 +79,7 @@ export const toYouTubeEmbedUrl = (url: string): string | null => {
   return id ? `https://www.youtube-nocookie.com/embed/${id}` : null;
 };
 
-function ListingContentParts({ parts }: { parts: ListingContentPart[] }) {
+export function ListingContentParts({ parts }: { parts: ListingContentPart[] }) {
   return (
     <div className="grid gap-6">
       {parts.map((part, index) => {

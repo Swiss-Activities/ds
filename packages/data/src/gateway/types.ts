@@ -529,12 +529,48 @@ export type TGatewayBlogPostDetail = {
   imageUrl?: string | null;
   path: string;
   relatedActivities: Array<TGatewayActivityCardItem & { type: "activity" }>;
-  overview: Record<string, unknown>;
+  /**
+   * `{ body, title }` (rendered HTML from the gateway read model) since
+   * gateway PR #163; older gateways shipped the raw website-data-api
+   * envelope (`listing.content_blocks` & co) — kept loose for both.
+   */
+  overview: { body?: string; title?: string } & Record<string, unknown>;
   meta: {
-    overviewSource: "website-data-api";
-    temporarySource: true;
-    note: string;
+    overviewSource: "website-data-api" | "gateway-read-model";
+    temporarySource: boolean;
+    note?: string;
   };
+};
+
+export type TGatewayBlogOverviewCategory = {
+  slug: string;
+  title: string;
+};
+
+export type TGatewayBlogOverviewPost = {
+  id: string;
+  title: string;
+  description: string | null;
+  imageUrl: string;
+  path: string;
+};
+
+export type TGatewayBlogOverview = {
+  context: {
+    type: "travel-guide";
+    category: { slug: string; title: string; description: string | null } | null;
+    itineraries: boolean;
+  };
+  categories: TGatewayBlogOverviewCategory[];
+  posts: TGatewayBlogOverviewPost[];
+  durations?: Array<{ days: number; posts: TGatewayBlogOverviewPost[] }>;
+};
+
+export type TGatewayBlogOverviewParams = {
+  locale?: string | null;
+  category?: string | null;
+  country?: string | null;
+  dev?: boolean | null;
 };
 
 export type TGatewayBlogPostDetailParams = {

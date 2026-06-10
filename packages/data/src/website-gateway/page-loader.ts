@@ -2,6 +2,8 @@ import type { AppGatewayContext } from "../app-gateway";
 import { getGatewayFeed } from "../gateway/feed";
 import { getGatewayActivityDetail } from "../gateway/getActivityDetail";
 import { getGatewayDetail } from "../gateway/getDetail";
+import { getGatewayBlogPostDetail } from "../gateway/getBlogPostDetail";
+import { getGatewayBlogOverview } from "../gateway/getBlogOverview";
 import type {
   TGatewayDetailParams,
   TGatewayNonBookableDetail,
@@ -16,6 +18,17 @@ type WebsiteGatewayOverviewPageRequest = {
   slug?: string | null;
   /** Location slug of a destination-activity-type page. */
   locationSlug?: string | null;
+};
+
+type WebsiteGatewayTravelGuidePageRequest = {
+  type: "overview-travel-guide";
+  /** Editorial category slug; null/absent on the root overview. */
+  slug?: string | null;
+};
+
+type WebsiteGatewayDetailBlogPostPageRequest = {
+  type: "detail-blog-post";
+  id: string;
 };
 
 type WebsiteGatewayDetailActivityPageRequest = {
@@ -33,7 +46,9 @@ type WebsiteGatewayDetailNonBookablePageRequest = {
 export type WebsiteGatewayPageRequest =
   | WebsiteGatewayOverviewPageRequest
   | WebsiteGatewayDetailActivityPageRequest
-  | WebsiteGatewayDetailNonBookablePageRequest;
+  | WebsiteGatewayDetailNonBookablePageRequest
+  | WebsiteGatewayTravelGuidePageRequest
+  | WebsiteGatewayDetailBlogPostPageRequest;
 
 export type LoadWebsiteGatewayPageOptions = {
   apiUrl: string;
@@ -130,6 +145,44 @@ export async function loadWebsiteGatewayPage({
           country: context?.country ?? undefined,
           lat: context?.lat,
           lng: context?.lng,
+          dev,
+        },
+        signal
+      ),
+    };
+  }
+
+  if (page.type === "detail-blog-post") {
+    return {
+      type: page.type,
+      id: page.id,
+      context,
+      detail: await getGatewayBlogPostDetail(
+        apiUrl,
+        {
+          id: page.id,
+          locale: context?.locale,
+          country: context?.country ?? undefined,
+          lat: context?.lat,
+          lng: context?.lng,
+          dev,
+        },
+        signal
+      ),
+    };
+  }
+
+  if (page.type === "overview-travel-guide") {
+    return {
+      type: page.type,
+      slug: page.slug ?? null,
+      context,
+      data: await getGatewayBlogOverview(
+        apiUrl,
+        {
+          locale: context?.locale,
+          country: context?.country ?? undefined,
+          category: page.slug ?? undefined,
           dev,
         },
         signal

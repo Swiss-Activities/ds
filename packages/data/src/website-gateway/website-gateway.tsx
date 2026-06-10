@@ -17,10 +17,14 @@ import {
 } from "../adapters/gatewayActivityItem";
 import { AppGateway, type AppGatewayContext } from "../app-gateway";
 import { WebsiteGatewayListingContent } from "./listing-content";
+import { WebsiteGatewayBlogPostDetail } from "./blog-detail";
+import { WebsiteGatewayTravelGuideOverview } from "./travel-guide";
 import { GatewayProvider } from "../gateway-provider";
 import type {
   TGatewayActivityCardItem,
   TGatewayActivityDetail,
+  TGatewayBlogOverview,
+  TGatewayBlogPostDetail,
   TGatewayFilterConfig,
   TGatewayHome,
   TGatewayNonBookableDetail,
@@ -90,7 +94,8 @@ export type WebsiteGatewayOverviewPageType =
 
 export type WebsiteGatewayDetailPageType =
   | "detail-activity"
-  | "detail-non-bookable";
+  | "detail-non-bookable"
+  | "detail-blog-post";
 
 export type WebsiteGatewayOverviewPage = {
   type: WebsiteGatewayOverviewPageType;
@@ -115,10 +120,26 @@ export type WebsiteGatewayDetailNonBookablePage = {
   context?: AppGatewayContext;
 };
 
+export type WebsiteGatewayDetailBlogPostPage = {
+  type: "detail-blog-post";
+  id: string;
+  detail: TGatewayBlogPostDetail;
+  context?: AppGatewayContext;
+};
+
+export type WebsiteGatewayTravelGuidePage = {
+  type: "overview-travel-guide";
+  data: TGatewayBlogOverview;
+  context?: AppGatewayContext;
+  slug?: string | null;
+};
+
 export type WebsiteGatewayPage =
   | WebsiteGatewayOverviewPage
+  | WebsiteGatewayTravelGuidePage
   | WebsiteGatewayDetailActivityPage
-  | WebsiteGatewayDetailNonBookablePage;
+  | WebsiteGatewayDetailNonBookablePage
+  | WebsiteGatewayDetailBlogPostPage;
 
 export type WebsiteGatewayContentRendererProps = {
   apiUrl?: string;
@@ -162,14 +183,9 @@ const HOMEPAGE_CAROUSEL_LAYOUT: Array<3 | 4> = [4, 3, 4, 3, 4];
 const homepageHeroFlushClassName = "-mx-2 sm:-mx-4 lg:mx-0";
 const sectionSpacingClassName = "pt-8 md:pt-12 lg:pt-16 xl:pt-20";
 
-const gatewayLabels = {
-  categories: {},
-  dateRange: {
-    from: "ab",
-    until: "bis",
-  },
-  distanceUnit: "km",
-};
+import { fromLabel, gatewayLabels, priceLabel } from "./labels";
+
+export { fromLabel, gatewayLabels, priceLabel };
 
 const filterLabels = {
   filterGroupLess: "Weniger anzeigen",
@@ -188,8 +204,6 @@ const mapLabels = {
   resetDate: "Zeitraum zurücksetzen",
 };
 
-const priceLabel = "pro Person";
-const fromLabel = "ab";
 
 function isRecord(value: unknown): value is UnknownRecord {
   return typeof value === "object" && value !== null && !Array.isArray(value);
@@ -1390,6 +1404,16 @@ export function WebsiteGatewayPageContent({
 
   if (page.type === "detail-non-bookable") {
     return <WebsiteGatewayNonBookableDetail detail={page.detail} />;
+  }
+
+  if (page.type === "detail-blog-post") {
+    return (
+      <WebsiteGatewayBlogPostDetail detail={page.detail} locale={locale.replace("_", "-")} />
+    );
+  }
+
+  if (page.type === "overview-travel-guide") {
+    return <WebsiteGatewayTravelGuideOverview data={page.data} />;
   }
 
   return (
