@@ -192,7 +192,9 @@ export function SectionHero({
                   </Text>
                 ) : null}
                 {search ? (
-                  <div className="w-full max-w-[640px] text-left">{search}</div>
+                  <div className="w-full max-w-[640px] text-left [&_[data-insights-index='search']]:mx-auto">
+                    {search}
+                  </div>
                 ) : null}
               </div>
             ) : null}

@@ -416,9 +416,12 @@ const toPreviewActivity = (
     };
   });
 
-function renderGatewayReviewSection(section: GatewayHomeReviewSectionData) {
+function renderGatewayReviewSection(
+  section: GatewayHomeReviewSectionData,
+  useSectionSpacing: boolean
+) {
   return (
-    <PageSection>
+    <PageSection spacing={useSectionSpacing}>
       <SectionReviewGrid
         title={section.title}
         reviews={section.reviews.map((review) => ({
@@ -440,10 +443,11 @@ function renderGatewayReviewSection(section: GatewayHomeReviewSectionData) {
 }
 
 function renderGatewayFeatureBandSection(
-  section: GatewayHomeFeatureBandSectionData
+  section: GatewayHomeFeatureBandSectionData,
+  useSectionSpacing: boolean
 ) {
   return (
-    <PageSection>
+    <PageSection spacing={useSectionSpacing}>
       <SectionFeatureBand
         title={section.title}
         items={section.items.map((item) => ({
@@ -458,10 +462,11 @@ function renderGatewayFeatureBandSection(
 }
 
 function renderGatewayRegionMapSection(
-  section: GatewayHomeRegionMapSectionData
+  section: GatewayHomeRegionMapSectionData,
+  useSectionSpacing: boolean
 ) {
   return (
-    <PageSection>
+    <PageSection spacing={useSectionSpacing}>
       <SectionRegionExplorer title={section.title} tiles={section.tiles} />
     </PageSection>
   );
@@ -536,15 +541,15 @@ function renderGatewaySection({
   }
 
   if (section.component === "reviews") {
-    return renderGatewayReviewSection(section);
+    return renderGatewayReviewSection(section, useSectionSpacing);
   }
 
   if (section.component === "feature_band") {
-    return renderGatewayFeatureBandSection(section);
+    return renderGatewayFeatureBandSection(section, useSectionSpacing);
   }
 
   if (section.component === "region_map") {
-    return renderGatewayRegionMapSection(section);
+    return renderGatewayRegionMapSection(section, useSectionSpacing);
   }
 
   return renderGatewayActivitySection({
@@ -1156,9 +1161,10 @@ export function WebsiteGatewayPageRenderer({
           (language ? <WebsiteLanguageSelect {...language} long /> : undefined),
       }
     : footer;
+  // The hero search belongs to the homepage; overview/detail heroes stay clean.
   const resolvedHeroSearch =
     heroSearch ??
-    (search ? (
+    (search && page.type === "home" ? (
       <WebsiteGatewaySearch {...search} locale={normalizedLocale} mode="main" />
     ) : undefined);
 
