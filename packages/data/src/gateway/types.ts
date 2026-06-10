@@ -401,6 +401,7 @@ export type TGatewaySearchSuggestion = {
     | "point-of-interest";
   imageUrl?: string | null;
   path?: string | null;
+  webPath?: string | null;
   category?: string | null;
   distanceKm?: number | null;
 };

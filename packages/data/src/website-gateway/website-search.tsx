@@ -97,17 +97,22 @@ export function WebsiteGatewaySearch({
       placeholder={labels.placeholder}
     >
       {suggestions.length > 0 ? (
-        suggestions.map((item) => (
+        suggestions.map((item) => {
+          // The gateway ships `webPath` (public permalink) next to the app
+          // `path`; the website only ever links to public permalinks.
+          const target = item.webPath ?? item.path;
+          return (
           <SearchBarResultItem
             key={`${item.type}-${item.id}`}
-            href={item.path ? (buildHref?.(item.path) ?? item.path) : "#"}
+            href={target ? (buildHref?.(target) ?? target) : "#"}
             variant={SUGGESTION_VARIANT[item.type] ?? "activity"}
             title={item.title}
             subtitle={item.subtitle ?? undefined}
             detail={item.category ?? undefined}
             imageSrc={item.imageUrl ?? undefined}
           />
-        ))
+          );
+        })
       ) : showNoResults ? (
         <div className="px-4 py-6">
           <Text>{labels.noResults}</Text>
