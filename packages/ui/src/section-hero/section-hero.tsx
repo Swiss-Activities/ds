@@ -104,7 +104,7 @@ export function SectionHero({
                   <Text
                     as="h1"
                     size="2xl"
-                    className="max-w-4xl text-balance !text-white drop-shadow-sm"
+                    className="max-w-4xl text-balance !font-semibold !text-white drop-shadow-sm"
                   >
                     {title}
                   </Text>
@@ -144,7 +144,7 @@ export function SectionHero({
                   <Text
                     as="h1"
                     size="2xl"
-                    className="max-w-4xl text-balance !text-white"
+                    className="max-w-4xl text-balance !font-semibold !text-white"
                   >
                     {title}
                   </Text>
