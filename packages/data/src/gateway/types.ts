@@ -1,3 +1,9 @@
+export type TGatewayListingContentBlock = {
+  html: string | null;
+  images: Array<{ url: string; caption: string | null; alt: string | null }>;
+  youtubeUrl: string | null;
+};
+
 export type TGatewayHomeItem = {
   id: string;
   title: string;
@@ -280,6 +286,8 @@ export type TGatewayDiscoveryContext =
 export type TGatewayHome = {
   context?: TGatewayDiscoveryContext;
   staticSections?: TGatewayStaticSection[];
+  /** Long-form editorial content rendered after the sections (overview pages). */
+  content?: TGatewayListingContentBlock[];
   sections: TGatewayHomeSection[];
 };
 
