@@ -21,6 +21,7 @@ export type AppGatewayContext = {
   /** Website destination overview / location-type surface (vs the app feed). */
   destinationOverview?: string | null;
   activityType?: string | null;
+  attribute?: string | null;
   nonBookable?: string | null;
   poi?: string | null;
   region?: string | null;

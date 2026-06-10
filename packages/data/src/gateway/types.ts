@@ -400,6 +400,8 @@ export type TGatewayFeedParams = TGatewayHomeParams & {
    *  `activityType` set too, loads the location-type page. */
   destinationOverview?: string | null;
   activityType?: string | null;
+  /** Website attribute overview (attributes/{slug}); with destinationOverview, the location-attribute page. */
+  attribute?: string | null;
   nonBookable?: string | null;
   region?: string | null;
   poi?: string | null;

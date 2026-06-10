@@ -7,6 +7,7 @@ import type {
   GatewayHomeFeatureBandSectionData,
   GatewayHomeHeroData,
   GatewayHomeRegionMapSectionData,
+  GatewayHomeSuggestedTypesSectionData,
   GatewayHomeReviewSectionData,
   GatewayHomeSectionData,
 } from "../adapters/gatewayHome";
@@ -41,6 +42,7 @@ import {
   SectionReviewGrid,
   SectionReviews,
   SegmentedControl,
+  Text,
   Website,
   WebsiteLanguageSelect,
   gatewayHomepageHeroFallbackImage,
@@ -81,6 +83,8 @@ export type WebsiteGatewayOverviewPageType =
   | "overview-activity-type"
   | "overview-destination"
   | "overview-destination-activity-type"
+  | "overview-attribute"
+  | "overview-destination-attribute"
   | "overview-non-bookable"
   | "overview-point-of-interest";
 
@@ -409,9 +413,11 @@ function renderGatewayHero(
 }
 
 // The gateway ships fully localized permalinks (webPath/path/urls) per item;
-// activity cards link straight to them. Other item types follow later.
+// cards link straight to them. Activities always carry one (path); other item
+// types link only when the gateway ships a public webPath.
 const toLinkedActivityItem = (itemData: GatewayActivityItemData): ActivityItem => {
-  const href = itemData.type === "activity" ? itemData.path : null;
+  const href =
+    itemData.type === "activity" ? itemData.path : (itemData.webPath ?? null);
 
   return {
     ...itemData,
@@ -448,10 +454,49 @@ function renderGatewayReviewSection(
           activityPrefix: review.activityPrefix,
           activity: {
             label: review.activityTitle,
-            href: "#",
+            href: review.activityPath ?? "#",
           },
         }))}
       />
+    </PageSection>
+  );
+}
+
+function renderGatewaySuggestedTypesSection(
+  section: GatewayHomeSuggestedTypesSectionData,
+  useSectionSpacing: boolean
+) {
+  const linked = section.items.filter((item) => item.href);
+  if (linked.length === 0) return null;
+  return (
+    <PageSection spacing={useSectionSpacing}>
+      <section>
+        <Text as="h2" size="lg" className="mb-4">
+          {section.title}
+        </Text>
+        <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
+          {linked.map((item) => (
+            <a
+              key={item.id}
+              href={item.href ?? "#"}
+              className="group relative block aspect-[4/3] overflow-hidden rounded-lg bg-gray-100"
+            >
+              {item.imageUrl ? (
+                <img
+                  src={item.imageUrl}
+                  alt={item.title}
+                  loading="lazy"
+                  className="absolute inset-0 h-full w-full object-cover transition duration-200 group-hover:scale-105"
+                />
+              ) : null}
+              <span className="absolute inset-0 bg-gradient-to-t from-black/55 to-transparent" />
+              <span className="absolute bottom-3 left-3 right-3 text-sm font-semibold text-white">
+                {item.title}
+              </span>
+            </a>
+          ))}
+        </div>
+      </section>
     </PageSection>
   );
 }
@@ -564,6 +609,10 @@ function renderGatewaySection({
 
   if (section.component === "region_map") {
     return renderGatewayRegionMapSection(section, useSectionSpacing);
+  }
+
+  if (section.component === "suggested_types") {
+    return renderGatewaySuggestedTypesSection(section, useSectionSpacing);
   }
 
   return renderGatewayActivitySection({
@@ -703,6 +752,14 @@ function getContextFromPage(
         ...baseContext,
         destinationOverview: page.locationSlug ?? null,
         activityType: slug,
+      };
+    case "overview-attribute":
+      return { ...baseContext, attribute: slug };
+    case "overview-destination-attribute":
+      return {
+        ...baseContext,
+        destinationOverview: page.locationSlug ?? null,
+        attribute: slug,
       };
     case "overview-non-bookable":
       return {

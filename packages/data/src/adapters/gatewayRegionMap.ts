@@ -9,6 +9,7 @@ export type GatewayRegionMapTileData = {
   active: boolean;
   disabled: boolean;
   pathSlug: string | null;
+  href?: string;
   tone: "low" | "mid" | "high";
 };
 
@@ -187,6 +188,7 @@ export const toGatewayRegionMapTiles = (
       }),
       disabled: !pathSlug,
       pathSlug,
+      href: item.webPath ?? undefined,
       tone: getGatewayRegionTone(count),
     };
   });

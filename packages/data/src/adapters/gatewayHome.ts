@@ -11,6 +11,7 @@ import {
   isGatewayFeatureBandSection,
   isGatewayHeroSection,
   isGatewayRegionMapSection,
+  isGatewaySuggestedTypesSection,
   isGatewayReviewSection,
   isGatewayWeatherCardSection,
 } from "../gateway/sections";
@@ -24,6 +25,7 @@ import type {
   TGatewayHome,
   TGatewayHomeSection,
   TGatewayRegionMapSection,
+  TGatewaySuggestedTypesSection,
   TGatewayReviewCarouselSection,
   TGatewaySectionAlternate,
   TGatewayWeatherCardItem,
@@ -94,6 +96,20 @@ export type GatewayHomeRegionMapSectionData = {
   rawSection: TGatewayRegionMapSection;
 };
 
+export type GatewayHomeSuggestedTypesSectionData = {
+  id: string;
+  component: "suggested_types";
+  title: string;
+  moduleIndex: number;
+  items: Array<{
+    id: string;
+    title: string;
+    imageUrl: string | null;
+    href: string | null;
+  }>;
+  rawSection: TGatewaySuggestedTypesSection;
+};
+
 export type GatewayHomeActivitySectionItemData = {
   item: TGatewayActivityCardItem;
   itemData: GatewayActivityItemData;
@@ -118,6 +134,7 @@ export type GatewayHomeSectionData =
   | GatewayHomeReviewSectionData
   | GatewayHomeFeatureBandSectionData
   | GatewayHomeRegionMapSectionData
+  | GatewayHomeSuggestedTypesSectionData
   | GatewayHomeActivitySectionData;
 
 export type GatewayHomeData = {
@@ -403,6 +420,25 @@ export const mapGatewayHomeSections = (
         title: section.title,
         moduleIndex,
         items: section.data,
+        rawSection: section,
+      });
+
+      return;
+    }
+
+    if (isGatewaySuggestedTypesSection(section)) {
+      sections.push({
+        id: section.id,
+        component: "suggested_types",
+        title: section.title,
+        moduleIndex,
+        items: section.data.map((item) => ({
+          id: item.id,
+          title: item.title,
+          imageUrl: item.imageUrl ?? null,
+          // Public permalink only — the app href is an /app/v1 path.
+          href: item.webPath ?? null,
+        })),
         rawSection: section,
       });
 

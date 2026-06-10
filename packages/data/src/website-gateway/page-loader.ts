@@ -60,6 +60,13 @@ const getFeedSelection = (page: WebsiteGatewayOverviewPageRequest) => {
         destinationOverview: page.locationSlug ?? null,
         activityType: page.slug ?? null,
       };
+    case "overview-attribute":
+      return { attribute: page.slug ?? null };
+    case "overview-destination-attribute":
+      return {
+        destinationOverview: page.locationSlug ?? null,
+        attribute: page.slug ?? null,
+      };
     case "overview-non-bookable":
       return { nonBookable: page.slug ?? null };
     case "overview-point-of-interest":

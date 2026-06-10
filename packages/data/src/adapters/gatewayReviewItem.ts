@@ -10,6 +10,8 @@ export type GatewayReviewItemData = {
   activityPrefix: string;
   activityTitle: string;
   activityId: string;
+  /** Public permalink of the reviewed activity. */
+  activityPath: string | null;
 };
 
 export const getGatewayReviewActivityPrefix = (locale: string) => {
@@ -44,5 +46,6 @@ export const toGatewayReviewItems = (
     activityPrefix,
     activityTitle: item.title?.trim() || "",
     activityId: item.activityId?.trim() || "",
+    activityPath: item.webPath ?? item.path ?? null,
   }));
 };
