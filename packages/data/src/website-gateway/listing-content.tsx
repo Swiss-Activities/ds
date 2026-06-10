@@ -108,7 +108,7 @@ function ListingContentParts({ parts }: { parts: ListingContentPart[] }) {
                     src={image.url}
                     alt={image.alt ?? ""}
                     loading="lazy"
-                    className="h-full max-h-[400px] w-full rounded-lg object-cover"
+                    className="aspect-[4/3] max-h-[400px] w-full rounded-lg object-cover"
                   />
                   {image.caption ? (
                     <figcaption className="mt-2 text-sm text-gray-500">

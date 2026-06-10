@@ -15,7 +15,7 @@ export function Website({
   headerSlot,
 }: WebsiteProps) {
   const footerSpacingClassName =
-    footerSpacing === "page" ? "mt-12 lg:mt-16" : undefined;
+    footerSpacing === "page" ? "mt-20 lg:mt-28" : undefined;
   const spacedFooter = footer
     ? {
         ...footer,
