@@ -1,147 +1,67 @@
 import { useState } from "react";
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import { WebsiteGatewayPageRenderer } from "@swiss-activities/data";
-import { Languages } from "@swiss-activities/ui/icons";
 import {
-  Icon,
-  SearchBar,
-  SearchBarResultItem,
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
+  WebsiteGatewayPageRenderer,
+  type TGatewaySearchSuggestion,
+} from "@swiss-activities/data";
+import {
   SiteFooterAppLinks,
   SiteFooterPaymentMethods,
-  Text,
   type SiteFooterProps,
   type SiteHeaderProps,
+  type WebsiteLanguageOption,
 } from "@swiss-activities/ui";
 import { gatewayHomeResponse } from "../fixtures/gateway-home-response";
 
-const languageOptions = [
+const languageOptions: WebsiteLanguageOption[] = [
   { value: "de_CH", label: "Deutsch", shortLabel: "DE" },
   { value: "en_CH", label: "English", shortLabel: "EN" },
   { value: "fr_CH", label: "Français", shortLabel: "FR" },
   { value: "it_CH", label: "Italiano", shortLabel: "IT" },
 ];
 
-const searchSuggestions = [
+const searchSuggestions: TGatewaySearchSuggestion[] = [
   {
-    variant: "activity-listing" as const,
+    id: "paragliding",
     title: "Paragliding",
     subtitle: "Luftaktivitaet",
-    imageSrc:
+    type: "activity-type",
+    path: "#",
+    imageUrl:
       "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/37f230b87aaf197d0213fb0538fefd64.jpg",
   },
   {
-    variant: "location" as const,
+    id: "interlaken",
     title: "Interlaken",
     subtitle: "Region Bern",
-    imageSrc:
+    type: "destination",
+    path: "#",
+    imageUrl:
       "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/MOB_Schoenried_Morgen_94018_1_cb43f1c986.jpg",
   },
   {
-    variant: "poi" as const,
+    id: "jungfraujoch",
     title: "Jungfraujoch - Top of Europe",
     subtitle: "Region Bern",
-    detail: "Interlaken",
-    imageSrc:
+    category: "Interlaken",
+    type: "point-of-interest",
+    path: "#",
+    imageUrl:
       "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/Eiger_Express_Grindelwald_Eigernordwand_Weitansicht_Kabine_rechts_f1841d7182.jpg",
   },
   {
-    variant: "activity" as const,
+    id: "jungfraujoch-ticket",
     title: "Ab Interlaken: Ticket Jungfraujoch inkl. Sitzplatzreservation",
     subtitle: "Interlaken",
-    detail: "Bergbahn",
-    imageSrc:
+    category: "Bergbahn",
+    type: "activity",
+    path: "#",
+    imageUrl:
       "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/29_Oeschinensee_Seraina_57b2a4db85.jpg",
   },
 ];
 
-function StoryLanguageSelect({ long = false }: { long?: boolean }) {
-  const [locale, setLocale] = useState("de_CH");
-  const selected = languageOptions.find((option) => option.value === locale);
-
-  return (
-    <Select value={locale} onValueChange={(value) => setLocale(String(value))}>
-      <SelectTrigger
-        aria-label="Sprache"
-        className="bg-white shadow-none"
-      >
-        <Icon icon={Languages} size="sm" />
-        <SelectValue>
-          {long ? selected?.label : selected?.shortLabel}
-        </SelectValue>
-      </SelectTrigger>
-      <SelectContent align="end">
-        {languageOptions.map((option) => (
-          <SelectItem key={option.value} value={option.value}>
-            {option.label}
-          </SelectItem>
-        ))}
-      </SelectContent>
-    </Select>
-  );
-}
-
-function StorySearchResults({ value }: { value: string }) {
-  const normalizedValue = value.trim().toLowerCase();
-  const items = normalizedValue
-    ? searchSuggestions.filter((item) =>
-        item.title.toLowerCase().includes(normalizedValue)
-      )
-    : searchSuggestions;
-
-  if (!items.length) {
-    return (
-      <div className="px-4 py-6">
-        <Text>Keine Ergebnisse</Text>
-      </div>
-    );
-  }
-
-  return (
-    <>
-      {items.map((item) => (
-        <SearchBarResultItem
-          key={`${item.variant}-${item.title}`}
-          href="#"
-          {...item}
-        />
-      ))}
-    </>
-  );
-}
-
-function StorySearch({
-  className,
-  mode = "default",
-}: {
-  className?: string;
-  mode?: "default" | "main" | "mobile";
-}) {
-  const [value, setValue] = useState("");
-
-  return (
-    <SearchBar
-      className={className}
-      mode={mode}
-      value={value}
-      onValueChange={setValue}
-      onClear={() => setValue("")}
-      onSubmit={setValue}
-      placeholder="Jetzt suchen"
-    >
-      <StorySearchResults value={value} />
-    </SearchBar>
-  );
-}
-
-const headerBase: Omit<
-  SiteHeaderProps,
-  "gatewaySearch" | "languageSelector" | "searchButton" | "userSlot"
-> = {
+const header: SiteHeaderProps = {
   labels: {
     close: "Schliessen",
     home: "Homepage",
@@ -151,7 +71,6 @@ const headerBase: Omit<
 };
 
 const footer: SiteFooterProps = {
-  languageSelector: <StoryLanguageSelect long />,
   sections: [
     {
       id: "company",
@@ -223,21 +142,26 @@ const footer: SiteFooterProps = {
 };
 
 function WebsiteStory() {
-  const header: SiteHeaderProps = {
-    ...headerBase,
-    languageSelector: <StoryLanguageSelect />,
-  };
+  const [locale, setLocale] = useState("de_CH");
 
   return (
     <WebsiteGatewayPageRenderer
       header={header}
-      heroSearch={<StorySearch mode="main" />}
-      locale="de_CH"
+      footer={footer}
+      language={{
+        options: languageOptions,
+        value: locale,
+        onValueChange: setLocale,
+      }}
+      search={{
+        labels: { placeholder: "Jetzt suchen", noResults: "Keine Ergebnisse" },
+        staticSuggestions: searchSuggestions,
+      }}
+      locale={locale}
       page={{
         type: "home",
         data: gatewayHomeResponse,
       }}
-      footer={footer}
     />
   );
 }

@@ -208,7 +208,7 @@ export function SiteHeader({
               />
             ) : null}
             {languageSelector ? (
-              <div className="!ms-2 hidden lg:!ms-4 lg:block">
+              <div className="!ms-2 lg:!ms-4">
                 {languageSelector}
               </div>
             ) : null}

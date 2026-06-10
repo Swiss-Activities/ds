@@ -37,6 +37,7 @@ import {
   SectionReviews,
   SegmentedControl,
   Website,
+  WebsiteLanguageSelect,
   gatewayHomepageHeroFallbackImage,
   renderWeatherIcon,
   type ActivityItem,
@@ -46,8 +47,13 @@ import {
   type SectionReviewsReview,
   type SiteFooterProps,
   type SiteHeaderProps,
+  type WebsiteLanguageSelectProps,
   type WebsiteProps,
 } from "@swiss-activities/ui";
+import {
+  WebsiteGatewaySearch,
+  type WebsiteGatewaySearchProps,
+} from "./website-search";
 import {
   Clock3,
   Cloud,
@@ -98,14 +104,18 @@ export type WebsiteGatewayPage =
   | WebsiteGatewayDetailNonBookablePage;
 
 export type WebsiteGatewayContentRendererProps = {
+  apiUrl?: string;
   data: TGatewayHome;
   context?: AppGatewayContext;
+  gatewayUrl?: string;
   googleMapsApiKey?: string;
   heroSearch?: ReactNode;
   locale: string;
 };
 
 export type WebsiteGatewayPageContentProps = {
+  apiUrl?: string;
+  gatewayUrl?: string;
   googleMapsApiKey?: string;
   heroSearch?: ReactNode;
   locale?: string;
@@ -116,12 +126,19 @@ export type WebsiteGatewayPageRendererProps = Omit<
   WebsiteProps,
   "footer" | "gateway" | "header"
 > & {
+  apiUrl?: string;
   footer?: SiteFooterProps;
+  gatewayUrl?: string;
   googleMapsApiKey?: string;
   header?: SiteHeaderProps;
   heroSearch?: ReactNode;
+  /** Rendered as WebsiteLanguageSelect in the header and footer slots. */
+  language?: WebsiteLanguageSelectProps;
   locale?: string;
   page: WebsiteGatewayPage;
+  /** Rendered as WebsiteGatewaySearch in the hero search slot. */
+  search?: Omit<WebsiteGatewaySearchProps, "locale" | "mode">;
+  traceUrl?: string;
 };
 
 const HOMEPAGE_CAROUSEL_LAYOUT: Array<3 | 4> = [4, 3, 4, 3, 4];
@@ -649,17 +666,19 @@ function getContextFromPage(
 }
 
 export function WebsiteGatewayContentRenderer({
+  apiUrl = "",
   context,
   data,
+  gatewayUrl = "",
   googleMapsApiKey,
   heroSearch,
   locale,
 }: WebsiteGatewayContentRendererProps) {
   return (
-    <GatewayProvider apiUrl="" gatewayUrl="" locale={locale}>
+    <GatewayProvider apiUrl={apiUrl} gatewayUrl={gatewayUrl} locale={locale}>
       <AppGateway<GatewayHomeSectionData, GatewayHomeHeroData>
-        apiUrl=""
-        gatewayUrl=""
+        apiUrl={apiUrl}
+        gatewayUrl={gatewayUrl}
         locale={locale}
         enabled
         initialData={data}
@@ -1056,6 +1075,8 @@ export function WebsiteGatewayNonBookableDetail({
 
 export function WebsiteGatewayPageContent({
   googleMapsApiKey,
+  apiUrl,
+  gatewayUrl,
   heroSearch,
   locale = "de_CH",
   page,
@@ -1070,8 +1091,10 @@ export function WebsiteGatewayPageContent({
 
   return (
     <WebsiteGatewayContentRenderer
+      apiUrl={apiUrl}
       context={getContextFromPage(page, locale)}
       data={page.data}
+      gatewayUrl={gatewayUrl}
       googleMapsApiKey={googleMapsApiKey}
       heroSearch={heroSearch}
       locale={locale}
@@ -1081,37 +1104,74 @@ export function WebsiteGatewayPageContent({
 
 export function WebsiteGatewayPageRenderer({
   afterFooter,
+  apiUrl = "",
   className,
   dir,
   footer,
   footerSlot,
+  gatewayUrl = "",
   googleMapsApiKey,
   header,
   headerSlot,
   heroSearch,
+  language,
   locale = "de_CH",
   page,
+  search,
+  traceUrl,
 }: WebsiteGatewayPageRendererProps) {
-  return (
-    <Website
-      afterFooter={afterFooter}
-      className={className}
-      dir={dir}
-      footer={footer}
-      footerSlot={footerSlot}
-      footerSpacing="page"
-      gateway={
-        <div className="lg:pt-8">
-          <WebsiteGatewayPageContent
-            googleMapsApiKey={googleMapsApiKey}
-            heroSearch={heroSearch}
-            locale={locale}
-            page={page}
-          />
-        </div>
+  const normalizedLocale = locale.replace("_", "-");
+  const headerProps = header
+    ? {
+        ...header,
+        languageSelector:
+          header.languageSelector ??
+          (language ? <WebsiteLanguageSelect {...language} /> : undefined),
       }
-      header={header}
-      headerSlot={headerSlot}
-    />
+    : header;
+  const footerProps = footer
+    ? {
+        ...footer,
+        languageSelector:
+          footer.languageSelector ??
+          (language ? <WebsiteLanguageSelect {...language} long /> : undefined),
+      }
+    : footer;
+  const resolvedHeroSearch =
+    heroSearch ??
+    (search ? (
+      <WebsiteGatewaySearch {...search} locale={normalizedLocale} mode="main" />
+    ) : undefined);
+
+  return (
+    <GatewayProvider
+      apiUrl={apiUrl}
+      gatewayUrl={gatewayUrl}
+      locale={normalizedLocale}
+      traceUrl={traceUrl}
+    >
+      <Website
+        afterFooter={afterFooter}
+        className={className}
+        dir={dir}
+        footer={footerProps}
+        footerSlot={footerSlot}
+        footerSpacing="page"
+        gateway={
+          <div className="lg:pt-8">
+            <WebsiteGatewayPageContent
+              apiUrl={apiUrl}
+              gatewayUrl={gatewayUrl}
+              googleMapsApiKey={googleMapsApiKey}
+              heroSearch={resolvedHeroSearch}
+              locale={locale}
+              page={page}
+            />
+          </div>
+        }
+        header={headerProps}
+        headerSlot={headerSlot}
+      />
+    </GatewayProvider>
   );
 }
