@@ -165,7 +165,7 @@ export function SiteHeader({
             aria-label={labels.home}
             className="rounded-lg sm:me-6 lg:me-4"
           >
-            <span className="relative start-[-3px] top-0.5 hidden origin-left scale-[0.9] transform lg:block rtl:origin-right">
+            <span className="relative start-[-3px] hidden origin-left scale-[0.9] transform lg:block rtl:origin-right">
               {logo}
             </span>
             <span className="relative flex origin-left transform lg:hidden rtl:origin-right">
