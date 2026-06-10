@@ -22,8 +22,5 @@ export type BaseHeroProps = {
   tabs?: HeroTab[];
   selectedTabId?: string;
   onSelectTab?: (id: string) => void;
-  backLabel?: string;
-  backHref?: string;
-  onBack?: () => void;
   className?: string;
 };

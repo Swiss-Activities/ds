@@ -1,4 +1,4 @@
-import { createElement, type HTMLAttributes, type ReactNode } from "react";
+import type { HTMLAttributes, ReactNode } from "react";
 import { Accordion } from "../accordion";
 import { Button } from "../button";
 import { SectionDetailHeader } from "../detail-layout";
@@ -8,7 +8,7 @@ import {
   detailSingleMediaClassName,
 } from "../detail-layout/classes";
 import { Icon } from "../icon/icon";
-import { Check, ChevronLeft, X } from "../icons";
+import { Check, X } from "../icons";
 import { ProductInfoList } from "../product-info-list";
 import { SectionActivityGrid } from "../section-activity-grid";
 import { Text } from "../text";
@@ -23,55 +23,16 @@ import type {
 export type SectionNonBookableProps = BaseSectionNonBookableProps &
   Omit<HTMLAttributes<HTMLDivElement>, "children" | "title">;
 
-function BackLink({
-  label,
-  href,
-  onClick,
-}: {
-  label: string;
-  href?: string;
-  onClick?: () => void;
-}) {
-  const tag = href ? "a" : "button";
-
-  return createElement(
-    tag,
-    {
-      className:
-        "flex cursor-pointer appearance-none items-center gap-2 border-none bg-transparent p-0 text-white no-underline",
-      ...(href ? { href } : { type: "button" as const, onClick }),
-    },
-    <span className="flex h-6 w-6 items-center justify-center rounded-full border border-solid border-white bg-white/80 backdrop-blur-sm">
-      <Icon icon={ChevronLeft} size="sm" className="text-blue" />
-    </span>,
-    <span className="text-sm font-medium text-white">{label}</span>
-  );
-}
-
 function MediaGallery({
   images,
   renderImage,
-  backLabel,
-  backHref,
-  onBack,
-}: {} & Pick<
-  BaseSectionNonBookableProps,
-  "images" | "renderImage" | "backLabel" | "backHref" | "onBack"
->) {
+}: Pick<BaseSectionNonBookableProps, "images" | "renderImage">) {
   const mainImage = images[0];
 
   return (
     <div className="relative">
       <div className={detailSingleMediaClassName}>
         <SectionNonBookableMedia image={mainImage} renderImage={renderImage} />
-        {backLabel ? (
-          <>
-            <div className="pointer-events-none absolute inset-x-0 top-0 z-10 h-24 bg-gradient-to-b from-black/45 to-transparent" />
-            <div className="absolute left-3 top-3 z-20">
-              <BackLink label={backLabel} href={backHref} onClick={onBack} />
-            </div>
-          </>
-        ) : null}
       </div>
     </div>
   );
@@ -196,9 +157,6 @@ export function SectionNonBookable({
   categoryTitleLabel: _categoryTitleLabel,
   locationLabel: _locationLabel,
   locationTitleLabel: _locationTitleLabel,
-  backLabel,
-  backHref,
-  onBack,
   description,
   highlights,
   detailSections,
@@ -222,13 +180,7 @@ export function SectionNonBookable({
     <div className={cn("bg-white", className)} {...props}>
       <section className={detailContainerClassName}>
         <div className={detailMediaFlushClassName}>
-          <MediaGallery
-            images={images}
-            renderImage={renderImage}
-            backLabel={backLabel}
-            backHref={backHref}
-            onBack={onBack}
-          />
+          <MediaGallery images={images} renderImage={renderImage} />
         </div>
         <SectionDetailHeader title={title} description={description}>
           {hasSourceLink ? (

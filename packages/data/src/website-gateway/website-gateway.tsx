@@ -965,7 +965,6 @@ export function WebsiteGatewayActivityDetail({
     <SectionProduct
       title={title}
       images={getActivityImages(detail)}
-      backLabel="Zurück"
       rating={getActivityRating(detail)}
       badges={[
         {
@@ -1085,7 +1084,6 @@ export function WebsiteGatewayNonBookableDetail({
     <SectionNonBookable
       title={detail.title ?? "Detail"}
       images={getNonBookableImages(detail)}
-      backLabel="Zurück"
       description={detail.description}
       highlights={getNonBookableHighlights(detail)}
       detailSections={getNonBookableDetailSections(detail)}

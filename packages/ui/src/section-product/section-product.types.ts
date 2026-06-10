@@ -13,9 +13,6 @@ export type BaseSectionProductProps = {
   images: ImageValue[];
   renderImage?: RenderImage;
   breadcrumbs?: BreadcrumbsItem[];
-  backLabel?: string;
-  backHref?: string;
-  onBack?: () => void;
   rating?: BaseRatingProps;
   badges?: BaseInfoBadgeProps[];
   description?: ReactNode;

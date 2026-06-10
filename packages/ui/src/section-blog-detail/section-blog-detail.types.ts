@@ -7,9 +7,6 @@ export type BaseSectionBlogDetailProps = {
   title: ReactNode;
   image?: ImageValue | null;
   renderImage?: RenderImage;
-  backLabel?: string;
-  backHref?: string;
-  onBack?: () => void;
   description?: ReactNode;
   contentItems?: BaseContentBlocksProps["items"];
   contentTocTitle?: BaseContentBlocksProps["tocTitle"];

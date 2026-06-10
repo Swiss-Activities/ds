@@ -1,7 +1,5 @@
-import { createElement, type HTMLAttributes } from "react";
-import { Icon } from "../icon/icon";
+import type { HTMLAttributes } from "react";
 import { cn } from "../utils/cn";
-import { ChevronLeft } from "../icons";
 import { HorizontalScrollerRoot } from "../horizontal-scroller/horizontal-scroller.root";
 import { HorizontalScrollerTrack } from "../horizontal-scroller/horizontal-scroller.track";
 import { Text } from "../text";
@@ -11,30 +9,6 @@ import { renderImageValue } from "../utils/render-image";
 
 export type HeroProps = BaseHeroProps &
   Omit<HTMLAttributes<HTMLDivElement>, "children" | "title">;
-
-function BackLink({
-  label,
-  href,
-  onClick,
-}: {
-  label: string;
-  href?: string;
-  onClick?: () => void;
-}) {
-  const tag = href ? "a" : "button";
-  return createElement(
-    tag,
-    {
-      className:
-        "flex cursor-pointer appearance-none items-center gap-2 border-none bg-transparent p-0 text-white no-underline",
-      ...(href ? { href } : { type: "button" as const, onClick }),
-    },
-    <span className="flex h-6 w-6 items-center justify-center rounded-full border border-solid border-white bg-white/70 backdrop-blur-sm">
-      <Icon icon={ChevronLeft} size="sm" className="text-blue" />
-    </span>,
-    <span className="text-sm font-medium text-white">{label}</span>
-  );
-}
 
 function HeroTabs({
   tabs,
@@ -99,14 +73,10 @@ export function Hero({
   tabs,
   selectedTabId,
   onSelectTab,
-  backLabel,
-  backHref,
-  onBack,
   className,
   ...props
 }: HeroProps) {
   const isGallery = images && images.length > 0;
-  const hasBack = !!backLabel;
   const isFallback = variant === "fallback";
   const hasTabs = isFallback && !!tabs?.length;
   const isLocalized = variant === "localized";
@@ -143,9 +113,6 @@ export function Hero({
               renderImageValue(image, renderImage)
             )}
           </div>
-          {hasBack && (
-            <div className="pointer-events-none absolute inset-x-0 top-0 z-20 h-20 bg-gradient-to-b from-blue/50 to-transparent" />
-          )}
           {hasTopFade ? (
             <div className="pointer-events-none absolute inset-x-0 top-0 z-10 h-1/2 bg-gradient-to-b from-blue/55 to-transparent" />
           ) : null}
@@ -156,11 +123,6 @@ export function Hero({
                 isFallback ? "from-blue/75" : "from-blue"
               )}
             />
-          )}
-          {hasBack && (
-            <div className="absolute left-3 top-3 z-30">
-              <BackLink label={backLabel} href={backHref} onClick={onBack} />
-            </div>
           )}
           {title && (
             <Text

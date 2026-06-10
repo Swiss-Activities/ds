@@ -67,8 +67,6 @@ export const Default: Story = {
   args: {
     title: heroTitles.product,
     images: [],
-    backLabel: heroTitles.hero,
-    backHref: "#",
     breadcrumbs: [...productBreadcrumbs],
   },
   render: (args) => <SectionProductStoryPage {...args} />,

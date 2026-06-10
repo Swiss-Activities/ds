@@ -25,26 +25,10 @@ export const Default: Story = {
   ),
 };
 
-export const WithBackButton: Story = {
-  args: {
-    title: heroTitles.hero,
-    image: getHeroImage(),
-    backLabel: heroTitles.hero,
-    backHref: "#",
-  },
-  render: (args) => (
-    <Container>
-      <Hero {...args} />
-    </Container>
-  ),
-};
-
 export const Gallery: Story = {
   args: {
     title: heroTitles.gallery,
     images: getHeroGallery(),
-    backLabel: heroTitles.hero,
-    backHref: "#",
   },
   render: (args) => (
     <Container>

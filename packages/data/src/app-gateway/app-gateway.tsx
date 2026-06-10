@@ -80,7 +80,6 @@ export type AppGatewayRenderItemViewArgs<TItemData = unknown> = {
   previousItemLabel?: string;
   pendingItemId?: string | null;
   selectedTabId?: string;
-  onBack: () => void;
   onSelectItem?: AppGatewaySelectItem;
 };
 
@@ -106,7 +105,6 @@ export type BaseAppGatewayProps<
     id: string,
     context?: AppGatewayContext
   ) => Promise<TItemData | null>;
-  onBackItemUrl?: () => void;
   serverSideItemNavigation?: boolean;
   useDevGateway?: boolean;
   selectedDestination?: string | null;
@@ -151,7 +149,6 @@ function AppGatewayContent<TSection, THero, TItemData>({
   renderPage,
   renderItemView,
   loadItem,
-  onBackItemUrl,
   serverSideItemNavigation = false,
   useDevGateway = false,
   selectedDestination = null,
@@ -241,14 +238,6 @@ function AppGatewayContent<TSection, THero, TItemData>({
     ]
   );
 
-  const clearSelectedItem = useCallback(() => {
-    setSelectedItemId(null);
-    setSelectedItemData(null);
-    setSelectedItemLabel(null);
-    setSelectedItemHistory([]);
-    setPendingItemId(null);
-  }, []);
-
   useEffect(() => {
     const clearPendingItem = () => {
       setPendingItemId(null);
@@ -262,21 +251,6 @@ function AppGatewayContent<TSection, THero, TItemData>({
       window.removeEventListener("pageshow", clearPendingItem);
     };
   }, []);
-
-  const restorePreviousItem = useCallback(() => {
-    const previousItem = selectedItemHistory[selectedItemHistory.length - 1];
-
-    if (previousItem) {
-      setSelectedItemHistory((current) => current.slice(0, -1));
-      setSelectedItemId(previousItem.id);
-      setSelectedItemData(previousItem.data);
-      setSelectedItemLabel(previousItem.label);
-      setPendingItemId(null);
-      return;
-    }
-
-    clearSelectedItem();
-  }, [clearSelectedItem, selectedItemHistory]);
 
   const handleSelectItem = useCallback(
     async (id: string, options?: AppGatewaySelectItemOptions) => {
@@ -359,7 +333,6 @@ function AppGatewayContent<TSection, THero, TItemData>({
     },
     [
       canSelectItem,
-      clearSelectedItem,
       contextReady,
       loadItemContext,
       loadItem,
@@ -370,15 +343,6 @@ function AppGatewayContent<TSection, THero, TItemData>({
       serverSideItemNavigation,
     ]
   );
-
-  const handleBack = useCallback(() => {
-    if (onBackItemUrl) {
-      onBackItemUrl();
-      return;
-    }
-
-    restorePreviousItem();
-  }, [onBackItemUrl, restorePreviousItem]);
 
   useEffect(() => {
     if (!canSelectItem || !initialSelectedItemId || !initialSelectedItemData) {
@@ -527,7 +491,6 @@ function AppGatewayContent<TSection, THero, TItemData>({
             undefined,
           pendingItemId,
           selectedTabId,
-          onBack: handleBack,
           onSelectItem: canSelectItem ? handleSelectItem : undefined,
         })}
       </div>

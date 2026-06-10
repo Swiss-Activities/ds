@@ -1,4 +1,4 @@
-import { createElement, type HTMLAttributes } from "react";
+import type { HTMLAttributes } from "react";
 import { Breadcrumbs } from "../breadcrumbs";
 import { ContentBlocks } from "../content-blocks";
 import {
@@ -9,8 +9,6 @@ import {
   detailTitleClassName,
 } from "../detail-layout/classes";
 import { Hero } from "../hero";
-import { Icon } from "../icon/icon";
-import { ChevronLeft } from "../icons";
 import { ImageFill } from "../image-fill";
 import { InfoBadge } from "../info-badge";
 import { ProductInfoList } from "../product-info-list";
@@ -27,30 +25,6 @@ import {
 } from "../utils/render-image";
 import type { BaseSectionProductProps } from "./section-product.types";
 
-function BackLink({
-  label,
-  href,
-  onClick,
-}: {
-  label: string;
-  href?: string;
-  onClick?: () => void;
-}) {
-  const tag = href ? "a" : "button";
-  return createElement(
-    tag,
-    {
-      className:
-        "flex cursor-pointer appearance-none items-center gap-2 border-none bg-transparent p-0 text-white no-underline",
-      ...(href ? { href } : { type: "button" as const, onClick }),
-    },
-    <span className="flex h-6 w-6 items-center justify-center rounded-full border border-solid border-white bg-white/70 backdrop-blur-sm">
-      <Icon icon={ChevronLeft} size="sm" className="text-blue" />
-    </span>,
-    <span className="text-sm font-medium text-white">{label}</span>
-  );
-}
-
 export type SectionProductProps = BaseSectionProductProps &
   Omit<HTMLAttributes<HTMLDivElement>, "children" | "title">;
 
@@ -58,27 +32,8 @@ const galleryImageFillClassName = "[&_img]:!object-contain";
 
 type GalleryMediaProps = Pick<
   BaseSectionProductProps,
-  "images" | "renderImage" | "backLabel" | "backHref" | "onBack"
+  "images" | "renderImage"
 >;
-
-function GalleryBackOverlay({
-  backLabel,
-  backHref,
-  onBack,
-}: Pick<GalleryMediaProps, "backLabel" | "backHref" | "onBack">) {
-  if (!backLabel) {
-    return null;
-  }
-
-  return (
-    <>
-      <div className="pointer-events-none absolute inset-x-0 top-0 z-20 h-20 bg-gradient-to-b from-black/40 to-transparent lg:rounded-tl-lg" />
-      <div className="absolute left-3 top-3 z-30">
-        <BackLink label={backLabel} href={backHref} onClick={onBack} />
-      </div>
-    </>
-  );
-}
 
 function GalleryFillImage({
   image,
@@ -97,13 +52,7 @@ function GalleryFillImage({
   );
 }
 
-function GalleryGrid({
-  images,
-  renderImage,
-  backLabel,
-  backHref,
-  onBack,
-}: GalleryMediaProps) {
+function GalleryGrid({ images, renderImage }: GalleryMediaProps) {
   const thumbs = images.slice(1, 5);
 
   return (
@@ -113,11 +62,6 @@ function GalleryGrid({
           slides={images}
           renderImage={renderImage}
           className="absolute inset-0"
-        />
-        <GalleryBackOverlay
-          backLabel={backLabel}
-          backHref={backHref}
-          onBack={onBack}
         />
       </div>
       {thumbs.map((img, i) => (
@@ -136,13 +80,7 @@ function GalleryGrid({
   );
 }
 
-function SparseGallery({
-  images,
-  renderImage,
-  backLabel,
-  backHref,
-  onBack,
-}: GalleryMediaProps) {
+function SparseGallery({ images, renderImage }: GalleryMediaProps) {
   const hasSlider = images.length > 1;
 
   return (
@@ -159,11 +97,6 @@ function SparseGallery({
       ) : (
         <GalleryFillImage image={images[0]} renderImage={renderImage} />
       )}
-      <GalleryBackOverlay
-        backLabel={backLabel}
-        backHref={backHref}
-        onBack={onBack}
-      />
     </div>
   );
 }
@@ -181,9 +114,6 @@ export function SectionProduct({
   images,
   renderImage,
   breadcrumbs,
-  backLabel,
-  backHref,
-  onBack,
   rating,
   badges,
   description,
@@ -223,23 +153,11 @@ export function SectionProduct({
     <div {...props}>
       <section className={cn(detailContainerClassName, className)}>
         <div className={cn(detailMediaFlushClassName, "md:hidden")}>
-          <Hero
-            images={images}
-            renderImage={renderImage}
-            backLabel={backLabel}
-            backHref={backHref}
-            onBack={onBack}
-          />
+          <Hero images={images} renderImage={renderImage} />
         </div>
         {images && images.length > 0 && (
           <div className={cn(detailMediaFlushClassName, "hidden md:block")}>
-            <GalleryMedia
-              images={images}
-              renderImage={renderImage}
-              backLabel={backLabel}
-              backHref={backHref}
-              onBack={onBack}
-            />
+            <GalleryMedia images={images} renderImage={renderImage} />
           </div>
         )}
         {breadcrumbs && breadcrumbs.length > 0 && (

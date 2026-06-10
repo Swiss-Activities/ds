@@ -26,9 +26,6 @@ export type BaseSectionNonBookableProps = {
   categoryTitleLabel?: ReactNode;
   locationLabel?: ReactNode;
   locationTitleLabel?: ReactNode;
-  backLabel?: string;
-  backHref?: string;
-  onBack?: () => void;
   description?: ReactNode;
   highlights?: BaseProductInfoListProps["items"];
   detailSections?: NonBookableDetailSection[];

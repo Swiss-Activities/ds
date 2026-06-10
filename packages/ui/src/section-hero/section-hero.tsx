@@ -1,9 +1,7 @@
 "use client";
 
-import { createElement, type HTMLAttributes } from "react";
+import type { HTMLAttributes } from "react";
 import { Hero } from "../hero";
-import { Icon } from "../icon/icon";
-import { ChevronLeft } from "../icons";
 import { Text } from "../text";
 import { cn } from "../utils/cn";
 import { renderImageValue } from "../utils/render-image";
@@ -15,28 +13,6 @@ import type {
 
 export type SectionHeroProps = BaseSectionHeroProps &
   Omit<HTMLAttributes<HTMLDivElement>, "children" | "title">;
-
-function SectionHeroBackLink({
-  label,
-  onClick,
-}: {
-  label: string;
-  onClick?: () => void;
-}) {
-  return createElement(
-    "button",
-    {
-      className:
-        "flex cursor-pointer appearance-none items-center gap-2 border-none bg-transparent p-0 text-white no-underline",
-      type: "button" as const,
-      onClick,
-    },
-    <span className="flex h-6 w-6 items-center justify-center rounded-full border border-solid border-white bg-white/70 backdrop-blur-sm">
-      <Icon icon={ChevronLeft} size="sm" className="text-blue" />
-    </span>,
-    <span className="text-sm font-medium text-white">{label}</span>
-  );
-}
 
 function SectionHeroTags({
   className,
@@ -84,8 +60,6 @@ export function SectionHero({
   tabs,
   selectedTabId,
   onSelectTab,
-  backLabel,
-  onBack,
   className,
   ...props
 }: SectionHeroProps) {
@@ -124,14 +98,6 @@ export function SectionHero({
             </div>
             <div className="absolute inset-0 bg-blue/35" />
             <div className="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-2/3 bg-gradient-to-t from-blue/85 to-transparent" />
-            {backLabel ? (
-              <div className="pointer-events-none absolute inset-x-0 top-0 z-20 h-20 bg-gradient-to-b from-blue/50 to-transparent" />
-            ) : null}
-            {backLabel ? (
-              <div className="absolute left-3 top-3 z-30">
-                <SectionHeroBackLink label={backLabel} onClick={onBack} />
-              </div>
-            ) : null}
             <div className="relative z-20 grid min-h-[200px] items-center gap-6 px-4 py-8 text-center sm:min-h-[252px] sm:px-6 lg:min-h-[360px] lg:grid-cols-8 lg:gap-8 lg:px-10 lg:py-12 lg:text-left xl:px-12">
               <div className="flex min-w-0 flex-col items-center lg:col-span-5 lg:items-start">
                 {title ? (
@@ -170,15 +136,7 @@ export function SectionHero({
               {renderImageValue(image)}
             </div>
             <div className="absolute inset-0 bg-blue/45" />
-            {backLabel ? (
-              <div className="pointer-events-none absolute inset-x-0 top-0 z-20 h-20 bg-gradient-to-b from-blue/50 to-transparent" />
-            ) : null}
           </div>
-          {backLabel ? (
-            <div className="absolute left-3 top-3 z-30">
-              <SectionHeroBackLink label={backLabel} onClick={onBack} />
-            </div>
-          ) : null}
           <div className="relative z-10 flex h-full items-center justify-center px-4 text-center">
             {title || search ? (
               <div className="flex w-full max-w-3xl flex-col items-center gap-5">
@@ -282,8 +240,6 @@ export function SectionHero({
         tabs={tabs}
         selectedTabId={selectedTabId}
         onSelectTab={onSelectTab}
-        backLabel={backLabel}
-        onBack={onBack}
       >
         {variant === "localized" && days ? (
           <Weather
