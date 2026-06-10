@@ -360,7 +360,7 @@ export const SearchBar = forwardRef<HTMLDivElement, SearchBarProps>(
             <Skeleton
               loading={loading}
               full
-              className="!start-1 !top-1 hidden sm:block"
+              className="!start-1 !top-1 z-20 hidden sm:block"
               classNameItems="!h-[calc(100%-0.5rem)] !w-full !rounded-full"
             />
           ) : null}
