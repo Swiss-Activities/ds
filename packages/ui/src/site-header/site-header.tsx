@@ -120,6 +120,7 @@ export function SiteHeader({
   labels,
   languageSelector = null,
   logo = <Logo />,
+  logoClassName,
   logoHref,
   menuGroups = [],
   mobileLogo = <Logo size="sm" />,
@@ -165,7 +166,12 @@ export function SiteHeader({
             aria-label={labels.home}
             className="rounded-lg sm:me-6 lg:me-4"
           >
-            <span className="relative start-[-3px] hidden origin-left scale-[0.9] transform lg:block rtl:origin-right">
+            <span
+              className={cn(
+                "relative start-[-3px] top-0.5 hidden origin-left scale-[0.9] transform lg:block rtl:origin-right",
+                logoClassName
+              )}
+            >
               {logo}
             </span>
             <span className="relative flex origin-left transform lg:hidden rtl:origin-right">

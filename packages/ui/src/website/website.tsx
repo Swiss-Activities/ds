@@ -28,7 +28,12 @@ export function Website({
 
   return (
     <div dir={dir} className={cn("min-h-screen bg-white", className)}>
-      {headerSlot ?? (header ? <SiteHeader {...header} /> : null)}
+      {headerSlot ??
+        (header ? (
+          // The legacy site's logo needs the SiteHeader pixel nudge; the
+          // Website shell's DS logo does not.
+          <SiteHeader {...header} logoClassName={header.logoClassName ?? "top-0"} />
+        ) : null)}
       <main>{gateway}</main>
       {spacedFooterSlot ?? (spacedFooter ? <SiteFooter {...spacedFooter} /> : null)}
       {afterFooter}

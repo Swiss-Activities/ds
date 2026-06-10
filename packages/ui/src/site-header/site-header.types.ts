@@ -35,6 +35,8 @@ export type SiteHeaderProps = {
   labels: SiteHeaderLabels;
   languageSelector?: ReactNode;
   logo?: ReactNode;
+  /** Extra classes for the desktop logo wrapper (e.g. cancel the top nudge). */
+  logoClassName?: string;
   logoHref: string;
   mobileLogo?: ReactNode;
   menuGroups?: SiteHeaderMenuGroup[];
