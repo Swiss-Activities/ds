@@ -398,10 +398,23 @@ function renderGatewayHero(
 const toPreviewActivity = (
   section: GatewayHomeActivitySectionData
 ): ActivityItem[] =>
-  section.items.map(({ itemData }) => ({
-    ...itemData,
-    type: itemData.type,
-  }));
+  section.items.map(({ itemData }) => {
+    // The gateway ships fully localized permalinks (webPath/path) per item;
+    // activity cards link straight to them. Other item types follow later.
+    const href = itemData.type === "activity" ? itemData.path : null;
+
+    return {
+      ...itemData,
+      type: itemData.type,
+      render: href
+        ? ({ className, children }) => (
+            <a href={href} className={className}>
+              {children}
+            </a>
+          )
+        : undefined,
+    };
+  });
 
 function renderGatewayReviewSection(section: GatewayHomeReviewSectionData) {
   return (

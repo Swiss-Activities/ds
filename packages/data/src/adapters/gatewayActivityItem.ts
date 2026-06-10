@@ -38,6 +38,8 @@ export type GatewayActivityItemData = {
   images?: GatewayActivityItemImage[];
   title: string;
   description?: string;
+  /** Localized public permalink (`webPath` preferred over `path`). */
+  path?: string | null;
   type: TGatewayActivityCardItem["type"];
   subtitle?: string;
   category?: string;
@@ -263,6 +265,7 @@ export const toGatewayActivityItemData = (
     title: item.title,
     description:
       item.type === "blog-post" ? item.description || undefined : undefined,
+    path: item.webPath ?? item.path ?? null,
     type: item.type,
     subtitle: item.subtitle || undefined,
     category: formatGatewayItemCategory(item.category, labels.categories),
