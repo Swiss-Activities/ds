@@ -27,6 +27,8 @@ export interface WebsiteGatewayStaticPagesContent {
   vouchers?: WebsiteGatewayVouchersContent;
   /** e-guma shop URL for the vouchers page (locale-dependent). */
   vouchersShopHref?: string;
+  /** Localized legal switcher labels by nav id (gateway nav titles are German). */
+  legalNavTitles?: Record<string, string>;
 }
 
 export function WebsiteGatewayStaticPageContent({
@@ -37,7 +39,7 @@ export function WebsiteGatewayStaticPageContent({
   staticPages?: WebsiteGatewayStaticPagesContent;
 }) {
   if (content.legal) {
-    return <WebsiteGatewayLegalPage content={content} />;
+    return <WebsiteGatewayLegalPage content={content} navTitles={staticPages?.legalNavTitles} />;
   }
 
   switch (content.id) {

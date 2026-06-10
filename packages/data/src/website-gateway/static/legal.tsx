@@ -19,17 +19,20 @@ export interface WebsiteGatewayLegalNavItem {
 export function WebsiteGatewayLegalPage({
   content,
   nav,
+  navTitles,
 }: {
   content: TGatewayStaticPageContent;
   /** Override for the legal family navigation; defaults to the gateway-shipped one. */
   nav?: WebsiteGatewayLegalNavItem[];
+  /** Localized labels by nav id — the gateway nav ships paths localized but titles in German. */
+  navTitles?: Record<string, string>;
 }) {
   const body = content.blocks[0]?.content ?? "";
   const items =
     nav ??
     (content.legalNav ?? []).map((item) => ({
       id: item.id,
-      label: item.title,
+      label: navTitles?.[item.id] ?? item.title,
       href: item.path,
     }));
   return (
