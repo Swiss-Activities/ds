@@ -1,13 +1,15 @@
 import type { ReactNode } from "react";
-import { Text } from "@swiss-activities/ui";
+import { Button, Text, cn } from "@swiss-activities/ui";
 import type { TGatewayBlogOverview, TGatewayBlogOverviewPost } from "../gateway/types";
 
 /**
- * Travel-guide overview pages — the legacy travelGuide/travelRoutes templates:
- * `/travel-guide/` (+ categories): heading, intro, category pills, image-tile
- * post grid with a featured 2x2 tile every 8th card; the hoisted itineraries
- * overview (`/reiserouten-schweiz/`): posts bucketed per trip duration as
- * horizontal teaser cards. German label defaults, overridable via props.
+ * Travel-guide overview pages — 1:1 port of the legacy travelGuide/
+ * travelRoutes templates (website/modules/pages/travelGuide/index.tsx):
+ * `/travel-guide/` (+ categories): h1 + gray category subtitle + two-column
+ * intro, category filter pills, dense image-tile grid with a featured 2x2
+ * tile every 8th card (lg only, gradient title overlay); the hoisted
+ * itineraries overview: per-duration sections with horizontal teaser cards.
+ * German label defaults; consumers localize via the labels prop.
  */
 
 export interface WebsiteGatewayTravelGuideLabels {
@@ -15,6 +17,7 @@ export interface WebsiteGatewayTravelGuideLabels {
   title?: string;
   /** Root overview intro (legacy `pages.travelGuide.intro`). */
   intro?: string;
+  /** Pills row label (legacy `filter.filter`). */
   filter?: string;
   /** Section heading per trip duration; null hides it (e.g. when durationContent carries its own). */
   durationTitle?: ((days: number) => string) | null;
@@ -34,64 +37,66 @@ function localePrefix(posts: TGatewayBlogOverviewPost[]): string {
   return /^[a-z]{2}-[a-z]{2}$/.test(segment) ? `/${segment}` : "";
 }
 
-function FeaturedTile({ post }: { post: TGatewayBlogOverviewPost }) {
+/**
+ * Grid tile — legacy card anatomy: image block + title below; the featured
+ * tile (every 8th, except a trailing one) spans 2x2 on lg with the title
+ * overlaid on a bottom gradient.
+ */
+function PostTile({ post, big }: { post: TGatewayBlogOverviewPost; big: boolean }) {
   return (
     <a
       href={post.path}
-      className="group relative col-span-2 row-span-2 block overflow-hidden rounded-lg bg-gray-100"
+      className={cn("group relative flex h-full flex-col overflow-hidden rounded-lg", {
+        "lg:col-span-2 lg:row-span-2 lg:min-h-[300px]": big,
+      })}
     >
-      <img
-        src={post.imageUrl}
-        alt={post.title}
-        loading="lazy"
-        className="absolute inset-0 h-full w-full object-cover transition duration-200 group-hover:scale-105"
-      />
-      <span className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-      <span className="absolute bottom-4 left-4 right-4 text-lg font-semibold text-white">
-        {post.title}
-      </span>
-    </a>
-  );
-}
-
-function PostTile({ post }: { post: TGatewayBlogOverviewPost }) {
-  return (
-    <a href={post.path} className="group block">
-      <span className="block aspect-[4/3] overflow-hidden rounded-lg bg-gray-100">
+      <span
+        className={cn("relative block h-[150px] w-full overflow-hidden rounded-lg bg-gray-100", {
+          "lg:h-full": big,
+        })}
+      >
         <img
           src={post.imageUrl}
           alt={post.title}
           loading="lazy"
-          className="h-full w-full object-cover transition duration-200 group-hover:scale-105"
+          className="absolute inset-0 h-full w-full object-cover"
         />
       </span>
-      <Text as="span" size="default" className="mt-2 block">
+      <Text
+        size="md2"
+        as="span"
+        className={cn("mt-2 block pe-6 !text-[15px] group-hover:underline", {
+          "lg:absolute lg:bottom-0 lg:z-10 lg:flex lg:h-1/2 lg:w-full lg:items-end lg:bg-gradient-to-t lg:from-black lg:p-6 lg:pe-16 lg:!text-xl lg:!text-white":
+            big,
+        })}
+      >
         {post.title}
       </Text>
     </a>
   );
 }
 
+/** Horizontal itineraries card — legacy travelRoutes card anatomy. */
 function ItineraryCard({ post }: { post: TGatewayBlogOverviewPost }) {
   return (
     <a
       href={post.path}
-      className="group grid grid-cols-[200px_minmax(0,1fr)] gap-4 overflow-hidden rounded-lg border border-solid border-gray-200"
+      className="relative overflow-hidden rounded-md border border-solid border-gray-200 shadow transition duration-100 ease-in sm:grid sm:grid-cols-[200px_1fr] sm:hover:shadow-md"
     >
-      <span className="block h-full min-h-[120px] overflow-hidden bg-gray-100">
+      <span className="relative block h-[100px] bg-gray-100 sm:h-full">
         <img
           src={post.imageUrl}
           alt={post.title}
           loading="lazy"
-          className="h-full w-full object-cover transition duration-200 group-hover:scale-105"
+          className="absolute inset-0 h-full w-full object-cover"
         />
       </span>
-      <span className="flex flex-col gap-1 py-3 pr-4">
-        <Text as="span" size="default">
+      <span className="block p-4 sm:p-6 lg:p-8">
+        <Text size="md2" as="span" className="mb-2 block">
           {post.title}
         </Text>
         {post.description ? (
-          <Text as="span" size="sm" className="line-clamp-3">
+          <Text as="span" className="line-clamp-3 block">
             {post.description}
           </Text>
         ) : null}
@@ -119,67 +124,67 @@ export function WebsiteGatewayTravelGuideOverview({
   const labels = { ...DEFAULT_LABELS, ...labelOverrides };
   const { context, categories, posts, durations } = data;
   const prefix = localePrefix(posts);
-  const heading = context.category?.title ?? labels.title;
-  const intro = context.category?.description ?? labels.intro;
+  const intro = context.category?.description || labels.intro;
+  // The legacy itineraries page replaces the header with its intro markdown,
+  // led by the routes title — the gateway ships that as the category tag.
+  const heading = (context.itineraries && context.category?.title) || labels.title;
 
   return (
-    <div className="flex flex-col gap-8">
+    <div>
       {hideHeader ? (
-        introContent ?? null
+        (introContent ?? null)
       ) : (
-      <header className="flex flex-col gap-4">
-        <Text as="h1" size="2xl">
-          {heading}
-        </Text>
-        {context.category && !context.itineraries ? (
-          <Text as="p" size="sm" className="text-gray-500">
-            {labels.title}
-          </Text>
-        ) : null}
-        {introContent ??
-          (intro ? (
-            <Text as="p" size="sm" className="lg:columns-2 lg:gap-8">
-              {intro}
+        <div className="flex flex-col gap-4">
+          <div>
+            <Text size="xl" as="h1">
+              {heading}
             </Text>
-          ) : null)}
-      </header>
+            {context.category && !context.itineraries ? (
+              <Text size="lg" gray>
+                {context.category.title}
+              </Text>
+            ) : null}
+          </div>
+          {introContent ??
+            (intro ? (
+              <Text as="p" className="whitespace-pre-line sm:columns-2 sm:gap-8">
+                {intro}
+              </Text>
+            ) : null)}
+        </div>
       )}
 
       {!context.itineraries && categories.length > 0 ? (
-        <nav className="flex flex-wrap items-center gap-2" aria-label={labels.filter}>
-          <Text as="span" size="sm" bold className="mr-1">
+        <div className="mt-4 lg:mt-8">
+          <Text size="md2" className="mb-2">
             {labels.filter}
           </Text>
-          {categories.map((category) => {
-            const selected = context.category?.slug === category.slug;
-            return (
-              <a
+          <div className="flex flex-wrap gap-2">
+            {categories.map((category) => (
+              <Button
                 key={category.slug}
                 href={`${prefix}/travel-guide/${category.slug}/`}
-                className={
-                  selected
-                    ? "rounded-full bg-black px-4 py-1.5 text-sm font-medium text-white"
-                    : "rounded-full border border-solid border-gray-300 px-4 py-1.5 text-sm font-medium text-black hover:border-gray-500"
-                }
+                type="pill"
+                selected={context.category?.slug === category.slug}
               >
                 {category.title}
-              </a>
-            );
-          })}
-        </nav>
+              </Button>
+            ))}
+          </div>
+        </div>
       ) : null}
 
       {context.itineraries && durations?.length ? (
-        <div className="flex flex-col gap-10">
+        <div className="mt-6 flex flex-col gap-10 lg:mt-8">
           {durations.map(({ days, posts: bucket }) => (
-            <section key={days} className="flex flex-col gap-4">
+            <section key={days}>
               {labels.durationTitle ? (
-                <Text as="h2" size="lg">
+                <Text as="h2" size="lg" className="mb-4">
                   {labels.durationTitle(days)}
                 </Text>
               ) : null}
               {durationContent?.(days) ?? null}
-              <div className="grid gap-4 lg:grid-cols-2">
+              <div className="mt-6 grid gap-6 lg:grid-cols-2 lg:gap-6">
                 {bucket.map((post) => (
                   <ItineraryCard key={post.id} post={post} />
                 ))}
@@ -188,14 +193,14 @@ export function WebsiteGatewayTravelGuideOverview({
           ))}
         </div>
       ) : (
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {posts.map((post, index) =>
-            index % 8 === 0 ? (
-              <FeaturedTile key={post.id} post={post} />
-            ) : (
-              <PostTile key={post.id} post={post} />
-            )
-          )}
+        <div className="mt-6 grid grid-flow-dense gap-4 sm:grid-cols-2 md:mt-6 md:gap-6 lg:mt-8 lg:grid-cols-4">
+          {posts.map((post, index) => (
+            <PostTile
+              key={post.id}
+              post={post}
+              big={index % 8 === 0 && index !== posts.length - 1}
+            />
+          ))}
         </div>
       )}
     </div>

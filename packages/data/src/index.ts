@@ -195,6 +195,7 @@ export type {
   TGatewayActivityReviewSummary,
   TGatewayActivityWeatherContext,
   TGatewayMovieShowtime,
+  TGatewayStaticPageContent,
 } from "./gateway/types";
 export type { GatewayStoreState } from "./gateway/store";
 

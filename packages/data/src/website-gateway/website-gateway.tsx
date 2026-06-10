@@ -18,7 +18,12 @@ import {
 import { AppGateway, type AppGatewayContext } from "../app-gateway";
 import { WebsiteGatewayListingContent } from "./listing-content";
 import { WebsiteGatewayBlogPostDetail } from "./blog-detail";
-import { WebsiteGatewayTravelGuideOverview } from "./travel-guide";
+import { WebsiteGatewayTravelGuideOverview, type WebsiteGatewayTravelGuideLabels } from "./travel-guide";
+import type { TGatewayStaticPageContent } from "../gateway/types";
+import {
+  WebsiteGatewayStaticPageContent,
+  type WebsiteGatewayStaticPagesContent,
+} from "./static/static-page";
 import { GatewayProvider } from "../gateway-provider";
 import type {
   TGatewayActivityCardItem,
@@ -134,9 +139,16 @@ export type WebsiteGatewayTravelGuidePage = {
   slug?: string | null;
 };
 
+export type WebsiteGatewayStaticPage = {
+  type: "static-page";
+  content: TGatewayStaticPageContent;
+  context?: AppGatewayContext;
+};
+
 export type WebsiteGatewayPage =
   | WebsiteGatewayOverviewPage
   | WebsiteGatewayTravelGuidePage
+  | WebsiteGatewayStaticPage
   | WebsiteGatewayDetailActivityPage
   | WebsiteGatewayDetailNonBookablePage
   | WebsiteGatewayDetailBlogPostPage;
@@ -158,6 +170,10 @@ export type WebsiteGatewayPageContentProps = {
   heroSearch?: ReactNode;
   locale?: string;
   page: WebsiteGatewayPage;
+  /** Localized labels for the travel-guide overview pages. */
+  travelGuideLabels?: WebsiteGatewayTravelGuideLabels;
+  /** Localized content overrides for the static one-off pages. */
+  staticPages?: WebsiteGatewayStaticPagesContent;
 };
 
 export type WebsiteGatewayPageRendererProps = Omit<
@@ -169,6 +185,8 @@ export type WebsiteGatewayPageRendererProps = Omit<
   gatewayUrl?: string;
   googleMapsApiKey?: string;
   header?: SiteHeaderProps;
+  travelGuideLabels?: WebsiteGatewayTravelGuideLabels;
+  staticPages?: WebsiteGatewayStaticPagesContent;
   heroSearch?: ReactNode;
   /** Rendered as WebsiteLanguageSelect in the header and footer slots. */
   language?: WebsiteLanguageSelectProps;
@@ -1397,6 +1415,8 @@ export function WebsiteGatewayPageContent({
   heroSearch,
   locale = "de_CH",
   page,
+  travelGuideLabels,
+  staticPages,
 }: WebsiteGatewayPageContentProps) {
   if (page.type === "detail-activity") {
     return <WebsiteGatewayActivityDetail detail={page.detail} locale={locale.replace("_", "-")} />;
@@ -1412,8 +1432,23 @@ export function WebsiteGatewayPageContent({
     );
   }
 
+  if (page.type === "static-page") {
+    return (
+      <PageSection>
+        <WebsiteGatewayStaticPageContent content={page.content} staticPages={staticPages} />
+      </PageSection>
+    );
+  }
+
   if (page.type === "overview-travel-guide") {
-    return <WebsiteGatewayTravelGuideOverview data={page.data} />;
+    return (
+      <PageSection>
+        <WebsiteGatewayTravelGuideOverview
+          data={page.data}
+          labels={travelGuideLabels}
+        />
+      </PageSection>
+    );
   }
 
   return (
@@ -1446,6 +1481,8 @@ export function WebsiteGatewayPageRenderer({
   page,
   search,
   traceUrl,
+  travelGuideLabels,
+  staticPages,
 }: WebsiteGatewayPageRendererProps) {
   const normalizedLocale = locale.replace("_", "-");
   const headerProps = header
@@ -1494,6 +1531,8 @@ export function WebsiteGatewayPageRenderer({
               heroSearch={resolvedHeroSearch}
               locale={locale}
               page={page}
+              travelGuideLabels={travelGuideLabels}
+              staticPages={staticPages}
             />
           </div>
         }

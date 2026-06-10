@@ -4,6 +4,7 @@ import { getGatewayActivityDetail } from "../gateway/getActivityDetail";
 import { getGatewayDetail } from "../gateway/getDetail";
 import { getGatewayBlogPostDetail } from "../gateway/getBlogPostDetail";
 import { getGatewayBlogOverview } from "../gateway/getBlogOverview";
+import type { TGatewayStaticPageContent } from "../gateway/types";
 import type {
   TGatewayDetailParams,
   TGatewayNonBookableDetail,
@@ -31,6 +32,12 @@ type WebsiteGatewayDetailBlogPostPageRequest = {
   id: string;
 };
 
+type WebsiteGatewayStaticPageRequest = {
+  type: "static-page";
+  /** The full gateway bundle — the /web/v1/page envelope already carries it. */
+  content: TGatewayStaticPageContent;
+};
+
 type WebsiteGatewayDetailActivityPageRequest = {
   type: "detail-activity";
   id: string;
@@ -48,7 +55,8 @@ export type WebsiteGatewayPageRequest =
   | WebsiteGatewayDetailActivityPageRequest
   | WebsiteGatewayDetailNonBookablePageRequest
   | WebsiteGatewayTravelGuidePageRequest
-  | WebsiteGatewayDetailBlogPostPageRequest;
+  | WebsiteGatewayDetailBlogPostPageRequest
+  | WebsiteGatewayStaticPageRequest;
 
 export type LoadWebsiteGatewayPageOptions = {
   apiUrl: string;
@@ -150,6 +158,10 @@ export async function loadWebsiteGatewayPage({
         signal
       ),
     };
+  }
+
+  if (page.type === "static-page") {
+    return { type: page.type, content: page.content, context };
   }
 
   if (page.type === "detail-blog-post") {

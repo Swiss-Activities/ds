@@ -542,6 +542,23 @@ export type TGatewayBlogPostDetail = {
   };
 };
 
+/**
+ * Static-page bundle from the gateway's in-code registry (`/web/v1/page`,
+ * `type: listing`, `data.kind: 'static'`). Legal pages (`legal: true`) carry
+ * the real document HTML in `blocks` (CAPI `texts`, rendered gateway-side).
+ */
+export type TGatewayStaticPageContent = {
+  kind?: "static";
+  id?: string;
+  slug: string;
+  title: string;
+  description: string;
+  heroTitle: string;
+  blocks: Array<{ id: string; title: string; content: string }>;
+  legal?: boolean;
+  legalNav?: Array<{ id: string; title: string; path: string }>;
+};
+
 export type TGatewayBlogOverviewCategory = {
   slug: string;
   title: string;
