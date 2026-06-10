@@ -45,7 +45,6 @@ import {
   type ProductInfoListItem,
   type SectionReviewsLabels,
   type SectionReviewsReview,
-  type ProductBenefitItem,
   type SiteFooterProps,
   type SiteHeaderProps,
   type WebsiteLanguageSelectProps,
@@ -56,11 +55,16 @@ import {
   type WebsiteGatewaySearchProps,
 } from "./website-search";
 import {
+  Check,
   Clock3,
   Cloud,
+  Languages,
   List,
   MapPin,
+  Plus,
   Star,
+  Ticket,
+  X,
 } from "@swiss-activities/ui/icons";
 
 type UnknownRecord = Record<string, unknown>;
@@ -837,31 +841,73 @@ function getActivityInfoItems(
             .join(" | "),
         }
       : null,
+    detail.reviewSummary.totalAmount
+      ? {
+          icon: <Icon icon={Star} />,
+          title: `${detail.reviewSummary.totalAverage.toFixed(1)} Bewertung`,
+          subtitle: `${detail.reviewSummary.totalAmount} Bewertungen`,
+        }
+      : null,
+    getActivityCancellationDescription(detail)
+      ? {
+          icon: <Icon icon={Check} />,
+          title: "Kostenlose Stornierung",
+          subtitle: getActivityCancellationDescription(detail)!,
+        }
+      : null,
   ];
 
   return items.filter((item): item is ProductInfoListItem => item !== null);
 }
 
 function getActivityContentItems(detail: TGatewayActivityDetail) {
-  return getArray(detail.activity, ["content_blocks"]).flatMap((item, index) => {
-    const title = getString(item, ["title"]);
-    const html = getString(item, ["text"]);
+  const benefitsBlock = getActivityBenefitsBlock(detail);
+  const highlightsBlock = getActivityHighlightsBlock(detail);
+  const importantInfo = getString(detail.activity, [
+    "info",
+    "important_information",
+  ]);
 
-    return title && html
+  const blocks = getArray(detail.activity, ["content_blocks"]).flatMap(
+    (item, index) => {
+      const title = getString(item, ["title"]);
+      const html = getString(item, ["text"]);
+
+      return title && html
+        ? [
+            {
+              id: `${title}-${index}`,
+              title,
+              content: (
+                <div
+                  className="prose-sa"
+                  dangerouslySetInnerHTML={{ __html: html }}
+                />
+              ),
+            },
+          ]
+        : [];
+    }
+  );
+
+  return [
+    ...(benefitsBlock
+      ? [{ id: "leistungen", title: "Leistungen", content: benefitsBlock }]
+      : []),
+    ...(highlightsBlock
+      ? [{ id: "hoehepunkte", title: "Höhepunkte", content: highlightsBlock }]
+      : []),
+    ...blocks,
+    ...(importantInfo
       ? [
           {
-            id: `${title}-${index}`,
-            title,
-            content: (
-              <div
-                className="[&_li]:mb-1 [&_p]:mb-3 [&_p]:break-words [&_p]:text-[14px] [&_p]:leading-relaxed [&_p]:text-gray-700 [&_strong]:font-semibold [&_ul]:list-disc [&_ul]:pl-5"
-                dangerouslySetInnerHTML={{ __html: html }}
-              />
-            ),
+            id: "wichtige-informationen",
+            title: "Wichtige Informationen",
+            content: importantInfo,
           },
         ]
-      : [];
-  });
+      : []),
+  ];
 }
 
 function getReviewerName(review: UnknownRecord) {
@@ -960,33 +1006,134 @@ function getActivityBreadcrumbs(
   locale: string
 ): Array<{ label: string; href: string }> {
   const localeKey = locale.replace("-", "_");
-  const crumbs = getArray(detail.activity, ["breadcrumbs"]).flatMap((crumb) => {
+  return getArray(detail.activity, ["breadcrumbs"]).flatMap((crumb) => {
     const label = getString(crumb, ["title"]);
     const href =
       getString(crumb, ["urls", localeKey]) ?? getString(crumb, ["urls", "de_CH"]);
     return label && href ? [{ label, href }] : [];
   });
-  if (!crumbs.length) return [];
-  return [...crumbs, { label: getActivityTitle(detail), href: "#" }];
 }
 
-function getActivityBenefits(
+function getActivityLanguageLabels(detail: TGatewayActivityDetail): string[] {
+  const labelById = new Map(
+    getArray(detail.activity, ["attributes", "languages", "items"]).flatMap(
+      (item) => {
+        const id = getString(item, ["id"]);
+        const label = getString(item, ["label"]);
+        return id && label ? [[id, label] as const] : [];
+      }
+    )
+  );
+  const codes = getArray(detail.activity, ["summary", "guideLanguages"]).flatMap(
+    (code) => (typeof code === "string" ? [code] : [])
+  );
+  const labels = codes.map((code) => labelById.get(code) ?? code.toUpperCase());
+  return labels.length ? labels : [...labelById.values()];
+}
+
+/** Header badge row: duration, mobile ticket, guide languages (legacy order). */
+function getActivityBadges(detail: TGatewayActivityDetail) {
+  const durations = getArray(detail.activity, ["summary", "durationInHours"])
+    .flatMap((value) => (typeof value === "string" && value ? [value] : []));
+  const languages = getActivityLanguageLabels(detail);
+  const hasMobileTicket = Boolean(
+    getValue(detail.activity, ["summary", "resTech"])
+  );
+
+  return [
+    durations.length
+      ? {
+          icon: <Icon icon={Clock3} />,
+          title: `${durations.join(" – ")} Stunden`,
+          subtitle: "Dauer",
+        }
+      : null,
+    hasMobileTicket
+      ? {
+          icon: <Icon icon={Ticket} />,
+          title: "Mobiles Ticket akzeptiert",
+          subtitle: "Nutze dein Telefon oder drucke deinen Voucher aus",
+        }
+      : null,
+    languages.length
+      ? {
+          icon: <Icon icon={Languages} />,
+          title: languages.join(", "),
+          subtitle: "Sprachen",
+        }
+      : null,
+  ].filter((badge): badge is NonNullable<typeof badge> => badge !== null);
+}
+
+function getActivityCancellationDescription(
   detail: TGatewayActivityDetail
-): ProductBenefitItem[] {
-  return getArray(detail.activity, ["info", "benefits"]).flatMap((benefit) => {
-    const html = getString(benefit, ["text"]);
-    const type = getString(benefit, ["type"]);
-    return html
-      ? [{ type: type === "excluded" ? ("excluded" as const) : ("included" as const), html }]
-      : [];
-  });
+): string | null {
+  const cutoff = getNumber(detail.activity, ["summary", "cancellationCutOff"]);
+  if (!cutoff) return null;
+  if (cutoff > 24) {
+    const days = Number((cutoff / 24).toFixed(2).replace(".00", ""));
+    return `Vollständige Rückerstattung bei Stornierung bis ${days} Tage vor Antritt`;
+  }
+  return `Vollständige Rückerstattung bei Stornierung bis ${cutoff} Stunden vor Antritt`;
 }
 
-function getActivityHighlights(detail: TGatewayActivityDetail): string[] {
-  return getArray(detail.activity, ["info", "highlights"]).flatMap((item) => {
-    const text = getString(item, ["text"]);
-    return text ? [text] : [];
-  });
+const BENEFIT_ICONS = {
+  included: { icon: Check, className: "text-green-600" },
+  offered: { icon: Plus, className: "text-amber-500" },
+  excluded: { icon: X, className: "text-gray-500" },
+} as const;
+
+function getActivityBenefitsBlock(detail: TGatewayActivityDetail) {
+  const benefits = getArray(detail.activity, ["info", "benefits"]).flatMap(
+    (benefit) => {
+      const html = getString(benefit, ["text"]);
+      const type = getString(benefit, ["type"]);
+      if (!html) return [];
+      const variant: keyof typeof BENEFIT_ICONS =
+        type === "excluded" || type === "offered" ? type : "included";
+      return [{ html, variant }];
+    }
+  );
+  if (!benefits.length) return null;
+
+  return (
+    <ul className="m-0 grid list-none gap-2.5 p-0">
+      {benefits.map((benefit, index) => {
+        const { icon, className } = BENEFIT_ICONS[benefit.variant];
+        return (
+          <li key={index} className="flex items-start gap-3">
+            <span className={`mt-1 flex shrink-0 ${className}`}>
+              <Icon icon={icon} size="sm" />
+            </span>
+            <div
+              className="prose-sa min-w-0 [&_p]:!my-0"
+              dangerouslySetInnerHTML={{ __html: benefit.html }}
+            />
+          </li>
+        );
+      })}
+    </ul>
+  );
+}
+
+function getActivityHighlightsBlock(detail: TGatewayActivityDetail) {
+  const highlights = getArray(detail.activity, ["info", "highlights"]).flatMap(
+    (item) => {
+      const text = getString(item, ["text"]);
+      return text ? [text] : [];
+    }
+  );
+  if (!highlights.length) return null;
+
+  return (
+    <div className="prose-sa">
+      <ul>
+        {highlights.map((highlight, index) => (
+          <li key={index}>{highlight}</li>
+        ))}
+      </ul>
+    </div>
+  );
 }
 
 export function WebsiteGatewayActivityDetail({
@@ -1004,22 +1151,10 @@ export function WebsiteGatewayActivityDetail({
       images={getActivityImages(detail)}
       breadcrumbs={getActivityBreadcrumbs(detail, locale)}
       rating={getActivityRating(detail)}
-      badges={[
-        {
-          icon: <Icon icon={Star} />,
-          title: `${detail.reviewSummary.totalAverage.toFixed(1)}`,
-          subtitle: `${detail.reviewSummary.totalAmount} Bewertungen`,
-        },
-      ]}
+      badges={getActivityBadges(detail)}
       description={getString(detail.activity, ["info", "teaser"])}
       infoItems={getActivityInfoItems(detail)}
       reviewsTitle="Bewertungen"
-      benefitsTitle="Leistungen"
-      benefits={getActivityBenefits(detail)}
-      highlightsTitle="Höhepunkte"
-      highlights={getActivityHighlights(detail)}
-      importantInfoTitle="Wichtige Informationen"
-      importantInfo={getString(detail.activity, ["info", "important_information"]) ?? undefined}
       reviewsContent={
         <SectionReviews
           averageRating={detail.reviewSummary.totalAverage}
@@ -1029,6 +1164,7 @@ export function WebsiteGatewayActivityDetail({
         />
       }
       contentItems={getActivityContentItems(detail)}
+      contentTocTitle="Inhaltsverzeichnis"
       relatedActivitiesTitle="Weitere Aktivitäten"
       relatedActivities={getRelatedActivities(detail)}
     />

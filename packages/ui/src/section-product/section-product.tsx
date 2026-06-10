@@ -9,8 +9,6 @@ import {
   detailTitleClassName,
 } from "../detail-layout/classes";
 import { Hero } from "../hero";
-import { Icon } from "../icon/icon";
-import { Check, X } from "../icons";
 import { ImageFill } from "../image-fill";
 import { InfoBadge } from "../info-badge";
 import { ProductInfoList } from "../product-info-list";
@@ -125,12 +123,6 @@ export function SectionProduct({
   reviews,
   reviewsContent,
   reviewsSectionClassName: reviewsSectionClassNameOverride,
-  benefitsTitle,
-  benefits,
-  highlightsTitle,
-  highlights,
-  importantInfoTitle,
-  importantInfo,
   contentItems,
   contentTocTitle,
   contentBlocksClassName,
@@ -147,21 +139,12 @@ export function SectionProduct({
     reviewsContent || (reviews?.length && reviewsTitle)
   );
   const hasContent = Boolean(contentItems?.length);
-  const hasBenefits = Boolean(benefits?.length && benefitsTitle);
-  const hasHighlights = Boolean(highlights?.length && highlightsTitle);
-  const hasImportantInfo = Boolean(importantInfo && importantInfoTitle);
   const hasRelatedActivities = Boolean(
     relatedActivities?.length && relatedActivitiesTitle
   );
   const shouldStackInfoAndContent = hasInfoItems && hasContent && !hasReviews;
   const hasLowerSections =
-    hasInfoItems ||
-    hasReviews ||
-    hasBenefits ||
-    hasHighlights ||
-    hasContent ||
-    hasImportantInfo ||
-    hasRelatedActivities;
+    hasInfoItems || hasReviews || hasContent || hasRelatedActivities;
   const reviewsSectionClassName = "bg-bg py-8 lg:py-10";
   const lowerSectionsClassName =
     "grid grid-cols-1 gap-8 pt-8 lg:gap-10 lg:pt-10";
@@ -286,54 +269,6 @@ export function SectionProduct({
                 </section>
               ) : null}
 
-              {hasBenefits ? (
-                <section>
-                  <div className={detailContainerClassName}>
-                    <Text as="h2" size="lg" black className="mb-4">
-                      {benefitsTitle}
-                    </Text>
-                    <ul className="m-0 grid list-none gap-2.5 p-0">
-                      {benefits!.map((benefit, index) => (
-                        <li key={index} className="flex items-start gap-3">
-                          <span
-                            className={cn(
-                              "mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full",
-                              benefit.type === "included"
-                                ? "bg-green-100 text-green-700"
-                                : "bg-red-100 text-red-600"
-                            )}
-                          >
-                            <Icon
-                              icon={benefit.type === "included" ? Check : X}
-                              size="sm"
-                            />
-                          </span>
-                          <div
-                            className="prose-sa min-w-0 [&_p]:!my-0"
-                            dangerouslySetInnerHTML={{ __html: benefit.html }}
-                          />
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </section>
-              ) : null}
-
-              {hasHighlights ? (
-                <section>
-                  <div className={detailContainerClassName}>
-                    <Text as="h2" size="lg" black className="mb-4">
-                      {highlightsTitle}
-                    </Text>
-                    <ul className="prose-sa !mt-0">
-                      {highlights!.map((highlight, index) => (
-                        <li key={index}>{highlight}</li>
-                      ))}
-                    </ul>
-                  </div>
-                </section>
-              ) : null}
-
               {hasContent ? (
                 <section>
                   <div className={detailContainerClassName}>
@@ -346,19 +281,6 @@ export function SectionProduct({
                 </section>
               ) : null}
 
-              {hasImportantInfo ? (
-                <section>
-                  <div className={detailContainerClassName}>
-                    <Text as="h2" size="lg" black className="mb-4">
-                      {importantInfoTitle}
-                    </Text>
-                    <div
-                      className="prose-sa"
-                      dangerouslySetInnerHTML={{ __html: importantInfo! }}
-                    />
-                  </div>
-                </section>
-              ) : null}
             </>
           )}
 
