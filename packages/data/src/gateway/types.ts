@@ -283,11 +283,25 @@ export type TGatewayDiscoveryContext =
   | TGatewayNonBookableContext
   | TGatewayPointOfInterestContext;
 
+export type TGatewayFaqItem = {
+  question: string;
+  /** Answer as gateway-rendered HTML. */
+  answer: string;
+};
+
+export type TGatewayFaq = {
+  /** Heading override; the renderer falls back to the generic FAQ heading. */
+  title?: string | null;
+  items: TGatewayFaqItem[];
+};
+
 export type TGatewayHome = {
   context?: TGatewayDiscoveryContext;
   staticSections?: TGatewayStaticSection[];
   /** Long-form editorial content rendered after the sections (overview pages). */
   content?: TGatewayListingContentBlock[];
+  /** FAQ accordion rendered after the editorial content (overview pages). */
+  faq?: TGatewayFaq | null;
   sections: TGatewayHomeSection[];
 };
 

@@ -22,6 +22,7 @@ export * from "./conditional-wrapper";
 export * from "./card";
 export * from "./checkbox";
 export * from "./content-blocks";
+export * from "./faq";
 export * from "./filter-checkbox-group";
 export * from "./flag";
 export * from "./flow";

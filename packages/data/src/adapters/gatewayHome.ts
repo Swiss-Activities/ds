@@ -287,7 +287,9 @@ export const toGatewayHomeHero = (
   }
 
   if (shouldUseDestinationHero(data, selection)) {
-    return toGatewayDestinationImageHero(data);
+    // Website overview payloads ship a static hero; the app destination feed
+    // builds an image hero from its weather_card section instead.
+    return toGatewayStaticHero(data) ?? toGatewayDestinationImageHero(data);
   }
 
   return toGatewaySummaryHero(data) ?? toGatewayWeatherHero(data);

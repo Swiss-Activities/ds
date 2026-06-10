@@ -26,6 +26,7 @@ import type {
   TGatewayWeatherCardItem,
 } from "../gateway/types";
 import {
+  Faq,
   GatewayFilters,
   GatewayMapResults,
   Icon,
@@ -642,6 +643,14 @@ function GatewayContentPage({
       {data.content?.length ? (
         <PageSection>
           <WebsiteGatewayListingContent blocks={data.content} />
+        </PageSection>
+      ) : null}
+      {data.faq?.items.length ? (
+        <PageSection>
+          <Faq
+            title={data.faq.title || "Fragen & Antworten (FAQ)"}
+            items={data.faq.items}
+          />
         </PageSection>
       ) : null}
 
