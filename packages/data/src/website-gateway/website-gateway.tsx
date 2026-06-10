@@ -15,6 +15,7 @@ import {
   type GatewayActivityItemData,
 } from "../adapters/gatewayActivityItem";
 import { AppGateway, type AppGatewayContext } from "../app-gateway";
+import { WebsiteGatewayListingContent } from "./listing-content";
 import { GatewayProvider } from "../gateway-provider";
 import type {
   TGatewayActivityCardItem,
@@ -640,33 +641,7 @@ function GatewayContentPage({
       })}
       {data.content?.length ? (
         <PageSection>
-          <div className="grid gap-6">
-            {data.content.map((block, index) => (
-              <div key={index}>
-                {block.html ? (
-                  <div
-                    className="prose-sa"
-                    dangerouslySetInnerHTML={{ __html: block.html }}
-                  />
-                ) : null}
-                {block.images.map((image) => (
-                  <figure key={image.url} className="m-0 mt-4">
-                    <img
-                      src={image.url}
-                      alt={image.alt ?? ""}
-                      loading="lazy"
-                      className="w-full rounded-lg object-cover"
-                    />
-                    {image.caption ? (
-                      <figcaption className="mt-2 text-sm text-gray-500">
-                        {image.caption}
-                      </figcaption>
-                    ) : null}
-                  </figure>
-                ))}
-              </div>
-            ))}
-          </div>
+          <WebsiteGatewayListingContent blocks={data.content} />
         </PageSection>
       ) : null}
 
