@@ -8,6 +8,11 @@ import type { BaseSectionActivityGridProps } from "../section-activity-grid/sect
 import type { BaseSectionReviewGridProps } from "../section-review-grid/section-review-grid.types";
 import type { ImageValue, RenderImage } from "../utils/render-image";
 
+export type ProductBenefitItem = {
+  type: "included" | "excluded";
+  html: string;
+};
+
 export type BaseSectionProductProps = {
   title: ReactNode;
   images: ImageValue[];
@@ -22,6 +27,13 @@ export type BaseSectionProductProps = {
   reviews?: BaseSectionReviewGridProps["reviews"];
   reviewsContent?: ReactNode;
   reviewsSectionClassName?: string;
+  benefitsTitle?: ReactNode;
+  benefits?: ProductBenefitItem[];
+  highlightsTitle?: ReactNode;
+  highlights?: string[];
+  importantInfoTitle?: ReactNode;
+  /** Trusted gateway HTML, rendered through the prose styles. */
+  importantInfo?: string;
   contentItems?: BaseContentBlocksProps["items"];
   contentTocTitle?: BaseContentBlocksProps["tocTitle"];
   contentBlocksClassName?: BaseContentBlocksProps["className"];

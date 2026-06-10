@@ -45,6 +45,7 @@ import {
   type ProductInfoListItem,
   type SectionReviewsLabels,
   type SectionReviewsReview,
+  type ProductBenefitItem,
   type SiteFooterProps,
   type SiteHeaderProps,
   type WebsiteLanguageSelectProps,
@@ -954,10 +955,46 @@ function getRelatedActivities(detail: TGatewayActivityDetail): ActivityItem[] {
     .slice(0, 8);
 }
 
+function getActivityBreadcrumbs(
+  detail: TGatewayActivityDetail,
+  locale: string
+): Array<{ label: string; href: string }> {
+  const localeKey = locale.replace("-", "_");
+  const crumbs = getArray(detail.activity, ["breadcrumbs"]).flatMap((crumb) => {
+    const label = getString(crumb, ["title"]);
+    const href =
+      getString(crumb, ["urls", localeKey]) ?? getString(crumb, ["urls", "de_CH"]);
+    return label && href ? [{ label, href }] : [];
+  });
+  if (!crumbs.length) return [];
+  return [...crumbs, { label: getActivityTitle(detail), href: "#" }];
+}
+
+function getActivityBenefits(
+  detail: TGatewayActivityDetail
+): ProductBenefitItem[] {
+  return getArray(detail.activity, ["info", "benefits"]).flatMap((benefit) => {
+    const html = getString(benefit, ["text"]);
+    const type = getString(benefit, ["type"]);
+    return html
+      ? [{ type: type === "excluded" ? ("excluded" as const) : ("included" as const), html }]
+      : [];
+  });
+}
+
+function getActivityHighlights(detail: TGatewayActivityDetail): string[] {
+  return getArray(detail.activity, ["info", "highlights"]).flatMap((item) => {
+    const text = getString(item, ["text"]);
+    return text ? [text] : [];
+  });
+}
+
 export function WebsiteGatewayActivityDetail({
   detail,
+  locale = "de_CH",
 }: {
   detail: TGatewayActivityDetail;
+  locale?: string;
 }) {
   const title = getActivityTitle(detail);
 
@@ -965,6 +1002,7 @@ export function WebsiteGatewayActivityDetail({
     <SectionProduct
       title={title}
       images={getActivityImages(detail)}
+      breadcrumbs={getActivityBreadcrumbs(detail, locale)}
       rating={getActivityRating(detail)}
       badges={[
         {
@@ -975,6 +1013,13 @@ export function WebsiteGatewayActivityDetail({
       ]}
       description={getString(detail.activity, ["info", "teaser"])}
       infoItems={getActivityInfoItems(detail)}
+      reviewsTitle="Bewertungen"
+      benefitsTitle="Leistungen"
+      benefits={getActivityBenefits(detail)}
+      highlightsTitle="Höhepunkte"
+      highlights={getActivityHighlights(detail)}
+      importantInfoTitle="Wichtige Informationen"
+      importantInfo={getString(detail.activity, ["info", "important_information"]) ?? undefined}
       reviewsContent={
         <SectionReviews
           averageRating={detail.reviewSummary.totalAverage}
@@ -1104,7 +1149,7 @@ export function WebsiteGatewayPageContent({
   page,
 }: WebsiteGatewayPageContentProps) {
   if (page.type === "detail-activity") {
-    return <WebsiteGatewayActivityDetail detail={page.detail} />;
+    return <WebsiteGatewayActivityDetail detail={page.detail} locale={locale.replace("_", "-")} />;
   }
 
   if (page.type === "detail-non-bookable") {
