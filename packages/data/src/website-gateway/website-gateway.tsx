@@ -80,6 +80,7 @@ export type WebsiteGatewayOverviewPageType =
   | "home"
   | "overview-activity-type"
   | "overview-destination"
+  | "overview-destination-activity-type"
   | "overview-non-bookable"
   | "overview-point-of-interest";
 
@@ -92,6 +93,8 @@ export type WebsiteGatewayOverviewPage = {
   data: TGatewayHome;
   context?: AppGatewayContext;
   slug?: string | null;
+  /** Location slug of a destination-activity-type page (`/interlaken/paragliding/`). */
+  locationSlug?: string | null;
 };
 
 export type WebsiteGatewayDetailActivityPage = {
@@ -694,7 +697,13 @@ function getContextFromPage(
     case "overview-activity-type":
       return { ...baseContext, activityType: slug };
     case "overview-destination":
-      return { ...baseContext, destination: slug };
+      return { ...baseContext, destinationOverview: slug };
+    case "overview-destination-activity-type":
+      return {
+        ...baseContext,
+        destinationOverview: page.locationSlug ?? null,
+        activityType: slug,
+      };
     case "overview-non-bookable":
       return {
         ...baseContext,

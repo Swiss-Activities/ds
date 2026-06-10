@@ -395,6 +395,10 @@ export type TGatewayHomeParams = {
 
 export type TGatewayFeedParams = TGatewayHomeParams & {
   destination?: string | null;
+  /** Website destination overview (`destinations/{slug}/overview`) — distinct
+   *  from the app's personalized destination feed (`destination`). With
+   *  `activityType` set too, loads the location-type page. */
+  destinationOverview?: string | null;
   activityType?: string | null;
   nonBookable?: string | null;
   region?: string | null;

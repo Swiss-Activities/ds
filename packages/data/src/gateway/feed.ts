@@ -26,14 +26,23 @@ export type UseGatewayFeedOptions = TGatewayFeedParams & {
 
 export const getGatewayFeedPath = ({
   destination,
+  destinationOverview,
   activityType,
   nonBookable,
   poi,
   region,
 }: Pick<
   TGatewayFeedParams,
-  "destination" | "activityType" | "nonBookable" | "poi" | "region"
+  "destination" | "destinationOverview" | "activityType" | "nonBookable" | "poi" | "region"
 >) => {
+  // Website overview surfaces (vs the app's personalized destination feed).
+  if (destinationOverview && activityType) {
+    return `destinations/${encodeURIComponent(destinationOverview)}/activity-types/${encodeURIComponent(activityType)}`;
+  }
+  if (destinationOverview) {
+    return `destinations/${encodeURIComponent(destinationOverview)}/overview`;
+  }
+
   if (activityType) {
     return `activity-types/${encodeURIComponent(activityType)}`;
   }
@@ -66,6 +75,7 @@ export const getGatewayFeedQueryParams = (
 ): GatewayParams => {
   const supportsDate =
     !params.activityType &&
+    !params.destinationOverview &&
     !params.nonBookable &&
     !params.poi &&
     !params.region;
@@ -112,6 +122,7 @@ export const useGatewayFeed = ({
   lng,
   country,
   destination,
+  destinationOverview,
   activityType,
   nonBookable,
   poi,
@@ -150,12 +161,13 @@ export const useGatewayFeed = ({
       lng: resolvedLng,
     }),
     ...(destination ? { destination } : {}),
+    ...(destinationOverview ? { destinationOverview } : {}),
     ...(activityType ? { activityType } : {}),
     ...(nonBookable ? { nonBookable } : {}),
     ...(poi ? { poi } : {}),
     ...(region ? { region } : {}),
     ...(date ? { date } : {}),
-    ...(activityType && view ? { view } : {}),
+    ...((activityType || destinationOverview) && view ? { view } : {}),
     ...(dev ? { dev } : {}),
   };
 
@@ -168,6 +180,7 @@ export const useGatewayFeed = ({
       params.lng,
       params.country,
       params.destination,
+      params.destinationOverview,
       params.activityType,
       params.nonBookable,
       params.poi,
@@ -192,6 +205,7 @@ export const useGatewayFeed = ({
       lat: resolvedLat ?? null,
       lng: resolvedLng ?? null,
       destination: destination ?? null,
+      destinationOverview: destinationOverview ?? null,
       activityType: activityType ?? null,
       nonBookable: nonBookable ?? null,
       poi: poi ?? null,

@@ -14,6 +14,8 @@ import type {
 type WebsiteGatewayOverviewPageRequest = {
   type: WebsiteGatewayOverviewPageType;
   slug?: string | null;
+  /** Location slug of a destination-activity-type page. */
+  locationSlug?: string | null;
 };
 
 type WebsiteGatewayDetailActivityPageRequest = {
@@ -52,7 +54,12 @@ const getFeedSelection = (page: WebsiteGatewayOverviewPageRequest) => {
     case "overview-activity-type":
       return { activityType: page.slug ?? null };
     case "overview-destination":
-      return { destination: page.slug ?? null };
+      return { destinationOverview: page.slug ?? null };
+    case "overview-destination-activity-type":
+      return {
+        destinationOverview: page.locationSlug ?? null,
+        activityType: page.slug ?? null,
+      };
     case "overview-non-bookable":
       return { nonBookable: page.slug ?? null };
     case "overview-point-of-interest":
