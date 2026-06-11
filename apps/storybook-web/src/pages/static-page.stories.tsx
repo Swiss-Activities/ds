@@ -1,20 +1,47 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import {
+  AFFILIATE_SIGNUP_DE,
+  APPS_ANDROID_URL,
+  APPS_IOS_URL,
+  DEFAULT_ABOUT_CONTENT,
   DEFAULT_ABOUT_EMPLOYEES,
+  DEFAULT_AFFILIATE_CONTENT,
+  DEFAULT_APPS_CONTENT,
+  DEFAULT_SUPPLIER_CONTENT,
+  DEFAULT_VOUCHERS_CONTENT,
+  SUPPLIER_TYPEFORM_DE,
   WebsiteGatewayPageContent,
   type WebsiteGatewayStaticPagesContent,
 } from "@swiss-activities/data";
 
 /**
- * Static one-off pages — the marketing ports render their built-in German
- * legacy copy; `staticPages` mirrors what web/src/static-pages.ts passes for
- * the de-CH base locale (team, shop link, legal titles), and the page assets
- * (/assets/{about,apps,supplier,voucher}) ship in this storybook's public
- * dir, so the stories match the rendered site 1:1. The legal story shows the
- * gateway-document + legalNav switcher anatomy with sample HTML.
+ * Static one-off pages — `staticPages` composes EXACTLY what the web
+ * renderer's static-pages module passes for the de-CH base locale (the i18n
+ * layer is identity for de-CH: the catalog was extracted from these
+ * defaults). Page assets (/assets/{about,apps,supplier,voucher}) ship in
+ * this storybook's public dir, so the stories match the rendered site 1:1.
+ * The legal story shows the gateway-document + legalNav switcher anatomy.
  */
+const affiliate = structuredClone(DEFAULT_AFFILIATE_CONTENT);
+affiliate.hero.href = AFFILIATE_SIGNUP_DE;
+
+const supplier = structuredClone(DEFAULT_SUPPLIER_CONTENT);
+supplier.hero.href = SUPPLIER_TYPEFORM_DE;
+for (const block of supplier.pricing.blocks) block.buttonLink = SUPPLIER_TYPEFORM_DE;
+
+const apps = structuredClone(DEFAULT_APPS_CONTENT);
+apps.appStoreSrc = "/assets/appstore/app/de_CH.svg";
+apps.googlePlaySrc = "/assets/appstore/play/de_CH.png";
+apps.appStoreHref = APPS_IOS_URL;
+apps.googlePlayHref = `${APPS_ANDROID_URL}&hl=de`;
+
 const staticPages: WebsiteGatewayStaticPagesContent = {
+  about: DEFAULT_ABOUT_CONTENT,
   aboutEmployees: DEFAULT_ABOUT_EMPLOYEES,
+  affiliate,
+  apps,
+  supplier,
+  vouchers: DEFAULT_VOUCHERS_CONTENT,
   vouchersShopHref:
     "https://shop.e-guma.ch/swiss-activities/de/gutscheine?promocode=2024discount",
   legalNavTitles: {
@@ -57,6 +84,10 @@ export const Affiliate: Story = {
 
 export const About: Story = {
   args: { page: { type: "static-page", content: staticContent("ueber-uns") } },
+};
+
+export const Apps: Story = {
+  args: { page: { type: "static-page", content: staticContent("apps") } },
 };
 
 export const Supplier: Story = {
