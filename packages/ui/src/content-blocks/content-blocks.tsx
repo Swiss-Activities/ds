@@ -85,6 +85,7 @@ const ContentBlockList = memo(function ContentBlockList({
 export const ContentBlocks = memo(function ContentBlocks({
   items,
   lead,
+  aside,
   tocTitle = "Inhaltsverzeichnis",
   variant = "default",
   className,
@@ -157,11 +158,13 @@ export const ContentBlocks = memo(function ContentBlocks({
     >
       {variant === "article" ? (
         <div className="lg:hidden">
+          {aside ? <div className="mb-8">{aside}</div> : null}
           {lead ? <div className="mb-8">{lead}</div> : null}
           <ContentBlockList items={items} className="gap-8" />
         </div>
       ) : (
         <div className="lg:hidden">
+          {aside ? <div className="mb-8">{aside}</div> : null}
           {lead ? <div className="mb-8">{lead}</div> : null}
           <Accordion items={accordionItems} />
         </div>
@@ -171,8 +174,11 @@ export const ContentBlocks = memo(function ContentBlocks({
           {lead}
           <ContentBlockList items={items} />
         </div>
-        <div className="sticky top-[calc(var(--sa-content-blocks-sticky-offset)+24px)] h-max max-h-[calc(var(--sa-content-blocks-vh)-var(--sa-content-blocks-sticky-offset)-48px)] overflow-y-auto rounded-lg border border-solid border-gray-200 p-6 shadow-sm">
-          <TocNav items={items} tocTitle={tocTitle} />
+        <div className="flex min-w-0 flex-col gap-8">
+          {aside}
+          <div className="sticky top-[calc(var(--sa-content-blocks-sticky-offset)+24px)] h-max max-h-[calc(var(--sa-content-blocks-vh)-var(--sa-content-blocks-sticky-offset)-48px)] overflow-y-auto rounded-lg border border-solid border-gray-200 p-6 shadow-sm">
+            <TocNav items={items} tocTitle={tocTitle} />
+          </div>
         </div>
       </div>
     </div>

@@ -37,7 +37,7 @@ export function SectionBlogDetail({
     relatedActivities?.length && relatedActivitiesTitle
   );
   const relatedActivitiesGrid = hasRelatedActivities ? (
-    <section ref={relatedActivitiesRef} className="min-w-0 lg:pt-6">
+    <section ref={relatedActivitiesRef} className="min-w-0">
       <SectionActivityGrid
         title={relatedActivitiesTitle}
         action={relatedActivitiesAction}
@@ -64,7 +64,9 @@ export function SectionBlogDetail({
           </div>
         ) : null}
 
-        {relatedActivitiesGrid ? (
+        {/* The title spans full width; related activities live in the content
+            rail below so the article column flows uninterrupted next to it. */}
+        {relatedActivitiesGrid && !hasContent ? (
           <div className="grid gap-8 lg:grid-cols-3 xl:gap-16">
             <SectionDetailHeader
               title={title}
@@ -84,6 +86,7 @@ export function SectionBlogDetail({
             <ContentBlocks
               items={contentItems ?? []}
               lead={contentLead}
+              aside={relatedActivitiesGrid}
               tocTitle={contentTocTitle}
               variant="article"
               className={contentBlocksClassName}
