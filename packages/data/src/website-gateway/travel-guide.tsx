@@ -1,5 +1,4 @@
-import type { ReactNode } from "react";
-import Markdown from "react-markdown";
+import { lazy, Suspense, type ComponentType, type ReactNode } from "react";
 import { Button, Image, Text, cn } from "@swiss-activities/ui";
 import type { TGatewayBlogOverview, TGatewayBlogOverviewPost } from "../gateway/types";
 
@@ -61,20 +60,20 @@ export function splitColumnMarkdown(markdown: string): { head: string; body: str
 }
 
 /** The editorial links are absolute production URLs — serve them host-relative. */
-function relativeHref(href: string): string {
-  return href.replace(/^https:\/\/www\.swissactivities\.com(?=\/)/, "");
-}
+// SSR (renderToStaticMarkup can't suspend) gets the markdown renderer
+// synchronously; the browser lazy-loads it so the markdown stack stays out
+// of the landing bundle on every other page.
+const TravelGuideMarkdownColumns: ComponentType<{ markdown: string }> =
+  typeof window === "undefined"
+    ? (await import("./travel-guide-markdown")).default
+    : lazy(() => import("./travel-guide-markdown"));
 
 /** Legacy `Content column` rendering for the routes editorial markdown. */
 export function TravelGuideColumnContent({ markdown }: { markdown: string }) {
-  const { head, body } = splitColumnMarkdown(markdown);
   return (
-    <div className="prose-sa w-full">
-      {head ? <Markdown urlTransform={relativeHref}>{head}</Markdown> : null}
-      <div className="lg:columns-2 lg:gap-6 [&>p]:!mt-0">
-        <Markdown urlTransform={relativeHref}>{body}</Markdown>
-      </div>
-    </div>
+    <Suspense fallback={null}>
+      <TravelGuideMarkdownColumns markdown={markdown} />
+    </Suspense>
   );
 }
 
@@ -261,5 +260,41 @@ export function WebsiteGatewayTravelGuideOverview({
         </div>
       )}
     </div>
+  );
+}
+
+/** The full travel-guide overview page branch (overview + editorial routes
+ * content) — one export so the page renderer can lazy-load this whole
+ * module in the browser. */
+export function WebsiteGatewayTravelGuideOverviewPage({
+  data,
+  travelGuideLabels,
+  travelGuideRoutes,
+}: {
+  data: TGatewayBlogOverview;
+  travelGuideLabels?: WebsiteGatewayTravelGuideLabels;
+  travelGuideRoutes?: WebsiteGatewayTravelGuideRoutesContent;
+}) {
+  // The editorial markdown applies to the itineraries overview only — it
+  // replaces the header (own h1) and each duration bucket's heading.
+  const routes = data.context?.itineraries ? travelGuideRoutes : undefined;
+  const durationHtml = routes?.durations;
+  return (
+    <WebsiteGatewayTravelGuideOverview
+      data={data}
+      labels={routes ? { ...travelGuideLabels, durationTitle: null } : travelGuideLabels}
+      introContent={
+        routes?.intro ? <TravelGuideColumnContent markdown={routes.intro} /> : undefined
+      }
+      hideHeader={Boolean(routes?.intro)}
+      durationContent={
+        durationHtml
+          ? (days: number) => {
+              const markdown = durationHtml[String(days)];
+              return markdown ? <TravelGuideColumnContent markdown={markdown} /> : null;
+            }
+          : undefined
+      }
+    />
   );
 }

@@ -79,7 +79,11 @@
       "default": "./src/logo/logo.markup.ts"
     },
     "./styles/sa-theme.css": "./src/styles/sa-theme.css",
-    "./styles/sa-page.css": "./src/styles/sa-page.css"
+    "./styles/sa-page.css": "./src/styles/sa-page.css",
+    "./section-region-explorer": {
+      "types": "./src/section-region-explorer/index.ts",
+      "default": "./src/section-region-explorer/index.ts"
+    }
   },
   "scripts": {
     "typecheck:web": "tsc -p tsconfig.web.json --noEmit",
@@ -103,5 +107,8 @@
     "clsx": "^2.1.1",
     "lucide-react": "^0.542.0",
     "tailwind-merge": "^3.5.0"
-  }
+  },
+  "sideEffects": [
+    "**/*.css"
+  ]
 }

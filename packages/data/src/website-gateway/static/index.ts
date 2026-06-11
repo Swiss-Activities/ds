@@ -1,3 +1,4 @@
+export * from "./content";
 export * from "./legal";
 export * from "./affiliate";
 export * from "./about";

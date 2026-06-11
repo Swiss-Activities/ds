@@ -29,5 +29,8 @@
   },
   "dependencies": {
     "react-markdown": "^10.1.0"
-  }
+  },
+  "sideEffects": [
+    "**/*.css"
+  ]
 }

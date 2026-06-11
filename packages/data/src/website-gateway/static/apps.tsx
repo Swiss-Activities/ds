@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import { Icon, Image, Text } from "@swiss-activities/ui";
 import { Check } from "@swiss-activities/ui/icons";
 
+import { APPS_IOS_URL, APPS_ANDROID_URL, DEFAULT_APPS_CONTENT } from "./content";
 /**
  * `/apps/` — 1:1 port of the legacy apps page (website/modules/pages/apps):
  * two-column hero with the feature checklist and store badges on the left and
@@ -28,31 +29,6 @@ export interface WebsiteGatewayAppsContent {
   appStoreHref: string;
   googlePlayHref: string;
 }
-
-export const APPS_IOS_URL = "https://apps.apple.com/app/swiss-activities/id6450682217";
-export const APPS_ANDROID_URL =
-  "https://play.google.com/store/apps/details?id=com.swissactivities.app13776";
-
-export const DEFAULT_APPS_CONTENT: WebsiteGatewayAppsContent = {
-  title: "Swiss Activities App",
-  description:
-    "Erlebe die Schweiz mit der Swiss Activities App – entdecke, vergleiche und buche Freizeitaktivitäten direkt auf deinem Smartphone.",
-  hero: {
-    title: "Dein Schweizer Abenteuer in der Tasche",
-    description:
-      "Mit der Swiss Activities App erhältst du direkten Zugriff auf über 3000 Aktivitäten in der ganzen Schweiz. Finde Erlebnisse, buche in Sekunden und behalte all deine Tickets und Buchungen jederzeit im Blick.",
-    features: [
-      "Tickets jederzeit griffbereit",
-      "Buchungen einfach verwalten",
-      "Neue Erlebnisse für jeden Geschmack entdecken",
-      "Tickets auch offline verfügbar",
-    ],
-  },
-  appStoreSrc: "/assets/appstore/app/de_CH.svg",
-  googlePlaySrc: "/assets/appstore/play/de_CH.png",
-  appStoreHref: APPS_IOS_URL,
-  googlePlayHref: APPS_ANDROID_URL,
-};
 
 /** Legacy phone-frame mockup: dark bezel, notch and home bar around a screenshot. */
 function PhoneFrame({

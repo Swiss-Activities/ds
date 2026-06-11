@@ -1,6 +1,15 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useRef, useState, type ReactNode } from "react";
+import {
+  lazy,
+  Suspense,
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+  type ReactNode,
+} from "react";
 import { mapGatewayHomeData } from "../adapters/gatewayHome";
 import type {
   GatewayHomeActivitySectionData,
@@ -17,19 +26,49 @@ import {
 } from "../adapters/gatewayActivityItem";
 import { AppGateway, type AppGatewayContext } from "../app-gateway";
 import { WebsiteGatewayListingContent } from "./listing-content";
-import { WebsiteGatewayBlogPostDetail } from "./blog-detail";
 import { WebsiteGatewayNotFound, type WebsiteGatewayNotFoundLabels } from "./not-found";
-import {
-  TravelGuideColumnContent,
-  WebsiteGatewayTravelGuideOverview,
-  type WebsiteGatewayTravelGuideLabels,
-  type WebsiteGatewayTravelGuideRoutesContent,
+import type {
+  WebsiteGatewayTravelGuideLabels,
+  WebsiteGatewayTravelGuideRoutesContent,
 } from "./travel-guide";
 import type { TGatewayStaticPageContent } from "../gateway/types";
-import {
-  WebsiteGatewayStaticPageContent,
-  type WebsiteGatewayStaticPagesContent,
-} from "./static/static-page";
+import type { WebsiteGatewayStaticPagesContent } from "./static/static-page";
+
+// Single-page-type branches: SSR (renderToStaticMarkup can't suspend) gets
+// them synchronously, the browser lazy-loads only the branch of the page it
+// is standing on — blog/static/travel-guide code stays out of the landing
+// bundle everywhere else.
+const BlogPostDetailPage =
+  typeof window === "undefined"
+    ? (await import("./blog-detail")).WebsiteGatewayBlogPostDetail
+    : lazy(() =>
+        import("./blog-detail").then((m) => ({ default: m.WebsiteGatewayBlogPostDetail }))
+      );
+const StaticPage =
+  typeof window === "undefined"
+    ? (await import("./static/static-page")).WebsiteGatewayStaticPageContent
+    : lazy(() =>
+        import("./static/static-page").then((m) => ({
+          default: m.WebsiteGatewayStaticPageContent,
+        }))
+      );
+// The region explorer carries the Swiss map geometry (~120 KB source) and
+// renders below the fold — the browser fetches it on demand.
+const RegionExplorerSection =
+  typeof window === "undefined"
+    ? (await import("@swiss-activities/ui/section-region-explorer")).SectionRegionExplorer
+    : lazy(() =>
+        import("@swiss-activities/ui/section-region-explorer").then((m) => ({
+          default: m.SectionRegionExplorer,
+        }))
+      );
+
+const TravelGuidePage =
+  typeof window === "undefined"
+    ? (await import("./travel-guide")).WebsiteGatewayTravelGuideOverviewPage
+    : lazy(() =>
+        import("./travel-guide").then((m) => ({ default: m.WebsiteGatewayTravelGuideOverviewPage }))
+      );
 import { GatewayProvider } from "../gateway-provider";
 import { useGatewayFilter } from "../gateway/getGatewayFilter";
 import { getGatewayStaticFilterSection } from "../gateway/sections";
@@ -57,7 +96,6 @@ import {
   SectionHero,
   SectionNonBookable,
   SectionProduct,
-  SectionRegionExplorer,
   SectionReviewGrid,
   SkeletonOverlay,
   cn,
@@ -607,7 +645,9 @@ function renderGatewayRegionMapSection(
 ) {
   return (
     <PageSection spacing={useSectionSpacing}>
-      <SectionRegionExplorer title={section.title} tiles={section.tiles} />
+      <Suspense fallback={null}>
+        <RegionExplorerSection title={section.title} tiles={section.tiles} />
+      </Suspense>
     </PageSection>
   );
 }
@@ -744,6 +784,9 @@ function GatewayContentPage({
   sections: GatewayHomeSectionData[];
 }) {
   const [viewMode, setViewMode] = useState<GatewayViewMode>("list");
+  // The maps chunk only downloads once the user actually switches to map
+  // view — never rendered before that (and never during SSR).
+  const [mapWasUsed, setMapWasUsed] = useState(false);
   const visibleSections = sections.filter(shouldRenderSection);
   const filterSection = visibleSections.find(isFilterSection);
   const activityGridSection = visibleSections.find(isActivityGridSection);
@@ -768,7 +811,10 @@ function GatewayContentPage({
   const filterAction = canUseMapMode ? (
     <SegmentedControl
       iconOnly
-      onChange={setViewMode}
+      onChange={(mode) => {
+        setViewMode(mode);
+        if (mode === "map") setMapWasUsed(true);
+      }}
       options={viewModeOptions}
       size="sm"
       value={viewMode}
@@ -817,7 +863,7 @@ function GatewayContentPage({
         </PageSection>
       ) : null}
 
-      {filterSection && activityGridSection ? (
+      {filterSection && activityGridSection && mapWasUsed ? (
         <GatewayMapResults
           open={canUseMapMode && effectiveViewMode === "map"}
           resetKey={activityGridSection.id}
@@ -1580,41 +1626,32 @@ export function WebsiteGatewayPageContent({
 
   if (page.type === "detail-blog-post") {
     return (
-      <WebsiteGatewayBlogPostDetail detail={page.detail} locale={locale.replace("_", "-")} />
+      <Suspense fallback={null}>
+        <BlogPostDetailPage detail={page.detail} locale={locale.replace("_", "-")} />
+      </Suspense>
     );
   }
 
   if (page.type === "static-page") {
     return (
       <PageSection>
-        <WebsiteGatewayStaticPageContent content={page.content} staticPages={staticPages} />
+        <Suspense fallback={null}>
+          <StaticPage content={page.content} staticPages={staticPages} />
+        </Suspense>
       </PageSection>
     );
   }
 
   if (page.type === "overview-travel-guide") {
-    // The editorial markdown applies to the itineraries overview only — it
-    // replaces the header (own h1) and each duration bucket's heading.
-    const routes = page.data.context?.itineraries ? travelGuideRoutes : undefined;
-    const durationHtml = routes?.durations;
     return (
       <PageSection>
-        <WebsiteGatewayTravelGuideOverview
-          data={page.data}
-          labels={routes ? { ...travelGuideLabels, durationTitle: null } : travelGuideLabels}
-          introContent={
-            routes?.intro ? <TravelGuideColumnContent markdown={routes.intro} /> : undefined
-          }
-          hideHeader={Boolean(routes?.intro)}
-          durationContent={
-            durationHtml
-              ? (days) => {
-                  const markdown = durationHtml[String(days)];
-                  return markdown ? <TravelGuideColumnContent markdown={markdown} /> : null;
-                }
-              : undefined
-          }
-        />
+        <Suspense fallback={null}>
+          <TravelGuidePage
+            data={page.data}
+            travelGuideLabels={travelGuideLabels}
+            travelGuideRoutes={travelGuideRoutes}
+          />
+        </Suspense>
       </PageSection>
     );
   }

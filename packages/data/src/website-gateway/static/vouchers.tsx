@@ -2,6 +2,7 @@ import type { ReactNode } from "react";
 import { Button, Card, Icon, Image, Text } from "@swiss-activities/ui";
 import { Gift, Percent, PersonStanding, SquarePen, UserRound } from "@swiss-activities/ui/icons";
 
+import { VOUCHER_SHOP_DE, DEFAULT_VOUCHERS_CONTENT } from "./content";
 /**
  * `/gutscheine-und-geschenkideen/` — 1:1 port of the legacy vouchers page
  * (website/modules/pages/voucher/index.tsx + modules/components/Voucher/Section):
@@ -28,9 +29,6 @@ export interface WebsiteGatewayVouchersContent {
 }
 
 /** e-guma voucher shop, de_CH (locale variants are the consumer's concern). */
-export const VOUCHER_SHOP_DE =
-  "https://shop.e-guma.ch/swiss-activities/de/gutscheine?promocode=2024discount";
-
 /** Legacy banner photo (the legacy VoucherSection hotlinks it from imgix). */
 const BANNER_IMAGE =
   "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/Jungfraujoch_Plateau_Sonnenaufgang_Aletschgletscher_6b8bb53632.jpg";
@@ -65,52 +63,6 @@ function SwirlDivider() {
     </svg>
   );
 }
-
-export const DEFAULT_VOUCHERS_CONTENT: WebsiteGatewayVouchersContent = {
-  title: "Erlebnis-Geschenkideen für die Schweiz – die besten Gutscheine bei Swiss Activities",
-  description:
-    "Verschenke unvergessliche Momente mit einem Erlebnis-Gutschein von Swiss Activities! Entdecke die größte Auswahl an Freizeitaktivitäten in der Schweiz – flexibel, einfach und sofort online buchbar. Perfekt als Geschenkidee für jeden Anlass.",
-  banner: {
-    tagline: "NEU: Die perfekte Geschenkidee!",
-    title: "Sichere dir einen\nErlebnis-Gutschein",
-    button: "Hier drücken",
-  },
-  hero: {
-    title: "Jetzt Erlebnis-Gutschein für die Schweiz verschenken und Freude bereiten!",
-    text: "Entdecke jetzt die besten Geschenkideen und Erlebnis-Gutscheine bei Swiss Activities. Ob zum Geburtstag, als Weihnachtsgeschenk oder einfach, um Danke zu sagen – ein Gutschein für Schweizer Erlebnisse trifft jeden Geschmack und ist ein Geschenk, das garantiert in Erinnerung bleibt.",
-    button: "Gutschein kaufen",
-  },
-  gift: {
-    title: "Verschenke die besten Schweizer Erlebnisse – von Abenteuer bis Erholung",
-    text: "Suchst du nach einer einzigartigen Geschenkidee für Freunde oder Familie in der Schweiz? Ein Erlebnis-Gutschein von Swiss Activities bietet dir Zugang zur größten Auswahl an Freizeitaktivitäten, die die Schweiz zu bieten hat. Ob geführte Touren, Abenteuer in der Natur, entspannende Stunden in Thermalbädern oder kulturelle Highlights in Museen – Swiss Activities macht es möglich, besondere Momente zu verschenken.",
-  },
-  why: {
-    title: "Warum ein Erlebnis-Gutschein von Swiss Activities die perfekte Geschenkidee ist",
-    items: [
-      {
-        title: "Grösste Auswahl der Schweiz",
-        text: "Über 1,600 Freizeitangebote in allen Regionen, von Outdoor-Abenteuern bis hin zu Entspannungsmomenten.",
-      },
-      {
-        title: "Über 100'000 zufriedene Kunden",
-        text: "Swiss Activities ist der bewährte Partner für besondere Geschenke und Ausflüge.",
-      },
-      {
-        title: "Kostenlose Stornierungsoption",
-        text: "Sichere und flexible Buchungen, die an die Bedürfnisse des Beschenkten angepasst werden können.",
-      },
-      {
-        title: "5-Sterne-Kundensupport",
-        text: "Schweizer Qualität und Unterstützung – für einen reibungslosen Erlebnisstart.",
-      },
-    ],
-  },
-  end: {
-    title: "Schenke Erlebnis-Gutscheine in der Schweiz und bereite Freude!",
-    text: "Entdecke die besten Geschenkideen und Erlebnis-Gutscheine bei Swiss Activities. Egal ob zum Geburtstag, als Weihnachtsgeschenk oder einfach, um Danke zu sagen – ein Gutschein für Erlebnisse in der Schweiz passt zu jedem Geschmack und sorgt für bleibende Erinnerungen.",
-    button: "Gutschein auswählen",
-  },
-};
 
 const WHY_ICONS = [PersonStanding, Percent, SquarePen, UserRound];
 

@@ -2,7 +2,7 @@
   "name": "@swiss-activities/tokens",
   "version": "0.1.0",
   "private": true,
-  "description": "Platform-neutral design tokens (colors, spacing, typography, motion, zIndex, components, mobile aggregator). Pure TS — zero React, zero CVA, zero peer deps. Consumed by both @swiss-activities/ui (web) and the mobile-app (native).",
+  "description": "Platform-neutral design tokens (colors, spacing, typography, motion, zIndex, components, mobile aggregator). Pure TS \u2014 zero React, zero CVA, zero peer deps. Consumed by both @swiss-activities/ui (web) and the mobile-app (native).",
   "type": "module",
   "main": "./src/index.ts",
   "types": "./src/index.ts",
@@ -61,5 +61,8 @@
   },
   "devDependencies": {
     "typescript": "~6.0.2"
-  }
+  },
+  "sideEffects": [
+    "**/*.css"
+  ]
 }
