@@ -26,6 +26,7 @@ function FooterLink({ item }: { item: SiteFooterLink }) {
   if (item.external) {
     return (
       <a
+        aria-label={item.ariaLabel}
         className={linkClassName}
         href={item.href}
         onClick={item.onClick}
@@ -39,6 +40,7 @@ function FooterLink({ item }: { item: SiteFooterLink }) {
 
   return (
     <Button
+      aria-label={item.ariaLabel}
       className={linkClassName}
       href={item.href}
       onClick={item.onClick}

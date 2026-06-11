@@ -3,6 +3,8 @@ import type { ReactNode } from "react";
 export type SiteFooterLink = {
   id: string;
   label: ReactNode;
+  /** Accessible name for icon-only links (the social row). */
+  ariaLabel?: string;
   href?: string;
   external?: boolean;
   onClick?: () => void;

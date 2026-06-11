@@ -56,3 +56,4 @@ export {
   X,
 } from "lucide-react";
 export type { LucideProps } from "lucide-react";
+export * from "./brands";
