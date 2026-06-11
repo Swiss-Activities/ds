@@ -1,4 +1,5 @@
 import type { HTMLAttributes, ReactNode } from "react";
+import { Breadcrumbs } from "../breadcrumbs";
 import { Accordion } from "../accordion";
 import { Button } from "../button";
 import { SectionDetailHeader } from "../detail-layout";
@@ -162,6 +163,7 @@ export function SectionNonBookable({
   detailSections,
   sourceLabel,
   sourceHref,
+  breadcrumbs,
   relatedActivitiesTitle,
   relatedActivitiesAction,
   relatedActivities,
@@ -182,6 +184,9 @@ export function SectionNonBookable({
         <div className={detailMediaFlushClassName}>
           <MediaGallery images={images} renderImage={renderImage} />
         </div>
+        {breadcrumbs && breadcrumbs.length > 0 && (
+          <Breadcrumbs items={breadcrumbs} ignoreLast className="mt-3 lg:mt-4" />
+        )}
         <SectionDetailHeader title={title} description={description}>
           {hasSourceLink ? (
             <div className="mt-4">

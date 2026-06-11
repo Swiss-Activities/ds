@@ -32,10 +32,22 @@ export const getGatewayFeedPath = ({
   nonBookable,
   poi,
   region,
+  activitiesOverview,
 }: Pick<
   TGatewayFeedParams,
-  "destination" | "destinationOverview" | "activityType" | "attribute" | "nonBookable" | "poi" | "region"
+  | "destination"
+  | "destinationOverview"
+  | "activityType"
+  | "attribute"
+  | "nonBookable"
+  | "poi"
+  | "region"
+  | "activitiesOverview"
 >) => {
+  // The activities root (`/freizeitaktivitaeten/`) — the whole catalogue.
+  if (activitiesOverview) {
+    return "activities-overview";
+  }
   // Website overview surfaces (vs the app's personalized destination feed).
   if (destinationOverview && activityType) {
     return `destinations/${encodeURIComponent(destinationOverview)}/activity-types/${encodeURIComponent(activityType)}`;

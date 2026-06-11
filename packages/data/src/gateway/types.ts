@@ -305,10 +305,17 @@ export type TGatewayHome = {
   sections: TGatewayHomeSection[];
 };
 
+export type TGatewayBreadcrumbItem = {
+  label: string;
+  href: string;
+};
+
 export type TGatewayHeroStaticSection = {
   id: string;
   component: "hero";
   variant?: "centered_title";
+  /** The resolved page trail (root → middle tiers → self), locale-resolved. */
+  breadcrumbs?: TGatewayBreadcrumbItem[];
   title: string;
   imageUrl?: string | null;
   description?: string | null;
@@ -394,6 +401,8 @@ export type TGatewayHomeParams = {
 };
 
 export type TGatewayFeedParams = TGatewayHomeParams & {
+  /** The activities root overview (the whole catalogue). */
+  activitiesOverview?: boolean;
   destination?: string | null;
   /** Website destination overview (`destinations/{slug}/overview`) — distinct
    *  from the app's personalized destination feed (`destination`). With
@@ -523,6 +532,7 @@ export type TGatewayActivityDetailParams = {
 };
 
 export type TGatewayBlogPostDetail = {
+  breadcrumbs?: TGatewayBreadcrumbItem[];
   id: string;
   type: "blog-post";
   title: string;
@@ -687,6 +697,7 @@ export type TGatewayMovieDetails = {
 };
 
 export type TGatewayNonBookableDetail = {
+  breadcrumbs?: TGatewayBreadcrumbItem[];
   id?: string;
   type?: string;
   title?: string;

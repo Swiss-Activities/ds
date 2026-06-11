@@ -4,6 +4,8 @@ import type { BaseSectionActivityGridProps } from "../section-activity-grid/sect
 import type { ImageValue, RenderImage } from "../utils/render-image";
 
 export type BaseSectionBlogDetailProps = {
+  /** The editorial trail (Travel Guide → category → self), above the title. */
+  breadcrumbs?: Array<{ label: string; href: string; onClick?: () => void }>;
   title: ReactNode;
   image?: ImageValue | null;
   renderImage?: RenderImage;

@@ -19,6 +19,8 @@ export type NonBookableDetailSection = {
 };
 
 export type BaseSectionNonBookableProps = {
+  /** The resolved page trail (root → category → self), rendered above the title. */
+  breadcrumbs?: Array<{ label: string; href: string; onClick?: () => void }>;
   title: ReactNode;
   images: ImageValue[];
   renderImage?: RenderImage;

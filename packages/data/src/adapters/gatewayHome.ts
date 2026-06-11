@@ -56,6 +56,8 @@ export type GatewayHomeHeroData = {
   id: string;
   moduleIndex: number;
   variant?: "localized" | "summary" | "centered_title" | "image_summary";
+  /** The resolved page trail (root → middle tiers → self). */
+  breadcrumbs?: Array<{ label: string; href: string }>;
   title: string;
   imageUrl?: string | null;
   days?: TGatewayWeatherCardItem[];
@@ -277,6 +279,7 @@ export const toGatewayStaticHero = (
         data.context?.type === "point-of-interest"
           ? "centered_title"
           : "localized"),
+      ...(heroSection.breadcrumbs?.length ? { breadcrumbs: heroSection.breadcrumbs } : {}),
       title: heroSection.title,
       imageUrl: heroSection.imageUrl ?? null,
     };

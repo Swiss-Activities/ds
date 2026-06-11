@@ -74,6 +74,8 @@ const isGatewayNonBookableDetail = (
 
 const getFeedSelection = (page: WebsiteGatewayOverviewPageRequest) => {
   switch (page.type) {
+    case "overview-activities":
+      return { activitiesOverview: true };
     case "overview-activity-type":
       return { activityType: page.slug ?? null };
     case "overview-destination":

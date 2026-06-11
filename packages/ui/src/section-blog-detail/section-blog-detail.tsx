@@ -1,6 +1,7 @@
 "use client";
 
 import type { HTMLAttributes } from "react";
+import { Breadcrumbs } from "../breadcrumbs";
 import { ContentBlocks } from "../content-blocks";
 import { SectionDetailHeader } from "../detail-layout";
 import {
@@ -20,6 +21,7 @@ export function SectionBlogDetail({
   title,
   image,
   renderImage,
+  breadcrumbs,
   description,
   contentLead,
   contentItems,
@@ -63,6 +65,10 @@ export function SectionBlogDetail({
             </div>
           </div>
         ) : null}
+
+        {breadcrumbs && breadcrumbs.length > 0 && (
+          <Breadcrumbs items={breadcrumbs} ignoreLast className="mt-3 lg:mt-4" />
+        )}
 
         {/* The title spans full width; related activities live in the content
             rail below so the article column flows uninterrupted next to it. */}

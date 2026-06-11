@@ -49,6 +49,7 @@ import {
   SectionActivityGrid,
   SectionFeatureBand,
   SectionGrid,
+  Breadcrumbs,
   SectionHero,
   SectionNonBookable,
   SectionProduct,
@@ -94,6 +95,7 @@ type GatewayViewMode = "list" | "map";
 
 export type WebsiteGatewayOverviewPageType =
   | "home"
+  | "overview-activities"
   | "overview-activity-type"
   | "overview-destination"
   | "overview-destination-activity-type"
@@ -432,6 +434,9 @@ function renderGatewayHero(
       }
     >
       <div className="sa-container">
+        {hero.breadcrumbs?.length ? (
+          <Breadcrumbs items={hero.breadcrumbs} ignoreLast className="mt-3 lg:mt-4" />
+        ) : null}
         <div className={isSummaryHero ? undefined : homepageHeroFlushClassName}>
           <SectionHero
             title={hero.title}
@@ -783,6 +788,8 @@ function getContextFromPage(
       : null);
 
   switch (page.type) {
+    case "overview-activities":
+      return { ...baseContext, activitiesOverview: true };
     case "overview-activity-type":
       return { ...baseContext, activityType: slug };
     case "overview-destination":
@@ -1403,6 +1410,7 @@ export function WebsiteGatewayNonBookableDetail({
 }) {
   return (
     <SectionNonBookable
+      breadcrumbs={detail.breadcrumbs}
       title={detail.title ?? "Detail"}
       images={getNonBookableImages(detail)}
       description={detail.description}
