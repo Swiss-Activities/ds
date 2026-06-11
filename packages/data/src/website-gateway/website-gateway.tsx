@@ -18,6 +18,7 @@ import {
 import { AppGateway, type AppGatewayContext } from "../app-gateway";
 import { WebsiteGatewayListingContent } from "./listing-content";
 import { WebsiteGatewayBlogPostDetail } from "./blog-detail";
+import { WebsiteGatewayNotFound, type WebsiteGatewayNotFoundLabels } from "./not-found";
 import {
   TravelGuideColumnContent,
   WebsiteGatewayTravelGuideOverview,
@@ -105,7 +106,8 @@ export type WebsiteGatewayOverviewPageType =
   | "overview-attribute"
   | "overview-destination-attribute"
   | "overview-non-bookable"
-  | "overview-point-of-interest";
+  | "overview-point-of-interest"
+  | "overview-region";
 
 export type WebsiteGatewayDetailPageType =
   | "detail-activity"
@@ -155,13 +157,20 @@ export type WebsiteGatewayStaticPage = {
   context?: AppGatewayContext;
 };
 
+export type WebsiteGatewayNotFoundPage = {
+  type: "not-found";
+  labels: WebsiteGatewayNotFoundLabels;
+  homeHref: string;
+};
+
 export type WebsiteGatewayPage =
   | WebsiteGatewayOverviewPage
   | WebsiteGatewayTravelGuidePage
   | WebsiteGatewayStaticPage
   | WebsiteGatewayDetailActivityPage
   | WebsiteGatewayDetailNonBookablePage
-  | WebsiteGatewayDetailBlogPostPage;
+  | WebsiteGatewayDetailBlogPostPage
+  | WebsiteGatewayNotFoundPage;
 
 export type WebsiteGatewayContentRendererProps = {
   apiUrl?: string;
@@ -861,6 +870,8 @@ function getContextFromPage(
       };
     case "overview-point-of-interest":
       return { ...baseContext, poi: slug };
+    case "overview-region":
+      return { ...baseContext, region: slug };
     case "home":
       return baseContext;
     default:
@@ -1480,6 +1491,10 @@ export function WebsiteGatewayPageContent({
   travelGuideRoutes,
   staticPages,
 }: WebsiteGatewayPageContentProps) {
+  if (page.type === "not-found") {
+    return <WebsiteGatewayNotFound labels={page.labels} homeHref={page.homeHref} />;
+  }
+
   if (page.type === "detail-activity") {
     return <WebsiteGatewayActivityDetail detail={page.detail} locale={locale.replace("_", "-")} />;
   }

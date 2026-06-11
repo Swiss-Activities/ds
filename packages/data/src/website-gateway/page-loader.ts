@@ -96,6 +96,8 @@ const getFeedSelection = (page: WebsiteGatewayOverviewPageRequest) => {
       return { nonBookable: page.slug ?? null };
     case "overview-point-of-interest":
       return { poi: page.slug ?? null };
+    case "overview-region":
+      return { region: page.slug ?? null };
     case "home":
       return {};
     default:
