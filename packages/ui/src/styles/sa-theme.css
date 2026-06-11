@@ -64,7 +64,7 @@
    The animation replaces the shimmer (animate-shimmer) and fades the photo in;
    images that finished before the listener existed stay at full opacity. */
 img.sa-img-loaded {
-  animation: sa-img-in 0.35s ease;
+  animation: sa-img-in 0.15s ease-out;
   background-image: none;
 }
 
