@@ -511,7 +511,8 @@ function renderGatewaySuggestedTypesSection(
   section: GatewayHomeSuggestedTypesSectionData,
   useSectionSpacing: boolean
 ) {
-  const linked = section.items.filter((item) => item.href);
+  // First eight types; lg+ shows them as one slim row of eight.
+  const linked = section.items.filter((item) => item.href).slice(0, 8);
   if (linked.length === 0) return null;
   return (
     <PageSection spacing={useSectionSpacing}>
@@ -519,7 +520,7 @@ function renderGatewaySuggestedTypesSection(
         <Text as="h2" size="lg" className="mb-4">
           {section.title}
         </Text>
-        <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
+        <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-8 lg:gap-3">
           {linked.map((item) => (
             <a
               key={item.id}
@@ -530,13 +531,13 @@ function renderGatewaySuggestedTypesSection(
                 <Image
                   src={item.imageUrl}
                   alt={item.title}
-                  width={480}
-                  sizes="(min-width: 1024px) 25vw, (min-width: 640px) 33vw, 50vw"
+                  width={320}
+                  sizes="(min-width: 1024px) 13vw, (min-width: 640px) 33vw, 50vw"
                   className="absolute inset-0 h-full w-full object-cover transition duration-200 group-hover:scale-105"
                 />
               ) : null}
               <span className="absolute inset-0 bg-gradient-to-t from-black/55 to-transparent" />
-              <span className="absolute bottom-3 left-3 right-3 text-sm font-semibold text-white">
+              <span className="absolute bottom-3 left-3 right-3 text-sm font-semibold text-white lg:bottom-2 lg:left-2 lg:right-2 lg:text-[13px] lg:leading-snug">
                 {item.title}
               </span>
             </a>
