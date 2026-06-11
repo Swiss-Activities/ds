@@ -1522,12 +1522,14 @@ function getNonBookableRelatedActivities(
   return (detail.nearbySection?.data ?? [])
     .filter((item): item is TGatewayActivityCardItem => item.type !== "review")
     .map((item) =>
-      toGatewayActivityItemData(item, {
-        locale: "de_CH",
-        labels: gatewayLabels,
-        priceLabel,
-        fromLabel,
-      })
+      toLinkedActivityItem(
+        toGatewayActivityItemData(item, {
+          locale: "de_CH",
+          labels: gatewayLabels,
+          priceLabel,
+          fromLabel,
+        })
+      )
     );
 }
 
