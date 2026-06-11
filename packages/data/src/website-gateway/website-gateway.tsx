@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import { mapGatewayHomeData } from "../adapters/gatewayHome";
 import type {
   GatewayHomeActivitySectionData,
@@ -31,6 +31,8 @@ import {
   type WebsiteGatewayStaticPagesContent,
 } from "./static/static-page";
 import { GatewayProvider } from "../gateway-provider";
+import { useGatewayFilter } from "../gateway/getGatewayFilter";
+import { getGatewayStaticFilterSection } from "../gateway/sections";
 import type {
   TGatewayActivityCardItem,
   TGatewayActivityDetail,
@@ -71,6 +73,7 @@ import {
   type ProductInfoListItem,
   type SectionReviewsLabels,
   type SectionReviewsReview,
+  type GatewayFiltersProps,
   type SiteFooterProps,
   type SiteHeaderProps,
   type WebsiteLanguageSelectProps,
@@ -612,10 +615,12 @@ function renderGatewayRegionMapSection(
 function renderGatewayFilterSection({
   action,
   hideQuickFilters,
+  onFilterOptionToggle,
   section,
 }: {
   action?: ReactNode;
   hideQuickFilters?: boolean;
+  onFilterOptionToggle?: GatewayFiltersProps["onFilterOptionToggle"];
   section: Extract<GatewayHomeSectionData, { component: "filters" }>;
 }) {
   return (
@@ -627,6 +632,7 @@ function renderGatewayFilterSection({
         hideQuickFilters={hideQuickFilters}
         filters={getFilterConfig(section.filterConfig)}
         labels={filterLabels}
+        onFilterOptionToggle={onFilterOptionToggle}
       />
     </PageSection>
   );
@@ -668,23 +674,28 @@ function renderGatewayActivitySection({
 function renderGatewaySection({
   carouselItemsPerRowLg,
   filterAction,
-  hideQuickFilters,
+  filterPending = false,
+  onFilterOptionToggle,
   refreshing = false,
   section,
   useSectionSpacing,
 }: {
   carouselItemsPerRowLg?: 3 | 4;
   filterAction?: ReactNode;
-  hideQuickFilters?: boolean;
+  filterPending?: boolean;
+  onFilterOptionToggle?: GatewayFiltersProps["onFilterOptionToggle"];
   refreshing?: boolean;
   section: GatewayHomeSectionData;
   useSectionSpacing: boolean;
 }) {
   // Filters stay real + interactive while refreshing — nothing to mask.
+  // The quick-filter chip row stays hidden everywhere: the Filter button +
+  // sheet is the one filtering surface.
   if (section.component === "filters") {
     return renderGatewayFilterSection({
       action: filterAction,
-      hideQuickFilters,
+      hideQuickFilters: true,
+      onFilterOptionToggle,
       section,
     });
   }
@@ -709,7 +720,7 @@ function renderGatewaySection({
 
   return renderGatewayActivitySection({
     carouselItemsPerRowLg,
-    overlay: refreshing,
+    overlay: refreshing || filterPending,
     section,
     useSectionSpacing,
   });
@@ -717,14 +728,18 @@ function renderGatewaySection({
 
 function GatewayContentPage({
   data,
+  filterPending = false,
   googleMapsApiKey = "",
   hero,
+  onFilterOptionToggle,
   refreshing = false,
   sections,
 }: {
   data: TGatewayHome;
+  filterPending?: boolean;
   googleMapsApiKey?: string;
   hero: ReactNode;
+  onFilterOptionToggle?: GatewayFiltersProps["onFilterOptionToggle"];
   refreshing?: boolean;
   sections: GatewayHomeSectionData[];
 }) {
@@ -777,7 +792,8 @@ function GatewayContentPage({
             {renderGatewaySection({
               carouselItemsPerRowLg,
               filterAction,
-              hideQuickFilters: hasGridSection,
+              filterPending,
+              onFilterOptionToggle,
               refreshing,
               section,
               useSectionSpacing: shouldUseSectionSpacing(
@@ -892,35 +908,93 @@ export function WebsiteGatewayContentRenderer({
 }: WebsiteGatewayContentRendererProps) {
   return (
     <GatewayProvider apiUrl={apiUrl} gatewayUrl={gatewayUrl} locale={locale}>
-      <AppGateway<GatewayHomeSectionData, GatewayHomeHeroData>
+      <FilterableGatewayContent
         apiUrl={apiUrl}
+        context={context}
+        data={data}
         gatewayUrl={gatewayUrl}
+        googleMapsApiKey={googleMapsApiKey}
+        heroSearch={heroSearch}
         locale={locale}
-        enabled
-        initialData={data}
-        initialContext={context}
-        renderFallbackHero={() => null}
-        buildFallbackSections={() => []}
-        mapGatewayData={({ data: gatewayData }) => ({
-          ...mapGatewayHomeData(gatewayData, {
-            locale,
-            labels: gatewayLabels,
-            priceLabel,
-            fromLabel,
-          }),
-        })}
-        renderGatewayHero={({ hero }) => renderGatewayHero(hero, heroSearch, refreshing)}
-        renderPage={({ hero, sections }) => (
-          <GatewayContentPage
-            data={data}
-            googleMapsApiKey={googleMapsApiKey}
-            hero={hero}
-            refreshing={refreshing}
-            sections={sections}
-          />
-        )}
+        refreshing={refreshing}
       />
     </GatewayProvider>
+  );
+}
+
+/** The filter loop: toggling an option fetches the page's own filter
+ * endpoint (shipped in the feed's static filter section) and swaps the
+ * content sections + filter config for the response — selections live in
+ * `tags`, the grids show per-card skeletons while the fetch runs. Needs the
+ * GatewayProvider context, hence the split from the outer renderer. */
+function FilterableGatewayContent({
+  apiUrl = "",
+  context,
+  data,
+  gatewayUrl = "",
+  googleMapsApiKey,
+  heroSearch,
+  locale,
+  refreshing = false,
+}: WebsiteGatewayContentRendererProps) {
+  const [filterTags, setFilterTags] = useState<string[]>([]);
+  const filterEndpoint = getGatewayStaticFilterSection(data)?.endpoint ?? null;
+  const filterActive = filterTags.length > 0 && Boolean(filterEndpoint);
+  const filter = useGatewayFilter({
+    endpoint: filterEndpoint ?? "",
+    tags: filterTags,
+    perPage: 24,
+    locale,
+    ...(context?.country ? { country: context.country } : {}),
+    ...(context?.lat != null ? { lat: context.lat } : {}),
+    ...(context?.lng != null ? { lng: context.lng } : {}),
+    enabled: filterActive,
+  });
+  const filterData = filterActive ? filter.data : undefined;
+  const onFilterOptionToggle = useCallback(
+    (param: string, itemId: string, nextValue: boolean, item: { value?: string }) => {
+      const value = item.value ?? itemId;
+      setFilterTags((previous) =>
+        nextValue ? [...new Set([...previous, value])] : previous.filter((tag) => tag !== value)
+      );
+    },
+    []
+  );
+
+  return (
+    <AppGateway<GatewayHomeSectionData, GatewayHomeHeroData>
+      apiUrl={apiUrl}
+      gatewayUrl={gatewayUrl}
+      locale={locale}
+      enabled
+      initialData={data}
+      initialContext={context}
+      renderFallbackHero={() => null}
+      buildFallbackSections={() => []}
+      mapGatewayData={({ data: gatewayData }) => ({
+        ...mapGatewayHomeData(gatewayData, {
+          locale,
+          labels: gatewayLabels,
+          priceLabel,
+          fromLabel,
+          filterSelection: { tags: filterTags },
+          ...(filterData?.sections ? { sourceSections: filterData.sections } : {}),
+          ...(filterData?.filters ? { filterConfig: filterData.filters } : {}),
+        }),
+      })}
+      renderGatewayHero={({ hero }) => renderGatewayHero(hero, heroSearch, refreshing)}
+      renderPage={({ hero, sections }) => (
+        <GatewayContentPage
+          data={data}
+          filterPending={filterActive && filter.isLoading}
+          googleMapsApiKey={googleMapsApiKey}
+          hero={hero}
+          onFilterOptionToggle={onFilterOptionToggle}
+          refreshing={refreshing}
+          sections={sections}
+        />
+      )}
+    />
   );
 }
 
