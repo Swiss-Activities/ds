@@ -25,6 +25,8 @@ export type AppGatewayContext = {
   nonBookable?: string | null;
   poi?: string | null;
   region?: string | null;
+  /** The activities root overview (the whole catalogue). */
+  activitiesOverview?: boolean;
   date?: string | null;
 };
 
