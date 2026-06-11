@@ -59,24 +59,6 @@
   --radius-xl: 16px;
 }
 
-/* Image reveal — paired with the ui Image component: it tags shimmer-backed
-   photos with .sa-img and a document-level load listener adds .sa-img-loaded.
-   The animation replaces the shimmer (animate-shimmer) and fades the photo in;
-   images that finished before the listener existed stay at full opacity. */
-img.sa-img-loaded {
-  animation: sa-img-in 0.15s ease-out;
-  background-image: none;
-}
-
-@keyframes sa-img-in {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
 @utility no-scrollbar {
   scrollbar-width: none;
   &::-webkit-scrollbar {

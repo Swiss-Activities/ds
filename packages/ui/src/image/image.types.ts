@@ -25,9 +25,10 @@ export type BaseImageProps = {
    */
   priority?: boolean;
   /**
-   * Shimmer placeholder behind the image while it loads (pure CSS — works
-   * without hydration). Defaults to on for imgix-served photos, off for
-   * local assets/logos where a shimmer behind transparency looks wrong.
+   * Gray placeholder behind the image while it loads (a plain background —
+   * the photo paints over it, no JS). Defaults to on for imgix-served
+   * photos, off for local assets/logos where a backdrop behind transparency
+   * looks wrong.
    */
   skeleton?: boolean;
 };
