@@ -1,4 +1,5 @@
 import { isValidElement, type ReactNode } from "react";
+import { Image } from "../image";
 
 export type ImageSource = {
   src: string;
@@ -8,6 +9,15 @@ export type ImageSource = {
 export type RenderImageHandlers = {
   onLoad?: () => void;
   onError?: () => void;
+};
+
+/** Sizing/loading hints forwarded to the default `Image` render. */
+export type RenderImageOptions = RenderImageHandlers & {
+  sizes?: string;
+  width?: number;
+  height?: number;
+  priority?: boolean;
+  skeleton?: boolean;
 };
 
 export type ImageValue = ReactNode | ImageSource;
@@ -32,21 +42,24 @@ export function isImageSource(
 export function renderImageValue(
   value: ImageValue | null | undefined,
   renderImage?: RenderImage,
-  handlers: RenderImageHandlers = {}
+  options: RenderImageOptions = {}
 ) {
   if (!value) {
     return null;
   }
 
   if (isImageSource(value)) {
+    const { onLoad, onError, ...imageOptions } = options;
+
     return renderImage ? (
-      renderImage({ ...value, ...handlers })
+      renderImage({ ...value, onLoad, onError })
     ) : (
-      <img
+      <Image
         src={value.src}
         alt={value.alt ?? ""}
-        onLoad={handlers.onLoad}
-        onError={handlers.onError}
+        onLoad={onLoad}
+        onError={onError}
+        {...imageOptions}
       />
     );
   }

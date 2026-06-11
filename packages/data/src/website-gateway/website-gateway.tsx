@@ -45,6 +45,7 @@ import {
   GatewayFilters,
   GatewayMapResults,
   Icon,
+  Image,
   ProviderIcon,
   SectionActivityGrid,
   SectionFeatureBand,
@@ -331,15 +332,13 @@ const toWeatherDays = (
 
 const renderImage = (src?: string | null, alt = "") =>
   src ? (
-    <img
+    <Image
       src={src}
       alt={alt}
-      style={{
-        display: "block",
-        height: "100%",
-        objectFit: "cover",
-        width: "100%",
-      }}
+      priority
+      width={1280}
+      sizes="(min-width: 1330px) 1280px, 100vw"
+      className="block h-full w-full object-cover"
     />
   ) : null;
 
@@ -528,10 +527,11 @@ function renderGatewaySuggestedTypesSection(
               className="group relative block aspect-[4/3] overflow-hidden rounded-lg bg-gray-100"
             >
               {item.imageUrl ? (
-                <img
+                <Image
                   src={item.imageUrl}
                   alt={item.title}
-                  loading="lazy"
+                  width={480}
+                  sizes="(min-width: 1024px) 25vw, (min-width: 640px) 33vw, 50vw"
                   className="absolute inset-0 h-full w-full object-cover transition duration-200 group-hover:scale-105"
                 />
               ) : null}

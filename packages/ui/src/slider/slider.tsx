@@ -14,6 +14,7 @@ export type SliderProps = BaseSliderProps &
 export function Slider({
   slides,
   renderImage,
+  imageOptions,
   showNav = true,
   showNavOnHover = false,
   showCounter = true,
@@ -127,7 +128,7 @@ export function Slider({
               slideClassName ?? "[&_img]:object-cover"
             )}
           >
-            {renderImageValue(slide, renderImage)}
+            {renderImageValue(slide, renderImage, imageOptions)}
           </div>
         ))}
       </div>

@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 import Markdown from "react-markdown";
-import { Button, Text, cn } from "@swiss-activities/ui";
+import { Button, Image, Text, cn } from "@swiss-activities/ui";
 import type { TGatewayBlogOverview, TGatewayBlogOverviewPost } from "../gateway/types";
 
 /**
@@ -110,10 +110,11 @@ function PostTile({ post, big }: { post: TGatewayBlogOverviewPost; big: boolean 
           "lg:h-full": big,
         })}
       >
-        <img
+        <Image
           src={post.imageUrl}
           alt={post.title}
-          loading="lazy"
+          width={640}
+          sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
           className="absolute inset-0 h-full w-full object-cover"
         />
       </span>
@@ -139,10 +140,11 @@ function ItineraryCard({ post }: { post: TGatewayBlogOverviewPost }) {
       className="relative overflow-hidden rounded-md border border-solid border-gray-200 shadow transition duration-100 ease-in sm:grid sm:grid-cols-[200px_1fr] sm:hover:shadow-md"
     >
       <span className="relative block h-[100px] bg-gray-100 sm:h-full">
-        <img
+        <Image
           src={post.imageUrl}
           alt={post.title}
-          loading="lazy"
+          width={400}
+          sizes="(min-width: 640px) 200px, 100vw"
           className="absolute inset-0 h-full w-full object-cover"
         />
       </span>

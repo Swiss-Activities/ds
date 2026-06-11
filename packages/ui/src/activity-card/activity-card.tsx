@@ -7,7 +7,6 @@ import { Clock3, ImageOff, MapPin, Ticket } from "../icons";
 import { ImageFill } from "../image-fill";
 import { Loader } from "../loader";
 import { Rating } from "../rating";
-import { Skeleton } from "../skeleton";
 import { Slider } from "../slider";
 import { Text } from "../text";
 import { useImageLoadState } from "../use-image-load-state";
@@ -29,6 +28,12 @@ export type ActivityCardProps = BaseActivityCardProps &
 function hasContent(value: ActivityCardMetaItem["label"]) {
   return value !== null && value !== undefined && value !== "";
 }
+
+/** Cards render ≤ ~420px wide — keep the fetched variants in that ballpark. */
+const cardImageOptions = {
+  width: 640,
+  sizes: "(min-width: 1024px) 420px, (min-width: 640px) 50vw, 100vw",
+};
 
 function getImageValueDedupKey(image: ImageValue) {
   if (!isImageSource(image)) {
@@ -261,18 +266,12 @@ export function ActivityCard({
   const hasImageSlider = isBookable && sliderImages.length > 1;
   const hasPricingFooter = isBookable && Boolean(price);
   const shouldUseImageFill = !isBookable && Boolean(imageSource);
-  const {
-    imageContainerRef,
-    imageFailed,
-    imageLoaded,
-    handleImageError,
-    handleImageLoad,
-  } = useImageLoadState<HTMLDivElement>({
-    sourceKey: imageSourceKey,
-    markFailedOnError: true,
-  });
+  const { imageContainerRef, imageFailed, handleImageError, handleImageLoad } =
+    useImageLoadState<HTMLDivElement>({
+      sourceKey: imageSourceKey,
+      markFailedOnError: true,
+    });
   const showImageFallback = imageFailed || !image;
-  const showImageSkeleton = Boolean(imageSource) && !showImageFallback;
   const shouldPairDistanceWithRating =
     normalizedScore > 0 && hasContent(distance);
   const resolvedMetaItems =
@@ -313,14 +312,6 @@ export function ActivityCard({
             : "[&_img]:h-full [&_img]:w-full [&_img]:object-cover"
         )}
       >
-        {showImageSkeleton ? (
-          <Skeleton
-            full
-            loading={!imageLoaded && !loading}
-            className="z-0"
-            classNameItems="!rounded-none"
-          />
-        ) : null}
         <div className="relative z-10 h-full w-full">
           {showImageFallback ? (
             <ActivityCardImageFallback />
@@ -328,6 +319,7 @@ export function ActivityCard({
             <Slider
               slides={sliderImages}
               renderImage={renderImage}
+              imageOptions={cardImageOptions}
               showCounter={false}
               showIndicators
               showNavOnHover
@@ -340,11 +332,13 @@ export function ActivityCard({
                   image={image}
                   renderImage={renderImage}
                   backgroundColor="transparent"
+                  sizes={cardImageOptions.sizes}
                   onImageLoad={handleImageLoad}
                   onImageError={handleImageError}
                 />
               ) : (
                 renderImageValue(image, renderImage, {
+                  ...cardImageOptions,
                   onLoad: handleImageLoad,
                   onError: handleImageError,
                 })

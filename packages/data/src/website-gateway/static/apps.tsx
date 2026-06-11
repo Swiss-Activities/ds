@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
-import { Icon, Text } from "@swiss-activities/ui";
+import { Icon, Image, Text } from "@swiss-activities/ui";
 import { Check } from "@swiss-activities/ui/icons";
 
 /**
@@ -74,10 +74,9 @@ function PhoneFrame({
         <div className="relative overflow-hidden rounded-[12px] sm:rounded-[18px] lg:rounded-[24px]">
           <div className="absolute left-1/2 top-[4px] z-10 h-[12px] w-[40px] -translate-x-1/2 rounded-full bg-black sm:top-[6px] sm:h-[14px] sm:w-[50px] lg:top-[8px] lg:h-[18px] lg:w-[65px]" />
           <div className="absolute bottom-[4px] left-1/2 z-10 h-[4px] w-[50px] -translate-x-1/2 rounded-full bg-gray-300 sm:bottom-[6px] sm:h-[5px] sm:w-[70px] lg:bottom-[8px] lg:h-[6px] lg:w-[100px]" />
-          <img
+          <Image
             src={src}
             alt={alt}
-            loading="lazy"
             width={width}
             height={height}
             className="block h-auto w-[140px] sm:w-[180px] lg:w-[260px]"
@@ -91,10 +90,9 @@ function PhoneFrame({
       <div className="relative overflow-hidden rounded-[10px] sm:rounded-[16px] lg:rounded-[20px]">
         <div className="absolute left-1/2 top-[3px] z-10 h-[10px] w-[32px] -translate-x-1/2 rounded-full bg-black sm:top-[5px] sm:h-[12px] sm:w-[42px] lg:top-[7px] lg:h-[15px] lg:w-[55px]" />
         <div className="absolute bottom-[3px] left-1/2 z-10 h-[3px] w-[40px] -translate-x-1/2 rounded-full bg-gray-300 sm:bottom-[5px] sm:h-[4px] sm:w-[58px] lg:bottom-[7px] lg:h-[5px] lg:w-[85px]" />
-        <img
+        <Image
           src={src}
           alt={alt}
-          loading="lazy"
           width={width}
           height={height}
           className="block h-auto w-[115px] sm:w-[150px] lg:w-[220px]"
@@ -146,10 +144,10 @@ export function WebsiteGatewayAppsPage({
         </ul>
         <div className="mt-8 flex flex-row gap-4">
           <a href={content.appStoreHref} target="_blank" rel="noreferrer">
-            <img src={content.appStoreSrc} alt="App Store" width={135} height={30} />
+            <Image src={content.appStoreSrc} alt="App Store" width={135} height={30} />
           </a>
           <a href={content.googlePlayHref} target="_blank" rel="noreferrer">
-            <img src={content.googlePlaySrc} alt="Google Play" width={151} height={30} />
+            <Image src={content.googlePlaySrc} alt="Google Play" width={151} height={30} />
           </a>
         </div>
       </div>

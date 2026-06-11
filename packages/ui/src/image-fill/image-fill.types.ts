@@ -10,6 +10,8 @@ export type BaseImageFillProps = {
   backgroundColor?: string;
   className?: string;
   imageClassName?: string;
+  /** Responsive sizes hint for the filled image (container width is unknown here). */
+  sizes?: string;
   onImageLoad?: () => void;
   onImageError?: () => void;
 };

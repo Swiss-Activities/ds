@@ -1,4 +1,5 @@
 import { Button } from "../button";
+import { Image } from "../image";
 import { Logo } from "../logo";
 import { Text } from "../text";
 import { cn } from "../utils/cn";
@@ -75,7 +76,7 @@ function FooterLinks({
 
 function PartnerLogo({ item }: { item: SiteFooterPartnerLogo }) {
   const image = (
-    <img
+    <Image
       alt={item.alt}
       src={item.src}
       className={cn("block h-auto max-h-12 w-auto max-w-[160px]", item.className)}
@@ -142,14 +143,14 @@ export function SiteFooterAppLinks({
       ) : null}
       <div className="flex flex-wrap items-center gap-2">
         <a href={appStoreHref} rel="nofollow" target="_blank">
-          <img
+          <Image
             alt="App Store"
             src={appStoreSrc}
             className="block h-10 w-auto"
           />
         </a>
         <a href={googlePlayHref} rel="nofollow" target="_blank">
-          <img
+          <Image
             alt="Google Play"
             src={googlePlaySrc}
             className="block h-10 w-auto"
@@ -181,7 +182,7 @@ export function SiteFooterPaymentMethods({
       ) : null}
       <div className="flex flex-wrap items-center gap-2">
         {methods.map((method) => (
-          <img
+          <Image
             key={method.id}
             alt={method.alt}
             src={method.src}

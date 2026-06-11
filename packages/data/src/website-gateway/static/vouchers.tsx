@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import { Button, Card, Icon, Text } from "@swiss-activities/ui";
+import { Button, Card, Icon, Image, Text } from "@swiss-activities/ui";
 import { Gift, Percent, PersonStanding, SquarePen, UserRound } from "@swiss-activities/ui/icons";
 
 /**
@@ -158,10 +158,9 @@ export function WebsiteGatewayVouchersPage({
               </div>
               <div className="relative hidden min-h-[140px] w-[45%] xs:block sm:min-h-[200px] lg:min-h-[250px]">
                 <SwirlDivider />
-                <img
+                <Image
                   src={BANNER_IMAGE}
                   alt=""
-                  loading="lazy"
                   className="absolute inset-0 h-full w-full object-cover object-center"
                 />
               </div>
@@ -174,9 +173,10 @@ export function WebsiteGatewayVouchersPage({
         <div className="relative overflow-hidden rounded-xl py-16 lg:py-20 xl:py-32">
           {/* Legacy: autoplaying 7-slide fade Swiper over `${assetBase}/1-7.png`;
               intentionally simplified to the first slide as a static cover image. */}
-          <img
+          <Image
             src={`${assetBase}/1.png`}
             alt=""
+            priority
             className="absolute inset-0 h-full w-full object-cover"
           />
           <div className="absolute inset-0 bg-black/60" />

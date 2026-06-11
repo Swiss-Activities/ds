@@ -33,6 +33,7 @@ export * from "./gateway-map-results";
 export * from "./gateway-section-title";
 export * from "./header";
 export * from "./hero";
+export * from "./image";
 export * from "./image-fill";
 export * from "./input";
 export * from "./weather";

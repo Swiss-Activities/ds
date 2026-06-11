@@ -1,4 +1,4 @@
-import { Card, Icon, Text, cn } from "@swiss-activities/ui";
+import { Card, Icon, Image, Text, cn } from "@swiss-activities/ui";
 import {
   Banknote,
   BookMarked,
@@ -161,40 +161,36 @@ export function WebsiteGatewayAboutPage({
         <div className="lg:grid lg:grid-cols-2 lg:items-center lg:gap-20 xl:gap-32">
           <div className="relative lg:col-start-2 lg:row-start-1">
             <div className="h-[300px] overflow-hidden lg:h-auto">
-              <img
+              <Image
                 src={`${assetBase}/img-1.jpg`}
                 alt=""
-                loading="lazy"
                 width={600}
                 height={500}
                 className="h-[300px] w-full object-cover lg:h-auto lg:rounded-xl"
               />
             </div>
             <div className="absolute -start-16 bottom-20 hidden h-[180px] w-[120px] overflow-hidden rounded-xl shadow-xl xl:block xl:w-[150px]">
-              <img
+              <Image
                 src={`${assetBase}/img-2.jpg`}
                 alt=""
-                loading="lazy"
                 width={200}
                 height={180}
                 className="h-full w-full object-cover"
               />
             </div>
             <div className="absolute -end-14 top-20 hidden h-[175px] w-[100px] overflow-hidden rounded-xl shadow-xl lg:block xl:w-[120px]">
-              <img
+              <Image
                 src={`${assetBase}/img-3.jpg`}
                 alt=""
-                loading="lazy"
                 width={200}
                 height={175}
                 className="h-full w-full object-cover"
               />
             </div>
             <div className="absolute -bottom-16 left-1/2 hidden h-[150px] w-[150px] -translate-x-1/2 overflow-hidden rounded-xl shadow-xl lg:block xl:w-[200px]">
-              <img
+              <Image
                 src={`${assetBase}/img-4.jpg`}
                 alt=""
-                loading="lazy"
                 width={200}
                 height={150}
                 className="h-full w-full object-cover"
@@ -216,10 +212,9 @@ export function WebsiteGatewayAboutPage({
       <section className="pt-8 md:pt-12 lg:pt-16 xl:pt-20">
         <div className="md:grid md:grid-cols-2 md:items-center md:gap-12 lg:gap-20 xl:gap-32">
           <div className="relative md:col-start-1 md:row-start-1">
-            <img
+            <Image
               src={`${assetBase}/img-6.jpg`}
               alt=""
-              loading="lazy"
               width={500}
               height={400}
               className="h-60 w-full rounded-xl object-cover saturate-[115%]"
@@ -293,10 +288,9 @@ export function WebsiteGatewayAboutPage({
               "md:grid-cols-[1fr_300px]": block.reverse,
             })}
           >
-            <img
+            <Image
               src={block.img}
               alt=""
-              loading="lazy"
               width={500}
               height={400}
               className="h-44 w-full rounded-xl object-cover lg:h-full"
@@ -357,10 +351,9 @@ export function WebsiteGatewayAboutPage({
                       className="grid w-full grid-cols-[100px_1fr] gap-6 lg:grid-cols-1"
                     >
                       {employee.imageUrl ? (
-                        <img
+                        <Image
                           src={employee.imageUrl}
                           alt={employee.name}
-                          loading="lazy"
                           width={400}
                           height={400}
                           className={employeeImageClass}

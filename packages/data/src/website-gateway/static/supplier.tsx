@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import { Accordion, Button, Card, cn, Icon, Text } from "@swiss-activities/ui";
+import { Accordion, Button, Card, cn, Icon, Image, Text } from "@swiss-activities/ui";
 import {
   Banknote,
   Check,
@@ -362,9 +362,8 @@ function SupplierIconCard({
 
 function SupplierLogo({ assetBase, src }: { assetBase: string; src: string }) {
   return (
-    <img
+    <Image
       alt=""
-      loading="lazy"
       src={`${assetBase}/${src}`}
       className="mx-auto h-12 w-auto object-contain opacity-80"
     />
@@ -424,9 +423,8 @@ export function WebsiteGatewaySupplierPage({
           </Button>
         </div>
         {/* Legacy blob border-radius approximated with rounded-[3rem] + rotate (lg+ only). */}
-        <img
+        <Image
           alt=""
-          loading="lazy"
           src={`${assetBase}/hero.webp`}
           className="hidden rotate-3 rounded-[3rem] saturate-150 lg:block"
         />

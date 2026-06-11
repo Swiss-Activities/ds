@@ -10,6 +10,7 @@ import {
   type HTMLAttributes,
   type SyntheticEvent,
 } from "react";
+import { Image, imgixSrc } from "../image";
 import { cn } from "../utils/cn";
 import {
   isImageSource,
@@ -77,6 +78,7 @@ function SourceImageFill({
   mode = "auto",
   backgroundColor,
   imageClassName,
+  sizes,
   onImageError,
   onImageLoad,
 }: {
@@ -86,6 +88,7 @@ function SourceImageFill({
   mode?: BaseImageFillProps["mode"];
   backgroundColor?: string;
   imageClassName?: string;
+  sizes?: string;
   onImageLoad?: () => void;
   onImageError?: () => void;
 }) {
@@ -164,8 +167,9 @@ function SourceImageFill({
           aria-hidden="true"
           className="pointer-events-none absolute inset-0 opacity-0 [&_img]:h-full [&_img]:w-full"
         >
+          {/* Dimension probe: a tiny variant is enough to read the ratio. */}
           <img
-            src={source.src}
+            src={imgixSrc(source.src, { width: 64 })}
             alt=""
             loading="eager"
             decoding="async"
@@ -179,7 +183,8 @@ function SourceImageFill({
   const backdropImage = renderImage ? (
     renderImage({ ...source, alt: "" })
   ) : (
-    <img src={source.src} alt="" />
+    // Blurred at 25% opacity — a tiny variant is indistinguishable.
+    <Image src={source.src} alt="" width={64} skeleton={false} />
   );
 
   if (resolvedMode === "cover") {
@@ -198,9 +203,10 @@ function SourceImageFill({
             onError: onImageError,
           })
         ) : (
-          <img
+          <Image
             src={source.src}
             alt={imageWithAlt.alt}
+            sizes={sizes}
             className="h-full w-full object-cover"
             onLoad={onImageLoad}
             onError={onImageError}
@@ -235,9 +241,12 @@ function SourceImageFill({
             onError: onImageError,
           })
         ) : (
-          <img
+          <Image
             src={source.src}
             alt={imageWithAlt.alt}
+            sizes={sizes}
+            fit="clip"
+            skeleton={false}
             className="max-h-full max-w-full object-contain"
             onLoad={onImageLoad}
             onError={onImageError}
@@ -256,6 +265,7 @@ export function ImageFill({
   backgroundColor,
   className,
   imageClassName,
+  sizes,
   onImageError,
   onImageLoad,
   ...props
@@ -274,6 +284,7 @@ export function ImageFill({
           mode={mode}
           backgroundColor={backgroundColor}
           imageClassName={imageClassName}
+          sizes={sizes}
           onImageLoad={onImageLoad}
           onImageError={onImageError}
         />

@@ -7,6 +7,7 @@ import {
 } from "react";
 import { Icon } from "../icon/icon";
 import { MapPin, Mountain, Store, Ticket } from "../icons";
+import { Image } from "../image";
 import { Text } from "../text";
 import { cn } from "../utils/cn";
 import type {
@@ -78,9 +79,11 @@ export const SearchBarResultItem = forwardRef<
 ) {
   const media = image ?? (
     imageSrc ? (
-      <img
+      <Image
         src={imageSrc}
         alt={imageAlt}
+        width={90}
+        sizes="45px"
         className="h-full w-full object-cover"
       />
     ) : null

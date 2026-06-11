@@ -1,8 +1,14 @@
-import type { ImageValue, RenderImage } from "../utils/render-image";
+import type {
+  ImageValue,
+  RenderImage,
+  RenderImageOptions,
+} from "../utils/render-image";
 
 export type BaseSliderProps = {
   slides: ImageValue[];
   renderImage?: RenderImage;
+  /** Sizing/loading hints for the default slide image render. */
+  imageOptions?: RenderImageOptions;
   showNav?: boolean;
   showNavOnHover?: boolean;
   showCounter?: boolean;

@@ -1,4 +1,4 @@
-import { ContentBlocks } from "@swiss-activities/ui";
+import { ContentBlocks, Image } from "@swiss-activities/ui";
 import type { TGatewayListingContentBlock } from "../gateway/types";
 
 // --- listing editorial content -------------------------------------------
@@ -104,10 +104,11 @@ export function ListingContentParts({ parts }: { parts: ListingContentPart[] }) 
             >
               {part.images.map((image) => (
                 <figure key={image.url} className="m-0">
-                  <img
+                  <Image
                     src={image.url}
                     alt={image.alt ?? ""}
-                    loading="lazy"
+                    width={960}
+                    sizes="(min-width: 1024px) 50vw, 100vw"
                     className="aspect-[4/3] max-h-[400px] w-full rounded-lg object-cover"
                   />
                   {image.caption ? (
