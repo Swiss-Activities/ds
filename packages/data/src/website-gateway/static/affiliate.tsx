@@ -180,20 +180,18 @@ export function WebsiteGatewayAffiliatePage({
         <Text as="h2" size="lg" className="mb-6">
           {content.faqTitle}
         </Text>
-        <div className="overflow-hidden rounded-lg border border-solid border-gray-200 px-4">
-          <Accordion
-            items={content.faq.map((item, index) => ({
-              id: `affiliate-faq-${index}`,
-              title: item.title,
-              content: (
-                <div
-                  className="prose-sa pb-2 text-left"
-                  dangerouslySetInnerHTML={{ __html: item.text }}
-                />
-              ),
-            }))}
-          />
-        </div>
+        <Accordion
+          items={content.faq.map((item, index) => ({
+            id: `affiliate-faq-${index}`,
+            title: item.title,
+            content: (
+              <div
+                className="prose-sa pb-2 text-left"
+                dangerouslySetInnerHTML={{ __html: item.text }}
+              />
+            ),
+          }))}
+        />
       </section>
     </div>
   );

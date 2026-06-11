@@ -557,26 +557,24 @@ export function WebsiteGatewaySupplierPage({
               <Text as="h2" size="lg" className="mb-6">
                 {group.title}
               </Text>
-              <div className="overflow-hidden rounded-lg border border-solid border-gray-200 px-4">
-                <Accordion
-                  items={group.blocks.map((block, index) => ({
-                    id: `supplier-faq-${groupIndex}-${index}`,
-                    title: block.title,
-                    content: (
-                      <div className="prose-sa pb-2 text-left">
-                        {block.text ? <p>{block.text}</p> : null}
-                        {block.list ? (
-                          <ul className="prose-sa">
-                            {block.list.map((item) => (
-                              <li key={item}>{item}</li>
-                            ))}
-                          </ul>
-                        ) : null}
-                      </div>
-                    ),
-                  }))}
-                />
-              </div>
+              <Accordion
+                items={group.blocks.map((block, index) => ({
+                  id: `supplier-faq-${groupIndex}-${index}`,
+                  title: block.title,
+                  content: (
+                    <div className="prose-sa pb-2 text-left">
+                      {block.text ? <p>{block.text}</p> : null}
+                      {block.list ? (
+                        <ul className="prose-sa">
+                          {block.list.map((item) => (
+                            <li key={item}>{item}</li>
+                          ))}
+                        </ul>
+                      ) : null}
+                    </div>
+                  ),
+                }))}
+              />
             </div>
           ))}
         </div>
