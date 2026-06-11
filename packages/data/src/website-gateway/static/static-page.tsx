@@ -6,6 +6,7 @@ import {
   type WebsiteGatewayAboutContent,
   type WebsiteGatewayAboutEmployee,
 } from "./about";
+import { WebsiteGatewayAppsPage, type WebsiteGatewayAppsContent } from "./apps";
 import { WebsiteGatewayAffiliatePage, type WebsiteGatewayAffiliateContent } from "./affiliate";
 import { WebsiteGatewaySupplierPage, type WebsiteGatewaySupplierContent } from "./supplier";
 import { WebsiteGatewayVouchersPage, type WebsiteGatewayVouchersContent } from "./vouchers";
@@ -22,6 +23,7 @@ import { WebsiteGatewayVouchersPage, type WebsiteGatewayVouchersContent } from "
 export interface WebsiteGatewayStaticPagesContent {
   about?: WebsiteGatewayAboutContent;
   aboutEmployees?: WebsiteGatewayAboutEmployee[];
+  apps?: WebsiteGatewayAppsContent;
   affiliate?: WebsiteGatewayAffiliateContent;
   supplier?: WebsiteGatewaySupplierContent;
   vouchers?: WebsiteGatewayVouchersContent;
@@ -68,6 +70,10 @@ export function WebsiteGatewayStaticPageContent({
         <WebsiteGatewayAffiliatePage
           {...(staticPages?.affiliate ? { content: staticPages.affiliate } : {})}
         />
+      );
+    case "apps":
+      return (
+        <WebsiteGatewayAppsPage {...(staticPages?.apps ? { content: staticPages.apps } : {})} />
       );
     default:
       return (

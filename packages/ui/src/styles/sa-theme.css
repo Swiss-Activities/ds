@@ -67,11 +67,17 @@
 }
 
 @utility prose-sa {
+  /* Mirrors the legacy .prose-sa (website styles/tailwind.css): typography-
+     plugin scale with black headings, gray-700 copy at text-sm -> lg 15px,
+     and gray-900 underlined links (hover removes the underline). */
   max-width: none;
   word-break: break-word;
 
+  & > *:first-child,
+  & > *:first-child > *:first-child { margin-top: 0 !important; }
+
   & p {
-    font-size: 16px;
+    font-size: 14px;
     line-height: 1.75;
     color: var(--color-gray-700);
     margin-top: 0.75em;
@@ -81,7 +87,7 @@
   & p:first-child { margin-top: 0; }
 
   & ul, & ol {
-    font-size: 16px;
+    font-size: 14px;
     line-height: 1.75;
     color: var(--color-gray-700);
     padding-left: 1.25em;
@@ -92,20 +98,46 @@
 
   & ol { list-style-type: decimal; }
 
-  & li { margin-top: 0.25em; margin-bottom: 0.25em; }
+  & li { margin-top: 0.5em; margin-bottom: 0.5em; }
+
+  & h1 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #000;
+    margin-top: 0;
+    margin-bottom: 0.8em;
+  }
+
+  & h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #000;
+    margin-top: 1.6em;
+    margin-bottom: 0.6em;
+  }
 
   & h3 {
     font-size: 16px;
     font-weight: 600;
-    color: var(--color-gray-900);
+    color: #000;
     margin-top: 1.5em;
     margin-bottom: 0.5em;
   }
 
+  & h4 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #000;
+    margin-top: 1.4em;
+    margin-bottom: 0.4em;
+  }
+
   & strong { font-weight: 600; color: var(--color-gray-900); }
 
-  & a { color: var(--color-primary); text-decoration: underline; }
+  & a { color: var(--color-gray-900); text-decoration: underline; }
   & a:hover { text-decoration: none; }
+
+  & h1 a, & h2 a, & h3 a, & h4 a, & h5 a, & h6 a { font-weight: 600 !important; }
 
   & small {
     font-size: 13px;
@@ -114,8 +146,27 @@
 
   & img { border-radius: 0.5rem; }
 
-  @media (min-width: 1024px) {
+  & table {
+    display: inline-block;
+    max-width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  @media (min-width: 640px) {
+    & h1 { font-size: 24px; }
+    & h2 { font-size: 20px; }
     & h3 { font-size: 18px; }
+    & h4 { font-size: 16px; }
+  }
+
+  @media (min-width: 1024px) {
+    & h1 { font-size: 30px; }
+    & h2 { font-size: 24px; }
+    & h3 { font-size: 20px; }
+    & h4 { font-size: 18px; }
+    & p { font-size: 15px; }
+    & ul, & ol { font-size: 15px; }
   }
 }
 

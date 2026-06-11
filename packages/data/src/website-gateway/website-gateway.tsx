@@ -18,7 +18,12 @@ import {
 import { AppGateway, type AppGatewayContext } from "../app-gateway";
 import { WebsiteGatewayListingContent } from "./listing-content";
 import { WebsiteGatewayBlogPostDetail } from "./blog-detail";
-import { WebsiteGatewayTravelGuideOverview, type WebsiteGatewayTravelGuideLabels } from "./travel-guide";
+import {
+  TravelGuideColumnContent,
+  WebsiteGatewayTravelGuideOverview,
+  type WebsiteGatewayTravelGuideLabels,
+  type WebsiteGatewayTravelGuideRoutesContent,
+} from "./travel-guide";
 import type { TGatewayStaticPageContent } from "../gateway/types";
 import {
   WebsiteGatewayStaticPageContent,
@@ -172,6 +177,8 @@ export type WebsiteGatewayPageContentProps = {
   page: WebsiteGatewayPage;
   /** Localized labels for the travel-guide overview pages. */
   travelGuideLabels?: WebsiteGatewayTravelGuideLabels;
+  /** Editorial markdown of the itineraries overview (intro + per-duration). */
+  travelGuideRoutes?: WebsiteGatewayTravelGuideRoutesContent;
   /** Localized content overrides for the static one-off pages. */
   staticPages?: WebsiteGatewayStaticPagesContent;
 };
@@ -186,6 +193,7 @@ export type WebsiteGatewayPageRendererProps = Omit<
   googleMapsApiKey?: string;
   header?: SiteHeaderProps;
   travelGuideLabels?: WebsiteGatewayTravelGuideLabels;
+  travelGuideRoutes?: WebsiteGatewayTravelGuideRoutesContent;
   staticPages?: WebsiteGatewayStaticPagesContent;
   heroSearch?: ReactNode;
   /** Rendered as WebsiteLanguageSelect in the header and footer slots. */
@@ -1416,6 +1424,7 @@ export function WebsiteGatewayPageContent({
   locale = "de_CH",
   page,
   travelGuideLabels,
+  travelGuideRoutes,
   staticPages,
 }: WebsiteGatewayPageContentProps) {
   if (page.type === "detail-activity") {
@@ -1441,11 +1450,27 @@ export function WebsiteGatewayPageContent({
   }
 
   if (page.type === "overview-travel-guide") {
+    // The editorial markdown applies to the itineraries overview only — it
+    // replaces the header (own h1) and each duration bucket's heading.
+    const routes = page.data.context?.itineraries ? travelGuideRoutes : undefined;
+    const durationHtml = routes?.durations;
     return (
       <PageSection>
         <WebsiteGatewayTravelGuideOverview
           data={page.data}
-          labels={travelGuideLabels}
+          labels={routes ? { ...travelGuideLabels, durationTitle: null } : travelGuideLabels}
+          introContent={
+            routes?.intro ? <TravelGuideColumnContent markdown={routes.intro} /> : undefined
+          }
+          hideHeader={Boolean(routes?.intro)}
+          durationContent={
+            durationHtml
+              ? (days) => {
+                  const markdown = durationHtml[String(days)];
+                  return markdown ? <TravelGuideColumnContent markdown={markdown} /> : null;
+                }
+              : undefined
+          }
         />
       </PageSection>
     );
@@ -1482,6 +1507,7 @@ export function WebsiteGatewayPageRenderer({
   search,
   traceUrl,
   travelGuideLabels,
+  travelGuideRoutes,
   staticPages,
 }: WebsiteGatewayPageRendererProps) {
   const normalizedLocale = locale.replace("_", "-");
@@ -1532,6 +1558,7 @@ export function WebsiteGatewayPageRenderer({
               locale={locale}
               page={page}
               travelGuideLabels={travelGuideLabels}
+              travelGuideRoutes={travelGuideRoutes}
               staticPages={staticPages}
             />
           </div>

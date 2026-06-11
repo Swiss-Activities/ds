@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import Markdown from "react-markdown";
 import { Button, Text, cn } from "@swiss-activities/ui";
 import type { TGatewayBlogOverview, TGatewayBlogOverviewPost } from "../gateway/types";
 
@@ -21,6 +22,60 @@ export interface WebsiteGatewayTravelGuideLabels {
   filter?: string;
   /** Section heading per trip duration; null hides it (e.g. when durationContent carries its own). */
   durationTitle?: ((days: number) => string) | null;
+}
+
+/**
+ * Editorial content of the itineraries overview as RAW MARKDOWN strings —
+ * the consumer ships data (its repo markdown), the DS renders React elements.
+ */
+export interface WebsiteGatewayTravelGuideRoutesContent {
+  /** Replaces the page header (carries its own h1). */
+  intro?: string;
+  /** Rendered above each duration bucket, keyed by the day count. */
+  durations?: Record<string, string>;
+}
+
+/**
+ * The legacy `Content column` split (website modules/components/Content):
+ * the leading heading renders full-width, the body flows in two lg columns.
+ * Every routes file is one heading followed by body copy.
+ */
+export function splitColumnMarkdown(markdown: string): { head: string; body: string } {
+  const lines = markdown.split("\n");
+  const head: string[] = [];
+  let i = 0;
+  while (i < lines.length) {
+    const line = lines[i]!;
+    if (/^#{1,6}\s/.test(line)) {
+      head.push(line);
+      i++;
+      continue;
+    }
+    if (line.trim() === "" && head.length > 0 && /^#{1,6}\s/.test(lines[i + 1] ?? "")) {
+      i++;
+      continue;
+    }
+    break;
+  }
+  return { head: head.join("\n"), body: lines.slice(i).join("\n") };
+}
+
+/** The editorial links are absolute production URLs — serve them host-relative. */
+function relativeHref(href: string): string {
+  return href.replace(/^https:\/\/www\.swissactivities\.com(?=\/)/, "");
+}
+
+/** Legacy `Content column` rendering for the routes editorial markdown. */
+export function TravelGuideColumnContent({ markdown }: { markdown: string }) {
+  const { head, body } = splitColumnMarkdown(markdown);
+  return (
+    <div className="prose-sa w-full">
+      {head ? <Markdown urlTransform={relativeHref}>{head}</Markdown> : null}
+      <div className="lg:columns-2 lg:gap-6 [&>p]:!mt-0">
+        <Markdown urlTransform={relativeHref}>{body}</Markdown>
+      </div>
+    </div>
+  );
 }
 
 const DEFAULT_LABELS: Required<WebsiteGatewayTravelGuideLabels> = {
