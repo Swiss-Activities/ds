@@ -747,7 +747,6 @@ function GatewayContentPage({
   const visibleSections = sections.filter(shouldRenderSection);
   const filterSection = visibleSections.find(isFilterSection);
   const activityGridSection = visibleSections.find(isActivityGridSection);
-  const hasGridSection = Boolean(activityGridSection);
   const canUseMapMode =
     Boolean(activityGridSection) && data.context?.type === "activity-type";
   const effectiveViewMode = canUseMapMode ? viewMode : "list";
@@ -952,7 +951,7 @@ function FilterableGatewayContent({
   });
   const filterData = filterActive ? filter.data : undefined;
   const onFilterOptionToggle = useCallback(
-    (param: string, itemId: string, nextValue: boolean, item: { value?: string }) => {
+    (_param: string, itemId: string, nextValue: boolean, item: { value?: string }) => {
       const value = item.value ?? itemId;
       setFilterTags((previous) =>
         nextValue ? [...new Set([...previous, value])] : previous.filter((tag) => tag !== value)

@@ -20,16 +20,15 @@ export const gatewayPageContext: AppGatewayContext = {
 };
 
 export function GatewayPage({ locale, page, refreshing }: GatewayPageStoryArgs) {
+  const resolvedPage =
+    "context" in page || page.type === "not-found"
+      ? page.type === "not-found"
+        ? page
+        : { ...page, context: page.context ?? gatewayPageContext }
+      : page;
   return (
     <main className="min-h-screen bg-white lg:pt-8">
-      <WebsiteGatewayPageContent
-        locale={locale}
-        refreshing={refreshing}
-        page={{
-          ...page,
-          context: page.context ?? gatewayPageContext,
-        }}
-      />
+      <WebsiteGatewayPageContent locale={locale} refreshing={refreshing} page={resolvedPage} />
     </main>
   );
 }
