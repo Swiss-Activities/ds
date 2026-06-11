@@ -72,7 +72,9 @@ const isGatewayNonBookableDetail = (
   return !("relatedActivities" in detail && detail.type === "blog-post");
 };
 
-const getFeedSelection = (page: WebsiteGatewayOverviewPageRequest) => {
+/** Feed params for an overview/home request — exported so consumers can
+ * precompute the feed URL (e.g. the static shell's early-fetch script). */
+export const getFeedSelection = (page: WebsiteGatewayOverviewPageRequest) => {
   switch (page.type) {
     case "overview-activities":
       return { activitiesOverview: true };
