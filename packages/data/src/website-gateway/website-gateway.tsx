@@ -434,9 +434,6 @@ function renderGatewayHero(
       }
     >
       <div className="sa-container">
-        {hero.breadcrumbs?.length ? (
-          <Breadcrumbs items={hero.breadcrumbs} ignoreLast className="mt-3 lg:mt-4" />
-        ) : null}
         <div className={isSummaryHero ? undefined : homepageHeroFlushClassName}>
           <SectionHero
             title={hero.title}
@@ -452,6 +449,10 @@ function renderGatewayHero(
             variant={hero.variant}
           />
         </div>
+        {/* Like the activity detail: the trail sits under the media block. */}
+        {hero.breadcrumbs?.length ? (
+          <Breadcrumbs items={hero.breadcrumbs} ignoreLast className="mt-3 lg:mt-4" />
+        ) : null}
       </div>
     </section>
   );
