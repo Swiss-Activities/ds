@@ -43,6 +43,16 @@ function SectionHeroTags({
   );
 }
 
+/** Invisible stand-in so the weather slot always reserves its space —
+ * feeds without forecast days produce no layout shift. */
+const DUMMY_WEATHER_DAYS = Array.from({ length: 5 }, (_, index) => ({
+  id: `dummy-${index}`,
+  label: "–",
+  icon: null,
+  low: 0,
+  high: 0,
+}));
+
 export function SectionHero({
   title,
   image,
@@ -106,7 +116,7 @@ export function SectionHero({
                   <Text
                     as="h1"
                     size="2xl"
-                    className="max-w-4xl text-balance !font-semibold !text-white drop-shadow-sm"
+                    className="max-w-4xl text-balance font-semibold !text-white drop-shadow-sm"
                   >
                     {title}
                   </Text>
@@ -150,7 +160,7 @@ export function SectionHero({
                   <Text
                     as="h1"
                     size="2xl"
-                    className="max-w-4xl text-balance !font-semibold !text-white"
+                    className="max-w-4xl text-balance font-semibold !text-white"
                   >
                     {title}
                   </Text>
@@ -170,9 +180,10 @@ export function SectionHero({
 
   if (variant === "summary") {
     const hasWeather = Boolean(days?.length);
-    const mobileWeather = hasWeather ? (
+    const weatherDays = hasWeather ? (days ?? []) : DUMMY_WEATHER_DAYS;
+    const mobileWeather = (
       <Weather
-        days={days ?? []}
+        days={weatherDays}
         unit={unit}
         variant="light"
         sizing="fixed"
@@ -181,10 +192,10 @@ export function SectionHero({
         selected={selected}
         onSelect={onSelect}
       />
-    ) : null;
-    const desktopWeather = hasWeather ? (
+    );
+    const desktopWeather = (
       <Weather
-        days={days ?? []}
+        days={weatherDays}
         description={weatherDescription}
         title={weatherTitle}
         unit={unit}
@@ -192,20 +203,25 @@ export function SectionHero({
         selected={selected}
         onSelect={onSelect}
       />
-    ) : null;
+    );
 
     return (
       <section className={cn("bg-white", className)} {...props}>
         <div className="grid min-w-0 gap-6 lg:grid-cols-[minmax(0,2fr)_minmax(0,1fr)] lg:items-start lg:gap-8">
           <div className="flex min-w-0 flex-col">
             {title ? (
-              <Text
-                as="h1"
-                size="2xl"
-                className="w-full text-balance !text-[24px] !font-semibold !leading-tight !text-black sm:!text-[30px] lg:!text-[32px] [&_svg]:!h-5 [&_svg]:!w-5"
-              >
-                {title}
-              </Text>
+              // The greeting is personalized (geo/weather/daypart) — cover it
+              // while the live data refreshes.
+              <span className={refreshing ? "relative block" : "contents"}>
+                <Text
+                  as="h1"
+                  size="2xl"
+                  className="w-full text-balance !text-[24px] font-semibold !leading-tight !text-black sm:!text-[30px] lg:!text-[32px] [&_svg]:!h-5 [&_svg]:!w-5"
+                >
+                  {title}
+                </Text>
+                {refreshing ? <SkeletonOverlay /> : null}
+              </span>
             ) : null}
             {search ? (
               <div
@@ -221,19 +237,19 @@ export function SectionHero({
               tags={tags}
               className={cn(search ? "mt-4" : title && "mt-6")}
             />
-            {mobileWeather ? (
-              <div className="relative mt-6 lg:hidden">
+            <div className="relative mt-6 lg:hidden">
+              <div className={hasWeather ? undefined : "invisible"} aria-hidden={!hasWeather}>
                 {mobileWeather}
-                {refreshing ? <SkeletonOverlay /> : null}
               </div>
-            ) : null}
-          </div>
-          {desktopWeather ? (
-            <div className="relative hidden lg:block">
-              {desktopWeather}
               {refreshing ? <SkeletonOverlay /> : null}
             </div>
-          ) : null}
+          </div>
+          <div className="relative hidden lg:block">
+            <div className={hasWeather ? undefined : "invisible"} aria-hidden={!hasWeather}>
+              {desktopWeather}
+            </div>
+            {refreshing ? <SkeletonOverlay /> : null}
+          </div>
         </div>
       </section>
     );

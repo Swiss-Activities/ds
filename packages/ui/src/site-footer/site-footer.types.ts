@@ -39,6 +39,8 @@ export type SiteFooterPaymentMethod = {
   alt: string;
   className?: string;
   src: string;
+  /** White bordered chip around a small glyph (Apple Pay / iDEAL — legacy parity). */
+  boxed?: boolean;
 };
 
 export type SiteFooterPaymentMethodsProps = {

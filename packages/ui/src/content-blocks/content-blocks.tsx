@@ -101,12 +101,15 @@ export const ContentBlocks = memo(function ContentBlocks({
 
     const update = () => {
       const threshold = 100;
-      const scrollPos = window.pageYOffset + threshold;
       let currentId = "";
 
+      // The blocks render twice (mobile accordion + desktop column) — the
+      // hidden set reports rect.top 0 and must not win the highlight; compare
+      // the visible set by viewport position.
       const headings = container.querySelectorAll("h2[id]");
       for (const heading of Array.from(headings)) {
-        if ((heading as HTMLElement).offsetTop <= scrollPos) {
+        if (!(heading as HTMLElement).offsetParent) continue;
+        if (heading.getBoundingClientRect().top <= threshold) {
           currentId = heading.id;
         } else {
           break;

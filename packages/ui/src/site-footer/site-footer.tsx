@@ -109,14 +109,16 @@ function SocialLink({ item }: { item: SiteFooterLink }) {
   );
 }
 
+// Legacy PaymentMethods parity: the SVGs carry their own card artwork and
+// render bare; only Apple Pay / iDEAL get the white bordered chip.
 const defaultPaymentMethods = [
-  { id: "twint", alt: "TWINT", src: "/assets/booking/twint.svg" },
+  { id: "twint", alt: "Twint", src: "/assets/booking/twint.svg" },
   { id: "visa", alt: "Visa", src: "/assets/booking/visa.svg" },
-  { id: "mastercard", alt: "Mastercard", src: "/assets/booking/mastercard.svg" },
-  { id: "express", alt: "American Express", src: "/assets/booking/express.svg" },
-  { id: "amex", alt: "Amex", src: "/assets/booking/amex.svg" },
-  { id: "applepay", alt: "Apple Pay", src: "/assets/booking/applepay.svg" },
-  { id: "ideal", alt: "iDEAL", src: "/assets/booking/ideal.svg" },
+  { id: "mastercard", alt: "MasterCard", src: "/assets/booking/mastercard.svg" },
+  { id: "express", alt: "Maestro", src: "/assets/booking/express.svg" },
+  { id: "amex", alt: "AMEX", src: "/assets/booking/amex.svg" },
+  { id: "applepay", alt: "ApplePay", src: "/assets/booking/applepay.svg", boxed: true },
+  { id: "ideal", alt: "DinersClub", src: "/assets/booking/ideal.svg", boxed: true },
 ];
 
 export function SiteFooterAppLinks({
@@ -180,17 +182,22 @@ export function SiteFooterPaymentMethods({
           {heading}
         </Text>
       ) : null}
-      <div className="flex flex-wrap items-center gap-2">
+      <div className="flex flex-wrap items-center gap-1">
         {methods.map((method) => (
-          <Image
+          <span
             key={method.id}
-            alt={method.alt}
-            src={method.src}
             className={cn(
-              "block h-6 w-auto rounded border border-solid border-gray-200 bg-white px-1.5 py-1",
+              "relative flex h-6 w-max min-w-10 items-center justify-center overflow-hidden rounded",
+              method.boxed && "border border-solid border-[#DDDDDD] bg-white",
               method.className
             )}
-          />
+          >
+            <Image
+              alt={method.alt}
+              src={method.src}
+              className={method.boxed ? "h-4 w-4 object-contain" : "h-full w-full object-contain"}
+            />
+          </span>
         ))}
       </div>
     </div>

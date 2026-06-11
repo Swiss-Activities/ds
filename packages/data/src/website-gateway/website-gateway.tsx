@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState, type ReactNode } from "react";
+import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import { mapGatewayHomeData } from "../adapters/gatewayHome";
 import type {
   GatewayHomeActivitySectionData,
@@ -57,6 +57,7 @@ import {
   SectionRegionExplorer,
   SectionReviewGrid,
   SkeletonOverlay,
+  cn,
   SectionReviews,
   SegmentedControl,
   Text,
@@ -1542,6 +1543,28 @@ export function WebsiteGatewayPageContent({
   );
 }
 
+/** Reports whether the hero search is in the viewport — the header search
+ * docks in while it's scrolled out (legacy homepage behaviour). */
+function HeroSearchSensor({
+  children,
+  onInViewChange,
+}: {
+  children: ReactNode;
+  onInViewChange: (inView: boolean) => void;
+}) {
+  const ref = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    const node = ref.current;
+    if (!node || typeof IntersectionObserver === "undefined") return;
+    const observer = new IntersectionObserver(([entry]) => {
+      if (entry) onInViewChange(entry.isIntersecting);
+    });
+    observer.observe(node);
+    return () => observer.disconnect();
+  }, [onInViewChange]);
+  return <div ref={ref}>{children}</div>;
+}
+
 export function WebsiteGatewayPageRenderer({
   afterFooter,
   apiUrl = "",
@@ -1565,9 +1588,34 @@ export function WebsiteGatewayPageRenderer({
   staticPages,
 }: WebsiteGatewayPageRendererProps) {
   const normalizedLocale = locale.replace("_", "-");
+  // The hero search belongs to the homepage; overview/detail heroes stay
+  // clean. While it's in view the header search stays hidden (and on the
+  // homepage's static markup it starts hidden); everywhere else the header
+  // search is always available.
+  const [heroSearchInView, setHeroSearchInView] = useState(page.type === "home");
+  const resolvedHeroSearch =
+    heroSearch ??
+    (search && page.type === "home" ? (
+      <HeroSearchSensor onInViewChange={setHeroSearchInView}>
+        <WebsiteGatewaySearch {...search} locale={normalizedLocale} mode="main" />
+      </HeroSearchSensor>
+    ) : undefined);
+  const headerGatewaySearch = search ? (
+    <div
+      className={cn(
+        "me-auto hidden w-full transition duration-75 ease-in sm:block",
+        page.type === "home" && heroSearchInView
+          ? "pointer-events-none opacity-0"
+          : "pointer-events-auto opacity-100"
+      )}
+    >
+      <WebsiteGatewaySearch {...search} locale={normalizedLocale} mode="default" />
+    </div>
+  ) : null;
   const headerProps = header
     ? {
         ...header,
+        gatewaySearch: header.gatewaySearch ?? headerGatewaySearch,
         languageSelector:
           header.languageSelector ??
           (language ? <WebsiteLanguageSelect {...language} /> : undefined),
@@ -1581,12 +1629,6 @@ export function WebsiteGatewayPageRenderer({
           (language ? <WebsiteLanguageSelect {...language} long /> : undefined),
       }
     : footer;
-  // The hero search belongs to the homepage; overview/detail heroes stay clean.
-  const resolvedHeroSearch =
-    heroSearch ??
-    (search && page.type === "home" ? (
-      <WebsiteGatewaySearch {...search} locale={normalizedLocale} mode="main" />
-    ) : undefined);
 
   return (
     <GatewayProvider
