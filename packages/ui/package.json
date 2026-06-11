@@ -78,7 +78,8 @@
       "types": "./src/logo/logo.markup.ts",
       "default": "./src/logo/logo.markup.ts"
     },
-    "./styles/sa-theme.css": "./src/styles/sa-theme.css"
+    "./styles/sa-theme.css": "./src/styles/sa-theme.css",
+    "./styles/sa-page.css": "./src/styles/sa-page.css"
   },
   "scripts": {
     "typecheck:web": "tsc -p tsconfig.web.json --noEmit",
