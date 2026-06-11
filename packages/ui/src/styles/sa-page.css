@@ -1,0 +1,92 @@
+/* Page-level styles shared by every consumer of the DS (the web renderer and
+   the storybook): the Inter faces, the font stack, and the legacy-parity base
+   (default weight 500, the !important font-* compat utilities, the reserved
+   scrollbar gutter). Import AFTER the tailwind layers, next to sa-theme.css.
+   Both consumers serve the font files at /assets/fonts/. */
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src:
+    url("/assets/fonts/inter-v11-latin-regular.woff2") format("woff2"),
+    url("/assets/fonts/inter-v11-latin-regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src:
+    url("/assets/fonts/inter-v11-latin-500.woff2") format("woff2"),
+    url("/assets/fonts/inter-v11-latin-500.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src:
+    url("/assets/fonts/inter-v11-latin-600.woff2") format("woff2"),
+    url("/assets/fonts/inter-v11-latin-600.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src:
+    url("/assets/fonts/inter-v11-latin-700.woff2") format("woff2"),
+    url("/assets/fonts/inter-v11-latin-700.woff") format("woff");
+}
+
+@theme {
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+@layer base {
+  html {
+    text-rendering: optimizeLegibility;
+    /* Streaming + client mounts briefly pass through sub-viewport document
+       heights — keep the scrollbar gutter reserved so the page width never
+       jumps between navigations/reloads. */
+    scrollbar-gutter: stable;
+  }
+
+  html,
+  body {
+    font-family: var(--font-sans);
+    background-color: #fff;
+    color: #000;
+  }
+
+  * {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* The legacy site renders everything at weight 500 by default — match it,
+     with the explicit font-* utilities staying authoritative (same rules the
+     previous web renderer carried for parity). */
+  body,
+  body * {
+    font-weight: 500;
+  }
+
+  .font-normal {
+    font-weight: 400 !important;
+  }
+  .font-medium {
+    font-weight: 500 !important;
+  }
+  .font-semibold {
+    font-weight: 600 !important;
+  }
+  .font-bold {
+    font-weight: 700 !important;
+  }
+}
