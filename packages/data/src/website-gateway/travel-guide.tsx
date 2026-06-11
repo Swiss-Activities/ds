@@ -151,7 +151,7 @@ function ItineraryCard({ post }: { post: TGatewayBlogOverviewPost }) {
           {post.title}
         </Text>
         {post.description ? (
-          <Text as="span" className="line-clamp-3 block">
+          <Text as="span" className="line-clamp-3">
             {post.description}
           </Text>
         ) : null}
