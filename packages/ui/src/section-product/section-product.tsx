@@ -19,6 +19,7 @@ import { Slider } from "../slider";
 import { Text } from "../text";
 import { cn } from "../utils/cn";
 import {
+  isImageSource,
   renderImageValue,
   type ImageValue,
   type RenderImage,
@@ -38,15 +39,18 @@ type GalleryMediaProps = Pick<
 function GalleryFillImage({
   image,
   renderImage,
+  priority,
 }: {
   image: ImageValue;
   renderImage?: RenderImage;
+  priority?: boolean;
 }) {
   return (
     <ImageFill
       image={image}
       renderImage={renderImage}
       mode="contain"
+      priority={priority}
       imageClassName={galleryImageFillClassName}
     />
   );
@@ -61,6 +65,7 @@ function GalleryGrid({ images, renderImage }: GalleryMediaProps) {
         <Slider
           slides={images}
           renderImage={renderImage}
+          firstSlideEager
           className="absolute inset-0"
         />
       </div>
@@ -89,13 +94,17 @@ function SparseGallery({ images, renderImage }: GalleryMediaProps) {
         <Slider
           slides={images}
           renderImage={(image) => (
-            <GalleryFillImage image={image} renderImage={renderImage} />
+            <GalleryFillImage
+              image={image}
+              renderImage={renderImage}
+              priority={isImageSource(images[0]) && image.src === images[0].src}
+            />
           )}
           slideClassName="overflow-hidden"
           className="absolute inset-0"
         />
       ) : (
-        <GalleryFillImage image={images[0]} renderImage={renderImage} />
+        <GalleryFillImage image={images[0]} renderImage={renderImage} priority />
       )}
     </div>
   );

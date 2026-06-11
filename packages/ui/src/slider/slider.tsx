@@ -15,6 +15,7 @@ export function Slider({
   slides,
   renderImage,
   imageOptions,
+  firstSlideEager = false,
   showNav = true,
   showNavOnHover = false,
   showCounter = true,
@@ -34,6 +35,8 @@ export function Slider({
       loop && total > 1 ? [slides[total - 1], ...slides, slides[0]] : slides,
     [slides, loop, total]
   );
+  // The slide initially in view (loop mode pads a clone in front of it).
+  const eagerSlideIndex = firstSlideEager ? (loop && total > 1 ? 1 : 0) : -1;
 
   const realIndex =
     loop && total > 1 ? (rawIndex - 1 + total) % total : rawIndex;
@@ -128,7 +131,13 @@ export function Slider({
               slideClassName ?? "[&_img]:object-cover"
             )}
           >
-            {renderImageValue(slide, renderImage, imageOptions)}
+            {renderImageValue(
+              slide,
+              renderImage,
+              i === eagerSlideIndex
+                ? { ...imageOptions, priority: true }
+                : imageOptions
+            )}
           </div>
         ))}
       </div>

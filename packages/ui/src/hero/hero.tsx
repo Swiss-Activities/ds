@@ -106,11 +106,12 @@ export function Hero({
               <Slider
                 slides={images}
                 renderImage={renderImage}
+                firstSlideEager
                 loop
                 className="absolute inset-0"
               />
             ) : (
-              renderImageValue(image, renderImage)
+              renderImageValue(image, renderImage, { priority: true })
             )}
           </div>
           {hasTopFade ? (

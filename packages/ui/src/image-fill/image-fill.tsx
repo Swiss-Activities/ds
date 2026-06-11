@@ -79,6 +79,7 @@ function SourceImageFill({
   backgroundColor,
   imageClassName,
   sizes,
+  priority,
   onImageError,
   onImageLoad,
 }: {
@@ -89,6 +90,7 @@ function SourceImageFill({
   backgroundColor?: string;
   imageClassName?: string;
   sizes?: string;
+  priority?: boolean;
   onImageLoad?: () => void;
   onImageError?: () => void;
 }) {
@@ -207,6 +209,7 @@ function SourceImageFill({
             src={source.src}
             alt={imageWithAlt.alt}
             sizes={sizes}
+            priority={priority}
             className="h-full w-full object-cover"
             onLoad={onImageLoad}
             onError={onImageError}
@@ -247,6 +250,7 @@ function SourceImageFill({
             sizes={sizes}
             fit="clip"
             skeleton={false}
+            priority={priority}
             className="max-h-full max-w-full object-contain"
             onLoad={onImageLoad}
             onError={onImageError}
@@ -266,6 +270,7 @@ export function ImageFill({
   className,
   imageClassName,
   sizes,
+  priority,
   onImageError,
   onImageLoad,
   ...props
@@ -285,6 +290,7 @@ export function ImageFill({
           backgroundColor={backgroundColor}
           imageClassName={imageClassName}
           sizes={sizes}
+          priority={priority}
           onImageLoad={onImageLoad}
           onImageError={onImageError}
         />

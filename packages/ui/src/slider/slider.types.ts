@@ -9,6 +9,9 @@ export type BaseSliderProps = {
   renderImage?: RenderImage;
   /** Sizing/loading hints for the default slide image render. */
   imageOptions?: RenderImageOptions;
+  /** Above-the-fold slider (detail/hero gallery): the first slide loads
+   * eagerly with high fetch priority — it is the page's LCP candidate. */
+  firstSlideEager?: boolean;
   showNav?: boolean;
   showNavOnHover?: boolean;
   showCounter?: boolean;

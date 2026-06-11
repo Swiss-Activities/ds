@@ -680,11 +680,13 @@ function renderGatewayFilterSection({
 
 function renderGatewayActivitySection({
   carouselItemsPerRowLg,
+  eagerCards = 0,
   overlay = false,
   section,
   useSectionSpacing,
 }: {
   carouselItemsPerRowLg?: 3 | 4;
+  eagerCards?: number;
   overlay?: boolean;
   section: GatewayHomeActivitySectionData;
   useSectionSpacing: boolean;
@@ -698,6 +700,7 @@ function renderGatewayActivitySection({
           title={null}
           activities={toPreviewActivity(section)}
           loading={overlay}
+          eagerCards={eagerCards}
         />
       ) : (
         <SectionActivityGrid
@@ -705,6 +708,7 @@ function renderGatewayActivitySection({
           activities={toPreviewActivity(section)}
           itemsPerRowLg={carouselItemsPerRowLg}
           loading={overlay}
+          eagerCards={eagerCards}
         />
       )}
     </PageSection>
@@ -713,6 +717,7 @@ function renderGatewayActivitySection({
 
 function renderGatewaySection({
   carouselItemsPerRowLg,
+  eagerCards = 0,
   filterAction,
   filterPending = false,
   onFilterOptionToggle,
@@ -721,6 +726,7 @@ function renderGatewaySection({
   useSectionSpacing,
 }: {
   carouselItemsPerRowLg?: 3 | 4;
+  eagerCards?: number;
   filterAction?: ReactNode;
   filterPending?: boolean;
   onFilterOptionToggle?: GatewayFiltersProps["onFilterOptionToggle"];
@@ -760,6 +766,7 @@ function renderGatewaySection({
 
   return renderGatewayActivitySection({
     carouselItemsPerRowLg,
+    eagerCards,
     overlay: refreshing || filterPending,
     section,
     useSectionSpacing,
@@ -821,6 +828,20 @@ function GatewayContentPage({
     />
   ) : null;
   let activityCarouselIndex = 0;
+  // The first activity section sits above the fold: its leading cards are
+  // the page's LCP candidates and load eagerly instead of lazily.
+  const firstActivityIndex = visibleSections.findIndex((section) => {
+    if (
+      isFilterSection(section) ||
+      isReviewSection(section) ||
+      isFeatureBandSection(section) ||
+      isRegionMapSection(section)
+    ) {
+      return false;
+    }
+
+    return section.component !== "suggested_types";
+  });
 
   return (
     <div>
@@ -836,6 +857,7 @@ function GatewayContentPage({
           <div key={`${section.id}-${index}`}>
             {renderGatewaySection({
               carouselItemsPerRowLg,
+              eagerCards: index === firstActivityIndex ? 4 : 0,
               filterAction,
               filterPending,
               onFilterOptionToggle,

@@ -6,6 +6,8 @@ export type BaseSectionGridProps = {
   action?: ReactNode;
   activities: ActivityItem[];
   loading?: boolean;
+  /** How many leading cards load their image eagerly (above the fold). */
+  eagerCards?: number;
   skeletonAmount?: number;
   itemsPerRowLg?: 1 | 2 | 3 | 4 | "auto" | "auto-fill";
   className?: string;

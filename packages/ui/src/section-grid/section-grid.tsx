@@ -28,6 +28,7 @@ export function SectionGrid({
   action,
   activities,
   loading = false,
+  eagerCards = 0,
   skeletonAmount = 8,
   itemsPerRowLg = 4,
   className,
@@ -111,6 +112,7 @@ export function SectionGrid({
               priceLabel={a.priceLabel}
               price={a.price}
               loading={loading}
+              imagePriority={i < eagerCards}
               pending={a.pending}
               renderImage={a.renderImage}
               render={a.render}

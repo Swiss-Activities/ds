@@ -21,6 +21,7 @@ export function SectionActivityGrid({
   action,
   activities,
   loading = false,
+  eagerCards = 0,
   skeletonAmount = 4,
   itemsPerRowLg,
   className,
@@ -91,6 +92,7 @@ export function SectionActivityGrid({
             priceLabel={a.priceLabel}
             price={a.price}
             loading={loading}
+            imagePriority={i < eagerCards}
             pending={a.pending}
             renderImage={a.renderImage}
             render={a.render}

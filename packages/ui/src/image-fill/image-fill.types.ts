@@ -12,6 +12,8 @@ export type BaseImageFillProps = {
   imageClassName?: string;
   /** Responsive sizes hint for the filled image (container width is unknown here). */
   sizes?: string;
+  /** Above-the-fold fill (detail-page main media): eager + high fetch priority. */
+  priority?: boolean;
   onImageLoad?: () => void;
   onImageError?: () => void;
 };

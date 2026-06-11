@@ -106,7 +106,7 @@ export function SectionHero({
         <div className="relative overflow-hidden bg-blue lg:rounded-lg">
           <div className="relative min-h-[200px] overflow-hidden sm:min-h-[252px] lg:min-h-[360px]">
             <div className="absolute inset-0 [&_img]:absolute [&_img]:inset-0 [&_img]:h-full [&_img]:w-full [&_img]:object-cover">
-              {renderImageValue(image)}
+              {renderImageValue(image, undefined, { priority: true })}
             </div>
             <div className="absolute inset-0 bg-blue/35" />
             <div className="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-2/3 bg-gradient-to-t from-blue/85 to-transparent" />
@@ -149,7 +149,7 @@ export function SectionHero({
         <div className="relative h-[196px] bg-blue sm:h-[228px] lg:h-[264px] lg:rounded-lg">
           <div className="absolute inset-0 overflow-hidden lg:rounded-lg">
             <div className="absolute inset-0 [&_img]:absolute [&_img]:inset-0 [&_img]:h-full [&_img]:w-full [&_img]:object-cover">
-              {renderImageValue(image)}
+              {renderImageValue(image, undefined, { priority: true })}
             </div>
             <div className="absolute inset-0 bg-blue/45" />
           </div>

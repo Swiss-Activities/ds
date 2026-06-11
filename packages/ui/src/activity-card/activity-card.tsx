@@ -245,6 +245,7 @@ export function ActivityCard({
   priceLabel = "",
   price = "",
   loading = false,
+  imagePriority = false,
   pending = false,
   renderImage,
   className,
@@ -320,6 +321,7 @@ export function ActivityCard({
               slides={sliderImages}
               renderImage={renderImage}
               imageOptions={cardImageOptions}
+              firstSlideEager={imagePriority}
               showCounter={false}
               showIndicators
               showNavOnHover
@@ -333,12 +335,14 @@ export function ActivityCard({
                   renderImage={renderImage}
                   backgroundColor="transparent"
                   sizes={cardImageOptions.sizes}
+                  priority={imagePriority}
                   onImageLoad={handleImageLoad}
                   onImageError={handleImageError}
                 />
               ) : (
                 renderImageValue(image, renderImage, {
                   ...cardImageOptions,
+                  priority: imagePriority,
                   onLoad: handleImageLoad,
                   onError: handleImageError,
                 })

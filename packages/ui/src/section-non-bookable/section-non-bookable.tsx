@@ -33,7 +33,7 @@ function MediaGallery({
   return (
     <div className="relative">
       <div className={detailSingleMediaClassName}>
-        <SectionNonBookableMedia image={mainImage} renderImage={renderImage} />
+        <SectionNonBookableMedia image={mainImage} renderImage={renderImage} priority />
       </div>
     </div>
   );

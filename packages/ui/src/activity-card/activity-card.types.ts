@@ -38,6 +38,9 @@ export type BaseActivityCardProps = {
   priceLabel?: string;
   price?: string | null;
   loading?: boolean;
+  /** Above-the-fold card (first grid row): its image loads eagerly with
+   * high fetch priority instead of lazily. */
+  imagePriority?: boolean;
   pending?: boolean;
   renderImage?: RenderImage;
   className?: string;

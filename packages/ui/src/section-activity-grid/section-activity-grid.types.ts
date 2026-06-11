@@ -36,6 +36,8 @@ export type BaseSectionActivityGridProps = {
   action?: ReactNode;
   activities: ActivityItem[];
   loading?: boolean;
+  /** How many leading cards load their image eagerly (above the fold). */
+  eagerCards?: number;
   skeletonAmount?: number;
   itemsPerRowLg?: BaseSectionScrollerProps["itemsPerRowLg"];
   className?: string;
