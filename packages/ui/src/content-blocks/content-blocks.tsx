@@ -170,7 +170,7 @@ export const ContentBlocks = memo(function ContentBlocks({
         </div>
       )}
       <div className="hidden grid-cols-3 gap-8 lg:grid xl:gap-16">
-        <div className="col-span-2 flex flex-col gap-10">
+        <div className="col-span-2 flex min-w-0 flex-col gap-10">
           {lead}
           <ContentBlockList items={items} />
         </div>

@@ -146,11 +146,46 @@
 
   & img { border-radius: 0.5rem; }
 
+  /* Typography-plugin table look (legacy prose): 14px, semibold black head
+     row over a gray rule, row separators, em paddings, baseline alignment.
+     Wide tables scroll inside the column (inline-block + nowrap); explicit
+     align="" attributes keep winning via the :not([align]) guards. */
   & table {
     display: inline-block;
     max-width: 100%;
     overflow-x: auto;
     white-space: nowrap;
+    border-collapse: collapse;
+    font-size: 14px;
+    line-height: 1.7;
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+
+  & thead { border-bottom: 1px solid var(--color-gray-300); }
+
+  & th {
+    font-weight: 600;
+    color: #000;
+    padding: 0 0.5714em 0.5714em 0;
+    vertical-align: bottom;
+  }
+
+  & th:not([align]) { text-align: start; }
+
+  /* Preflight sets th/td text-align:inherit, which beats the legacy HTML
+     align attributes the CAPI tables carry — restore them. */
+  & th[align="right"], & td[align="right"] { text-align: right; }
+  & th[align="center"], & td[align="center"] { text-align: center; }
+  & th[align="left"], & td[align="left"] { text-align: left; }
+
+  & tbody tr { border-bottom: 1px solid var(--color-gray-200); }
+  & tbody tr:last-child { border-bottom: 0; }
+
+  & td {
+    color: var(--color-gray-700);
+    padding: 0.5714em 0.5714em 0.5714em 0;
+    vertical-align: baseline;
   }
 
   @media (min-width: 640px) {

@@ -81,13 +81,13 @@ export const toYouTubeEmbedUrl = (url: string): string | null => {
 
 export function ListingContentParts({ parts }: { parts: ListingContentPart[] }) {
   return (
-    <div className="grid gap-6">
+    <div className="grid min-w-0 gap-6">
       {parts.map((part, index) => {
         if (part.kind === "html") {
           return (
             <div
               key={index}
-              className="prose-sa max-w-none"
+              className="prose-sa min-w-0 max-w-full"
               dangerouslySetInnerHTML={{ __html: part.html }}
             />
           );
