@@ -21,6 +21,7 @@ export function SectionBlogDetail({
   image,
   renderImage,
   description,
+  contentLead,
   contentItems,
   contentTocTitle,
   contentBlocksClassName,
@@ -31,7 +32,7 @@ export function SectionBlogDetail({
   className,
   ...props
 }: SectionBlogDetailProps) {
-  const hasContent = Boolean(contentItems?.length);
+  const hasContent = Boolean(contentItems?.length) || Boolean(contentLead);
   const hasRelatedActivities = Boolean(
     relatedActivities?.length && relatedActivitiesTitle
   );
@@ -82,6 +83,7 @@ export function SectionBlogDetail({
           <div className={detailContainerClassName}>
             <ContentBlocks
               items={contentItems ?? []}
+              lead={contentLead}
               tocTitle={contentTocTitle}
               variant="article"
               className={contentBlocksClassName}

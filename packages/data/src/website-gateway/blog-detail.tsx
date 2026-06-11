@@ -122,7 +122,7 @@ export function WebsiteGatewayBlogPostDetail({
     <SectionBlogDetail
       title={detail.title}
       image={detail.imageUrl ? { src: detail.imageUrl, alt: detail.title } : null}
-      description={lead ? <ListingContentParts parts={lead} /> : undefined}
+      contentLead={lead ? <ListingContentParts parts={lead} /> : undefined}
       contentItems={items}
       contentTocTitle={contentTocTitle}
       relatedActivitiesTitle={relatedActivitiesTitle}

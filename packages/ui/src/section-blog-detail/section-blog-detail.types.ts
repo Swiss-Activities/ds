@@ -7,7 +7,10 @@ export type BaseSectionBlogDetailProps = {
   title: ReactNode;
   image?: ImageValue | null;
   renderImage?: RenderImage;
+  /** Header description (beside the title). Prefer contentLead for article intros. */
   description?: ReactNode;
+  /** Untitled article intro at the top of the content column (no TOC entry). */
+  contentLead?: ReactNode;
   contentItems?: BaseContentBlocksProps["items"];
   contentTocTitle?: BaseContentBlocksProps["tocTitle"];
   contentBlocksClassName?: BaseContentBlocksProps["className"];
