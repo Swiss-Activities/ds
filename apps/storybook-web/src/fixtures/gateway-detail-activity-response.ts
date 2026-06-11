@@ -271,7 +271,7 @@ export const gatewayDetailActivityResponse = {
         "1:15"
       ],
       "popularity": 5,
-      "ticketsIssued": 1285,
+      "ticketsIssued": 1289,
       "numOffers": 1,
       "reservationSystem": "fareharbor",
       "resTech": true,
@@ -416,8 +416,6 @@ export const gatewayDetailActivityResponse = {
       "a30053-177"
     ],
     "availableDates": [
-      "2026-06-09",
-      "2026-06-10",
       "2026-06-11",
       "2026-06-12",
       "2026-06-13",
@@ -598,13 +596,15 @@ export const gatewayDetailActivityResponse = {
       "2026-12-05",
       "2026-12-06",
       "2026-12-07",
-      "2026-12-08"
+      "2026-12-08",
+      "2026-12-09",
+      "2026-12-10"
     ],
     "mappedId": "108",
     "rating": {
       "sku": "346",
-      "average_rating": "4.9348",
-      "num_ratings": 92
+      "average_rating": "4.9355",
+      "num_ratings": 93
     },
     "locationLength": 2,
     "raw": {
@@ -1184,6 +1184,18 @@ export const gatewayDetailActivityResponse = {
         {
           "id": "154306",
           "mappedId": "3834"
+        },
+        {
+          "id": "157975",
+          "mappedId": "3943"
+        },
+        {
+          "id": "158009",
+          "mappedId": "3944"
+        },
+        {
+          "id": "158043",
+          "mappedId": "3945"
         }
       ]
     },
@@ -1223,6 +1235,44 @@ export const gatewayDetailActivityResponse = {
       "/gleitschirmfliegen-tandem-beatenberg-interlaken/"
     ],
     "breadcrumbs": [
+      {
+        "title": "Schweiz",
+        "id": "root",
+        "urls": {
+          "de_CH": "/freizeitaktivitaeten/",
+          "en_CH": "/en-ch/activities/",
+          "fr_CH": "/fr-ch/activites/",
+          "it_CH": "/it-ch/attivita/",
+          "es_ES": "/es-es/actividades/",
+          "pt_PT": "/pt-pt/atividades/",
+          "nl_NL": "/nl-nl/activiteiten/",
+          "ko_KR": "/ko-kr/hwaldong/",
+          "zh_CN": "/zh-cn/huodong/",
+          "ja_JP": "/ja-jp/akutibiti/",
+          "cs_CZ": "/cs-cz/aktivity/",
+          "da_DK": "/da-dk/aktiviteter/",
+          "el_GR": "/el-gr/drastiriotites/",
+          "hi_IN": "/hi-in/gatividhiyan/",
+          "id_ID": "/id-id/aktivitas/",
+          "ms_MY": "/ms-my/aktiviti/",
+          "pl_PL": "/pl-pl/aktywnosci/",
+          "sv_SE": "/sv-se/aktiviteter/",
+          "ru_RU": "/ru-ru/meropriyatiya/",
+          "th_TH": "/th-th/kitjakam/",
+          "ar_AE": "/ar-ae/anshita/",
+          "nb_NO": "/nb-no/aktiviteter/",
+          "hu_HU": "/hu-hu/tevekenysegek/",
+          "sk_SK": "/sk-sk/aktivity/",
+          "ro_RO": "/ro-ro/activitati/",
+          "sq_AL": "/sq-al/aktivitete/",
+          "tr_TR": "/tr-tr/aktiviteler/",
+          "vi_VN": "/vi-vn/hoat-dong/",
+          "uk_UA": "/uk-ua/diyalnist/",
+          "hr_HR": "/hr-hr/aktivnosti/",
+          "en_GB": "/en-gb/activities/",
+          "en_US": "/en-us/activities/"
+        }
+      },
       {
         "title": "Region Bern",
         "id": "196",
@@ -1611,8 +1661,8 @@ export const gatewayDetailActivityResponse = {
           "minAdultPriceStartdate": "2025-05-13",
           "dynamicPrice": true,
           "distributorCommission": null,
-          "rankingScoreValue": 0.996574364830146,
-          "rankingScoreNoDate": 0.996574364830146,
+          "rankingScoreValue": 0.995438996579247,
+          "rankingScoreNoDate": 0.995438996579247,
           "guideLanguages": [
             "de",
             "en"
@@ -1742,8 +1792,6 @@ export const gatewayDetailActivityResponse = {
           "a30053-177"
         ],
         "availableDates": [
-          "2026-06-09",
-          "2026-06-10",
           "2026-06-11",
           "2026-06-12",
           "2026-06-13",
@@ -2410,8 +2458,8 @@ export const gatewayDetailActivityResponse = {
           "minAdultPriceStartdate": "2025-11-01",
           "dynamicPrice": true,
           "distributorCommission": null,
-          "rankingScoreValue": 0.901227519269198,
-          "rankingScoreNoDate": -0.098772480730802,
+          "rankingScoreValue": 0.892816419612315,
+          "rankingScoreNoDate": -0.107183580387685,
           "guideLanguages": [
             "de",
             "en"
@@ -3181,7 +3229,7 @@ export const gatewayDetailActivityResponse = {
             "1:15"
           ],
           "popularity": 5,
-          "ticketsIssued": 1522,
+          "ticketsIssued": 1525,
           "numOffers": 1,
           "reservationSystem": "experiencebank",
           "resTech": true,
@@ -3195,8 +3243,8 @@ export const gatewayDetailActivityResponse = {
           "minAdultPriceStartdate": "2026-04-20",
           "dynamicPrice": true,
           "distributorCommission": null,
-          "rankingScoreValue": 0.988866685697973,
-          "rankingScoreNoDate": 0.988866685697973,
+          "rankingScoreValue": 0.991163055872292,
+          "rankingScoreNoDate": 0.991163055872292,
           "guideLanguages": [
             "en",
             "fr",
@@ -3332,8 +3380,6 @@ export const gatewayDetailActivityResponse = {
           "a30053-177"
         ],
         "availableDates": [
-          "2026-06-09",
-          "2026-06-10",
           "2026-06-11",
           "2026-06-12",
           "2026-06-13",
@@ -3692,7 +3738,9 @@ export const gatewayDetailActivityResponse = {
           "2027-06-03",
           "2027-06-04",
           "2027-06-05",
-          "2027-06-06"
+          "2027-06-06",
+          "2027-06-07",
+          "2027-06-08"
         ],
         "mappedId": "58",
         "rating": {
@@ -4188,7 +4236,7 @@ export const gatewayDetailActivityResponse = {
             "1:30"
           ],
           "popularity": 4,
-          "ticketsIssued": 87,
+          "ticketsIssued": 90,
           "numOffers": 1,
           "reservationSystem": "experiencebank",
           "resTech": true,
@@ -4202,8 +4250,8 @@ export const gatewayDetailActivityResponse = {
           "minAdultPriceStartdate": "2025-05-13",
           "dynamicPrice": true,
           "distributorCommission": null,
-          "rankingScoreValue": 0.984870111333143,
-          "rankingScoreNoDate": 0.984870111333143,
+          "rankingScoreValue": 0.984891676168757,
+          "rankingScoreNoDate": 0.984891676168757,
           "guideLanguages": [
             "de",
             "en",
@@ -4343,8 +4391,6 @@ export const gatewayDetailActivityResponse = {
           "a30053-177"
         ],
         "availableDates": [
-          "2026-06-09",
-          "2026-06-10",
           "2026-06-11",
           "2026-06-12",
           "2026-06-13",
@@ -4777,8 +4823,30 @@ export const gatewayDetailActivityResponse = {
   "reviews": [
     {
       "activityId": 346,
+      "product_review_id": 12371,
+      "date_created": "vor 2 Tagen",
+      "rating": 5,
+      "review": "Die Aussicht auf Interlaken mit seinem türkisblauen Wasser und der Bergkulisse war beeindruckend. Chris war auch sehr sympathisch.",
+      "tags": [
+        {
+          "tag": "category:group"
+        }
+      ],
+      "reviewer": {
+        "first_name": "Mallory McCormick",
+        "last_name": "McCormick"
+      },
+      "locale": null,
+      "category": "group",
+      "countryCode": "VI",
+      "exclude": false,
+      "replies": [],
+      "upvoteCount": 0
+    },
+    {
+      "activityId": 346,
       "product_review_id": 12344,
-      "date_created": "vor einem Tag",
+      "date_created": "vor 3 Tagen",
       "rating": 5,
       "review": "Ich habe Höhenangst, aber mein Guide war fantastisch. Ich würde es jedem empfehlen! Ich werde es definitiv wieder machen. Die einzige Art, Interlaken zu sehen!",
       "tags": [
@@ -4800,7 +4868,7 @@ export const gatewayDetailActivityResponse = {
     {
       "activityId": 346,
       "product_review_id": 12340,
-      "date_created": "vor 2 Tagen",
+      "date_created": "vor 4 Tagen",
       "rating": 5,
       "review": "Sehr freundlicher, kompetenter Pilot. Unglaubliche Erfahrung. Ich habe mich sehr sicher und gut aufgehoben gefühlt.",
       "tags": [
@@ -4822,7 +4890,7 @@ export const gatewayDetailActivityResponse = {
     {
       "activityId": 346,
       "product_review_id": 12338,
-      "date_created": "vor 2 Tagen",
+      "date_created": "vor 4 Tagen",
       "rating": 5,
       "review": "Mir gefielen besonders der Blick auf See und Fluss.",
       "tags": [
@@ -4844,7 +4912,7 @@ export const gatewayDetailActivityResponse = {
     {
       "activityId": 346,
       "product_review_id": 12322,
-      "date_created": "vor 3 Tagen",
+      "date_created": "vor 5 Tagen",
       "rating": 5,
       "review": "Die Leute und die wunderschöne Aussicht.",
       "tags": [
@@ -4866,7 +4934,7 @@ export const gatewayDetailActivityResponse = {
     {
       "activityId": 346,
       "product_review_id": 12129,
-      "date_created": "vor 15 Tagen",
+      "date_created": "vor 17 Tagen",
       "rating": 5,
       "review": "",
       "tags": [
@@ -4888,7 +4956,7 @@ export const gatewayDetailActivityResponse = {
     {
       "activityId": 346,
       "product_review_id": 12107,
-      "date_created": "vor 16 Tagen",
+      "date_created": "vor 18 Tagen",
       "rating": 5,
       "review": "Der Guide war sehr aufmerksam und eine freundliche Person.",
       "tags": [
@@ -6805,10 +6873,10 @@ export const gatewayDetailActivityResponse = {
     }
   ],
   "reviewSummary": {
-    "totalAmount": 92,
-    "totalAverage": 4.93,
-    "filteredAmount": 92,
-    "filteredAverage": 4.93
+    "totalAmount": 93,
+    "totalAverage": 4.94,
+    "filteredAmount": 93,
+    "filteredAverage": 4.94
   },
   "productContext": {
     "openingHours": null,
@@ -6827,18 +6895,18 @@ export const gatewayDetailActivityResponse = {
     "weather": {
       "plz": "3800",
       "locationName": "Sundlauenen",
-      "icon": "cloudy",
-      "condition": "cloudy",
-      "description": "bedeckt und trocken",
-      "temperature": 16.2,
-      "precipitation": 0,
+      "icon": "rainy",
+      "condition": "rainy",
+      "description": "stark bewölkt, zeitweise Regen",
+      "temperature": 11.1,
+      "precipitation": 1,
       "cloudCover": 100,
       "isNight": false,
-      "updatedAt": "2026-06-09T14:01:45.103Z"
+      "updatedAt": "2026-06-10T13:05:51.777Z"
     },
     "rating": {
-      "score": 4.9348,
-      "count": 92
+      "score": 4.9355,
+      "count": 93
     }
   },
   "meta": {

@@ -56,6 +56,7 @@ import {
   SectionProduct,
   SectionRegionExplorer,
   SectionReviewGrid,
+  SkeletonOverlay,
   SectionReviews,
   SegmentedControl,
   Text,
@@ -166,6 +167,9 @@ export type WebsiteGatewayContentRendererProps = {
   data: TGatewayHome;
   context?: AppGatewayContext;
   gatewayUrl?: string;
+  /** Live data refresh in flight: dynamic grids + weather are covered by one
+   * skeleton overlay each (hero content renders normally). */
+  refreshing?: boolean;
   googleMapsApiKey?: string;
   heroSearch?: ReactNode;
   locale: string;
@@ -178,6 +182,8 @@ export type WebsiteGatewayPageContentProps = {
   heroSearch?: ReactNode;
   locale?: string;
   page: WebsiteGatewayPage;
+  /** See WebsiteGatewayContentRendererProps.refreshing. */
+  refreshing?: boolean;
   /** Localized labels for the travel-guide overview pages. */
   travelGuideLabels?: WebsiteGatewayTravelGuideLabels;
   /** Editorial markdown of the itineraries overview (intro + per-duration). */
@@ -203,6 +209,8 @@ export type WebsiteGatewayPageRendererProps = Omit<
   language?: WebsiteLanguageSelectProps;
   locale?: string;
   page: WebsiteGatewayPage;
+  /** See WebsiteGatewayContentRendererProps.refreshing. */
+  refreshing?: boolean;
   /** Rendered as WebsiteGatewaySearch in the hero search slot. */
   search?: Omit<WebsiteGatewaySearchProps, "locale" | "mode">;
   traceUrl?: string;
@@ -416,7 +424,8 @@ function PageSection({
 
 function renderGatewayHero(
   hero: GatewayHomeHeroData | null,
-  search?: ReactNode
+  search?: ReactNode,
+  refreshing = false
 ) {
   if (!hero) {
     return null;
@@ -446,6 +455,7 @@ function renderGatewayHero(
             weatherDescription={hero.weatherDescription ?? undefined}
             search={search}
             variant={hero.variant}
+            refreshing={refreshing}
           />
         </div>
         {/* Like the activity detail: the trail sits under the media block. */}
@@ -509,7 +519,8 @@ function renderGatewayReviewSection(
 
 function renderGatewaySuggestedTypesSection(
   section: GatewayHomeSuggestedTypesSectionData,
-  useSectionSpacing: boolean
+  useSectionSpacing: boolean,
+  overlay = false
 ) {
   // First eight types; lg+ shows them as one slim row of eight.
   const linked = section.items.filter((item) => item.href).slice(0, 8);
@@ -521,7 +532,17 @@ function renderGatewaySuggestedTypesSection(
           {section.title}
         </Text>
         <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-8 lg:gap-3">
-          {linked.map((item) => (
+          {overlay
+            ? linked.map((item) => (
+                <span
+                  key={item.id}
+                  className="relative block aspect-[4/3] overflow-hidden rounded-lg"
+                >
+                  <SkeletonOverlay />
+                </span>
+              ))
+            : null}
+          {!overlay && linked.map((item) => (
             <a
               key={item.id}
               href={item.href ?? "#"}
@@ -603,22 +624,31 @@ function renderGatewayFilterSection({
 
 function renderGatewayActivitySection({
   carouselItemsPerRowLg,
+  overlay = false,
   section,
   useSectionSpacing,
 }: {
   carouselItemsPerRowLg?: 3 | 4;
+  overlay?: boolean;
   section: GatewayHomeActivitySectionData;
   useSectionSpacing: boolean;
 }) {
+  // While data refreshes every card shows its own enclosed skeleton
+  // (ActivityCard `loading`) — no sheet over the section.
   return (
     <PageSection spacing={useSectionSpacing}>
       {section.component === "activity_grid" ? (
-        <SectionGrid title={null} activities={toPreviewActivity(section)} />
+        <SectionGrid
+          title={null}
+          activities={toPreviewActivity(section)}
+          loading={overlay}
+        />
       ) : (
         <SectionActivityGrid
           title={section.title}
           activities={toPreviewActivity(section)}
           itemsPerRowLg={carouselItemsPerRowLg}
+          loading={overlay}
         />
       )}
     </PageSection>
@@ -629,15 +659,18 @@ function renderGatewaySection({
   carouselItemsPerRowLg,
   filterAction,
   hideQuickFilters,
+  refreshing = false,
   section,
   useSectionSpacing,
 }: {
   carouselItemsPerRowLg?: 3 | 4;
   filterAction?: ReactNode;
   hideQuickFilters?: boolean;
+  refreshing?: boolean;
   section: GatewayHomeSectionData;
   useSectionSpacing: boolean;
 }) {
+  // Filters stay real + interactive while refreshing — nothing to mask.
   if (section.component === "filters") {
     return renderGatewayFilterSection({
       action: filterAction,
@@ -646,6 +679,8 @@ function renderGatewaySection({
     });
   }
 
+  // Reviews, the feature band and the region map don't vary with the
+  // personalized context — nothing to mask while refreshing.
   if (section.component === "reviews") {
     return renderGatewayReviewSection(section, useSectionSpacing);
   }
@@ -659,11 +694,12 @@ function renderGatewaySection({
   }
 
   if (section.component === "suggested_types") {
-    return renderGatewaySuggestedTypesSection(section, useSectionSpacing);
+    return renderGatewaySuggestedTypesSection(section, useSectionSpacing, refreshing);
   }
 
   return renderGatewayActivitySection({
     carouselItemsPerRowLg,
+    overlay: refreshing,
     section,
     useSectionSpacing,
   });
@@ -673,11 +709,13 @@ function GatewayContentPage({
   data,
   googleMapsApiKey = "",
   hero,
+  refreshing = false,
   sections,
 }: {
   data: TGatewayHome;
   googleMapsApiKey?: string;
   hero: ReactNode;
+  refreshing?: boolean;
   sections: GatewayHomeSectionData[];
 }) {
   const [viewMode, setViewMode] = useState<GatewayViewMode>("list");
@@ -730,6 +768,7 @@ function GatewayContentPage({
               carouselItemsPerRowLg,
               filterAction,
               hideQuickFilters: hasGridSection,
+              refreshing,
               section,
               useSectionSpacing: shouldUseSectionSpacing(
                 section,
@@ -837,6 +876,7 @@ export function WebsiteGatewayContentRenderer({
   googleMapsApiKey,
   heroSearch,
   locale,
+  refreshing = false,
 }: WebsiteGatewayContentRendererProps) {
   return (
     <GatewayProvider apiUrl={apiUrl} gatewayUrl={gatewayUrl} locale={locale}>
@@ -857,12 +897,13 @@ export function WebsiteGatewayContentRenderer({
             fromLabel,
           }),
         })}
-        renderGatewayHero={({ hero }) => renderGatewayHero(hero, heroSearch)}
+        renderGatewayHero={({ hero }) => renderGatewayHero(hero, heroSearch, refreshing)}
         renderPage={({ hero, sections }) => (
           <GatewayContentPage
             data={data}
             googleMapsApiKey={googleMapsApiKey}
             hero={hero}
+            refreshing={refreshing}
             sections={sections}
           />
         )}
@@ -1433,6 +1474,7 @@ export function WebsiteGatewayPageContent({
   heroSearch,
   locale = "de_CH",
   page,
+  refreshing = false,
   travelGuideLabels,
   travelGuideRoutes,
   staticPages,
@@ -1495,6 +1537,7 @@ export function WebsiteGatewayPageContent({
       googleMapsApiKey={googleMapsApiKey}
       heroSearch={heroSearch}
       locale={locale}
+      refreshing={refreshing}
     />
   );
 }
@@ -1514,6 +1557,7 @@ export function WebsiteGatewayPageRenderer({
   language,
   locale = "de_CH",
   page,
+  refreshing,
   search,
   traceUrl,
   travelGuideLabels,
@@ -1567,6 +1611,7 @@ export function WebsiteGatewayPageRenderer({
               heroSearch={resolvedHeroSearch}
               locale={locale}
               page={page}
+              refreshing={refreshing}
               travelGuideLabels={travelGuideLabels}
               travelGuideRoutes={travelGuideRoutes}
               staticPages={staticPages}

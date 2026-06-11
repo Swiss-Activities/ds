@@ -1,65 +1,137 @@
 import type { TGatewayNonBookableDetail } from "@swiss-activities/data";
 
 export const gatewayDetailNonBookableResponse = {
-  "id": "69990f8e-edd4-4ee0-89d0-ed2392074dd4",
+  "id": "483ced04-10bc-4129-8fae-9fb96c0fb51b",
   "type": "fireplace",
-  "title": "Zeiher Homberg",
-  "coverImage": "https://api.grillstelle.ch/images/817/1754.jpg",
-  "description": "Schöne Aussicht, Bänke vorhanden, Zufahrt mit dem Auto nicht möglich",
+  "title": "Waldhäuschen oberhalb Bözenegg",
+  "coverImage": "https://api.grillstelle.ch/images/850/1861.jpg",
+  "description": "Kinderfreundliche Umgebung, , windgeschützt, Zufahrt mit Auto nicht möglich",
   "amenities": {
-    "hasGrillGrate": false,
+    "hasGrillGrate": true,
     "hasFirewood": true,
     "hasShelter": false,
-    "hasTable": false,
-    "hasBenches": false,
+    "hasTable": true,
+    "hasBenches": true,
     "hasWater": false,
     "hasToilet": false,
     "hasPlaygroundNearby": false,
     "capacityPersons": null
   },
   "location": {
-    "lat": 47.458419,
-    "lng": 8.093979
+    "lat": 47.45651,
+    "lng": 8.11976
   },
   "canton": "AG",
   "tags": [
     "fireplace",
     "outdoor",
-    "any",
-    "none",
+    "fair_weather",
+    "easy",
     "under_1h",
-    "free",
-    "nature",
-    "adults_only",
-    "year_round",
-    "awe",
+    "families",
+    "all_ages",
+    "relaxation",
+    "weekend",
+    "always_available",
+    "parking",
+    "picnic_area",
+    "toilets",
+    "shelter",
+    "adventure",
+    "fun",
     "low_altitude",
-    "low_visibility_safe",
-    "cloudy_friendly"
+    "low_visibility_safe"
   ],
   "photos": [
-    "https://api.grillstelle.ch/images/817/1754.jpg",
-    "https://api.grillstelle.ch/images/817/1755.jpg",
-    "https://api.grillstelle.ch/images/817/1756.jpg"
+    "https://api.grillstelle.ch/images/850/1861.jpg",
+    "https://api.grillstelle.ch/images/850/1862.jpg",
+    "https://api.grillstelle.ch/images/850/1863.jpg"
   ],
-  "sourceUrl": "https://grillstelle.ch/de/grillstellen/817/zeiher-homberg/uebersicht",
+  "sourceUrl": "https://grillstelle.ch/de/grillstellen/850/waldhaeuschen-oberhalb-boezenegg/uebersicht",
   "nearbySection": {
     "id": "proximity",
     "component": "carousel",
     "title": "Beliebt in deiner Nähe",
     "data": [
       {
-        "id": "ccc4b737-0865-4f84-a534-3417312a2b9c",
+        "id": "7beeec20-7ccb-4847-82ce-ba902a805aab",
         "type": "non-bookable",
-        "title": "Friesenbergstrasse 378, 8055 Zürich, Schweiz",
-        "imageUrl": "https://api.grillstelle.ch/images/1700/4001.jpg",
-        "subtitle": "Zürich",
+        "title": "Gislifluegrat oben",
+        "imageUrl": "https://api.grillstelle.ch/images/830/1798.jpg",
+        "subtitle": "Auenstein",
         "category": "fireplaces",
-        "distanceKm": 32.2,
-        "detailPath": "/app/v1/fireplaces/ccc4b737-0865-4f84-a534-3417312a2b9c",
-        "webPath": null,
-        "lat": 47.358351,
-        "lng": 8.495032
+        "distanceKm": 3.5,
+        "detailPath": "/app/v1/fireplaces/7beeec20-7ccb-4847-82ce-ba902a805aab",
+        "webPath": "/nb/detail/7beeec20-7ccb-4847-82ce-ba902a805aab/",
+        "lat": 47.425439,
+        "lng": 8.112324
+      },
+      {
+        "id": "3c83e33a-d572-4b7c-8420-8dea9b98f9a8",
+        "type": "non-bookable",
+        "title": "La femme la plus riche du monde",
+        "imageUrl": "https://img.cinefile.ch/content/images/poster150/c1nef1l3b953415c-a37c-4065-a49f-02566c89e1b2.jpg",
+        "subtitle": null,
+        "category": "movies",
+        "distanceKm": 30.8,
+        "detailPath": "/app/v1/movies/3c83e33a-d572-4b7c-8420-8dea9b98f9a8",
+        "webPath": "/nb/detail/3c83e33a-d572-4b7c-8420-8dea9b98f9a8/",
+        "lat": 47.1863765,
+        "lng": 8.208348749999999
+      },
+      {
+        "id": "86375",
+        "type": "activity",
+        "bookingActivityId": 2615,
+        "title": "Ticket Landesmuseum Zürich",
+        "imageUrl": "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/dab52d294db3208ff83c8511a521bfed.jpg",
+        "subtitle": "Zürich",
+        "priceFormatted": "CHF 13",
+        "startingPrice": {
+          "amount": 13,
+          "currency": "CHF",
+          "formatted": "CHF 13"
+        },
+        "rating": 5,
+        "reviewCount": 5,
+        "path": "/landesmuseum-zuerich/ticket-landesmuseum-zuerich-nationalmuseum/",
+        "webPath": "/landesmuseum-zuerich/ticket-landesmuseum-zuerich-nationalmuseum/",
+        "distanceKm": 32.8,
+        "lat": 47.3791037,
+        "lng": 8.540542799999999,
+        "imageUrls": [
+          "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/dab52d294db3208ff83c8511a521bfed.jpg",
+          "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/c0d01605ffc861fb8687fcb6a70f0992.jpg",
+          "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/f9e0c6b2a6869e72f65e2496f273323e.jpg",
+          "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/c2ba91d9e92e45102ce8c3b4c7432136.jpg",
+          "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/f7a42b87cc4e2f26670a8558d862af76.jpg",
+          "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/8532645617d02a063f8d13d02e23bfc9.jpg",
+          "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/6ba41571e117248791ae6811632b20db.jpg",
+          "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/5681611e84e9b5b964242105910abdcb.jpg",
+          "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/8809bdeef57d82e42b4d889e37521d1a.jpg",
+          "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/f13731b7d9d0b5a2af847364764fcbca.jpg",
+          "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/7b1977c8a2576a4e3d990c67a42fbae6.jpg",
+          "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/3b3fae8fc9d84f28daa93be8e0103b41.jpg",
+          "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/a21be0e0c0173286de5ddaa88eb13620.jpg",
+          "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/f18ed8dce565f14e35b8719d04700a93.jpg",
+          "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/a66377df0a0a4f6977db602b24b87f5f.jpg",
+          "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/809a1071a4c8757e5cded26bb94daafb.jpg",
+          "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/921260c7d84dd8a2ff9be1e59a84e73f.jpg",
+          "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/8fc57a68dafe41c817544ba0bdede4ba.jpg"
+        ]
+      },
+      {
+        "id": "1396fd14-62b4-4973-aaf4-9ac80b99b10e",
+        "type": "non-bookable",
+        "title": "ARK Basel",
+        "imageUrl": "https://www.museums.ch/admin/data/files/organisation_image/image/3101/01_archivansicht_list.jpg?lm=1728890018",
+        "subtitle": "Basel",
+        "category": "museums",
+        "distanceKm": 32.8,
+        "detailPath": "/app/v1/museums/1396fd14-62b4-4973-aaf4-9ac80b99b10e",
+        "webPath": "/nb/detail/1396fd14-62b4-4973-aaf4-9ac80b99b10e/",
+        "lat": 47.52329,
+        "lng": 7.69428
       },
       {
         "id": "1863",
@@ -78,7 +150,7 @@ export const gatewayDetailNonBookableResponse = {
         "reviewCount": 9,
         "path": "/zuerichsee/grosse-seerundfahrt-zuerichsee/",
         "webPath": "/zuerichsee/grosse-seerundfahrt-zuerichsee/",
-        "distanceKm": 35.2,
+        "distanceKm": 33.3,
         "lat": 47.36564772997511,
         "lng": 8.540995717048645,
         "imageUrls": [
@@ -98,19 +170,6 @@ export const gatewayDetailNonBookableResponse = {
         ]
       },
       {
-        "id": "bbb7e85e-7cf6-4560-a837-d8c850a3bfe1",
-        "type": "non-bookable",
-        "title": "Wildnispark Zürich Langenberg",
-        "imageUrl": "https://www.museums.ch/admin/data/files/organisation_image/image/827/885_online_1_wildnispark_zuerich_elch_list.jpg?lm=1728888387",
-        "subtitle": "Langnau a. Albis",
-        "category": "museums",
-        "distanceKm": 37.6,
-        "detailPath": "/app/v1/museums/bbb7e85e-7cf6-4560-a837-d8c850a3bfe1",
-        "webPath": null,
-        "lat": 47.2926494,
-        "lng": 8.5289206
-      },
-      {
         "id": "65142",
         "type": "activity",
         "bookingActivityId": 2555,
@@ -127,7 +186,7 @@ export const gatewayDetailNonBookableResponse = {
         "reviewCount": 25,
         "path": "/lindt-home-of-chocolate/ticket-museum-lindt-home-of-chocolate/",
         "webPath": "/lindt-home-of-chocolate/ticket-museum-lindt-home-of-chocolate/",
-        "distanceKm": 37.8,
+        "distanceKm": 35.9,
         "lat": 47.3182124,
         "lng": 8.5511675,
         "imageUrls": [
@@ -161,7 +220,7 @@ export const gatewayDetailNonBookableResponse = {
         "reviewCount": 47,
         "path": "/stadtfuehrung/stadtfuehrung-basel-altstadtgeschichten/",
         "webPath": "/stadtfuehrung/stadtfuehrung-basel-altstadtgeschichten/",
-        "distanceKm": 39.3,
+        "distanceKm": 41.2,
         "lat": 47.553693,
         "lng": 7.590611299999999,
         "imageUrls": [
@@ -192,7 +251,7 @@ export const gatewayDetailNonBookableResponse = {
         "reviewCount": 32,
         "path": "/rheinfall/rheinfall-kleine-rundfahrt/",
         "webPath": "/rheinfall/rheinfall-kleine-rundfahrt/",
-        "distanceKm": 45.8,
+        "distanceKm": 44.3,
         "lat": 47.6775375,
         "lng": 8.6113906,
         "imageUrls": [
@@ -218,7 +277,7 @@ export const gatewayDetailNonBookableResponse = {
         "reviewCount": 20,
         "path": "/gotthard-panorama-express/ticket-gotthard-panorama-express-luzern-lugano/",
         "webPath": "/gotthard-panorama-express/ticket-gotthard-panorama-express-luzern-lugano/",
-        "distanceKm": 48.1,
+        "distanceKm": 47.3,
         "lat": 47.05125659999999,
         "lng": 8.3105529,
         "imageUrls": [
@@ -256,7 +315,7 @@ export const gatewayDetailNonBookableResponse = {
         "reviewCount": 12,
         "path": "/stadtfuehrung/stadtfuehrung-klassisch-luzern/",
         "webPath": "/stadtfuehrung/stadtfuehrung-klassisch-luzern/",
-        "distanceKm": 48.1,
+        "distanceKm": 47.3,
         "lat": 47.0510563,
         "lng": 8.3101758,
         "imageUrls": [
@@ -269,42 +328,22 @@ export const gatewayDetailNonBookableResponse = {
           "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/68a6af4c953929678bd45a8e63c718de.jpg",
           "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/9ff6a9c8ef88ec35d89aa750b996c21f.jpg"
         ]
-      },
-      {
-        "id": "647",
-        "type": "activity",
-        "bookingActivityId": 424,
-        "title": "\"Prison Breakout\" Escape Room Luzern",
-        "imageUrl": "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/Prison_Break_Escape_Room_dd32eca792.jpg",
-        "subtitle": "Luzern",
-        "priceFormatted": "CHF 100",
-        "startingPrice": {
-          "amount": 100,
-          "currency": "CHF",
-          "formatted": "CHF 100"
-        },
-        "rating": 4.83,
-        "reviewCount": 6,
-        "path": "/escape-room/escape-room-luzern-prison-breakout/",
-        "webPath": "/escape-room/escape-room-luzern-prison-breakout/",
-        "distanceKm": 48.3,
-        "lat": 47.04877500000001,
-        "lng": 8.3057501
-      },
-      {
-        "id": "e72f73f2-f0c2-4fac-addd-a756d2de27c6",
-        "type": "non-bookable",
-        "title": "Bluey at the Cinema: Let's Play Chef Collection",
-        "imageUrl": "https://img.cinefile.ch/content/images/poster150/c1nef1l3846387fb-4250-4451-85c1-d626153366cc.jpg",
-        "subtitle": null,
-        "category": "movies",
-        "distanceKm": 49.3,
-        "detailPath": "/app/v1/movies/e72f73f2-f0c2-4fac-addd-a756d2de27c6",
-        "webPath": null,
-        "lat": 47.050762166666665,
-        "lng": 7.8362091666666664
       }
     ],
     "appliedRadiusKm": 50
-  }
+  },
+  "breadcrumbs": [
+    {
+      "label": "Schweiz",
+      "href": "/freizeitaktivitaeten/"
+    },
+    {
+      "label": "Grillstellen",
+      "href": "/nb/fireplaces/"
+    },
+    {
+      "label": "Waldhäuschen oberhalb Bözenegg",
+      "href": "/nb/detail/483ced04-10bc-4129-8fae-9fb96c0fb51b/"
+    }
+  ]
 } satisfies TGatewayNonBookableDetail;

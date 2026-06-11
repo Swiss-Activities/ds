@@ -32,5 +32,8 @@ export type BaseSectionHeroProps = {
   tabs?: HeroTab[];
   selectedTabId?: string;
   onSelectTab?: (id: string) => void;
+  /** Data refresh in flight: the weather box is covered by a skeleton overlay
+   * (the hero itself renders normally). */
+  refreshing?: boolean;
   className?: string;
 };

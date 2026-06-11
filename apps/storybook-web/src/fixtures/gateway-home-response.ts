@@ -5,33 +5,24 @@ export const gatewayHomeResponse = {
     {
       "id": "hero",
       "component": "hero",
-      "text": "Hi aus der Schweiz. Bewölkt in der Schweiz – was Reisende aus der Schweiz zuerst buchen.",
+      "text": "Grüezi aus der Schweiz! Schön, dass du aus der Schweiz vorbeischaust. Entdecke deine Schweiz-Reise.",
       "destination": null,
       "forecast": {
         "title": "Zürich",
         "data": [
           {
-            "date": "2026-06-09",
-            "day": "Heute",
-            "dayFull": "Heute",
-            "tempMin": 14,
-            "tempMax": 17,
-            "icon": "rainy",
-            "description": "Bewölkt"
-          },
-          {
             "date": "2026-06-10",
             "day": "Mi",
             "dayFull": "Mittwoch",
             "tempMin": 10,
-            "tempMax": 16,
+            "tempMax": 15,
             "icon": "rainy",
-            "description": "Bewölkt"
+            "description": "Leichter Regen"
           },
           {
             "date": "2026-06-11",
-            "day": "Do",
-            "dayFull": "Donnerstag",
+            "day": "Heute",
+            "dayFull": "Heute",
             "tempMin": 9,
             "tempMax": 19,
             "icon": "cloudy",
@@ -41,8 +32,8 @@ export const gatewayHomeResponse = {
             "date": "2026-06-12",
             "day": "Fr",
             "dayFull": "Freitag",
-            "tempMin": 11,
-            "tempMax": 20,
+            "tempMin": 12,
+            "tempMax": 22,
             "icon": "cloudy",
             "description": "Bewölkt"
           },
@@ -50,17 +41,17 @@ export const gatewayHomeResponse = {
             "date": "2026-06-13",
             "day": "Sa",
             "dayFull": "Samstag",
-            "tempMin": 14,
-            "tempMax": 25,
+            "tempMin": 15,
+            "tempMax": 27,
             "icon": "sunny",
-            "description": "Bewölkt"
+            "description": "Meist klar"
           },
           {
             "date": "2026-06-14",
             "day": "So",
             "dayFull": "Sonntag",
-            "tempMin": 14,
-            "tempMax": 26,
+            "tempMin": 15,
+            "tempMax": 25,
             "icon": "sunny",
             "description": "Meist klar"
           },
@@ -69,14 +60,23 @@ export const gatewayHomeResponse = {
             "day": "Mo",
             "dayFull": "Montag",
             "tempMin": 14,
-            "tempMax": 28,
+            "tempMax": 25,
             "icon": "sunny",
-            "description": "Meist klar"
+            "description": "Teilweise bewölkt"
+          },
+          {
+            "date": "2026-06-16",
+            "day": "Di",
+            "dayFull": "Dienstag",
+            "tempMin": 13,
+            "tempMax": 26,
+            "icon": "sunny",
+            "description": "Teilweise bewölkt"
           }
         ]
       },
-      "weather": "cloudy",
-      "weatherLabel": "Bewölkt",
+      "weather": "rainy",
+      "weatherLabel": "Regnerisch",
       "timeOfDay": "afternoon",
       "timeOfDayLabel": "Nachmittag"
     },
@@ -86,52 +86,12 @@ export const gatewayHomeResponse = {
       "title": "Was unternehmen",
       "data": [
         {
-          "id": "fireplaces",
-          "title": "Grillstellen",
-          "iconUrl": "/distributor/icons/fireplaces.svg",
-          "imageUrl": "https://api.grillstelle.ch/images/1700/4001.jpg",
-          "href": "/app/v1/non-bookable/fireplaces",
-          "webPath": "/fireplaces/",
-          "weatherFit": "great",
-          "betterOn": null
-        },
-        {
-          "id": "hiking-routes",
-          "title": "Wanderrouten",
-          "iconUrl": "/distributor/icons/hiking-routes.svg",
-          "imageUrl": "https://images.schweizmobil.ch/image-master/WL_043_05_19_nach_Guarda_R_F_M.jpg",
-          "href": "/app/v1/non-bookable/hiking-routes",
-          "webPath": "/hiking-routes/",
-          "weatherFit": "great",
-          "betterOn": null
-        },
-        {
-          "id": "swimming-bathing",
-          "title": "Seen & Badis",
-          "iconUrl": "/distributor/icons/swimming-bathing.svg",
-          "imageUrl": "https://static.stnet.ch/sospo/images/829/1450-m.jpg",
-          "href": "/app/v1/non-bookable/swimming-bathing",
-          "webPath": "/swimming-bathing/",
-          "weatherFit": "great",
-          "betterOn": null
-        },
-        {
-          "id": "mountainbike-routes",
-          "title": "Mountainbike-Routen",
-          "iconUrl": "/distributor/icons/mountainbike-routes.svg",
-          "imageUrl": "https://images.schweizmobil.ch/image-master/ML_646_IMG_9317_F_M.jpg",
-          "href": "/app/v1/non-bookable/mountainbike-routes",
-          "webPath": "/mountainbike-routes/",
-          "weatherFit": "great",
-          "betterOn": null
-        },
-        {
-          "id": "cycling-routes",
-          "title": "Velorouten",
-          "iconUrl": "/distributor/icons/cycling-routes.svg",
-          "imageUrl": "https://www.myswitzerland.com/-/media/dam/resources/routes/a/a/aare%20route/aare%20route%203/images%20all%20season/19741_32001800.jpeg",
-          "href": "/app/v1/non-bookable/cycling-routes",
-          "webPath": "/cycling-routes/",
+          "id": "paragliding",
+          "title": "Paragliding",
+          "iconUrl": "/distributor/icons/paragliding.svg",
+          "imageUrl": "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/158bcfda87fc18b13a5869ea93d637b1.jpg",
+          "href": "/app/v1/activity-types/paragliding",
+          "webPath": "/paragliding/",
           "weatherFit": "great",
           "betterOn": null
         },
@@ -156,12 +116,52 @@ export const gatewayHomeResponse = {
           "betterOn": null
         },
         {
-          "id": "castles-ruins",
-          "title": "Burgen & Ruinen",
-          "iconUrl": "/distributor/icons/castles-ruins.svg",
-          "imageUrl": "https://www.myswitzerland.com/-/media/dam/resources/experience/c/a/castle%20hegi/images%20all%20season/45295_32001800.jpeg",
-          "href": "/app/v1/non-bookable/castles-ruins",
-          "webPath": "/castles-ruins/",
+          "id": "canyoning",
+          "title": "Canyoning",
+          "iconUrl": "/distributor/icons/canyoning.svg",
+          "imageUrl": "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/Kopie_von_Iragna_28_Foto_Swiss_River_Adventures_b46a27dc39.JPG",
+          "href": "/app/v1/activity-types/canyoning",
+          "webPath": "/canyoning/",
+          "weatherFit": "great",
+          "betterOn": null
+        },
+        {
+          "id": "boat-trips",
+          "title": "Schifffahrten",
+          "iconUrl": "/distributor/icons/boat-trips.svg",
+          "imageUrl": "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/d176279d7607278fc4d17ca01be4cecd.jpg",
+          "href": "/app/v1/activity-types/schifffahrten",
+          "webPath": "/schifffahrten/",
+          "weatherFit": "great",
+          "betterOn": null
+        },
+        {
+          "id": "mountain-bike",
+          "title": "Mountainbike",
+          "iconUrl": "/distributor/icons/mountain-bike.svg",
+          "imageUrl": "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/Velotour_Nachhaltigkeit_Aldo_Bischof_fdf185a040.jpg",
+          "href": "/app/v1/activity-types/mountainbike",
+          "webPath": "/mountainbike/",
+          "weatherFit": "great",
+          "betterOn": null
+        },
+        {
+          "id": "boat-tour",
+          "title": "Bootstour",
+          "iconUrl": "/distributor/icons/boat-tour.svg",
+          "imageUrl": "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/1_26cfe6d162.jpg",
+          "href": "/app/v1/activity-types/bootstour",
+          "webPath": "/bootstour/",
+          "weatherFit": "great",
+          "betterOn": null
+        },
+        {
+          "id": "e-bike",
+          "title": "E-Bike",
+          "iconUrl": "/distributor/icons/e-bike.svg",
+          "imageUrl": "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/8b08f1afb9d3a0dbc5c997e922876119.jpg",
+          "href": "/app/v1/activity-types/e-bike",
+          "webPath": "/e-bike/",
           "weatherFit": "great",
           "betterOn": null
         }
@@ -172,68 +172,6 @@ export const gatewayHomeResponse = {
       "component": "carousel",
       "title": "Was die Schweiz diese Woche bucht",
       "data": [
-        {
-          "id": "346",
-          "type": "activity",
-          "bookingActivityId": 108,
-          "title": "Beatenberg Gleitschirmfliegen Tandem ab Interlaken",
-          "imageUrl": "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/37f230b87aaf197d0213fb0538fefd64.jpg",
-          "subtitle": "Interlaken",
-          "priceFormatted": "CHF 190",
-          "startingPrice": {
-            "amount": 190,
-            "currency": "CHF",
-            "formatted": "CHF 190"
-          },
-          "rating": 4.93,
-          "reviewCount": 92,
-          "path": "/paragliding/gleitschirmfliegen-tandem-beatenberg-interlaken/",
-          "webPath": "/paragliding/gleitschirmfliegen-tandem-beatenberg-interlaken/",
-          "distanceKm": null,
-          "lat": 46.6863125,
-          "lng": 7.857765599999999,
-          "imageUrls": [
-            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/37f230b87aaf197d0213fb0538fefd64.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/d97a9b7f57afeacd4cd3913706e1c649.JPG",
-            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/6d09a4afd626faaf44f9e8a699e57697.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/4b912bdf339cc50e0eab79da69e31425.JPG",
-            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/618074aad49677b608979826cc42fbe4.JPG",
-            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/edecf1691637d96b1f0294f9b653e831.JPG",
-            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/0aee0b488122bda73b9582e49e1d570b.JPG",
-            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/599b28c297e0176ce28f2a86659d9343.JPG",
-            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/c278371eec3de5212899aca598b676a4.JPG"
-          ]
-        },
-        {
-          "id": "320",
-          "type": "activity",
-          "bookingActivityId": 82,
-          "title": "Paragliding Grindelwald ab First",
-          "imageUrl": "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/teaser_4d4fcf80f5.jpg",
-          "subtitle": "Grindelwald",
-          "priceFormatted": "CHF 220",
-          "startingPrice": {
-            "amount": 220,
-            "currency": "CHF",
-            "formatted": "CHF 220"
-          },
-          "rating": 4.8,
-          "reviewCount": 209,
-          "path": "/paragliding/paragliding-grindelwald-first/",
-          "webPath": "/paragliding/paragliding-grindelwald-first/",
-          "distanceKm": null,
-          "lat": 46.625125,
-          "lng": 8.0417791,
-          "imageUrls": [
-            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/teaser_4d4fcf80f5.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/large_gallery_0e9daa757b5b08394a277442b85e92d8_98726710e6.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/medium_gallery_0838d99da9a03e494e0fcf6e22ee00ac_a44646a3cd.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/98fb8d7165c5838b5b928a2ad9f715b2.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/large_gallery_3f7f7ba6a387249b084b82beb476e991_5fb1fb46d9.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/large_GOPR_3781_4a3ed7de3b.JPG",
-            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/55f2c3e667d11a453fe19d4855620584.jpg"
-          ]
-        },
         {
           "id": "612",
           "type": "activity",
@@ -263,96 +201,6 @@ export const gatewayHomeResponse = {
             "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/large_Schynige_Platte_Wandern_Oberberghorn_Jungfrau_4e645bbdea.jpg",
             "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/large_Schynige_Platte_Zahnradbahn_Dampflokomotive_9e4854ee1f.jpg",
             "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/small_Schynige_Platte_Bergrestaurant_Terrasse_Jungfrau_ee6d816fd8.jpg"
-          ]
-        },
-        {
-          "id": "1908",
-          "type": "activity",
-          "bookingActivityId": 1690,
-          "title": "Jungfrauregion Fallschirmspringen aus dem Flugzeug",
-          "imageUrl": "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/fa2c932e6e7ff750a988cb075df355de.jpg",
-          "subtitle": "Interlaken",
-          "priceFormatted": "CHF 425",
-          "startingPrice": {
-            "amount": 425,
-            "currency": "CHF",
-            "formatted": "CHF 425"
-          },
-          "rating": 5,
-          "reviewCount": 6,
-          "path": "/fallschirmspringen/fallschirmspringen-bern-reichenbach/",
-          "webPath": "/fallschirmspringen/fallschirmspringen-bern-reichenbach/",
-          "distanceKm": null,
-          "lat": 46.687574999999995,
-          "lng": 7.860129000000001,
-          "imageUrls": [
-            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/fa2c932e6e7ff750a988cb075df355de.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/6540133c153c738601c28416c95ce5e9.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/gallery_1525ab1db3f868f690428c3cc3cf2800_d7451bfbe6_b9ae16d740.avif",
-            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/skydive_switzerland_interlaken_tandem_skydiving_exit_81bdcbb6a0_cec45fd453.avif",
-            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/gallery_3c63443f610bc3bd133c2deca32dc15b_4c2032cfc7_0d69852082.avif",
-            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/gallery_6a9c78285f40005db449e94e40f323a7_236c3f0e39_b34ebd215e.avif",
-            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/gallery_54c0131a82148fc576b586a0f3935043_070f688d33_8ebafaf135.avif",
-            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/skydive_switzerland_interlaken_tandem_skydiving_11_18e55927d5_21cfc4fb88.avif"
-          ]
-        },
-        {
-          "id": "88831",
-          "type": "activity",
-          "bookingActivityId": 2703,
-          "title": "Reservation Bernina Express Bus ab Lugano oder Tirano",
-          "imageUrl": "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/9abbaee2b92c03c49be4eb0b5b2a0a5a.jpg",
-          "subtitle": "Lugano",
-          "priceFormatted": "CHF 18",
-          "startingPrice": {
-            "amount": 18,
-            "currency": "CHF",
-            "formatted": "CHF 18"
-          },
-          "rating": 4.63,
-          "reviewCount": 30,
-          "path": "/bernina-express-panoramazug/bernina-express-bus-reservation/",
-          "webPath": "/bernina-express-panoramazug/bernina-express-bus-reservation/",
-          "distanceKm": null,
-          "lat": 46.00501999999999,
-          "lng": 8.946959999999999,
-          "imageUrls": [
-            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/9abbaee2b92c03c49be4eb0b5b2a0a5a.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/f259a36fe4a5032fa88ab749512d4e50.jpg"
-          ]
-        },
-        {
-          "id": "919",
-          "type": "activity",
-          "bookingActivityId": 732,
-          "title": "Gornergrat Bahn Ticket ab Zermatt",
-          "imageUrl": "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/751abdee68d094ca8a49a2daa3633f55.jpg",
-          "subtitle": "Zermatt",
-          "priceFormatted": "CHF 66",
-          "startingPrice": {
-            "amount": 66,
-            "currency": "CHF",
-            "formatted": "CHF 66"
-          },
-          "rating": 4.74,
-          "reviewCount": 156,
-          "path": "/gornergrat/bahnticket-retour-gornergrat-bahn/",
-          "webPath": "/gornergrat/bahnticket-retour-gornergrat-bahn/",
-          "distanceKm": null,
-          "lat": 46.0239501,
-          "lng": 7.7484824,
-          "imageUrls": [
-            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/751abdee68d094ca8a49a2daa3633f55.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/9f2837a557a415de64a22c043fe3306b.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/8d13f2322bec91c5871a2557bbd6af3f.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/682bfe2cfb5d2eff1e6be5544b064476.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/large_Gleitschirm_Simulator_Zooom_the_Matterhorn_be6b682611.webp",
-            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/large_3_D_Kino_Zooom_the_Matterhorn_1d4f354e6a.webp",
-            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/fb674b17ac1ea5c70cd84725ac2f55cd.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/cac65f9b5e6558c8a99db1d86b1429ad.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/e414d399c923773684701ee3a50b8e5a.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/cb5ef5a1779cf2a6541899c2e79b40a4.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/medium_Aussicht_Gornergratbahn_Bergsee_6b1760abe6.jpeg"
           ]
         },
         {
@@ -395,6 +243,127 @@ export const gatewayHomeResponse = {
           ]
         },
         {
+          "id": "346",
+          "type": "activity",
+          "bookingActivityId": 108,
+          "title": "Beatenberg Gleitschirmfliegen Tandem ab Interlaken",
+          "imageUrl": "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/37f230b87aaf197d0213fb0538fefd64.jpg",
+          "subtitle": "Interlaken",
+          "priceFormatted": "CHF 190",
+          "startingPrice": {
+            "amount": 190,
+            "currency": "CHF",
+            "formatted": "CHF 190"
+          },
+          "rating": 4.94,
+          "reviewCount": 93,
+          "path": "/paragliding/gleitschirmfliegen-tandem-beatenberg-interlaken/",
+          "webPath": "/paragliding/gleitschirmfliegen-tandem-beatenberg-interlaken/",
+          "distanceKm": null,
+          "lat": 46.6863125,
+          "lng": 7.857765599999999,
+          "imageUrls": [
+            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/37f230b87aaf197d0213fb0538fefd64.jpg",
+            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/d97a9b7f57afeacd4cd3913706e1c649.JPG",
+            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/6d09a4afd626faaf44f9e8a699e57697.jpg",
+            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/4b912bdf339cc50e0eab79da69e31425.JPG",
+            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/618074aad49677b608979826cc42fbe4.JPG",
+            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/edecf1691637d96b1f0294f9b653e831.JPG",
+            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/0aee0b488122bda73b9582e49e1d570b.JPG",
+            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/599b28c297e0176ce28f2a86659d9343.JPG",
+            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/c278371eec3de5212899aca598b676a4.JPG"
+          ]
+        },
+        {
+          "id": "919",
+          "type": "activity",
+          "bookingActivityId": 732,
+          "title": "Gornergrat Bahn Ticket ab Zermatt",
+          "imageUrl": "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/751abdee68d094ca8a49a2daa3633f55.jpg",
+          "subtitle": "Zermatt",
+          "priceFormatted": "CHF 66",
+          "startingPrice": {
+            "amount": 66,
+            "currency": "CHF",
+            "formatted": "CHF 66"
+          },
+          "rating": 4.74,
+          "reviewCount": 156,
+          "path": "/gornergrat/bahnticket-retour-gornergrat-bahn/",
+          "webPath": "/gornergrat/bahnticket-retour-gornergrat-bahn/",
+          "distanceKm": null,
+          "lat": 46.0239501,
+          "lng": 7.7484824,
+          "imageUrls": [
+            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/751abdee68d094ca8a49a2daa3633f55.jpg",
+            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/9f2837a557a415de64a22c043fe3306b.jpg",
+            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/8d13f2322bec91c5871a2557bbd6af3f.jpg",
+            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/682bfe2cfb5d2eff1e6be5544b064476.jpg",
+            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/large_Gleitschirm_Simulator_Zooom_the_Matterhorn_be6b682611.webp",
+            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/large_3_D_Kino_Zooom_the_Matterhorn_1d4f354e6a.webp",
+            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/fb674b17ac1ea5c70cd84725ac2f55cd.jpg",
+            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/cac65f9b5e6558c8a99db1d86b1429ad.jpg",
+            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/e414d399c923773684701ee3a50b8e5a.jpg",
+            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/cb5ef5a1779cf2a6541899c2e79b40a4.jpg",
+            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/medium_Aussicht_Gornergratbahn_Bergsee_6b1760abe6.jpeg"
+          ]
+        },
+        {
+          "id": "320",
+          "type": "activity",
+          "bookingActivityId": 82,
+          "title": "Paragliding Grindelwald ab First",
+          "imageUrl": "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/teaser_4d4fcf80f5.jpg",
+          "subtitle": "Grindelwald",
+          "priceFormatted": "CHF 220",
+          "startingPrice": {
+            "amount": 220,
+            "currency": "CHF",
+            "formatted": "CHF 220"
+          },
+          "rating": 4.8,
+          "reviewCount": 209,
+          "path": "/paragliding/paragliding-grindelwald-first/",
+          "webPath": "/paragliding/paragliding-grindelwald-first/",
+          "distanceKm": null,
+          "lat": 46.625125,
+          "lng": 8.0417791,
+          "imageUrls": [
+            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/teaser_4d4fcf80f5.jpg",
+            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/large_gallery_0e9daa757b5b08394a277442b85e92d8_98726710e6.jpg",
+            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/medium_gallery_0838d99da9a03e494e0fcf6e22ee00ac_a44646a3cd.jpg",
+            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/98fb8d7165c5838b5b928a2ad9f715b2.jpg",
+            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/large_gallery_3f7f7ba6a387249b084b82beb476e991_5fb1fb46d9.jpg",
+            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/large_GOPR_3781_4a3ed7de3b.JPG",
+            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/55f2c3e667d11a453fe19d4855620584.jpg"
+          ]
+        },
+        {
+          "id": "88831",
+          "type": "activity",
+          "bookingActivityId": 2703,
+          "title": "Reservation Bernina Express Bus ab Lugano oder Tirano",
+          "imageUrl": "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/9abbaee2b92c03c49be4eb0b5b2a0a5a.jpg",
+          "subtitle": "Lugano",
+          "priceFormatted": "CHF 18",
+          "startingPrice": {
+            "amount": 18,
+            "currency": "CHF",
+            "formatted": "CHF 18"
+          },
+          "rating": 4.63,
+          "reviewCount": 30,
+          "path": "/bernina-express-panoramazug/bernina-express-bus-reservation/",
+          "webPath": "/bernina-express-panoramazug/bernina-express-bus-reservation/",
+          "distanceKm": null,
+          "lat": 46.00501999999999,
+          "lng": 8.946959999999999,
+          "imageUrls": [
+            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/9abbaee2b92c03c49be4eb0b5b2a0a5a.jpg",
+            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/f259a36fe4a5032fa88ab749512d4e50.jpg"
+          ]
+        },
+        {
           "id": "1874",
           "type": "activity",
           "bookingActivityId": 1656,
@@ -427,6 +396,37 @@ export const gatewayHomeResponse = {
           ]
         },
         {
+          "id": "1908",
+          "type": "activity",
+          "bookingActivityId": 1690,
+          "title": "Jungfrauregion Fallschirmspringen aus dem Flugzeug",
+          "imageUrl": "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/fa2c932e6e7ff750a988cb075df355de.jpg",
+          "subtitle": "Interlaken",
+          "priceFormatted": "CHF 425",
+          "startingPrice": {
+            "amount": 425,
+            "currency": "CHF",
+            "formatted": "CHF 425"
+          },
+          "rating": 5,
+          "reviewCount": 6,
+          "path": "/fallschirmspringen/fallschirmspringen-bern-reichenbach/",
+          "webPath": "/fallschirmspringen/fallschirmspringen-bern-reichenbach/",
+          "distanceKm": null,
+          "lat": 46.687574999999995,
+          "lng": 7.860129000000001,
+          "imageUrls": [
+            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/fa2c932e6e7ff750a988cb075df355de.jpg",
+            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/6540133c153c738601c28416c95ce5e9.jpg",
+            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/gallery_1525ab1db3f868f690428c3cc3cf2800_d7451bfbe6_b9ae16d740.avif",
+            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/skydive_switzerland_interlaken_tandem_skydiving_exit_81bdcbb6a0_cec45fd453.avif",
+            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/gallery_3c63443f610bc3bd133c2deca32dc15b_4c2032cfc7_0d69852082.avif",
+            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/gallery_6a9c78285f40005db449e94e40f323a7_236c3f0e39_b34ebd215e.avif",
+            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/gallery_54c0131a82148fc576b586a0f3935043_070f688d33_8ebafaf135.avif",
+            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/skydive_switzerland_interlaken_tandem_skydiving_11_18e55927d5_21cfc4fb88.avif"
+          ]
+        },
+        {
           "id": "90670",
           "type": "activity",
           "bookingActivityId": 2781,
@@ -453,25 +453,35 @@ export const gatewayHomeResponse = {
           ]
         },
         {
-          "id": "634",
+          "id": "2241",
           "type": "activity",
-          "bookingActivityId": 422,
-          "title": "Breithorn Bergtour ab Zermatt geführt: Privat oder Gruppe",
-          "imageUrl": "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/Breithorn_Zermatters_Bergtour_4000er_Alpen_c71af704d7.jpg",
-          "subtitle": "Zermatt",
-          "priceFormatted": "CHF 225",
+          "bookingActivityId": 2006,
+          "title": "Ticket Maison Cailler Schokoladenfabrik",
+          "imageUrl": "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/0_Maison_Cailler_Experience3_6a2ed8cccc.jpg",
+          "subtitle": "Broc",
+          "priceFormatted": "CHF 17",
           "startingPrice": {
-            "amount": 225,
+            "amount": 17,
             "currency": "CHF",
-            "formatted": "CHF 225"
+            "formatted": "CHF 17"
           },
-          "rating": 4.81,
-          "reviewCount": 42,
-          "path": "/bergtour/breithorn-tour-mit-guide-wallis/",
-          "webPath": "/bergtour/breithorn-tour-mit-guide-wallis/",
+          "rating": 4.69,
+          "reviewCount": 107,
+          "path": "/maison-cailler/maison-cailler-ticket/",
+          "webPath": "/maison-cailler/maison-cailler-ticket/",
           "distanceKm": null,
-          "lat": 46.014423,
-          "lng": 7.742350999999999
+          "lat": 46.6068782,
+          "lng": 7.1087393,
+          "imageUrls": [
+            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/0_Maison_Cailler_Experience3_6a2ed8cccc.jpg",
+            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/large_Maison_Cailler_Atelierdu_Chocolat_95e2ec745f.jpg",
+            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/large_Maison_Cailler_Cafe_c804bb2ce1.jpg",
+            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/large_Maison_Cailler_Experience2_2f171d150f.jpg",
+            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/large_Maison_Cailler_Facade_55588ba243.jpg",
+            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/large_Maison_Cailler_Tasting_7f618dbde2.jpg",
+            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/large_Photo_Maison_Cailler_Ateliers_Champion_Foot_DEF_0ae4f05703.jpg",
+            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/large_Cailler_Train_Chocolat_Express_dbb0ce6260.jpg"
+          ]
         }
       ]
     },
@@ -480,32 +490,6 @@ export const gatewayHomeResponse = {
       "component": "carousel",
       "title": "Von Reisenden wie dir",
       "data": [
-        {
-          "id": "752",
-          "type": "review",
-          "title": "Schynige Platte Ticket Zahnradbahn ab Wilderswil",
-          "activityId": "612",
-          "bookingActivityId": 400,
-          "imageUrl": "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/Schynige_Platte_Bahn_Panorama_Eiger_Moench_Jungfrau_86b1982139.jpg",
-          "path": "/schynige-platte/schynige-platte-ticket-retour-zahnradbahn/",
-          "rating": 5,
-          "body": "Sehr tolle Erfahrung !",
-          "reviewerName": "Tania",
-          "reviewerCountry": "CH"
-        },
-        {
-          "id": "12148",
-          "type": "review",
-          "title": "Gornergrat Bahn Ticket ab Zermatt",
-          "activityId": "919",
-          "bookingActivityId": 732,
-          "imageUrl": "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/751abdee68d094ca8a49a2daa3633f55.jpg",
-          "path": "/gornergrat/bahnticket-retour-gornergrat-bahn/",
-          "rating": 5,
-          "body": "Der Ausblick.",
-          "reviewerName": "Valentyna Siryk",
-          "reviewerCountry": "CH"
-        },
         {
           "id": "641",
           "type": "review",
@@ -520,16 +504,16 @@ export const gatewayHomeResponse = {
           "reviewerCountry": "CH"
         },
         {
-          "id": "11774",
+          "id": "11883",
           "type": "review",
-          "title": "Paragliding Grindelwald ab First",
-          "activityId": "320",
-          "bookingActivityId": 82,
-          "imageUrl": "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/teaser_4d4fcf80f5.jpg",
-          "path": "/paragliding/paragliding-grindelwald-first/",
+          "title": "Ticket Stoosbahn ab Schwyz ",
+          "activityId": "1874",
+          "bookingActivityId": 1656,
+          "imageUrl": "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/Stoos_valley_station_Foto_Schweiz_Tourismus_Lorenz_Richard_307432742e.jpg",
+          "path": "/stoosbahn-standseilbahn/standseilbahn-schwyz-stoos/",
           "rating": 5,
-          "body": "Toller Flug mit Pilot Seb.",
-          "reviewerName": "Ellie Sik Yin",
+          "body": "Alles ist wunderschön, sehr nettes Personal. Immer wieder gerne. Top!",
+          "reviewerName": "Enikő",
           "reviewerCountry": "CH"
         },
         {
@@ -546,16 +530,42 @@ export const gatewayHomeResponse = {
           "reviewerCountry": "CH"
         },
         {
-          "id": "11883",
+          "id": "12024",
           "type": "review",
-          "title": "Ticket Stoosbahn ab Schwyz ",
-          "activityId": "1874",
-          "bookingActivityId": 1656,
-          "imageUrl": "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/Stoos_valley_station_Foto_Schweiz_Tourismus_Lorenz_Richard_307432742e.jpg",
-          "path": "/stoosbahn-standseilbahn/standseilbahn-schwyz-stoos/",
+          "title": "Ticket Maison Cailler Schokoladenfabrik",
+          "activityId": "2241",
+          "bookingActivityId": 2006,
+          "imageUrl": "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/0_Maison_Cailler_Experience3_6a2ed8cccc.jpg",
+          "path": "/maison-cailler/maison-cailler-ticket/",
           "rating": 5,
-          "body": "Alles ist wunderschön, sehr nettes Personal. Immer wieder gerne. Top!",
-          "reviewerName": "Enikő",
+          "body": "Die Freundlichkeit und die rasche Bereitstellung der Informationen für meinen Mann, der einen Rollstuhl brauchte. Es war wirklich angenehm für ihn.",
+          "reviewerName": "Antonio",
+          "reviewerCountry": "CH"
+        },
+        {
+          "id": "11774",
+          "type": "review",
+          "title": "Paragliding Grindelwald ab First",
+          "activityId": "320",
+          "bookingActivityId": 82,
+          "imageUrl": "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/teaser_4d4fcf80f5.jpg",
+          "path": "/paragliding/paragliding-grindelwald-first/",
+          "rating": 5,
+          "body": "Toller Flug mit Pilot Seb.",
+          "reviewerName": "Ellie Sik Yin",
+          "reviewerCountry": "CH"
+        },
+        {
+          "id": "12148",
+          "type": "review",
+          "title": "Gornergrat Bahn Ticket ab Zermatt",
+          "activityId": "919",
+          "bookingActivityId": 732,
+          "imageUrl": "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/751abdee68d094ca8a49a2daa3633f55.jpg",
+          "path": "/gornergrat/bahnticket-retour-gornergrat-bahn/",
+          "rating": 5,
+          "body": "Der Ausblick.",
+          "reviewerName": "Valentyna Siryk",
           "reviewerCountry": "CH"
         }
       ]
@@ -565,6 +575,72 @@ export const gatewayHomeResponse = {
       "component": "carousel",
       "title": "Sommer am Wasser, in deiner Nähe",
       "data": [
+        {
+          "id": "276",
+          "type": "activity",
+          "bookingActivityId": 38,
+          "title": "Kajak Tour im Sommer auf dem Brienzersee",
+          "imageUrl": "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/teaser_fb0b4fa6b4.jpg",
+          "subtitle": "Bönigen",
+          "priceFormatted": "CHF 115",
+          "startingPrice": {
+            "amount": 115,
+            "currency": "CHF",
+            "formatted": "CHF 115"
+          },
+          "rating": 4.7,
+          "reviewCount": 10,
+          "path": "/kajak/kajaktour-sommer-brienzerse/",
+          "webPath": "/kajak/kajaktour-sommer-brienzerse/",
+          "distanceKm": null,
+          "lat": 46.6881192,
+          "lng": 7.897935899999999,
+          "imageUrls": [
+            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/teaser_fb0b4fa6b4.jpg",
+            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/large_gallery_11d6da80569d3627fe2b2d10ac1e2b3c_a567960fee.jpg",
+            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/large_Gruppentour_Kajak_Brienzersee_ac06a32b02.jpg",
+            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/large_gallery_915e272a874959b64c618f2a36244764_57b7755d9a.jpg",
+            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/large_gallery_e35eeb3bf34157c38c1cd0fa2ba58d3e_f03a596d78.jpg",
+            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/large_gallery_445e7060f9b1c82c9a685e888b48cce5_1c75fc5510.jpg",
+            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/medium_Halbtagestour_Kajak_ccd1b03f96.jpg",
+            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/small_Kajak_Schule_Brienzersee_ff5964209d.jpg",
+            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/large_Gefuehrte_Kajaktour_Brienzersee_942144149e.jpg"
+          ]
+        },
+        {
+          "id": "323",
+          "type": "activity",
+          "bookingActivityId": 85,
+          "title": "Saxetenschlucht Canyoning für Anfänger in Interlaken",
+          "imageUrl": "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/Saxetenschlucht_Einsteiger_Canyoning_Wasserfall_50e38b6fc3.jpg",
+          "subtitle": "Interlaken",
+          "priceFormatted": "CHF 139",
+          "startingPrice": {
+            "amount": 139,
+            "currency": "CHF",
+            "formatted": "CHF 139"
+          },
+          "rating": 4.76,
+          "reviewCount": 33,
+          "path": "/canyoning/canyoning-interlaken-anfaenger/",
+          "webPath": "/canyoning/canyoning-interlaken-anfaenger/",
+          "distanceKm": null,
+          "lat": 46.6708669,
+          "lng": 7.8784707,
+          "imageUrls": [
+            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/Saxetenschlucht_Einsteiger_Canyoning_Wasserfall_50e38b6fc3.jpg",
+            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/medium_Anfaenger_Canyoning_Saxetenschlucht_eb88c7bde8.jpg",
+            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/medium_Floating_Canyoning_Einsteiger_Saxetenschlucht_e808fec59c.jpg",
+            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/medium_Abseilen_Anfaenger_Canyoning_Saxetenschlucht_685a759bea.jpg",
+            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/medium_Schluchtenwandern_Interlaken_Beginner_Saxetenschlucht_217adc296e.jpg",
+            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/medium_Gruppenausflug_Canyoning_Beginner_Saxetenschlucht_7618d3425d.jpg",
+            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/medium_Canyoning_Interlaken_Anfaenger_Saxetenschlucht_e5398d5c26.jpg",
+            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/medium_Abseilen_10_Meter_Anfaenger_Canyoning_Saxetenschlucht_f59b15483e.jpg",
+            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/medium_Einsteiger_Canyoning_Saxetenschlucht_80a151cceb.jpg",
+            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/medium_Sprung_Canyoning_Anfaenger_Saxetenschlucht_5fedfd9197.jpg",
+            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/medium_Gruppenausflug_Canyoning_Einsteiger_Saxetenschlucht_93d9ad0b70.jpg"
+          ]
+        },
         {
           "id": "143662",
           "type": "activity",
@@ -625,95 +701,38 @@ export const gatewayHomeResponse = {
           ]
         },
         {
-          "id": "90670",
+          "id": "626",
           "type": "activity",
-          "bookingActivityId": 2781,
-          "title": "3A 30 Minuten Rundfahrt zum Rheinfall mit dem Schiff",
-          "imageUrl": "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/07faf4277f845319b242dc6296a52116.jpg",
-          "subtitle": "Neuhausen am Rheinfall  ",
-          "priceFormatted": "CHF 10",
+          "bookingActivityId": 415,
+          "title": "Verzascatal Canyoning Corippo Schlucht Basic für Anfänger ",
+          "imageUrl": "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/38bb4464406d003d77f104a17cac57ed.jpg",
+          "subtitle": "Verzasca",
+          "priceFormatted": "CHF 159",
           "startingPrice": {
-            "amount": 10,
+            "amount": 159,
             "currency": "CHF",
-            "formatted": "CHF 10"
+            "formatted": "CHF 159"
           },
-          "rating": 4.84,
-          "reviewCount": 32,
-          "path": "/rheinfall/rheinfall-kleine-rundfahrt/",
-          "webPath": "/rheinfall/rheinfall-kleine-rundfahrt/",
-          "distanceKm": null,
-          "lat": 47.6775375,
-          "lng": 8.6113906,
-          "imageUrls": [
-            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/07faf4277f845319b242dc6296a52116.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/2f16ea3b64a9db026f726ecfcfa4a593.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/94963c230bde26024774ecef449909f7.jpg"
-          ]
-        },
-        {
-          "id": "323",
-          "type": "activity",
-          "bookingActivityId": 85,
-          "title": "Saxetenschlucht Canyoning für Anfänger in Interlaken",
-          "imageUrl": "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/Saxetenschlucht_Einsteiger_Canyoning_Wasserfall_50e38b6fc3.jpg",
-          "subtitle": "Interlaken",
-          "priceFormatted": "CHF 139",
-          "startingPrice": {
-            "amount": 139,
-            "currency": "CHF",
-            "formatted": "CHF 139"
-          },
-          "rating": 4.76,
-          "reviewCount": 33,
-          "path": "/canyoning/canyoning-interlaken-anfaenger/",
-          "webPath": "/canyoning/canyoning-interlaken-anfaenger/",
-          "distanceKm": null,
-          "lat": 46.6708669,
-          "lng": 7.8784707,
-          "imageUrls": [
-            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/Saxetenschlucht_Einsteiger_Canyoning_Wasserfall_50e38b6fc3.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/medium_Anfaenger_Canyoning_Saxetenschlucht_eb88c7bde8.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/medium_Floating_Canyoning_Einsteiger_Saxetenschlucht_e808fec59c.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/medium_Abseilen_Anfaenger_Canyoning_Saxetenschlucht_685a759bea.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/medium_Schluchtenwandern_Interlaken_Beginner_Saxetenschlucht_217adc296e.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/medium_Gruppenausflug_Canyoning_Beginner_Saxetenschlucht_7618d3425d.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/medium_Canyoning_Interlaken_Anfaenger_Saxetenschlucht_e5398d5c26.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/medium_Abseilen_10_Meter_Anfaenger_Canyoning_Saxetenschlucht_f59b15483e.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/medium_Einsteiger_Canyoning_Saxetenschlucht_80a151cceb.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/medium_Sprung_Canyoning_Anfaenger_Saxetenschlucht_5fedfd9197.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/medium_Gruppenausflug_Canyoning_Einsteiger_Saxetenschlucht_93d9ad0b70.jpg"
-          ]
-        },
-        {
-          "id": "276",
-          "type": "activity",
-          "bookingActivityId": 38,
-          "title": "Kajak Tour im Sommer auf dem Brienzersee",
-          "imageUrl": "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/teaser_fb0b4fa6b4.jpg",
-          "subtitle": "Bönigen",
-          "priceFormatted": "CHF 115",
-          "startingPrice": {
-            "amount": 115,
-            "currency": "CHF",
-            "formatted": "CHF 115"
-          },
-          "rating": 4.7,
+          "rating": 4.8,
           "reviewCount": 10,
-          "path": "/kajak/kajaktour-sommer-brienzerse/",
-          "webPath": "/kajak/kajaktour-sommer-brienzerse/",
+          "path": "/corippo-schlucht-verzascatal/canyoning-tessin-anfaenger-verzascatal/",
+          "webPath": "/corippo-schlucht-verzascatal/canyoning-tessin-anfaenger-verzascatal/",
           "distanceKm": null,
-          "lat": 46.6881192,
-          "lng": 7.897935899999999,
+          "lat": 46.24070727665202,
+          "lng": 8.84461131421903,
           "imageUrls": [
-            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/teaser_fb0b4fa6b4.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/large_gallery_11d6da80569d3627fe2b2d10ac1e2b3c_a567960fee.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/large_Gruppentour_Kajak_Brienzersee_ac06a32b02.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/large_gallery_915e272a874959b64c618f2a36244764_57b7755d9a.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/large_gallery_e35eeb3bf34157c38c1cd0fa2ba58d3e_f03a596d78.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/large_gallery_445e7060f9b1c82c9a685e888b48cce5_1c75fc5510.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/medium_Halbtagestour_Kajak_ccd1b03f96.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/small_Kajak_Schule_Brienzersee_ff5964209d.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/large_Gefuehrte_Kajaktour_Brienzersee_942144149e.jpg"
+            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/38bb4464406d003d77f104a17cac57ed.jpg",
+            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/8aa29d40ab767a41576636c286e98d88.jpg",
+            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/449989db231b5301d202b95145f8b8d8.jpg",
+            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/7a7c7cea005bda03d9bb7dc2c4a1e68f.jpg",
+            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/df53b56d47b1c4cc17024bf91d1ae042.jpg",
+            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/521cc5525390870654fe6c2ee9d943a0.jpg",
+            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/023b18166dc7145b2b7e09e09aef2597.jpg",
+            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/71d8a1d4e964989380fea36e0c727367.jpg",
+            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/c0efe47e93e7562fcbe6f52d07336230.jpg",
+            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/7e12d3cd261bbf0fb27fc040bf67ad15.jpg",
+            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/3bb2551ccc0ef738913b171a60a01755.jpg",
+            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/c32c487cb0ec2dddeeafa70724541884.jpg"
           ]
         },
         {
@@ -752,86 +771,6 @@ export const gatewayHomeResponse = {
           ]
         },
         {
-          "id": "626",
-          "type": "activity",
-          "bookingActivityId": 415,
-          "title": "Verzascatal Canyoning Corippo Schlucht Basic für Anfänger ",
-          "imageUrl": "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/38bb4464406d003d77f104a17cac57ed.jpg",
-          "subtitle": "Verzasca",
-          "priceFormatted": "CHF 159",
-          "startingPrice": {
-            "amount": 159,
-            "currency": "CHF",
-            "formatted": "CHF 159"
-          },
-          "rating": 4.8,
-          "reviewCount": 10,
-          "path": "/corippo-schlucht-verzascatal/canyoning-tessin-anfaenger-verzascatal/",
-          "webPath": "/corippo-schlucht-verzascatal/canyoning-tessin-anfaenger-verzascatal/",
-          "distanceKm": null,
-          "lat": 46.24070727665202,
-          "lng": 8.84461131421903,
-          "imageUrls": [
-            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/38bb4464406d003d77f104a17cac57ed.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/8aa29d40ab767a41576636c286e98d88.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/449989db231b5301d202b95145f8b8d8.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/7a7c7cea005bda03d9bb7dc2c4a1e68f.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/df53b56d47b1c4cc17024bf91d1ae042.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/521cc5525390870654fe6c2ee9d943a0.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/023b18166dc7145b2b7e09e09aef2597.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/71d8a1d4e964989380fea36e0c727367.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/c0efe47e93e7562fcbe6f52d07336230.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/7e12d3cd261bbf0fb27fc040bf67ad15.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/3bb2551ccc0ef738913b171a60a01755.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/c32c487cb0ec2dddeeafa70724541884.jpg"
-          ]
-        },
-        {
-          "id": "505",
-          "type": "activity",
-          "bookingActivityId": 308,
-          "title": "Boggera Canyoning für Einsteiger",
-          "imageUrl": "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/GP_Temp_Download_199_773d7e8232.jpg",
-          "subtitle": "Riviera",
-          "priceFormatted": "CHF 135",
-          "startingPrice": {
-            "amount": 135,
-            "currency": "CHF",
-            "formatted": "CHF 135"
-          },
-          "rating": 4.83,
-          "reviewCount": 6,
-          "path": "/canyoning/canyoning-tessin-anfaenger-boggera/",
-          "webPath": "/canyoning/canyoning-tessin-anfaenger-boggera/",
-          "distanceKm": null,
-          "lat": 46.31197299999999,
-          "lng": 8.9870632,
-          "imageUrls": [
-            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/GP_Temp_Download_199_773d7e8232.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/large_GP_Temp_Download_187_67a60f8054.JPG",
-            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/large_Boggera_Anfaenger_Canyoning_432f7527c5.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/large_GP_Temp_Download_209_145fe49dd1.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/medium_Boggera_Anfaenger_Canyoning_Wasser_98a0d5aaa7.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/large_GP_Temp_Download_141_31ab332029.JPG",
-            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/large_Rutsche_Boggera_Canyoning_289f8ea478.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/medium_Canyoning_Boggera_d77267b016.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/medium_Boggera_Canyoning_164670c422.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/large_Boggera_10m_jump_fdfb009d82.webp",
-            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/large_GH_011946_164521b0aa.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/medium_GP_Temp_Download_170_6093a280f0.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/large_GP_Temp_Download_173_ccab4ba533.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/large_GP_Temp_Download_174_51bc7a3f6b.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/large_GP_Temp_Download_175_5056721ced.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/large_GP_Temp_Download_188_24fbe66060.JPG",
-            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/large_GP_Temp_Download_201_aa59e97fd3.JPG",
-            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/large_GP_Temp_Download_210_da087341b4.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/large_GP_Temp_Download_271_58108d04ae.JPG",
-            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/large_GP_Temp_Download_292_23103083e3.JPG",
-            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/large_GX_011939_54f6140d82.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/large_GX_011943_3d2218e8ce.jpg"
-          ]
-        },
-        {
           "id": "717",
           "type": "activity",
           "bookingActivityId": 498,
@@ -861,6 +800,36 @@ export const gatewayHomeResponse = {
             "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/large_Rheinschlucht_Rafting_850287417c.jpg",
             "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/large_Rheinschlucht_Unesco_Ruinaulta_ec2b173384.jpg",
             "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/large_Ruinaulta_Rheinschlucht_a05100e65b.jpg"
+          ]
+        },
+        {
+          "id": "87275",
+          "type": "activity",
+          "bookingActivityId": 2638,
+          "title": "Pedalo Miete Thunersee ab Spiez",
+          "imageUrl": "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/83c579ddc9e6770b975363071c23d363.jpg",
+          "subtitle": "Spiez",
+          "priceFormatted": "CHF 30",
+          "startingPrice": {
+            "amount": 30,
+            "currency": "CHF",
+            "formatted": "CHF 30"
+          },
+          "rating": 5,
+          "reviewCount": 2,
+          "path": "/thunersee/miete-padalo-thunersee/",
+          "webPath": "/thunersee/miete-padalo-thunersee/",
+          "distanceKm": null,
+          "lat": 46.68880619999999,
+          "lng": 7.688507199999999,
+          "imageUrls": [
+            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/83c579ddc9e6770b975363071c23d363.jpg",
+            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/2d9b1727469fca8752504887bd911f1e.jpg",
+            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/0c72024ad21f0cfef4e5299424044575.jpg",
+            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/7ff051219a600e7abb018c20f397bf60.jpg",
+            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/cc608595c04cd15afdd819279f3f4f5c.jpg",
+            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/e0c221208abb8835ee3b5e210537a305.jpg",
+            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/82f02e51d63378e4ec5b89bc6d455668.jpg"
           ]
         },
         {
@@ -957,308 +926,6 @@ export const gatewayHomeResponse = {
       ]
     },
     {
-      "id": "planAhead.fallback",
-      "component": "carousel",
-      "title": "Beliebt in der Schweiz: 10 Erlebnisse zum Buchen.",
-      "data": [
-        {
-          "id": "1908",
-          "type": "activity",
-          "bookingActivityId": 1690,
-          "title": "Jungfrauregion Fallschirmspringen aus dem Flugzeug",
-          "imageUrl": "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/fa2c932e6e7ff750a988cb075df355de.jpg",
-          "subtitle": "Interlaken",
-          "priceFormatted": "CHF 425",
-          "startingPrice": {
-            "amount": 425,
-            "currency": "CHF",
-            "formatted": "CHF 425"
-          },
-          "rating": 5,
-          "reviewCount": 6,
-          "path": "/fallschirmspringen/fallschirmspringen-bern-reichenbach/",
-          "webPath": "/fallschirmspringen/fallschirmspringen-bern-reichenbach/",
-          "distanceKm": null,
-          "lat": 46.687574999999995,
-          "lng": 7.860129000000001,
-          "imageUrls": [
-            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/fa2c932e6e7ff750a988cb075df355de.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/6540133c153c738601c28416c95ce5e9.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/gallery_1525ab1db3f868f690428c3cc3cf2800_d7451bfbe6_b9ae16d740.avif",
-            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/skydive_switzerland_interlaken_tandem_skydiving_exit_81bdcbb6a0_cec45fd453.avif",
-            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/gallery_3c63443f610bc3bd133c2deca32dc15b_4c2032cfc7_0d69852082.avif",
-            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/gallery_6a9c78285f40005db449e94e40f323a7_236c3f0e39_b34ebd215e.avif",
-            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/gallery_54c0131a82148fc576b586a0f3935043_070f688d33_8ebafaf135.avif",
-            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/skydive_switzerland_interlaken_tandem_skydiving_11_18e55927d5_21cfc4fb88.avif"
-          ]
-        },
-        {
-          "id": "43984",
-          "type": "activity",
-          "bookingActivityId": 2307,
-          "title": "Lauterbrunnental Gleitschirmfliegen ab Mürren",
-          "imageUrl": "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/dd3a4085915a1faeaed44f0c070051ab.jpeg",
-          "subtitle": "Mürren",
-          "priceFormatted": "CHF 190",
-          "startingPrice": {
-            "amount": 190,
-            "currency": "CHF",
-            "formatted": "CHF 190"
-          },
-          "rating": 5,
-          "reviewCount": 7,
-          "path": "/paragliding/gleitschirmfliegen-lauterbrunnental-muerren/",
-          "webPath": "/paragliding/gleitschirmfliegen-lauterbrunnental-muerren/",
-          "distanceKm": null,
-          "lat": 46.5577125,
-          "lng": 7.8912656,
-          "imageUrls": [
-            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/dd3a4085915a1faeaed44f0c070051ab.jpeg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/056da5c4e5d34c2494970963593e5b47.jpeg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/99947ccabcbb96a29d67bc8812dcb2a3.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/131836fc016b152a438dc91f3e9aa835.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/b8758f005c71700d19839dbb75e8ccb5.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/edc36c5bbd08c6a3e18ef9465e97c6ad.JPG",
-            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/ff5ce2ed253cff102bbc8708819d367f.JPG",
-            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/17625d1154a1fb1101fa98b85eef3d21.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/762bbc61992b5709ebd1e0051359857d.JPG",
-            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/22c31cb2475bf0d94d6dfbc0cea59ce9.JPG",
-            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/ed57851143638e7f0e03e1a6c40ebe63.jpeg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/34928bf154223e430d60e25949ab65e4.JPG",
-            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/15ec277125dd900892e430a54457922c.JPG",
-            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/a7833579530227c6f1db5a75634236b6.JPG",
-            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/654d2d1f9aa1ee07b59a3e92dbb5bafd.JPG",
-            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/1388cca8a1ad07f539baf6a2c078e510.JPG"
-          ]
-        },
-        {
-          "id": "612",
-          "type": "activity",
-          "bookingActivityId": 400,
-          "title": "Schynige Platte Ticket Zahnradbahn ab Wilderswil",
-          "imageUrl": "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/Schynige_Platte_Bahn_Panorama_Eiger_Moench_Jungfrau_86b1982139.jpg",
-          "subtitle": "Wilderswil",
-          "priceFormatted": "CHF 34",
-          "startingPrice": {
-            "amount": 34,
-            "currency": "CHF",
-            "formatted": "CHF 34"
-          },
-          "rating": 4.78,
-          "reviewCount": 191,
-          "path": "/schynige-platte/schynige-platte-ticket-retour-zahnradbahn/",
-          "webPath": "/schynige-platte/schynige-platte-ticket-retour-zahnradbahn/",
-          "distanceKm": null,
-          "lat": 46.665402,
-          "lng": 7.869097099999999,
-          "imageUrls": [
-            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/Schynige_Platte_Bahn_Panorama_Eiger_Moench_Jungfrau_86b1982139.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/large_Schynige_Platte_Bahn_Berglandschaft_4ea75d5659.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/large_Schynige_Platte_Jungfrau_535b733ba8.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/small_Schynige_Platte_Bahn_Huette_jungfrau_798a04c250.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/large_Zahnradbahn_Schynige_Platte_5e49c2cc31.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/large_Schynige_Platte_Wandern_Oberberghorn_Jungfrau_4e645bbdea.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/large_Schynige_Platte_Zahnradbahn_Dampflokomotive_9e4854ee1f.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/small_Schynige_Platte_Bergrestaurant_Terrasse_Jungfrau_ee6d816fd8.jpg"
-          ]
-        },
-        {
-          "id": "919",
-          "type": "activity",
-          "bookingActivityId": 732,
-          "title": "Gornergrat Bahn Ticket ab Zermatt",
-          "imageUrl": "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/751abdee68d094ca8a49a2daa3633f55.jpg",
-          "subtitle": "Zermatt",
-          "priceFormatted": "CHF 66",
-          "startingPrice": {
-            "amount": 66,
-            "currency": "CHF",
-            "formatted": "CHF 66"
-          },
-          "rating": 4.74,
-          "reviewCount": 156,
-          "path": "/gornergrat/bahnticket-retour-gornergrat-bahn/",
-          "webPath": "/gornergrat/bahnticket-retour-gornergrat-bahn/",
-          "distanceKm": null,
-          "lat": 46.0239501,
-          "lng": 7.7484824,
-          "imageUrls": [
-            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/751abdee68d094ca8a49a2daa3633f55.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/9f2837a557a415de64a22c043fe3306b.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/8d13f2322bec91c5871a2557bbd6af3f.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/682bfe2cfb5d2eff1e6be5544b064476.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/large_Gleitschirm_Simulator_Zooom_the_Matterhorn_be6b682611.webp",
-            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/large_3_D_Kino_Zooom_the_Matterhorn_1d4f354e6a.webp",
-            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/fb674b17ac1ea5c70cd84725ac2f55cd.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/cac65f9b5e6558c8a99db1d86b1429ad.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/e414d399c923773684701ee3a50b8e5a.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/cb5ef5a1779cf2a6541899c2e79b40a4.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/medium_Aussicht_Gornergratbahn_Bergsee_6b1760abe6.jpeg"
-          ]
-        },
-        {
-          "id": "88831",
-          "type": "activity",
-          "bookingActivityId": 2703,
-          "title": "Reservation Bernina Express Bus ab Lugano oder Tirano",
-          "imageUrl": "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/9abbaee2b92c03c49be4eb0b5b2a0a5a.jpg",
-          "subtitle": "Lugano",
-          "priceFormatted": "CHF 18",
-          "startingPrice": {
-            "amount": 18,
-            "currency": "CHF",
-            "formatted": "CHF 18"
-          },
-          "rating": 4.63,
-          "reviewCount": 30,
-          "path": "/bernina-express-panoramazug/bernina-express-bus-reservation/",
-          "webPath": "/bernina-express-panoramazug/bernina-express-bus-reservation/",
-          "distanceKm": null,
-          "lat": 46.00501999999999,
-          "lng": 8.946959999999999,
-          "imageUrls": [
-            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/9abbaee2b92c03c49be4eb0b5b2a0a5a.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/f259a36fe4a5032fa88ab749512d4e50.jpg"
-          ]
-        },
-        {
-          "id": "320",
-          "type": "activity",
-          "bookingActivityId": 82,
-          "title": "Paragliding Grindelwald ab First",
-          "imageUrl": "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/teaser_4d4fcf80f5.jpg",
-          "subtitle": "Grindelwald",
-          "priceFormatted": "CHF 220",
-          "startingPrice": {
-            "amount": 220,
-            "currency": "CHF",
-            "formatted": "CHF 220"
-          },
-          "rating": 4.8,
-          "reviewCount": 209,
-          "path": "/paragliding/paragliding-grindelwald-first/",
-          "webPath": "/paragliding/paragliding-grindelwald-first/",
-          "distanceKm": null,
-          "lat": 46.625125,
-          "lng": 8.0417791,
-          "imageUrls": [
-            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/teaser_4d4fcf80f5.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/large_gallery_0e9daa757b5b08394a277442b85e92d8_98726710e6.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/medium_gallery_0838d99da9a03e494e0fcf6e22ee00ac_a44646a3cd.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/98fb8d7165c5838b5b928a2ad9f715b2.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/large_gallery_3f7f7ba6a387249b084b82beb476e991_5fb1fb46d9.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/large_GOPR_3781_4a3ed7de3b.JPG",
-            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/55f2c3e667d11a453fe19d4855620584.jpg"
-          ]
-        },
-        {
-          "id": "43403",
-          "type": "activity",
-          "bookingActivityId": 2279,
-          "title": "Brunch Schiff Zürichsee ab Rapperswil ",
-          "imageUrl": "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/90ee65c172f4421bb91da6640d2a5e1c.jpg",
-          "subtitle": "Rapperswil-Jona",
-          "priceFormatted": "CHF 75",
-          "startingPrice": {
-            "amount": 75,
-            "currency": "CHF",
-            "formatted": "CHF 75"
-          },
-          "rating": 4.9,
-          "reviewCount": 10,
-          "path": "/zuerichsee/hensa-brunch-plausch-rapperswil/",
-          "webPath": "/zuerichsee/hensa-brunch-plausch-rapperswil/",
-          "distanceKm": null,
-          "lat": 47.2255872,
-          "lng": 8.8147012,
-          "imageUrls": [
-            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/90ee65c172f4421bb91da6640d2a5e1c.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/9aaaa4d09b33080551f4d47b36d586b4.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/0cad11d5ed5402166dd03ebe44999d24.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/d8bd59be16a3de48191639d308bf49d0.jpeg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/7834214ffb81c90df3e8ebb4bacc3295.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/cde63a4266f1b40385627b6f384a8f74.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/447c9eb2e07205e2e4078957429f30a4.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/a853080f326b9a0bc252021466ea9148.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/c21b1a515528752f1ccfc290f16254c4.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/46d0676e58cb929d3a5ccb563db2c500.jpg"
-          ]
-        },
-        {
-          "id": "1059",
-          "type": "activity",
-          "bookingActivityId": 858,
-          "title": "Lauterbrunnental Gleitschirmfliegen Tandem ab Mürren",
-          "imageUrl": "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/airtime_paragliding_team_buzz_9acc113e61.jpg",
-          "subtitle": "Mürren",
-          "priceFormatted": "CHF 199",
-          "startingPrice": {
-            "amount": 199,
-            "currency": "CHF",
-            "formatted": "CHF 199"
-          },
-          "rating": 4.94,
-          "reviewCount": 50,
-          "path": "/paragliding/paragliding-lauterbrunnental-tandemflug/",
-          "webPath": "/paragliding/paragliding-lauterbrunnental-tandemflug/",
-          "distanceKm": null,
-          "lat": 46.5576875,
-          "lng": 7.8913125,
-          "imageUrls": [
-            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/airtime_paragliding_team_buzz_9acc113e61.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/large_airtime_paragliding_landscape_11_4173cbbbba.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/large_airtime_paragliding_team_beni_ed1f85945a.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/large_airtime_paragliding_team_bruno_0a588b94ed.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/large_airtime_paragliding_team_michi_bfb3f460af.jpg"
-          ]
-        },
-        {
-          "id": "1874",
-          "type": "activity",
-          "bookingActivityId": 1656,
-          "title": "Ticket Stoosbahn ab Schwyz ",
-          "imageUrl": "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/Stoos_valley_station_Foto_Schweiz_Tourismus_Lorenz_Richard_307432742e.jpg",
-          "subtitle": "Schwyz",
-          "priceFormatted": "CHF 11.60",
-          "startingPrice": {
-            "amount": 11.6,
-            "currency": "CHF",
-            "formatted": "CHF 11.60"
-          },
-          "rating": 4.89,
-          "reviewCount": 44,
-          "path": "/stoosbahn-standseilbahn/standseilbahn-schwyz-stoos/",
-          "webPath": "/stoosbahn-standseilbahn/standseilbahn-schwyz-stoos/",
-          "distanceKm": null,
-          "lat": 46.9913555,
-          "lng": 8.673339600000002,
-          "imageUrls": [
-            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/Stoos_valley_station_Foto_Schweiz_Tourismus_Lorenz_Richard_307432742e.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/large_Schwyz_Stoos_funicular_Foto_Schweiz_Tourismus_Stoosbahnen_AG_Mirielle_Schmidig_b894a3abc4.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/large_Stoos_picnic_break_Foto_Schweiz_Tourismus_Lorenz_Richard_71581e02f5.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/large_Stoosbahn_unsplash_639b8d5392.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/large_Stoos_mountain_station_Foto_Schweiz_Tourismus_Lorenz_Richard_8c2ce868e7.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/large_Kopie_von_Stoos_Dorf_pixabay_3b37d816ad.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/large_Stoos_3_Seraina_8c4e4fa669.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/large_Stoos_1_Seraina_1c744d21f4.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/large_Stoos_2_Seraina_b594dff2ce.jpg"
-          ]
-        }
-      ],
-      "alternates": [
-        {
-          "id": "planAhead.weekend.sunny.nb",
-          "title": "Wochenend-Feuerstellen",
-          "pillarPath": "/app/v1/non-bookable/fireplaces"
-        },
-        {
-          "id": "planAhead.weekend.rainy.museums.nb",
-          "title": "Wochenend-Museen",
-          "pillarPath": "/app/v1/non-bookable/museums"
-        }
-      ]
-    },
-    {
       "id": "region_map",
       "component": "region_map",
       "title": "Schweizer Regionen entdecken",
@@ -1287,7 +954,7 @@ export const gatewayHomeResponse = {
           "title": "Region Basel",
           "path": "/app/v1/regions/region-basel",
           "webPath": "/region-basel/",
-          "numberOfActivities": 51,
+          "numberOfActivities": 50,
           "imageUrl": "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/pier_5992676_eca67c3aac.jpg"
         },
         {
@@ -1323,7 +990,7 @@ export const gatewayHomeResponse = {
           "title": "Region Fribourg",
           "path": "/app/v1/regions/region-fribourg",
           "webPath": "/region-fribourg/",
-          "numberOfActivities": 17,
+          "numberOfActivities": 20,
           "imageUrl": "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/fribourg_4120764_1920_6c2c0f0963.jpg"
         },
         {
@@ -1359,7 +1026,7 @@ export const gatewayHomeResponse = {
           "title": "Region Zürich",
           "path": "/app/v1/regions/region-zuerich",
           "webPath": "/region-zuerich/",
-          "numberOfActivities": 211,
+          "numberOfActivities": 209,
           "imageUrl": "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/henrique_ferreira_6v_K4_Pp_CH_Vw_unsplash_cec30c61c0.jpg"
         },
         {
@@ -1377,7 +1044,7 @@ export const gatewayHomeResponse = {
           "title": "Region Tessin",
           "path": "/app/v1/regions/region-tessin",
           "webPath": "/region-tessin/",
-          "numberOfActivities": 112,
+          "numberOfActivities": 113,
           "imageUrl": "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/bergdorf_3543253_1920_e6bbbe70dc.jpg"
         }
       ]
@@ -1506,6 +1173,19 @@ export const gatewayHomeResponse = {
       "subtitle": "Top bewertet, noch kaum gebucht",
       "data": [
         {
+          "id": "2b643daa-5a8e-4de0-bca0-57ef0463da0b",
+          "type": "non-bookable",
+          "title": "Stilfserjoch",
+          "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/30/Stelvio-pass-1.JPG",
+          "subtitle": null,
+          "category": "viewpoints",
+          "distanceKm": null,
+          "detailPath": null,
+          "webPath": "/nb/detail/2b643daa-5a8e-4de0-bca0-57ef0463da0b/",
+          "lat": 46.5289214,
+          "lng": 10.4540632
+        },
+        {
           "id": "8cfcec49-6698-46cf-95ec-292511820fa0",
           "type": "non-bookable",
           "title": "Eggberge Aussichtspunkt",
@@ -1514,61 +1194,9 @@ export const gatewayHomeResponse = {
           "category": "viewpoints",
           "distanceKm": null,
           "detailPath": null,
-          "webPath": null,
+          "webPath": "/nb/detail/8cfcec49-6698-46cf-95ec-292511820fa0/",
           "lat": 46.9036197,
           "lng": 8.6444107
-        },
-        {
-          "id": "94d0c34c-9fc0-4c96-99aa-1543f52c4aab",
-          "type": "non-bookable",
-          "title": "Château de Villa",
-          "imageUrl": "https://www.myswitzerland.com/-/media/dam/resources/experience/c/h/chateau%20de%20villa/images%20all%20season/52713_32001800.jpeg",
-          "subtitle": "Sierre",
-          "category": "castles-ruins",
-          "distanceKm": null,
-          "detailPath": "/app/v1/castles-ruins/94d0c34c-9fc0-4c96-99aa-1543f52c4aab",
-          "webPath": null,
-          "lat": 46.29419917839737,
-          "lng": 7.521238698911274
-        },
-        {
-          "id": "e13e43db-c99b-44dd-a300-247b3dac3d23",
-          "type": "non-bookable",
-          "title": "Das 1x1 der Burgen im Domleschg",
-          "imageUrl": "https://static.stnet.ch/offers/images/a5d09bdf-f95a-4a64-bc9a-ad7d1047a3c2-o.jpg",
-          "subtitle": "Splügen",
-          "category": "castles-ruins",
-          "distanceKm": null,
-          "detailPath": "/app/v1/castles-ruins/e13e43db-c99b-44dd-a300-247b3dac3d23",
-          "webPath": null,
-          "lat": 46.5535833,
-          "lng": 9.3239048
-        },
-        {
-          "id": "93233fc7-a7f4-4788-a860-0d2d45483464",
-          "type": "non-bookable",
-          "title": "Schloss Hegi",
-          "imageUrl": "https://www.myswitzerland.com/-/media/dam/resources/experience/c/a/castle%20hegi/images%20all%20season/45295_32001800.jpeg",
-          "subtitle": "Winterthur",
-          "category": "castles-ruins",
-          "distanceKm": null,
-          "detailPath": "/app/v1/castles-ruins/93233fc7-a7f4-4788-a860-0d2d45483464",
-          "webPath": null,
-          "lat": 47.5083333,
-          "lng": 8.7692002
-        },
-        {
-          "id": "89aacaae-b2a2-42b8-99b1-aa4abc7a5355",
-          "type": "non-bookable",
-          "title": "Aussichtspunkt (46.651, 7.787)",
-          "imageUrl": "https://www.meielisalp.ch/images/boxen/2_Platz_2020.jpg",
-          "subtitle": null,
-          "category": "viewpoints",
-          "distanceKm": null,
-          "detailPath": null,
-          "webPath": null,
-          "lat": 46.6506738,
-          "lng": 7.7872914
         },
         {
           "id": "720d6cfb-3401-4215-9006-05c554ef1dd1",
@@ -1579,9 +1207,22 @@ export const gatewayHomeResponse = {
           "category": "viewpoints",
           "distanceKm": null,
           "detailPath": null,
-          "webPath": null,
+          "webPath": "/nb/detail/720d6cfb-3401-4215-9006-05c554ef1dd1/",
           "lat": 46.5188619,
           "lng": 10.3983964
+        },
+        {
+          "id": "7106a230-053d-4c7d-9dea-b8222e955027",
+          "type": "non-bookable",
+          "title": "Burgruine Mesocco",
+          "imageUrl": "https://www.myswitzerland.com/-/media/st/gadmin/images/village/summer/1_castello-mesocco-2014-5103_37620.jpg",
+          "subtitle": "San Bernardino",
+          "category": "castles-ruins",
+          "distanceKm": null,
+          "detailPath": "/app/v1/castles-ruins/7106a230-053d-4c7d-9dea-b8222e955027",
+          "webPath": "/nb/detail/7106a230-053d-4c7d-9dea-b8222e955027/",
+          "lat": 46.38051814392846,
+          "lng": 9.232755356019046
         },
         {
           "id": "270c61f4-a344-43eb-8ce0-17ac82837caa",
@@ -1592,35 +1233,48 @@ export const gatewayHomeResponse = {
           "category": "castles-ruins",
           "distanceKm": null,
           "detailPath": "/app/v1/castles-ruins/270c61f4-a344-43eb-8ce0-17ac82837caa",
-          "webPath": null,
+          "webPath": "/nb/detail/270c61f4-a344-43eb-8ce0-17ac82837caa/",
           "lat": 46.31154228154866,
           "lng": 7.642513261875084
         },
         {
-          "id": "72c7028b-0649-4de8-8a0e-34e3801629b7",
+          "id": "02a888a6-cbaa-48c3-a67f-f670b1d8315a",
           "type": "non-bookable",
-          "title": "Schloss Laupen",
-          "imageUrl": "https://www.myswitzerland.com/-/media/st/gadmin/images/attractions/architecture/schloss_laupen_160754.jpg",
-          "subtitle": "Laupen BE",
+          "title": "Schloss Landshut",
+          "imageUrl": "https://www.myswitzerland.com/-/media/st/gadmin/images/destinations/summer/castle/0_00_schlosslandshut_druckformat_251161.jpg",
+          "subtitle": "Utzenstorf",
           "category": "castles-ruins",
           "distanceKm": null,
-          "detailPath": "/app/v1/castles-ruins/72c7028b-0649-4de8-8a0e-34e3801629b7",
-          "webPath": null,
-          "lat": 46.90229280374926,
-          "lng": 7.24186667287228
+          "detailPath": "/app/v1/castles-ruins/02a888a6-cbaa-48c3-a67f-f670b1d8315a",
+          "webPath": "/nb/detail/02a888a6-cbaa-48c3-a67f-f670b1d8315a/",
+          "lat": 47.1293368918458,
+          "lng": 7.558059191782705
         },
         {
-          "id": "59b53a84-cd0e-4e1f-94b4-4247855f8d8a",
+          "id": "ef71b230-7311-4bb2-860e-8ec25f062928",
           "type": "non-bookable",
-          "title": "Château de Glérolles",
-          "imageUrl": "https://www.myswitzerland.com/-/media/dam/resources/experience/c/h/chateau%20de%20glerolles/images%20all%20season/52710_32001800.jpeg",
-          "subtitle": "Saint-Saphorin",
+          "title": "Schloss Reichenau",
+          "imageUrl": "https://www.myswitzerland.com/-/media/st/gadmin/images/cities/summer/cities/20_schloss_reichenau_159541.jpg",
+          "subtitle": "Tamins",
           "category": "castles-ruins",
           "distanceKm": null,
-          "detailPath": "/app/v1/castles-ruins/59b53a84-cd0e-4e1f-94b4-4247855f8d8a",
-          "webPath": null,
-          "lat": 46.4307314291166,
-          "lng": 6.912179813843935
+          "detailPath": "/app/v1/castles-ruins/ef71b230-7311-4bb2-860e-8ec25f062928",
+          "webPath": "/nb/detail/ef71b230-7311-4bb2-860e-8ec25f062928/",
+          "lat": 46.8246006201121,
+          "lng": 9.40947353839874
+        },
+        {
+          "id": "94d0c34c-9fc0-4c96-99aa-1543f52c4aab",
+          "type": "non-bookable",
+          "title": "Château de Villa",
+          "imageUrl": "https://www.myswitzerland.com/-/media/dam/resources/experience/c/h/chateau%20de%20villa/images%20all%20season/52713_32001800.jpeg",
+          "subtitle": "Sierre",
+          "category": "castles-ruins",
+          "distanceKm": null,
+          "detailPath": "/app/v1/castles-ruins/94d0c34c-9fc0-4c96-99aa-1543f52c4aab",
+          "webPath": "/nb/detail/94d0c34c-9fc0-4c96-99aa-1543f52c4aab/",
+          "lat": 46.29419917839737,
+          "lng": 7.521238698911274
         },
         {
           "id": "391f328b-d714-4511-a4fe-61c8606ba4d8",
@@ -1631,9 +1285,22 @@ export const gatewayHomeResponse = {
           "category": "castles-ruins",
           "distanceKm": null,
           "detailPath": "/app/v1/castles-ruins/391f328b-d714-4511-a4fe-61c8606ba4d8",
-          "webPath": null,
+          "webPath": "/nb/detail/391f328b-d714-4511-a4fe-61c8606ba4d8/",
           "lat": 47.6667619890548,
           "lng": 8.858372559033638
+        },
+        {
+          "id": "b18efa97-5376-4b18-abdb-3a8e494e5ce9",
+          "type": "non-bookable",
+          "title": "Schloss Schadau",
+          "imageUrl": "https://www.myswitzerland.com/-/media/dam/resources/experience/s/c/schadau%20castle/images%20all%20season/46619_32001800.jpeg",
+          "subtitle": "Hilterfingen",
+          "category": "castles-ruins",
+          "distanceKm": null,
+          "detailPath": "/app/v1/castles-ruins/b18efa97-5376-4b18-abdb-3a8e494e5ce9",
+          "webPath": "/nb/detail/b18efa97-5376-4b18-abdb-3a8e494e5ce9/",
+          "lat": 46.7461540569027,
+          "lng": 7.63734340667725
         }
       ]
     },
@@ -1684,8 +1351,8 @@ export const gatewayHomeResponse = {
           "title": "2 Tage Schweiz - 9 Reiserouten ab Genf",
           "description": "Diese Auswahl von 9 Reiserouten hilft dir bei der Planung deiner Reise, wenn du zwei Tage in der Schweiz hast. Auch wenn zwei Tage nur eine sehr kurze Zeit sind, gibt es dennoch viele Möglichkeiten für dich. Du kannst den französischen Teil der Schweiz bereisen und einige der Highlights in dieser Region entdecken - wie den Genfersee, die Lavaux-Weinberge und sogar einige Schweizer Schokoladenfabriken. Unsere Sammlung zeigt dir verschiedene Reiserouten, die alle innerhalb von zwei Tagen von Genf aus machbar sind.",
           "imageUrl": "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/0_Genf_Unsplash_cae75b3dc2.jpg",
-          "path": "/travel-guide/reiserouten-schweiz/reiseroute-zwei-tage-schweiz-genf/",
-          "webPath": "/travel-guide/reiserouten-schweiz/reiseroute-zwei-tage-schweiz-genf/"
+          "path": "/reiserouten-schweiz/reiseroute-zwei-tage-schweiz-genf/",
+          "webPath": "/reiserouten-schweiz/reiseroute-zwei-tage-schweiz-genf/"
         },
         {
           "id": "401",
@@ -1693,8 +1360,8 @@ export const gatewayHomeResponse = {
           "title": "2 Tage Schweiz - 12 Reiserouten ab Zürich",
           "description": "Wenn du zwei Tage in der Schweiz verbringst und auf der Suche nach deiner perfekten Reiseroute bist, hilft dir diese Auswahl von 12 Reiserouten bei der Planung deiner Reise. Auch wenn zwei Tage in der Schweiz nur eine sehr kurze Dauer sind, gibt es dennoch viele Möglichkeiten für dich. Unsere Sammlung zeigt dir verschiedene Reiserouten, die alle in zwei Tagen von Zürich aus machbar sind.",
           "imageUrl": "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/Aareschlucht_1_Seraina_ddc3e880da.jpg",
-          "path": "/travel-guide/reiserouten-schweiz/reiseroute-zwei-tage-schweiz-zuerich/",
-          "webPath": "/travel-guide/reiserouten-schweiz/reiseroute-zwei-tage-schweiz-zuerich/"
+          "path": "/reiserouten-schweiz/reiseroute-zwei-tage-schweiz-zuerich/",
+          "webPath": "/reiserouten-schweiz/reiseroute-zwei-tage-schweiz-zuerich/"
         }
       ]
     }

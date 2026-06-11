@@ -39,6 +39,26 @@ const overviewRequests = [
     fileName: "gateway-overview-non-bookable-response.ts",
     path: "non-bookable/fireplaces",
   },
+  {
+    exportName: "gatewayOverviewActivitiesResponse",
+    fileName: "gateway-overview-activities-response.ts",
+    path: "activities-overview",
+  },
+  {
+    exportName: "gatewayOverviewAttributeResponse",
+    fileName: "gateway-overview-attribute-response.ts",
+    path: "attributes/familien",
+  },
+  {
+    exportName: "gatewayOverviewDestinationActivityTypeResponse",
+    fileName: "gateway-overview-destination-activity-type-response.ts",
+    path: "destinations/interlaken/activity-types/paragliding",
+  },
+  {
+    exportName: "gatewayOverviewDestinationAttributeResponse",
+    fileName: "gateway-overview-destination-attribute-response.ts",
+    path: "destinations/interlaken/attributes/hund",
+  },
 ];
 
 function toSearchParams(params) {
@@ -58,7 +78,7 @@ async function fetchGateway(path, params = contextParams) {
   const url = `${gatewayBaseUrl.replace(/\/+$/, "")}/${path.replace(
     /^\/+|\/+$/g,
     ""
-  )}/?${searchParams}`;
+  )}?${searchParams}`;
   const response = await fetch(url, {
     headers: {
       Accept: "application/json",

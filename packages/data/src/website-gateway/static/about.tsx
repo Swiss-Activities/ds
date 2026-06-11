@@ -51,6 +51,104 @@ export interface WebsiteGatewayAboutContent {
   team: { title: string };
 }
 
+/**
+ * The Swiss Activities team — snapshot of the legacy content dump
+ * (website var/employees.json; the legacy build baked it the same way).
+ * Roles are not localized on the legacy site either.
+ */
+export const DEFAULT_ABOUT_EMPLOYEES: WebsiteGatewayAboutEmployee[] = [
+  {
+    id: "1",
+    name: "Mathias Graf",
+    role: "Co-Founder",
+    imageUrl:
+      "https://fra1.digitaloceanspaces.com/contentapi.swissactivities/DSC_01031_b9fbd8f3c2.jpg",
+  },
+  {
+    id: "3",
+    name: "Elke Huber",
+    role: "Content Writer",
+    imageUrl:
+      "https://fra1.digitaloceanspaces.com/contentapi.staging.swissactivities/70a55f8607c96dfc84396f6e0b2d668d.jpeg",
+  },
+  {
+    id: "8",
+    name: "Seraina Zellweger",
+    role: "Head of Content",
+    imageUrl:
+      "https://fra1.digitaloceanspaces.com/contentapi.swissactivities/DSC_01000_24cd3d349a.jpg",
+  },
+  {
+    id: "9",
+    name: "Reto Graf",
+    role: "Board Member",
+    imageUrl:
+      "https://fra1.digitaloceanspaces.com/contentapi.swissactivities/1609586423766_1_35f7a6bf5e.jpeg",
+  },
+  {
+    id: "10",
+    name: "Philippe Gerber",
+    role: "Advisory Board",
+    imageUrl:
+      "https://fra1.digitaloceanspaces.com/contentapi.swissactivities/1629504317881_48ed3c208c.jpeg",
+  },
+  {
+    id: "11",
+    name: "Stephan Zimmermann",
+    role: "Chairman of the Board",
+    imageUrl:
+      "https://fra1.digitaloceanspaces.com/contentapi.swissactivities/1640336933099_44100ffa05.jpeg",
+  },
+  {
+    id: "12",
+    name: "Dennis Josek",
+    role: "Design/Frontend developer",
+    imageUrl:
+      "https://fra1.digitaloceanspaces.com/contentapi.swissactivities/DSC_01011_5c888c6bd3.jpg",
+  },
+  {
+    id: "14",
+    name: "Walter Schärer",
+    role: "Advisory Board",
+    imageUrl:
+      "https://fra1.digitaloceanspaces.com/contentapi.swissactivities/1638386121138_035ce5d4dc.jpeg",
+  },
+  {
+    id: "15",
+    name: "Dr. Martin Widmer",
+    role: "Advisory Board",
+    imageUrl:
+      "https://fra1.digitaloceanspaces.com/contentapi.swissactivities/1622664341759_68f1b701fd.jpeg",
+  },
+  {
+    id: "18",
+    name: "Sandip Limbachiya",
+    role: "Senior Backend Developer",
+    imageUrl:
+      "https://fra1.digitaloceanspaces.com/contentapi.swissactivities/Sandip_fuer_Webseite_8bbdd39ba5.png",
+  },
+  {
+    id: "20",
+    name: "Michael Jenny",
+    role: "Board Member",
+    imageUrl:
+      "https://fra1.digitaloceanspaces.com/contentapi.swissactivities/1640246023162_4b0b1fd744.jpeg",
+  },
+  {
+    id: "23",
+    name: "Denis Bruch",
+    role: "Head of Operations",
+    imageUrl: "https://fra1.digitaloceanspaces.com/contentapi.swissactivities/denis_6654e6f9da.png",
+  },
+  {
+    id: "24",
+    name: "Marco Demont",
+    role: "Chief Sales Officer",
+    imageUrl:
+      "https://fra1.digitaloceanspaces.com/contentapi.swissactivities/2023_08_16_15_41_18_195c3677bb.png",
+  },
+];
+
 export const DEFAULT_ABOUT_CONTENT: WebsiteGatewayAboutContent = {
   hero: {
     title: "Schweizer Freizeitaktivitäten finden",

@@ -5,6 +5,7 @@ import { Hero } from "../hero";
 import { Text } from "../text";
 import { cn } from "../utils/cn";
 import { renderImageValue } from "../utils/render-image";
+import { SkeletonOverlay } from "../skeleton-overlay";
 import { Weather } from "../weather";
 import type {
   BaseSectionHeroProps,
@@ -60,6 +61,7 @@ export function SectionHero({
   tabs,
   selectedTabId,
   onSelectTab,
+  refreshing = false,
   className,
   ...props
 }: SectionHeroProps) {
@@ -111,15 +113,19 @@ export function SectionHero({
                 ) : null}
               </div>
               {desktopWeather ? (
-                <div className="hidden lg:col-span-3 lg:block">
+                <div className="relative hidden lg:col-span-3 lg:block">
                   {desktopWeather}
+                  {refreshing ? <SkeletonOverlay /> : null}
                 </div>
               ) : null}
             </div>
           </div>
           {mobileWeather ? (
             <div className="px-4 pb-4 sm:px-6 sm:pb-6 lg:hidden">
-              {mobileWeather}
+              <div className="relative">
+                {mobileWeather}
+                {refreshing ? <SkeletonOverlay /> : null}
+              </div>
             </div>
           ) : null}
         </div>
@@ -216,12 +222,16 @@ export function SectionHero({
               className={cn(search ? "mt-4" : title && "mt-6")}
             />
             {mobileWeather ? (
-              <div className="mt-6 lg:hidden">{mobileWeather}</div>
+              <div className="relative mt-6 lg:hidden">
+                {mobileWeather}
+                {refreshing ? <SkeletonOverlay /> : null}
+              </div>
             ) : null}
           </div>
           {desktopWeather ? (
-            <div className="hidden lg:block">
+            <div className="relative hidden lg:block">
               {desktopWeather}
+              {refreshing ? <SkeletonOverlay /> : null}
             </div>
           ) : null}
         </div>

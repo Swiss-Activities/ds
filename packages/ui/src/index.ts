@@ -58,6 +58,7 @@ export * from "./search-bar";
 export * from "./segmented-control";
 export * from "./select";
 export * from "./skeleton";
+export * from "./skeleton-overlay";
 export * from "./slider";
 export * from "./tabs";
 export * from "./text";

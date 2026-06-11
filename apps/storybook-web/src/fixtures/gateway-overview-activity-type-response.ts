@@ -15,6 +15,16 @@ export const gatewayOverviewActivityTypeResponse = {
       "id": "activity_type_hero",
       "component": "hero",
       "variant": "centered_title",
+      "breadcrumbs": [
+        {
+          "label": "Schweiz",
+          "href": "/freizeitaktivitaeten/"
+        },
+        {
+          "label": "Paragliding",
+          "href": "/paragliding/"
+        }
+      ],
       "title": "Paragliding",
       "imageUrl": "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/GOPR_1021_1_55d61ae575.JPG",
       "description": "Buche hier deinen nächsten Ausflug beim Paragliding in der Schweiz. Bei einem Tandemflug kannst du unglaubliche Landschaften aus der Vogelperspektive bestaunen. Hotspots für Gleitschirmfliegen sind Interlaken, die Zentralschweiz sowie das Engadin. Aber auch im Wallis gibt es einige atemberaubende Startplätze. Nach ein paar schnellen Schritten befindest du dich in der Luft und kannst die Umgebung geniessen, während dein Tandempilot für einen sicheren Flug sorgt."
@@ -2974,6 +2984,14 @@ export const gatewayOverviewActivityTypeResponse = {
           "param": "tags",
           "options": [
             {
+              "id": "tag:adventure",
+              "label": "Abenteuer",
+              "value": "adventure",
+              "count": 95,
+              "selected": false,
+              "disabled": false
+            },
+            {
               "id": "tag:sightseeing",
               "label": "Sehenswürdigkeiten",
               "value": "sightseeing",
@@ -2986,6 +3004,54 @@ export const gatewayOverviewActivityTypeResponse = {
               "label": "Natur",
               "value": "nature",
               "count": 7,
+              "selected": false,
+              "disabled": false
+            }
+          ]
+        },
+        {
+          "id": "weather",
+          "type": "checkbox",
+          "title": "Wetter",
+          "param": "tags",
+          "options": [
+            {
+              "id": "tag:fair_weather",
+              "label": "Schönwetter",
+              "value": "fair_weather",
+              "count": 95,
+              "selected": false,
+              "disabled": false
+            }
+          ]
+        },
+        {
+          "id": "seasonTime",
+          "type": "checkbox",
+          "title": "Saison & Zeit",
+          "param": "tags",
+          "options": [
+            {
+              "id": "tag:spring",
+              "label": "Frühling",
+              "value": "spring",
+              "count": 95,
+              "selected": false,
+              "disabled": false
+            },
+            {
+              "id": "tag:autumn",
+              "label": "Herbst",
+              "value": "autumn",
+              "count": 95,
+              "selected": false,
+              "disabled": false
+            },
+            {
+              "id": "tag:summer",
+              "label": "Sommer",
+              "value": "summer",
+              "count": 95,
               "selected": false,
               "disabled": false
             }
@@ -3133,8 +3199,8 @@ export const gatewayOverviewActivityTypeResponse = {
             "currency": "CHF",
             "formatted": "CHF 190"
           },
-          "rating": 4.93,
-          "reviewCount": 92,
+          "rating": 4.94,
+          "reviewCount": 93,
           "path": "/paragliding/gleitschirmfliegen-tandem-beatenberg-interlaken/",
           "webPath": "/paragliding/gleitschirmfliegen-tandem-beatenberg-interlaken/",
           "distanceKm": null,
@@ -3285,11 +3351,11 @@ export const gatewayOverviewActivityTypeResponse = {
           "title": "Beatenberg Gleitschirmfliegen im Tandem ab Interlaken",
           "imageUrl": "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/Gleitschirmfliegen_Schweiz_Interlaken_0da344cafd.jpg",
           "subtitle": "Interlaken",
-          "priceFormatted": "CHF 220",
+          "priceFormatted": "CHF 210",
           "startingPrice": {
-            "amount": 220,
+            "amount": 210,
             "currency": "CHF",
-            "formatted": "CHF 220"
+            "formatted": "CHF 210"
           },
           "rating": 4.76,
           "reviewCount": 114,
@@ -3409,6 +3475,35 @@ export const gatewayOverviewActivityTypeResponse = {
           ]
         },
         {
+          "id": "1084",
+          "type": "activity",
+          "bookingActivityId": 882,
+          "title": "Tandem Delta Flug ab Interlaken",
+          "imageUrl": "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/Hanggliding_Interlaken_Bumblebee_5_7ed81a0c00.JPG",
+          "subtitle": "Interlaken",
+          "priceFormatted": "CHF 260",
+          "startingPrice": {
+            "amount": 260,
+            "currency": "CHF",
+            "formatted": "CHF 260"
+          },
+          "rating": 5,
+          "reviewCount": 5,
+          "path": "/paragliding/tandem-delta-flug-interlaken/",
+          "webPath": "/paragliding/tandem-delta-flug-interlaken/",
+          "distanceKm": null,
+          "lat": 46.686849699999996,
+          "lng": 7.854237899999999,
+          "imageUrls": [
+            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/Hanggliding_Interlaken_Bumblebee_5_7ed81a0c00.JPG",
+            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/large_Hanggliding_Interlaken_Bumblebee_2_2c6c6530ac.JPG",
+            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/large_Hanggliding_Interlaken_Bumblebee_3_8cc4f6efb7.JPG",
+            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/large_Hanggliding_Interlaken_Bumblebee_4_3309aa479f.JPG",
+            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/large_Hanggliding_Interlaken_Bumblebee_6_85f957244a.JPG",
+            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/large_Hanggliding_Interlaken_Bumblebee_4180259d22.JPG"
+          ]
+        },
+        {
           "id": "995",
           "type": "activity",
           "bookingActivityId": 796,
@@ -3481,35 +3576,6 @@ export const gatewayOverviewActivityTypeResponse = {
           ]
         },
         {
-          "id": "1084",
-          "type": "activity",
-          "bookingActivityId": 882,
-          "title": "Tandem Delta Flug ab Interlaken",
-          "imageUrl": "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/Hanggliding_Interlaken_Bumblebee_5_7ed81a0c00.JPG",
-          "subtitle": "Interlaken",
-          "priceFormatted": "CHF 260",
-          "startingPrice": {
-            "amount": 260,
-            "currency": "CHF",
-            "formatted": "CHF 260"
-          },
-          "rating": 5,
-          "reviewCount": 5,
-          "path": "/paragliding/tandem-delta-flug-interlaken/",
-          "webPath": "/paragliding/tandem-delta-flug-interlaken/",
-          "distanceKm": null,
-          "lat": 46.686849699999996,
-          "lng": 7.854237899999999,
-          "imageUrls": [
-            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/Hanggliding_Interlaken_Bumblebee_5_7ed81a0c00.JPG",
-            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/large_Hanggliding_Interlaken_Bumblebee_2_2c6c6530ac.JPG",
-            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/large_Hanggliding_Interlaken_Bumblebee_3_8cc4f6efb7.JPG",
-            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/large_Hanggliding_Interlaken_Bumblebee_4_3309aa479f.JPG",
-            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/large_Hanggliding_Interlaken_Bumblebee_6_85f957244a.JPG",
-            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/large_Hanggliding_Interlaken_Bumblebee_4180259d22.JPG"
-          ]
-        },
-        {
           "id": "543",
           "type": "activity",
           "bookingActivityId": 340,
@@ -3535,6 +3601,34 @@ export const gatewayOverviewActivityTypeResponse = {
             "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/large_GOPR_2202_b3a24a48b1.JPG",
             "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/large_GOPR_0502_2a54009c8c.JPG",
             "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/large_GOPR_5796_29b7ed11d0.JPG"
+          ]
+        },
+        {
+          "id": "2162",
+          "type": "activity",
+          "bookingActivityId": 1927,
+          "title": "Verbier Gleitschirmfliegen Tandem",
+          "imageUrl": "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/Master_9_copy_2_4bcd9706ba.jpg",
+          "subtitle": "Verbier",
+          "priceFormatted": "CHF 190",
+          "startingPrice": {
+            "amount": 190,
+            "currency": "CHF",
+            "formatted": "CHF 190"
+          },
+          "rating": 5,
+          "reviewCount": 5,
+          "path": "/paragliding/verbier-tandem-gleitschirmfliegen/",
+          "webPath": "/paragliding/verbier-tandem-gleitschirmfliegen/",
+          "distanceKm": null,
+          "lat": 46.0904641,
+          "lng": 7.251974299999999,
+          "imageUrls": [
+            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/Master_9_copy_2_4bcd9706ba.jpg",
+            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/large_Tandem1_copy_2_077dcc8b5a.jpg",
+            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/large_DSC_03621_copy_2_dd269ce97b.jpg",
+            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/large_Home_Page_copy_2_e7f2f327e6.jpg",
+            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/large_Master_2_copy_2_088d1baf72.jpg"
           ]
         },
         {
@@ -3567,31 +3661,59 @@ export const gatewayOverviewActivityTypeResponse = {
           ]
         },
         {
-          "id": "2162",
+          "id": "1753",
           "type": "activity",
-          "bookingActivityId": 1927,
-          "title": "Verbier Gleitschirmfliegen Tandem",
-          "imageUrl": "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/Master_9_copy_2_4bcd9706ba.jpg",
-          "subtitle": "Verbier",
-          "priceFormatted": "CHF 190",
+          "bookingActivityId": 1535,
+          "title": "Paragliding Tandemflug ab Luzern",
+          "imageUrl": "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/158bcfda87fc18b13a5869ea93d637b1.jpg",
+          "subtitle": "Luzern",
+          "priceFormatted": "CHF 195",
           "startingPrice": {
-            "amount": 190,
+            "amount": 195,
             "currency": "CHF",
-            "formatted": "CHF 190"
+            "formatted": "CHF 195"
           },
           "rating": 5,
-          "reviewCount": 5,
-          "path": "/paragliding/verbier-tandem-gleitschirmfliegen/",
-          "webPath": "/paragliding/verbier-tandem-gleitschirmfliegen/",
+          "reviewCount": 1,
+          "path": "/paragliding/luzern-tandemflug-paragliding/",
+          "webPath": "/paragliding/luzern-tandemflug-paragliding/",
           "distanceKm": null,
-          "lat": 46.0904641,
-          "lng": 7.251974299999999,
+          "lat": 47.0493125,
+          "lng": 8.308734399999999,
           "imageUrls": [
-            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/Master_9_copy_2_4bcd9706ba.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/large_Tandem1_copy_2_077dcc8b5a.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/large_DSC_03621_copy_2_dd269ce97b.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/large_Home_Page_copy_2_e7f2f327e6.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/large_Master_2_copy_2_088d1baf72.jpg"
+            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/158bcfda87fc18b13a5869ea93d637b1.jpg",
+            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/d52b5edb92f33bca12a446ce1c7f507e.jpg",
+            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/ac2e2b21a384d3acdce018a01cf1611e.jpg",
+            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/2f003cb5c552dcdc81cf5c7d28cc6a75.jpg",
+            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/6d1a8c2b36df791902905b4d6d452fa0.jpg"
+          ]
+        },
+        {
+          "id": "901",
+          "type": "activity",
+          "bookingActivityId": 714,
+          "title": "Zugerberg Gleitschirmfliegen Tandem",
+          "imageUrl": "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/G0112691_9e81404cda.JPG",
+          "subtitle": "Zug",
+          "priceFormatted": "CHF 200",
+          "startingPrice": {
+            "amount": 200,
+            "currency": "CHF",
+            "formatted": "CHF 200"
+          },
+          "rating": null,
+          "reviewCount": null,
+          "path": "/paragliding/gleitschirmfliegen-tandem-am-zugerberg/",
+          "webPath": "/paragliding/gleitschirmfliegen-tandem-am-zugerberg/",
+          "distanceKm": null,
+          "lat": 47.1513938,
+          "lng": 8.5212172,
+          "imageUrls": [
+            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/G0112691_9e81404cda.JPG",
+            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/large_Engelberg_0f0684d3c1.JPG",
+            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/medium_Your_screen_1920x1080_1024x576_825cebfabc.jpeg",
+            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/large_G0083262_73039c919d.JPG",
+            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/large_G0133316_3cedc044ef.JPG"
           ]
         },
         {
@@ -3621,31 +3743,33 @@ export const gatewayOverviewActivityTypeResponse = {
           ]
         },
         {
-          "id": "901",
+          "id": "1718",
           "type": "activity",
-          "bookingActivityId": 714,
-          "title": "Zugerberg Gleitschirmfliegen Tandem",
-          "imageUrl": "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/G0112691_9e81404cda.JPG",
-          "subtitle": "Zug",
-          "priceFormatted": "CHF 200",
+          "bookingActivityId": 1500,
+          "title": "Early Bird Paragliding Davos",
+          "imageUrl": "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/900x600_1_50_0a89bb2d411cd3f2ff17a36e8f204a82_699c776852.jpg",
+          "subtitle": "Davos  ",
+          "priceFormatted": "CHF 170",
           "startingPrice": {
-            "amount": 200,
+            "amount": 170,
             "currency": "CHF",
-            "formatted": "CHF 200"
+            "formatted": "CHF 170"
           },
           "rating": null,
           "reviewCount": null,
-          "path": "/paragliding/gleitschirmfliegen-tandem-am-zugerberg/",
-          "webPath": "/paragliding/gleitschirmfliegen-tandem-am-zugerberg/",
+          "path": "/paragliding/air-davos-paraglide-early-bird-davos/",
+          "webPath": "/paragliding/air-davos-paraglide-early-bird-davos/",
           "distanceKm": null,
-          "lat": 47.1513938,
-          "lng": 8.5212172,
+          "lat": 46.790766,
+          "lng": 9.819128699999998,
           "imageUrls": [
-            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/G0112691_9e81404cda.JPG",
-            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/large_Engelberg_0f0684d3c1.JPG",
-            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/medium_Your_screen_1920x1080_1024x576_825cebfabc.jpeg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/large_G0083262_73039c919d.JPG",
-            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/large_G0133316_3cedc044ef.JPG"
+            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/900x600_1_50_0a89bb2d411cd3f2ff17a36e8f204a82_699c776852.jpg",
+            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/medium_900x600_1_50_0a89bb2d411cd3f2ff17a36e8f204a82_722c2b09bd.jpg",
+            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/medium_900x600_1_50_1a5d04cb4372cc28c1a1d88d1ce92249_13b626e665.jpg",
+            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/medium_900x600_1_50_21bd719e70f9ac056c73c4a5075633e0_d8c9b0313a.jpg",
+            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/medium_900x600_1_50_573da768bfb040a3859ab263d15d7014_1b76470063.jpg",
+            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/medium_900x600_1_50_1835b77d355daf482fe8d9351ff2eb9c_1ab61ee3e5.jpg",
+            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/medium_900x600_1_50_d31513a88a258d6a76dee54ab72dc244_4fc955603a.jpg"
           ]
         },
         {
@@ -3680,71 +3804,13 @@ export const gatewayOverviewActivityTypeResponse = {
             "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/c3df1f11bc9c45c2b3b81e0167816406.jpg",
             "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/18bc0b819c27e52f0f0875aadf735fe9.jpg"
           ]
-        },
-        {
-          "id": "1718",
-          "type": "activity",
-          "bookingActivityId": 1500,
-          "title": "Early Bird Paragliding Davos",
-          "imageUrl": "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/900x600_1_50_0a89bb2d411cd3f2ff17a36e8f204a82_699c776852.jpg",
-          "subtitle": "Davos  ",
-          "priceFormatted": "CHF 170",
-          "startingPrice": {
-            "amount": 170,
-            "currency": "CHF",
-            "formatted": "CHF 170"
-          },
-          "rating": null,
-          "reviewCount": null,
-          "path": "/paragliding/air-davos-paraglide-early-bird-davos/",
-          "webPath": "/paragliding/air-davos-paraglide-early-bird-davos/",
-          "distanceKm": null,
-          "lat": 46.790766,
-          "lng": 9.819128699999998,
-          "imageUrls": [
-            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/900x600_1_50_0a89bb2d411cd3f2ff17a36e8f204a82_699c776852.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/medium_900x600_1_50_0a89bb2d411cd3f2ff17a36e8f204a82_722c2b09bd.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/medium_900x600_1_50_1a5d04cb4372cc28c1a1d88d1ce92249_13b626e665.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/medium_900x600_1_50_21bd719e70f9ac056c73c4a5075633e0_d8c9b0313a.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/medium_900x600_1_50_573da768bfb040a3859ab263d15d7014_1b76470063.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/medium_900x600_1_50_1835b77d355daf482fe8d9351ff2eb9c_1ab61ee3e5.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.swissactivities/medium_900x600_1_50_d31513a88a258d6a76dee54ab72dc244_4fc955603a.jpg"
-          ]
-        },
-        {
-          "id": "1753",
-          "type": "activity",
-          "bookingActivityId": 1535,
-          "title": "Luzern Paragliding Tandemflug ab Luzern",
-          "imageUrl": "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/158bcfda87fc18b13a5869ea93d637b1.jpg",
-          "subtitle": "Luzern",
-          "priceFormatted": "CHF 195",
-          "startingPrice": {
-            "amount": 195,
-            "currency": "CHF",
-            "formatted": "CHF 195"
-          },
-          "rating": 5,
-          "reviewCount": 1,
-          "path": "/paragliding/luzern-tandemflug-paragliding/",
-          "webPath": "/paragliding/luzern-tandemflug-paragliding/",
-          "distanceKm": null,
-          "lat": 47.0493125,
-          "lng": 8.308734399999999,
-          "imageUrls": [
-            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/158bcfda87fc18b13a5869ea93d637b1.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/d52b5edb92f33bca12a446ce1c7f507e.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/ac2e2b21a384d3acdce018a01cf1611e.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/2f003cb5c552dcdc81cf5c7d28cc6a75.jpg",
-            "https://contentapi-swissactivities.imgix.net/contentapi.staging.swissactivities/6d1a8c2b36df791902905b4d6d452fa0.jpg"
-          ]
         }
       ],
       "meta": {
         "pagination": {
           "page": 1,
           "perPage": 20,
-          "total": 95,
+          "total": 194,
           "hasMore": true
         }
       }
@@ -3834,5 +3900,206 @@ export const gatewayOverviewActivityTypeResponse = {
         }
       ]
     }
-  ]
+  ],
+  "content": [
+    {
+      "html": "<p>Kaum ein anderes Land gewährt auf kleinem Raum so viele Möglichkeiten an sportlichen Aktivitäten wie die Schweiz. In vielen Kantonen offeriert sich das perfekte Terrain für spektakuläre Gleitschirmflüge. </p>\n<p>Gleitschirmfliegen, auch Paragliding genannt, kommt der Fortbewegung eines Vogels vermutlich am nächsten. Es setzt allerdings auch einiges an Können voraus. Wie ein Vogel zu fliegen, ist dank des Gleitschirms für uns Menschen zur erlernbaren Realität geworden. Heute begeistert die Flugsportart nicht nur erfahrene Piloten, sondern auch die vom Flugeifer berauschten Anfänger. </p>\n<p>Einsteiger und Anfänger starten in der Regel im Tandem. Für fast 90% der Teilnehmer ist der erste Flug ein Tandemflug. Während eines Tandemflugs lehnst du dich entspannt zurück und geniesst die Aussicht, während ein erfahrener Pilot den Gleitschirm steuert. Nach nur wenigen Flugsekunden findest du mithilfe des Piloten eine bequeme Sitzposition. Zuvor ein paar flotte Schritte, der Gleitschirm öffnet sich und du erhebst dich sanft in die Lüfte. Falsch machen kannst du (fast) nichts. </p>\n",
+      "images": [],
+      "youtubeUrl": null
+    },
+    {
+      "html": null,
+      "images": [
+        {
+          "url": "https://fra1.digitaloceanspaces.com/contentapi.swissactivities/01_Gleitschirmfliegen_Flugschule_bei_Horgen_Schweiz_Tourismus_My_Switzerland_aa7ec139e4.jpg",
+          "caption": "Gleitschirmflug (Foto: Schweiz Tourismus My Switzerland)",
+          "alt": "Gleitschirmfliegen Flugschule bei Horgen "
+        },
+        {
+          "url": "https://fra1.digitaloceanspaces.com/contentapi.swissactivities/02_Gleitschirmfliegen_Flugschule_bei_Horgen_Schweiz_Tourismus_My_Switzerland_399acd679f.jpg",
+          "caption": "Flugschule Horgen (Foto: Schweiz Tourismus My Switzerland)",
+          "alt": "Gleitschirmfliegen Flugschule bei Horgen "
+        }
+      ],
+      "youtubeUrl": null
+    },
+    {
+      "html": "<p>Gleitschirmflüge werden das ganze Jahr über angeboten. Mit einem rasanten Skistart kommst du auch auf deine Kosten, wenn du im Winter fliegen möchtest. </p>\n<p>Im Winter ist die Luft meist sehr ruhig und eignet sich daher hervorragend zum Tandemfliegen. Hingegen kann es im Sommer, insbesondere Nachmittags, zu Turbulenzen kommen. Wenn du das Ruckeln nicht so gut verträgst, wird der Pilot sofort den Landeplatz ansteuern oder dir empfehlen, lieber in den frühen und ruhigeren Morgenstunden zu fliegen.</p>\n<h2>Gleitschirmfliegen allgemein</h2>\n<p>Gleitschirmfliegen gibt es in seinen Anfängen schon seit mehr als 70 Jahren. Der NASA-Ingenieur Francis Melvin Rogallo erhielt 1948 das erste Patent eines Vorgänger-Gleitschirms. </p>\n<p>In der Schweiz entwickelten die deutschen Brüder Strasilla gemeinsam mit der Schweizerin Andrea Kuhn im Jahr 1973 den ersten Gleitschirm weltweit aus Schleppschirmen. Sie meldeten ihr eigenes Gleitschirm-Patent als Skywing an. Ihr Schirm verfügte schon damals über ein ausgeklügeltes System von Fang- und Steuerungsleinen. </p>\n<p>Dieter und Udo Strasilla flogen damals gemeinsam als erste Menschen vom 3463 m.ü.M. gelegenen Jungfraujoch nach Lauterbrunnen und überwanden dabei 2676 Höhenmeter. Dies war die Geburtsstunde des Paraglidings in der Schweiz. Noch heute kann der erste Gleitschirm der Welt, ein 11-Zeller aus Spinnakerstoff, in der Flugwerft Schleissheim bei München besichtigt werden. </p>\n<h3>Wie funktioniert Gleitschirmfliegen?</h3>\n<p>Der Pilot sitzt in einem Gurt sicher unter dem Gleitschirm, der über Leinen mit dem Gurt verbunden ist. Er steuert den Flug mittels Steuerleinen. Beim Tandemflug sitzt der Passagier in einem zweiten, fest verbundenen Gurt direkt vor dem Piloten. Die gesamte Ausrüstung passt in einen Rucksack und wiegt zwischen 15 und 20 kg.</p>\n<h3>Wie startet man beim Gleitschirmfliegen?</h3>\n<p>In den Bergen wird der Flug meist mit einem Vorwärtsstart durchgeführt. Der Gleitschirm ist hinter dir und du läufst langsam los, bis sich der Gleitschirm mit Luft gefüllt hat und über dir steht. Nach einigen Schritten bergab hebt dich der Gleitschirm bereits bei 20 km/h in die Luft.</p>\n<p>Der Start bis zum Flug erfolgt über vier Phasen:</p>\n<p><strong>Die Startvorbereitung:</strong> Erkunden des Startplatzes, mentale Vorbereitung.</p>\n<p><strong>Aufziehphase:</strong> Diese Phase beginnt aus dem Gefühl heraus. Dabei bestimmst du über das Drücken der Leine, ob der Schirm gegengesteuert werden muss.</p>\n<p><strong>Kontrollphase:</strong> Die wohl wichtigste Phase entscheidet über Start oder Startabbruch. </p>\n<p><strong>Beschleunigen und Abheben:</strong> Du beschleunigst kontinuierlich, bis die Startgeschwindigkeit erreicht ist. Du bremst dosiert ab und läufst weiter, bis  deine letzten Schritte in der Luft erfolgen. </p>\n<h3>Für wen ist Gleitschirmfliegen geeignet?</h3>\n<p>Als Passagier eines Tandemflugs benötigst du keine Vorkenntnisse. Du wirst vom Piloten vor dem Gleitschirmflug in der Startvorbereitung aufgeklärt. Dabei erfährst du, was du bei Start, Landung und während des Fluges beachten musst. </p>\n<p>Der Anbieter eines Tandemfluges gibt oft ein Mindest- und Maximalgewicht vor, das in der Regel zwischen 30 kg und 120 kg liegt. Eine besondere Fitness wird nicht benötigt. Bei schweren Krankheiten solltest du dich allerdings vorher mit deinem Arzt absprechen. Bei der Buchung gibst du das besser an. </p>\n<p>Falls du unter der Reisekrankheit leidest oder starke Höhenangst hast, ist ein Gleitschirmflug nicht für dich geeignet. Ebenfalls ungeeignet ist Gleitschirmfliegen für Schwangere.</p>\n<h3>Tandemflug Gleitschirmfliegen</h3>\n<p>Beim Tandemflug kümmert sich der professionelle Fluglehrer oder Pilot um alles Wichtige. Du kannst vor allem eines: dich an einer herrlichen Kulisse sattsehen. Wer sich beispielsweise vom Jakobshorn oder dem Gotschnagrat stürzen mag, kann einen Tandemflug bei einem renommierten Anbieter für etwa 190 CHF buchen. Die ungefähren Kosten für den allgemeinen Gleitschirmflug in der Schweiz bewegen sich etwa zwischen 150 und 250 CHF, je nach Dauer. In der Regel sind es unvergessliche 20 bis 40 Minuten, die du über eine wunderschöne Alpenlandschaft schwebst.</p>\n",
+      "images": [],
+      "youtubeUrl": null
+    },
+    {
+      "html": null,
+      "images": [
+        {
+          "url": "https://fra1.digitaloceanspaces.com/contentapi.swissactivities/03_Gleitschirmfliegen_Schweiz_Beatenberg_Paragliding_Interlaken_9f863bf50c.jpg",
+          "caption": "(Foto: Paragliding Interlaken)",
+          "alt": "Gleitschirmfliegen Schweiz Beatenberg "
+        },
+        {
+          "url": "https://fra1.digitaloceanspaces.com/contentapi.swissactivities/04_Gleitschirmfliegen_Schweiz_Harder_Kulm_Paragliding_Interlaken_dce3ddfb3a.jpg",
+          "caption": "Tandemflug (Foto: Paragliding Interlaken)",
+          "alt": "Gleitschirmfliegen Schweiz Harder Kulm "
+        }
+      ],
+      "youtubeUrl": null
+    },
+    {
+      "html": "<h3>Gleitschirmfliegen lernen</h3>\n<p>Gleitschirmfliegen kann zur lebenslangen Leidenschaft werden. Es ist ein Erfahrungsprozess, der immer wieder Training braucht. Das Training wie auch das Lernen darf nicht Mühe sein, sondern soll Spass machen. In jedem Fall ist das Gleitschirmfliegen eine unkomplizierte, einfach zu erlernende und vor allem sichere Sportart. </p>\n<p>Die gute Ausbildung, professionell betreute Fluggebiete, attraktive Gleitschirmreisen und interessante Fortbildungskurse fördern die Beliebtheit dieser Sportart in der Schweiz. </p>\n<h2>Swiss Activities Tipps zum Gleitschirmfliegen</h2>\n<ul>\n<li>In weniger überflogenen Gebieten sind Tiere mit der Silhouette des Gleitschirms noch nicht vertraut. Deshalb solltest du ausreichend Abstand zum Boden halten.</li>\n<li>Ein wundervolles und besonderes Flugerlebnis bietet Fiesch im Wallis: Der Gleitschirm Flug „Barrierefrei“ ist ein 20-minütiger Gleitschirmflug im Rollstuhl. Durchgeführt wird er von einem professionellen Tandempartner.</li>\n<li>Ein steiler Berghang sorgt aufgrund der schon länger aufsteigenden Sonneneinstrahlung für weiteren Höhengewinn der Streckenflieger. Hier kannst du die Thermik zu deinen Gunsten nutzen.</li>\n<li>Die langfristige und regelmässige Wetterbeobachtung ist für Alpinflieger unabdingbar. </li>\n<li>Für Ziele bis 1000 Höhenmeter ist eine gute Allgemeinkondition ausreichend.</li>\n</ul>\n",
+      "images": [],
+      "youtubeUrl": null
+    },
+    {
+      "html": "<h2>Gleitschirmfliegen Schweiz - 7 beliebte Gebiete</h2>\n<p>Die Schweiz erklärt sich zum Dorado für Gleitschirmflieger. Die Trümpfe sind die Vielfalt und die Schönheit der Landschaft, die unzähligen Gleitschirmschulen und das Verkehrsnetz. Wo immer ein Lüftchen weht und es einen Berg gibt, findet in der Schweiz Paragliding statt.</p>\n<p>Als gutes Terrain gilt <a href=\"/interlaken/\">Interlaken</a>. Nicht weniger begeistert das Fliegen im Bereich des Aletschgletschers, einem Weltnaturerbe in den Kantonen Bern und Wallis. Auf der Fiescheralp gibt es besonders gute Aufwinde. Grindelwald First ist der Top Spot für grossartige Panoramablicke über die Jungfrau Region. </p>\n<p>Wenn du lieber über Seen fliegst, dann solltest du in der Gegend des Vierwaldstättersees oder des Luganersees abheben. Lass dich beflügeln und lerne 7 wunderbare Standorte zum Gleitschirmfliegen in der Schweiz kennen.</p>\n<h3>Gleitschirmfliegen Interlaken Berner Oberland</h3>\n<p>Interlaken steht für eine traumhafte Lage und ideale Flugbedingungen. Es werden zahlreiche <a href=\"/paragliding/engelberg-tandemflug-paragliding/\">Gleitschirm Passagierflüge im Berner Oberland</a> von verschiedenen Startplätzen angeboten. Dabei geniesst du eine atemberaubende Aussicht auf die blau schimmernden Bergseen und das Jungfrau Massiv. Ein Flug in dieser traumhaften Gegend ist zweifelsohne ein unvergessliches Erlebnis der Extraklasse. </p>\n<p>Da die Region um Interlaken für Gleitschirmflüge so beliebt ist,  haben wir einen separaten Beitrag mit den <a href=\"/paragliding/tandem-gleitschirmflug-beatenberg-interlaken-sensational/\">5 besten Gleitschirmflügen ab Interlaken</a> zusammengestellt.</p>\n",
+      "images": [],
+      "youtubeUrl": null
+    },
+    {
+      "html": null,
+      "images": [
+        {
+          "url": "https://fra1.digitaloceanspaces.com/contentapi.swissactivities/05_Gleitschirmfliegen_Schweiz_Interlaken_Tandem_Paragliding_Interlaken_e4c024da6c.jpg",
+          "caption": "Tandemflug Gleitschirm (Foto: Paragliding Interlaken)",
+          "alt": "Gleitschirmfliegen Schweiz Interlaken  Tandem "
+        },
+        {
+          "url": "https://fra1.digitaloceanspaces.com/contentapi.swissactivities/06_Gleitschirmfliegen_Schweiz_Interlaken_Landeanflug_Paragliding_Interlaken_91b2ae9b1b.jpg",
+          "caption": "Landeanflug (Foto: Paragliding Interlaken)",
+          "alt": "Gleitschirmfliegen Schweiz Interlaken Landeanflug "
+        }
+      ],
+      "youtubeUrl": null
+    },
+    {
+      "html": "<h3>Gleitschirmfliegen Zentralschweiz</h3>\n<p>Dank der hervorragenden Flugbedingungen kannst du das ganze Jahr über in der <a href=\"/paragliding/luzern-tandemflug-paragliding/\">Zentralschweiz Gleitschirmfliegen</a>. Du schwebst über der wunderschönen Landschaft der Alpen der Zentralschweiz.– Die Strecke für <a href=\"/paragliding/niederbauen-emmetten-gleitschirmfliegen-tandem/\">Gleitschirmflüge Niederbauen / Emmetten</a>  gilt als eine der schönsten für das Gleitschirmfliegen. Der Blick über den Vierwaldstättersee ist atemberaubend schön. Nach einem fabelhaften Flugerlebnis von über 15 bis 30 Minuten landest du wieder sanft im Tal. </p>\n",
+      "images": [],
+      "youtubeUrl": null
+    },
+    {
+      "html": "<h3>Gleitschirmfliegen Tessin</h3>\n<p>Die Berge im Tessin bieten ideale Sprungrampen für „Ikarusse“. Vom Sasso Ferro oder auch vom Monte Nudo aus gleitest du sanft nach unten und landest auf dem Feld von Icaro. Doch damit ist nicht genug: Alle Gleitschirmflüge sind absolut familientauglich. Auch die Jüngsten geniessen das einzigartige Flugerlebnis und die unvergessliche Aussicht auf den Tessin. </p>\n<p>Auf einem Flug vom 1704 m hohen Gipfel des Monte Generoso aus bieten sich starke Emotionen. Oben thront die steinerne Blume des Architekten Mario Botta. Während des Fluges offeriert sich die Landschaft dieser Region in all ihrer Schönheit: Der Mendriosotto mit seinen Rebbergen, der Luganersee und die bezaubernde Alpenkette. Den Himmel teilst du mit Falken, Adlern und vielen anderen Vögeln. </p>\n<p>Auch der Monte Tamaro bietet eine tolle Möglichkeit für einen Flug mit herrlicher Aussicht. Auf deinem Weg ins Tal überwindest du rund 1000 Höhenmeter. Je nach Thermik geniesst du einen herrlichen Blick auf den Luganersee, auf Bellinzona und auf den Lago Maggiore.</p>\n<p>Indes schätzen passionierte Gleitschirmflieger den Monte Lema als einen äusserst geeigneten Ort , um ihrer Leidenschaft nachzugehen. Auf einer Höhe von 1620 m.ü.M. treffen sich Gleitschirmflieger aus aller Welt. Manche Flüge erstrecken sich über 200 km und führen bis ins Engadin oder nach Valtellina. Diese sind dann allerdings nicht für Tandemflüge geeignet.</p>\n",
+      "images": [],
+      "youtubeUrl": null
+    },
+    {
+      "html": null,
+      "images": [
+        {
+          "url": "https://fra1.digitaloceanspaces.com/contentapi.swissactivities/07_Gleitschirmfliegen_Schweiz_Tessin_Locarno_Schweiz_Tourismus_My_Switzerland_d767ba556d.jpeg",
+          "caption": "Gleitschirmfliegen Ticino (Foto: Schweiz Tourismus MySwitzerland)",
+          "alt": "Gleitschirmfliegen Schweiz Tessin Locarno "
+        },
+        {
+          "url": "https://fra1.digitaloceanspaces.com/contentapi.swissactivities/08_Gleitschirmfliegen_Schweiz_Luganersee_Schweiz_Tourismus_My_Switzerland_78d6c2d2a4.jpeg",
+          "caption": "Gleitschirmfliegen Luganersee (Foto: Schweiz Tourismus MySwitzerland)",
+          "alt": "Gleitschirmfliegen Schweiz Luganersee "
+        }
+      ],
+      "youtubeUrl": null
+    },
+    {
+      "html": "<h3>Gleitschirmfliegen Ostschweiz</h3>\n<p>Dank ihres aussergewöhnlichen Panoramas ist die Ostschweiz eine stark frequentierte Region für Gleitschirmflüge. </p>\n<p>Gleitschirmfliegen Walensee: Über dem Walensee, einer Perle zwischen Zürich und Chur, geniesst du die Unbeschwertheit der Lüfte. Es herrschen ideale Thermikverhältnisse für einen aussichtsreichen Flug. Ob im Winter oder Sommer: Beruhend auf den optimalen Voraussetzungen dieses Gebietes werden sowohl Panoramaflüge als auch Thermikflüge angeboten. </p>\n<p>Gleitschirmfliegen Alpstein: Berühre die Wolken und fliege frei wie ein Vogel durch die Lüfte Hier fährst du mit der Gondel auf die Ebenalp und fliegst am weltberühmten Bergrestaurant Äscher vorbei und geniesst die Aussicht auf den Seealpsee. Der Flug endet in Wasserauen neben der Talstation der Bergbahn. </p>\n<p>Gleitschirmfliegen Toggenburg: Ab der Bergstation Chäserrugg sind es nur 15 min Fuss zum Startplatz auf dem Hinterrugg. Hier geht ein grandioser Gleitschirmflug mit Blick auf die Churfirsten, eine Gebirgskette im Toggenburg, los. Es werden auch Passagierflüge für behinderte Menschen angeboten, die an einen Rollstuhl gebunden sind. </p>\n",
+      "images": [],
+      "youtubeUrl": null
+    },
+    {
+      "html": null,
+      "images": [
+        {
+          "url": "https://fra1.digitaloceanspaces.com/contentapi.swissactivities/09_Gleitschirmfliegen_Schweiz_Braunwald_Schweiz_Tourismus_My_Switzerland_51a52c3668.jpg",
+          "caption": "(Foto: MySwitzerland)",
+          "alt": " Gleitschirmfliegen Schweiz Braunwald"
+        },
+        {
+          "url": "https://fra1.digitaloceanspaces.com/contentapi.swissactivities/10_Gleitschirmfliegen_Schweiz_Braunwald_Schweiz_Tourismus_My_Switzerland_1d01e65898.jpg",
+          "caption": "(Foto: MySwitzerland)",
+          "alt": "Gleitschirmfliegen Schweiz Braunwald"
+        }
+      ],
+      "youtubeUrl": null
+    },
+    {
+      "html": "<h3>Gleitschirmfliegen Davos Klosters</h3>\n<p>Neben dem Schneesport ist diese Gegend ein sehr beliebter Hotspot für das <a href=\"/paragliding/air-davos-paraglide-early-bird-davos/\">Paragliding in Davos</a>. Und das gilt zu jeder Jahreszeit.</p>\n<p>Bei einem Gleitschirmflug in Parsenn blickst du auf die in der Sonne liegenden Schneeberge  sowie auf die dunklen Davoser Wälder. </p>\n<p>Im Wintersportgebiet Parsenn hast du zudem die Möglichkeit, vom Gotschnagrat aus zu starten. Aus 1000 m Höhe geniesst du über 15 bis 35 min Flugzeit die atemberaubende alpine Landschaft dieser Region in Graubünden. </p>\n<p>Und schliesslich gehst du am Jakobshorn aus Freude in die Luft. Vermutlich ist dieser Startplatz so beliebt bei den Gleitschirmfliegern, da der Aufwind hier etwas stärker und konstanter weht als anderswo. Neben den guten thermischen Bedingungen begeistert der Flug über herrliche Gipfel und Wälder. </p>\n<h3>Gleitschirmfliegen Zürich</h3>\n<p>In der wunderschönen Zürcher Umgebung ist der Gleitschirmflug über den Uetliberg ein erstklassiges Erlebnis. Wenn du magst, und die Wetterverhältnisse es zulassen, dann fliegst du an einem Sommerabend bis in den Sonnenuntergang. Auch sind auf deinen Wunsch hin besonders rasante Manöver denkbar – selbstverständlich unter der Obhut eines erfahrenen Gleitschirm-Piloten.</p>\n",
+      "images": [],
+      "youtubeUrl": null
+    },
+    {
+      "html": null,
+      "images": [
+        {
+          "url": "https://fra1.digitaloceanspaces.com/contentapi.swissactivities/11_Gleitschirmfliegen_Schweiz_Zug_Winter_Panorama_Schweiz_Tourismus_My_Switzerland_jpg_fec7eb6fd6.jpg",
+          "caption": "Gleitschirmfliegen im Winter (Foto: MySwitzerland)",
+          "alt": "Gleitschirmfliegen Schweiz Zug Winter Panorama  "
+        },
+        {
+          "url": "https://fra1.digitaloceanspaces.com/contentapi.swissactivities/12_Gleitschirmfliegen_Flugschule_bei_Horgen_Schweiz_Tourismus_My_Switzerland_4eb9f982d6.jpg",
+          "caption": "(Foto: MySwitzerland)",
+          "alt": "Gleitschirmfliegen Flugschule bei Horgen "
+        }
+      ],
+      "youtubeUrl": null
+    },
+    {
+      "html": "<h3>Gleitschirmfliegen Wallis</h3>\n<p>Die Aletscharena verspricht grenzenlose Freiheit inmitten eines UNESCO Weltnaturerbe Gebiets. In dieser Gegend ist Kühboden ein Mekka für Gleitschirm- und Deltaflieger. Fiescheralp, Bettmeralp und Riederalp sind fürs <a href=\"/paragliding/gleitschirmfliegen-tandem-ab-fiesch-im-wallis/\">Gleitschirmfliegen im Wallis</a> bekannt. Sie befinden sich auf dem südlichen Sattel des Aletschgletschers und eignen sich ideal für einen aussichtsreichen Flug.</p>\n<p>Schliesslich lockt Zermatt mit einer atemberaubenden Aussicht auf das Matterhorn und die umliegenden Viertausender. Es werden zahlreiche Passagierflüge angeboten, die dich Zermatt und die Region mit 38 fantastischen Gipfeln mit über 4000 m Höhe aus der Vogelperspektive erleben lassen. </p>\n<h2>Gleitschirmfliegen für Kinder</h2>\n<p>In der Aletscharena können bereits Kinder ab vier Jahren an dem Flugspektakel teilnehmen. Dabei handelt es sich ausschliesslich um Tandemflüge mit einem erfahren Piloten. Die kleinen Passagiere lieben es, die Häuser, Strassen und Wanderwege aus der Vogelperspektive zu betrachten. Mit schnellen Schritten saust der Tandem Pilot den Hang hinab. Der Wind greift unter die Segel und der Gleitschirm hebt lautlos ab: Kinderherzen schlagen höher. </p>\n<p>Viele Anbieter geben ein Mindestalter vor. In der Regel können die kleinen Himmelstürmer jedoch mitgenommen werden. Für Kinder ab etwa sieben Jahren ist ein Tandemflug in den meisten Fällen zwar möglich, aber es muss eine Genehmigung der Sorgeberechtigten vorliegen. Zudem sollte wirklich klar sein, dass das Kind den Flug auch durchführen möchte, da es in der Luft kein Zurück mehr gibt</p>\n<p>Je nach Veranstalter dürfen Kinder im Alter zwischen 3 und 15 Jahren an einem <a href=\"/paragliding/gleitschirmflug-tandem-fuer-kinder-ab-fiesch-im-wallis/\">Tandem Kinder Gleitschirmflug</a> teilnehmen. Das Mindestgewicht variiert zwischen 15 bis 25 kg.\nEine normale psychische und physische Verfassung wird vorausgesetzt.</p>\n",
+      "images": [],
+      "youtubeUrl": null
+    },
+    {
+      "html": null,
+      "images": [
+        {
+          "url": "https://fra1.digitaloceanspaces.com/contentapi.swissactivities/13_Gleitschirmfliegen_Schweiz_Flugtaxi_Schweiz_3b752c35f6.JPG",
+          "caption": "(Foto: Flugtaxi Schweiz)",
+          "alt": "Gleitschirmfliegen Schweiz "
+        },
+        {
+          "url": "https://fra1.digitaloceanspaces.com/contentapi.swissactivities/14_Gleitschirmfliegen_Schweiz_Aletsch_Arena_Flugtaxi_Schweiz_d92589f515.JPG",
+          "caption": "(Foto: Flugtaxi Schweiz)",
+          "alt": "Gleitschirmfliegen Schweiz Aletsch Arena "
+        }
+      ],
+      "youtubeUrl": null
+    },
+    {
+      "html": "<h2>Sicherheit beim Gleitschirmfliegen</h2>\n<p>Beim Gleitschirmfliegen werden Professionalität und Sicherheit garantiert. Ausnahmslos alle Piloten sind durch den schweizerischen Hängegleiterverband SHV geprüft. Sie besitzen den Hängegleiter Ausweis, der ihr Können bestätigt. Piloten, die Tandemflüge durchführen dürfen, durchlaufen eine zusätzliche, strenge Prüfung. </p>\n<p>Für die Gleitschirme gibt es ebenfalls sehr strikte Vorschriften. Sämtliche Teile des Gleitschirms müssen in der Lage sein, mindestens eine achtfache Belastung auszuhalten.  Zudem ist jeder Gleitschirm mit einem Rettungsschirm ausgestattet, der im Notfall gezogen wird.</p>\n<h2>Ausrüstung zum Gleitschirmfliegen</h2>\n<p>Eine gute Bergausrüstung eignet sich prinzipiell auch zum Gleitschirmfliegen. Die persönliche Ausrüstung wird so gewählt, dass sie beiden Funktionen gerecht wird. In erster Linie muss sie sicher, klein packbar und entsprechend leicht sein.</p>\n<p>Festes Schuhwerk, lange Hose und Windjacke sind Pflicht. \nIm Sommer empfehlen sich gute, knöchelhohe Schuhe, eine leichte Windjacke oder ein Pullover.\nIm Winter sind ebenfalls gute, knöchelhohe Schuhe sowie eine warme Jacke und Hose wichtig. Nicht zu vergessen sind die Handschuhe. Bei einem Skistart werden natürlich Ski und ein Skianzug benötigt.\nEine leichte Ausrüstung passt gut in einen großen Alpinrucksack und wiegt unter 10 kg. </p>\n<p>Die Gleitschirmausrüstung sollte den Sicherheitsstandards genügen. Helm, Rettungsschirm und Protektor sind immer mit dabei. </p>\n<p>Gleitschirmfliegen gilt heute nachweislich als die sicherste Flug Sportart überhaupt.</p>\n",
+      "images": [],
+      "youtubeUrl": null
+    }
+  ],
+  "faq": {
+    "title": null,
+    "items": [
+      {
+        "question": "Für wen ist Paragliding geeignet?",
+        "answer": "<p>Als Passagier eines Tandemflugs benötigst du keine Vorkenntnisse. Du wirst vom Piloten vor dem Gleitschirmflug in der Startvorbereitung aufgeklärt, was du bei Start, Landung und auch während des Fluges beachten musst. Beim Alter gibt es ab 16 Jahren keine Einschränkungen, das Gewicht sollte zwischen dreissig und hundert Kilogramm liegen. Das exakte Gewicht hängt vom Angebot und vom Startplatz ab und wird jeweils bei der Buchung separat ausgewiesen. Eine besondere Fitness wird nicht benötigt, aber bei schweren Krankheiten solltest du dich mit deinem Arzt beraten und dies auch bei der Buchung angeben. Festes Schuhwerk, lange Hosen und eine Windjacke sind Pflicht. Für Kinder ab etwa sieben Jahren ist ein Tandemflug in den meisten Fällen zwar möglich, aber es muss eine Genehmigung der Erziehungsberechtigten vorliegen.</p>\n"
+      },
+      {
+        "question": "Was benötigst du, um in der Schweiz im Paragliding als Pilot zu starten?",
+        "answer": "<p>Wer in der Schweiz diesen Sport als Pilot ausüben möchte, muss vorher für Einzelplatzgleitschirme zwei Prüfungen bestehen. Eine Prüfung betrifft die in fünf Abschnitte gegliederte theoretische Ausbildung. Die praktische Prüfung wird in maximal drei Gleitschirmflügen absolviert. Damit wird das Beherrschen des Fluggeräts geprüft. Dies erfolgt in drei Abschnitten beim Start, während des Fluges und bei der Landung innerhalb eines vorgegebenen dreissig Meter grossen Kreises. Um für die Ausbildung angerechnet werden zu können, müssen Start- und Landeplatz mindestens eine Höhendifferenz von 300 Metern aufweisen. Für das Führen der Tandemschirme (auch Biplace genannt) benötigst du eine weitere, strenge Prüfung. Die Lizenz heisst im Deutschen Hängegleiter Ausweis (Licence de vol libre, Licenza per aliante da pendio, Hang gliding licence) und wird von der Schweizerischen Eidgenossenschaft ausgestellt. Wer diese Prüfungen bestanden hat, darf als Gleitschirmpilot fliegen.</p>\n<p>Um mit dem Gleitschirm starten zu dürfen, ist in der Schweiz lediglich die Genehmigung des Grundstückeigentümers erforderlich. Die Start- und Landeplätze werden meist von Flugschulen, örtlichen Vereinen oder sogar Bergbahnbetreibern betreut. Eine abgeschlossene Haftpflichtversicherung ist allerdings Bedingung. Als ausländischer Gastpilot musst du dir von deiner Versicherung die Bestätigung einholen, dass deine Versicherung auch im Schweizer Luftraum deine Flüge versichert. Die Garantien und Deckungsbeiträge für Schäden Dritter müssen ausreichend abgedeckt sein. 30-Tage-Versicherungen kannst du als Pilot auch beim Schweizerischen Hängegleiterverband abschliessen.</p>\n"
+      },
+      {
+        "question": "Wie funktioniert Paragliding?",
+        "answer": "<p>Der Pilot sitzt in einem Gurt sicher unter dem Gleitschirm, der über Leinen mit dem Gurt verbunden ist. Er steuert den Flug mittels Steuerleinen. Beim Tandemflug sitzt der Passagier in einem zweiten fest verbundenen Gurt direkt vor dem Piloten. Die gesamte Ausrüstung passt in einen Rucksack und wiegt zwischen fünfzehn und zwanzig Kilogramm. In den Bergen wird der Flug meist mit einem Vorwärtsstart durchgeführt. Der Gleitschirm ist hinter dir und du läufst langsam los, bis sich der Gleitschirm mit Luft gefüllt hat und über dir steht. Ist nichts verheddert, geht’s noch einige Schritte beschleunigt bergab und schon bei 20 km/h hebt dich der Gleitschirm in die Luft.</p>\n"
+      },
+      {
+        "question": "Wie gefährlich ist Paragliding?",
+        "answer": "<p>Beim Paragliding werden Professionalität und Sicherheit garantiert. Alle Piloten sind ausnahmslos durch den schweizerischen Hängegleiterverband SHV geprüft und besitzen ein Brevet, den Hängegleiter Ausweis. Piloten, die Tandemflüge durchführen dürfen, durchlaufen eine zusätzliche strenge Prüfung. Für die Gleitschirme gibt es ebenfalls sehr strenge Vorschriften. Sämtliche Teile des Gleitschirms müssen in der Lage sein, mindestens eine achtfache Belastung auszuhalten. Heute ist Gleitschirmfliegen die sicherste Flugsportart überhaupt. Zwischen 2000-2017 starben durchschnittlich 8 Personen beim Gleitschirmfliegen gemäss BFU. Bei 16.000 registrierten und lizenzierten Gleitschirmpiloten ein vergleichbar tiefer Wert. Insbesondere wenn man berücksichtigt, dass jeder Pilot mehrmals pro Jahr fliegt.</p>\n"
+      },
+      {
+        "question": "Wie entstand das Paragliding?",
+        "answer": "<p>Paragliding gibt es in seinen Anfängen schon seit mehr als siebzig Jahren. Der NASA-Ingenieur Francis Melvin Rogallo erhielt 1948 das erste Patent eines Vorgänger-Gleitschirms. Etwas später entwickelte und testete David Barish ebenfalls ganz ähnliche Schirme. </p>\n<p>In der Schweiz entwickelten die hier lebenden deutschen Brüder Strasilla gemeinsam mit dem Schweizer Andrea Kuhn 1973 den ersten Gleitschirm weltweit aus Schleppschirmen. Sie meldeten ihr eigenes Gleitschirm-Patent als Skywing an. Ihr Schirm verfügte schon damals über ein ausgeklügeltes System von Fang- und Steuerungsleinen. Dieter und Udo Strasilla flogen damals gemeinsam als erste Menschen vom 3466 Meter hohen Jungfraujoch zum etwa sechs Kilometer entfernten Lauterbrunnen und überwanden auf diese Weise 2676 Höhenmeter. Das war die Geburtsstunde des Paragliding in der Schweiz. </p>\n<p>Noch heute kann der erste Gleitschirm der Welt, ein 11-Zeller aus Spinnakerstoff, besichtigt werden. Er befindet sich in der Flugwerft Schleissheim bei München, die zum Deutschen Museum gehört. Die Berner Alpen südlich von Interlaken sind für ihr Dreigestirn aus Eiger, Mönch und Jungfrau bekannt und bieten mit Gipfeln über 4000 Höhenmetern ideale Bedingungen für das Gleitschirmfliegen bzw. Paragliding.</p>\n"
+      },
+      {
+        "question": "Wo treffe ich meinen Tandempiloten, wenn ich einen Gleitschirmflug gebucht habe?",
+        "answer": "<p>Wenn du über Swiss Activities einen Paragliding Tandemflug buchst, teilen wir dir den Treffpunkt mit. Je nach Flug musst du allerdings nach der Buchung mit dem Anbieter Kontakt aufnehmen, um die Details mit ihm zu besprechen, da der Treffpunkt leicht abweichen kann. Wenn dies der Fall ist, haben wir das im Text des Fluges beschrieben, damit du Bescheid weisst, wann du aktiv werden musst. </p>\n<p>Auch wenn der Treffpunkt klar definiert ist, kann es beim Gleitschirmfliegen witterungsbedingt zu kurzfristigen Änderungen kommen. Das Wetter ist nicht kontrollierbar und manchmal muss der Pilot einen anderen Startplatz auswählen, damit ihr den Flug durchführen könnt. Deshalb ist es wichtig, dass du am Tag der Aktivität (und auch schon einen Tag vorher) telefonisch und per Mail erreichbar bist. Der Anbieter erhält deine E-Mail Adresse sowie deine Telefonnummer, wenn du buchst. Er wird dich also kontaktieren, falls es eine Änderung gibt.</p>\n"
+      },
+      {
+        "question": "Gibt es einen Foto- und Videoservice für mich und was kostet er?",
+        "answer": "<p>Alle Anbieter von Tandemflügen bieten einen Foto- und Videoservice an. So fliegst du ganz entspannt und bekommst anschliessend einzigartige Erinnerungsstücke mit. Du solltest für diesen Service mit 40 bis 45 CHF rechnen.</p>\n"
+      },
+      {
+        "question": "Darf ich auch eine eigene Kamera mitnehmen?",
+        "answer": "<p>Eine kleine Kompaktkamera oder eine GoPro kann meistens mitgenommen werden, wenn sie gut am Gurtzeug festgemacht werden kann. Mobiltelefone und Selfie Sticks mitzunehmen, ist nicht erlaubt.</p>\n"
+      }
+    ]
+  }
 } satisfies TGatewayHome;
