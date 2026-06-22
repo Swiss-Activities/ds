@@ -26,6 +26,12 @@ export const Basket = () => {
       loadingState: state.loadingState,
     }))
   );
+  const init = useCartStore((state) => state.init);
+
+  useEffect(() => {
+    init(locale, true);
+  }, [init, locale]);
+
   const reservations = cart?.customData?.length
     ? cart.customData.map((data) => data.reservation)
     : [];
