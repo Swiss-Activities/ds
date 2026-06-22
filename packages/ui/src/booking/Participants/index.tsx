@@ -142,11 +142,11 @@ export const Participant = ({
       </div>
       <div className="grid grid-cols-[auto,20px,auto] items-center gap-4 [&_button]:rounded-full">
         <Button
-          variant="outline"
+          variant="outline-gray"
           size="icon"
           onClick={onClickMinus}
           disabled={minusDisabled}
-          className="amount-subtract bg-white"
+          className="amount-subtract !h-10 !w-10 !min-h-[40px] !min-w-[40px] !p-0 bg-white"
         >
           <I icon="minus" />
         </Button>
@@ -154,11 +154,11 @@ export const Participant = ({
           {amount}
         </Text>
         <Button
-          variant="outline"
+          variant="outline-gray"
           size="icon"
           onClick={onClickPlus}
           disabled={plusDisabled}
-          className="amount-add bg-white"
+          className="amount-add !h-10 !w-10 !min-h-[40px] !min-w-[40px] !p-0 bg-white"
         >
           <I icon="plus" />
         </Button>

@@ -50,9 +50,9 @@ export const SelectableCard = ({
         onClick?.(e);
       }}
       className={cn(
-        "flex h-auto items-center rounded-lg border border-solid border-gray-200 bg-white px-3.5 py-2.5",
+        "flex h-auto items-center rounded-lg border border-solid !border-gray-200 bg-white px-3.5 py-2.5",
         {
-          "border-primary": isSelected && !card,
+          "!border-primary": isSelected && !card,
           "outline-primary": isSelected && card,
           "border-0": card,
         },
