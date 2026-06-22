@@ -1,0 +1,1 @@
+export const PAYMENT_PROVIDER = process.env.NEXT_PUBLIC_PAYMENT_PROVIDER;
