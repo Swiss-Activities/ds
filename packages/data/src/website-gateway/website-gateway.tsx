@@ -654,28 +654,32 @@ function renderGatewayRegionMapSection(
 
 function renderGatewayFilterSection({
   action,
+  fullWidth = false,
   hideQuickFilters,
   onFilterOptionToggle,
   section,
 }: {
   action?: ReactNode;
+  /** Skip the centered sa-container max-width — used for the map view's
+   * header, which is full-bleed (the map app supplies its own padding). */
+  fullWidth?: boolean;
   hideQuickFilters?: boolean;
   onFilterOptionToggle?: GatewayFiltersProps["onFilterOptionToggle"];
   section: Extract<GatewayHomeSectionData, { component: "filters" }>;
 }) {
-  return (
-    <PageSection spacing={false}>
-      <GatewayFilters
-        action={action}
-        className="pb-4"
-        desktopDrawer="left"
-        hideQuickFilters={hideQuickFilters}
-        filters={getFilterConfig(section.filterConfig)}
-        labels={filterLabels}
-        onFilterOptionToggle={onFilterOptionToggle}
-      />
-    </PageSection>
+  const filters = (
+    <GatewayFilters
+      action={action}
+      className="pb-4"
+      desktopDrawer="left"
+      hideQuickFilters={hideQuickFilters}
+      filters={getFilterConfig(section.filterConfig)}
+      labels={filterLabels}
+      onFilterOptionToggle={onFilterOptionToggle}
+    />
   );
+
+  return fullWidth ? filters : <PageSection spacing={false}>{filters}</PageSection>;
 }
 
 function renderGatewayActivitySection({
@@ -893,6 +897,7 @@ function GatewayContentPage({
           apiKey={googleMapsApiKey}
           filterHeader={renderGatewayFilterSection({
             action: filterAction,
+            fullWidth: true,
             hideQuickFilters: true,
             section: filterSection,
           })}
