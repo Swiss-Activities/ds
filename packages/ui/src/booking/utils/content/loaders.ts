@@ -1,12 +1,11 @@
 import cloneDeep from "lodash/cloneDeep";
-import path from "path";
 import i18n from "../../data/i18n";
 import pagesData from "../../data/pages";
-import { TActivity } from "../../types/activity";
-import { TOverview } from "../../types/overview";
-import { TPage } from "../../types/page";
-import { TReview } from "../../types/reviews";
-import { TStreams } from "../../types/streams";
+import type { TActivity } from "../../types/activity";
+import type { TOverview } from "../../types/overview";
+import type { TPage } from "../../types/page";
+import type { TReview } from "../../types/reviews";
+import type { TStreams } from "../../types/streams";
 import buildPagePathModule from "./buildPagePath";
 import { getDataFolderPath } from "./getDataFolderPath";
 import { pagePathToArray } from "../paths/pagePathToArray";
@@ -35,7 +34,7 @@ export const loadData = async (
     }
 
     const data = await fs.readFile(
-      path.join(getDataFolderPath(), name + ".json"),
+      `${getDataFolderPath()}/${name}.json`,
       "utf8"
     );
 
@@ -58,7 +57,7 @@ const loadActivity = async (
     }
 
     const data = await fs.readFile(
-      path.join(getDataFolderPath(), "activities", name + ".json"),
+      `${getDataFolderPath()}/activities/${name}.json`,
       "utf8"
     );
 
@@ -85,7 +84,7 @@ const loadOverview = async (
     }
 
     const data = await fs.readFile(
-      path.join(getDataFolderPath(), "overviews", name + ".json"),
+      `${getDataFolderPath()}/overviews/${name}.json`,
       "utf8"
     );
 
@@ -269,7 +268,7 @@ export const getInternalLinks = async (
   locale: string
 ) => {
   const data = await fs.readFile(
-    path.join(getDataFolderPath(), `internal-links-${locale}.json`),
+    `${getDataFolderPath()}/internal-links-${locale}.json`,
     "utf8"
   );
 
@@ -357,7 +356,7 @@ export const getParams = async (
     }
 
     const translations = await fs.readFile(
-      path.join(".", "public", "locales", loc, "common.json"),
+      `public/locales/${loc}/common.json`,
       "utf8"
     );
     TRANSLATIONS_CACHE[locale] = JSON.parse(translations);

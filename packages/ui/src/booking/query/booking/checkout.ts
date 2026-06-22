@@ -1,6 +1,6 @@
 import { useMutation } from "@tanstack/react-query";
 import { unlockCartRestore } from "../../Cart/utils";
-import { TBooking } from "../../types/booking";
+import type { TBooking } from "../../types/booking";
 import { axiosInstancePatch } from "../axios";
 
 export type CheckoutUser = {

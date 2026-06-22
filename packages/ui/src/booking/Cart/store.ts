@@ -3,11 +3,11 @@ import {
   hasCartRestoreLock,
   unlockCartRestore,
 } from "./utils";
-import { TActivity } from "../types/activity";
-import { TCart } from "../types/cart";
-import { TReservation } from "../types/reservation";
+import type { TActivity } from "../types/activity";
+import type { TCart } from "../types/cart";
+import type { TReservation } from "../types/reservation";
 import { secureLocalStorage } from "../utils/data/secureLocalStorage";
-import { Activities, dataLayerSend } from "../utils/thirdParty/dataLayerSend";
+import { type Activities, sendDataLayer } from "../utils/thirdParty/dataLayerSend";
 import { getActivity } from "../query/activity/getActivity";
 import { getReservations } from "../query/booking";
 import { getCart } from "../query/booking/getCart";
@@ -166,7 +166,7 @@ export const useCartStore = create<CartStore>((set, get) => ({
         const now = Date.now();
 
         if (expiresAt <= now) {
-          dataLayerSend({
+          sendDataLayer({
             obj: {
               event: "reservation_expired",
             },

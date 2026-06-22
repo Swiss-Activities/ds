@@ -1,9 +1,9 @@
 import { create } from "zustand";
-import { TActivity } from "./types/activity";
-import { TOfferBooking } from "./types/offerBooking";
-import { TPersonalizedOption } from "./types/personalizedOptions";
-import { TReservation } from "./types/reservation";
-import { MonthlyAvailability } from "./query/activity/getMonthlyAvailabilities";
+import type { TActivity } from "./types/activity";
+import type { TOfferBooking } from "./types/offerBooking";
+import type { TPersonalizedOption } from "./types/personalizedOptions";
+import type { TReservation } from "./types/reservation";
+import type { MonthlyAvailability } from "./query/activity/getMonthlyAvailabilities";
 
 export type BookingStore = {
   analyticsIds: string[];

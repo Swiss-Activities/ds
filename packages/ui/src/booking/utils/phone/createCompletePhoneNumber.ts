@@ -1,5 +1,5 @@
 import { getCountryCallingCode } from "libphonenumber-js";
-import { CountryCode } from "libphonenumber-js";
+import type { CountryCode } from "libphonenumber-js";
 
 export const createCompletePhoneNumber = (
   phoneNumber: string | undefined,

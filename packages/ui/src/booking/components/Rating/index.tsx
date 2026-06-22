@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 import { Rating as DSRating } from "@swiss-activities/ui";
 import type { RatingSize } from "@swiss-activities/ui/rating/rating.types";
-import { TActivity } from "../../types/activity";
+import type { TActivity } from "../../types/activity";
 import { cn } from "../../utils/css/cn";
 import { useI18n } from "../../utils/i18n/useI18n";
 

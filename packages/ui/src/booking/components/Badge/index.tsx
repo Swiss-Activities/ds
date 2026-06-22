@@ -4,7 +4,7 @@ import type {
   BadgeSize,
   BadgeVariant,
 } from "@swiss-activities/ui/badge/badge.types";
-import { TActivity } from "../../types/activity";
+import type { TActivity } from "../../types/activity";
 import { useI18n } from "../../utils/i18n/useI18n";
 
 type BadgeProps = {

@@ -1,0 +1,1799 @@
+{
+  "general": {
+    "accountAdvantages": "Pentru a beneficia de reduceri și alte avantaje, creează un cont sau conectează-te.",
+    "activityBook": "Rezervă activitatea",
+    "addTicket": "Adaugă bilet",
+    "adult": "{val} Adult",
+    "adults": "{val} Adulți",
+    "ageChoose": "Alege vârsta",
+    "ageFrom": "De la {val} ani",
+    "ageOld": "{val} ani",
+    "ageUnder": "Sub {val} ani",
+    "all": "Toate",
+    "allReviews": "Toate evaluările",
+    "backToBookings": "Înapoi la rezervări",
+    "bookAsGuest": "Finalizezi procesul de comandă ca invitat.",
+    "cancel": "Anulează",
+    "cancelled": "Anulat",
+    "cartAmount": "Valoarea coșului",
+    "child": "{val} Copil",
+    "children": "{val} Copii",
+    "chooseSelection": "Confirmă selecția",
+    "confirm": "Confirmă",
+    "confirmCancel": "Confirmă anularea",
+    "contact": "Contact",
+    "copyUrl": "Copiază URL-ul",
+    "couple": "Cuplu",
+    "customerServiceFee": "Taxa de serviciu",
+    "data": "Date",
+    "date": "Data",
+    "dateChoose": "Alege data",
+    "delete": "Șterge",
+    "didYouMean": "Vrei să spui <suggestion>{email}</suggestion>?",
+    "duplicate": "Dublare",
+    "emailsDontMatch": "Adresele de e-mail introduse nu se potrivesc.",
+    "export": "Exportați",
+    "faqType": "Întrebări frecvente despre {type} în Elveția",
+    "from": "De la",
+    "group": "Grupă",
+    "helpfulQuestion": "Util?",
+    "informationPlural": "Informații",
+    "language": "Limba",
+    "loginOrRegister": "Autentifică-te sau Înregistrează-te",
+    "manageBookings": "Gestionați rezervările",
+    "mobileAppAddon": "Descarcă acum aplicația noastră mobilă și gestionează-ți ușor rezervările, accesează rapid biletele și găsește următoarea ta aventură.",
+    "mostImportantInSummary": "În rezumat",
+    "noResults": "Din păcate, nu am găsit rezultate pentru termenul tău de căutare",
+    "noReviewsYet": "Încă nu sunt evaluări",
+    "notes": "Note",
+    "oneMonth": "1 lună",
+    "openChat": "Deschide chat-ul",
+    "order": "Ordine",
+    "partSum": "Subtotal",
+    "participants": "Participanți",
+    "participantsChoose": "Alege participanții",
+    "past": "Trecut",
+    "personalizeTickets": "Personalizează biletele",
+    "pleaseSelect": "Te rog selectează",
+    "pleaseSelectItem": "Te rugăm să selectezi {val}",
+    "questionsChatActivity": "Ai întrebări legate de această activitate? Vorbește cu noi",
+    "questionsChatBooking": "Ai întrebări legate de rezervare? Vorbește cu noi",
+    "raw": "Brut",
+    "rebate": "Reducere",
+    "recaptcha": "Acest site este protejat prin reCAPTCHA. Politica de\n<a href=\"https://policies.google.com/privacy\" target=\"_blank\">confidențialitate</a> și\n<a href=\"https://policies.google.com/terms\" target=\"_blank\">te condiții de utilizare</a> Google se aplică.",
+    "remove": "Elimină",
+    "removeFromCart": "Șterge din coș",
+    "reset": "Resetare",
+    "searchNow": "Caută acum",
+    "single": "Singur",
+    "soldOut": "Vândut",
+    "somethingWentWrongContact": "Ne pare rău, dar a apărut o problemă. Te rugăm să încerci din nou sau să contactezi suportul.",
+    "successfullySaved": "Salvat cu succes",
+    "ticket": "Bilet",
+    "tickets": "Bilete",
+    "to": "La",
+    "currentLocation": "Locația curentă",
+    "toDashboard": "Rezervările mele",
+    "translate": "Traducere",
+    "tryAgain": "Încearcă din nou",
+    "upcoming": "Viitor",
+    "when": "Când",
+    "who": "Cine",
+    "wrongDate": "Ceva nu e în regulă cu data: te rugăm să verifici și să selectezi din nou.",
+    "wrongDateParticipant": "Data nașterii participantului nu corespunde vârstei din ofertă.",
+    "today": "Astăzi",
+    "apply": "Aplică"
+  },
+  "aria": {
+    "forward": "Înainte",
+    "backward": "Înapoi"
+  },
+  "auth0": {
+    "accept": "Accept condițiile de [utilizare]({link})",
+    "error": "Te rog să accepți condițiile de utilizare",
+    "resetPasswordHint": "Nu ai primit un e-mail? Verifică dosarul tău de spam. Dacă te-ai înregistrat cu Apple sau Google, te rugăm să folosești această metodă de logare."
+  },
+  "menu": {
+    "menu": "Meniu",
+    "search": "Caută",
+    "travelGuide": "Planificator de călătorie",
+    "travelRoutes": "Itinerarii",
+    "contactus": "Contactează-ne",
+    "switzerland": "Elveția",
+    "help": "Chat",
+    "voucher": "Cumpără voucher",
+    "voucherSm": "Voucher",
+    "partners": "Parteneri",
+    "provider": "Furnizori",
+    "affiliate": "Parteneri afiliați"
+  },
+  "chat": {
+    "chats": "Toate chat-urile",
+    "newChat": "Chat nou",
+    "noChatsYet": "Încă niciun chat",
+    "typeMessage": "Introdu mesajul",
+    "welcome": "Salut și bun venit la Swiss Activities! Sunt Housibot și sunt aici să te ajut cu întrebările tale.",
+    "welcomeReview": "Salut! Cum a fost experiența ta? Sunt Housibot și te ajut să împărtășești feedback-ul tău."
+  },
+  "supportBanner": {
+    "title": "Ai nevoie de ajutor pentru a găsi școala de schi potrivită?",
+    "placeholder": "Cum te putem ajuta mai departe?",
+    "send": "Trimite"
+  },
+  "pages": {
+    "404": {
+      "title": "Pagina nu a fost găsită.",
+      "description": "Această pagină nu există.",
+      "button": "Înapoi la pagina principală",
+      "search": "Începe căutarea"
+    },
+    "home": {
+      "title": "Swiss Activities - Găsește activități de recreere în Elveția",
+      "description": "Swiss Activities este destinația ta pentru activități de recreere în Elveția. Descoperă, compară și rezervă nesfârșite activități de recreere.",
+      "gatewayCards": {
+        "categories": {
+          "castlesRuins": "Castel / Ruină",
+          "castleEvents": "Eveniment la castel",
+          "exhibitions": "Expoziție",
+          "fireplaces": "Loc de foc",
+          "movies": "Film",
+          "museums": "Muzeu",
+          "playgrounds": "Loc de joacă",
+          "swimmingBathing": "Înot & Baie"
+        },
+        "dateRange": {
+          "from": "De la",
+          "until": "Până la"
+        },
+        "distance": {
+          "unit": "km"
+        }
+      },
+      "gatewayDetail": {
+        "back": "Înapoi",
+        "moreInfo": "Mai multe informații",
+        "source": "Deschide sursa",
+        "labels": {
+          "admission": "Taxă de intrare",
+          "address": "Adresă",
+          "ageRating": "Vârstă",
+          "bookTickets": "Rezervă bilete",
+          "canton": "Canton",
+          "cast": "Distribuție",
+          "category": "Categorie",
+          "cinema": "Cinema",
+          "countryYear": "Țară / An",
+          "dateRange": "Perioadă",
+          "director": "Regizor",
+          "duration": "Durată",
+          "entryFeeAdult": "Adulți",
+          "entryFeeChild": "Copii",
+          "foundedYear": "Fondat",
+          "genres": "Genuri",
+          "location": "Locație",
+          "museumCategory": "Tip de muzeu",
+          "openTrailer": "Deschide trailerul",
+          "openingHours": "Program de vizitare",
+          "phone": "Telefon",
+          "poolLength": "Lungime bazin",
+          "trailer": "Trailer",
+          "venue": "Locație eveniment",
+          "waterType": "Tip apă"
+        },
+        "sections": {
+          "amenities": "Facilități",
+          "badges": "Recomandări",
+          "information": "Informații",
+          "prices": "Prețuri",
+          "showtimes": "Spectacole",
+          "venue": "Locație eveniment"
+        },
+        "amenities": {
+          "capacityPersons": "Capacitate",
+          "hasBenches": "Bănci",
+          "hasChangingRooms": "Dressinguri",
+          "hasDivingBoard": "Placă de sărit",
+          "hasFirewood": "Lemne de foc",
+          "hasFoodService": "Servicii de alimentație",
+          "hasGrillGrate": "Grătar",
+          "hasKidsPool": "Bazin pentru copii",
+          "hasLifeguard": "Supraveghetor",
+          "hasLockers": "Dulapuri",
+          "hasPlaygroundNearby": "Loc de joacă în apropiere",
+          "hasShowers": "Dușuri",
+          "hasSlide": "Tobogan",
+          "hasShelter": "Adăpost",
+          "hasTable": "Masă",
+          "hasToilet": "Toaletă",
+          "hasWater": "Apă"
+        },
+        "waterTypes": {
+          "indoorPool": "Piscină acoperită",
+          "lake": "Lac",
+          "outdoorPool": "Piscină în aer liber",
+          "pool": "Bazin",
+          "river": "Râu"
+        }
+      }
+    },
+    "s": {
+      "title": "Swiss Activities - Găsește și rezervă activități",
+      "description": "Swiss Activities este destinația ta pentru activități de recreere în Elveția. Descoperă, compară și rezervă nesfârșite activități de recreere.",
+      "sort": {
+        "distance": {
+          "notSupported": "Serviciile de locație nu sunt acceptate de browserul tău. Se folosește sortarea după relevanță.",
+          "permissionDenied": "Pentru a sorta după distanță, te rugăm să permiti accesul la locația ta în setările browserului și să reîncarci pagina.",
+          "positionUnavailable": "Informațiile despre locație nu sunt disponibile.",
+          "timeout": "Timp de așteptare depășit la interogarea locației.",
+          "unknownError": "A apărut o eroare necunoscută.",
+          "fallbackMessage": "Se folosește sortarea după relevanță.",
+          "errorPrefix": "Nu a putut fi determinată locația."
+        }
+      }
+    },
+    "chat": {
+      "title": "Chat Swiss Activities",
+      "description": "Swiss Activities este destinația ta pentru activități recreative în Elveția. Descoperă, compară și rezervă nenumărate activități recreative."
+    },
+    "transport": {
+      "title": "Bilete pentru trenuri, Abonamente și Bilete de o zi | Swiss Travel Pass, SBB Spartageskarte",
+      "description": "Compară și rezervă bilete de tren, Swiss Travel Pass, Halbtax, SBB Spartageskarte & Abonamente regionale pentru întreaga Elveție. Instant ca bilet mobil pe telefonul tău.",
+      "trust": {
+        "partners": "Partener oficial al",
+        "ratingValue": "<b>4,8</b>",
+        "ratingLabel": "Peste 400.000 de călători mulțumiți",
+        "ratingShortLabel": "<strong>400.000</strong>+ călători"
+      },
+      "discountMap": {
+        "title": "Aici economisești cu abonamentul tău",
+        "subtitle": "Telecabine, nave și excursii de top – alege un abonament și vezi unde găsești activități.",
+        "free": "Inclus",
+        "discount50": "−50 %",
+        "discount25": "−25 %",
+        "noDiscount": "Fără discount",
+        "altitude": "{m} m deasupra nivelului mării.",
+        "moreInfo": "Află mai multe",
+        "selectPass": "Alege un abonament",
+        "selectCategory": "Alege o categorie",
+        "categories": {
+          "mountain": "Telecabine",
+          "lake": "Lacuri & Nave",
+          "museum": "Muzee"
+        },
+        "airports": {
+          "zrh": "Zürich",
+          "gva": "Geneva"
+        },
+        "regions": {
+          "bernerOberland": "Berner Oberland",
+          "jungfrau": "Jungfrau",
+          "interlaken": "Interlaken",
+          "zentralschweiz": "Elveția Centrală",
+          "ostschweiz": "Elveția de Est",
+          "waadt": "Vaud",
+          "engadin": "Engadina",
+          "wallis": "Valais",
+          "tessin": "Ticino",
+          "genferseeregion": "Regiunea lacului Geneva",
+          "zuerich": "Zürich",
+          "mittelland": "Centrul Elveției",
+          "luzern": "Lucerna",
+          "basel": "Basel",
+          "bern": "Berna",
+          "lausanne": "Lausanne",
+          "geneve": "Geneva",
+          "zermatt": "Zermatt",
+          "fribourg": "Fribourg",
+          "graubuenden": "Graubünden"
+        }
+      },
+      "hero": {
+        "title": "Bilete de tren pentru întreaga",
+        "titleAccent": "Elveție",
+        "lede": "Bilete de traseu, Bilete de o zi și oferte de reduceri de la SBB – instant ca bilet mobil pe telefonul tău.",
+        "subtitle": "Bilete de traseu, Bilete de o zi și oferte de reduceri de la SBB – instant ca bilet mobil pe telefonul tău.",
+        "searchTitle": "Caută legături",
+        "searchMeta": "Gara · Data · Călători",
+        "fromPlaceholder": "Gara de plecare / Locația de plecare",
+        "toPlaceholder": "Gara de destinație / Locația de destinație",
+        "badges": {
+          "rating": "4.8 / 5 · Peste 400.000 de evaluări",
+          "partner": "Partener oficial SBB"
+        },
+        "usps": {
+          "customers": {
+            "title": "400.000 de clienți fericiți",
+            "subline": "Încredere din 2021 în Swiss Activities"
+          },
+          "saver": {
+            "title": "Economisești până la 50%",
+            "subline": "Cu bilete de reducere și bilete de o zi de la SBB"
+          },
+          "mobile": {
+            "title": "Instant ca bilet mobil",
+            "subline": "Direct pe telefon, fără login SBB necesar"
+          },
+          "earlyBird": {
+            "title": "Reduceri pentru rezervarea anticipată",
+            "subline": "Planifică din timp și cumpără bilete economice și bilete de o zi de la SBB"
+          }
+        }
+      },
+      "benefits": {
+        "title": "Beneficiile tale",
+        "discount": {
+          "eyebrow": "Bilete de reducere",
+          "title": "Economisește până la 40%",
+          "subline": "Oferte SBB de reducere și bilete de o zi",
+          "badge": "Cele mai vândute"
+        }
+      },
+      "passes": {
+        "title": "Abonamente SBB și regionale",
+        "subtitle": "Compară abonamentele pentru mai multe zile, biletele de o zi și abonamentele regionale – alege abonamentul care îți aduce cele mai multe beneficii.",
+        "tabs": {
+          "multiDay": "Abonamente pentru mai multe zile",
+          "dayPass": "Bilete de o zi",
+          "regional": "Abonamente regionale"
+        },
+        "buy": "Cumpără acum",
+        "from": "de la",
+        "moreInfo": "Mai multe informații",
+        "seeDiscounts": "Vezi toate reducerile",
+        "viewAllByTab": {
+          "multiDay": "Vezi toate abonamentele",
+          "dayPass": "Vezi toate biletele de zi de la SBB",
+          "regional": "Vezi toate abonamentele regionale"
+        },
+        "empty": "În prezent, nu sunt disponibile produse – aruncă o privire în celelalte categorii.",
+        "descriptions": {
+          "fallback-stp": "În întreaga Elveție cu trenul, autobuzul și vaporul – intrare gratuită la muzee inclusă.",
+          "fallback-stpf": "Utilizează transportul public în zilele alese – inclusiv intrare gratuită la muzee.",
+          "fallback-shfc": "O lună la jumătate de preț pentru tren, autobuz, vapor și telecabine.",
+          "fallback-halbtax": "Călătoria gratuită toată ziua în întreaga Elveție – cu Halbtax-ul tău.",
+          "fallback-spar": "Bilet de o zi la cel mai bun preț la rezervarea anticipată – cantitate limitată pe zi.",
+          "fallback-ga": "Mobilitate completă pentru o zi – ca un GA, dar pentru 24 de ore.",
+          "fallback-tell": "Călătorie gratuită în Elveția Centrală: telecabine, croaziere și transport public incluse.",
+          "fallback-bo": "Explorează zona Jungfrau și Interlaken – trenuri, bărci și telecabine cu un singur abonament.",
+          "fallback-jtp": "Regiunea Top of Europe: telecabine, transport public și atracții din jurul Grindelwald, Wengen, Mürren."
+        },
+        "usps": {
+          "1330": [
+            "Harder Kulm & Brienzer Rothorn incluse",
+            "Până la −50 % la stațiunile de schi Grindelwald-Wengen",
+            "Transport public & telecabine în regiunea Jungfrau"
+          ],
+          "1438": [
+            "First, Schynige Platte & Niesen incluse",
+            "−25 % la Jungfraujoch Top of Europe",
+            "Tren, vapor & telecabine cu un singur abonament"
+          ],
+          "1440": [
+            "1 lună la jumătate de preț în toată Elveția",
+            "Pentru tren, autobuz, vapor și telecabine",
+            "De asemenea, pentru biletele de reducere de la SBB"
+          ],
+          "1447": [
+            "Călătorie gratuită cu trenul, autobuzul & vaporul în întreaga Elveție",
+            "Până la −50 % la telecabine (Jungfraujoch −25 %)",
+            "Peste 500 de muzee gratuit"
+          ],
+          "1448": [
+            "Activare în zilele alese în întreaga Elveție",
+            "Până la −50 % la telecabine, autobuz, vapor",
+            "Peste 500 de muzee gratuit"
+          ],
+          "1450": [
+            "Pilatus, Rigi & Stanserhorn incluse",
+            "Vapor gratuit pe lacul Vierwaldstättersee",
+            "Tren, autobuz & telecabine în Elveția Centrală"
+          ],
+          "1664": [
+            "Bilet de o zi de la CHF 29",
+            "Până la −70 % pentru rezervări anticipate",
+            "Cantitate limitată pe zi"
+          ],
+          "1671": [
+            "Copii 6–16 la preț de familie",
+            "În întreaga Elveție, toate rutele SBB",
+            "Perfect pentru excursii în familie"
+          ],
+          "1676": [
+            "1 zi de călătorie gratuită cu Halbtax",
+            "În întreaga Elveție pe rutele SBB",
+            "Mai ieftin decât mai multe bilete individuale"
+          ]
+        },
+        "soldCount": "{count} rezervate",
+        "reviews": "({count})",
+        "discounts": {
+          "1330": "Harder Kulm inclus.",
+          "1438": "First & Niesen incluse.",
+          "1440": "Prețul median",
+          "1447": "Telecabine −50 %",
+          "1448": "Telecabine −50 %",
+          "1450": "Pilatus & Rigi incluse.",
+          "1664": "Până la −70 %",
+          "1671": "Preț de familie"
+        },
+        "benefits": {
+          "includedHeading": "Inclus",
+          "discountedHeading": "Reduceri",
+          "expand": "Vezi toate reducerile",
+          "collapse": "Arată mai puțin",
+          "items": {
+            "1330": {
+              "included": [
+                "Harder Kulm & Brienzer Rothorn",
+                "Transport public în regiunea Jungfrau (tren, autobuz, vapor)"
+              ],
+              "discounted": [
+                "Stațiuni de schi Grindelwald-Wengen cu până la −50 %",
+                "Stațiunea de schi Mürren-Schilthorn cu până la −50 %",
+                "Jungfraujoch Vârful Europei −25 %"
+              ]
+            },
+            "1438": {
+              "included": [
+                "În primul rând, Schynige Platte & Niesen",
+                "Brienzer Rothorn & Stockhorn",
+                "Tren, vapor & teleferice din regiunea Jungfrau"
+              ],
+              "discounted": [
+                "Jungfraujoch Vârful Europei −25 %",
+                "Schilthorn (James Bond) −50 %"
+              ]
+            },
+            "1440": {
+              "included": [],
+              "discounted": [
+                "50 % reducere la biletele pentru tren, autobuz și vapor",
+                "50 % reducere la telecabine",
+                "De asemenea, combinabil cu biletele de reducere de la SBB"
+              ]
+            },
+            "1447": {
+              "included": [
+                "Tren, autobuz & vapor în întreaga Elveție",
+                "Peste 500 de muzee",
+                "Transport public în 90 de orașe elvețiene"
+              ],
+              "discounted": [
+                "Telecabine până la −50 %",
+                "Reduceri de 25 % la Jungfraujoch Top of Europe",
+                "Oferte RailAway de la SBB −30 %"
+              ]
+            },
+            "1448": {
+              "included": [
+                "Tren, autobuz & vapor în zilele alese",
+                "Peste 500 de muzee",
+                "Transport public în 90 de orașe elvețiene"
+              ],
+              "discounted": [
+                "Telecabine până la −50 %",
+                "Reduceri de 25 % la Jungfraujoch Top of Europe",
+                "Oferte RailAway de la SBB −30 %"
+              ]
+            },
+            "1450": {
+              "included": [
+                "Pilatus, Rigi și Stanserhorn",
+                "Vapoare pe lacul Vierwaldstättersee",
+                "Tren, autobuz și teleferice din centrul Elveției"
+              ],
+              "discounted": []
+            },
+            "1664": {
+              "included": [
+                "1 zi de călătorie gratuită în întreaga Elveție"
+              ],
+              "discounted": [
+                "Bilet de o zi de la CHF 29",
+                "Până la −70 % pentru rezervări anticipate"
+              ]
+            },
+            "1671": {
+              "included": [
+                "Conexiuni SBB în toată Elveția pentru 1 zi"
+              ],
+              "discounted": [
+                "Preț de familie pentru copii 6–16",
+                "−50 % la biletele de zi normale"
+              ]
+            },
+            "1676": {
+              "included": [
+                "1 zi de călătorie gratuită cu Halbtax"
+              ],
+              "discounted": [
+                "Mai ieftin decât mai multe bilete individuale"
+              ]
+            }
+          }
+        }
+      },
+      "articles": {
+        "title": "Articole interesante despre lumea trenurilor",
+        "subtitle": "Sfaturi, comparații și cunoștințe practice despre bilete SBB, pase de călătorie și transport public în Elveția.",
+        "read": "Citește articolul",
+        "tag": "Revistă"
+      },
+      "dayPasses": {
+        "title": "Bilete de zi populare",
+        "subtitle": "Călătorie gratuită toată ziua – ușor de combinat cu biletul tău.",
+        "halbtax": {
+          "title": "Bilet de zi la Halbtax",
+          "description": "Călătorie gratuită în toată Elveția – cu Halbtaxul tău. Ideal pentru excursii de o zi și regiuni montane.",
+          "fromPrice": "începând de la CHF 52.–",
+          "cta": "Caută conexiuni"
+        },
+        "spar": {
+          "title": "Bilet zi de economisire",
+          "description": "Bilete de zi la cel mai bun preț prin rezervare timpurie. Contingent limitat pe zi - cine rezervă devreme, călătorește mai ieftin.",
+          "fromPrice": "începând de la CHF 29.–",
+          "cta": "Caută conexiuni"
+        }
+      },
+      "groups": {
+        "mountains": "Experiențe montane accesibile cu trenul",
+        "dayTrips": "Excursii populare de o zi din Zürich, Bern și Basel",
+        "cities": "Descoperă orașele: Tren + experiență",
+        "cityPasses": "City Passes: O carte, întregul oraș"
+      },
+      "faq": {
+        "title": "Întrebări frecvente despre biletele SBB",
+        "items": [
+          {
+            "q": "Pot anula biletul meu?",
+            "a": "<p><strong>Biletele de traseu</strong> pot fi anulate gratuit până în ziua precedentă călătoriei – se poate face direct în cockpitul tău de rezervare pe swissactivities.com.</p><p>La <strong><a href=\"/sbb-tageskarten/spartageskarte-sbb/\">biletele de economisire</a></strong> și biletele reduse, anularea nu este posibilă. Acestea sunt legate de data aleasă - un avertisment clar înainte de achiziție apare pe pagina de rezervare.</p>"
+          },
+          {
+            "q": "Sunt biletele SBB identice cu cele de la ghișeu?",
+            "a": "Da, primești aceleași bilete oficiale SBB ca la ghișeu sau în aplicația SBB – fără cost suplimentar. De asemenea, <a href=\"/sbb-tageskarten/\">biletele de zi SBB</a> și <a href=\"/bahnpaesse/\">pasele de tren</a> sunt 1:1 produsele originale SBB."
+          },
+          {
+            "q": "Cât de repede primesc biletul meu?",
+            "a": "Imediat. După ce rezervarea este efectuată cu succes, primești biletul mobil prin e-mail și în cockpitul de rezervare pe swissactivities.com. Nu este necesar un cont SBB – este suficient să-l arăți direct în tren."
+          },
+          {
+            "q": "Pot să înregistrez Halbtax sau GA?",
+            "a": "Da, în pasul de rezervare poți selecta abonamentul tău de reducere – prețul se ajustează automat. Dacă ai doar un Halbtax și ești pe drum toată ziua, deseori merită să alegi <a href=\"/sbb-tageskarten/sbb-tageskarte-halbtax/\">biletul de zi SBB la Halbtax</a> în locul mai multor bilete individuale."
+          },
+          {
+            "q": "Ce se întâmplă dacă trenul meu întârzie?",
+            "a": "Biletul tău de traseu este valabil și pentru următoarea conexiune – pur și simplu urcă în următorul tren disponibil. Dacă întârzierea depășește o oră, poți solicita o rambursare prin SBB."
+          },
+          {
+            "q": "Merită Swiss Travel Pass sau un bilet de economisire?",
+            "a": "<p>Regula de bază: Cine călătorește mult cu trenul, autobuzul și vaporul timp de minimum trei zile consecutiv și îi plac muzeele, economisește cu <a href=\"/bahnpaesse/swiss-travel-pass-kaufen/\">Swiss Travel Pass</a>. În plus, sunt incluse peste 500 de muzee, transportul public în 90 de orașe și teleferice cu −50 % reducere.</p><p>Pentru excursii de o zi individuale, <a href=\"/sbb-tageskarten/spartageskarte-sbb/\">biletul de economisire SBB</a> de la CHF 29 este aproape întotdeauna cea mai ieftină opțiune – asigură-te că rezervi suficient de devreme.</p>"
+          },
+          {
+            "q": "Ce regional pass se potrivește călătoriei mele?",
+            "a": "<p>Pentru regiunea Interlaken / Grindelwald / Wengen, merită să alegi <a href=\"/bahnpaesse/berner-oberland-pass/\">Berner Oberland Pass</a> sau în timpul iernii <a href=\"/bahnpaesse/jungfrau-travel-pass-winter/\">Jungfrau Travel Pass</a> – ambele includ teleferice, transport public și vapoare din regiune.</p><p>În jurul lacului Vierwaldstättersee, <a href=\"/bahnpaesse/sbb-tellpass/\">Tell-Pass</a> este ideal: Pilatus, Rigi, Stanserhorn și toate vapoarele sunt incluse.</p>"
+          }
+        ]
+      }
+    },
+    "about_us": {
+      "title": "Despre noi - Swiss Activities",
+      "description": "Swiss Activities este destinația ta pentru activități de recreere în Elveția. Descoperă, compară și rezervă nesfârșite activități de recreere.",
+      "hero": {
+        "title": "Activități de recreere elvețiene",
+        "text": "Swiss Activities este destinația ta pentru activități de recreere în Elveția. Pe Swiss Activities găsești nesfârșite activități de recreere, poți să le compari și să le rezervi cu câteva clicuri. Nu a fost niciodată mai ușor să găsești activități pentru timpul liber în Elveția."
+      },
+      "who": {
+        "title": "Cine suntem",
+        "text": "Suntem o echipă motivată, pasionată de activitățile de recreere din Elveția. Cunosc bine țara și oamenii. Să încercăm noi activități este pasiunea noastră. De aceea am dezvoltat Swiss Activities."
+      },
+      "start": {
+        "title": "Punctul nostru de plecare",
+        "text": "Atunci când, în 2020, ne-am dat seama că nu mai putem călători, am căutat o platformă elvețiană de activități de recreere pentru elvețieni, dar nu am găsit nimic. A fost începutul destinației de activități de recreere Swiss Activities.",
+        "milestones": {
+          "march_2020": {
+            "date": "Martie 2020",
+            "title": "Dezvoltarea Swiss Activities ca model de afaceri"
+          },
+          "march_2021": {
+            "date": "Martie 2021",
+            "title": "Înființarea companiei"
+          },
+          "june_2021": {
+            "date": "Iunie 2021",
+            "title": "Lansarea platformei proprii"
+          },
+          "september_2021": {
+            "date": "Septembrie 2021",
+            "title": "500 de activități rezervabile activate"
+          },
+          "december_2021": {
+            "date": "Decembrie 2021",
+            "title": "Runda de finanțare pre-seed finalizată"
+          },
+          "march_2022": {
+            "date": "Martie 2021",
+            "title": "Lansarea programului de afiliere"
+          },
+          "may_2022": {
+            "date": "Mai 2021",
+            "title": "Lansarea programului de parteneriat B2B"
+          }
+        }
+      },
+      "partner": {
+        "title": "Te ajutăm să atragi clienți noi",
+        "text": "Swiss Activities te ajută să găsești clienți noi. Lucrăm zilnic pentru a face din Swiss Activities cea mai mare destinație pentru activități de recreere în Elveția. Mii de oameni vizitează zilnic www.swissactivities.com pentru a căuta activități de recreere în Elveția. Afișând oferta ta pe Swiss Activities, ajungi la clienți noi."
+      },
+      "kunden": {
+        "title": "O destinație cu toate activitățile de recreere din Elveția",
+        "text": "Scopul nostru este de a face toate activitățile de recreere din întreaga Elveție vizibile pe www.swissactivities.com. Astfel, facilităm găsirea, compararea și rezervarea activităților de recreere pentru toată lumea."
+      },
+      "promise": {
+        "title": "Promisiunea noastră",
+        "list": [
+          "fără apeluri telefonice consumatoare de timp pentru clarificări",
+          "fără cercetări nesfârșite pe nenumărate site-uri web",
+          "disponibilități direct verificabile",
+          "rezervări imediate fără ocoluri",
+          "fără costuri ascunse",
+          "opțiuni de plată simple și rapide",
+          "fără cozi obositoare",
+          "prezentare a unor reduceri atractive",
+          "ofertă locală"
+        ]
+      },
+      "team": {
+        "title": "Echipa Swiss Activities"
+      }
+    },
+    "tos_b2b": {
+      "title": "Termeni și condiții generale pentru furnizori",
+      "description": "Aceștia sunt termenii noștri actuali pentru furnizori."
+    },
+    "tos_b2c": {
+      "title": "Termeni și condiții pentru platforma de mediere Swiss Activities pentru clienți",
+      "description": "Aceștia sunt termenii actuali de utilizare pentru platforma de mediere Swiss Activities pentru clienți."
+    },
+    "tos_aff": {
+      "title": "Termeni și condiții generale pentru afiliați",
+      "description": "Aceștia sunt termenii și condițiile noastre actuale pentru afiliați."
+    },
+    "imprint": {
+      "title": "Impresum",
+      "description": "Aici poți găsi impresumul nostru."
+    },
+    "privacy_policy": {
+      "title": "Politica de confidențialitate",
+      "description": "Aceasta este politica noastră de confidențialitate."
+    },
+    "contact_us": {
+      "title": "Contactează-ne",
+      "description": "Dacă ai întrebări, te vom ajuta cu plăcere."
+    },
+    "basket": {
+      "title": "Coș",
+      "delete": "Șterge",
+      "warning": "Vrei să ștergi această rezervare din coșul tău?",
+      "edit": "Editează",
+      "cancel": "Anulează",
+      "update": "Actualizează coșul",
+      "next": "Mergi la plată",
+      "empty": "Coșul tău este gol",
+      "hold": "Vom reține această rezervare pentru",
+      "explore": "Descoperă activități de recreere"
+    },
+    "booking": {
+      "title": "Rezervare"
+    },
+    "confirmation": {
+      "title": "Confirmarea rezervării",
+      "tickets": "Biletele tale",
+      "download": "Bilet mobil",
+      "more": "Mai multe informații",
+      "cancel": "Anulează biletul",
+      "cancelled": "Anulat",
+      "cancelWhy": "De ce vrei să anulezi?",
+      "cancelReasons": [
+        "Vacanța mea a fost anulată",
+        "Am găsit o alternativă mai ieftină",
+        "Nu am primit confirmarea la timp",
+        "Providerul m-a rugat să anulez rezervarea",
+        "Opțiunile mele preferate nu erau disponibile",
+        "Am rezervat data greșită",
+        "Am rezervat numărul greșit de participanți",
+        "Alte motive"
+      ],
+      "rebook": {
+        "title": "Reîncadrare",
+        "text": "Planifici o schimbare? Reîncadrează-ți activitatea. Rezervarea ta veche va fi anulată automat.",
+        "button": "Reîncadrează acum"
+      },
+      "stay": "Te rog rămâi pe această pagină, rezervarea ta este în curs de procesare.",
+      "editBooking": "Schimbă rezervarea",
+      "showTickets": "Vezi biletele",
+      "drawerTitle": "Rezervarea ta",
+      "relatedBookings": "Rezervări asociate"
+    },
+    "activities": {
+      "title": "Cele mai bune activități de recreere Elveția {year}",
+      "description": "Găsește și rezervă activitatea potrivită {year} în Elveția. Fiind o țară diversă, Elveția oferă nenumărate activități și idei pentru o excursie de o zi.",
+      "intro": "Pe tot parcursul anului, găsești activități recreative pentru orice ocazie. Fie că planifici o excursie cu familia ta, organizezi un petrecere de burlaci, cauți o activitate în aer liber sau inspirație pentru un program în zilele ploioase, aici găsești ceva. Pe Swiss Activities, poți planifica și rezerva excursia ta de o zi.",
+      "titleParentLocation": "{locationTitle} {year}: cele mai bune activități și oferte",
+      "descriptionParentLocation": "Găsește și rezervă cele mai bune activități în {locationTitle}: Rezervă bilete pentru atracții sau activități de familie cu câteva clicuri.",
+      "titleChildLocation": "{locationTitle} {year}: cele mai bune activități",
+      "descriptionChildLocation": "Rezervă cele mai bune activități în {locationTitle}. Rezervă bilete pentru atracții sau activități de familie cu câteva clicuri.",
+      "titleParentType": "{typeTitle} {year}: cele mai bune {typeTitle} în Elveția",
+      "descriptionParentType": "Rezervă cele mai bune {typeTitle} din toată Elveția. Fără cozi, fără taxe de rezervare și opțiuni de anulare gratuită.",
+      "titleChildType": "{typeTitle} {year}: cele mai bune oferte {typeTitle} în Elveția",
+      "descriptionChildType": "Rezervă cele mai bune oferte pentru {typeTitle} din toată Elveția. Fără cozi, fără taxe de rezervare și opțiuni de anulare gratuită.",
+      "titleParentLocationParentType": "{typeTitle} {locationTitle}: oferte și prețuri de top {year}",
+      "descriptionParentLocationParentType": "Rezervă cele mai bune oferte pentru {typeTitle} {locationTitle} {year}. Nicio taxă de rezervare și opțiuni de anulare gratuită.",
+      "titleParentLocationChildType": "{typeTitle} {locationTitle}: oferte și prețuri de top {year}",
+      "descriptionParentLocationChildType": "Rezervă cele mai bune oferte pentru {typeTitle} {locationTitle} {year}. Nicio taxă de rezervare și opțiuni de anulare gratuită.",
+      "titleChildLocationParentType": "{typeTitle} {locationTitle}: oferte și prețuri de top {year}",
+      "descriptionChildLocationParentType": "Rezervă cele mai bune oferte pentru {typeTitle} {locationTitle} {year}. Nicio taxă de rezervare și opțiuni de anulare gratuită.",
+      "titleChildLocationChildType": "{typeTitle} {locationTitle}: oferte și prețuri de top {year}",
+      "descriptionChildLocationChildType": "Rezervă cele mai bune oferte pentru {typeTitle} {locationTitle} {year}. Nicio taxă de rezervare și opțiuni de anulare gratuită."
+    },
+    "listing": {
+      "title": "{listingTitle}",
+      "offersTitle": "Activități și bilete {title}",
+      "activities": "Activități",
+      "relatedListings": "Cele mai bune atracții în {value}",
+      "relatedListingsClose": "Cele mai bune atracții apropiate de {value}",
+      "description": "Listă pentru {listingTitle}",
+      "tableOfContent": "Cuprins",
+      "destinationTitle": "{location} - Cele mai bune {num} atracții și activități {year}",
+      "more": "Află mai multe despre {val}",
+      "locations": "Locuri apropiate de {val}",
+      "regions": "Regiuni în {val}",
+      "type": "Locuri populare în Elveția pentru {val}",
+      "typeLocation": "Locuri populare în {location} pentru {type}",
+      "types": "Cele mai bune activități în {val}",
+      "combo": "{type} {location} - {num} oferte și prețuri de top {year}",
+      "map": "Hartă",
+      "attributeBadWeatherTitleAttribute": "Cele mai bune {val} idei de vreme rea pentru Elveția",
+      "attributeBadWeatherTitle": "Cele mai bune {val} idei de vreme rea în {location}",
+      "attributeBadWeatherTeaser": "Indiferent dacă plouă, este ceață sau ninge: în [{location}]({locationLink}) există numeroase activități pe care le poți face chiar și în vreme nefavorabilă. Așadar, ploaia nu trebuie să îți strice planurile și să îți distrugă ziua. Vei găsi atât activități în interior, cât și [activități în aer liber]({outdoorLink}) potrivite pentru orice vreme. Tu decizi dacă vrei să fii activ sau să te relaxezi. Găsește mai multă inspirație pentru numeroase [idei de vreme nefavorabilă]({badWeatherLink}) în toată Elveția.",
+      "attributeBadWeatherDesc": "Găsește ideea ta de vreme rea în {location} și alege o activitate care poate avea loc în orice vreme.",
+      "attributeFamilyTitleAttribute": "Cele mai bune {val} idei pentru excursia ta de familie în Elveția",
+      "attributeFamilyTitle": "Cele mai bune {val} idei pentru excursia ta de familie în {location}",
+      "attributeFamilyTeaser": "Planifică următoarea ta excursie în familie în [{location}]({locationLink}) pentru tine și copiii tăi. Nu contează dacă ești aventuros, relaxat sau explorer, sunt foarte multe de făcut. Pe parcursul anului, chiar și în [vreme nefavorabilă în {location}]({locationBadWeatherLink}), ai multe opțiuni. Chiar și pentru o excursie cu căruciorul, ai opțiuni potrivite pentru copiii mai mici. Așadar, nimic nu te oprește de la un [excursie în familie]({familyLink}).",
+      "attributeFamilyDesc": "Găsește ideea potrivită pentru următoarea ta excursie de familie în {location} și petrece o zi plină de aventuri cu copiii tăi.",
+      "attributeDogTitleAttribute": "Cele mai bune {val} excursii cu câinele pentru Elveția",
+      "attributeDogTitle": "Cele mai bune {val} excursii cu câinele în {location}",
+      "attributeDogTeaser": "Cauți o idee de excursie cu câinele tău în [{location}]({locationLink})? Dacă dorești să îți iei cu tine prietenul tău de încredere, aici găsești toate activitățile la care poate participa. [Activitățile în aer liber]({outdoorLink}) sunt adesea cele mai potrivite, deoarece îi permit câinelui tău să se distreze afară în aer curat. Dar poți încerca și plimbări cu barca sau cu funicularul. Sfatul nostru secret sunt [Escape Games]({escapeLink}), deoarece acestea au loc afară și îți oferă o frumoasă variație față de plimbările obișnuite.",
+      "attributeDogDesc": "Planifică o excursie cu câinele tău în {location} și încearcă ceva nou pentru a ieși din rutina ta obișnuită de plimbare.",
+      "attributeOutdoorTitleAttribute": "Cele mai bune {val} activități în aer liber pentru Elveția",
+      "attributeOutdoorTitle": "Cele mai bune {val} activități în aer liber în {location}",
+      "attributeOutdoorTeaser": "În [{location}]({locationLink}) sunt disponibile o mulțime de [activități în aer liber]({outdoorLink}) de făcut tot anul. Unele îți fac adrenalina să crească, în timp ce altele te așteaptă cu priveliști incredibile sau îți testează dexteritatea. Și, apropo, există și activități în aer liber care sunt potrivite ca [idei pentru vreme nefavorabilă]({badWeatherLink}) sau pentru o [excursie în familie]({familyLink}). Uneori îți poți lua cu tine și [câinele]({dogLink}). Unele activități în aer liber pot fi efectuate ușor de unul singur, în timp ce pentru altele ar trebui să participi la un tur ghidat profesional din motive de siguranță.",
+      "attributeOutdoorDesc": "Planifică următoarea ta activitate în aer liber în {location} și petrece o zi afară, în aer liber, pe tot parcursul anului.",
+      "attributeBachelorPartyTitleAttribute": "Cele mai bune {val} idei pentru petrecerea burlacilor în Elveția",
+      "attributeBachelorPartyTitle": "Cele mai bune {val} idei pentru petrecerea burlacilor în {location}",
+      "attributeBachelorPartyTeaser": "Cauți o idee grozavă pentru o petrecere a burlacilor în [{location}]({locationLink})? Indiferent dacă ești un gurmand, un aventurier sau un explorator curios: vei găsi ceva care să-ți placă. Cu ideile noastre, vei avea parte de o organizare fără probleme a unei [petreceri a burlacilor]({attributeLink}) în {location}. Așadar, pregătește-te pentru o zi plină de distracție alături de prietenii tăi.",
+      "attributeBachelorPartyDesc": "Planifică următoarea ta petrecere a burlacilor în [{location}] și petrece o zi plină de distracție cu prietenii tăi.",
+      "attributeTeamEventTitleAttribute": "Cele mai bune {val} idei pentru un eveniment de echipă în Elveția",
+      "attributeTeamEventTitle": "Cele mai bune {val} idei pentru un eveniment de echipă în {location}",
+      "attributeTeamEventTeaser": "Ți s-a încredințat sarcina de a organiza un eveniment de echipă în [{location}]({locationLink})? Nu este întotdeauna ușor, deoarece cerințele sunt adesea foarte diferite. Cu ideile noastre, vei fi inspirat și bine pregătit pentru următorul [eveniment de echipă]({attributeLink}). Indiferent dacă ești un gurmand, un explorator, o persoană activă, un pasionat de puzzle-uri sau un aventurier: vei găsi ceva potrivit pentru fiecare gust. Așadar, pregătește-te pentru o zi reușită și plină de distracție cu colegii tăi.",
+      "attributeTeamEventDesc": "Planifică următorul tău eveniment de echipă în {location} și petrece o zi plină de distracție cu colegii tăi.",
+      "attributeValentinesDayTitleAttribute": "Cele mai bune {val} idei pentru Ziua Îndrăgostiților în Elveția",
+      "attributeValentinesDayTitle": "Cele mai bune {val} idei pentru Ziua Îndrăgostiților în {location}",
+      "attributeValentinesDayTeaser": "În fiecare an vine din nou: Ziua Îndrăgostiților. Poate că știi deja exact ce vrei să organizezi data viitoare pe 14 februarie. Sau poate ești încă nesigur și cauți o idee pentru Ziua Îndrăgostiților în [{location}]({locationLink}). Activitățile noastre sunt menite să te inspire și să te ajute să găsești ceva potrivit. Fie că e romantic, confortabil sau aventuros: aici cu siguranță veți găsi inspirație pentru o [Ziua Îndrăgostiților]({attributeLink}) care vă va face inimile să bată mai repede.",
+      "attributeValentinesDayDesc": "Planifică-ți următoarea Zi a Îndrăgostiților în {location} și petrece o zi romantică alături de persoana ta preferată.",
+      "attributeFirstDateTitleAttribute": "Cele mai bune {val} idei pentru prima ta întâlnire în Elveția",
+      "attributeFirstDateTitle": "Cele mai bune {val} idei pentru prima ta întâlnire în {location}",
+      "attributeFirstDateTeaser": "Cauți ideea potrivită pentru prima ta întâlnire în [{location}]({locationLink}) și ești nesigur cum să îți impresionezi partenerul? Atunci ești în locul potrivit. Pe această pagină vei găsi inspirația necesară pentru ca [prima ta întâlnire]({attributeLink}) să fie un succes deplin. Fie că e vară sau iarnă, aventuroasă sau relaxată, cu siguranță vei găsi ceva care să-ți încânte partenerul. Și cine știe, poate vei găsi și ceva care se potrivește și pentru următoarele întâlniri.",
+      "attributeFirstDateDesc": "Planifică prima întâlnire în {location} și petrece o zi romantică împreună.",
+      "attributeChildBirthdayTitleAttribute": "{val} idei pentru un aniversare a copiilor în Elveția",
+      "attributeChildBirthdayTitle": "{val} idei pentru un aniversare a copiilor în {location}",
+      "attributeChildBirthdayTeaser": "Planifică următorul tău aniversar pentru copii în [{location}]({locationLink}). Aniversarea este printre cele mai importante momente din anul fiecărui copil. Indiferent de sezon, există suficiente idei care vor face copilul tău fericit. Organizează o [activitate în aer liber]({outdoorLink}) sau caută o idee pentru [programul în vreme rea]({badWeatherLink}). Așa că următorul vostru aniversar pentru copii va fi cu siguranță un succes.",
+      "attributeChildBirthdayDesc": "Organizează o aniversare pentru copii în {location} și planifică o zi de neuitat pentru copilul tău.",
+      "attributeWheelchairTitleAttribute": "{val} idei de excursii accesibile cu scaunul cu rotile în Elveția",
+      "attributeWheelchairTitle": "{val} idei de excursii accesibile cu scaunul cu rotile în {location}",
+      "attributeWheelchairTeaser": "Planifică o excursie accesibilă în scaun cu rotile în [{location}]({locationLink}) și găsește activitatea ideală fără bariere pentru tine. Călătoriile în Elveția cu scaun cu rotile sunt relativ simple datorită accesibilității avansate și eforturilor țării de a oferi tuturor turiștilor o experiență accesibilă. Aceasta include atât activități indoor cât și [în aer liber]({outdoorLink}).",
+      "attributeWheelchairDesc": "Inspiră-te din destinațiile accesibile pentru scaune cu rotile în {location} și planifică activitatea ta fără bariere.",
+      "attributePramTitleAttribute": "{val} idei de excursii cu căruciorul în Elveția",
+      "attributePramTitle": "{val} idei de excursii cu căruciorul în {location}",
+      "attributePramTeaser": "Planifică excursia ta cu căruciorul în [{location}]({locationLink}). Dacă ești pe drum cu copii mici, există multe activități pe care le poți face. Numeroase trasee de drumeție sunt prietenoase cu cărucioarele, iar transportul public este adaptat confortului familiilor cu copii mici. Așa că, nimic nu stă în calea [excursiei tale familiale]({familyLink}).",
+      "attributePramDesc": "Călătorește în {location} cu căruciorul și planifică următoarea excursie cu familia ta.",
+      "attributesOther": "Alte categorii",
+      "attributesType": "Categorii pentru activitățile de {val}",
+      "teamEvent": "Trimite-ne cererea ta de grup",
+      "recommended": "Recomandat de călători",
+      "tickets": "Bilete",
+      "tours": "Tururi ghidate"
+    },
+    "error": {
+      "title": "Ne pare rău, dar a apărut o eroare. Întoarce-te pe pagina principală și caută activitatea de timp liber care ți se potrivește."
+    },
+    "supplier": {
+      "title": "Swiss Activities: cea mai mare piață de activități de timp liber din Elveția",
+      "description": "Swiss Activities este cea mai mare piață de activități de timp liber din Elveția. Cu noi, poți ajunge la mai mulți clienți și să îți crești rezervările.",
+      "hero": {
+        "title": "Swiss Activities - Destinația pentru activități de timp liber în Elveția",
+        "button": "Devino partener de timp liber"
+      },
+      "numbers": {
+        "title": "Cum am sprijinit partenerii noștri de timp liber la Swiss Activities de la fundație",
+        "blocks": [
+          {
+            "title": "Vizitatori de site",
+            "number": "7.500.000",
+            "text": "clienți potențiali"
+          },
+          {
+            "title": "Rezervări ale clienților",
+            "number": ">300.000",
+            "text": "Oaspeți contactați"
+          },
+          {
+            "title": "Asistență clienți",
+            "number": ">10.000",
+            "text": "Discuții purtate"
+          },
+          {
+            "title": "Sisteme de rezervare",
+            "number": ">20",
+            "text": "Sisteme de rezervare"
+          }
+        ]
+      },
+      "why": {
+        "title": "De ce să îți listezi produsele de timp liber pe Swiss Activities",
+        "sales": {
+          "title": "Clienți noi",
+          "description": "Câștigă clienți noi din piața internă și internațională și îmbunătățește-ți capacitatea de utilizare."
+        },
+        "support": {
+          "title": "Automatizare",
+          "description": "Swiss Activities preia procesul tău de vânzări existent și transmite tranzacțiile către sistemul tău."
+        },
+        "finances": {
+          "title": "Fără risc",
+          "description": "Fără costuri fixe sau investiții anticipate. Plătești doar pentru un client referit."
+        },
+        "local": {
+          "title": "Accesarea unor noi segmente de clienți",
+          "description": "Conectează-te cu rețeaua de revânzători a Swiss Activities și extinde-ți raza de acțiune pe plan intern și internațional."
+        }
+      },
+      "who": {
+        "title": "Peste 500 de parteneri de timp liber colaborează cu Swiss Activities",
+        "partners": [
+          {
+            "blocks": [
+              "/assets/supplier/partner/bergbahnen/rigi.png",
+              "/assets/supplier/partner/bergbahnen/schilthorn.png",
+              "/assets/supplier/partner/bergbahnen/jungfrau.jpeg",
+              "/assets/supplier/partner/bergbahnen/engelberg.svg",
+              "/assets/supplier/partner/bergbahnen/pilatus.jpeg",
+              "/assets/supplier/partner/bergbahnen/monte-tamaro.png",
+              "/assets/supplier/partner/bergbahnen/brienz.png",
+              "/assets/supplier/partner/bergbahnen/gornergrat.png",
+              "/assets/supplier/partner/destinationen/rheinfelden.png",
+              "/assets/supplier/partner/destinationen/basel.svg",
+              "/assets/supplier/partner/destinationen/winterthur.svg",
+              "/assets/supplier/partner/destinationen/interlaken.png",
+              "/assets/supplier/partner/attraktionen/ballenberg.png",
+              "/assets/supplier/partner/attraktionen/bls.png",
+              "/assets/supplier/partner/attraktionen/cgn.png",
+              "/assets/supplier/partner/attraktionen/chillon.jpeg",
+              "/assets/supplier/partner/attraktionen/maestrani.png",
+              "/assets/supplier/partner/attraktionen/verkehrshaus.png",
+              "/assets/supplier/partner/attraktionen/vier.png",
+              "/assets/supplier/partner/outdoor/best-of-switzerland.jpeg",
+              "/assets/supplier/partner/outdoor/kayak.jpeg",
+              "/assets/supplier/partner/outdoor/outdoorch.jpeg",
+              "/assets/supplier/partner/outdoor/paragliding.png",
+              "/assets/supplier/partner/outdoor/wine-tours.webp",
+              "/assets/supplier/partner/outdoor/zermatters.png"
+            ]
+          }
+        ]
+      },
+      "pricing": {
+        "title": "Modelul de prețuri",
+        "subtitle": "Plătești doar pentru referințe de clienți de succes",
+        "description": "Swiss Activities te ajută să identifici canalele de vânzare potrivite la nivel local și global și să îți vinzi produsele de timp liber acolo unde se află clienții tăi potențiali. Deoarece Swiss Activities nu are taxă de configurare, deschizi canale de vânzare noi fără investiții suplimentare.",
+        "blocks": [
+          {
+            "pretitle": "",
+            "cost": "18% + CHF 0.30",
+            "subcost": "excl. TVA",
+            "button": "Devino partener de timp liber",
+            "buttonLink": "https://k3qlq2fyp9o.typeform.com/to/CxWJub7f",
+            "subbutton": "",
+            "includes": [
+              "Postarea activităților de timp liber pe Swiss Activities",
+              "Înregistrare nelimitată a activităților de timp liber",
+              "Crearea descrierilor produselor de către echipa noastră de conținut",
+              "Conectare la unul din peste 20 de sisteme de rezervare",
+              "Asistență personalizată pentru parteneri prin chat și telefon",
+              "Preluarea comunicării cu oaspeții în cazul întrebărilor legate de activități",
+              "Gestionarea cererilor de rezervare și anulare ale oaspeților",
+              "Monitorizarea și controlul tuturor rezervărilor și anulărilor",
+              "Monitorizarea și controlul facturilor",
+              "Decontare a numerarului standardizată - facturare prin Swiss Activities",
+              "Asigurarea procesului de vânzare (fără vouchere, ci bilete)",
+              "Acces automat la rețeaua de afiliere",
+              "Postarea activităților pe rețeaua de revânzare"
+            ],
+            "faq": []
+          }
+        ]
+      },
+      "tech": {
+        "title": "Sisteme de rezervare și ticketing",
+        "description": "Pe lângă activarea și digitalizarea tuturor produselor de agrement elvețiene, un obiectiv central al Swiss Activities este simplificarea și automatizarea procesului de revânzare a produselor de agrement atât în țară, cât și în străinătate. Peisajul distribuției devine din ce în ce mai complex, iar noi ajutăm revânzătorii să nu piardă legătura cu segmentele de clienți. De aceea, conexiunea directă între partenerii noștri de agrement și Swiss Activities este atât de importantă. Implementăm constant noi sisteme. Dacă sistemul tău de rezervare și ticketing nu este disponibil, ne poți contacta la sales@swissactivities.com.",
+        "partners": [
+          "/assets/supplier/technology/trekksoft.webp",
+          "/assets/supplier/technology/regiondo.webp",
+          "/assets/supplier/technology/tomas.webp",
+          "/assets/supplier/technology/waldhart.webp",
+          "/assets/supplier/technology/experiencebank.webp",
+          "/assets/supplier/technology/skidata.webp",
+          "/assets/supplier/technology/axess.webp",
+          "/assets/supplier/technology/smeetz.webp",
+          "/assets/supplier/technology/eatwith.webp",
+          "/assets/supplier/technology/fareharbor.webp",
+          "/assets/supplier/technology/bookingkit.webp",
+          "/assets/supplier/technology/ntree.webp",
+          "/assets/supplier/technology/secutix.webp",
+          "/assets/supplier/technology/tourcms.webp",
+          "/assets/supplier/technology/sbb.webp"
+        ],
+        "titleSoon": "Disponibil în curând",
+        "partnersSoon": [
+          "/assets/supplier/technology/feratel.webp"
+        ]
+      },
+      "faq": [
+        {
+          "title": "Informații generale pentru partenerii de timp liber",
+          "blocks": [
+            {
+              "title": "Cine poate deveni partener de timp liber al Swiss Activities?",
+              "text": "Oricine dorește să vândă activități de timp liber în Elveția poate deveni partener al Swiss Activities. Ofertele tale pot fi foarte diverse și imaginația ta nu cunoaște limite. Avem activități, bilete, aventuri, tururi, închirieri etc. în aproximativ 100 de categorii. Acestea includ cursuri de gătit pentru torturi în formă de unicorn, zboruri cu parapanta tandem sau bilete de intrare la muzee. Este important ca ofertele să aibă loc fie în Elveția, fie să fie realizabile în cadrul unei excursii de o zi din Elveția."
+            },
+            {
+              "title": "Ce sisteme de rezervare pot conecta cu Swiss Activities?",
+              "list": [
+                "Trekksoft",
+                "Regiondo",
+                "Waldhart",
+                "Experience Bank",
+                "Skidata",
+                "Axess",
+                "Tomas",
+                "Smeetz",
+                "Eatwith",
+                "Fareharbor",
+                "Booking Kit",
+                "N-Tree",
+                "Secutix",
+                "TourCMS",
+                "Palisis",
+                "În curând vor fi disponibile: SBB și Feratel"
+              ]
+            },
+            {
+              "title": "Nu lucrez cu un sistem de rezervare. Pot să-mi vând activitățile prin Swiss Activities?",
+              "text": "Chiar dacă nu lucrezi cu un sistem de rezervare, poți lista activitățile tale cu noi. În acest caz, creăm manual un calendar conform specificațiilor tale. Dacă dorești să implementezi un sistem de rezervare, te rugăm să ne contactezi. Te vom sfătui cu plăcere pe acest subiect. Informațiile de care avem nevoie de la tine sunt următoarele:",
+              "list": [
+                "Perioada (data)",
+                "Ora(e) de început",
+                "Durata",
+                "Limita (cu cât timp înainte trebuie să rezerve clientul?)",
+                "Prețuri pe categorie (adulți, copii, închiriere etc.)",
+                "numărul maxim de locuri disponibile pe slot"
+              ]
+            },
+            {
+              "title": "Ce informații sunt transmise la o rezervare?",
+              "text": "Când un client face o rezervare cu Swiss Activities, el primește un email de confirmare cu toate informațiile importante. Aceasta include, printre altele, detaliile tale de contact, astfel încât el să te poată contacta direct dacă are întrebări.",
+              "list": [
+                "Numele activității",
+                "Data",
+                "Ora",
+                "Punctul de întâlnire",
+                "Numărul de bilete rezervate",
+                "Detalii de contact (email și telefon)"
+              ]
+            },
+            {
+              "title": "Se publică pe Swiss Activities aceleași prețuri pentru activitățile mele ca și pe site-ul meu?",
+              "text": "Da, la noi clientul plătește aceeași sumă ca și cum ar rezerva direct la tine. Acest lucru este la fel de important pentru tine cât și pentru noi. Dacă prețurile sunt diferite în diverse locuri, clientul va observa, ceea ce va duce la reclamații și neînțelegeri. Astfel, amândoi ne asumăm riscul de a pierde un client fideli."
+            },
+            {
+              "title": "Care este perioada de anulare la Swiss Activities?",
+              "text": "Clientul are posibilitatea de a anula gratuit până la 24 de ore înainte de activitate la Swiss Activities. Dacă dorești să listezi o activitate care nu poate fi anulată, putem face asta. Cu toate acestea, experiența noastră a arătat că intermediem mai multe rezervări pentru activitățile care oferă posibilitatea anulării. Dacă trebuie să anulezi rezervarea, poți face acest lucru. Informează imediat clientul și anunță-ne, astfel încât să putem iniția o rambursare."
+            },
+            {
+              "title": "Cum se gestionează anulările ulterioare?",
+              "text": "Dacă primim o solicitare pentru o anulare ulterioară prin formularul nostru de anulare, nu efectuam niciodată o rambursare fără a te consulta în prealabil. Pentru a preveni fraudele, obținem întotdeauna consimțământul tău pentru a confirma relatarea clientului. Numai atunci când avem acordul tău, inițiem o rambursare ulterioară."
+            }
+          ]
+        },
+        {
+          "title": "Procesul de listare a produselor de agrement",
+          "blocks": [
+            {
+              "title": "Cum pot lista ofertele mele pe Swiss Activities?",
+              "text": "Dacă dorești să devii un partener de agrement al Swiss Activities și să-ți listezi ofertele, urmează următorii pași:",
+              "list": [
+                "În primul rând, înscrie-te ca și partener de agrement.",
+                "Completează un formular pentru fiecare activitate pe care dorești să o listezi. Vei primi linkul după ce ți-am confirmat înregistrarea.",
+                "De obicei, scriem și înregistrăm activitățile tale în termen de două săptămâni.",
+                "Odată ce activitățile sunt active, te vom informa prin email."
+              ]
+            },
+            {
+              "title": "Ce informații sunt necesare pentru a lista activitățile mele?",
+              "text": "După ce te-ai înregistrat ca partener de agrement la noi, îți vom trimite un formular prin care poți introduce activitățile tale. Pentru a le putea lista, avem nevoie de informațiile următoare de la tine:",
+              "list": [
+                "Informații despre sistemul de rezervare (dacă există)",
+                "Titlul activității",
+                "Link către activitate",
+                "Cel puțin 4 fotografii pentru fiecare activitate",
+                "Informații despre date, ore și durată, în cazul în care nu folosești un sistem de rezervare",
+                "Orice informații referitoare la vârstă, limbi, greutate etc.",
+                "Adecvarea activității: câine, cărucior, scaun cu rotile, familii etc.",
+                "Punctul de întâlnire exact"
+              ]
+            },
+            {
+              "title": "Pot șterge oricând anunțul meu?",
+              "text": "Da, poți renunța oricând la contract. Nu există o durată minimă a contractului și nu există costuri rezultate din anulare."
+            },
+            {
+              "title": "Ce fac dacă vreau să schimb ceva la o activitate?",
+              "text": "Dacă ai dorințe de modificare în conținut sau vrei să ajustezi prețurile - atâta timp cât nu folosești un sistem de rezervare - ne poți informa prin email."
+            },
+            {
+              "title": "Cum pot contacta clientul?",
+              "text": "După fiecare rezervare, vei primi un email de confirmare de la noi cu detaliile clientului. Acolo vei găsi numele său, adresa de email și numărul de telefon pentru a-l contacta."
+            },
+            {
+              "title": "Cum primesc banii mei?",
+              "text": "Plata tuturor sumelor restante se face în funcție de data serviciului și este transferată automat la începutul lunii următoare. Toate rezervările efectuate în luna precedentă sunt contabilizate împreună și plătite într-o singură tranșă."
+            }
+          ]
+        }
+      ]
+    },
+    "supplierRegistration": {
+      "title": "Swiss Activities: cea mai mare piață de activități recreative din Elveția.",
+      "description": "Swiss Activities este cea mai mare piață de activități recreative din Elveția. Cu noi, poți să ajungi la mai mulți clienți și să-ți crești rezervările.",
+      "hero": {
+        "title": "Fii parte din Swiss Activities",
+        "description": "Înregistrează-te gratuit la Swiss Activities și îți poți extinde acoperirea în rândul oaspeților locali și internaționali. Avantajele tale pe scurt",
+        "list": [
+          "Fii găsit pe Google ca firmă și cu ofertele tale. Iar asta în 4 limbi!",
+          "Deschide un nou canal de vânzare",
+          "Beneficiază de suportul nostru gratuit pentru clienți",
+          "Conectează-ți sistemul de rezervări și gestionează-ți disponibilitățile direct în el.",
+          "O nouă rezervare - clientul tău. Nu ne ascundem partenerii și dorim să oferim clientului cea mai bună experiență de rezervare.",
+          "Fără costuri fixe sau taxe ascunse.",
+          "Clienții tăi pot plăti cu toate metodele de plată locale, cum ar fi Twint, achiziții pe factură, precum și cu cele mai cunoscute carduri de credit."
+        ]
+      }
+    },
+    "affiliate": {
+      "title": "Afiliat",
+      "description": "Participă ca partener la Swiss Activities și câștigă între 1% și 5% comision din prima rezervare. Nu există costuri fixe.",
+      "hero": {
+        "title": "Fii acum partener afiliat al Swiss Activities",
+        "description": "Înregistrează-te pentru programul de afiliere al Swiss Activities și profită de instrumente atrăgătoare de integrare, comisioane între 1% și 5% și o durată de cookie de 45 de zile.",
+        "steps": [
+          "Înscrie-te",
+          "Implementează activitățile noastre",
+          "Generați rezervări și câștigați bani"
+        ],
+        "button": "Înscrie-te acum"
+      },
+      "form": {
+        "tos": "Sunt de acord cu <a target='_blank' href='/agb/affiliates/'>Termenii și condițiile generale</a>"
+      },
+      "advantagesTitle": "Care sunt avantajele tale ca partener afiliat al Swiss Activities?",
+      "advantages": [
+        {
+          "title": "1'500+ activități de agrement",
+          "text": "Ca partener afiliat al Swiss Activities, cu câteva clicuri ai acces la peste 1'500 de activități de agrement din întreaga Elveție."
+        },
+        {
+          "title": "Condiții atractive",
+          "text": "Pentru fiecare rezervare mediată, primești un comision de 1% până la 5%. Perioada cookie este de 45 de zile."
+        },
+        {
+          "title": "Inspiri cititorii tăi",
+          "text": "Învie-ți blogul sau site-ul cu conținut inspirant și ajută-ți comunitatea să economisească timp în planificarea activităților recreative."
+        },
+        {
+          "title": "Înscriere simplă",
+          "text": "Beneficiază de o înscriere simplă și rapidă."
+        },
+        {
+          "title": "Vânzări directe de bilete",
+          "text": "Ai opțiunea de a vinde bilete direct pe site-ul tău, fără a redirecționa cititorii către noi."
+        },
+        {
+          "title": "HTML personalizat",
+          "text": "Datorită instrumentelor noastre HTML personalizate, versatile și atractive, îți poți personaliza oportunitățile de vânzare."
+        }
+      ],
+      "faqTitle": "Cele mai importante întrebări răspunse",
+      "faq": [
+        {
+          "title": "Cum funcționează înscrierea în programul de afiliere al Swiss Activities?",
+          "text": "Înscrie-te în formularul de pe această pagină cu toate informațiile necesare. Vom examina cererea ta în termen de o zi lucrătoare și îți vom trimite datele tale de conectare prin e-mail în cazul acceptării."
+        },
+        {
+          "title": "Cum mă pot conecta la tabloul de bord al partenerului meu afiliat?",
+          "text": "În timpul înscrierii, îți definești parola personală. Odată ce ți-am verificat datele, vei fi notificat și te poți conecta la tabloul de bord al afiliaților tăi prin <a href='https://swissactivities.tapfiliate.com/login' target='_blank'>acest link</a>."
+        },
+        {
+          "title": "Unde pot găsi mai multe informații despre programul de afiliere?",
+          "text": "În biroul nostru de asistență, vei găsi pe de-o parte <a href='https://intercom.help/swiss-activities/de/collections/3916117-affiliate-moglichkeiten-zur-einbindung' target='_blank'>primii pași</a> și, de asemenea, cele mai importante întrebări despre <a href='https://intercom.help/swiss-activities/de/collections/3916117-affiliate-moglichkeiten-zur-einbindung' target='_blank'>integrările activităților noastre</a>. În plus, după înscrierea ta, vei primi o serie de e-mailuri cu sfaturi utile."
+        },
+        {
+          "title": "Cine poate deveni partener afiliat al Swiss Activities?",
+          "text": "Dacă ai un blog sau un site care este legat de turismul elvețian, activități recreative în Elveția sau călătorii în general, te poți înscrie în programul nostru de afiliere. Chiar dacă ai un cont Instagram, Pinterest sau Facebook prin care poți insera un link de afiliat, te poți înscrie la noi."
+        },
+        {
+          "title": "Pot să mă dezabonez de la programul de afiliere?",
+          "text": "Desigur. Nu ești legat de nicio perioadă minimă. Dacă vrei să ștergi contul tău, informează-ne prin e-mail sau prin chat și ne vom ocupa de tot ce este necesar."
+        },
+        {
+          "title": "Ce comision primesc pentru fiecare rezervare mediată?",
+          "text": "Primești între 1% și 5% comision dacă ne referi un client care efectuează activitatea. Dacă clientul anulează rezervarea, din păcate, nu te putem despăgubi cu comision."
+        }
+      ]
+    },
+    "apps": {
+      "title": "Aplicația Swiss Activities",
+      "description": "Descoperă Elveția cu aplicația Swiss Activities – explorează, compară și rezervă activități de leisure direct pe smartphone-ul tău.",
+      "hero": {
+        "title": "Aventura ta elvețiană în buzunar",
+        "description": "Cu aplicația Swiss Activities, ai acces direct la peste {amount} activități din întreaga Elveție. Găsește experiențe, rezervă în câteva secunde și păstrează-ți toate biletele și rezervările la îndemână oricând.",
+        "features": [
+          "Bilete la îndemână oricând",
+          "Gestionează ușor rezervările",
+          "Descoperă noi experiențe pentru orice gust",
+          "Bilete disponibile și offline"
+        ]
+      }
+    },
+    "travelGuide": {
+      "title": "Planifică-ți călătoria în Elveția",
+      "description": "Elveția este o țară foarte versatilă și are incredibil de multe de oferit pentru călătoria ta. Așa că nu te lăsa păcălit de suprafața mică. Deși Elveția este de aproximativ zece ori mai mică decât Suedia, California sau Maroc, vei găsi ceva pentru fiecare gust. În Ticino, la Mediteran, ești într-o lume complet diferită față de Basel-ul aglomerat. Iar Alpstein-ul montan are un climat complet diferit față de regiunea blândă a lacului Geneva. Și asta, deși aceste locuri sunt la doar trei până la patru ore distanță. În blogul nostru, te ajutăm în planificarea călătoriei tale. Îți oferim sfaturi utile de călătorie și informații de care ai nevoie pentru a te pregăti perfect. Indiferent dacă călătorești în Elveția pentru prima dată sau ești deja cunoscut cu locurile, nu contează. Articolele noastre sunt potrivite atât pentru vizitatorii pentru prima dată cât și pentru adevărații cunoscători ai Elveției.",
+      "intro": "Elveția este o țară foarte versatilă și are incredibil de multe de oferit pentru călătoria ta. Așa că nu te lăsa păcălit de suprafața mică. Deși Elveția este de aproximativ zece ori mai mică decât Suedia, California sau Maroc, vei găsi ceva pentru fiecare gust. În Ticino, la Mediteran, ești într-o lume complet diferită față de Basel-ul aglomerat. Iar Alpstein-ul montan are un climat complet diferit față de regiunea blândă a lacului Geneva. Și asta, deși aceste locuri sunt la doar trei până la patru ore distanță. În blogul nostru, te ajutăm în planificarea călătoriei tale. Îți oferim sfaturi utile de călătorie și informații de care ai nevoie pentru a te pregăti perfect. Indiferent dacă călătorești în Elveția pentru prima dată sau ești deja cunoscut cu locurile, nu contează. Articolele noastre sunt potrivite atât pentru vizitatorii pentru prima dată cât și pentru adevărații cunoscători ai Elveției."
+    },
+    "travelRoutes": {
+      "title": "Itinerarii Svizzera",
+      "description": "Elveția este o țară foarte diversificată și are foarte multe de oferit pentru călătoria ta. Așadar, nu te lăsa păcălit de dimensiunea sa mică. Deși Elveția este de aproximativ zece ori mai mică decât Suedia, California sau Maroc, vei găsi ceva pentru fiecare gust. În Ticino, care are un climat mediteranean, te afli într-o lume complet diferită față de agitația din Basel. Și Alpstein, cu peisajul său montan, are un climat foarte diferit față de regiunea blândă a lacului Geneva. Și asta, deși aceste locuri sunt la doar trei până la patru ore distanță una de alta. În blogul nostru, te ajutăm cu planificarea călătoriei tale. Îți oferim sfaturi utile de călătorie și informații utile pentru a te pregăti perfect. Nu contează dacă călătorești pentru prima dată în Elveția sau dacă te cunoști deja bine cu locurile, articolele noastre sunt potrivite atât pentru vizitatorii la prima vizită, cât și pentru cunoscătorii adevărați ai Elveției."
+    },
+    "widget": {
+      "title": "Integrează Swiss Activities în site-ul tău",
+      "description": "Integrează Swiss Activities în site-ul tău și vinde activități direct prin intermediul site-ului tău.",
+      "hero": {
+        "title": "Integrează ofertele de la Swiss Activities în site-ul tău",
+        "description": "Widgetul Swiss Activities este cea mai ușoară modalitate de a integra activități în site-ul tău. Alege dintre o varietate de stiluri de widgeturi și integrează-l în câteva minute.",
+        "button": "Începe acum"
+      },
+      "cta": {
+        "title": "Devino partener",
+        "button": "Mergi la formular"
+      }
+    },
+    "newsletterConfirm": {
+      "title": "Îți mulțumim pentru înscriere! Tocmai ți-am trimis un mesaj în care poți confirma înregistrarea ta."
+    },
+    "newsletterSuccess": {
+      "title": "Îți mulțumim! Ești acum înscris la newsletterul nostru."
+    },
+    "cookiePolicy": {
+      "title": "Politica cookie-urilor"
+    },
+    "vouchers": {
+      "title": "Idei de cadouri experiențiale pentru Elveția – cele mai bune vouchere la Swiss Activities",
+      "description": "Oferă momente de neuitat cu un voucher de experiență de la Swiss Activities! Descoperă cea mai mare selecție de activități de recreere în Elveția – flexibil, simplu și disponibil online instantaneu. Perfect pentru orice ocazie de cadou.",
+      "hero": {
+        "title": "Dăruiește acum un voucher de experiență pentru Elveția și adu bucurie!",
+        "text": "Descoperă acum cele mai bune idei de cadouri și vouchere de experiență la Swiss Activities. Fie că este vorba de ziua de naștere, cadou de Crăciun sau pur și simplu pentru a mulțumi – un voucher pentru experiențe elvețiene se potrivește oricărui gust și este un cadou care va rămâne cu siguranță în memorie.",
+        "button": "Cumpără voucher"
+      },
+      "gift": {
+        "title": "Dăruiește cele mai bune experiențe elvețiene – de la aventură la relaxare",
+        "text": "Cauți o idee unică de cadou pentru prieteni sau familie în Elveția? Un voucher de experiență de la Swiss Activities îți oferă acces la cea mai mare selecție de activități recreative pe care Elveția le are de oferit. Fie că sunt tururi ghidate, aventuri în natură, momente relaxante în băi termale sau momente culturale în muzee – Swiss Activities face posibilă dăruirea de momente speciale."
+      },
+      "why": {
+        "title": "De ce un voucher de experiență de la Swiss Activities este ideea perfectă de cadou",
+        "items": [
+          {
+            "title": "Cea mai mare selecție din Elveția",
+            "text": "Peste 1.600 de oferte de divertisment în toate regiunile, de la aventuri în aer liber la momente de relaxare."
+          },
+          {
+            "title": "Peste 100.000 de clienți mulțumiți",
+            "text": "Swiss Activities este partenerul de încredere pentru cadouri și excursii speciale."
+          },
+          {
+            "title": "Opțiune de anulare gratuită",
+            "text": "Rezervări sigure și flexibile, adaptate nevoilor celui care primește cadoul."
+          },
+          {
+            "title": "Asistență pentru clienți de 5 stele",
+            "text": "Calitate elvețiană și suport – pentru un început fără probleme al experienței."
+          }
+        ]
+      },
+      "end": {
+        "title": "Dăruiește-vă vouchere pentru experiențe în Elveția și adu bucurie!",
+        "text": "Descoperă cele mai bune idei de cadouri și vouchere pentru experiențe la Swiss Activities. Indiferent dacă este ziua de naștere, cadou de Crăciun sau pur și simplu pentru a spune mulțumesc – un voucher pentru experiențe în Elveția se potrivește oricărui gust și asigură amintiri de neuitat.",
+        "button": "Alege voucher"
+      },
+      "banner": {
+        "tagline": "NOU: Ideea perfectă de cadou!",
+        "title": "Asigură-ți un\nvoucher de experiență",
+        "button": "Apasă aici"
+      }
+    }
+  },
+  "filter": {
+    "nearby": "Afișează activități în apropiere",
+    "results": "Afișează rezultate",
+    "filter": "Filtru",
+    "search": "Caută",
+    "location": "Locație",
+    "types": "Tip",
+    "categories": "Categorie",
+    "activity": "Activitate",
+    "activities": "Activități",
+    "today": "Astăzi",
+    "tomorrow": "Mâine",
+    "price": "Preț",
+    "noResults": "Nu există rezultate",
+    "noExactResults": {
+      "title": "Niciun rezultat exact găsit",
+      "description": "Încearcă să schimbi sau să elimini câteva dintre filtrele tale sau să ajustezi aria de căutare.",
+      "showNearest": "Afișează cele mai apropiate rezultate",
+      "resetDate": "Resetează perioada"
+    },
+    "lang": "Limbi",
+    "sort": {
+      "relevance": "Relevanță",
+      "distance": "Distanță față de tine",
+      "popularityDesc": "Popularitate descrescătoare",
+      "ratingDesc": "Rating descrescător",
+      "ratingAsc": "Evaluare ascendentă",
+      "priceDesc": "Preț descrescător",
+      "priceAsc": "Preț crescător",
+      "dateDesc": "Cele mai recente mai întâi",
+      "dateAsc": "Cele mai vechi mai întâi"
+    },
+    "navigationBreadcrumbs": {
+      "root": "Elveția"
+    },
+    "all": "Toate",
+    "map": "Hartă",
+    "card": {
+      "from": "de la",
+      "person": "pe persoană"
+    },
+    "viewMore": "Vezi mai mult",
+    "ratingBetterThan": "Mai bine decât {val} stele",
+    "ratingEqual": "{val} stele",
+    "ratingNone": "NOI / Fără evaluare",
+    "moreFilters": "Afișează {val} mai multe",
+    "lessFilters": "Afișează mai puține",
+    "usedFilters": "Filtre aplicate",
+    "resetFilters": "Resetează",
+    "discountTypes": "Reduceri",
+    "calendar": "Calendar",
+    "locationError": "Poziția nu a putut fi încărcată",
+    "textOnly": "Numai recenzii cu text"
+  },
+  "activity": {
+    "you": "tu",
+    "nearby": "{distance}km de {location}",
+    "nearbyAlt": "{distance}km distanță",
+    "recommendation": "Recomandare",
+    "reviews": "Recenzii",
+    "reviewOriginalIn": "Original în {language}",
+    "booked": "rezervat de {val} ori",
+    "providedBy": "Furnizor activitate",
+    "save": "Salvează",
+    "selectDate": "Selectează data",
+    "similarActivities": "Activități similare",
+    "question": "Cum putem ajuta?",
+    "rating": "Evaluare",
+    "highDemand": "Cerere mare",
+    "widget": {
+      "free": "disponibil",
+      "error500": "A apărut o problemă, te rugăm să încerci din nou în 1 minut.",
+      "errorDate": "Din păcate, nu mai sunt sloturi disponibile pentru {val}.",
+      "choose": "alege",
+      "titleTime": "Alege oferta",
+      "titleTicketOption": "Alege opțiunea de bilet",
+      "titleParticipants": "Alege participanții",
+      "titleTickets": "Alege biletele",
+      "confirmOffer": "Confirmă opțiunea de bilet",
+      "confirmTickets": "Confirmă participanții",
+      "confirmDate": "Confirmă data",
+      "confirmDateTime": "Confirmă data și ora",
+      "cheapest": "Cel mai mic preț",
+      "time": "Ora",
+      "navTicket": "Bilete",
+      "check": "Verifică disponibilitatea",
+      "notBookable": "Din păcate, această ofertă nu este disponibilă pentru rezervare în acest moment.",
+      "paymentMethods": "Métodelea de plată",
+      "totalPrice": "Preț total",
+      "taxes": "Taxe suplimentare",
+      "offerTimeSelect": "Alege ora",
+      "basket": "Coș",
+      "basketAdd": "Adaugă în coș",
+      "selectedOffer": "Ofertă",
+      "adjust": "Ajustează rezervarea",
+      "swissHalfFareCard": "Persoanele care locuiesc în afara Elveției pot&nbsp;<a href=\"/bahnpaesse/swiss-half-fare-card/\" target=\"_blank\" className=\"inline-block\">obține aici o Swiss Half Fare Card</a> pentru a beneficia de reduceri pe transportul public."
+    },
+    "tabs": {
+      "highlights": "Puncte de atracție",
+      "includes": "Include",
+      "importantInformation": "Informații importante",
+      "meetingPoints": "Puncte de întâlnire"
+    },
+    "newsletter": {
+      "title": "Nu rata mai multe activități",
+      "description": "Abonează-te acum pentru sfaturi de călătorie, idei de inspirație și cele mai recente ghiduri de călătorie direct în căsuța ta poștală.",
+      "signup": "Înscrie-te",
+      "inputPlaceholder": "Emailul tău"
+    },
+    "notRefundable": {
+      "title": "Netransferabil",
+      "description": "Din păcate, nu îți putem oferi o rambursare și nici nu putem schimba sau anula rezervarea ta pentru acest produs particular din cauza politicii partenerilor noștri."
+    }
+  },
+  "UI": {
+    "date": "Dată"
+  },
+  "home": {
+    "title": "Experiența ta începe aici"
+  },
+  "discover": {
+    "title": "Descoperă Activități"
+  },
+  "booking": {
+    "cancelable": "Anulare gratuită până la",
+    "privacyMessage": "Continuând cu plata, accepti <tos>{text}</tos> și condițiile de anulare incluse de Swiss Activities AG.",
+    "privacyPolicy": "termeni și condiții",
+    "personalTitle": "Detalii de facturare",
+    "personalSubtitle": "Pentru a finaliza rezervarea, te rugăm să completezi informațiile de mai jos.",
+    "mainGuest": "Persoana de contact",
+    "fullName": "Prenume",
+    "lastName": "Nume de familie",
+    "email": "E-mail",
+    "phoneNumber": "Număr de telefon",
+    "cardDetails": "Metode de plată",
+    "paymentSecure": "Plată securizată - utilizăm criptare SSL pentru a-ți proteja datele",
+    "creditPayments": "Carduri de credit",
+    "total": "Total",
+    "fullDay": "Zi întreagă",
+    "booknow": "Rezerve acum",
+    "addMoreInformation": "Adaugă mai multe informații",
+    "addPaymentMethod": "Selectează o metodă de plată",
+    "youBook": "Coș de cumpărături",
+    "rebate": "Cod de reducere",
+    "rebateEmailRequired": "Te rog să introduci mai întâi adresa ta de e-mail și să o confirmi pentru a putea folosi un cod de reducere.",
+    "important": "Am luat la cunoștință cerințele din \"Informații importante\" ale activității/activităților.",
+    "importantShow": "Afișează informații",
+    "importantHide": "Ascunde informații"
+  },
+  "confirm": {
+    "title": "Îți mulțumim pentru rezervarea cu Swiss Activities.",
+    "confirmed": "Rezervarea ta este confirmată.",
+    "pending": "Rezervarea ta este în procesare.",
+    "cancelled": "Rezervarea ta a fost anulată.",
+    "failed": "Ne pare rău, a apărut o problemă.",
+    "failedPayment": "Plata nu a putut fi procesată. Te rugăm să încerci cu un alt mijloc de plată.",
+    "failedReservation": "Din păcate, rezervarea nu a putut fi confirmată. Plata ta va fi rambursată. Te rugăm să încerci din nou.",
+    "wait": "Așteptăm confirmarea plății de la furnizorul nostru de plăți.",
+    "waitEmail": "Vei primi un e-mail imediat ce plata va fi confirmată.",
+    "caption": "Îți mulțumim foarte mult pentru rezervarea prin Swiss Activities. Ți-am trimis un e-mail de confirmare.",
+    "bookingNumber": "Numărul rezervării",
+    "point": "Punct de întâlnire",
+    "pointAddress": "Adresă punct de întâlnire",
+    "number": "Număr de telefon mobil",
+    "end": "Final",
+    "email": "Confirmarea rezervării tale a fost trimisă la {email}. Dacă nu o primești în următoarele minute, te rugăm să contactezi asistența noastră prin chat.",
+    "transport": {
+      "title": "Vii cu transportul public?",
+      "from": "Locul tău",
+      "description": "Călătorește confortabil cu transportul public și adaugă-ți biletul mobil direct la această rezervare.",
+      "button": "Adaugă bilet"
+    }
+  },
+  "footer": {
+    "company": {
+      "title": "Companie",
+      "about-us": "Despre noi",
+      "jobs": "Locuri de muncă",
+      "legal": "Legal"
+    },
+    "resources": {
+      "title": "Resurse"
+    },
+    "collaboration": {
+      "title": "Colaborare",
+      "becomeapartner": "Devino partener",
+      "affiliate": "Program de afiliere",
+      "widget": "Widget"
+    },
+    "affiliate": {
+      "title": "Cod afiliat",
+      "button": "Copiază codul",
+      "buttonCopied": "Cod copiat!"
+    },
+    "contact": {
+      "title": "Serviciu clienți",
+      "faq": "Întrebări & Răspunsuri (FAQ)",
+      "cookie": "Consimțământ pentru cookie-uri"
+    },
+    "mobileApp": "Obține aplicația noastră"
+  },
+  "tickets": {
+    "discounts": {
+      "noDiscount": "Fără reducere"
+    },
+    "showDiscounts": "Arată cardurile de reducere și client",
+    "travelClass": "Clasa de călătorie"
+  },
+  "supplier": {
+    "activities": "Activități"
+  },
+  "contactPopup": {
+    "modalTitle": "Cum te putem ajuta astăzi?"
+  },
+  "contactForm": {
+    "fullname": "Nume",
+    "email": "E-mail",
+    "subject": "Subiect",
+    "messagePlaceholder": "Cerere, rezervare, etc...",
+    "submit": "Trimite",
+    "formError": "Ceva nu a mers. Încearcă din nou."
+  },
+  "contactThankYou": {
+    "title": "Îți mulțumim pentru că ne-ai contactat!"
+  },
+  "internalLinkBlock": {
+    "destinations": "Destinații de top",
+    "locations": "Regiuni de top",
+    "topActivities": "Activități de top",
+    "topAttractions": "Atracții de top"
+  },
+  "offerCard": {
+    "bookNow": "Rezervă acum"
+  },
+  "breadcrumbsBasket": {
+    "stepOne": "Selecția ta",
+    "stepOneDescription": "Coș de cumpărături",
+    "stepTwo": "Detalii tale",
+    "stepTwoDescription": "Finalizare comandă",
+    "stepThree": "Ultimul pas",
+    "stepThreeDescription": "Plată"
+  },
+  "usps": {
+    "or": "sau",
+    "allDay": "Întreaga zi",
+    "bookable": {
+      "title": "Rezervabil",
+      "description": "Pentru {val}"
+    },
+    "online": {
+      "title": "Confirmație de rezervare imediată"
+    },
+    "payment": {
+      "title": "Rezervă pe factură sau plătește cu Twint"
+    },
+    "duration": {
+      "title": "Durată",
+      "durationMinutes": "{val} minute",
+      "duration": "{val} oră",
+      "durations": "{val} ore",
+      "durationDay": "{val} zi",
+      "durationDays": "{val} zile"
+    },
+    "mobileTicket": {
+      "title": "Bilet mobil acceptat",
+      "description": "Folosește telefonul tău sau tipărește voucherul tău"
+    },
+    "confirmation": {
+      "title": "Confirmație de rezervare imediată",
+      "description": "Fără taxe suplimentare"
+    },
+    "queue": {
+      "title": "Fără cozi"
+    },
+    "cancel": {
+      "title": "Anulare gratuită",
+      "description": "Rambursare integrală în caz de anulare cu cel puțin {val}h înainte de începere",
+      "descriptionDays": "Rambursare integrală în caz de anulare cu cel puțin {val} zile înainte de începere",
+      "subtitle": "Cu până la {val} ore înainte de ora de start",
+      "subtitleDays": "Cu până la {val} zi(le) înainte de ora de start"
+    },
+    "meetingPoint": {
+      "title": "Punct de întâlnire"
+    },
+    "discount": {
+      "title": "Reducere"
+    },
+    "request": {
+      "title": "Rezervare la cerere",
+      "description": "Această rezervare trebuie reconfirmată de către furnizor",
+      "extra": "Această ofertă se bazează pe disponibilitatea furnizorului. Rezervarea trebuie confirmată mai întâi de către furnizor, care va lua legătura cu tine după rezervare. Dacă activitatea nu poate fi realizată, vei primi înapoi toată suma."
+    },
+    "validity": {
+      "title": "Valabilitate"
+    },
+    "openingHours": {
+      "title": "Program de lucru"
+    }
+  },
+  "widgetConfigurator": {
+    "title": "Configurează widget-ul",
+    "type": "Tip",
+    "lang": "Limbă",
+    "other": "Alege o altă activitate",
+    "topBar": "Bară de setări",
+    "hideAll": "Ascunde tot",
+    "hideSearch": "Ascunde căutarea",
+    "hideSize": "Ascunde butonul de dimensiuni",
+    "hideFilter": "Ascunde butonul de filtrare",
+    "hideMap": "Ascunde butonul de hartă",
+    "hideQuickFilter": "Ascunde filtrul rapid",
+    "hideSort": "Ascunde sortarea",
+    "buttonText": "Textul butonului",
+    "buttonBackground": "Fundal buton",
+    "buttonColor": "Culoarea textului butonului",
+    "search": "Căutare pre-completată"
+  },
+  "types": {
+    "activity": "Activitate",
+    "overview": "Prezentare generală",
+    "location": "Locație",
+    "locationType": "Locație + Tip",
+    "type": "Tip",
+    "attribute": "Categorie",
+    "locationAttribute": "Locație + Categorie",
+    "poi": "Obiectiv turistic"
+  },
+  "reviewForm": {
+    "title": "Evaluează-ți experiența",
+    "button": "Evaluează acum",
+    "rating": "Evaluare",
+    "comment": "Comentariu",
+    "thanks": "Mulțumim pentru evaluarea ta!",
+    "next": "Evaluează următoarea rezervare",
+    "finish": "Fereastra se închide în 3 secunde"
+  },
+  "user": {
+    "welcome": "Bun venit în tabloul tău de bord {name}!",
+    "menu": {
+      "activities": "Activități",
+      "bookings": "Rezervări",
+      "suppliers": "Furnizori",
+      "reviews": "Recenzii",
+      "settings": "Setări",
+      "chat": "Chat",
+      "logout": "Ieși din cont",
+      "login": "Autentifică-te"
+    }
+  },
+  "SettingsForm": {
+    "title": "Completează-ți profilul",
+    "titleUpdate": "Actualizează-ți profilul",
+    "submit": "Trimite",
+    "phoneNumber": "Te rugăm să verifici din nou numărul de telefon.",
+    "email": "Adresa de email nu este valabilă",
+    "iban": "IBAN-ul nu este valabil",
+    "reseller": {
+      "title": "Revânzător",
+      "merchantName": "Numele comerciantului",
+      "merchantAddress": "Adresa comerciantului",
+      "bankAccountHolder": "Titularul contului",
+      "bankAccountIban": "IBAN-ul contului",
+      "bankAccountHolderAddress": "Adresa titularului contului",
+      "contact": {
+        "title": "Contacte",
+        "name": "Nume",
+        "businessRole": "Rol profesional",
+        "email": "Email",
+        "phone": "Telefon"
+      }
+    },
+    "payment": {
+      "title": "Metode de plată salvate",
+      "removeTitle": "Elimină metoda de plată"
+    }
+  },
+  "Repeater": {
+    "add": "Adaugă",
+    "remove": "Elimină"
+  },
+  "Table": {
+    "booking": {
+      "refresh": "Reîmprospătează"
+    },
+    "clearFilters": "Resetează filtrele",
+    "noResults": "Niciun rezultat găsit.",
+    "view": {
+      "title": "Vizualizare",
+      "adjust": "Ajustează coloanele"
+    },
+    "header": {
+      "bookingId": "ID-ul rezervării",
+      "date": "Data",
+      "bookingDate": "Data rezervării",
+      "serviceDate": "Data activității",
+      "description": "Descriere",
+      "location": "Locație",
+      "name": "Nume",
+      "email": "Email",
+      "type": "Tip",
+      "price": "Preț de la",
+      "sold": "Vândut",
+      "rating": "Evaluare",
+      "supplier": "Furnizor",
+      "bookingStatus": "Statusul rezervării",
+      "paymentStatus": "Statusul plății",
+      "total": "Total",
+      "actions": "Acțiuni",
+      "duration": "Durată",
+      "validity": "Valabilitate",
+      "bookable": "Rezervabil",
+      "createdAt": "Creat la",
+      "commission": "Comision",
+      "status": "Status",
+      "reservationSystem": "Sistem de rezervare",
+      "bapiId": "ID BAPI",
+      "capiId": "ID CAPI",
+      "notes": "Note",
+      "distributor": "Distribuitor",
+      "website": "Website",
+      "validities": "Valabilitate"
+    },
+    "actions": {
+      "aria": "Deschide acțiunile",
+      "details": "Arată detaliile",
+      "book": "Rezervă acum"
+    },
+    "sort": {
+      "ascending": "Ascendent",
+      "descending": "Descendent",
+      "hide": "Ascunde",
+      "bookable": "Arată doar activitățile rezervabile"
+    },
+    "pagination": {
+      "page": "Pagină",
+      "of": "din",
+      "entriesPerPage": "Intrări pe pagină",
+      "goToFirstPage": "Mergi la prima pagină",
+      "goToLastPage": "Mergi la ultima pagină",
+      "goToNextPage": "Mergi la pagina următoare",
+      "goToPreviousPage": "Mergi la pagina anterioară"
+    },
+    "search": {
+      "activities": "Caută activități",
+      "bookings": "Caută rezervări",
+      "offers": "Caută oferte",
+      "suppliers": "Caută după furnizori",
+      "bookingId": "Caută după numărul de rezervare",
+      "email": "Caută după e-mail",
+      "familyName": "Caută după nume de familie"
+    },
+    "cell": {
+      "bookingStatusActive": "Confirmat",
+      "bookingStatusPending": "În așteptare",
+      "bookingStatusCancelled": "Anulat",
+      "paymentStatusActive": "Plătit",
+      "paymentStatusPending": "În așteptare",
+      "paymentStatusRefunded": "Returnat"
+    }
+  },
+  "Drawer": {
+    "close": "Închide"
+  },
+  "PaymentMethod": {
+    "card": {
+      "new": "Card nou",
+      "store": "Te rugăm să salvezi datele cardului tău de credit pentru un check-out rapid în viitor.",
+      "endsIn": "Se încheie în {val}"
+    }
+  },
+  "Activity": {
+    "new": "Activitate nouă",
+    "nav": {
+      "general": "General"
+    }
+  },
+  "Offer": {
+    "new": "Ofertă nouă"
+  },
+  "Supplier": {
+    "new": "Furnizor nou"
+  },
+  "UspSlider": {
+    "title": "De ce să rezervi la Swiss Activities?",
+    "items": [
+      "Cea mai mare selecție din Elveția",
+      "Peste 100'000 de clienți mulțumiți",
+      "Opțiune de anulare gratuită",
+      "Asistență pentru clienți de 5 stele",
+      "Rezervări de bilete mobile în 90 de secunde"
+    ]
+  },
+  "AppBanner": {
+    "title": "Descarcă acum aplicația",
+    "description": "Descoperă Swiss Activities – simplu și rapid"
+  },
+  "Transport": {
+    "bookTrip": "Rezervă conexiunea",
+    "button": {
+      "confirmTrip": "Confirmă conexiunea",
+      "confirmTravelers": "Confirmă călătorii"
+    },
+    "checkDetails": "Verifică detaliile conexiunii",
+    "class": {
+      "first": "Clasa 1",
+      "second": "Clasa 2"
+    },
+    "direct": "Direct",
+    "duration": {
+      "minutes": "Minute"
+    },
+    "earlierTrips": "Conexiuni anterioare",
+    "errorLoadingTrips": "Conexiunile nu au putut fi încărcate.",
+    "laterTrips": "Conexiuni ulterioare",
+    "legend": "Legendă",
+    "loadingTrips": "Conexiunile se încarcă...",
+    "oneWay": "Numai dus",
+    "roundTrip": "Dus-întors",
+    "searchTrips": "Caută conexiuni",
+    "selectOriginDestination": "Alege punctul de plecare și destinația pentru a căuta conexiuni.",
+    "selectProduct": "Alege opțiunea de bilet",
+    "selectTravelers": "Selectează călătorii",
+    "switch": "Transfer",
+    "ticket": "Bilet",
+    "tickets": "Bilete",
+    "transfer": "Transfer",
+    "tripResults": "Conexiuni",
+    "upgradeTo1stClass": "Confort suplimentar",
+    "upgradeTo1stClassDescription": "Călătorii în clasa 1",
+    "cityTicketDescription": "Bilet de zi pentru transportul local",
+    "via": "prin",
+    "travelDate": "Alege data călătoriei",
+    "confirmTravelDate": "Confirmă data călătoriei",
+    "departure": "Plecare",
+    "arrival": "Sosire",
+    "locationDisabled": "Partajarea locației este dezactivată",
+    "locationError": "Locația nu a putut fi determinată",
+    "noProductsAvailable": "Nu sunt disponibile bilete",
+    "disclaimer": "Toate informațiile sunt fără garanție.",
+    "validity": "Valabilitate",
+    "validityOnSelectedRoute": "Numai pe ruta aleasă",
+    "validityForConnection": "Doar pentru conexiunea aleasă",
+    "validityForConnectionWith2ndClass": "Doar pentru conexiunea aleasă și cu un bilet valabil pentru clasa a 2-a",
+    "validityForRouteWith2ndClass": "Doar pentru ruta aleasă și cu un bilet valabil pentru clasa a 2-a",
+    "validityGARoutes": "Valabil pe toate traseele GA",
+    "validityDayClassUpgrade": "Numai cu biletul de zi pentru Halbtax, GA sau Swiss Travel Pass (Flex) pentru clasa a 2-a.",
+    "includedIn": "Inclus în",
+    "validityDateRange": "{fromDate} până la {toDate}, {toTime}",
+    "validityConnection": "{date} de la {fromTime}, la {toTime}",
+    "classUpgradeOnly": "Doar schimbare de clasă",
+    "loadingDestination": "Se încarcă",
+    "distanceToMeetingPoint": "Punct de întâlnire",
+    "walking": "Pe jos",
+    "arrivalInfo": "Timpul estimat de sosire: {walkingTime} pe jos + 15 minute tampon până la punctul de întâlnire",
+    "timeBeforeEvent": "{minutes} min. înainte de activitate · {walkingMinutes} min. pe jos de la stație",
+    "tooLateForActivity": "Următoarele rute nu ajung la timp la punctul de întâlnire"
+  }
+}

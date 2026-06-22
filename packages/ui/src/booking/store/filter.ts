@@ -1,6 +1,6 @@
 import isArray from "lodash/isArray";
 import { create } from "zustand";
-import { TActivity } from "../types/activity";
+import type { TActivity } from "../types/activity";
 
 export type FilterStore = {
   activities: TActivity["id"][];

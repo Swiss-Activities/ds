@@ -1,7 +1,7 @@
 import { Deposits } from "../Deposits";
-import { CartStore } from "../store";
+import type { CartStore } from "../store";
 import { Text } from "@swiss-activities/ui";
-import { TReservation } from "../../types/reservation";
+import type { TReservation } from "../../types/reservation";
 import { useI18n } from "../../utils/i18n/useI18n";
 
 type SummaryProps = {

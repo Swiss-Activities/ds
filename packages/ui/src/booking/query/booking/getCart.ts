@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import { TCart } from "../../types/cart";
+import type { TCart } from "../../types/cart";
 import { axiosInstance } from "../axios";
 
 export const getCart = async (cartId: string | null) => {

@@ -1,6 +1,6 @@
-import React, { ChangeEvent } from "react";
+import React, { type ChangeEvent } from "react";
 import { getCountryCallingCode, AsYouType } from "libphonenumber-js";
-import { CountryCallingCode, CountryCode } from "libphonenumber-js";
+import type { CountryCallingCode, CountryCode } from "libphonenumber-js";
 import { Input } from "../Input";
 import { Skeleton } from "@swiss-activities/ui";
 import { Select } from "../Select";

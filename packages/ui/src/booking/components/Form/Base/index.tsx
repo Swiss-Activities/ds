@@ -1,4 +1,4 @@
-import { createElement, JSX, ReactNode } from "react";
+import { createElement, type JSX, type ReactNode } from "react";
 import { Title } from "../Title";
 import { I } from "../../I";
 import { cn } from "../../../utils/css/cn";

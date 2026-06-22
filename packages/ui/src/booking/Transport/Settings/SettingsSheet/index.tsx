@@ -11,7 +11,7 @@ import { SegmentedControl } from "@swiss-activities/ui";
 import { Sheet as SheetAuto } from "@swiss-activities/ui";
 import { WheelPicker, WheelPickerColumn } from "../../../ui/WheelPicker";
 import { useI18n } from "../../../utils/i18n/useI18n";
-import { dataLayerSend } from "../../../utils/thirdParty/dataLayerSend";
+import { useDataLayer } from "../../../utils/thirdParty/dataLayerSend";
 
 type SettingsSheetProps = {
   open: boolean;
@@ -19,6 +19,7 @@ type SettingsSheetProps = {
 };
 
 export const SettingsSheet = ({ open, onOpenChange }: SettingsSheetProps) => {
+  const { dataLayer } = useDataLayer();
   const { t, locale } = useI18n();
 
   const {
@@ -127,7 +128,7 @@ export const SettingsSheet = ({ open, onOpenChange }: SettingsSheetProps) => {
     setDirection(tempDirection);
     onOpenChange(false);
 
-    dataLayerSend({
+    dataLayer({
       data: {
         event: "transport_select_settings",
         selected_date: newDate.toISOString().split("T")[0],

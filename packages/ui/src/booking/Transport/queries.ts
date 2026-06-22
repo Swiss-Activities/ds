@@ -2,7 +2,7 @@ import { useMemo, useState, useCallback, useEffect } from "react";
 import { useShallow } from "zustand/react/shallow";
 import { useTransportStoreLocal } from "./store";
 import { useBookingStore } from "../store";
-import { TransportPlaceRef, TransportTrip } from "../types/transport";
+import type { TransportPlaceRef, TransportTrip } from "../types/transport";
 import { useI18n } from "../utils/i18n/useI18n";
 import { axiosApiInstanceWithCsrf } from "../query/axios";
 import { useGetTripDetails } from "../query/transport/trip";

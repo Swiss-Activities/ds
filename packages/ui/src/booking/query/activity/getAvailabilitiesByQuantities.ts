@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import dayjs from "dayjs";
-import { TOfferBooking } from "../../types/offerBooking";
+import type { TOfferBooking } from "../../types/offerBooking";
 import { useDistributorId } from "../../utils/user/useDistributorId";
 import { axiosInstance, axiosApiInstance } from "../axios";
 

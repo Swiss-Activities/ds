@@ -7,7 +7,7 @@ import { Loader } from "@swiss-activities/ui";
 import { TransportPlace } from "../../../types/transport";
 import { useDebounce } from "../../../utils/data/useDebounce";
 import { useI18n } from "../../../utils/i18n/useI18n";
-import { dataLayerSend } from "../../../utils/thirdParty/dataLayerSend";
+import { useDataLayer } from "../../../utils/thirdParty/dataLayerSend";
 import { useGeolocation } from "../../../utils/ui/useGeolocation";
 import { useGetPlaces } from "../../../query/transport/places";
 
@@ -16,6 +16,7 @@ type PlacesListProps = {
 };
 
 export const PlacesList = ({ viaIndex = 0 }: PlacesListProps) => {
+  const { dataLayer } = useDataLayer();
   const { t } = useI18n();
   const {
     fromValue,
@@ -186,7 +187,7 @@ export const PlacesList = ({ viaIndex = 0 }: PlacesListProps) => {
     lastSearchTermRef.current[field] = term;
 
     const fire = () => {
-      dataLayerSend({
+      dataLayer({
         data: {
           event: `transport_search_${field}`,
           search_term: term,
@@ -242,7 +243,7 @@ export const PlacesList = ({ viaIndex = 0 }: PlacesListProps) => {
     source: "search" | "geolocation" = "search"
   ) => {
     flushPendingSearch(field);
-    dataLayerSend({
+    dataLayer({
       data: {
         event: `transport_search_${field}_select`,
         search_term: name,

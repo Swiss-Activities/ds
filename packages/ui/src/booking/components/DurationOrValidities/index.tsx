@@ -1,4 +1,4 @@
-import { TActivity } from "../../types/activity";
+import type { TActivity } from "../../types/activity";
 import { useI18n } from "../../utils/i18n/useI18n";
 import { formatDurationOrValidities } from "./format";
 

@@ -1,0 +1,1799 @@
+{
+  "general": {
+    "accountAdvantages": "要享受折扣和其他好处，请注册账户或登录。",
+    "activityBook": "活动预订",
+    "addTicket": "添加票务",
+    "adult": "{val} 成人",
+    "adults": "{val} 成年人",
+    "ageChoose": "选择年龄",
+    "ageFrom": "从 {val} 岁起",
+    "ageOld": "{val} 岁",
+    "ageUnder": "少于 {val} 岁",
+    "all": "全部",
+    "allReviews": "所有评论",
+    "backToBookings": "返回到预订",
+    "bookAsGuest": "你以访客身份完成订单。",
+    "cancel": "取消",
+    "cancelled": "已取消",
+    "cartAmount": "购物车总额",
+    "child": "{val} 小孩",
+    "children": "{val} 儿童",
+    "chooseSelection": "确认选择",
+    "confirm": "确认",
+    "confirmCancel": "确认取消",
+    "contact": "联系我们",
+    "copyUrl": "复制网址",
+    "couple": "情侣",
+    "customerServiceFee": "服务费",
+    "data": "数据",
+    "date": "日期",
+    "dateChoose": "选择日期",
+    "delete": "删除",
+    "didYouMean": "你是说 <suggestion>{email}</suggestion> 吗？",
+    "duplicate": "复制",
+    "emailsDontMatch": "输入的电子邮件地址不匹配。",
+    "export": "导出",
+    "faqType": "瑞士 {type} 常见问题",
+    "from": "从",
+    "group": "组",
+    "helpfulQuestion": "有帮助吗？",
+    "informationPlural": "信息",
+    "language": "语言",
+    "loginOrRegister": "登录或注册",
+    "manageBookings": "管理预订",
+    "mobileAppAddon": "现在就获取我们的移动应用，方便地管理您的预订，快速访问您的票务，并找到您下一个冒险的旅程。",
+    "mostImportantInSummary": "重要事项摘要",
+    "noResults": "很抱歉，我们无法找到与你的搜索词相关的结果",
+    "noReviewsYet": "尚无评论",
+    "notes": "笔记",
+    "oneMonth": "1 个月",
+    "openChat": "打开聊天",
+    "order": "顺序",
+    "partSum": "小计",
+    "participants": "参与者",
+    "participantsChoose": "选择参与者",
+    "past": "过去的",
+    "personalizeTickets": "个性化票务",
+    "pleaseSelect": "请选择",
+    "pleaseSelectItem": "请选择 {val}",
+    "questionsChatActivity": "你对这个活动还有问题吗？与我们聊天",
+    "questionsChatBooking": "你对预订还有问题吗？与我们聊天。",
+    "raw": "未加工",
+    "rebate": "折扣",
+    "recaptcha": "本网站受 reCAPTCHA 保护。 Google\n<a href=\"https://policies.google.com/privacy\" target=\"_blank\">隐私政策</a> 和\n<a href=\"https://policies.google.com/terms\" target=\"_blank\">服务条款</a> 适用。",
+    "remove": "移除",
+    "removeFromCart": "从购物车中移除",
+    "reset": "重置",
+    "searchNow": "现在搜索",
+    "single": "单身",
+    "soldOut": "售罄",
+    "somethingWentWrongContact": "很抱歉，出现了错误。请再试一次或联系支持。",
+    "successfullySaved": "成功保存",
+    "ticket": "门票和入场费",
+    "tickets": "门票和入场费",
+    "to": "到",
+    "currentLocation": "当前位置",
+    "toDashboard": "我的预订",
+    "translate": "翻译",
+    "tryAgain": "再试一次",
+    "upcoming": "即将推出",
+    "when": "什么时候",
+    "who": "谁",
+    "wrongDate": "日期有问题：请检查并重新选择。",
+    "wrongDateParticipant": "参与者的出生日期与提供的年龄不符。",
+    "today": "今天",
+    "apply": "应用"
+  },
+  "aria": {
+    "forward": "向前",
+    "backward": "落后"
+  },
+  "auth0": {
+    "accept": "我接受[Nutzungsbedingungen]({link})",
+    "error": "请接受服务条款",
+    "resetPasswordHint": "没有收到电子邮件？请检查你的垃圾邮件文件夹。如果你是通过Apple或Google注册的，请使用该种登录方式。"
+  },
+  "menu": {
+    "menu": "菜单",
+    "search": "搜索",
+    "travelGuide": "旅行计划",
+    "travelRoutes": "旅行路线",
+    "contactus": "联系我们",
+    "switzerland": "瑞士",
+    "help": "聊天",
+    "voucher": "购买优惠券",
+    "voucherSm": "优惠券",
+    "partners": "伙伴",
+    "provider": "提供者",
+    "affiliate": "附属合作伙伴"
+  },
+  "chat": {
+    "chats": "所有聊天",
+    "newChat": "新聊天",
+    "noChatsYet": "还没有聊天",
+    "typeMessage": "输入消息",
+    "welcome": "你好，欢迎来到 Swiss Activities！我是 Housibot，很高兴为你解答问题。",
+    "welcomeReview": "你好！你的体验如何？我是Housibot，很高兴帮助你分享反馈。"
+  },
+  "supportBanner": {
+    "title": "需要帮助找到合适的滑雪学校吗？",
+    "placeholder": "我们能如何帮助你？",
+    "send": "发送"
+  },
+  "pages": {
+    "404": {
+      "title": "页面未找到。",
+      "description": "此页面不存在。",
+      "button": "返回主页",
+      "search": "开始搜索"
+    },
+    "home": {
+      "title": "瑞士活动 - 查找瑞士休闲活动",
+      "description": "瑞士活动是您在瑞士休闲活动的目的地。发现、比较和预订无数的休闲活动。",
+      "gatewayCards": {
+        "categories": {
+          "castlesRuins": "城堡 / 废墟",
+          "castleEvents": "城堡活动",
+          "exhibitions": "展览",
+          "fireplaces": "火炉",
+          "movies": "电影",
+          "museums": "博物馆",
+          "playgrounds": "游乐场",
+          "swimmingBathing": "游泳和浴水"
+        },
+        "dateRange": {
+          "from": "从",
+          "until": "到"
+        },
+        "distance": {
+          "unit": "千米"
+        }
+      },
+      "gatewayDetail": {
+        "back": "返回",
+        "moreInfo": "更多信息",
+        "source": "打开来源",
+        "labels": {
+          "admission": "入场",
+          "address": "地址",
+          "ageRating": "年龄",
+          "bookTickets": "预订门票",
+          "canton": "州",
+          "cast": "演员阵容",
+          "category": "类别",
+          "cinema": "电影院",
+          "countryYear": "国家 / 年份",
+          "dateRange": "时间段",
+          "director": "导演",
+          "duration": "时长",
+          "entryFeeAdult": "成人",
+          "entryFeeChild": "儿童",
+          "foundedYear": "成立于",
+          "genres": "类型",
+          "location": "地点",
+          "museumCategory": "博物馆类型",
+          "openTrailer": "打开预告片",
+          "openingHours": "开放时间",
+          "phone": "电话",
+          "poolLength": "泳池长度",
+          "trailer": "预告片",
+          "venue": "场地",
+          "waterType": "水类型"
+        },
+        "sections": {
+          "amenities": "设施",
+          "badges": "推荐",
+          "information": "信息",
+          "prices": "价格",
+          "showtimes": "放映时间",
+          "venue": "场地"
+        },
+        "amenities": {
+          "capacityPersons": "容量",
+          "hasBenches": "长椅",
+          "hasChangingRooms": "更衣室",
+          "hasDivingBoard": "跳板",
+          "hasFirewood": "柴火",
+          "hasFoodService": "餐饮服务",
+          "hasGrillGrate": "烤架",
+          "hasKidsPool": "儿童泳池",
+          "hasLifeguard": "救生员",
+          "hasLockers": "储物柜",
+          "hasPlaygroundNearby": "附近游乐场",
+          "hasShowers": "淋浴",
+          "hasSlide": "滑水道",
+          "hasShelter": "遮蔽处",
+          "hasTable": "桌子",
+          "hasToilet": "厕所",
+          "hasWater": "水"
+        },
+        "waterTypes": {
+          "indoorPool": "室内游泳池",
+          "lake": "湖泊",
+          "outdoorPool": "露天游泳池",
+          "pool": "游泳池",
+          "river": "河流"
+        }
+      }
+    },
+    "s": {
+      "title": "瑞士活动 - 查找瑞士休闲活动",
+      "description": "瑞士活动是您在瑞士休闲活动的目的地。发现、比较和预订无数的休闲活动。",
+      "sort": {
+        "distance": {
+          "notSupported": "您的浏览器不支持位置服务。将使用相关性排序。",
+          "permissionDenied": "要按照距离排序，请在浏览器设置中允许访问您的位置，然后刷新页面。",
+          "positionUnavailable": "位置信息不可用。",
+          "timeout": "位置查询超时。",
+          "unknownError": "发生未知错误。",
+          "fallbackMessage": "将使用相关性排序。",
+          "errorPrefix": "无法确定位置。"
+        }
+      }
+    },
+    "chat": {
+      "title": "Swiss Activities 聊天",
+      "description": "Swiss Activities 是您在瑞士休闲活动的目的地。发现、比较并预订无数休闲活动。"
+    },
+    "transport": {
+      "title": "瑞士铁路票、通行证和日票 | Swiss Travel Pass, SBB Spartageskarte",
+      "description": "比较并预订火车票、Swiss Travel Pass、Halbtax、SBB Spartageskarten 和全瑞士的地区通行证。立即作为手机票发送到你的手机。",
+      "trust": {
+        "partners": "官方合作伙伴",
+        "ratingValue": "4.8",
+        "ratingLabel": "400,000+ 满意的旅客",
+        "ratingShortLabel": "400,000+ 位旅客"
+      },
+      "discountMap": {
+        "title": "在这里与您的通行证省钱",
+        "subtitle": "缆车、船只和热门短途旅行——选择一张通行证，查看哪里可以体验。",
+        "free": "包含",
+        "discount50": "−50 %",
+        "discount25": "−25 %",
+        "noDiscount": "无折扣",
+        "altitude": "{m} 米高。",
+        "moreInfo": "了解更多信息",
+        "selectPass": "选择通行证",
+        "selectCategory": "选择分类",
+        "categories": {
+          "mountain": "缆车",
+          "lake": "湖泊与船只",
+          "museum": "博物馆"
+        },
+        "airports": {
+          "zrh": "苏黎世",
+          "gva": "日内瓦"
+        },
+        "regions": {
+          "bernerOberland": "伯尔尼高地",
+          "jungfrau": "少女峰",
+          "interlaken": "因特拉肯",
+          "zentralschweiz": "中央瑞士",
+          "ostschweiz": "东瑞士",
+          "waadt": "沃州",
+          "engadin": "恩嘎丁",
+          "wallis": "瓦莱州",
+          "tessin": "提契诺",
+          "genferseeregion": "日内瓦湖地区",
+          "zuerich": "苏黎世",
+          "mittelland": "中部地区",
+          "luzern": "卢塞恩",
+          "basel": "巴塞尔",
+          "bern": "伯尔尼",
+          "lausanne": "洛桑",
+          "geneve": "日内瓦",
+          "zermatt": "策马特",
+          "fribourg": "弗里堡",
+          "graubuenden": "格劳宾登"
+        }
+      },
+      "hero": {
+        "title": "全瑞士的火车票",
+        "titleAccent": "瑞士",
+        "lede": "线路票、日票和SBB的特惠——立即发送到你的手机。",
+        "subtitle": "线路票、日票和SBB的特惠——立即发送到你的手机。",
+        "searchTitle": "搜索连接",
+        "searchMeta": "车站 · 日期 · 乘客",
+        "fromPlaceholder": "起点车站 / 起点",
+        "toPlaceholder": "目的地车站 / 目的地",
+        "badges": {
+          "rating": "4.8 / 5 · 400,000+ 评论",
+          "partner": "SBB 官方合作伙伴"
+        },
+        "usps": {
+          "customers": {
+            "title": "400,000 快乐的客户",
+            "subline": "自 2021 年起信任 Swiss Activities"
+          },
+          "saver": {
+            "title": "省钱高达 50%",
+            "subline": "使用 SBB 的特惠票和日票"
+          },
+          "mobile": {
+            "title": "立即作为手机票",
+            "subline": "直接发送到手机，无需 SBB 登录"
+          },
+          "earlyBird": {
+            "title": "预订者优惠",
+            "subline": "提前规划，购买 SBB 的特惠票和日票"
+          }
+        }
+      },
+      "benefits": {
+        "title": "你的优势",
+        "discount": {
+          "eyebrow": "优惠票",
+          "title": "节省最多 40%",
+          "subline": "SBB 折扣和日票",
+          "badge": "畅销书"
+        }
+      },
+      "passes": {
+        "title": "SBB 和地区通行证",
+        "subtitle": "比较多日通行证、日票和地区通行证——选择适合你的通行证。",
+        "tabs": {
+          "multiDay": "多日通行证",
+          "dayPass": "日票",
+          "regional": "地区通行证"
+        },
+        "buy": "现在购买",
+        "from": "价格从",
+        "moreInfo": "更多信息",
+        "seeDiscounts": "查看所有优惠",
+        "viewAllByTab": {
+          "multiDay": "查看所有通行证",
+          "dayPass": "查看所有 SBB 日票",
+          "regional": "查看所有地区通行证"
+        },
+        "empty": "当前没有可用产品——看看其他类别。",
+        "descriptions": {
+          "fallback-stp": "全瑞士的交通乘车，免费博物馆入场。",
+          "fallback-stpf": "在可选日期使用公共交通——包括免费博物馆入场。",
+          "fallback-shfc": "一个月内火车、公交、船和缆车半价。",
+          "fallback-halbtax": "一天内在全瑞士自由通行——使用你的 Halbtax。",
+          "fallback-spar": "提前预约以获取最低价的一日票——每天有限名额。",
+          "fallback-ga": "一天内的全通行——和 GA 一样，只能使用 24 小时。",
+          "fallback-tell": "在中央瑞士的自由行：包括缆车、轮渡和公共交通。",
+          "fallback-bo": "探索少女峰和因特拉肯地区——使用一个通行证搭乘火车、船只和缆车。",
+          "fallback-jtp": "欧洲之巅地区：包括缆车、公共交通及 Grindelwald、Wengen、Mürren 周围的亮点。"
+        },
+        "usps": {
+          "1330": [
+            "包括 Harder Kulm 和 Brienzer Rothorn",
+            "最高可省50% 适用于 Grindelwald-Wengen 滑雪区域",
+            "公共交通和缆车在少女峰地区"
+          ],
+          "1438": [
+            "包括 First、Schynige Platte 和 Niesen",
+            "−25 % 优惠适用于少女峰Top of Europe",
+            "用一张通行证乘坐火车、船只和缆车"
+          ],
+          "1440": [
+            "一个月全国半价",
+            "适用于火车、公交、船和缆车",
+            "也适用于 SBB 的特惠票"
+          ],
+          "1447": [
+            "火车、公交和船在瑞士境内免费",
+            "山地缆车最高可省 50%（少女峰 -25%）",
+            "免费参观 500 多个博物馆"
+          ],
+          "1448": [
+            "在可选日期启用全国通行证",
+            "山地缆车、公交和船只优惠高达 50%",
+            "免费参观 500 多个博物馆"
+          ],
+          "1450": [
+            "包括 Pilatus、Rigi 和 Stanserhorn",
+            "免费乘坐 Vierwaldstättersee 的船只",
+            "中央瑞士的火车、公交和缆车"
+          ],
+          "1664": [
+            "日票从 CHF 29 起",
+            "预订提前可省 70%",
+            "每天名额有限"
+          ],
+          "1671": [
+            "儿童 6-16 岁以家庭票价计算",
+            "适用于全瑞士所有 SBB 线路",
+            "非常适合家庭出游"
+          ],
+          "1676": [
+            "一天的免费乘车，使用 Halbtax",
+            "适用于全瑞士的 SBB 线路",
+            "比多个单票更划算"
+          ]
+        },
+        "soldCount": "{count} 已预订",
+        "reviews": "({count})",
+        "discounts": {
+          "1330": "包括 Harder Kulm。",
+          "1438": "包括 First 和 Niesen。",
+          "1440": "半价优惠",
+          "1447": "缆车 −50 %",
+          "1448": "缆车 −50 %",
+          "1450": "包括 Pilatus 和 Rigi。",
+          "1664": "最多可享−70 %",
+          "1671": "家庭票价"
+        },
+        "benefits": {
+          "includedHeading": "包含",
+          "discountedHeading": "优惠",
+          "expand": "查看所有优惠",
+          "collapse": "显示更少",
+          "items": {
+            "1330": {
+              "included": [
+                "哈德库尔姆和布林岑尔罗斯霍恩",
+                "少女峰地区的公共交通（火车、公共汽车、船只）"
+              ],
+              "discounted": [
+                "格林德瓦—温根滑雪区最高减 50%",
+                "穆伦—希尔索恩滑雪区最高减 50%",
+                "少女峰顶点 欧洲之巅减 25%"
+              ]
+            },
+            "1438": {
+              "included": [
+                "First、欣尼格普拉特和尼森",
+                "布林岑尔罗斯霍恩和斯托赫霍恩",
+                "少女峰地区的火车、船和缆车"
+              ],
+              "discounted": [
+                "少女峰顶点 欧洲之巅减 25%",
+                "希尔索恩（詹姆斯·邦德）减 50%"
+              ]
+            },
+            "1440": {
+              "included": [],
+              "discounted": [
+                "火车、公交和船票享50%优惠",
+                "缆车票优惠50%",
+                "也可与SBB的特惠票组合"
+              ]
+            },
+            "1447": {
+              "included": [
+                "全瑞士的火车、公交和船",
+                "超过 500 个博物馆",
+                "90 个瑞士城市的公共交通"
+              ],
+              "discounted": [
+                "山地缆车最高可省 50 %",
+                "少女峰Top of Europe优惠−25 %",
+                "SBB的RailAway优惠−30 %"
+              ]
+            },
+            "1448": {
+              "included": [
+                "可选日期的火车、公交和船",
+                "超过 500 个博物馆",
+                "90 个瑞士城市的公共交通"
+              ],
+              "discounted": [
+                "山地缆车最高可省 50 %",
+                "少女峰Top of Europe优惠−25 %",
+                "SBB的RailAway优惠−30 %"
+              ]
+            },
+            "1450": {
+              "included": [
+                "皮拉图斯、瑞吉和斯坦瑟洪",
+                "四湖区的船只",
+                "中央瑞士的火车、公共汽车和缆车"
+              ],
+              "discounted": []
+            },
+            "1664": {
+              "included": [
+                "一天内全瑞士自由地乘车"
+              ],
+              "discounted": [
+                "日票从 CHF 29 起",
+                "提前订票可享−70%优惠"
+              ]
+            },
+            "1671": {
+              "included": [
+                "全瑞士范围内的 SBB 连接（1天）"
+              ],
+              "discounted": [
+                "儿童 6-16 岁的家庭价格",
+                "常规日票减 50%"
+              ]
+            },
+            "1676": {
+              "included": [
+                "一天的免费乘车，使用 Halbtax"
+              ],
+              "discounted": [
+                "比多张单程票便宜"
+              ]
+            }
+          }
+        }
+      },
+      "articles": {
+        "title": "关于火车的精彩文章",
+        "subtitle": "关于 SBB 车票、旅行通行证及瑞士公共交通的小贴士、比较及实践知识。",
+        "read": "阅读文章",
+        "tag": "杂志"
+      },
+      "dayPasses": {
+        "title": "受欢迎的日票",
+        "subtitle": "全天免费乘车 - 可轻松与您的票进行组合。",
+        "halbtax": {
+          "title": "半价日票",
+          "description": "全天在瑞士免费乘车 - 使用您的半价票。非常适合日间出游和山区活动。",
+          "fromPrice": "起价为 CHF 52.–",
+          "cta": "查找连接"
+        },
+        "spar": {
+          "title": "省钱日票",
+          "description": "提前预订可享受最佳价格的日票。每天数量有限 - 提早预订，享受更优惠的票价。",
+          "fromPrice": "起价为 CHF 29.–",
+          "cta": "查找连接"
+        }
+      },
+      "groups": {
+        "mountains": "可通过火车到达的山区体验",
+        "dayTrips": "从苏黎世、伯尔尼和巴塞尔出发的热门日游",
+        "cities": "发现城市：火车 + 体验",
+        "cityPasses": "城市通行证：一张卡在整个城市内通用"
+      },
+      "faq": {
+        "title": "关于 SBB 车票的常见问题",
+        "items": [
+          {
+            "q": "我可以退票吗？",
+            "a": "<p><strong>区间票</strong> 你可以在出发前一天免费取消 - 直接在你的预订页面上进行。</p><p>对于<strong><a href=\"/sbb-tageskarten/spartageskarte-sbb/\">省钱日票</a></strong> 和特价票，无法取消。它们与选定的日期绑定 - 预订页面上会有明确提示。</p>"
+          },
+          {
+            "q": "SBB 票与 SBB 售票处的票一样吗？",
+            "a": "是的，你将获得和在售票处或 SBB 应用程序中一样的官方 SBB 票 - 没有额外费用。<a href=\"/sbb-tageskarten/\">SBB 日票</a>和<a href=\"/bahnpaesse/\">火车通行证</a> 也是 SBB 的原件，1:1。"
+          },
+          {
+            "q": "我多快能收到票？",
+            "a": "马上。在成功预订后，您会通过电子邮件和在 swissactivities.com 的预订页面收到手机票。无需 SBB 登录 - 直接在火车上出示。"
+          },
+          {
+            "q": "我可以保存半价票或 GA 吗？",
+            "a": "可以，在预订步骤中，您可以选择您的折扣订阅 - 价格会自动调整。如果你只有半价票，一整天出行时常常更划算的是<a href=\"/sbb-tageskarten/sbb-tageskarte-halbtax/\">SBB 半价日票</a>，而不是多张单程票。"
+          },
+          {
+            "q": "如果我的火车晚点怎么办？",
+            "a": "你所持的区间票也适用于下一班列车 - 只需乘坐下班合适的火车。如果晚点超过一小时，可以通过 SBB 申请退款。"
+          },
+          {
+            "q": "瑞士旅行通行证或省钱日票值得购买吗？",
+            "a": "<p>经验法则：如果你连续出行三天以上，且经常乘坐火车、公交车和船，并喜欢参观博物馆，则购买<a href=\"/bahnpaesse/swiss-travel-pass-kaufen/\">瑞士旅行通行证</a>更划算。包含500多个博物馆，90个城市的公共交通和山地交通享受−50%的折扣。</p><p>对于单个日游而言，<a href=\"/sbb-tageskarten/spartageskarte-sbb/\">SBB 节省日票</a>起价 CHF 29 通常是最实惠的选择——只需提前预订即可。</p>"
+          },
+          {
+            "q": "哪个区域通行证适合我的旅行？",
+            "a": "<p>对于因特拉肯 / 格林德瓦 / 温根地区，购买<a href=\"/bahnpaesse/berner-oberland-pass/\">伯尔尼高地通行证</a>或冬季的<a href=\"/bahnpaesse/jungfrau-travel-pass-winter/\">少女峰旅行通行证</a>会受益良多 - 两者包括该地区的缆车、公共交通和船只。</p><p>在四湖区，<a href=\"/bahnpaesse/sbb-tellpass/\">泰尔通行证</a>是理想选择：皮拉图斯、瑞吉、斯坦瑟洪和所有船只均包括在内。</p>"
+          }
+        ]
+      }
+    },
+    "about_us": {
+      "title": "关于我们 - 瑞士活动",
+      "description": "瑞士活动是您在瑞士休闲活动的目的地。发现、比较和预订无数的休闲活动。",
+      "hero": {
+        "title": "寻找瑞士休闲活动",
+        "text": "瑞士活动是您在瑞士休闲活动的目的地。在瑞士活动上，您会发现无数的休闲活动，只需点击几下即可进行比较并预订。在瑞士寻找空闲时间的活动从未如此简单。"
+      },
+      "who": {
+        "title": "我们是谁",
+        "text": "我们是一支积极进取的团队，对瑞士的休闲活动充满热情。我们了解这个国家和人民。尝试新活动是我们的热情。这就是我们开展瑞士活动的原因。"
+      },
+      "start": {
+        "title": "我们的开始",
+        "text": "当我们意识到2020年不能再旅行时，我们寻找了一个针对瑞士人的瑞士休闲活动平台，但没有找到。这是休闲活动“瑞士目的地活动”的开始信号。",
+        "milestones": {
+          "march_2020": {
+            "date": "2020年3月",
+            "title": "将引导瑞士活动作为商业模式"
+          },
+          "march_2021": {
+            "date": "2021 年 3 月",
+            "title": "公司成立"
+          },
+          "june_2021": {
+            "date": "2021 年 6 月",
+            "title": "推出我们自己的平台"
+          },
+          "september_2021": {
+            "date": "2021 年 9 月",
+            "title": "500 项可在线实时预订的活动"
+          },
+          "december_2021": {
+            "date": "2021 年 12 月",
+            "title": "种子轮前完成"
+          },
+          "march_2022": {
+            "date": "2021 年 3 月",
+            "title": "推出联属网络营销计划"
+          },
+          "may_2022": {
+            "date": "2021 年 5 月",
+            "title": "启动 B2B 合作伙伴计划"
+          }
+        }
+      },
+      "partner": {
+        "title": "我们帮助您赢得新客户",
+        "text": "瑞士活动可帮助您寻找新客户。我们每天都在努力使瑞士活动成为瑞士最大的休闲活动目的地。每天都有成千上万的人访问 www.swissactivities.com 寻找瑞士的休闲活动。通过在瑞士活动上展示您的优惠，您可以吸引新客户。"
+      },
+      "kunden": {
+        "title": "瑞士所有休闲活动的目的地 ",
+        "text": "我们的目标是让整个瑞士的所有休闲活动都可以在 www.swissactivities.com 上找到。这使得每个人都可以更轻松地查找、比较和预订休闲活动。"
+      },
+      "promise": {
+        "title": "我们对客户的承诺",
+        "list": [
+          "没有耗时的电话",
+          "没有无数网站无休止的研究",
+          "可以直接查看可用性",
+          "立即预订，不走弯路",
+          "无需额外费用",
+          "简单快捷的付款方式",
+          "没有繁琐的排队",
+          "有吸引力的折扣概览",
+          "本地优惠"
+        ]
+      },
+      "team": {
+        "title": "瑞士活动团队"
+      }
+    },
+    "tos_b2b": {
+      "title": "供应商的一般商业条款",
+      "description": "这些是我们目前针对供应商的商业条款。"
+    },
+    "tos_b2c": {
+      "title": "客户的瑞士活动中介平台使用条款",
+      "description": "这就是我们当前的客户瑞士活动中介平台使用条款。"
+    },
+    "tos_aff": {
+      "title": "附属公司的一般条款和条件",
+      "description": "这些是我们针对我们的附属公司的现行条款和条件。"
+    },
+    "imprint": {
+      "title": "印记",
+      "description": "这是我们的印记。"
+    },
+    "privacy_policy": {
+      "title": "数据保护",
+      "description": "这是隐私政策。"
+    },
+    "contact_us": {
+      "title": "联系我们",
+      "description": "如果您有任何疑问，我们将很乐意为您提供帮助。"
+    },
+    "basket": {
+      "title": "购物车",
+      "delete": "删除",
+      "warning": "你想从购物车中删除这个预约吗？",
+      "edit": "编辑",
+      "cancel": "取消",
+      "update": "更新购物车",
+      "next": "结帐",
+      "empty": "你的购物篮是空的",
+      "hold": "我们保留此预订",
+      "explore": "探索休闲活动"
+    },
+    "booking": {
+      "title": "售票处"
+    },
+    "confirmation": {
+      "title": "预订确认通知",
+      "tickets": "您的门票",
+      "download": "手机票",
+      "more": "更多信息",
+      "cancel": "取消机票",
+      "cancelled": "取消",
+      "cancelWhy": "为什么要取消？",
+      "cancelReasons": [
+        "我的假期被取消了",
+        "我找到了更便宜的替代品",
+        "我没有按时收到确认信息",
+        "提供商要求我取消预订",
+        "我的首选选项不可用",
+        "我预订了错误的日期",
+        "我预订的参加人数有误",
+        "不同的原因"
+      ],
+      "rebook": {
+        "title": "重新预订",
+        "text": "计划改变？重新预订您的活动。您的旧预订将自动取消。",
+        "button": "立即重新预订"
+      },
+      "stay": "请留在此页面，您的预订正在处理中。",
+      "editBooking": "更改预订",
+      "showTickets": "票",
+      "drawerTitle": "你的预订",
+      "relatedBookings": "相关预订"
+    },
+    "activities": {
+      "title": "瑞士最佳休闲活动 {year}",
+      "description": "在瑞士找到并预订适合你的活动 {year}。作为一个多样化的国家，瑞士提供无数的活动和一日游的创意。",
+      "intro": "全年您都可以找到适合各种场合的休闲活动。无论您是计划与家人一起旅行、组织单身派对、寻找户外活动还是为恶劣天气计划寻找灵感，您都会在这里找到一些东西。您可以计划您的一日游并立即在瑞士活动上预订。",
+      "titleParentLocation": "{locationTitle} {year}: 最佳活动和优惠",
+      "descriptionParentLocation": "查找并预订 {locationTitle} 中的最佳活动：只需点击几下即可预订短途旅行目的地或家庭活动的门票。",
+      "titleChildLocation": "{locationTitle} {year}: 最佳活动",
+      "descriptionChildLocation": "预订 {locationTitle} 的最佳活动。只需点击几下，即可预订游览目的地或家庭活动的门票。",
+      "titleParentType": "{typeTitle} {year}: 瑞士最佳 {typeTitle}",
+      "descriptionParentType": "预订瑞士各地最好的 {typeTitle} 。无需排队、无需预订费和免费取消选项。",
+      "titleChildType": "{typeTitle} {year}: 瑞士最佳 {typeTitle} 优惠",
+      "descriptionChildType": "预订瑞士各地 {typeTitle} 的最佳优惠。无需排队，免预订费，并提供免费取消选项。",
+      "titleParentLocationParentType": "{typeTitle} {locationTitle}: {year} 顶级优惠和价格",
+      "descriptionParentLocationParentType": "预订 {typeTitle} {locationTitle} {year} 的最佳优惠。无需预订费用，并提供免费取消选项。",
+      "titleParentLocationChildType": "{typeTitle} {locationTitle}: {year} 顶级优惠和价格",
+      "descriptionParentLocationChildType": "预订 {typeTitle} {locationTitle} {year} 的最佳优惠。无需预订费用，并提供免费取消选项。",
+      "titleChildLocationParentType": "{typeTitle} {locationTitle}: {year} 顶级优惠和价格",
+      "descriptionChildLocationParentType": "预订 {typeTitle} {locationTitle} {year} 的最佳优惠。无需预订费用，并提供免费取消选项。",
+      "titleChildLocationChildType": "{typeTitle} {locationTitle}: {year} 顶级优惠和价格",
+      "descriptionChildLocationChildType": "预订 {typeTitle} {locationTitle} {year} 的最佳优惠。无需预订费用，并提供免费取消选项。"
+    },
+    "listing": {
+      "title": "{listingTitle}",
+      "offersTitle": "{title} 门票及活动",
+      "activities": "活动",
+      "relatedListings": "热门 {value} 景点",
+      "relatedListingsClose": "{value} 景点",
+      "description": "列表 {listingTitle}",
+      "tableOfContent": "目录",
+      "destinationTitle": "{location} - 顶部 {num} 景点和活动 {year}",
+      "more": "了解更多 {val}",
+      "locations": "{val} 附近的地方",
+      "regions": "{val} 的地区",
+      "type": "瑞士热门地点 {val}",
+      "typeLocation": "{location} 的热门地点 {type}",
+      "types": "热门 {val} 活动",
+      "combo": "{type} {location} - {num} 个顶级优惠和价格 {year}",
+      "map": "地图",
+      "attributeBadWeatherTitleAttribute": "{val} 瑞士恶劣天气的最佳创意",
+      "attributeBadWeatherTitle": "{val} 最佳恶劣天气创意 {location}",
+      "attributeBadWeatherTeaser": "{location}{locationLink}无论是雨天、雾天还是雪天：在 [ ]( )，尽管天气恶劣，您仍然可以开展许多活动。因此，雨天并不一定会给活动带来麻烦。{outdoorLink}您可以找到适合任何天气的室内和[户外活动]( )。您可以决定是要积极活动还是悠闲自在。{badWeatherLink}您可以在瑞士各地的众多[坏天气创意]( ) 中找到更多灵感。",
+      "attributeBadWeatherDesc": "在 {location} 中找到你的坏天气想法，并进行一项可以在任何天气下进行的活动。",
+      "attributeFamilyTitleAttribute": "{val} 家庭瑞士之旅的最佳创意",
+      "attributeFamilyTitle": "{val} 家庭旅行的最佳创意 {location}",
+      "attributeFamilyTeaser": "{location}{locationLink}在 [ ]( ) 为您和您的孩子计划下一次家庭出游。无论您是喜欢冒险、舒适还是探险。 {location}{locationBadWeatherLink}在 [ ]( )，一年四季都有很多活动可做，即使在 [ ]( )的恶劣天气下也不例外。您还可以选择适合较小儿童的婴儿车旅行。{familyLink}因此，没有什么能阻挡您的 [家庭出游]（ ）。",
+      "attributeFamilyDesc": "在 {location} 为您的下一次家庭旅行找到合适的想法，并与您的孩子度过激动人心的一天。",
+      "attributeDogTitleAttribute": "{val} 瑞士最佳遛狗之旅",
+      "attributeDogTitle": "{val} 携犬出游的最佳地点 {location}",
+      "attributeDogTeaser": "{location}{locationLink}您是否在 [ ]( )寻找与爱犬一起外出游玩的好主意？如果您想带上您忠实的伙伴，您可以在这里找到所有可以带它们参加的活动。{outdoorLink}户外活动]( )通常特别适合让您的爱犬在新鲜空气中释放压力。此外，乘船游览或乘坐山地铁路也是不错的选择。{escapeLink}我们的内部建议是[逃生游戏]（ ），因为这些活动都在户外进行，可以让您一改往日的散步方式。",
+      "attributeDogDesc": "在 {location} 计划一次与您的狗一起旅行，并尝试一些新的东西来改变您平常的步行方式。",
+      "attributeOutdoorTitleAttribute": "{val} 瑞士最佳户外活动",
+      "attributeOutdoorTitle": "{location} 最 {val} 棒的户外活动",
+      "attributeOutdoorTeaser": "{location}{locationLink}{outdoorLink}在 [ ]( )，一年四季都有许多 [ 户外活动 ]( )。有些活动会让您肾上腺素飙升，有些活动则会让您欣赏到令人印象深刻的美景或挑战您的技能。{badWeatherLink}{familyLink}还有一些户外活动适合在[恶劣天气]( )或[家庭出游]( )时进行。{dogLink}在某些情况下，您还可以带上您的[狗]（ ）。有些户外活动您可以自己进行，而有些出于安全考虑，您应该参加有专业导游带领的旅行团。",
+      "attributeOutdoorDesc": "在 {location} 计划您的下一次户外活动，全年在户外度过一天，呼吸新鲜空气。",
+      "attributeBachelorPartyTitleAttribute": "{val} 瑞士最佳婚礼送礼会创意",
+      "attributeBachelorPartyTitle": "{val} {location}最佳母鸡派对创意",
+      "attributeBachelorPartyTeaser": "您是否正在 [{location}]({locationLink}) 寻找一个举办母鸡派对的好主意？无论您是生活家、冒险家还是探险家，您都能找到适合各种口味的活动。有了我们的点子，您就可以在 {location} 顺利完成组织 [鸡尾酒会]({attributeLink}) 的任务。期待与您的朋友们度过成功而快乐的一天。",
+      "attributeBachelorPartyDesc": "计划您在[{location}]的下一次单身派对，与您的朋友度过愉快的一天。",
+      "attributeTeamEventTitleAttribute": "{val} 瑞士团体赛的最佳创意",
+      "attributeTeamEventTitle": "{val} {location}团队活动的最佳创意",
+      "attributeTeamEventTeaser": "您有在[{location}]({locationLink})组织团队活动的任务吗？这并不总是那么容易，因为要求通常非常不同。有了我们的想法，您将会受到很好的启发，并为即将到来的[团队活动]({attributeLink})做好准备。无论您是鉴赏家、探险家、活跃人士、拼图爱好者还是冒险家：您都会找到适合各种口味的东西。因此，期待与您的同事度过成功而有趣的一天。",
+      "attributeTeamEventDesc": "计划您在 {location} 的下一次团队活动，并与您的同事度过愉快的一天。",
+      "attributeValentinesDayTitleAttribute": "{val} 瑞士情人节最佳创意",
+      "attributeValentinesDayTitle": "{val} 最好的情人节创意 {location}",
+      "attributeValentinesDayTeaser": "每年又到了：情人节。也许您已经清楚地知道下次 2 月 14 日要组织什么。但也许您仍然不确定并在 [{location}]({locationLink}) 中寻找情人节的创意。我们的活动旨在激励您并帮助您找到适合您的东西。无论是浪漫、温馨还是冒险：在这里，情侣们一定能找到让你心跳加速的【情人节】({attributeLink})灵感。",
+      "attributeValentinesDayDesc": "在 {location} 计划下一个情人节，与最爱的人度过浪漫的一天。",
+      "attributeFirstDateTitleAttribute": "{val} 在瑞士第一次约会的最佳主意",
+      "attributeFirstDateTitle": "{val} 第一次约会的最佳主意 {location}",
+      "attributeFirstDateTeaser": "您是否正在为 [{location}]({locationLink}) 的第一次约会寻找合适的想法，并且不确定如何给正在交谈的人留下深刻印象？那你就在这里了。在此页面上，您将找到使您的[第一次约会]({attributeLink})取得圆满成功所需的灵感。无论夏季还是冬季，无论是冒险还是休闲，您一定会在这里找到让约会愉快的事情。谁知道呢，也许您会遇到适合下一次会议以及之后的会议的东西。",
+      "attributeFirstDateDesc": "将你们的第一次约会安排在 {location} ，一起度过浪漫的一天。",
+      "attributeChildBirthdayTitleAttribute": "{val} 瑞士儿童生日创意",
+      "attributeChildBirthdayTitle": "{val} {location}儿童生日创意",
+      "attributeChildBirthdayTeaser": "{location}{locationLink}在 [ ]( ) 规划您的下一个儿童生日派对。生日是每个孩子一年中最重要的时刻之一。无论在什么时候，都有足够多的点子让您的孩子开心。{outdoorLink}{badWeatherLink}组织一次[户外活动]( ) 或为[恶劣天气节目]( ) 找一个点子。您的下一个儿童生日派对一定会取得成功。",
+      "attributeChildBirthdayDesc": "在 {location} 举办儿童生日派对，为您的孩子安排难忘的一天。",
+      "attributeWheelchairTitleAttribute": "{val} 瑞士的轮椅游览创意",
+      "attributeWheelchairTitle": "{val} 轮椅出行的建议 {location}",
+      "attributeWheelchairTeaser": "{location}{locationLink}计划一次坐轮椅到 [ ]( )的旅行，找到最适合您的无障碍活动。由于瑞士先进的无障碍设施以及该国为所有游客提供无障碍体验所做的努力，乘坐轮椅在瑞士旅行相对容易。{outdoorLink}这包括室内和[室外活动]( )。",
+      "attributeWheelchairDesc": "从 {location} 的轮椅无障碍目的地中获取灵感，并计划您的无障碍活动。",
+      "attributePramTitleAttribute": "{val} 推着婴儿车畅游瑞士",
+      "attributePramTitle": "{val} 推着婴儿车出行的创意 {location}",
+      "attributePramTeaser": "{location}{locationLink}在 [ ]( )中规划您的婴儿车之旅。如果您带着小孩旅行，您可以参加很多活动。许多徒步旅行路线都是专为婴儿车设计的，公共交通也为带小孩的家庭提供了舒适的环境。{familyLink}因此，没有什么可以阻挡您的[家庭出游]( )。",
+      "attributePramDesc": "推着婴儿车出行 {location} ，和家人一起计划下一次旅行。",
+      "attributesOther": "更多类别",
+      "attributesType": "{val} 活动类别",
+      "teamEvent": "将您的团体请求发送给我们",
+      "recommended": "旅行者推荐",
+      "tickets": "门票和入场费",
+      "tours": "导游服务"
+    },
+    "error": {
+      "title": "很抱歉，发生了错误。返回首页，找到适合您的休闲活动。"
+    },
+    "supplier": {
+      "title": "瑞士活动：瑞士最大的休闲活动市场",
+      "description": "瑞士活动是瑞士最大的休闲活动市场。通过我们，您可以接触更多客户并增加预订量。",
+      "hero": {
+        "title": "瑞士活动 - 瑞士休闲活动目的地",
+        "button": "成为休闲伙伴"
+      },
+      "numbers": {
+        "title": "自成立以来，瑞士活动中心如何支持我们的休闲合作伙伴",
+        "blocks": [
+          {
+            "title": "网站访问者",
+            "number": "7500000",
+            "text": "潜在客户"
+          },
+          {
+            "title": "客座机构",
+            "number": ">300000",
+            "text": "客人"
+          },
+          {
+            "title": "客户支持",
+            "number": ">10000",
+            "text": "进行的对话"
+          },
+          {
+            "title": "预订系统",
+            "number": ">20",
+            "text": "门票代替优惠券"
+          }
+        ]
+      },
+      "why": {
+        "title": "为什么将您的休闲产品放在瑞士活动上",
+        "sales": {
+          "title": "新客户",
+          "description": "获得来自国内外的新客户并提高您的利用率。"
+        },
+        "support": {
+          "title": "自动化",
+          "description": "Swiss Activity 接管您现有的销售流程并将交易传输到您的系统。"
+        },
+        "finances": {
+          "title": "没有风险",
+          "description": "没有固定成本或前期投资。您只需为推荐的客户付费。"
+        },
+        "local": {
+          "title": "新客户开发",
+          "description": "与瑞士活动经销商网络建立联系，扩大您在国内外的影响力。"
+        }
+      },
+      "who": {
+        "title": "超过500个休闲合作伙伴与Swiss Activities合作",
+        "partners": [
+          {
+            "blocks": [
+              "/assets/supplier/partner/bergbahnen/rigi.png",
+              "/assets/supplier/partner/bergbahnen/schilthorn.png",
+              "/assets/supplier/partner/bergbahnen/jungfrau.jpeg",
+              "/assets/supplier/partner/bergbahnen/engelberg.svg",
+              "/assets/supplier/partner/bergbahnen/pilatus.jpeg",
+              "/assets/supplier/partner/bergbahnen/monte-tamaro.png",
+              "/assets/supplier/partner/bergbahnen/brienz.png",
+              "/assets/supplier/partner/bergbahnen/gornergrat.png",
+              "/assets/supplier/partner/destinations/rheinfelden.png",
+              "/assets/supplier/partner/destinations/basel.svg",
+              "/assets/supplier/partner/destinations/winterthur.svg",
+              "/assets/supplier/partner/destinations/interlaken.png",
+              "/assets/supplier/partner/attractions/ballenberg.png",
+              "/assets/supplier/partner/attractions/bls.png",
+              "/assets/supplier/partner/attractions/cgn.png",
+              "/assets/supplier/partner/attractions/chillon.jpeg",
+              "/assets/supplier/partner/attractions/maestrani.png",
+              "/assets/supplier/partner/attractions/verkehrshaus.png",
+              "/assets/supplier/partner/attractions/vier.png",
+              "/assets/supplier/partner/outdoor/best-of-switzerland.jpeg",
+              "/assets/supplier/partner/outdoor/kayak.jpeg",
+              "/assets/supplier/partner/outdoor/outdoorch.jpeg",
+              "/assets/supplier/partner/outdoor/paragliding.png",
+              "/assets/supplier/partner/outdoor/wine-tours.webp",
+              "/assets/supplier/partner/outdoor/zermatters.png"
+            ]
+          }
+        ]
+      },
+      "pricing": {
+        "title": "定价模式",
+        "subtitle": "仅在成功连接客户后才付款",
+        "description": "Swiss Activity 可帮助您在本地和全球范围内确定合适的销售渠道，并在潜在客户所在的地方销售您的休闲产品。由于瑞士活动不收取安装费，因此您无需额外投资即可开辟新的销售渠道。",
+        "blocks": [
+          {
+            "pretitle": "",
+            "cost": "18% + CHF 0.30",
+            "subcost": "不含增值税。",
+            "button": "成为休闲伙伴",
+            "buttonLink": "https://k3qlq2fyp9o.typeform.com/to/CxWJub7f",
+            "subbutton": "",
+            "includes": [
+              "在Swiss Activities上发布休闲活动",
+              "无限记录休闲活动",
+              "由我们的内容团队撰写产品描述",
+              "与超过20个预订系统的连接",
+              "通过聊天和电话提供个人合作伙伴支持",
+              "处理客人在活动方面的沟通问题",
+              "处理客人的预订和取消请求",
+              "监控和控制所有的预订和取消",
+              "监控和控制结算",
+              "现金结算统一 - 通过Swiss Activities结算",
+              "确保销售过程（没有凭证，只有门票）",
+              "自动进入联盟网络",
+              "在分销商网络上发布活动"
+            ],
+            "faq": []
+          }
+        ]
+      },
+      "tech": {
+        "title": "预订和票务系统",
+        "description": "除了上线和数字化所有瑞士的休闲产品外，Swiss Activities的核心目标是简化和自动化国内外休闲产品的转售过程。销售环境日益复杂，我们帮助经销商与客户群保持联系。因此，Swiss Activities与我们的休闲合作伙伴之间的直接联系显得尤为重要。我们一直在实施新系统。如果你的预订和票务系统不存在，可以通过sales@swissactivities.com与我们联系。",
+        "partners": [
+          "/assets/supplier/technology/trekksoft.webp",
+          "/assets/supplier/technology/regiondo.webp",
+          "/assets/supplier/technology/tomas.webp",
+          "/assets/supplier/technology/waldhart.webp",
+          "/assets/supplier/technology/experiencebank.webp",
+          "/assets/supplier/technology/skidata.webp",
+          "/assets/supplier/technology/axess.webp",
+          "/assets/supplier/technology/smeetz.webp",
+          "/assets/supplier/technology/eatwith.webp",
+          "/assets/supplier/technology/fareharbor.webp",
+          "/assets/supplier/technology/bookingkit.webp",
+          "/assets/supplier/technology/ntree.webp",
+          "/assets/supplier/technology/secutix.webp",
+          "/assets/supplier/technology/tourcms.webp",
+          "/assets/supplier/technology/sbb.webp"
+        ],
+        "titleSoon": "即将推出",
+        "partnersSoon": [
+          "/assets/supplier/technology/feratel.webp"
+        ]
+      },
+      "faq": [
+        {
+          "title": "休闲合作伙伴的一般信息",
+          "blocks": [
+            {
+              "title": "谁可以成为瑞士活动休闲合作伙伴？",
+              "text": "任何想要在瑞士销售休闲活动的人都可以成为瑞士活动的合作伙伴。您的报价可以非常多样化，您的想象力几乎没有任何限制。我们提供大约 100 个类别的活动、门票、探险、旅游、租赁等。其中包括独角兽蛋糕烘焙课程以及双人滑翔伞飞行或博物馆门票。重要的是，这些优惠要么在瑞士进行，要么从瑞士出发一日游内即可实现。"
+            },
+            {
+              "title": "我可以连接到哪些预订系统？",
+              "list": [
+                "崔克软件",
+                "雷吉多",
+                "森林硬",
+                "体验银行",
+                "滑雪数据",
+                "轴",
+                "托马斯",
+                "斯梅茨",
+                "伊特威斯",
+                "费雷港",
+                "预订套件",
+                "N树",
+                "塞库蒂克斯",
+                "旅游CMS",
+                "帕里西斯",
+                "即将推出：SBB 和 Feratel"
+              ]
+            },
+            {
+              "title": "我不使用预订系统。我仍然可以通过瑞士活动出售我的活动吗？",
+              "text": "即使您不使用预订系统，您也可以向我们发布您的活动。在这种情况下，我们将根据您的信息手动创建日历。如果您想实施预订系统，请联系我们。我们很乐意就此主题向您提供建议。我们需要您提供的信息如下：",
+              "list": [
+                "期间（日期）",
+                "开始时间",
+                "时间长度",
+                "截止时间（顾客最晚需要提前多久预订？）",
+                "每个类别的价格（成人、儿童、租金等）",
+                "每个插槽的最大可用位置"
+              ]
+            },
+            {
+              "title": "预订时会传输哪些信息？",
+              "text": "当客户通过 Swiss Activity 进行预订时，他们会收到一封包含所有重要信息的确认电子邮件。除其他外，这包括您的联系方式，以便在您有任何问题时他可以直接与您联系。",
+              "list": [
+                "活动名称",
+                "日期",
+                "时间",
+                "会面点",
+                "已预订门票数量",
+                "您的联系方式（电子邮件和电话）"
+              ]
+            },
+            {
+              "title": "我在瑞士活动上发布的活动价格与我的网站上公布的价格相同吗？",
+              "text": "是的，在我们这里，客户支付的费用与直接向您预订的费用相同。这对您和我们一样重要。如果不同地方的价格不同，顾客就会注意到这一点，从而导致投诉和不理解。因此，我们都面临着失去回头客的风险。"
+            },
+            {
+              "title": "瑞士活动的取消期限是多长？",
+              "text": "对于瑞士活动，客户可以在活动前 24 小时免费取消。如果您想激活不可取消的活动，我们可以这样做。然而，我们发现我们正在安排更多可以取消的活动预订。如果您需要取消预订，也可以这样做。请立即通知客户并让我们知道，以便我们可以退款。 "
+            },
+            {
+              "title": "后续取消如何处理？",
+              "text": "如果我们通过取消表格收到后续取消请求，在未事先咨询您的情况下，我们绝不会退款。为避免欺诈，我们始终会征得您的同意以确认客户的描述。只有得到您的同意，我们才会随后退款。"
+            }
+          ]
+        },
+        {
+          "title": "休闲产品的激活流程",
+          "blocks": [
+            {
+              "title": "我如何在瑞士活动上提交报价？",
+              "text": "如果您想成为瑞士活动的休闲合作伙伴并发布您的优惠，您必须完成以下步骤：",
+              "list": [
+                "首先注册成为休闲伙伴。",
+                "为您想要发布的每项活动填写一张表格。我们确认您的注册后，您将收到该链接。",
+                "我们通常会在两周内撰写并记录您的活动。",
+                "活动一开始，我们将通过电子邮件通知您。"
+              ]
+            },
+            {
+              "title": "激活我的活动需要哪些信息？",
+              "text": "在您作为休闲合作伙伴向我们注册后，我们将向您发送一份表格，您可以使用该表格来参加您的活动。为了激活此功能，我们需要您提供以下信息：",
+              "list": [
+                "有关预订系统的信息（如果有）",
+                "活动标题",
+                "活动链接",
+                "每个活动至少 4 张照片",
+                "有关日期、时间和持续时间的信息（如果您不使用预订系统）",
+                "有关年龄、语言、体重等的任何信息。",
+                "活动适合范围：狗、婴儿车、轮椅、家庭等。",
+                "确切的集合点"
+              ]
+            },
+            {
+              "title": "我可以随时删除我的条目吗？",
+              "text": "是的，您可以随时退出合同。没有最短合同期限，也没有与终止相关的费用。"
+            },
+            {
+              "title": "如果我想更改活动中的某些内容，该怎么办？",
+              "text": "如果您要求更改内容或想要调整价格（如果您不使用预订系统），您可以通过电子邮件告知我们。"
+            },
+            {
+              "title": "我如何联系客户？",
+              "text": "每次预订后，您都会收到我们发送的包含客户详细信息的确认电子邮件。您可以在那里找到他的姓名、电子邮件地址和联系电话号码。"
+            },
+            {
+              "title": "我如何收到我的钱？",
+              "text": "所有未支付金额将在服务日期后自动转账，转账将在下月初进行。所有在过去一个月内的预订将集中结算，并在一笔转账中汇总。"
+            }
+          ]
+        }
+      ]
+    },
+    "supplierRegistration": {
+      "title": "瑞士活动：瑞士最大的休闲活动市场",
+      "description": "瑞士活动是瑞士最大的休闲活动市场。通过我们，您可以接触更多客户并增加预订量。",
+      "hero": {
+        "title": "成为瑞士活动的一部分",
+        "description": "免费注册瑞士活动并扩大您在瑞士和国际宾客中的影响力。您的优势一目了然",
+        "list": [
+          "在 Google 上找到您的公司并提供您的优惠。并且有 4 种语言版本！",
+          "开辟新的销售渠道",
+          "受益于我们的免费客户支持",
+          "连接您的预订系统并直接在那里管理您的可用性。",
+          "新的预订 - 您的客户。我们不隐藏我们的合作伙伴，并希望为客户提供最佳的预订体验。",
+          "没有固定成本或隐藏费用。",
+          "您的客户可以使用所有本地支付方式（例如 Twint）、通过帐户购买以及使用主要信用卡进行支付。"
+        ]
+      }
+    },
+    "affiliate": {
+      "title": "附属机构",
+      "description": "作为瑞士活动的合作伙伴，首次预订即可赚取 1% 至 5% 的佣金。没有固定成本。",
+      "hero": {
+        "title": "立即成为瑞士活动的附属合作伙伴",
+        "description": "注册瑞士活动联属计划并受益于有吸引力的集成工具、1% 至 5% 的佣金和 45 天的 cookie 有效期。",
+        "steps": [
+          "登录",
+          "实施我们的活动",
+          "产生预订并赚钱"
+        ],
+        "button": "现在注册"
+      },
+      "form": {
+        "tos": "我同意<a target='_blank' href='/agb/affiliates/'>一般条款和条件</a>"
+      },
+      "advantagesTitle": "作为瑞士活动联盟合作伙伴，您有哪些优势？",
+      "advantages": [
+        {
+          "title": "1400+ Freizeitaktivitäten",
+          "text": "Als Affiliate-Partner von Swiss Activities hast du mit wenigen Klicks Zugriff auf über 1400 Freizeitaktivitäten in der ganzen Schweiz."
+        },
+        {
+          "title": "诱人的条件",
+          "text": "对于每次预订，您将收到 1% 至 5% 的佣金。 cookie 的有效期为 45 天。"
+        },
+        {
+          "title": "激励你的读者",
+          "text": "用鼓舞人心的内容让您的博客或网站充满活力，并帮助您的社区在规划休闲活动时节省时间。"
+        },
+        {
+          "title": "注册简单",
+          "text": "受益于简单而快速的注册。"
+        },
+        {
+          "title": "直接售票",
+          "text": "您有机会直接在您的网站上出售门票，而无需将您的读者重定向到我们。"
+        },
+        {
+          "title": "自定义 HTML",
+          "text": "借助我们多功能且设计精美的自定义 HTML 工具，您可以个性化您的销售选项。"
+        }
+      ],
+      "faqTitle": "最重要的问题已得到解答",
+      "faq": [
+        {
+          "title": "如何注册瑞士活动联盟计划？",
+          "text": "使用此页面上的表格并提供所有必需信息进行注册。我们将在一个工作日内检查您的注册，如果被接受，我们将通过电子邮件向您发送您的登录详细信息。"
+        },
+        {
+          "title": "如何登录我的联属合作伙伴仪表板？",
+          "text": "当您注册时，您定义您的个人密码。一旦我们检查了您的详细信息，您就会收到通知，您可以通过 <a href='https://swissactivities.tapfiliate.com/login' target='_blank'>此链接</a> 登录到您的联属会员仪表板。"
+        },
+        {
+          "title": "我在哪里可以找到有关联属网络营销计划的更多信息？",
+          "text": "在我们的帮助台中，您将找到 <a href='https://intercom.help/swiss-activities/de/collections/3916117-affiliate-moglichkeiten-zur-einbindung' target='_blank'>第一步</a> 以及有关 <a href='https://intercom.help/swiss-activities/de/collections/3916117-affiliate-moglichkeiten-zur-einbindung' target='_blank'>整合我们的活动</a> 所描述的最重要的问题。注册后，您还将收到一系列包含有用提示的电子邮件。"
+        },
+        {
+          "title": "谁可以成为瑞士活动的附属合作伙伴？",
+          "text": "如果您运营的博客或网站与瑞士旅游、瑞士休闲活动或一般旅行相关，您可以注册我们的联属计划。如果您有 Instagram、Pinterest 或 Facebook 帐户，您可以通过该帐户插入会员链接，也可以向我们注册。"
+        },
+        {
+          "title": "我可以取消订阅联属计划吗？",
+          "text": "当然。您不受任何最低期限的约束。如果您想删除您的帐户，请通过电子邮件或聊天告知我们，我们将采取必要的步骤。"
+        },
+        {
+          "title": "每次预订我可以获得多少佣金？",
+          "text": "如果您向我们推荐客户来开展活动，您将收到 1% 到 5% 的佣金。如果客户取消预订，我们将无法向您支付任何佣金。"
+        }
+      ]
+    },
+    "apps": {
+      "title": "Swiss Activities App",
+      "description": "通过 Swiss Activities App 在瑞士尽情探索，比较并直接在你的智能手机上预订休闲活动。",
+      "hero": {
+        "title": "将你的瑞士冒险装进口袋",
+        "description": "通过 Swiss Activities 应用，你可以直接访问全瑞士超过 {amount} 项活动。发现新体验，瞬间预订，随时查看所有你的票和预订。",
+        "features": [
+          "随时随地准备好票务",
+          "轻松管理你的预订",
+          "发现每种口味的新体验",
+          "票务也可离线使用"
+        ]
+      }
+    },
+    "travelGuide": {
+      "title": "您的瑞士旅行计划",
+      "description": "瑞士是一个非常多元化的国家，为您的旅行提供了令人难以置信的丰富内容。所以不要让这个小面积欺骗了你。尽管瑞士比瑞典、加利福尼亚或摩洛哥小十倍左右，但您会找到适合各种口味的东西。在地中海提契诺州，您处于一个与繁忙的巴塞尔完全不同的世界。阿尔卑斯山山区的气候与温和的日内瓦湖地区完全不同。尽管事实上这些地方相距只有三到四个小时。在我们的博客中，我们将帮助您计划您的旅行。我们为您提供有用的旅行提示和有用信息，以便您做好充分准备。无论您是第一次去瑞士旅行，还是已经熟悉这里的路，都没关系。我们的文章既适合初次访问者，也适合真正的瑞士鉴赏家。",
+      "intro": "瑞士是一个非常多元化的国家，为您的旅行提供了令人难以置信的丰富内容。所以不要让这个小面积欺骗了你。尽管瑞士比瑞典、加利福尼亚或摩洛哥小十倍左右，但您会找到适合各种口味的东西。在地中海提契诺州，您处于一个与繁忙的巴塞尔完全不同的世界。阿尔卑斯山山区的气候与温和的日内瓦湖地区完全不同。尽管事实上这些地方相距只有三到四个小时。在我们的博客中，我们将帮助您计划您的旅行。我们为您提供有用的旅行提示和有用信息，以便您做好充分准备。无论您是第一次去瑞士旅行，还是已经熟悉这里的路，都没关系。我们的文章既适合初次访问者，也适合真正的瑞士鉴赏家。"
+    },
+    "travelRoutes": {
+      "title": "旅行路线 瑞士",
+      "description": "瑞士是一个非常多元化的国家，为您的旅行提供了令人难以置信的丰富内容。所以不要让这个小面积欺骗了你。尽管瑞士比瑞典、加利福尼亚或摩洛哥小十倍左右，但您会找到适合各种口味的东西。在地中海提契诺州，您处于一个与繁忙的巴塞尔完全不同的世界。阿尔卑斯山山区的气候与温和的日内瓦湖地区完全不同。尽管事实上这些地方相距只有三到四个小时。在我们的博客中，我们将帮助您计划您的旅行。我们为您提供有用的旅行提示和有用信息，以便您做好充分准备。无论您是第一次去瑞士旅行，还是已经熟悉这里的路，都没关系。我们的文章既适合初次访问者，也适合真正的瑞士鉴赏家。"
+    },
+    "widget": {
+      "title": "将瑞士活动整合到您的网站中",
+      "description": "将 Swiss Activities 嵌入到你的网站上，直接在你的网页上销售活动。",
+      "hero": {
+        "title": "将瑞士活动的优惠整合到您的网站中",
+        "description": "瑞士活动小部件是将活动集成到您的网站的最简单方法。从多种小部件类型中进行选择，并在几分钟内将其嵌入。",
+        "button": "立即集成"
+      },
+      "cta": {
+        "title": "成为会员",
+        "button": "到表格"
+      }
+    },
+    "newsletterConfirm": {
+      "title": "感谢您的注册。我们刚刚给您发送了一条确认注册的信息。"
+    },
+    "newsletterSuccess": {
+      "title": "Sie haben sich erfolgreich für unseren Newsletter angemeldet."
+    },
+    "cookiePolicy": {
+      "title": "Cookie政策"
+    },
+    "vouchers": {
+      "title": "瑞士的体验礼品创意 - Swiss Activities 提供最好的优惠券",
+      "description": "用Swiss Activities的体验券赠送难忘的时光！发现瑞士最大的休闲活动选择——灵活、简单且可以立即在线预订。作为每个场合的完美礼物创意。",
+      "hero": {
+        "title": "现在赠送瑞士的体验券，带来快乐！",
+        "text": "现在在 Swiss Activities 上发现最佳的礼物创意和体验券。无论是生日、圣诞礼物，还是仅仅为了表示感谢——一张针对瑞士体验的代金券适合每个人，是一份保证让人难以忘怀的礼物。",
+        "button": "购买礼券"
+      },
+      "gift": {
+        "title": "赠送瑞士最佳体验 - 从冒险到放松",
+        "text": "你是否在瑞士寻找一个独特的礼物创意，适合朋友或家人？来自Swiss Activities的体验券让你可以接触到瑞士提供的最大休闲活动选择。无论是导游带领的旅行、自然冒险、在温泉中放松时光，还是在博物馆里的文化亮点——Swiss Activities让你能够赠送特别的时刻。"
+      },
+      "why": {
+        "title": "为什么来自 Swiss Activities 的体验券是完美的礼物创意",
+        "items": [
+          {
+            "title": "瑞士最大选择",
+            "text": "超过 <b>1,600</b> 种休闲活动，涵盖所有地区，从户外冒险到放松时刻。"
+          },
+          {
+            "title": "超过100,000名满意的客户",
+            "text": "Swiss Activities 是提供特殊礼物和短途旅行的可靠伙伴。"
+          },
+          {
+            "title": "免费取消选项",
+            "text": "安全灵活的预订，能够根据受赠人的需求进行调整。"
+          },
+          {
+            "title": "5-星级客户支持",
+            "text": "瑞士质量和支持 - 让您的体验顺利开始。"
+          }
+        ]
+      },
+      "end": {
+        "title": "在瑞士赠送体验礼券，带来快乐！",
+        "text": "现在在 Swiss Activities 上发现最佳的礼物创意和体验券。无论是生日、圣诞礼物，还是仅仅为了表示感谢——一张针对瑞士体验的代金券适合每个人，是一份保证让人难以忘怀的礼物。",
+        "button": "选择礼券"
+      },
+      "banner": {
+        "tagline": "新：完美的礼物创意！",
+        "title": "获取一个体验礼券",
+        "button": "点击这里"
+      }
+    }
+  },
+  "filter": {
+    "nearby": "查看附近的活动",
+    "results": "显示结果",
+    "filter": "筛选",
+    "search": "搜索",
+    "location": "地点",
+    "types": "艺术",
+    "categories": "分类",
+    "activity": "活动",
+    "activities": "活动",
+    "today": "今天",
+    "tomorrow": "早晨",
+    "price": "价格",
+    "noResults": "没有结果",
+    "noExactResults": {
+      "title": "没有确切的结果",
+      "description": "尝试更改或删除一些筛选器，或调整你的搜索范围。",
+      "showNearest": "显示最近的结果",
+      "resetDate": "重置时间范围"
+    },
+    "lang": "语言",
+    "sort": {
+      "relevance": "关联",
+      "distance": "与你的距离",
+      "popularityDesc": "人气下降",
+      "ratingDesc": "评级递减",
+      "ratingAsc": "升序评分",
+      "priceDesc": "价格下降",
+      "priceAsc": "价格上涨",
+      "dateDesc": "最新排序",
+      "dateAsc": "最旧的先"
+    },
+    "navigationBreadcrumbs": {
+      "root": "瑞士"
+    },
+    "all": "全部",
+    "map": "地图",
+    "card": {
+      "from": "从",
+      "person": "每人"
+    },
+    "viewMore": "查看更多",
+    "ratingBetterThan": "比 {val} 星星还好",
+    "ratingEqual": "{val} 星星",
+    "ratingNone": "NEU / 没有评分",
+    "moreFilters": "{val} 显示更多",
+    "lessFilters": "显示较少",
+    "usedFilters": "应用过滤器",
+    "resetFilters": "重置为默认",
+    "discountTypes": "折扣",
+    "calendar": "日历",
+    "locationError": "无法加载位置",
+    "textOnly": "仅文本评价"
+  },
+  "activity": {
+    "you": "你",
+    "nearby": "{distance}公里 距 {location}",
+    "nearbyAlt": "距离{distance}公里",
+    "recommendation": "推荐",
+    "reviews": "评论",
+    "reviewOriginalIn": "原文在 {language}",
+    "booked": "{val} 预约次数",
+    "providedBy": "提供者",
+    "save": "节省",
+    "selectDate": "选择日期",
+    "similarActivities": "进一步的活动",
+    "question": "我们能帮你什么吗？",
+    "rating": "评估",
+    "highDemand": "高需求",
+    "widget": {
+      "free": "可用的",
+      "error500": "发生错误，请在 1 分钟后再试。",
+      "errorDate": "遗憾的是， {val}。",
+      "choose": "选择",
+      "titleTime": "选择报价",
+      "titleTicketOption": "选择票选项",
+      "titleParticipants": "选择参与者",
+      "titleTickets": "选择门票",
+      "confirmOffer": "确认票选项",
+      "confirmTickets": "确认参与者",
+      "confirmDate": "确认日期",
+      "confirmDateTime": "确认日期和时间",
+      "cheapest": "最低价格",
+      "time": "时间",
+      "navTicket": "门票",
+      "check": "检查可用性",
+      "notBookable": "不幸的是，此优惠目前无法预订。",
+      "paymentMethods": "支付方式",
+      "totalPrice": "总价",
+      "taxes": "附加费用",
+      "offerTimeSelect": "选择时间",
+      "basket": "购物车",
+      "basketAdd": "添加到购物车",
+      "selectedOffer": "提供",
+      "adjust": "调整预订",
+      "swissHalfFareCard": "居住在瑞士境外的人可以<a href=\"/bahnpaesse/swiss-half-fare-card/\" target=\"_blank\" className=\"inline-block\">在这里获得瑞士半价卡</a>（&nbsp;），使用该卡乘坐公共交通工具可享受折扣。"
+    },
+    "tabs": {
+      "highlights": "强调",
+      "includes": "服务",
+      "importantInformation": "重要信息",
+      "meetingPoints": "会面点"
+    },
+    "newsletter": {
+      "title": "不要错过更多活动",
+      "description": "订阅时事通讯并接收来自瑞士的旅行提示、空闲时间创意和合适的旅行指南。",
+      "signup": "登记",
+      "inputPlaceholder": "你的邮件"
+    },
+    "notRefundable": {
+      "title": "不可取消",
+      "description": "遗憾的是，根据我们的合作伙伴政策，我们无法为您提供退款、更改或取消该特定产品的预订。"
+    }
+  },
+  "UI": {
+    "date": "日期"
+  },
+  "home": {
+    "title": "你的体验从这里开始"
+  },
+  "discover": {
+    "title": "探索活动"
+  },
+  "booking": {
+    "cancelable": "免费取消直至",
+    "privacyMessage": "继续付款即表示你接受<strong>{text}</strong>及Swiss Activities AG所包含的取消条款。",
+    "privacyPolicy": "一般条款和条件",
+    "personalTitle": "预订详情",
+    "personalSubtitle": "要完成您的预订，请填写以下信息。",
+    "mainGuest": "联络人",
+    "fullName": "名",
+    "lastName": "姓",
+    "email": "电子邮件",
+    "phoneNumber": "电话号码",
+    "cardDetails": "支付方式",
+    "paymentSecure": "安全支付 - 我们使用 SSL 加密来保护您的数据",
+    "creditPayments": "信用卡",
+    "total": "全部的",
+    "fullDay": "一整天",
+    "booknow": "现在预订",
+    "addMoreInformation": "添加信息",
+    "addPaymentMethod": "选择付款方式",
+    "youBook": "购物车",
+    "rebate": "优惠码",
+    "rebateEmailRequired": "请首先输入你的电子邮件地址并确认，以便兑换折扣码。",
+    "important": "我已知晓活动的“重要信息”下的要求",
+    "importantShow": "查看信息",
+    "importantHide": "隐藏信息"
+  },
+  "confirm": {
+    "title": "感谢您通过瑞士活动预订。",
+    "confirmed": "您的预订已确认。",
+    "pending": "您的预订正在进行中。",
+    "cancelled": "您的预订已被取消。",
+    "failed": "抱歉，出了一些问题。",
+    "failedPayment": "无法处理付款。请尝试其他付款方式。",
+    "failedReservation": "不幸的是，无法确认预订。您的付款将被退还。请再试一次。",
+    "wait": "我们正在等待我们的支付提供商确认付款是否已确认。",
+    "waitEmail": "付款确认后您将收到一封电子邮件。",
+    "caption": "非常感谢您通过瑞士活动进行预订。我们已向您发送了一封确认电子邮件。",
+    "bookingNumber": "订单号",
+    "point": "会面点",
+    "pointAddress": "地址集合点",
+    "number": "手机号码",
+    "end": "结尾",
+    "email": "您的预订确认已发送至 {email} 。如果您在接下来的几分钟内没有收到它，请通过聊天联系我们的支持人员。",
+    "transport": {
+      "title": "需要乘坐公共交通前往吗？",
+      "from": "你的地点",
+      "description": "乘坐公共交通工具轻松出行，将你的移动票直接添加到预订中。",
+      "button": "添加票"
+    }
+  },
+  "footer": {
+    "company": {
+      "title": "公司",
+      "about-us": "关于我们",
+      "jobs": "工作",
+      "legal": "合法的"
+    },
+    "resources": {
+      "title": "资源"
+    },
+    "collaboration": {
+      "title": "合作",
+      "becomeapartner": "成为一个合伙人（参与者",
+      "affiliate": "联盟计划",
+      "widget": "小工具"
+    },
+    "affiliate": {
+      "title": "会员代码",
+      "button": "复制代码",
+      "buttonCopied": "代码已复制！"
+    },
+    "contact": {
+      "title": "客户服务",
+      "faq": "常见问题 & 解答 (FAQ)",
+      "cookie": "Cookie 同意"
+    },
+    "mobileApp": "获取我们的应用程序"
+  },
+  "tickets": {
+    "discounts": {
+      "noDiscount": "没有折扣"
+    },
+    "showDiscounts": "显示客户和折扣卡",
+    "travelClass": "旅行等级"
+  },
+  "supplier": {
+    "activities": "活动"
+  },
+  "contactPopup": {
+    "modalTitle": "今天我们能为您提供什么帮助？"
+  },
+  "contactForm": {
+    "fullname": "姓",
+    "email": "电子邮件",
+    "subject": "主题",
+    "messagePlaceholder": "查询、预订等...",
+    "submit": "发送",
+    "formError": "有什么东西没起作用。再试一次。"
+  },
+  "contactThankYou": {
+    "title": "感谢您与我们联系！"
+  },
+  "internalLinkBlock": {
+    "destinations": "热门目的地",
+    "locations": "顶级度假胜地",
+    "topActivities": "热门活动",
+    "topAttractions": "热门景点"
+  },
+  "offerCard": {
+    "bookNow": "书"
+  },
+  "breadcrumbsBasket": {
+    "stepOne": "你的选择",
+    "stepOneDescription": "购物车",
+    "stepTwo": "你的资料",
+    "stepTwoDescription": "查看",
+    "stepThree": "最后一步",
+    "stepThreeDescription": "支付"
+  },
+  "usps": {
+    "or": "或者",
+    "allDay": "一整天",
+    "bookable": {
+      "title": "可预订",
+      "description": "对于 {val}"
+    },
+    "online": {
+      "title": "立即预订确认"
+    },
+    "payment": {
+      "title": "通过帐户预订或使用 Twint 付款"
+    },
+    "duration": {
+      "title": "时间长度",
+      "durationMinutes": "{val} 分钟",
+      "duration": "{val} 小时",
+      "durations": "{val} 小时",
+      "durationDay": "{val} 日",
+      "durationDays": "{val} 天"
+    },
+    "mobileTicket": {
+      "title": "接受手机购票",
+      "description": "使用您的电话或打印您的凭证"
+    },
+    "confirmation": {
+      "title": "立即预订确认",
+      "description": "无额外费用"
+    },
+    "queue": {
+      "title": "结账时无需排队"
+    },
+    "cancel": {
+      "title": "免费取消",
+      "description": "如果在抵达前 {val}小时内取消预订，可全额退款",
+      "descriptionDays": "如果在抵达前 {val} 天取消预订，可全额退款",
+      "subtitle": "在出发时间前最多 {val} 小时",
+      "subtitleDays": "在出发时间前最多 {val} 天"
+    },
+    "meetingPoint": {
+      "title": "会面点"
+    },
+    "discount": {
+      "title": "折扣"
+    },
+    "request": {
+      "title": "按要求预订",
+      "description": "此预订必须由提供商重新确认",
+      "extra": "此产品基于供应商的可用性。预订必须首先由供应商确认。供应商将在预订后与你联系。如果活动无法进行，你将获得全额退款。"
+    },
+    "validity": {
+      "title": "有效性"
+    },
+    "openingHours": {
+      "title": "营业时间"
+    }
+  },
+  "widgetConfigurator": {
+    "title": "配置小部件",
+    "type": "类型",
+    "lang": "语言",
+    "other": "选择另一项活动",
+    "topBar": "控制栏",
+    "hideAll": "隐藏一切",
+    "hideSearch": "隐藏搜索",
+    "hideSize": "隐藏尺寸切换",
+    "hideFilter": "隐藏过滤器按钮",
+    "hideMap": "隐藏地图按钮",
+    "hideQuickFilter": "隐藏快速过滤器",
+    "hideSort": "隐藏排序",
+    "buttonText": "按钮文字",
+    "buttonBackground": "按钮背景",
+    "buttonColor": "按钮文字颜色",
+    "search": "预填搜索"
+  },
+  "types": {
+    "activity": "活动",
+    "overview": "概述",
+    "location": "地点",
+    "locationType": "地点 + 类型",
+    "type": "类型",
+    "attribute": "类别",
+    "locationAttribute": "地点 + 类别",
+    "poi": "景点"
+  },
+  "reviewForm": {
+    "title": "评价您的体验",
+    "button": "现在就评价吧",
+    "rating": "评估",
+    "comment": "评论",
+    "thanks": "感谢您的评价！",
+    "next": "评价下次预订",
+    "finish": "窗口将在 3 秒后关闭"
+  },
+  "user": {
+    "welcome": "欢迎来到您的仪表板 {name}！",
+    "menu": {
+      "activities": "活动",
+      "bookings": "预订",
+      "suppliers": "供应商",
+      "reviews": "评论",
+      "settings": "设置",
+      "chat": "聊天",
+      "logout": "登出",
+      "login": "登录"
+    }
+  },
+  "SettingsForm": {
+    "title": "完成您的个人资料",
+    "titleUpdate": "更新您的个人资料",
+    "submit": "提交",
+    "phoneNumber": "请再次检查你的电话号码。",
+    "email": "电子邮件无效",
+    "iban": "IBAN 无效",
+    "reseller": {
+      "title": "经销商",
+      "merchantName": "经销商名称",
+      "merchantAddress": "经销商地址",
+      "bankAccountHolder": "帐户所有者",
+      "bankAccountIban": "账户的IBAN",
+      "bankAccountHolderAddress": "账户持有人地址",
+      "contact": {
+        "title": "联系人",
+        "name": "姓",
+        "businessRole": "业务角色",
+        "email": "电子邮件",
+        "phone": "电话"
+      }
+    },
+    "payment": {
+      "title": "已保存的付款方式",
+      "removeTitle": "移除付款方式"
+    }
+  },
+  "Repeater": {
+    "add": "添加",
+    "remove": "消除"
+  },
+  "Table": {
+    "booking": {
+      "refresh": "更新"
+    },
+    "clearFilters": "重置过滤器",
+    "noResults": "什么都没找到。",
+    "view": {
+      "title": "观点",
+      "adjust": "自定义列"
+    },
+    "header": {
+      "bookingId": "订单号",
+      "date": "日期",
+      "bookingDate": "预定日期",
+      "serviceDate": "活动日期",
+      "description": "描述",
+      "location": "地点",
+      "name": "姓",
+      "email": "电子邮件",
+      "type": "类型",
+      "price": "价格从",
+      "sold": "卖",
+      "rating": "评估",
+      "supplier": "提供者",
+      "bookingStatus": "预订状态",
+      "paymentStatus": "支付状态",
+      "total": "价格",
+      "actions": "行动",
+      "duration": "时间长度",
+      "validity": "有效性",
+      "bookable": "可预订",
+      "createdAt": "创建于",
+      "commission": "委员会",
+      "status": "地位",
+      "reservationSystem": "预约系统",
+      "bapiId": "BAPI ID",
+      "capiId": "CAPI ID",
+      "notes": "说明",
+      "distributor": "经销商",
+      "website": "网站",
+      "validities": "有效性"
+    },
+    "actions": {
+      "aria": "开放行动",
+      "details": "查看详情",
+      "book": "现在预订"
+    },
+    "sort": {
+      "ascending": "上升",
+      "descending": "降序",
+      "hide": "隐藏",
+      "bookable": "仅显示可预订的活动"
+    },
+    "pagination": {
+      "page": "页",
+      "of": "从",
+      "entriesPerPage": "每页条目数",
+      "goToFirstPage": "转到第一页",
+      "goToLastPage": "转到最后一页",
+      "goToNextPage": "转到下一页",
+      "goToPreviousPage": "转到上一页"
+    },
+    "search": {
+      "activities": "搜索活动",
+      "bookings": "搜索预订",
+      "offers": "搜索优惠",
+      "suppliers": "搜索供应商",
+      "bookingId": "按预订号搜索",
+      "email": "搜索电子邮件",
+      "familyName": "按姓氏搜索"
+    },
+    "cell": {
+      "bookingStatusActive": "确认的",
+      "bookingStatusPending": "待办的",
+      "bookingStatusCancelled": "取消",
+      "paymentStatusActive": "有薪酬的",
+      "paymentStatusPending": "待办的",
+      "paymentStatusRefunded": "已退款"
+    }
+  },
+  "Drawer": {
+    "close": "关闭"
+  },
+  "PaymentMethod": {
+    "card": {
+      "new": "新卡",
+      "store": "请为将来的快速结账保存我的信用卡信息。",
+      "endsIn": "结束于 {val}"
+    }
+  },
+  "Activity": {
+    "new": "新活动",
+    "nav": {
+      "general": "一般来说"
+    }
+  },
+  "Offer": {
+    "new": "新优惠"
+  },
+  "Supplier": {
+    "new": "新供应商"
+  },
+  "UspSlider": {
+    "title": "为什么选择在 Swiss Activities 预订？",
+    "items": [
+      "瑞士最大选择",
+      "超过100,000名满意的客户",
+      "免费取消选项",
+      "5 星 瑞士客户支持",
+      "在90秒内预订移动票"
+    ]
+  },
+  "AppBanner": {
+    "title": "现在下载应用程序",
+    "description": "轻松快捷地发现 Swiss Activities"
+  },
+  "Transport": {
+    "bookTrip": "预订连接",
+    "button": {
+      "confirmTrip": "确认连接",
+      "confirmTravelers": "确认选择"
+    },
+    "checkDetails": "检查连接详情",
+    "class": {
+      "first": "一等车厢",
+      "second": "二等车厢"
+    },
+    "direct": "直接",
+    "duration": {
+      "minutes": "分钟"
+    },
+    "earlierTrips": "之前的连接",
+    "errorLoadingTrips": "无法加载连接。",
+    "laterTrips": "稍后的连接",
+    "legend": "图例",
+    "loadingTrips": "连接正在加载...",
+    "oneWay": "单程",
+    "roundTrip": "往返",
+    "searchTrips": "搜索连接",
+    "selectOriginDestination": "选择出发地和目的地以查找连接。",
+    "selectProduct": "选择票种",
+    "selectTravelers": "选择旅行者",
+    "switch": "换乘",
+    "ticket": "票",
+    "tickets": "票",
+    "transfer": "换乘",
+    "tripResults": "连接",
+    "upgradeTo1stClass": "额外的舒适",
+    "upgradeTo1stClassDescription": "一等舱旅行",
+    "cityTicketDescription": "城市交通日票",
+    "via": "通过",
+    "travelDate": "选择出发日期",
+    "confirmTravelDate": "确认出发日期",
+    "departure": "出发",
+    "arrival": "到达",
+    "locationDisabled": "位置共享已禁用",
+    "locationError": "无法确定位置",
+    "noProductsAvailable": "没有可用的票务",
+    "disclaimer": "所有信息均不承担责任。",
+    "validity": "有效性",
+    "validityOnSelectedRoute": "仅适用于所选路线",
+    "validityForConnection": "仅适用于所选的连接",
+    "validityForConnectionWith2ndClass": "仅适用于所选的连接，并且需要有效的二等车票",
+    "validityForRouteWith2ndClass": "仅适用于所选的路线，并且需要有效的二等车票",
+    "validityGARoutes": "适用于所有GA区域线路",
+    "validityDayClassUpgrade": "仅适用于持有半价票、GA卡或瑞士通行证（灵活票）的二等舱。",
+    "includedIn": "包含在",
+    "validityDateRange": "{fromDate} 到 {toDate}, {toTime}",
+    "validityConnection": "{date} 从 {fromTime} 开始，到 {toTime}",
+    "classUpgradeOnly": "仅限班级升迁",
+    "loadingDestination": "正在加载",
+    "distanceToMeetingPoint": "集合地点",
+    "walking": "步行",
+    "arrivalInfo": "预计到达时间：{walkingTime}步行 + 15分钟缓冲时间到集合地点",
+    "timeBeforeEvent": "在活动前{minutes}分钟 · 从车站步行{walkingMinutes}分钟",
+    "tooLateForActivity": "以下连接无法及时到达集合地点"
+  }
+}

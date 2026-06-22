@@ -1,0 +1,1799 @@
+{
+  "general": {
+    "accountAdvantages": "İndirimlerden ve diğer avantajlardan yararlanmak için bir hesap oluştur veya oturum aç.",
+    "activityBook": "Etkinlik rezervasyonu yap",
+    "addTicket": "Bilet ekle",
+    "adult": "{val} Yetişkin",
+    "adults": "{val} Yetişkinler",
+    "ageChoose": "Yaş seç",
+    "ageFrom": "{val} yaşından itibaren",
+    "ageOld": "{val} yaşında",
+    "ageUnder": "{val} yaşından küçük",
+    "all": "Hepsi",
+    "allReviews": "Tüm değerlendirmeler",
+    "backToBookings": "Rezervasyonlara geri dön",
+    "bookAsGuest": "Siparişinizi misafir olarak tamamlıyorsunuz.",
+    "cancel": "İptal et",
+    "cancelled": "İptal edildi",
+    "cartAmount": "Sepet tutarı",
+    "child": "{val} çocuk",
+    "children": "{val} çocuklar",
+    "chooseSelection": "Seçimi onayla",
+    "confirm": "Onayla",
+    "confirmCancel": "İptali onayla",
+    "contact": "İletişim",
+    "copyUrl": "URL'yi kopyala",
+    "couple": "Çift",
+    "customerServiceFee": "Hizmet Ücreti",
+    "data": "Veri",
+    "date": "Tarih",
+    "dateChoose": "Tarih seç",
+    "delete": "Sil",
+    "didYouMean": "Şu <suggestion>{email}</suggestion> mi demek istiyorsun?",
+    "duplicate": "Kopyala",
+    "emailsDontMatch": "Girilen e-posta adresleri eşleşmiyor.",
+    "export": "Dışa aktarma",
+    "faqType": "İsviçre'deki {type} hakkında sık sorulan sorular",
+    "from": "Den",
+    "group": "Grup",
+    "helpfulQuestion": "Yardımcı oldu mu?",
+    "informationPlural": "Bilgiler",
+    "language": "Dil",
+    "loginOrRegister": "Giriş yap veya kaydol",
+    "manageBookings": "Rezervasyonları yönet",
+    "mobileAppAddon": "Şimdi mobil uygulamamızı indir ve rezervasyonlarını kolayca yönet, biletlerine hızla eriş, bir sonraki maceranı bul.",
+    "mostImportantInSummary": "Özetle öncelikle önemlileri",
+    "noResults": "Maalesef arama teriminizle ilgili herhangi bir sonuç bulamadık.",
+    "noReviewsYet": "Henüz değerlendirme yok",
+    "notes": "Notlar",
+    "oneMonth": "1 Ay",
+    "openChat": "Sohbet aç",
+    "order": "Sıralama",
+    "partSum": "Ara toplam",
+    "participants": "Katılımcılar",
+    "participantsChoose": "Katılımcı seç",
+    "past": "Geçmiş",
+    "personalizeTickets": "Biletleri kişiselleştir",
+    "pleaseSelect": "Lütfen seçin",
+    "pleaseSelectItem": "Lütfen {val} seçin",
+    "questionsChatActivity": "Bu aktivite hakkında başka soruların mı var? Bizimle sohbet et",
+    "questionsChatBooking": "Rezervasyon hakkında başka soruların mı var? Bizimle sohbet et",
+    "raw": "Ham",
+    "rebate": "İndirim",
+    "recaptcha": "Bu web sitesi reCAPTCHA ile korunmaktadır. Google\n<a href=\"https://policies.google.com/privacy\" target=\"_blank\">Gizlilik Politikası</a> ve\n<a href=\"https://policies.google.com/terms\" target=\"_blank\">Hizmet Koşulları</a> geçerlidir.",
+    "remove": "Kaldır",
+    "removeFromCart": "Sepetten çıkar",
+    "reset": "Sıfırla",
+    "searchNow": "Şimdi ara",
+    "single": "Tek kişilik",
+    "soldOut": "Tükendi",
+    "somethingWentWrongContact": "Üzgünüm, ama bir sorun oluştu. Lütfen tekrar deneyin veya destek ile iletişime geçin.",
+    "successfullySaved": "Başarıyla kaydedildi",
+    "ticket": "Bilet",
+    "tickets": "Biletler",
+    "to": "Gideceği",
+    "currentLocation": "Mevcut Yer",
+    "toDashboard": "Benim rezervasyonlarım",
+    "translate": "Çevir",
+    "tryAgain": "Tekrar deneyin",
+    "upcoming": "Yaklaşan",
+    "when": "Ne zaman",
+    "who": "Kim",
+    "wrongDate": "Tarihte bir problem var: Lütfen kontrol et ve tekrar seç.",
+    "wrongDateParticipant": "Katılımcının doğum tarihi, teklifin yaşını karşılamıyor.",
+    "today": "Bugün",
+    "apply": "Uygula"
+  },
+  "aria": {
+    "forward": "İleri",
+    "backward": "Geri"
+  },
+  "auth0": {
+    "accept": "[Kullanım şartlarını]({link}) kabul ediyorum",
+    "error": "Lütfen kullanım şartlarını kabul et",
+    "resetPasswordHint": "E-posta almadın mı? Spam klasörünü kontrol et. Eğer Apple ya da Google ile kayıt olduysan, lütfen bu giriş yöntemini kullan."
+  },
+  "menu": {
+    "menu": "Menü",
+    "search": "Ara",
+    "travelGuide": "Seyahat Planlayıcısı",
+    "travelRoutes": "Seyahat Rotaları",
+    "contactus": "Bize Ulaş",
+    "switzerland": "İsviçre",
+    "help": "Sohbet",
+    "voucher": "Hediye Kartı Al",
+    "voucherSm": "Hediye Kartı",
+    "partners": "Ortaklar",
+    "provider": "Sağlayıcı",
+    "affiliate": "Bağlı Ortak"
+  },
+  "chat": {
+    "chats": "Tüm sohbetler",
+    "newChat": "Yeni sohbet",
+    "noChatsYet": "Henüz sohbet yok",
+    "typeMessage": "Mesajınızı girin",
+    "welcome": "Merhaba ve Swiss Activities'e hoş geldin! Ben Housibot ve sorularınıza yardımcı olmaktan mutluluk duyarım.",
+    "welcomeReview": "Merhaba! Deneyimin nasıldı? Ben Housibot ve geri bildirimini paylaşmana yardımcı olmak için buradayım."
+  },
+  "supportBanner": {
+    "title": "Yardımcı olmamızı ister misin? Bu uygun kayak okulunu bulmana mı ihtiyaç var?",
+    "placeholder": "Sana nasıl yardımcı olabiliriz?",
+    "send": "Gönder"
+  },
+  "pages": {
+    "404": {
+      "title": "Sayfa bulunamadı.",
+      "description": "Bu sayfa mevcut değil.",
+      "button": "Ana sayfaya geri dön",
+      "search": "Arama başlat"
+    },
+    "home": {
+      "title": "Swiss Activities - İsviçre'deki eğlence aktivitelerini bul",
+      "description": "Swiss Activities, İsviçre'deki eğlence aktiviteleri için senin destinasyonundur. Sayısız eğlence aktivitesini keşfet, karşılaştır ve rezervasyon yap.",
+      "gatewayCards": {
+        "categories": {
+          "castlesRuins": "Kale / Harabe",
+          "castleEvents": "Kale Etkinliği",
+          "exhibitions": "Sergi",
+          "fireplaces": "Ateş yeri",
+          "movies": "Film",
+          "museums": "Müze",
+          "playgrounds": "Oyun alanı",
+          "swimmingBathing": "Yüzme & Banyo"
+        },
+        "dateRange": {
+          "from": "Den",
+          "until": "Kadar"
+        },
+        "distance": {
+          "unit": "km"
+        }
+      },
+      "gatewayDetail": {
+        "back": "Geri",
+        "moreInfo": "Daha fazla bilgi",
+        "source": "Kaynağı aç",
+        "labels": {
+          "admission": "Giriş",
+          "address": "Adres",
+          "ageRating": "Yaş",
+          "bookTickets": "Bilet al",
+          "canton": "Kanton",
+          "cast": "Oyuncular",
+          "category": "Kategori",
+          "cinema": "Sinema",
+          "countryYear": "Ülke / Yıl",
+          "dateRange": "Tarih Aralığı",
+          "director": "Yönetmen",
+          "duration": "Süre",
+          "entryFeeAdult": "Yetişkinler",
+          "entryFeeChild": "Çocuklar",
+          "foundedYear": "Kurulan Yıl",
+          "genres": "Türler",
+          "location": "Yer",
+          "museumCategory": "Müze Türü",
+          "openTrailer": "Fragmanı aç",
+          "openingHours": "Açık Saatler",
+          "phone": "Telefon",
+          "poolLength": "Havuz uzunluğu",
+          "trailer": "Fragman",
+          "venue": "Etkinlik Yeri",
+          "waterType": "Su tipi"
+        },
+        "sections": {
+          "amenities": "Ekipman",
+          "badges": "Öneriler",
+          "information": "Bilgiler",
+          "prices": "Fiyatlar",
+          "showtimes": "Gösterimler",
+          "venue": "Etkinlik Yeri"
+        },
+        "amenities": {
+          "capacityPersons": "Kapasite",
+          "hasBenches": "Banklar",
+          "hasChangingRooms": "Soyunma odaları",
+          "hasDivingBoard": "Atlama tahtası",
+          "hasFirewood": "Odun",
+          "hasFoodService": "Yiyecek hizmeti",
+          "hasGrillGrate": "Izgara",
+          "hasKidsPool": "Çocuk havuzu",
+          "hasLifeguard": "Can güvenliği",
+          "hasLockers": "Kilitleme dolapları",
+          "hasPlaygroundNearby": "Yakınında Oyun Alanı",
+          "hasShowers": "Duşlar",
+          "hasSlide": "Kaydırak",
+          "hasShelter": "Sığınak",
+          "hasTable": "Masa",
+          "hasToilet": "Tuvalet",
+          "hasWater": "Su"
+        },
+        "waterTypes": {
+          "indoorPool": "Kapalı havuz",
+          "lake": "Göl",
+          "outdoorPool": "Açık havuz",
+          "pool": "Havuz",
+          "river": "Nehir"
+        }
+      }
+    },
+    "s": {
+      "title": "Swiss Activities - Eğlence aktiviteni ara ve rezerve et",
+      "description": "Swiss Activities, İsviçre'deki eğlence aktiviteleri için senin destinasyonundur. Sayısız eğlence aktivitesini keşfet, karşılaştır ve rezervasyon yap.",
+      "sort": {
+        "distance": {
+          "notSupported": "Konum servisleri tarayıcın tarafından desteklenmiyor. Relevans'a göre sıralama kullanılıyor.",
+          "permissionDenied": "Mesafeye göre sıralamak için lütfen tarayıcı ayarlarından konumuna erişime izin ver ve sayfayı yenile.",
+          "positionUnavailable": "Konum bilgileri mevcut değil.",
+          "timeout": "Konum sorgusunda zaman aşımı oluştu.",
+          "unknownError": "Bilinmeyen bir hata oluştu.",
+          "fallbackMessage": "Relevans'a göre sıralama kullanılıyor.",
+          "errorPrefix": "Konum belirlenemedi."
+        }
+      }
+    },
+    "chat": {
+      "title": "Swiss Activities Sohbeti",
+      "description": "Swiss Activities, İsviçre'deki eğlence etkinlikleri için destinasyonun. Sayısız eğlence etkinliğini keşfet, karşılaştır ve rezerve et."
+    },
+    "transport": {
+      "title": "Şu anki olarak burada bulunan bilet, kartlar ve günlük kartlar | Swiss Travel Pass, SBB'Hind unares",
+      "description": "İsviçre genelinde biletleri ve Swiss Travel Pass'ı karşılaştır ve hemen cüzdanına gelen mobil bilet al.",
+      "trust": {
+        "partners": "Resmi Ortak",
+        "ratingValue": "4,8",
+        "ratingLabel": "400.000'ün üzerinde memnun yolcu",
+        "ratingShortLabel": "400.000+ yolcu"
+      },
+      "discountMap": {
+        "title": "Buradan kartınla tasarruf ediyorsun",
+        "subtitle": "Dağ teleferikleri, gemiler ve harika geziler - bir kart seç ve nerelerde neler olduğunu keşfet.",
+        "free": "Dahil",
+        "discount50": "−%50",
+        "discount25": "−%25",
+        "noDiscount": "İndirim yok",
+        "altitude": "{m} m yükseklikte.",
+        "moreInfo": "Daha fazla bilgi al",
+        "selectPass": "Kartı seç",
+        "selectCategory": "Kategori seç",
+        "categories": {
+          "mountain": "Dağ teleferikleri",
+          "lake": "Göller ve Gemiler",
+          "museum": "Müze"
+        },
+        "airports": {
+          "zrh": "Zürich",
+          "gva": "Cenevre"
+        },
+        "regions": {
+          "bernerOberland": "Berner Oberland",
+          "jungfrau": "Jungfrau",
+          "interlaken": "Interlaken",
+          "zentralschweiz": "Orta İsviçre",
+          "ostschweiz": "Doğu İsviçre",
+          "waadt": "Vaud",
+          "engadin": "Engadin",
+          "wallis": "Wallis",
+          "tessin": "Tessin",
+          "genferseeregion": "Cenevre Gölü Bölgesi",
+          "zuerich": "Zürich",
+          "mittelland": "İç bölge",
+          "luzern": "Lucerne",
+          "basel": "Basel",
+          "bern": "Bern",
+          "lausanne": "Lausanne",
+          "geneve": "Cenevre",
+          "zermatt": "Zermatt",
+          "fribourg": "Fribourg",
+          "graubuenden": "Graubünden"
+        }
+      },
+      "hero": {
+        "title": "Tüm İsviçre genelinde tren biletleri",
+        "titleAccent": "İsviçre",
+        "lede": "SBB'nin hat biletleri, günlük biletleri ve indirimli tarifelerini hemen mobil bilet olarak cüzdanına al.",
+        "subtitle": "SBB'nin hat biletleri, günlük biletleri ve indirimli tarifelerini hemen cüzdanına al.",
+        "searchTitle": "Bağlantı ara",
+        "searchMeta": "İstasyon · Tarih · Yolcular",
+        "fromPlaceholder": "Kalkış istasyonu",
+        "toPlaceholder": "Varış istasyonu",
+        "badges": {
+          "rating": "4,8 / 5 · 400.000+ değerlendirme",
+          "partner": "Resmi SBB Ortağı"
+        },
+        "usps": {
+          "customers": {
+            "title": "400.000 mutlu müşteri",
+            "subline": "Swiss Activities'e güveniyoruz 2021'den beri"
+          },
+          "saver": {
+            "title": "%50'ye kadar tasarruf et",
+            "subline": "SBB'nin tasarruf biletleri ve günlük kartları ile"
+          },
+          "mobile": {
+            "title": "Hemen mobil bilet olarak",
+            "subline": "Doğrudan cüzdanına, SBB girişi gerekmez"
+          },
+          "earlyBird": {
+            "title": "Öncelikli alımlar için indirimler",
+            "subline": "Önceden plan yap ve SBB'nin tasarruf biletlerini ve günlük kartlarını satın al"
+          }
+        }
+      },
+      "benefits": {
+        "title": "Senin Avantajların",
+        "discount": {
+          "eyebrow": "Tasarruf biletleri",
+          "title": "%40'a varan tasarruf et",
+          "subline": "SBB tasarruf teklifleri ve günlük biletler",
+          "badge": "En çok satanlar"
+        }
+      },
+      "passes": {
+        "title": "SBB ve bölgesel kartlar",
+        "subtitle": "Birden fazla günlük kartı, günlük kartları ve bölgesel kartları karşılaştır – senin için en faydalı olanı seç.",
+        "tabs": {
+          "multiDay": "Birden fazla günlük kartlar",
+          "dayPass": "Günlük kartlar",
+          "regional": "Bölgesel kartlar"
+        },
+        "buy": "Şimdi satın al",
+        "from": "den",
+        "moreInfo": "Daha fazla bilgi",
+        "seeDiscounts": "Tüm indirimleri görüntüle",
+        "viewAllByTab": {
+          "multiDay": "Tüm demiryolu kartlarını görüntüle",
+          "dayPass": "Tüm SBB günlük kartlarını görüntüle",
+          "regional": "Tüm bölgesel biletleri görüntüle"
+        },
+        "empty": "Şu anda hiçbir ürün mevcut değil – diğer kategorilere göz at.",
+        "descriptions": {
+          "fallback-stp": "İsviçre genelinde tren, otobüs ve gemi ile seyahat et – müze girişleri de dahil.",
+          "fallback-stpf": "Belirli günlerde toplu taşımayı kullan – müze girişleri de dahil.",
+          "fallback-shfc": "Bir ay boyunca tren, otobüs, gemi ve dağ teleferiklerine yarı fiyat.",
+          "fallback-halbtax": "Gün boyunca tüm İsviçre'de ücretsiz seyahat et – Yarı ücretle.",
+          "fallback-spar": "En iyi fiyatla önceden satın al – her gün sınırlı sayıda bilet.",
+          "fallback-ga": "Bir gün boyunca tam iletişim – GA gibi ama sadece 24 saat.",
+          "fallback-tell": "Orta İsviçre'de ücretsiz seyahat: Dağ teleferikleri, gemi seferleri ve toplu taşıma dahil.",
+          "fallback-bo": "Jungfrau ve Interlaken bölgesini keşfet - trenler, gemiler ve dağ teleferikleri için bir bilet al.",
+          "fallback-jtp": "Özellikle Alplerin zirvesi: Dağ teleferikleri, toplu taşıma ve Grindelwald, Wengen, Mürren çevresindeki beğeniler."
+        },
+        "usps": {
+          "1330": [
+            "Harder Kulm & Brienzer Rothorn dahil",
+            "Grindelwald-Wengen kayak alanında %50'ye kadar indirim",
+            "ÖV & dağ teleferikleri Jungfrau bölgesinde"
+          ],
+          "1438": [
+            "First, Schynige Platte & Niesen dahil",
+            "Jungfrau Top of Europe'da %25 indirim",
+            "Bir biletle tren, otobüs & dağ teleferikleri"
+          ],
+          "1440": [
+            "1 ay boyunca yarı fiyat ile İsviçre genelinde",
+            "Tren, otobüs, gemi ve dağ teleferikleriyle",
+            "SBB'nin tasarruf biletleri ile de geçerli"
+          ],
+          "1447": [
+            "Tren, otobüs & gemi İsviçre genelinde ücretsiz",
+            "Dağ teleferiklerinde %50'ye kadar indirim (Jungfraujoch'ta %25)",
+            "500'ün üzerinde müze ücretsiz"
+          ],
+          "1448": [
+            "Belirli günlerde İsviçre genelinde aktifleşen kart",
+            "Dağ teleferikleri, otobüs, gemide %50'ye kadar indirim",
+            "500'ün üzerinde müze ücretsiz"
+          ],
+          "1450": [
+            "Pilatus, Rigi & Stanserhorn dahil",
+            "Dört Göller Gölü'nde gemi seferleri ücretsiz",
+            "Tren, otobüs & dağ teleferikleri Orta İsviçre'de"
+          ],
+          "1664": [
+            "Günlük bilet CHF 29'dan başlayan fiyatlarla",
+            "Önceden rezervasyonla %70'e kadar indirim",
+            "Her gün sınırlı sayıda bilet"
+          ],
+          "1671": [
+            "6-16 yaş çocuklar aile fiyatından",
+            "İsviçre genelinde tüm SBB bağlantıları",
+            "Aile gezileri için mükemmel"
+          ],
+          "1676": [
+            "1 gün boyunca Yarı ücretle ücretsiz seyahat",
+            "SBB bağlantılarıyla İsviçre genelinde",
+            "Birden fazla tekil biletlerden daha uygun"
+          ]
+        },
+        "soldCount": "{count} rezervasyon yapıldı",
+        "reviews": "({count})",
+        "discounts": {
+          "1330": "Harder Kulm dahil.",
+          "1438": "First & Niesen dahil.",
+          "1440": "Yarı fiyat",
+          "1447": "Dağ teleferiklerinde %50 indirim",
+          "1448": "Dağ teleferiklerinde %50 indirim",
+          "1450": "Pilatus & Rigi dahil.",
+          "1664": "%70'e kadar indirim",
+          "1671": "Aile fiyatı"
+        },
+        "benefits": {
+          "includedHeading": "Dahil",
+          "discountedHeading": "İndirimler",
+          "expand": "Tüm indirimleri görüntüle",
+          "collapse": "Daha az göster",
+          "items": {
+            "1330": {
+              "included": [
+                "Harder Kulm & Brienzer Rothorn",
+                "Jungfrau bölgesinde toplu taşıma (tren, otobüs, gemi)"
+              ],
+              "discounted": [
+                "Grindelwald-Wengen kayak bölgeleri −%50'ye kadar",
+                "Mürren-Schilthorn kayak bölgesi −%50'ye kadar",
+                "Jungfraujoch Top of Europe −%25"
+              ]
+            },
+            "1438": {
+              "included": [
+                "First, Schynige Platte & Niesen",
+                "Brienzer Rothorn & Stockhorn",
+                "Jungfrau bölgesinde tren, gemi & teleferik"
+              ],
+              "discounted": [
+                "Jungfraujoch Top of Europe −%25",
+                "Schilthorn (James Bond) −%50"
+              ]
+            },
+            "1440": {
+              "included": [],
+              "discounted": [
+                "Tren, otobüs ve gemide %50 indirim",
+                "%50 dağ teleferiklerinde",
+                "SBB'nin tasarruf biletleriyle kombinlenebilir"
+              ]
+            },
+            "1447": {
+              "included": [
+                "Tren, otobüs ve gemi İsviçre genelinde",
+                "500'ün üzerinde müze",
+                "90 İsviçre şehrinde toplu taşıma"
+              ],
+              "discounted": [
+                "Dağ teleferiklerinde %50'ye kadar indirim",
+                "Jungfraujoch Top of Europe −%25",
+                "SBB'nin RailAway tekliflerinde %30 indirim"
+              ]
+            },
+            "1448": {
+              "included": [
+                "Tren, otobüs ve gemi belirli günlerde",
+                "500'ün üzerinde müze",
+                "90 İsviçre şehrinde toplu taşıma"
+              ],
+              "discounted": [
+                "Dağ teleferiklerindeki %50'ye kadar indirim",
+                "Jungfraujoch Top of Europe −%25",
+                "SBB'nin RailAway tekliflerinde %30 indirim"
+              ]
+            },
+            "1450": {
+              "included": [
+                "Pilatus, Rigi & Stanserhorn",
+                "Vierwaldstättersee gemileri",
+                "Merkez İsviçre'de tren, otobüs ve teleferik"
+              ],
+              "discounted": []
+            },
+            "1664": {
+              "included": [
+                "1 gün boyunca İsviçre'de ücretsiz seyahat"
+              ],
+              "discounted": [
+                "Günlük bilet CHF 29'dan başlayan fiyatlarla",
+                "Önceden rezervasyonla %70'e kadar indirim"
+              ]
+            },
+            "1671": {
+              "included": [
+                "1 gün boyunca tüm İsviçre'deki SBB seferleri"
+              ],
+              "discounted": [
+                "6–16 yaş çocuklar için aile fiyatı",
+                "Normal günlük biletlerde −%50"
+              ]
+            },
+            "1676": {
+              "included": [
+                "Yarım ücretli 1 gün ücretsiz seyahat"
+              ],
+              "discounted": [
+                "Birden fazla tekil biletten daha ucuz"
+              ]
+            }
+          }
+        }
+      },
+      "articles": {
+        "title": "Tren dünyası hakkında ilgi çekici yazılar",
+        "subtitle": "SBB biletleri, seyahat kartları ve İsviçre'deki toplu taşıma hakkında ipuçları, karşılaştırmalar ve pratik bilgiler.",
+        "read": "Makale oku",
+        "tag": "Dergi"
+      },
+      "dayPasses": {
+        "title": "Popüler günlük biletler",
+        "subtitle": "Tüm gün serbest seyahat – biletinle kolayca birleştirilebilir.",
+        "halbtax": {
+          "title": "Yarım fiyatla günlük bilet",
+          "description": "Tüm gün boyunca tüm İsviçre'de serbest seyahat – yarım fiyatlı biletinle. Günlük geziler ve dağ bölgeleri için ideal.",
+          "fromPrice": "CHF 52'den başlayan fiyatlarla",
+          "cta": "Bağlantı ara"
+        },
+        "spar": {
+          "title": "Tasarruf günlük bileti",
+          "description": "Erken rezervasyonla en iyi fiyat için günlük bilet. Günde sınırlı kontenjan – erken rezervasyon yapan daha ucuz seyahat eder.",
+          "fromPrice": "CHF 29'den başlayan fiyatlarla",
+          "cta": "Bağlantı ara"
+        }
+      },
+      "groups": {
+        "mountains": "Tren ile ulaşılabilen dağ deneyimleri",
+        "dayTrips": "Zürih, Bern ve Basel'den popüler günlük geziler",
+        "cities": "Şehirleri keşfet: Tren + Deneyim",
+        "cityPasses": "Şehir Pass’leri: Bir kart ile bütün şehir"
+      },
+      "faq": {
+        "title": "SBB biletleri hakkında sıkça sorulan sorular",
+        "items": [
+          {
+            "q": "Biletimi iptal edebilir miyim?",
+            "a": "<p><strong>Güzergah biletlerini</strong> seyahatten bir gün önceye kadar ücretsiz iptal edebilirsin – bu, swissactivities.com üzerindeki rezervasyon panelinden yapılabiliyor.</p><p><strong><a href=\"/sbb-tageskarten/spartageskarte-sbb/\">Tasarruf günlük biletlerinde</a></strong> ve tasarruf biletlerinde iptal mümkün değil. Bu biletler seçilen tarihe bağlıdır – rezervasyon sayfasında açık bir uyarı görünmektedir.</p>"
+          },
+          {
+            "q": "SBB biletleri SBB gişelerinde olduğu gibi mi?",
+            "a": "Evet, aynı resmi SBB biletlerini alırsın; SBB gişesindeki veya SBB uygulamasındaki gibi – ek ücret olmadan. Ayrıca <a href=\"/sbb-tageskarten/\">SBB günlük biletleri</a> ve <a href=\"/bahnpaesse/\">tren geçişleri</a> de SBB'nin orijinal ürünleridir."
+          },
+          {
+            "q": "Biletimi ne zaman alırım?",
+            "a": "Anında. Başarılı rezervasyondan sonra mobil bileti e-posta ile ve swissactivities.com üzerindeki rezervasyon panelinde alırsın. SBB girişi gerekli değil – trende hemen göster."
+          },
+          {
+            "q": "Yarım fiyatlı bilet veya GA ekleyebilir miyim?",
+            "a": "Evet, rezervasyon adımında indirimli aboneliğini seçebilirsin – fiyat otomatik olarak adapte olur. Eğer sadece bir yarım fiyatlı biletin varsa ve bütün gün seyahat ediyorsan, genellikle birkaç tekil biletten daha kârlı olan <a href=\"/sbb-tageskarten/sbb-tageskarte-halbtax/\">SBB yarım fiyatlı günlük bileti</a> tercih etmen gerekir."
+          },
+          {
+            "q": "Eğer trenim gecikirse ne yapmalıyım?",
+            "a": "Güzergah biletin bir sonraki bağlantıda da geçerlidir – sadece bir sonraki uygun trene bin. Eğer bir saatten fazla gecikme olursa, SBB'den geri ödeme talebinde bulunabilirsin."
+          },
+          {
+            "q": "Swiss Travel Pass ya da tasarruf günlük biletinin avantajları nelerdir?",
+            "a": "<p>Genel kural: Eğer en az üç gün boyunca çok seyahat ediyorsan ve müze gezmeyi seviyorsan, <a href=\"/bahnpaesse/swiss-travel-pass-kaufen/\">Swiss Travel Pass</a> ile daha ucuza seyahat edersin. 500'den fazla müze, 90 şehirde toplu taşımayı ve dağ teleferiklerini %50 indirimle içerir.</p><p>Tek günlük geziler için <a href=\"/sbb-tageskarten/spartageskarte-sbb/\">SBB tasarruf günlük bileti</a> CHF 29'dan itibaren genellikle en uygun seçenektir – yeterince erken rezervasyon yaparak.</p>"
+          },
+          {
+            "q": "Hangi bölgesel geçiş benim seyahatim için uygundur?",
+            "a": "<p>Interlaken / Grindelwald / Wengen bölgesinde <a href=\"/bahnpaesse/berner-oberland-pass/\">Berner Oberland Pass</a> veya kışın <a href=\"/bahnpaesse/jungfrau-travel-pass-winter/\">Jungfrau Travel Pass</a> önerilir – her ikisi de bölgedeki dağ teleferiklerini, toplu taşıma ve gemileri içerir.</p><p>Vierwaldstättersee çevresinde <a href=\"/bahnpaesse/sbb-tellpass/\">Tell Pass</a> idealdir: Pilatus, Rigi, Stanserhorn ve tüm gemiler dahildir.</p>"
+          }
+        ]
+      }
+    },
+    "about_us": {
+      "title": "Hakkımızda - Swiss Activities",
+      "description": "Swiss Activities, seyahat ve eğlence aktiviteleri konusundaki tutkumuzu paylaşıyor.",
+      "hero": {
+        "title": "İsviçre'deki eğlence aktivitelerini bul",
+        "text": "Swiss Activities, İsviçre'deki eğlence aktiviteleri için senin destinasyonundur. Swiss Activities'te sayısız eğlence aktivitesini bulabilir, bunları karşılaştırabilir ve birkaç tıkla rezerve edebilirsin. İsviçre'de boş zaman aktiviteni bulmak hiç bu kadar kolay olmamıştı."
+      },
+      "who": {
+        "title": "Biz kimiz",
+        "text": "Biz, İsviçre'deki eğlence aktiviteleri için heyecan duyan genç ve motive bir ekibiz. Ülkeyi ve insanları tanıyoruz. Yeni aktiviteleri denemek bizim tutkumuz. Bu yüzden Swiss Activities'i geliştirdik."
+      },
+      "start": {
+        "title": "Başlangıcımız",
+        "text": "2020 yılında seyahat edemediğimizi fark ettiğimizde, İsviçreli insanlar için bir eğlence aktiviteleri platformu aradık ama bulamadık. İşte bu, eğlence aktiviteleri destinasyonu Swiss Activities'in başlangıç noktası oldu.",
+        "milestones": {
+          "march_2020": {
+            "date": "Mart 2020",
+            "title": "Swiss Activities'i bir iş modeli olarak geliştirmek"
+          },
+          "march_2021": {
+            "date": "Mart 2021",
+            "title": "Şirketin kuruluşu"
+          },
+          "june_2021": {
+            "date": "Haziran 2021",
+            "title": "Kendi platformunun başlatılması"
+          },
+          "september_2021": {
+            "date": "Eylül 2021",
+            "title": "500 canlı rezerve edilebilir aktivite etkinleştirildi"
+          },
+          "december_2021": {
+            "date": "Aralık 2021",
+            "title": "Pre-Seed finansman turu tamamlandı"
+          },
+          "march_2022": {
+            "date": "Mart 2021",
+            "title": "Bağlı Ortak Programının başlatılması"
+          },
+          "may_2022": {
+            "date": "Mayıs 2021",
+            "title": "B2B Ortak Programının başlatılması"
+          }
+        }
+      },
+      "partner": {
+        "title": "Yeni müşteri kazanmanda yardımcı oluyoruz",
+        "text": "Swiss Activities, yeni müşteriler bulmana yardımcı oluyor. Swiss Activities'i, İsviçre'deki eğlence aktiviteleri için en büyük destinasyon yapmak amacıyla her gün çalışıyoruz. Her gün binlerce insan, İsviçre'deki eğlence aktivitelerini aramak için www.swissactivities.com'a geliyor. Teklifini Swiss Activities'te göstererek yeni müşterilere ulaşmış oluyorsun."
+      },
+      "kunden": {
+        "title": "İsviçre'deki tüm eğlence aktiviteleri için bir destinasyon",
+        "text": "Amacımız, tüm eğlence aktivitelerini www.swissactivities.com'da görünür kılmak. Böylece, tümüyle eğlence aktivitelerini bulmayı, karşılaştırmayı ve rezerve etmeyi herkes için daha kolay hale getiriyoruz."
+      },
+      "promise": {
+        "title": "Müşteri Vaadimiz",
+        "list": [
+          "zaman alan telefon görüşmeleri yok",
+          "sonsuz web araştırmaları yok",
+          "doğrudan kontrol edilebilir müsaitlikler",
+          "dolambaçsız anında rezervasyonlar",
+          "gizli maliyet yok",
+          "karmaşık olmayan ve hızlı ödeme seçenekleri",
+          "yorucu kuyruklar yok",
+          "çekici indirimlerin genel görünümü",
+          "yerel teklifler"
+        ]
+      },
+      "team": {
+        "title": "Swiss Activities Ekibi"
+      }
+    },
+    "tos_b2b": {
+      "title": "Tedarikçiler için genel şartlar ve koşullar",
+      "description": "Bu, tedarikçilerimiz için mevcut şartlarımızdır."
+    },
+    "tos_b2c": {
+      "title": "Müşteriler için Swiss Activities aracılık platformu kullanım şartları",
+      "description": "Bu, müşterilerimize yönelik Swiss Activities aracılık platformunun güncel kullanım şartlarıdır."
+    },
+    "tos_aff": {
+      "title": "Ortaklar için Genel İş Koşulları",
+      "description": "İşte bağlı ortaklar için geçerli iş koşullarımız."
+    },
+    "imprint": {
+      "title": "İmpressum",
+      "description": "Bu bizim imprintimiz."
+    },
+    "privacy_policy": {
+      "title": "Gizlilik Politikası",
+      "description": "Bu bizim gizlilik beyanımız."
+    },
+    "contact_us": {
+      "title": "Bize Ulaş",
+      "description": "Soruların varsa memnuniyetle yardımcı oluruz."
+    },
+    "basket": {
+      "title": "Sepet",
+      "delete": "Sil",
+      "warning": "Bu rezervasyonu alışveriş sepetinden silmek ister misin?",
+      "edit": "Düzenle",
+      "cancel": "İptal Et",
+      "update": "Sepeti güncelle",
+      "next": "Ödemeye geç",
+      "empty": "Sepetin boş",
+      "hold": "Bu rezervasyonu senin için tutacağız",
+      "explore": "Eğlence aktivitelerini keşfet"
+    },
+    "booking": {
+      "title": "Rezervasyon"
+    },
+    "confirmation": {
+      "title": "Rezervasyon onayı",
+      "tickets": "Biletlerin",
+      "download": "Mobil Bilet",
+      "more": "Daha Fazla Bilgi",
+      "cancel": "Bileti iptal et",
+      "cancelled": "İptal edildi",
+      "cancelWhy": "Neden iptal etmek istiyorsun?",
+      "cancelReasons": [
+        "Tatilim iptal oldu",
+        "Daha ucuz bir alternatif buldum",
+        "Onayımı zamanında almadım",
+        "Sağlayıcı bana rezervasyonu iptal etmemi istedi",
+        "Tercih ettiğim seçenekler mevcut değildi",
+        "Yanlış tarih rezervasyonu yaptım",
+        "Yanlış sayıda katılımcı rezervasyonu yaptım",
+        "Diğer sebepler"
+      ],
+      "rebook": {
+        "title": "Yeniden rezervasyon",
+        "text": "Plan değişikliği mi? Aktiviteni yeniden rezervasyon yap. Eski rezervasyonun otomatik olarak iptal edilecektir.",
+        "button": "Şimdi yeniden rezervasyon yap"
+      },
+      "stay": "Lütfen bu sayfada kal, rezervasyonun işleniyor.",
+      "editBooking": "Rezervasyonu değiştir",
+      "showTickets": "Biletleri göster",
+      "drawerTitle": "Senin rezervasyonun",
+      "relatedBookings": "İlgili rezervasyonlar"
+    },
+    "activities": {
+      "title": "İsviçre'deki en iyi eğlence etkinlikleri {year}",
+      "description": "İsviçre'de {year} için uygun etkinliği bul ve rezervasyon yap. İsviçre, çeşitlilik açısından sayısız etkinlik ve günlük geziler için birçok fikir sunuyor.",
+      "intro": "Yıl boyunca her etkinlik için serbest zaman aktiviteleri bulabilirsin. Ailenle bir gezi planlıyorsan, bir bekarlığa veda partisi düzenliyorsan, açık hava etkinliği arıyorsan veya yağmurlu havada yapılacak bir şey için ilham arıyorsan burada senin için bir şey var. Swiss Activities ile günlük gezini planlayabilir ve hemen rezervasyon yapabilirsin.",
+      "titleParentLocation": "{locationTitle} {year}: en iyi aktiviteler ve teklifler",
+      "descriptionParentLocation": "{locationTitle} 'da en iyi aktiviteleri bul ve rezerve et: Gezilecek yerler veya aile aktiviteleri için sadece birkaç tıklama ile bilet al.",
+      "titleChildLocation": "{locationTitle} {year}: en iyi aktiviteler",
+      "descriptionChildLocation": "{locationTitle} 'da en iyi aktiviteleri rezerve et. Gezilecek yerler veya aile aktiviteleri için sadece birkaç tıklama ile bilet al.",
+      "titleParentType": "{typeTitle} {year}: İsviçre'deki en iyi {typeTitle}",
+      "descriptionParentType": "Tüm İsviçre'den en iyi {typeTitle} 'ı bul, karşılaştır ve rezervasyon yap. Bekleme yok, rezervasyon ücreti yok ve ücretsiz iptal seçenekleri.",
+      "titleChildType": "{typeTitle} {year}: İsviçre'deki en iyi {typeTitle} teklifleri",
+      "descriptionChildType": "Tüm İsviçre'den en iyi {typeTitle} fırsatlarını bul, karşılaştır ve rezerve et. Bekleme yok, rezervasyon ücreti yok ve ücretsiz iptal seçenekleri.",
+      "titleParentLocationParentType": "{typeTitle} {locationTitle}: {year} için en iyi teklif ve fiyatlar",
+      "descriptionParentLocationParentType": "{typeTitle} {locationTitle} {year} için en iyi teklifler rezervasyonu yap. Rezervasyon ücreti yok ve ücretsiz iptal seçenekleri sunuyoruz.",
+      "titleParentLocationChildType": "{typeTitle} {locationTitle}: en iyi teklifler ve fiyatlar {year}",
+      "descriptionParentLocationChildType": "{typeTitle} {locationTitle} {year} için en iyi teklifler rezervasyonu yap. Rezervasyon ücreti yok ve ücretsiz iptal seçenekleri sunuyoruz.",
+      "titleChildLocationParentType": "{typeTitle} {locationTitle}: en iyi teklifler ve fiyatlar {year}",
+      "descriptionChildLocationParentType": "{typeTitle} {locationTitle} {year} için en iyi teklifler rezervasyonu yap. Rezervasyon ücreti yok ve ücretsiz iptal seçenekleri sunuyoruz.",
+      "titleChildLocationChildType": "{typeTitle} {locationTitle}: en iyi teklifler ve fiyatlar {year}",
+      "descriptionChildLocationChildType": "{typeTitle} {locationTitle} {year} için en iyi teklifler rezervasyonu yap. Rezervasyon ücreti yok ve ücretsiz iptal seçenekleri sunuyoruz."
+    },
+    "listing": {
+      "title": "{listingTitle}",
+      "offersTitle": "{title} Biletler ve Aktiviteler",
+      "activities": "Aktiviteler",
+      "relatedListings": "{value} 'da En İyi Görülecek Yerler",
+      "relatedListingsClose": "{value} 'ya yakın en iyi görülecek yerler",
+      "description": "{listingTitle} için Listeleme",
+      "tableOfContent": "İçindekiler",
+      "destinationTitle": "{location} - {num} Görülecek Yerler ve Aktiviteler {year}",
+      "more": "{val} hakkında daha fazla bilgi edinin",
+      "locations": "{val} 'da Yerler",
+      "regions": "{val} 'da Bölgeler",
+      "type": "{val} için İsviçre'de Popüler Yerler",
+      "typeLocation": "{location} 'da {type} için Popüler Yerler",
+      "types": "{val} Aktiviteleri",
+      "combo": "{type} {location} - {num} En iyi teklifler ve fiyatlar {year}",
+      "map": "Harita",
+      "attributeBadWeatherTitleAttribute": "İsviçre için en iyi {val} kötü hava fikirleri",
+      "attributeBadWeatherTitle": "{location} 'da en iyi {val} kötü hava fikirleri",
+      "attributeBadWeatherTeaser": "Yağmur, sis veya kar yağsın: [{location}]({locationLink})'de kötü havaya rağmen yapabileceğin birçok aktivite var. Bu yüzden yağmur mutlaka senin planını bozmak zorunda değil. Her hava koşuluna uygun hem kapalı hem de [Açık Hava Aktiviteleri]({outdoorLink}) bulabilirsin. Aktif olmak ister misin yoksa daha sakin mi geçirmek istersin karar senin. İsviçre'nin her yerinde sayısız [Kötü Hava Fikri]({badWeatherLink}) için daha fazla ilham bul.",
+      "attributeBadWeatherDesc": "{location} 'da kötü hava fikrini bul ve her hava koşulunda gerçekleşebilecek bir aktivite seç.",
+      "attributeFamilyTitleAttribute": "İsviçre için ailenle geçireceğin geziye en iyi {val} fikirleri",
+      "attributeFamilyTitle": "{location} 'da aile gezisi için en iyi {val} fikirleri",
+      "attributeFamilyTeaser": "[{location}]({locationLink})'de ailenle birlikte bir sonraki gezini planla. Maceraperest, sakin ya da keşifci olsan da fark etmez. [kötü hava koşulunda {location}]({locationBadWeatherLink}) da olmak üzere, yıl boyunca yapabileceğin çok şey var. Çocuk arabası ile yapacağınız bir geziye uygun seçenekler de var. Böylece bir [aile gezisi]({familyLink}) önünde engel kalmaz.",
+      "attributeFamilyDesc": "{location} 'da ailenle geçireceğin bir sonraki gezine uygun fikri bul ve çocuklarınla heyecan dolu bir gün geçir.",
+      "attributeDogTitleAttribute": "İsviçre için köpeğinle geçireceğin geziye en iyi {val} fikirleri",
+      "attributeDogTitle": "{location} 'da köpeğinle geçireceğin en iyi {val} fikirleri",
+      "attributeDogTeaser": "Birlikte köpeğinle [{location}]({locationLink}) gezilecek bir fikir mi arıyorsun? Sadık arkadaşını yanına almak istiyorsan, burada onun katılmasına izin verilen aktivitelerin listesini bulacaksın. Özellikle, köpeğinin açık havada enerjisini atabileceği [Açık Hava Aktiviteleri]({outdoorLink}) sıklıkla uygundur. Ancak bot gezintileri veya dağ tramvayları da mümkün. Gizli ipucumuz ise [Kaçış Oyunları]({escapeLink}), çünkü bunlar dışarıda gerçekleşiyor ve sana sıradan yürüyüşlerine farklılık katacaktır.",
+      "attributeDogDesc": "{location} 'da köpeğinle bir gezi planlayın ve rutin yürüyüşünden farklı bir şey deneyin.",
+      "attributeOutdoorTitleAttribute": "İsviçre için en iyi açık hava aktiviteleri {val}",
+      "attributeOutdoorTitle": "{location} 'da en iyi açık hava aktiviteleri {val}",
+      "attributeOutdoorTeaser": "[{location}]({locationLink})'de yıl boyunca yapabileceğin çok sayıda [Açık Hava Aktiviteleri]({outdoorLink}) var. Bazıları adrenalinini yükseltirken, diğerleri seni büyüleyici manzaralarla bekliyor ya da becerini test ediyor. Ayrıca [kötü hava fikri]({badWeatherLink}) ya da bir [aile gezisi]({familyLink}) için uygun olan açık hava aktiviteleri de var. Bazılarına [köpeğini]({dogLink}) de yanında getirebilirsin. Bazı açık hava aktivitelerini sorunsuzca tek başına yapabilirsin, ancak bazıları için güvenlik nedenleriyle profesyonel rehberli bir tura katılman gerekir.",
+      "attributeOutdoorDesc": "{location} 'da bir sonraki açık hava aktiviteni planla ve yıl boyunca açık havada bir gün geçir.",
+      "attributeBachelorPartyTitleAttribute": "İsviçre için en iyi bekarlığa veda fikirleri {val}",
+      "attributeBachelorPartyTitle": "{location} 'da en iyi bekarlığa veda fikirleri {val}",
+      "attributeBachelorPartyTeaser": "[{location}]({locationLink}) 'da harika bir bekarlığa veda fikri mi arıyorsun? Şefler, macera arayanlar veya kaşifler için: Herkes için uygun bir şey bulacaksın. Fikirlerimizle, {location} 'da bir [bekarlığa veda]({attributeLink}) düzenleme görevini sorunsuz bir şekilde yerine getireceksin. Dolayısıyla arkadaşlarınla başarılı ve eğlenceli bir gün geçireceksin.",
+      "attributeBachelorPartyDesc": "{location} 'da bir sonraki bekarlığa veda partini planla ve arkadaşlarınla eğlenceli bir gün geçir.",
+      "attributeTeamEventTitleAttribute": "İsviçre için en iyi takım etkinliği fikirleri {val}",
+      "attributeTeamEventTitle": "{location} 'da en iyi takım etkinliği fikirleri {val}",
+      "attributeTeamEventTeaser": "[{location}]({locationLink}) 'da bir takım etkinliği düzenleme görevi mi verildi? Bu her zaman kolay değildir, çünkü talepler genellikle çok farklıdır. Fikirlerimizle, [takım etkinliği]({attributeLink}) için en iyi şekilde ilham alacak ve hazırlayacağım. Şefler, kaşifler, aktif olanlar, bulmaca severler veya maceraperestler için: Herkesin damak tadına uygun bir şey bulacaksınız. Dolayısıyla arkadaşlarınla başarılı ve eğlenceli bir gün geçireceksin.",
+      "attributeTeamEventDesc": "{location} 'da bir sonraki takım etkinliğinizi planlayın ve meslektaşlarınızla eğlenceli bir gün geçirin.",
+      "attributeValentinesDayTitleAttribute": "İsviçre için en iyi Sevgililer Günü fikirleri {val}",
+      "attributeValentinesDayTitle": "{location} 'da Sevgililer Günü için en iyi fikirler {val}",
+      "attributeValentinesDayTeaser": "Her yıl kapıda yine bir gün var: Sevgililer Günü. Belki 14 Şubat'ta ne organize etmek istediğini zaten çok iyi biliyorsun. Belki de henüz emin değilsin ve [{location}]({locationLink}) için Sevgililer Günü'ne bir fikir arıyorsun. Aktivitelerimiz seni ilham vermek ve uygun bir şey bulmana yardımcı olmak için tasarlandı. İster romantik, ister rahat veya maceralı olsun: burada kesinlikle kalp atışlarını hızlandıracak bir [Sevgililer Günü]({attributeLink}) için ilham bulacaksın.",
+      "attributeValentinesDayDesc": "Bir sonraki Sevgililer Günü'nü {location}'da planla ve sevdiğin kişiyle romantik bir gün geçir.",
+      "attributeFirstDateTitleAttribute": "İsviçre'deki ilk randevun için {val} en iyi fikirler",
+      "attributeFirstDateTitle": "{location} için ilk randevun için {val} en iyi fikirler",
+      "attributeFirstDateTeaser": "[{location}]({locationLink}) için ilk randevun için mükemmel fikri arıyor ve karşı tarafı nasıl etkileyeceğinden emin misin? O halde doğru yerdesin. Bu sayfada, [ilk randevun]({attributeLink}) için ihtiyacın olan ilhamı bulacaksın. Yaz ya da kış, maceralı veya rahat, burada randevunu memnun edecek bir şey bulacağından emin olabilirsin. Ve kim bilir, belki de bir sonraki ve ondan sonraki buluşma için de uygun bir şeyle karşılaşırsın.",
+      "attributeFirstDateDesc": "{location}’da ilk randevunu planla ve birlikte romantik bir gün geçir.",
+      "attributeChildBirthdayTitleAttribute": "İsviçre için çocuk doğum günü fikirleri {val}",
+      "attributeChildBirthdayTitle": "{location} için bir çocuk doğum günü fikri {val}",
+      "attributeChildBirthdayTeaser": "[{location}]({locationLink})'deki önümüzdeki çocuk doğum gününü planla. Doğum günü her çocuğun yıl içerisindeki en önemli anlarından biridir. Mevsim ne olursa olsun, çocuğunu mutlu etmek için tonlarca fikrin var. Bir [açık hava etkinliği]({outdoorLink}) düzenle ya da [kötü hava programı]({badWeatherLink}) için bir fikir ara. Böylece, önümüzdeki çocuk doğum gününüz kesinlikle başarılı olacak.",
+      "attributeChildBirthdayDesc": "{location}'da çocuk doğum günü düzenle ve çocuğun için unutulmaz bir gün planla.",
+      "attributeWheelchairTitleAttribute": "İsviçre için tekerlekli sandalye ile yapılacak geziler {val}",
+      "attributeWheelchairTitle": "{location} için tekerlekli sandalye ile yapılacak geziler {val}",
+      "attributeWheelchairTeaser": "[{location}]({locationLink})'de tekerlekli sandalye ile erişilebilir bir gezi planla ve senin için mükemmel olan engelli dostu etkinliği bul. İsviçre'de tekerlekli sandalye ile seyahat, gelişmiş erişilebilirlik ve ülkenin tüm turistlere erişilebilir bir deneyim sunma çabaları sayesinde oldukça kolay. Bu, hem kapalı hem de [açık hava etkinliklerini]({outdoorLink}) içerir.",
+      "attributeWheelchairDesc": "{location}’da tekerlekli sandalyeye uygun gezilerden ilham al ve engelleri aşacak aktiviteni planla.",
+      "attributePramTitleAttribute": "İsviçre için bebek arabasıyla gezilecek yerler {val}",
+      "attributePramTitle": "{location} için bebek arabası ile gezilecek yerler {val}",
+      "attributePramTeaser": "[{location}]({locationLink})'de bebek arabası ile gezi planla. Küçük çocuklarla yola çıkıyorsan, yapabileceğin birçok etkinlik mevcut. Sayısız yürüyüş parkuru bebek arabasına uygun olarak tasarlandı ve toplu taşıma, küçük çocuklu ailelerin konforuna göre düzenlendi. Böylece, [aile geziniz]({familyLink}) için hiçbir engel kalmıyor.",
+      "attributePramDesc": "{location}’da bebek arabasıyla seyahat et ve ailenle bir sonraki gezini planla.",
+      "attributesOther": "Diğer aktivite kategorileri",
+      "attributesType": "{val} aktiviteleri için kategoriler",
+      "teamEvent": "Bizimle grup talebinizi gönderin",
+      "recommended": "Seyahatçiler tarafından önerildi",
+      "tickets": "Biletler",
+      "tours": "Rehberli turlar"
+    },
+    "error": {
+      "title": "Üzgünüz ama bir hata oluştu. Ana sayfaya dönün ve uygun eğlence aktivitenizi arayın."
+    },
+    "supplier": {
+      "title": "Swiss Activities: İsviçre'nin en büyük eğlence aktivite pazarı",
+      "description": "Swiss Activities, İsviçre'nin en büyük eğlence aktiviteleri pazarını temsil ediyor. Bizimle daha fazla müşteri ulaşabilir ve rezervasyonlarınızı artırabilirsiniz.",
+      "hero": {
+        "title": "Swiss Activities - İsviçre'deki eğlence aktivitelerini bulabileceğiniz yer",
+        "button": "Eğlence sağlayıcıları olun"
+      },
+      "numbers": {
+        "title": "2021'den beri Swiss Activities olarak eğlence sağlayıcılarımıza sağladığımız destek",
+        "blocks": [
+          {
+            "title": "Müşteri ziyaretleri",
+            "number": "7.500.000",
+            "text": "potansiyel müşteriler"
+          },
+          {
+            "title": "Müşteri rezervasyonları",
+            "number": ">300.000",
+            "text": "Müşteriler temin edildi"
+          },
+          {
+            "title": "Müşteri desteği",
+            "number": ">10.000",
+            "text": "Görüşmeler yapıldı"
+          },
+          {
+            "title": "Rezervasyon sistemleri",
+            "number": ">20",
+            "text": "Rezervasyon sistemleri"
+          }
+        ]
+      },
+      "why": {
+        "title": "Swiss Activities üzerinde eğlence ürünlerinizi neden listelemelisiniz",
+        "sales": {
+          "title": "Yeni Müşteriler",
+          "description": "Yerli ve uluslararası pazarlardan yeni müşteriler kazanın ve kapasitenizi artırın."
+        },
+        "support": {
+          "title": "Otomasyon",
+          "description": "Swiss Activities mevcut satış sürecinizi devralır ve işlemleri sisteminize iletir."
+        },
+        "finances": {
+          "title": "Hiçbir risk",
+          "description": "Hiçbir sabit maliyet veya ön yatırım yok. Sadece yönlendirilen müşteriler için ödeme yaparsınız."
+        },
+        "local": {
+          "title": "Yeni müşteri segmentlerine ulaşma",
+          "description": "Swiss Activities'in bayi ağlarıyla bağlantı kur ve yerel ve uluslararası alandaki erişimini genişlet."
+        }
+      },
+      "who": {
+        "title": "500'den fazla serbest zaman ortağınız Swiss Activities ile çalışıyor",
+        "partners": [
+          {
+            "blocks": [
+              "/assets/supplier/partner/bergbahnen/rigi.png",
+              "/assets/supplier/partner/bergbahnen/schilthorn.png",
+              "/assets/supplier/partner/bergbahnen/jungfrau.jpeg",
+              "/assets/supplier/partner/bergbahnen/engelberg.svg",
+              "/assets/supplier/partner/bergbahnen/pilatus.jpeg",
+              "/assets/supplier/partner/bergbahnen/monte-tamaro.png",
+              "/assets/supplier/partner/bergbahnen/brienz.png",
+              "/assets/supplier/partner/bergbahnen/gornergrat.png",
+              "/assets/supplier/partner/destinationen/rheinfelden.png",
+              "/assets/supplier/partner/destinationen/basel.svg",
+              "/assets/supplier/partner/destinationen/winterthur.svg",
+              "/assets/supplier/partner/destinationen/interlaken.png",
+              "/assets/supplier/partner/attraktionen/ballenberg.png",
+              "/assets/supplier/partner/attraktionen/bls.png",
+              "/assets/supplier/partner/attraktionen/cgn.png",
+              "/assets/supplier/partner/attraktionen/chillon.jpeg",
+              "/assets/supplier/partner/attraktionen/maestrani.png",
+              "/assets/supplier/partner/attraktionen/verkehrshaus.png",
+              "/assets/supplier/partner/attraktionen/vier.png",
+              "/assets/supplier/partner/outdoor/best-of-switzerland.jpeg",
+              "/assets/supplier/partner/outdoor/kayak.jpeg",
+              "/assets/supplier/partner/outdoor/outdoorch.jpeg",
+              "/assets/supplier/partner/outdoor/paragliding.png",
+              "/assets/supplier/partner/outdoor/wine-tours.webp",
+              "/assets/supplier/partner/outdoor/zermatters.png"
+            ]
+          }
+        ]
+      },
+      "pricing": {
+        "title": "Fiyatlandırma Modeli",
+        "subtitle": "Başarılı bir müşteri yönlendirmesi için yalnızca ödeme yapın",
+        "description": "Swiss Activities, yerel ve globalde doğru satış kanallarını belirlemenize ve eğlence ürünlerinizi potansiyel müşterilerinizin olduğu yerde satmanıza yardımcı olur. Swiss Activities'in kurulum ücreti olmadığından, yeni satış kanallarını ek bir yatırım olmadan açmış olursunuz.",
+        "blocks": [
+          {
+            "pretitle": "",
+            "cost": "%18 + CHF 0,30",
+            "subcost": "Versteuert.",
+            "button": "Eğlence ortağı ol",
+            "buttonLink": "https://k3qlq2fyp9o.typeform.com/to/CxWJub7f",
+            "subbutton": "",
+            "includes": [
+              "Swiss Activities üzerinde eğlence aktivitelerinin eklenmesi",
+              "Sınırsız eğlence aktivitelerinin kaydı",
+              "Ürün tanımlarının içerik ekibimiz tarafından oluşturulması",
+              "20'den fazla rezervasyon sistemine bağlantı",
+              "Canlı sohbet ve telefonla kişisel destek",
+              "Aktivitelerle ilgili sorularda misafir iletişiminin üstlenilmesi",
+              "Misafirlerin rezervasyon ve iptal taleplerinin işlenmesi",
+              "Tüm rezervasyonların ve iptallerin izlenmesi ve kontrolü",
+              "Hesaplamaların izlenmesi ve kontrolü",
+              "Nakit çözüm süreci – Swiss Activities üzerinden hesaplama",
+              "Satış sürecinin güvence altına alınması (voucher yerine bilet)",
+              "Bağlı kuruluş ağına otomatik erişim",
+              "Aktivitelerin satıcı ağına eklenmesi"
+            ],
+            "faq": []
+          }
+        ]
+      },
+      "tech": {
+        "title": "Rezervasyon ve biletleme sistemleri",
+        "description": "Swiss Activities'in merkezi hedeflerinden biri, tüm İsviçre eğlence ürünlerinin satışını ve dijitalleştirilmesini sağlamak. Bizimle bağlantıda kalmak için sağladığımız direkt bağlantıyı sürekli güçlendiriyoruz. Sistem eklemelerine devam ediyoruz. Rezervasyon ve biletleme sistemin yoksa, sales@swissactivities.com adresinden bizimle iletişime geçebilirsin.",
+        "partners": [
+          "/assets/supplier/technology/trekksoft.webp",
+          "/assets/supplier/technology/regiondo.webp",
+          "/assets/supplier/technology/tomas.webp",
+          "/assets/supplier/technology/waldhart.webp",
+          "/assets/supplier/technology/experiencebank.webp",
+          "/assets/supplier/technology/skidata.webp",
+          "/assets/supplier/technology/axess.webp",
+          "/assets/supplier/technology/smeetz.webp",
+          "/assets/supplier/technology/eatwith.webp",
+          "/assets/supplier/technology/fareharbor.webp",
+          "/assets/supplier/technology/bookingkit.webp",
+          "/assets/supplier/technology/ntree.webp",
+          "/assets/supplier/technology/secutix.webp",
+          "/assets/supplier/technology/tourcms.webp",
+          "/assets/supplier/technology/sbb.webp"
+        ],
+        "titleSoon": "Yakında mevcut",
+        "partnersSoon": [
+          "/assets/supplier/technology/feratel.webp"
+        ]
+      },
+      "faq": [
+        {
+          "title": "Eğlence Ortağı için Genel Bilgiler",
+          "blocks": [
+            {
+              "title": "Swiss Activities'in eğlence ortağı olabilecek olan kimdir?",
+              "text": "İsviçre'de eğlence aktivitelerini satın almak isteyen herkes Swiss Activities'in ortağı olabilir. Tekliflerin çok çeşitli olması mümkündür ve hayal gücünüz için neredeyse sınır yoktur. Yaklaşık 100 kategoriye yayılmış faaliyetler, biletler, maceralar, turlar, kiralamalar vb. var. Bunlar, tek boynuzlu kekler için pişirme kurslarını, tandem yamaç paraşütü uçuşlarını veya müzelere giriş biletlerini içerir. Önemli olan, tekliflerin veya İsviçre'de gerçekleşiyor olması ya da İsviçre'den günlük bir gezi içerisinde gerçekleştirilebilir olmasıdır."
+            },
+            {
+              "title": "Swiss Activities ile hangi rezervasyon sistemlerini bağlayabilirim?",
+              "list": [
+                "Trekksoft",
+                "Regiondo",
+                "Waldhart",
+                "Deneyim Bankası",
+                "Skidata",
+                "Axess",
+                "Tomas",
+                "Smeetz",
+                "Eatwith",
+                "Fareharbor",
+                "Booking Kit",
+                "N-Tree",
+                "Secutix",
+                "TourCMS",
+                "Palisis",
+                "Yakında mevcut olacak: SBB ve Feratel"
+              ]
+            },
+            {
+              "title": "Bir rezervasyon sistemine bağlı çalışmıyorum. Yine de aktivitelerimi Swiss Activities üzerinden satabilir miyim?",
+              "text": "Bir rezervasyon sistemi ile çalışmıyorsan bile, aktivitelerini burada listeleyebilirsin. Bu durumda, talimatlarına göre manuel bir takvim hazırlıyoruz. Eğer bir rezervasyon sistemi uygulamak istersen, lütfen bizimle iletişime geç. Bu konu hakkında sana memnuniyetle danışmanlık yaparız. Bizden ihtiyaç duyduğumuz bilgiler şunlardır:",
+              "list": [
+                "Zaman aralığı (tarih)",
+                "Başlangıç zamanı/zamanları",
+                "Süre",
+                "Son tarih (müşteri ne kadar önceden en geç rezervasyon yapmalı?)",
+                "Kategoriye göre fiyatlar (yetişkinler, çocuklar, kiralama vb.)",
+                "Her zaman diliminde maksimum mevcut yer sayısı"
+              ]
+            },
+            {
+              "title": "Rezervasyon sırasında hangi bilgiler iletiliyor?",
+              "text": "Bir müşteri Swiss Activities üzerinden rezervasyon yaptığında, tüm önemli bilgilerle birlikte bir onay e-postası alır. Bu, seninle doğrudan iletişime geçebilmesi için iletişim bilgilerini de içerir.",
+              "list": [
+                "Aktivite adı",
+                "Tarih",
+                "Saat",
+                "Buluşma noktası",
+                "Rezervasyonlu bilet sayısı",
+                "İletişim bilgilerin (e-posta ve telefon)"
+              ]
+            },
+            {
+              "title": "Swiss Activities üzerinde aktivitelerim için aynı fiyatlar yayımlanıyor mu?",
+              "text": "Evet, burada müşteri, seninle doğrudan rezervasyon yapıyormuş gibi aynı ücreti öder. Bu senin için olduğu kadar bizim için de önemlidir. Farklı yerlerde fiyatlar farklı olursa, müşteri bunu fark eder ve bu da şikayetlere ve anlamamazlıklara yol açar. Böylelikle, her ikimiz de bir sadık müşteri kaybetme riski taşırız."
+            },
+            {
+              "title": "Swiss Activities'te iptal süresi ne kadar?",
+              "text": "Müşteri, Swiss Activities üzerinde aktiviteden en az 24 saat önce ücretsiz olarak iptal etme seçeneğine sahiptir. İptal edilemeyen bir aktivite listelemek istersen, bunu yapabiliriz. Ancak deneyimlerimiz gösteriyor ki, iptal seçeneği sunan aktivitelere daha fazla rezervasyon alıyoruz. Eğer rezervasyonu iptal etmen gerekiyorsa, bunu hemen müşteriye bildirmelisin ve bize de bildirerek geri ödeme başlatmamızı sağlamalısın."
+            },
+            {
+              "title": "Sonraki iptaller nasıl ele alınıyor?",
+              "text": "Eğer iptalleri gerçekleştirmek üzere bir talep alırsak, hiç bir geri ödeme yapmadan önce seninle iletişime geçeriz. Dolandırıcılığı önlemek için, her zaman müşterinin açıklamasını onaylamak için senin iznini alırız. Sadece onayını aldıktan sonra, geri ödemeyi gerçekleştiririz."
+            }
+          ]
+        },
+        {
+          "title": "Serbest zaman ürünlerinin yayınlama süreci",
+          "blocks": [
+            {
+              "title": "Aktivitelerimi Swiss Activities üzerinde nasıl listeleyebilirim?",
+              "text": "Eğer Swiss Activities'in serbest zaman partneri olmak ve tekliflerini listelemek istiyorsan, aşağıdaki adımları izlemelisin:",
+              "list": [
+                "Öncelikle, serbest zaman partneri olarak kaydol.",
+                "Listelemek istediğin her aktivite için bir form doldur. Bağlantıyı, kaydını onayladıktan sonra alacaksın.",
+                "Genellikle aktivitelerini iki hafta içinde yazar ve kaydederiz.",
+                "Aktiviteler canlı hale geldiğinde, e-posta ile bilgilendireceğiz."
+              ]
+            },
+            {
+              "title": "Aktivitelerimi listelemek için hangi bilgilere ihtiyacım var?",
+              "text": "Bizde serbest zaman partneri olarak kaydolduktan sonra, aktivitelerini girebileceğin bir form gönderiyoruz. Bunları listeleyebilmek için bizden aşağıdaki bilgileri istiyoruz:",
+              "list": [
+                "Rezervasyon sistemine dair bilgiler (varsa)",
+                "Aktivite başlığı",
+                "Aktivite bağlantısı",
+                "Her aktivite için en az 4 fotoğraf",
+                "Bir rezervasyon sistemi kullanmıyorsan, tarihler, saatler ve süre hakkında bilgiler",
+                "Yaş, diller, ağırlık vb. hakkında bilgiler",
+                "Aktivitenin uygunluğu: köpek, bebek arabası, tekerlekli sandalye, aileler vb.",
+                "Kesin buluşma noktası"
+              ]
+            },
+            {
+              "title": "İlanımı her zaman silebilir miyim?",
+              "text": "Evet, sözleşmeden istediğin zaman çekilebilirsin. Minimum bir sözleşme süresi yoktur ve iptal nedeniyle herhangi bir maliyet oluşmaz."
+            },
+            {
+              "title": "Bir aktivitede bir şeyi değiştirmek istersem ne yapmalıyım?",
+              "text": "İçerikte değişiklik veya fiyat düzenleme taleplerin varsa - eğer bir rezervasyon sistemi kullanmıyorsan - bunu bize e-posta ile bildirebilirsin."
+            },
+            {
+              "title": "Müşteri ile nasıl iletişime geçerim?",
+              "text": "Her rezervasyondan sonra, müşterinin bilgileriyle birlikte bir onay e-postası alırsın. Orada adını, e-posta adresini ve sana ulaşması için telefon numarasını bulacaksın."
+            },
+            {
+              "title": "Paramı nasıl alıyorum?",
+              "text": "Tüm açık ödemelerin, hizmet tarihine göre her zaman ödeneceği ve sonraki ayın başında otomatik olarak transfer edileceği belirtilmektedir. Bu süreçte, geçen ay içinde gerçekleşen tüm rezervasyonlar toplanarak muhasebe edilmekte ve tek bir ödeme olarak birleştirilmektedir."
+            }
+          ]
+        }
+      ]
+    },
+    "supplierRegistration": {
+      "title": "Swiss Activities: İsviçre'nin en büyük eğlence aktiviteleri pazarı.",
+      "description": "Swiss Activities, İsviçre'nin en büyük eğlence aktiviteleri platformudur. Bizimle daha fazla müşteriye ulaşabilir ve rezervasyonlarınızı artırabilirsiniz.",
+      "hero": {
+        "title": "Swiss Activities'e katıl.",
+        "description": "Swiss Activities'e ücretsiz kaydol ve İsviçreli ve uluslararası misafirlerle olan erişimini artır. Faydaların bir özeti.",
+        "list": [
+          "Google'da işletme olarak ve tekliflerinle görün.",
+          "Yeni bir satış kanalı aç.",
+          "Ücretsiz müşteri destek hizmetimizden yararlan.",
+          "Rezervasyon sistemini bağla ve mevcutlıklarını orada direkt yönet.",
+          "Yeni bir rezervasyon - senin müşterin. Ortaklarımızı gizlemiyoruz ve müşteriye en iyi rezervasyon deneyimini sunmak istiyoruz.",
+          "Sabit maliyet veya gizli ücret yok.",
+          "Müşterilerin, Twint, faturaya satın alma ve yaygın kredi kartları gibi tüm yerel ödeme yöntemleriyle ödeme yapabilirler."
+        ]
+      }
+    },
+    "affiliate": {
+      "title": "Affiliate",
+      "description": "Swiss Activities'te partner ol ve ilk rezervasyonundan itibaren %1 ile %5 arasında komisyon kazan. Sabit maliyet yok.",
+      "hero": {
+        "title": "Şimdi Swiss Activities'in Affiliate Partneri ol.",
+        "description": "Swiss Activities'in affiliate programına kaydol ve cazip entegrasyon araçlarından, %1 ile %5 arasında komisyon ve 45 gün cookie süresinden faydalan.",
+        "steps": [
+          "Kaydol.",
+          "Aktivitelerimizi uygula.",
+          "Rezervasyonlar oluştur ve para kazan."
+        ],
+        "button": "Şimdi kaydol."
+      },
+      "form": {
+        "tos": "Ben <a target='_blank' href='/agb/affiliates/'>Genel İş Koşullarını</a> kabul ediyorum."
+      },
+      "advantagesTitle": "Swiss Activities'in affiliate partneri olarak avantajların neler?",
+      "advantages": [
+        {
+          "title": "1'500+ Eğlence Aktiviteleri",
+          "text": "Swiss Activities’in bir ortaklık ortağı olarak, yalnızca birkaç tıklama ile İsviçre genelinde 1'500'den fazla eğlence aktivitesine erişim sağlıyorsun."
+        },
+        {
+          "title": "Cazip şartlar",
+          "text": "Her yönlendirdiğin rezervasyon için %1 ile %5 arasında komisyon alırsın. Cookie süresi 45 gündür."
+        },
+        {
+          "title": "Okuyucularını ilham ver.",
+          "text": "Blogunu veya web siteni ilham verici içeriklerle canlandır ve topluluğuna boş zaman planlamasında zaman kazandır."
+        },
+        {
+          "title": "Kolay kayıt.",
+          "text": "Kolay ve hızlı bir kayıttan yararlan."
+        },
+        {
+          "title": "Doğrudan bilet satışı",
+          "text": "Biletleri doğrudan web sitende satma imkanına sahip olup okuyucularını bizlere yönlendirmeden yapabilirsin."
+        },
+        {
+          "title": "Özel HTML",
+          "text": "Çok yönlü ve çekici tasarlanmış özel HTML araçlarımız sayesinde satış fırsatlarını özelleştirebilirsin."
+        }
+      ],
+      "faqTitle": "En önemli sorular cevaplandı.",
+      "faq": [
+        {
+          "title": "Swiss Activities'in affiliate programına nasıl kayıt olunur?",
+          "text": "Bu sayfadaki formu tüm gerekli bilgileri doldurarak kaydol. Başvurunu bir iş günü içinde gözden geçireceğiz ve kabul edilirse giriş bilgilerini e-posta ile göndereceğiz."
+        },
+        {
+          "title": "Affiliate partner panomla nasıl giriş yapabilirim?",
+          "text": "Kayıt sırasında kişisel şifreni belirliyorsun. Bilgilerin kontrol edildikten sonra, bildirim alacaksın ve <a href='https://swissactivities.tapfiliate.com/login' target='_blank'>bu linkten</a> affiliate panona giriş yapabilirsin."
+        },
+        {
+          "title": "Affiliate program hakkında daha fazla bilgiyi nerede bulabilirim?",
+          "text": "Yardım masa üzerinden <a href='https://intercom.help/swiss-activities/de/collections/3916117-affiliate-moglichkeiten-zur-einbindung' target='_blank'>ilk adımlar</a>'ı ve <a href='https://intercom.help/swiss-activities/de/collections/3916117-affiliate-moglichkeiten-zur-einbindung' target='_blank'>aktivitemizin entegrasyonuna dair en önemli soruları</a> bulabilirsin. Ayrıca kaydından sonra yardımcı ipuçları içeren bir dizi e-posta alacaksın."
+        },
+        {
+          "title": "Swiss Activities'in affiliate partneri kim olabilir?",
+          "text": "Eğer İsviçre turizmiyle, İsviçre'deki boş zaman aktiviteleriyle veya genel olarak seyahatle ilgili bir blog veya web sitesi işletiyorsan, affiliate programımıza kaydolabilirsin. Ayrıca, affiliate bağlantısı ekleyebileceğin bir Instagram, Pinterest veya Facebook hesabın varsa, bizimle kaydolabilirsin."
+        },
+        {
+          "title": "Affiliate programdan ayrılabilir miyim?",
+          "text": "Elbette. Hiçbir minimum dönem bağlamıyorsun. Hesabını silmek istersen, e-posta veya sohbet yoluyla bize bildir ve gerekli olan her şeyi yapacağız."
+        },
+        {
+          "title": "Yönlendirilen her rezervasyon için ne kadar komisyon alırım?",
+          "text": "Bir müşteriyi bize yönlendirirsen %1 ile %5 arasında komisyon alırsın. Müşteri rezervasyonunu iptal ederse, maalesef sana komisyon ödeyemeyeceğiz."
+        }
+      ]
+    },
+    "apps": {
+      "title": "Swiss Activities App",
+      "description": "İsviçre'yi Swiss Activities App ile yaşa – eğlence aktivitelerini doğrudan akıllı telefonun üzerinden keşfet, karşılaştır ve rezerve et.",
+      "hero": {
+        "title": "Cebinde İsviçre macerası",
+        "description": "Swiss Activities uygulaması ile İsviçre'nin dört bir yanında {amount} etkinliğe doğrudan erişim sağlıyorsun. Deneyimler bul, saniyeler içinde rezervasyon yap ve tüm biletlerini ve rezervasyonlarını her zaman göz önünde tut.",
+        "features": [
+          "Biletler her zaman elinin altında",
+          "Rezervasyonları kolayca yönet",
+          "Her zevke uygun yeni deneyimler keşfet",
+          "Biletler çevrimdışı olarak da mevcut"
+        ]
+      }
+    },
+    "travelGuide": {
+      "title": "İsviçre için seyahat planlayıcı.",
+      "description": "İsviçre çok yönlü bir ülkedir ve seyahatiniz için inanılmaz birçok şey sunmaktadır. Yani küçük alanın seni aldatmasına izin verme. İsviçre, İsveç, Kaliforniya veya Fas'tan on kat daha küçük olmasına rağmen, herkesin beğenebileceği bir şey bulacaksınız. Akdeniz altındaki Tessin'de, hareketli Basel'den tamamen farklı bir dünyadasın. Dağlık Alpstein ise Cenevre Gölü bölgesinin ılıman ikliminden çok daha farklı bir iklime sahiptir. Ve bu, bu yerlerin yalnızca üç ila dört saat uzaklıkta olmasına rağmen. Blogumuzda seyahat planlamanda sana yardımcı olacağız. Sizlere yardımcı seyahat ipuçları ve bilgilendirici bilgiler sağlayacağız, böylece mükemmel bir şekilde hazırlanabilirsiniz. İsviçre'yi ilk kez ziyaret etmen ya da zaten iyi tanıdığından bağımsız olarak, makalelerimiz hem ilk ziyaret edenler hem de gerçek İsviçre bilginleri için uygundur.",
+      "intro": "İsviçre çok yönlü bir ülkedir ve seyahatiniz için inanılmaz birçok şey sunmaktadır. Yani küçük alanın seni aldatmasına izin verme. İsviçre, İsveç, Kaliforniya veya Fas'tan on kat daha küçük olmasına rağmen, herkesin beğenebileceği bir şey bulacaksınız. Akdeniz altındaki Tessin'de, hareketli Basel'den tamamen farklı bir dünyadasın. Dağlık Alpstein ise Cenevre Gölü bölgesinin ılıman ikliminden çok daha farklı bir iklime sahiptir. Ve bu, bu yerlerin yalnızca üç ila dört saat uzaklıkta olmasına rağmen. Blogumuzda seyahat planlamanda sana yardımcı olacağız. Sizlere yardımcı seyahat ipuçları ve bilgilendirici bilgiler sağlayacağız, böylece mükemmel bir şekilde hazırlanabilirsiniz. İsviçre'yi ilk kez ziyaret etmen ya da zaten iyi tanıdığından bağımsız olarak, makalelerimiz hem ilk ziyaret edenler hem de gerçek İsviçre bilginleri için uygundur."
+    },
+    "travelRoutes": {
+      "title": "İsviçre seyahat rotaları",
+      "description": "İsviçre çok çeşitli bir ülkedir ve seyahatiniz için inanılmaz birçok şey sunar. Küçük alanı sizi yanıltmasın. İsviçre, İsveç, Kaliforniya veya Fas'tan yaklaşık on kat daha küçüktür, ancak herkesin hoşuna gidecek bir şey bulacaksınız. Akdeniz iklimine sahip Ticino'da, yoğun Basel'den tamamen başka bir dünyadasınız. Ve dağlık Alpstein, yumuşak Cenevre Gölü bölgesinden çok farklı bir güneş iklimine sahiptir. Ve bu, bu yerler sadece üç ila dört saat mesafede olmasına rağmen. Blogumuzda seyahat planlamanızda size yardımcı oluyoruz. Size hazırlık yapabilmeniz için faydalı seyahat ipuçları ve bilgilendirici bilgiler sağlıyoruz. İster İsviçre’ye ilk kez gidiyor olun, ister zaten iyi tanıyor olun, bunun hiç önemi yok. Makalelerimiz hem yeni ziyaretçiler hem de gerçekten İsviçre’yi tanıyanlar için uygundur."
+    },
+    "widget": {
+      "title": "Swiss Activities'i web sitenize entegre edin",
+      "description": "Swiss Activities'i web sitenin içine entegre et ve aktiviteleri doğrudan web sitenden sat.",
+      "hero": {
+        "title": "Swiss Activities'ten teklifleri web sitenize entegre edin",
+        "description": "Swiss Activities Widget, aktiviteleri web sitenize entegre etmenin en kolay yoludur. Çeşitli widget türlerinden birini seçin ve birkaç dakika içinde entegre edin.",
+        "button": "Şimdi entegre et"
+      },
+      "cta": {
+        "title": "Ortak ol",
+        "button": "Form için git"
+      }
+    },
+    "newsletterConfirm": {
+      "title": "Kaydınız için teşekkür ederiz. Kayıt işleminizi onaylamak için size hemen bir mesaj gönderdik."
+    },
+    "newsletterSuccess": {
+      "title": "Teşekkürler! Artık haber bültenimize abone oldunuz."
+    },
+    "cookiePolicy": {
+      "title": "Çerez politikası"
+    },
+    "vouchers": {
+      "title": "İsviçre için deneyim hediye fikirleri – Swiss Activities'deki en iyi kuponlar",
+      "description": "Swiss Activities'tan bir deneyim kuponuyla unutulmaz anlar hediye et! İsviçre'deki en geniş eğlence etkinlikleri yelpazesini keşfet – esnek, kolay ve hemen çevrimiçi rezervasyon yapılabilir. Her etkinlik için mükemmel bir hediye fikri.",
+      "hero": {
+        "title": "Şimdi İsviçre için bir deneyim kuponu hediye et ve sevinç paylaş!",
+        "text": "Şimdi en iyi hediye fikirlerini ve deneyim kuponlarını Swiss Activities'ta keşfet. Doğum günü, Noel hediyesi olarak ya da sadece teşekkür etmek için – İsviçre'deki bir deneyim için bir kupon herkesin zevkine hitap eder ve kesinlikle hatırlanacak bir hediyedir.",
+        "button": "Kupon satın al"
+      },
+      "gift": {
+        "title": "İsviçre'nin en iyi deneyimlerini hediye et – maceradan rahatlamaya kadar",
+        "text": "İsviçre'deki arkadaşların veya ailen için eşsiz bir hediye fikri mi arıyorsun? Swiss Activities'tan bir deneyim kuponu, sana İsviçre’nin sunabileceği en geniş eğlence etkinliklerine erişim sağlar. Rehberli turlar, doğada maceralar, kaplıcalardaki rahatlatıcı anlar ya da müzelerde kültürel anlar – Swiss Activities özel anlar hediye etmeni sağlar."
+      },
+      "why": {
+        "title": "Neden Swiss Activities'tan bir deneyim kuponu mükemmel bir hediye fikri?",
+        "items": [
+          {
+            "title": "İsviçre'nin en büyük seçimi",
+            "text": "1,600'den fazla eğlence teklifi, açık hava maceralarından rahatlama anlarına kadar."
+          },
+          {
+            "title": "100,000'den fazla memnun müşteri",
+            "text": "Swiss Activities, özel hediyeler ve geziler için kanıtlanmış bir ortaktır."
+          },
+          {
+            "title": "Ücretsiz iptal seçeneği",
+            "text": "İhtiyaçlara göre uyarlanabilen güvenli ve esnek rezervasyonlar."
+          },
+          {
+            "title": "5 yıldızlı müşteri desteği",
+            "text": "İsviçre kalitesi ve desteği – sorunsuz bir deneyim için."
+          }
+        ]
+      },
+      "end": {
+        "title": "İsviçre'de deneyim hediye kuponları ver ve mutluluk yarat!",
+        "text": "Swiss Activities'te en iyi hediye fikirlerini ve deneyim kuponlarını keşfet. Doğum günü için, Noel hediyesi olarak veya sadece teşekkür etmek için – İsviçre'deki deneyimler için bir kupon herkesin zevkine uygundur ve kalıcı anılar yaratır.",
+        "button": "Kuponu seç"
+      },
+      "banner": {
+        "tagline": "YENİ: Mükemmel hediyelik fikir!",
+        "title": "Bir macera hediye kuponu kap",
+        "button": "Buraya tıkla"
+      }
+    }
+  },
+  "filter": {
+    "nearby": "Yakınlardaki aktiviteleri görüntüle",
+    "results": "Sonuçları göster",
+    "filter": "Filtre",
+    "search": "Ara",
+    "location": "Yer",
+    "types": "Tür",
+    "categories": "Kategori",
+    "activity": "Etkinlik",
+    "activities": "Etkinlikler",
+    "today": "Bugün",
+    "tomorrow": "Yarın",
+    "price": "Fiyat",
+    "noResults": "Sonuç yok",
+    "noExactResults": {
+      "title": "Hiçbir doğru sonuç bulunamadı",
+      "description": "Bazı filtrelerini değiştirmeyi veya kaldırmayı ya da arama alanını ayarlamayı dene.",
+      "showNearest": "En yakın sonuçları göster",
+      "resetDate": "Tarih aralığını sıfırla"
+    },
+    "lang": "Diller",
+    "sort": {
+      "relevance": "Geçerlilik",
+      "distance": "Senden uzaklık",
+      "popularityDesc": "Popülerlik azalan",
+      "ratingDesc": "Derecelendirme azalan",
+      "ratingAsc": "Yükselen değerlendirme",
+      "priceDesc": "Fiyat azalan",
+      "priceAsc": "Fiyat artan",
+      "dateDesc": "Önce en yeni",
+      "dateAsc": "Önce en eski"
+    },
+    "navigationBreadcrumbs": {
+      "root": "İsviçre"
+    },
+    "all": "Tüm",
+    "map": "Harita",
+    "card": {
+      "from": "itibaren",
+      "person": "kişi başı"
+    },
+    "viewMore": "Daha fazla göre",
+    "ratingBetterThan": "{val} yıldızdan daha iyi",
+    "ratingEqual": "{val} yıldız",
+    "ratingNone": "YENİ / Değerlendirme yok",
+    "moreFilters": "{val} daha fazla göster",
+    "lessFilters": "Daha az göster",
+    "usedFilters": "Uygulanan filtreler",
+    "resetFilters": "Sıfırla",
+    "discountTypes": "İndirimler",
+    "calendar": "Takvim",
+    "locationError": "Konum yüklenemedi",
+    "textOnly": "Sadece metinli yorumlar"
+  },
+  "activity": {
+    "you": "sen",
+    "nearby": "{distance}km uzaklıkta {location}",
+    "nearbyAlt": "{distance}km uzaklıkta",
+    "recommendation": "Tavsiye",
+    "reviews": "İncelemeler",
+    "reviewOriginalIn": "Orijinal {language} dilinde",
+    "booked": "{val} kez rezerve edildi",
+    "providedBy": "Etkinlik sağlayıcısı",
+    "save": "Kaydet",
+    "selectDate": "Tarihi seçin",
+    "similarActivities": "Benzer etkinlikler",
+    "question": "Size nasıl yardımcı olabiliriz?",
+    "rating": "Derece",
+    "highDemand": "Yüksek talep",
+    "widget": {
+      "free": "mevcut",
+      "error500": "Bir sorun oluştu, lütfen 1 dakika içinde tekrar deneyin.",
+      "errorDate": "Maalesef, {val} için başka slot yok.",
+      "choose": "seç",
+      "titleTime": "Teklif seçin",
+      "titleTicketOption": "Bilet seçeneğini seç",
+      "titleParticipants": "Katılımcıları seçin",
+      "titleTickets": "Biletleri seçin",
+      "confirmOffer": "Bilet seçeneğini onayla",
+      "confirmTickets": "Katılımcıları onayla",
+      "confirmDate": "Tarihi onayla",
+      "confirmDateTime": "Tarih ve saati onayla",
+      "cheapest": "En düşük fiyat",
+      "time": "Zaman",
+      "navTicket": "Biletler",
+      "check": "Uygunluğu kontrol et",
+      "notBookable": "Maalesef, bu teklif şu anda rezervasyona kapalı.",
+      "paymentMethods": "Ödeme yöntemleri",
+      "totalPrice": "Toplam fiyat",
+      "taxes": "Ek ücretler",
+      "offerTimeSelect": "Zamanı seçin",
+      "basket": "Alışveriş sepeti",
+      "basketAdd": "Alışveriş sepetine ekle",
+      "selectedOffer": "Teklif",
+      "adjust": "Rezervasyonu düzenleyin",
+      "swissHalfFareCard": "İsviçre dışında yaşayanlar&nbsp;<a href=\"/bahnpaesse/swiss-half-fare-card/\" target=\"_blank\" className=\"inline-block\">buradan Swiss Half Fare Card alabilir</a> ve bunu toplu taşıma indirimleri için kullanabilirler."
+    },
+    "tabs": {
+      "highlights": "Ayrıntılar",
+      "includes": "Hizmetler",
+      "importantInformation": "Önemli bilgiler",
+      "meetingPoints": "Buluşma noktaları"
+    },
+    "newsletter": {
+      "title": "Artık hiçbir aktiviteyi kaçırmayın",
+      "description": "Haber bültenine abone olun ve seyahat ipuçları, boş zaman için fikirler ve İsviçre'den uygun seyahat kılavuzları alın.",
+      "signup": "Kaydol",
+      "inputPlaceholder": "E-posta adresin"
+    },
+    "notRefundable": {
+      "title": "İptal edilemez",
+      "description": "Üzgünüm, ortak politikalarımız nedeniyle size bir geri ödeme teklif edemiyoruz, bu ürüne ilişkin rezervasyonunuzu değiştiremiyoruz veya iptal edemiyoruz."
+    }
+  },
+  "UI": {
+    "date": "Tarih"
+  },
+  "home": {
+    "title": "Senin deneyimin burada başlıyor"
+  },
+  "discover": {
+    "title": "Aktiviteleri keşfet"
+  },
+  "booking": {
+    "cancelable": "İptal ücreti olmadan",
+    "privacyMessage": "Ödeme yapmaya devam ederek <tos>{text}</tos> ve Swiss Activities AG'nin iptal şartlarını kabul ediyorsun.",
+    "privacyPolicy": "şartlar ve koşullar",
+    "personalTitle": "Rezervasyon bilgileri",
+    "personalSubtitle": "Rezervasyonu tamamlamak için lütfen aşağıdaki bilgileri doldurun.",
+    "mainGuest": "İletişim kişisi",
+    "fullName": "İsim",
+    "lastName": "Soyadı",
+    "email": "E-posta",
+    "phoneNumber": "Telefon numarası",
+    "cardDetails": "Ödeme yöntemleri",
+    "paymentSecure": "Güvenli ödeme - verilerinizi korumak için SSL şifrelemesi kullanıyoruz",
+    "creditPayments": "Kredi Kartları",
+    "total": "Toplam",
+    "fullDay": "Tam gün",
+    "booknow": "Şimdi rezervasyon yap",
+    "addMoreInformation": "Daha fazla bilgi ekle",
+    "addPaymentMethod": "Bir ödeme yöntemi seç",
+    "youBook": "Sepet",
+    "rebate": "İndirim kodu",
+    "rebateEmailRequired": "Lütfen önce e-posta adresini gir ve bir indirim kodunu kullanmak için onayla.",
+    "important": "Etkinlik(ler)in \"Önemli Bilgiler\" bölümünde belirtilen gereklilikleri kabul ettim.",
+    "importantShow": "Bilgileri göster",
+    "importantHide": "Bilgileri gizle"
+  },
+  "confirm": {
+    "title": "Swiss Activities ile rezervasyonun için teşekkürler.",
+    "confirmed": "Rezervasyonun onaylandı.",
+    "pending": "Rezervasyon işleniyor.",
+    "cancelled": "Rezervasyon iptal edildi.",
+    "failed": "Üzgünüm, ne yazık ki bir hata oluştu.",
+    "failedPayment": "Ödeme işlenemedi. Lütfen farklı bir ödeme yöntemi ile tekrar dene.",
+    "failedReservation": "Ne yazık ki, rezervasyon onaylanamadı. Ödeme iade edilecek. Lütfen tekrar dene.",
+    "wait": "Ödeme sağlayıcımızdan ödemenin onaylanıp onaylanmadığını kontrol ediyoruz.",
+    "waitEmail": "Ödeme onaylandığında e-posta alacaksın.",
+    "caption": "Swiss Activities ile rezervasyon yaptığın için çok teşekkür ederiz. Sana bir onay e-postası gönderdik.",
+    "bookingNumber": "Rezervasyon numarası",
+    "point": "Buluşma noktası",
+    "pointAddress": "Buluşma noktası adresi",
+    "number": "Cep telefonu numarası",
+    "end": "Bitiş",
+    "email": "Rezervasyon onayın {email} adresine gönderildi. Eğer onu önümüzdeki birkaç dakika içinde almazsan, lütfen destek ile sohbet üzerinden iletişim kur.",
+    "transport": {
+      "title": "Toplu taşıma ile mi geleceksin?",
+      "from": "Senin yerin",
+      "description": "Toplu taşıma ile rahat bir yolculuk yap ve mobil biletini doğrudan bu rezervasyona ekle.",
+      "button": "Bilet ekle"
+    }
+  },
+  "footer": {
+    "company": {
+      "title": "Şirket",
+      "about-us": "Hakkımızda",
+      "jobs": "İş İmkanları",
+      "legal": "Hukuki"
+    },
+    "resources": {
+      "title": "Kaynaklar"
+    },
+    "collaboration": {
+      "title": "İş birliği",
+      "becomeapartner": "Ortak ol",
+      "affiliate": "Ortaklık Programı",
+      "widget": "Widget"
+    },
+    "affiliate": {
+      "title": "Ortak kodu",
+      "button": "Kodu kopyala",
+      "buttonCopied": "Kod kopyalandı!"
+    },
+    "contact": {
+      "title": "Müşteri hizmetleri",
+      "faq": "Sıkça Sorulan Sorular (SSS)",
+      "cookie": "Çerez izinleri"
+    },
+    "mobileApp": "Uygulamamızı al"
+  },
+  "tickets": {
+    "discounts": {
+      "noDiscount": "İndirim yok"
+    },
+    "showDiscounts": "Müşteri ve indirim kartlarını göster",
+    "travelClass": "Seyahat sınıfı"
+  },
+  "supplier": {
+    "activities": "Aktiviteler"
+  },
+  "contactPopup": {
+    "modalTitle": "Bugün sana nasıl yardımcı olabiliriz?"
+  },
+  "contactForm": {
+    "fullname": "Adı",
+    "email": "E-posta",
+    "subject": "Konu",
+    "messagePlaceholder": "Katılımcılar, deneyim seviyesi, grup özel istekler, vb...",
+    "submit": "Gönder",
+    "formError": "Bir şeyler ters gitti. Lütfen tekrar deneyin."
+  },
+  "contactThankYou": {
+    "title": "İletişime geçtiğin için teşekkür ederiz!"
+  },
+  "internalLinkBlock": {
+    "destinations": "En iyi Destinasyonlar",
+    "locations": "En iyi Tatil Bölgeleri",
+    "topActivities": "En İyi Aktiviteler",
+    "topAttractions": "En İyi Cazibe Merkezleri"
+  },
+  "offerCard": {
+    "bookNow": "Şimdi rezerve et"
+  },
+  "breadcrumbsBasket": {
+    "stepOne": "Seçimin",
+    "stepOneDescription": "Alışveriş sepeti",
+    "stepTwo": "Detayların",
+    "stepTwoDescription": "Ödeme",
+    "stepThree": "Son adım",
+    "stepThreeDescription": "Ödeme"
+  },
+  "usps": {
+    "or": "veya",
+    "allDay": "Tüm gün",
+    "bookable": {
+      "title": "Rezervasyon yapılabilir",
+      "description": "İçin {val}"
+    },
+    "online": {
+      "title": "Biletinizi Online Rezervasyon Yapın"
+    },
+    "payment": {
+      "title": "Hesapla veya Twint ile öde"
+    },
+    "duration": {
+      "title": "Süre",
+      "durationMinutes": "{val} dakika",
+      "duration": "{val} saat",
+      "durations": "{val} saat",
+      "durationDay": "{val} gün",
+      "durationDays": "{val} gün"
+    },
+    "mobileTicket": {
+      "title": "Mobil bilet kabul edilir",
+      "description": "Telefonunu kullan veya voucheri yazdır"
+    },
+    "confirmation": {
+      "title": "Anında rezervasyon onayı",
+      "description": "Ek ücret yok"
+    },
+    "queue": {
+      "title": "Sıra beklemeyeceksin"
+    },
+    "cancel": {
+      "title": "Ücretsiz iptal",
+      "description": "Başlangıçtan {val} saat önce iptal edilirse tam geri ödeme",
+      "descriptionDays": "Başlangıçtan {val} gün önce iptal edilirse tam geri ödeme",
+      "subtitle": "Başlangıç zamanından itibaren en fazla {val} saat içinde",
+      "subtitleDays": "Başlangıç zamanından itibaren en fazla {val} gün içinde"
+    },
+    "meetingPoint": {
+      "title": "Buluşma noktası"
+    },
+    "discount": {
+      "title": "İndirim"
+    },
+    "request": {
+      "title": "Talep üzerine rezervasyon",
+      "description": "Bu rezervasyon sağlayıcı tarafından yeniden onaylanmalıdır",
+      "extra": "Bu teklif, sağlayıcının mevcutlığına dayanmaktadır. Rezervasyon öncelikle sağlayıcı tarafından onaylanmalıdır. Onlar, rezervasyondan sonra seninle iletişime geçecek. Aktivite gerçekleştirilemezse, tüm tutar iade edilir."
+    },
+    "validity": {
+      "title": "Geçerlilik"
+    },
+    "openingHours": {
+      "title": "Açılış saatleri"
+    }
+  },
+  "widgetConfigurator": {
+    "title": "Widget'ı yapılandır",
+    "type": "Tür",
+    "lang": "Dil",
+    "other": "Farklı bir aktivite seç",
+    "topBar": "Ayarlar çubuğu",
+    "hideAll": "Hepsini gizle",
+    "hideSearch": "Aramayı gizle",
+    "hideSize": "Boyut değiştiricisini gizle",
+    "hideFilter": "Filtre düğmesini gizle",
+    "hideMap": "Harita düğmesini gizle",
+    "hideQuickFilter": "Hızlı filtreyi gizle",
+    "hideSort": "Sıralamayı gizle",
+    "buttonText": "Düğme metni",
+    "buttonBackground": "Düğme arka planı",
+    "buttonColor": "Düğme metin rengi",
+    "search": "Önceden doldurulmuş arama"
+  },
+  "types": {
+    "activity": "Aktivite",
+    "overview": "Genel Bakış",
+    "location": "Yer",
+    "locationType": "Yer + Tür",
+    "type": "Tür",
+    "attribute": "Kategori",
+    "locationAttribute": "Yer + Kategori",
+    "poi": "Turistik Yer"
+  },
+  "reviewForm": {
+    "title": "Deneyimini değerlendir",
+    "button": "Şimdi Değerlendir",
+    "rating": "Puan",
+    "comment": "Yorum",
+    "thanks": "Değerlendirmeniz için teşekkürler!",
+    "next": "Bir sonraki rezervasyonu değerlendir",
+    "finish": "Pencere 3 saniye içinde kapanacak"
+  },
+  "user": {
+    "welcome": "Panon içine hoş geldin {name}!",
+    "menu": {
+      "activities": "Aktiviteler",
+      "bookings": "Rezervasyonlar",
+      "suppliers": "Sağlayıcılar",
+      "reviews": "Yorumlar",
+      "settings": "Ayarlar",
+      "chat": "Sohbet",
+      "logout": "Çıkış Yap",
+      "login": "Giriş yap"
+    }
+  },
+  "SettingsForm": {
+    "title": "Profilini tamamla",
+    "titleUpdate": "Profilini güncelle",
+    "submit": "Gönder",
+    "phoneNumber": "Lütfen telefon numaranı bir kez daha kontrol et.",
+    "email": "E-posta geçerli değil",
+    "iban": "IBAN geçerli değil",
+    "reseller": {
+      "title": "Bayii",
+      "merchantName": "Tüccar Adı",
+      "merchantAddress": "Tüccar Adresi",
+      "bankAccountHolder": "Hesap Sahibinin Adı",
+      "bankAccountIban": "Hesap IBAN'ı",
+      "bankAccountHolderAddress": "Hesap Sahibinin Adresi",
+      "contact": {
+        "title": "İletişim Bilgileri",
+        "name": "İsim",
+        "businessRole": "İş Rolü",
+        "email": "E-posta",
+        "phone": "Telefon"
+      }
+    },
+    "payment": {
+      "title": "Kaydedilen Ödeme Yöntemleri",
+      "removeTitle": "Ödeme yöntemini kaldır"
+    }
+  },
+  "Repeater": {
+    "add": "Ekle",
+    "remove": "Kaldır"
+  },
+  "Table": {
+    "booking": {
+      "refresh": "Yenile"
+    },
+    "clearFilters": "Filtreleri temizle",
+    "noResults": "Hiçbir sonuç bulunamadı.",
+    "view": {
+      "title": "Görüntüle",
+      "adjust": "Sütunları ayarla"
+    },
+    "header": {
+      "bookingId": "Rezervasyon Numarası",
+      "date": "Tarih",
+      "bookingDate": "Rezervasyon Tarihi",
+      "serviceDate": "Etkinlik Tarihi",
+      "description": "Açıklama",
+      "location": "Konum",
+      "name": "İsim",
+      "email": "E-posta",
+      "type": "Tip",
+      "price": "Fiyat başlıyor",
+      "sold": "Satıldı",
+      "rating": "Puan",
+      "supplier": "Sağlayıcı",
+      "bookingStatus": "Rezervasyon Durumu",
+      "paymentStatus": "Ödeme Durumu",
+      "total": "Toplam",
+      "actions": "Eylemler",
+      "duration": "Süre",
+      "validity": "Geçerlilik",
+      "bookable": "Rezervasyonlu",
+      "createdAt": "Oluşturulma Tarihi",
+      "commission": "Komisyon",
+      "status": "Durum",
+      "reservationSystem": "Rezervasyon Sistemi",
+      "bapiId": "BAPI ID",
+      "capiId": "CAPI ID",
+      "notes": "Notlar",
+      "distributor": "Dağıtıcı",
+      "website": "Web sitesi",
+      "validities": "Geçerlilikler"
+    },
+    "actions": {
+      "aria": "Eylemleri Aç",
+      "details": "Ayrıntıları Göster",
+      "book": "Şimdi Rezervasyon Yap"
+    },
+    "sort": {
+      "ascending": "Artan",
+      "descending": "Azalan",
+      "hide": "Gizle",
+      "bookable": "Sadece rezervasyonlu aktiviteleri göster"
+    },
+    "pagination": {
+      "page": "Sayfa",
+      "of": "dan",
+      "entriesPerPage": "Sayfa başına Girdi",
+      "goToFirstPage": "İlk sayfaya git",
+      "goToLastPage": "Son sayfaya git",
+      "goToNextPage": "Sonraki sayfaya git",
+      "goToPreviousPage": "Önceki sayfaya git"
+    },
+    "search": {
+      "activities": "Aktivitelere göz at",
+      "bookings": "Rezervasyonlara göz at",
+      "offers": "Tekliflere göz at",
+      "suppliers": "Sağlayıcıları ara",
+      "bookingId": "Rezervasyon numarası ile ara",
+      "email": "E-posta ile ara",
+      "familyName": "Soyadı ile ara"
+    },
+    "cell": {
+      "bookingStatusActive": "Onaylandı",
+      "bookingStatusPending": "Beklemede",
+      "bookingStatusCancelled": "İptal Edildi",
+      "paymentStatusActive": "Ödendi",
+      "paymentStatusPending": "Beklemede",
+      "paymentStatusRefunded": "İade Edildi"
+    }
+  },
+  "Drawer": {
+    "close": "Kapat"
+  },
+  "PaymentMethod": {
+    "card": {
+      "new": "Yeni Kart",
+      "store": "Lütfen kredi kartı bilgilerimi gelecekte hızlı bir çıkış için kaydet.",
+      "endsIn": "{val} ile bitiyor"
+    }
+  },
+  "Activity": {
+    "new": "Yeni Aktivite",
+    "nav": {
+      "general": "Genel"
+    }
+  },
+  "Offer": {
+    "new": "Yeni Teklif"
+  },
+  "Supplier": {
+    "new": "Yeni Sağlayıcı"
+  },
+  "UspSlider": {
+    "title": "Neden Swiss Activities üzerinden rezervasyon yapmalısın?",
+    "items": [
+      "İsviçre'nin en büyük seçimi",
+      "100'000'den fazla memnun müşteri",
+      "Ücretsiz iptal seçeneği",
+      "5 yıldızlı İsviçre müşteri desteği",
+      "90 saniyede mobil bilet al"
+    ]
+  },
+  "AppBanner": {
+    "title": "Uygulamayı şimdi indir",
+    "description": "Swiss Activities'i keşfet – kolay ve hızlı"
+  },
+  "Transport": {
+    "bookTrip": "Bağlantıyı rezerve et",
+    "button": {
+      "confirmTrip": "Bağlantıyı onayla",
+      "confirmTravelers": "Seyahat edenleri onayla"
+    },
+    "checkDetails": "Bağlantı bilgilerini kontrol et",
+    "class": {
+      "first": "1. Sınıf",
+      "second": "2. Sınıf"
+    },
+    "direct": "Doğrudan",
+    "duration": {
+      "minutes": "Dak."
+    },
+    "earlierTrips": "Önceki bağlantılar",
+    "errorLoadingTrips": "Bağlantılar yüklenemedi.",
+    "laterTrips": "Sonraki bağlantılar",
+    "legend": "Açıklama",
+    "loadingTrips": "Seferler yükleniyor...",
+    "oneWay": "Sadece gidiş",
+    "roundTrip": "Gidiş-Dönüş",
+    "searchTrips": "Seferleri ara",
+    "selectOriginDestination": "Bağlantıları aramak için kalkış ve varış yerini seç.",
+    "selectProduct": "Bilet seçeneği belirt",
+    "selectTravelers": "Yolcuları seç",
+    "switch": "Aktarma",
+    "ticket": "Bilet",
+    "tickets": "Biletler",
+    "transfer": "Aktarma yap",
+    "tripResults": "Seferler",
+    "upgradeTo1stClass": "Ekstra konfor",
+    "upgradeTo1stClassDescription": "1. sınıf seyahati",
+    "cityTicketDescription": "Şehiriçi ulaşım bileti",
+    "via": "üzerinden",
+    "travelDate": "Seyahat tarihi seç",
+    "confirmTravelDate": "Seyahat tarihini onayla",
+    "departure": "Kalkış",
+    "arrival": "Varış",
+    "locationDisabled": "Konum paylaşımı devre dışı.",
+    "locationError": "Konum belirlenemedi",
+    "noProductsAvailable": "Hiçbiri mevcut değil.",
+    "disclaimer": "Tüm bilgiler garanti edilmez.",
+    "validity": "Geçerlilik",
+    "validityOnSelectedRoute": "Sadece seçilen rotada",
+    "validityForConnection": "Sadece seçtiğin bağlantı için",
+    "validityForConnectionWith2ndClass": "Sadece seçtiğin bağlantı için ve 2. sınıf geçerli bir bilet ile",
+    "validityForRouteWith2ndClass": "Sadece seçtiğin rota için ve 2. sınıf geçerli bir bilet ile",
+    "validityGARoutes": "Tüm GA bölge hatlarında geçerlidir",
+    "validityDayClassUpgrade": "Sadece 2. sınıf için Günlük Bilet, Yarım Fiyatlı, GA ya da Swiss Travel Pass (Flex) ile.",
+    "includedIn": "Dahil",
+    "validityDateRange": "{fromDate} - {toDate}, {toTime}",
+    "validityConnection": "{date} {fromTime}'dan itibaren, {toTime}'da",
+    "classUpgradeOnly": "Sadece sınıf yükseltme",
+    "loadingDestination": "Yükleniyor",
+    "distanceToMeetingPoint": "Buluşma noktası",
+    "walking": "Yürüyerek",
+    "arrivalInfo": "Varış zamanı hesaplandı: {walkingTime} yürüyüş + Buluşma noktasına kadar 15 dk yastık süresi",
+    "timeBeforeEvent": "Etkinlikten {minutes} dk. önce · İstasyondan {walkingMinutes} dk. yürüyüş mesafesi",
+    "tooLateForActivity": "Aşağıdaki seferler, buluşma noktasına zamanında ulaşamıyor"
+  }
+}

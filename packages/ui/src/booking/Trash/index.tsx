@@ -4,10 +4,11 @@ import { useBookingStore } from "../store";
 import { Button } from "@swiss-activities/ui";
 import { Text } from "@swiss-activities/ui";
 import { useI18n } from "../utils/i18n/useI18n";
-import { Activities, dataLayerSend } from "../utils/thirdParty/dataLayerSend";
+import { type Activities, useDataLayer } from "../utils/thirdParty/dataLayerSend";
 import { useDeleteReservation } from "../query/booking/deleteReservation";
 
 export const Trash = () => {
+  const { dataLayer } = useDataLayer();
   const { t } = useI18n();
   const { activity, setActive, reservation } = useBookingStore(
     useShallow((state) => ({
@@ -32,7 +33,7 @@ export const Trash = () => {
       reservationId: reservation?.reservationId as string,
     });
 
-    dataLayerSend({
+    dataLayer({
       obj: {
         event: "remove_from_cart",
       },

@@ -2,7 +2,7 @@ import {
   useTransportStore,
   useTransportStoreLocal,
 } from "./store";
-import { dataLayerSend } from "../utils/thirdParty/dataLayerSend";
+import { sendDataLayer } from "../utils/thirdParty/dataLayerSend";
 
 const getBaseItem = () => {
   const local = useTransportStoreLocal.getState();
@@ -64,7 +64,7 @@ export const sendTransportEvent = (
 ) => {
   const base = getBaseItem();
 
-  dataLayerSend({
+  sendDataLayer({
     data: {
       event,
       ecommerce: {

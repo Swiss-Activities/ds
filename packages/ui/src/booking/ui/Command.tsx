@@ -1,6 +1,6 @@
 "use client";
 
-import {
+import type {
   ComponentProps,
   ComponentPropsWithoutRef,
   ElementRef,

@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import type { ReactNode } from "react";
 import { Card as DSCard } from "@swiss-activities/ui";
 import type { BaseCardProps } from "@swiss-activities/ui/card/card.types";
 import { cn } from "../utils/css/cn";

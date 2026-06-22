@@ -1,5 +1,5 @@
 import type { Price } from "./generated";
-import { TUser } from "./user";
+import type { TUser } from "./user";
 
 type TPrice = Price;
 

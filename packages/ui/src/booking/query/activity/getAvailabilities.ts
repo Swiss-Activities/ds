@@ -1,7 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import dayjs from "dayjs";
-import { TActivity } from "../../types/activity";
-import { TOfferBooking } from "../../types/offerBooking";
+import type { TActivity } from "../../types/activity";
+import type { TOfferBooking } from "../../types/offerBooking";
 import { useDistributorId } from "../../utils/user/useDistributorId";
 import { axiosInstance } from "../axios";
 import { syncOffer } from "../offers/syncOffer";

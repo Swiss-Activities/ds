@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { TransportationType } from "../../../types/transport";
+import type { TransportationType } from "../../../types/transport";
 import { cn } from "../../../utils/css/cn";
 
 type TypeProps = {

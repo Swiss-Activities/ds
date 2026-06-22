@@ -5,7 +5,7 @@ import { useAvailabilities } from "./hooks";
 import { Title } from "../../Title";
 import { useBookingStore } from "../../store";
 import { Text } from "@swiss-activities/ui";
-import { TOfferBooking } from "../../types/offerBooking";
+import type { TOfferBooking } from "../../types/offerBooking";
 import { Button } from "@swiss-activities/ui";
 import { toISO } from "../../utils/dates/toISO";
 import { useI18n } from "../../utils/i18n/useI18n";

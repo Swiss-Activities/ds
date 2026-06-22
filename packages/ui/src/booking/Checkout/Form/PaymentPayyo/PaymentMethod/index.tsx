@@ -1,4 +1,4 @@
-import { KeyboardEvent, ReactNode, useEffect } from "react";
+import { type KeyboardEvent, type ReactNode, useEffect } from "react";
 import { useShallow } from "zustand/react/shallow";
 import { useCartStore } from "../../../../Cart/store";
 import { useCheckoutStore } from "../../../store";
@@ -6,10 +6,10 @@ import { Checkbox } from "../../../../components/Form/Checkbox";
 import { Radio } from "../../../../components/Form/Radio";
 import { I } from "../../../../components/I";
 import { Text } from "@swiss-activities/ui";
-import { TUser } from "../../../../types/user";
+import type { TUser } from "../../../../types/user";
 import { cn } from "../../../../utils/css/cn";
 import { useI18n } from "../../../../utils/i18n/useI18n";
-import { Activities, dataLayerSend } from "../../../../utils/thirdParty/dataLayerSend";
+import { type Activities, useDataLayer } from "../../../../utils/thirdParty/dataLayerSend";
 import { useUser } from "../../../../utils/user/useUser";
 
 type PaymentMethodProps = {
@@ -24,6 +24,7 @@ export const PaymentMethod = ({
   title,
   value,
 }: PaymentMethodProps) => {
+  const { dataLayer } = useDataLayer();
   const { t } = useI18n();
   const { user } = useUser() as unknown as {
     user: TUser;
@@ -45,7 +46,7 @@ export const PaymentMethod = ({
   const isActive = value === data.paymentMethod;
   const handleClick = () => {
     setData({ paymentMethod: value });
-    dataLayerSend({
+    dataLayer({
       obj: {
         event: "add_payment_info",
         payment_type: value,

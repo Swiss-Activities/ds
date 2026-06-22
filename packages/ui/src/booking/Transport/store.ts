@@ -1,9 +1,9 @@
 import { create } from "zustand";
 import { persist, createJSONStorage } from "zustand/middleware";
 import { useBookingStore } from "../store";
-import { TOfferBooking } from "../types/offerBooking";
-import { TReservation } from "../types/reservation";
-import { TransportPlaceRef, TransportTrip } from "../types/transport";
+import type { TOfferBooking } from "../types/offerBooking";
+import type { TReservation } from "../types/reservation";
+import type { TransportPlaceRef, TransportTrip } from "../types/transport";
 
 type TransportStore = {
   active: "trip" | "tickets" | "products" | "personalized" | "trash";

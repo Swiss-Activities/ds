@@ -9,13 +9,13 @@ import { Button } from "@swiss-activities/ui";
 import { I } from "../components/I";
 import { StaticImage } from "../components/StaticImage";
 import { useSearchStore } from "../store/search";
-import { TBooking } from "../types/booking";
-import { TCart } from "../types/cart";
+import type { TBooking } from "../types/booking";
+import type { TCart } from "../types/cart";
 import { cn } from "../utils/css/cn";
 import { secureLocalStorage } from "../utils/data/secureLocalStorage";
 import { DateService } from "../utils/dates/DateService";
 import { useI18n } from "../utils/i18n/useI18n";
-import { dataLayerSend } from "../utils/thirdParty/dataLayerSend";
+import { useDataLayer } from "../utils/thirdParty/dataLayerSend";
 import { useGetActivity } from "../query/activity/getActivity";
 import { useGetCart } from "../query/booking/getCart";
 
@@ -36,6 +36,7 @@ const ComplimentaryActivity = ({
   mainOfferId,
   type,
 }: ComplementaryActivityProps) => {
+  const { dataLayer } = useDataLayer();
   const { t, locale } = useI18n();
   const { data: cart } = useGetCart(
     secureLocalStorage.getItem("cartId") as string
@@ -83,7 +84,7 @@ const ComplimentaryActivity = ({
       item.commission_group_code = activity.summary.adStrategy;
     }
 
-    dataLayerSend({
+    dataLayer({
       data: {
         event: "select_item",
         ecommerce: {
@@ -164,6 +165,7 @@ export const ComplementaryActivities = ({
   className?: string;
   type?: "md" | "lg";
 }) => {
+  const { dataLayer } = useDataLayer();
   const { locale } = useI18n();
   const hasSentViewItemList = useRef(false);
   const { data: cart } = useGetCart(
@@ -238,7 +240,7 @@ export const ComplementaryActivities = ({
       return item;
     });
 
-    dataLayerSend({
+    dataLayer({
       data: {
         event: "view_item_list",
         ecommerce: {

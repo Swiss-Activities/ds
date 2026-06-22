@@ -14,14 +14,14 @@ import { Title } from "../../Title";
 import { useBookingStore } from "../../store";
 import { I } from "../../components/I";
 import { Skeleton } from "@swiss-activities/ui";
-import { TActivity } from "../../types/activity";
-import { TOfferBooking } from "../../types/offerBooking";
+import type { TActivity } from "../../types/activity";
+import type { TOfferBooking } from "../../types/offerBooking";
 import { cn } from "../../utils/css/cn";
 import { DateService } from "../../utils/dates/DateService";
 import { toISO } from "../../utils/dates/toISO";
 import { useI18n } from "../../utils/i18n/useI18n";
-import { dataLayerSend } from "../../utils/thirdParty/dataLayerSend";
-import { MonthlyAvailability } from "../../query/activity/getMonthlyAvailabilities";
+import { useDataLayer } from "../../utils/thirdParty/dataLayerSend";
+import type { MonthlyAvailability } from "../../query/activity/getMonthlyAvailabilities";
 import { useGetMonthlyDates } from "../../query/activity/getMonthlyDates";
 
 export const CLASS_ARROW =
@@ -35,6 +35,7 @@ const DynamicCalendar = dynamic(() =>
 );
 
 export const BookingCalendarV2 = () => {
+  const { dataLayer } = useDataLayer();
   const { t, locale } = useI18n();
   const {
     activity,
@@ -164,7 +165,7 @@ export const BookingCalendarV2 = () => {
 
         if (firstAvailableDate && !date) {
           setDate(firstAvailableDate[0]);
-          dataLayerSend({ obj: { event: "select_date" } });
+          dataLayer({ obj: { event: "select_date" } });
         }
         setInitialLoad(false);
       }
@@ -310,7 +311,7 @@ export const BookingCalendarV2 = () => {
               newDate: Parameters<NonNullable<CalendarProps["onChange"]>>[0]
             ) => {
               setDate(DateService.formatDate(dayjs(newDate as Date).toDate()));
-              dataLayerSend({
+              dataLayer({
                 obj: {
                   event: "select_date",
                 },

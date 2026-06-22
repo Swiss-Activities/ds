@@ -23,7 +23,7 @@ import { useTransportStoreLocal } from "../../store";
 import { sendTransportEvent } from "../../tracking";
 import { useDrawerStore } from "../../../store/drawer";
 import { Toast } from "../../../components/Toast";
-import { TransportTrip } from "../../../types/transport";
+import type { TransportTrip } from "../../../types/transport";
 import { Button } from "@swiss-activities/ui";
 import { cn } from "../../../utils/css/cn";
 import { useI18n } from "../../../utils/i18n/useI18n";

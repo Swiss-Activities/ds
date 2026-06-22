@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { ChangeEvent, InputHTMLAttributes } from "react";
+import type { ChangeEvent, InputHTMLAttributes } from "react";
 import { Skeleton } from "@swiss-activities/ui";
 import { Text } from "@swiss-activities/ui";
 import { cn } from "../../../utils/css/cn";

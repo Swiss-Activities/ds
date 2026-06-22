@@ -7,9 +7,10 @@ import { SettingsSheet } from "./SettingsSheet";
 import { useTransportStoreLocal } from "../store";
 import { Button } from "@swiss-activities/ui";
 import { TimeInput } from "../../ui/TimeInput";
-import { dataLayerSend } from "../../utils/thirdParty/dataLayerSend";
+import { useDataLayer } from "../../utils/thirdParty/dataLayerSend";
 
 export const Settings = () => {
+  const { dataLayer } = useDataLayer();
   const [sheetOpen, setSheetOpen] = useState(false);
   const [flyoutOpen, setFlyoutOpen] = useState(false);
   const { time, setTime, resetDateTime } = useTransportStoreLocal(
@@ -45,7 +46,7 @@ export const Settings = () => {
               value={time}
               onChange={(d) => {
                 setTime(d);
-                dataLayerSend({
+                dataLayer({
                   data: {
                     event: "transport_select_time",
                     selected_time: `${String(d.getHours()).padStart(2, "0")}:${String(d.getMinutes()).padStart(2, "0")}`,

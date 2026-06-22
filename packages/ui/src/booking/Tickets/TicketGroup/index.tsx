@@ -4,7 +4,7 @@ import { Participant } from "../Participant";
 import { SwissHalfFareCard } from "../SwissHalfFareCard";
 import { useTickets } from "../hooks";
 import { useBookingStore } from "../../store";
-import { TOfferBooking } from "../../types/offerBooking";
+import type { TOfferBooking } from "../../types/offerBooking";
 import { cn } from "../../utils/css/cn";
 import { useI18n } from "../../utils/i18n/useI18n";
 

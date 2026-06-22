@@ -10,9 +10,10 @@ import {
   DropdownMenuTrigger,
 } from "../../../ui/DropdownMenu";
 import { useI18n } from "../../../utils/i18n/useI18n";
-import { dataLayerSend } from "../../../utils/thirdParty/dataLayerSend";
+import { useDataLayer } from "../../../utils/thirdParty/dataLayerSend";
 
 export const Calendar = () => {
+  const { dataLayer } = useDataLayer();
   const { locale } = useI18n();
   const [open, setOpen] = useState(false);
   const { calendarDate, setCalendarDate } = useTransportStoreLocal(
@@ -51,7 +52,7 @@ export const Calendar = () => {
             if (!d) return;
             setCalendarDate(d);
             setOpen(false);
-            dataLayerSend({
+            dataLayer({
               data: {
                 event: "transport_select_date",
                 selected_date: d.toISOString().split("T")[0],

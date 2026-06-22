@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import { TransportTrip } from "../../types/transport";
+import type { TransportTrip } from "../../types/transport";
 import { axiosApiInstanceWithCsrf, axiosInstanceProd } from "../axios";
 
 export interface GetTripParams {

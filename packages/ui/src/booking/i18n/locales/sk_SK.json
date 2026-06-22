@@ -1,0 +1,1799 @@
+{
+  "general": {
+    "accountAdvantages": "Aby si využil zľavy a ďalšie výhody, vytvor si účet alebo sa prihlás.",
+    "activityBook": "Rezervovať aktivitu",
+    "addTicket": "Pridať lístok",
+    "adult": "{val} dospelý",
+    "adults": "{val} dospelí",
+    "ageChoose": "Vyber vek",
+    "ageFrom": "Od {val} rokov",
+    "ageOld": "{val} rokov",
+    "ageUnder": "Menej ako {val} rokov",
+    "all": "Všetko",
+    "allReviews": "Všetky recenzie",
+    "backToBookings": "Späť k rezerváciám",
+    "bookAsGuest": "Dokončuješ proces objednávky ako hosť.",
+    "cancel": "Zrušiť",
+    "cancelled": "Zrušené",
+    "cartAmount": "Hodnota košíka",
+    "child": "{val} dieťa",
+    "children": "{val} detí",
+    "chooseSelection": "Potvrdiť výber",
+    "confirm": "Potvrdiť",
+    "confirmCancel": "Potvrdiť zrušenie",
+    "contact": "Kontakt",
+    "copyUrl": "Kopírovať URL",
+    "couple": "Pár",
+    "customerServiceFee": "Poplatok za služby",
+    "data": "Dáta",
+    "date": "Dátum",
+    "dateChoose": "Vyber dátum",
+    "delete": "Zmazať",
+    "didYouMean": "Myslíš na <suggestion>{email}</suggestion>?",
+    "duplicate": "Duplikovať",
+    "emailsDontMatch": "Zadané e-mailové adresy sa nezhodujú.",
+    "export": "Exportovať",
+    "faqType": "Najčastejšie otázky k {type} vo Švajčiarsku",
+    "from": "Od",
+    "group": "Skupina",
+    "helpfulQuestion": "Užitočné?",
+    "informationPlural": "Informácie",
+    "language": "Jazyk",
+    "loginOrRegister": "Prihlásiť sa alebo zaregistrovať",
+    "manageBookings": "Spravovať rezervácie",
+    "mobileAppAddon": "Stiahni si našu mobilnú aplikáciu a pohodlne spravuj svoje rezervácie, rýchlo pristupuj k svojim lístkom a nájdi svoje ďalšie dobrodružstvo.",
+    "mostImportantInSummary": "To najdôležitejšie stručne",
+    "noResults": "Žiaľ, nenašli sme žiadne výsledky pre tvoj vyhľadávací termín",
+    "noReviewsYet": "Zatiaľ žiadne recenzie",
+    "notes": "Poznámky",
+    "oneMonth": "1 mesiac",
+    "openChat": "Otvor chat",
+    "order": "Poradie",
+    "partSum": "Medzisúčet",
+    "participants": "Účastníci",
+    "participantsChoose": "Vyber účastníkov",
+    "past": "Minulé",
+    "personalizeTickets": "Prispôsobiť lístky",
+    "pleaseSelect": "Vyberte prosím",
+    "pleaseSelectItem": "Prosím vyber {val}",
+    "questionsChatActivity": "Máš ešte otázky k tejto aktivite? Chat taj nás",
+    "questionsChatBooking": "Máš ešte otázky k rezervácii? Chat taj nás",
+    "raw": "Raw",
+    "rebate": "Zľava",
+    "recaptcha": "Táto webová stránka je chránená službou reCAPTCHA. Google\n<a href=\"https://policies.google.com/privacy\" target=\"_blank\">Zásady ochrany osobných údajov</a> a\n<a href=\"https://policies.google.com/terms\" target=\"_blank\">Podmienky služby</a> platia.",
+    "remove": "Odstrániť",
+    "removeFromCart": "Odstrániť z nákupného košíka",
+    "reset": "Obnoviť nastavenia",
+    "searchNow": "Hľadaj teraz",
+    "single": "Jednotlivec",
+    "soldOut": "Vypredané",
+    "somethingWentWrongContact": "Je nám ľúto, ale niečo sa pokazilo. Skús to prosím znova alebo sa obráť na podporu.",
+    "successfullySaved": "Úspešne uložené",
+    "ticket": "Lístok",
+    "tickets": "Lístky",
+    "to": "Do",
+    "currentLocation": "Aktuálna poloha",
+    "toDashboard": "Moje rezervácie",
+    "translate": "Preložiť",
+    "tryAgain": "Skús znova",
+    "upcoming": "Nadchádzajúce",
+    "when": "Kedy",
+    "who": "Kto",
+    "wrongDate": "Niečo nie je v poriadku s dátumom: Skontroluj a vyber znovu.",
+    "wrongDateParticipant": "Dátum narodenia účastníka sa nezhoduje s vekovým údajom v ponuke.",
+    "today": "Dnes",
+    "apply": "Použiť"
+  },
+  "aria": {
+    "forward": "Ďalej",
+    "backward": "Späť"
+  },
+  "auth0": {
+    "accept": "Akceptujem [podmienky používania]({link})",
+    "error": "Prosím, akceptuj podmienky používania",
+    "resetPasswordHint": "Žiadny e-mail nedostal? Skontroluj svoj spamový priečinok. Ak si sa zaregistroval/a cez Apple alebo Google, prosím, použi túto metódu prihlásenia."
+  },
+  "menu": {
+    "menu": "Menu",
+    "search": "Hľadať",
+    "travelGuide": "Plánovač ciest",
+    "travelRoutes": "Cesty",
+    "contactus": "Kontaktuj nás",
+    "switzerland": "Švajčiarsko",
+    "help": "Čet",
+    "voucher": "Kúpiť voucher",
+    "voucherSm": "Voucher",
+    "partners": "Partneri",
+    "provider": "Poskytovatelia",
+    "affiliate": "Affiliate partneri"
+  },
+  "chat": {
+    "chats": "Všetky chaty",
+    "newChat": "Nový chat",
+    "noChatsYet": "Ešte žiadne chaty",
+    "typeMessage": "Zadaj správu",
+    "welcome": "Ahoj a vitaj na Swiss Activities! Som Housibot a rád ti pomôžem s tvojimi otázkami.",
+    "welcomeReview": "Ahoj! Aký bol tvoj zážitok? Som Housibot a rád ti pomôžem zdieľať tvoju spätnú väzbu."
+  },
+  "supportBanner": {
+    "title": "Potrebujete pomoc pri hľadaní správnej lyžiarskej školy?",
+    "placeholder": "Ako ti môžeme pomôcť?",
+    "send": "Odoslať"
+  },
+  "pages": {
+    "404": {
+      "title": "Stránka neexistuje.",
+      "description": "Tato stránka neexistuje.",
+      "button": "Späť na domovskú stránku",
+      "search": "Spustiť vyhľadávanie"
+    },
+    "home": {
+      "title": "Swiss Activities - Nájdite a rezervujte si svoju aktivitu vo Švajčiarsku",
+      "description": "Swiss Activities je tvoje miesto pre voľnočasové aktivity vo Švajčiarsku. Objavuj, porovnávaj a rezervuj nespočetné množstvo aktivít.",
+      "gatewayCards": {
+        "categories": {
+          "castlesRuins": "Hrad / Ruina",
+          "castleEvents": "Podujatie na hrade",
+          "exhibitions": "Výstava",
+          "fireplaces": "Ohnisko",
+          "movies": "Film",
+          "museums": "Múzeum",
+          "playgrounds": "Detské ihrisko",
+          "swimmingBathing": "Plávanie & Kúpanie"
+        },
+        "dateRange": {
+          "from": "Od",
+          "until": "Do"
+        },
+        "distance": {
+          "unit": "km"
+        }
+      },
+      "gatewayDetail": {
+        "back": "Späť",
+        "moreInfo": "Viac informácií",
+        "source": "Otvoriť zdroj",
+        "labels": {
+          "admission": "Vstupné",
+          "address": "Adresa",
+          "ageRating": "Vek",
+          "bookTickets": "Rezervovať vstupenky",
+          "canton": "kantón",
+          "cast": "Obsadenie",
+          "category": "Kategória",
+          "cinema": "Kino",
+          "countryYear": "Krajina / Rok",
+          "dateRange": "Obdobie",
+          "director": "Réžia",
+          "duration": "Trvanie",
+          "entryFeeAdult": "Dospelí",
+          "entryFeeChild": "Deti",
+          "foundedYear": "Založené",
+          "genres": "Žánre",
+          "location": "Miesto",
+          "museumCategory": "Typ múzea",
+          "openTrailer": "Otvoriť trailer",
+          "openingHours": "Otvorené hodiny",
+          "phone": "Telefón",
+          "poolLength": "Dĺžka bazéna",
+          "trailer": "Trailer",
+          "venue": "Miesto konania",
+          "waterType": "Typ vody"
+        },
+        "sections": {
+          "amenities": "Vybavenie",
+          "badges": "Odporúčania",
+          "information": "Informácie",
+          "prices": "Ceny",
+          "showtimes": "Predstavenia",
+          "venue": "Miesto konania"
+        },
+        "amenities": {
+          "capacityPersons": "Kapacita",
+          "hasBenches": "Lavice",
+          "hasChangingRooms": "Šatne",
+          "hasDivingBoard": "Skokanská doska",
+          "hasFirewood": "Drevo na oheň",
+          "hasFoodService": "Stravovanie",
+          "hasGrillGrate": "Grilovací rošt",
+          "hasKidsPool": "Detský bazén",
+          "hasLifeguard": "Záchranná služba",
+          "hasLockers": "Uzamykateľné skrinky",
+          "hasPlaygroundNearby": "Detské ihrisko v blízkosti",
+          "hasShowers": "Sprchy",
+          "hasSlide": "Dlhý tobogán",
+          "hasShelter": "Prístrešok",
+          "hasTable": "Stôl",
+          "hasToilet": "Toaleta",
+          "hasWater": "Voda"
+        },
+        "waterTypes": {
+          "indoorPool": "Krytý bazén",
+          "lake": "Jazero",
+          "outdoorPool": "Vonkajší bazén",
+          "pool": "Plavecký bazén",
+          "river": "Rieka"
+        }
+      }
+    },
+    "s": {
+      "title": "Swiss Activities - Hľadaj a rezervuj si svoju aktivitu",
+      "description": "Swiss Activities je tvoje miesto pre voľnočasové aktivity vo Švajčiarsku. Objavuj, porovnávaj a rezervuj nespočetné množstvo aktivít.",
+      "sort": {
+        "distance": {
+          "notSupported": "Služby polohy nie sú podporované tvojím prehliadačom. Používa sa triedenie podľa relevantnosti.",
+          "permissionDenied": "Aby si mohol triediť podľa vzdialenosti, povoľ prístup k tvojej polohe v nastaveniach prehliadača a obnov stránku.",
+          "positionUnavailable": "Informácie o polohe nie sú dostupné.",
+          "timeout": "Vypršal čas pri zisťovaní polohy.",
+          "unknownError": "Vyskytla sa neznáma chyba.",
+          "fallbackMessage": "Používa sa triedenie podľa relevantnosti.",
+          "errorPrefix": "Poloha nemohla byť určená. "
+        }
+      }
+    },
+    "chat": {
+      "title": "Swiss Activities Chat",
+      "description": "Swiss Activities je tvojou destináciou pre voľnočasové aktivity vo Švajčiarsku. Objavuj, porovnávaj a rezervuj nespočetné voľnočasové aktivity."
+    },
+    "transport": {
+      "title": "Švajčiarske vlakové lístky, pasy a denný lístky | Swiss Travel Pass, SBB Spartageskarte",
+      "description": "Porovnávaj a rezervuj vlakové lístky, Swiss Travel Pass, Halbtax, SBB Spartageskarte a regionálne pasy pre celú Švajčiarsko. Ihneď ako mobilný lístok na telefón.",
+      "trust": {
+        "partners": "Oficiálny partner",
+        "ratingValue": "4.8",
+        "ratingLabel": "400'000+ spokojných cestovateľov",
+        "ratingShortLabel": "400 000+ cestovateľov"
+      },
+      "discountMap": {
+        "title": "Tu šetríš so svojím pasom",
+        "subtitle": "Lanovky, lode a top výlety – vyber si pas a zisti, kde je čo.",
+        "free": "Zahŕňa",
+        "discount50": "−50 %",
+        "discount25": "−25 %",
+        "noDiscount": "Žiadna zľava",
+        "altitude": "{m} m.n.m.",
+        "moreInfo": "Zisti viac",
+        "selectPass": "Vybrať pas",
+        "selectCategory": "Vybrať kategóriu",
+        "categories": {
+          "mountain": "Lanovky",
+          "lake": "Jazerá & lode",
+          "museum": "Múzeá"
+        },
+        "airports": {
+          "zrh": "Zürich",
+          "gva": "Ženeva"
+        },
+        "regions": {
+          "bernerOberland": "Berner Oberland",
+          "jungfrau": "Jungfrau",
+          "interlaken": "Interlaken",
+          "zentralschweiz": "Stredné Švajčiarsko",
+          "ostschweiz": "Východné Švajčiarsko",
+          "waadt": "Vaud",
+          "engadin": "Engadin",
+          "wallis": "Wallis",
+          "tessin": "Tessin",
+          "genferseeregion": "Region Ženevského jazera",
+          "zuerich": "Zürich",
+          "mittelland": "Stredné Švajčiarsko",
+          "luzern": "Lucerne",
+          "basel": "Basel",
+          "bern": "Bern",
+          "lausanne": "Lausanne",
+          "geneve": "Ženeva",
+          "zermatt": "Zermatt",
+          "fribourg": "Freiburg",
+          "graubuenden": "Graubünden"
+        }
+      },
+      "hero": {
+        "title": "Vlakové lístky pre celé",
+        "titleAccent": "Švajčiarsko",
+        "lede": "Lístky na trasy, denný lístky a zľavové ponuky SBB – ihneď ako mobilný lístok na tvoj telefón.",
+        "subtitle": "Lístky na trasy, denný lístky a zľavové ponuky SBB – ihneď ako mobilný lístok na tvoj telefón.",
+        "searchTitle": "Hľadať spojenia",
+        "searchMeta": "Stanica · Dátum · Cestujúci",
+        "fromPlaceholder": "Počiatočná stanica/mesto",
+        "toPlaceholder": "Cieľová stanica/mesto",
+        "badges": {
+          "rating": "4.8 / 5 · 400'000+ hodnotení",
+          "partner": "Oficiálny partner SBB"
+        },
+        "usps": {
+          "customers": {
+            "title": "400'000 šťastných zákazníkov",
+            "subline": "Dôvera od roku 2021 v Swiss Activities"
+          },
+          "saver": {
+            "title": "Ušetríš až 50%",
+            "subline": "S lístkami a dennými lístkami SBB"
+          },
+          "mobile": {
+            "title": "Ihneď ako mobilný lístok",
+            "subline": "Priamo na tvoj telefón, nie je potrebné prihlásenie do SBB"
+          },
+          "earlyBird": {
+            "title": "Zľavy pre predplatiteľov",
+            "subline": "Plánuj vopred a kupuj zľavnené lístky a zľavové denný lístky SBB"
+          }
+        }
+      },
+      "benefits": {
+        "title": "Tvoje výhody",
+        "discount": {
+          "eyebrow": "Zľavové lístky",
+          "title": "Ušetri až 40%",
+          "subline": "SBB zľavy a denné lístky",
+          "badge": "Najpredávanejšie"
+        }
+      },
+      "passes": {
+        "title": "SBB a regionálne pasy",
+        "subtitle": "Porovnávaj viacdenné pasy, denný lístky a regionálne pasy – vyber si pas, ktorý ti prinesie najviac výhod.",
+        "tabs": {
+          "multiDay": "Viacdenné pasy",
+          "dayPass": "Denné pasy",
+          "regional": "Regionálne pasy"
+        },
+        "buy": "Kúpiť teraz",
+        "from": "od",
+        "moreInfo": "Viac info",
+        "seeDiscounts": "Prezrieť všetky zľavy",
+        "viewAllByTab": {
+          "multiDay": "Prezrieť všetky vlakové pasy",
+          "dayPass": "Prezrieť všetky SBB denný lístky",
+          "regional": "Prezrieť všetky regionálne pasy"
+        },
+        "empty": "Aktuálne žiadne produkty nie sú dostupné – pozri aj v iných kategóriách.",
+        "descriptions": {
+          "fallback-stp": "Cestovanie po Švajčiarsku s vlakom, autobusom a loďou – bezplatné vstupy do múzeí vrátane.",
+          "fallback-stpf": "Využiť verejnú dopravu v zvolených dňoch – vrátane bezplatných vstupov do múzeí.",
+          "fallback-shfc": "Jeden mesiac za polovičnú cenu na vlak, autobus, loď a lanovky.",
+          "fallback-halbtax": "Celý deň voľný vstup po celom Švajčiarsku – s tvojim Halbtax.",
+          "fallback-spar": "Denný lístok za najlepšiu cenu pri vopred zakúpení – počet je obmedzený na deň.",
+          "fallback-ga": "Plná mobilita na jeden deň – ako GA, len na 24 hodín.",
+          "fallback-tell": "Voľný vstup v strednej Švajčiarsku: lanovky, plavby loďou a verejná doprava vrátane.",
+          "fallback-bo": "Objavuj región Jungfrau a Interlaken – vlaky, lode a lanovky s jedným pasom.",
+          "fallback-jtp": "Top of Europe: lanovky, verejná doprava a hlavné atrakcie okolo Grindelwaldu, Wengenu, Mŕtveho mora."
+        },
+        "usps": {
+          "1330": [
+            "Harder Kulm & Brienzer Rothorn vrátane",
+            "Až −50 % na lyžiarske strediská Grindelwald-Wengen",
+            "MHD & lanovky regiónu Jungfrau"
+          ],
+          "1438": [
+            "First, Schynige Platte & Niesen vrátane",
+            "−25 % na Jungfraujoch Top of Europe",
+            "Vlak, loď a lanovky s jedným pasom"
+          ],
+          "1440": [
+            "1 mesiac polovičná cena na celom území",
+            "Na vlak, autobus, loď a lanovky",
+            "Aj na zľavnené lístky SBB"
+          ],
+          "1447": [
+            "Vlak, autobus a loď zdarma po celej krajine",
+            "Až −50 % na lanovky (Jungfraujoch −25 %)",
+            "Viac ako 500 múzeí zdarma"
+          ],
+          "1448": [
+            "Aktivovať v zvolených dňoch po celej krajine",
+            "Až −50 % na lanovky, autobusy, lode",
+            "Viac ako 500 múzeí zdarma"
+          ],
+          "1450": [
+            "Pilatus, Rigi & Stanserhorn vrátane",
+            "Lode na Vierwaldstättersee zdarma",
+            "Vlak, autobus a lanovky v strednej Švajčiarsku"
+          ],
+          "1664": [
+            "Denný lístok od CHF 29",
+            "Až −70 % pri včasnej rezervácii",
+            "Obmedzený počet na deň"
+          ],
+          "1671": [
+            "Deti 6–16 za rodinnú cenu",
+            "Po celej krajine všetky SBB spoje",
+            "Perfektné pre rodinné výlety"
+          ],
+          "1676": [
+            "1 deň voľný vstup s Halbtax",
+            "Po celej krajine na SBB linkách",
+            "Lacnejšie ako viacero jednotlivých lístkov"
+          ]
+        },
+        "soldCount": "{count} rezervovaných",
+        "reviews": "({count})",
+        "discounts": {
+          "1330": "Harder Kulm vrátane.",
+          "1438": "First & Niesen vrátane.",
+          "1440": "Polovičná cena",
+          "1447": "Lanovky −50 %",
+          "1448": "Lanovky −50 %",
+          "1450": "Pilatus & Rigi vrátane.",
+          "1664": "Až −70 %",
+          "1671": "Rodinná cena"
+        },
+        "benefits": {
+          "includedHeading": "Zahŕňa",
+          "discountedHeading": "Zľavy",
+          "expand": "Prezrieť všetky zľavy",
+          "collapse": "Zobraziť menej",
+          "items": {
+            "1330": {
+              "included": [
+                "Harder Kulm a Brienzer Rothorn",
+                "MHD regiónu Jungfrau (vlak, autobus, loď)"
+              ],
+              "discounted": [
+                "Lyžiarske oblasti Grindelwald-Wengen až −50 %",
+                "Lyžiarske stredisko Mürren-Schilthorn až −50 %",
+                "Jungfraujoch, Top of Europe −25 %"
+              ]
+            },
+            "1438": {
+              "included": [
+                "First, Schynige Platte a Niesen",
+                "Brienzer Rothorn a Stockhorn",
+                "Železnica, loď a lanovky v regióne Jungfrau"
+              ],
+              "discounted": [
+                "Jungfraujoch, Top of Europe −25 %",
+                "Schilthorn (James Bond) −50 %"
+              ]
+            },
+            "1440": {
+              "included": [],
+              "discounted": [
+                "50 % na vlakové, autobusové a loďové lístky",
+                "50 % na lanovky",
+                "Môže sa kombinovať so SBB zľavnenými lístkami"
+              ]
+            },
+            "1447": {
+              "included": [
+                "Vlak, autobus a loď po celom Švajčiarsku",
+                "Viac ako 500 múzeí",
+                "MHD v 90 švajčiarskych mestách"
+              ],
+              "discounted": [
+                "Lanovky až −50 %",
+                "Jungfraujoch Top of Europe −25 %",
+                "RailAway ponuky SBB −30 %"
+              ]
+            },
+            "1448": {
+              "included": [
+                "Vlak, autobus a loď v zvolených dňoch",
+                "Viac ako 500 múzeí",
+                "MHD v 90 švajčiarskych mestách"
+              ],
+              "discounted": [
+                "Lanovky až −50 %",
+                "Jungfraujoch Top of Europe −25 %",
+                "RailAway ponuky SBB −30 %"
+              ]
+            },
+            "1450": {
+              "included": [
+                "Pilatus, Rigi a Stanserhorn",
+                "Lode na Vierwaldstättersee",
+                "Železnica, autobus a lanovky stredného Švajčiarska"
+              ],
+              "discounted": []
+            },
+            "1664": {
+              "included": [
+                "1 deň voľný vstup po celej krajine"
+              ],
+              "discounted": [
+                "Denný lístok od CHF 29",
+                "Až −70 % pri včasnej rezervácii"
+              ]
+            },
+            "1671": {
+              "included": [
+                "SBB spojenia po celej Švajčiarsku na 1 deň"
+              ],
+              "discounted": [
+                "Rodinná cena pre deti 6–16 rokov",
+                "−50 % na bežné celodenné lístky"
+              ]
+            },
+            "1676": {
+              "included": [
+                "1 deň voľný vstup s Halbtax"
+              ],
+              "discounted": [
+                "Lacnejšie ako viacero jednotlivých lístkov"
+              ]
+            }
+          }
+        }
+      },
+      "articles": {
+        "title": "Zaujímavé články o svete vlakov",
+        "subtitle": "Tipy, porovnania a praktické informácie k SBB lístkom, cestovným lístkom a MHD v Švajčiarsku.",
+        "read": "Prečítať článok",
+        "tag": "Časopis"
+      },
+      "dayPasses": {
+        "title": "Obľúbené celodenné lístky",
+        "subtitle": "Celodenná jazda zadarmo – jednoducho kombinovateľné s tvojím lístkom.",
+        "halbtax": {
+          "title": "Celodenný lístok s Halbtax",
+          "description": "Celodenná jazda zadarmo po celej Švajčiarsku – s tvojím Halbtax. Ideálne na denný výlet do horských oblastí.",
+          "fromPrice": "od 52 CHF",
+          "cta": "Hľadať spojenie"
+        },
+        "spar": {
+          "title": "Zľavový celodenný lístok",
+          "description": "Celodenný lístok za najlepšiu cenu pri včasnej rezervácii. Obmedzený počet denne – kto rezervuje včas, platí menej.",
+          "fromPrice": "od 29 CHF",
+          "cta": "Hľadať spojenie"
+        }
+      },
+      "groups": {
+        "mountains": "Horské zážitky dostupné vlakom",
+        "dayTrips": "Obľúbené celodenné výlety z Zürichu, Bernu a Bazileja",
+        "cities": "Objavuj mestá: Vlak + zážitok",
+        "cityPasses": "City Passy: Jeden lístok, celé mesto"
+      },
+      "faq": {
+        "title": "Často kladené otázky o SBB lístkoch",
+        "items": [
+          {
+            "q": "Môžem zrušiť svoj lístok?",
+            "a": "<p><strong>Jazdné lístky</strong> môžeš zrušiť do dňa pred odchodom bez poplatku – robí sa to priamo v tvojom rezervačnom cockpit na swissactivities.com.</p><p>Pri <strong><a href=\"/sbb-tageskarten/spartageskarte-sbb/\">Zľavových lístkoch</a></strong> a zľavových jednorazových lístkoch nie je možné zrušenie. Tieto lístky sú naviazané na vybrané dátumy – pred nákupom sa zobrazuje jasný upozornenie na rezervačnej stránke.</p>"
+          },
+          {
+            "q": "Sú SBB lístky rovnaké ako na SBB okienku?",
+            "a": "Áno, dostaneš rovnaké oficiálne SBB lístky ako na okienku alebo v SBB aplikácii – bez príplatku. Takisto <a href=\"/sbb-tageskarten/\">celodenné lístky SBB</a> a <a href=\"/bahnpaesse/\">vlakové karty</a> sú 1:1 pôvodné produkty SBB."
+          },
+          {
+            "q": "Ako rýchlo dostanem svoj lístok?",
+            "a": "Ihneď. Po úspešnej rezervácii dostaneš mobilný lístok e-mailom a v rezervačnom cockpit na swissactivities.com. Žiadne SBB prihlásenie potrebné – ukáž ho priamo vo vlaku."
+          },
+          {
+            "q": "Môžem zadať Halbtax alebo GA?",
+            "a": "Áno, počas rezervácie si môžeš vybrať svoje zľavové predplatné – cena sa automaticky prispôsobí. Ak máš len Halbtax a ideš na celý deň, často sa oplatí zvoliť <a href=\"/sbb-tageskarten/sbb-tageskarte-halbtax/\">celodenný lístok SBB s Halbtax</a> namiesto viacerých jednotlivých lístkov."
+          },
+          {
+            "q": "Čo ak mešká môj vlak?",
+            "a": "Tvoj jazdný lístok platí aj na nasledujúce spojenie – jednoducho nastúp do najbližšieho vhodného vlaku. Ak meškáš viac ako jednu hodinu, môžeš cez SBB požiadať o vrátenie peňazí."
+          },
+          {
+            "q": "Oplatí sa Swiss Travel Pass alebo zľavový celodenný lístok?",
+            "a": "<p>Pravidlo: Kto je aspoň tri dni za sebou veľa na ceste vlakom, autobusom a loďou a rád navštevuje múzeá, ušetrí s <a href=\"/bahnpaesse/swiss-travel-pass-kaufen/\">Swiss Travel Pass</a>. V cene je viac ako 500 múzeí, MHD v 90 mestách a lanovky so zľavou −50 %.</p><p>Na jednotlivé celodenné výlety je <a href=\"/sbb-tageskarten/spartageskarte-sbb/\">zľavový celodenný lístok SBB</a> od 29 CHF takmer vždy najlacnejšou možnosťou – len rezervuj včas.</p>"
+          },
+          {
+            "q": "Ktorý regionálny pas sa hodí k mojej ceste?",
+            "a": "<p>Pre región Interlaken / Grindelwald / Wengen sa oplatí <a href=\"/bahnpaesse/berner-oberland-pass/\">Bernský Oberlandský pas</a> alebo v zime <a href=\"/bahnpaesse/jungfrau-travel-pass-winter/\">Jungfrau Travel Pass</a> – oba obsahujú lanovky, MHD a lode regiónu.</p><p>Okolo Vierwaldstättersee je <a href=\"/bahnpaesse/sbb-tellpass/\">Tell-Pass</a> ideálny: Pilatus, Rigi, Stanserhorn a všetky lode sú zahrnuté.</p>"
+          }
+        ]
+      }
+    },
+    "about_us": {
+      "title": "O nás - Swiss Activities",
+      "description": "Swiss Activities je tvoje miesto pre voľnočasové aktivity vo Švajčiarsku. Objavuj, porovnávaj a rezervuj nespočetné množstvo aktivít.",
+      "hero": {
+        "title": "Nájsť švajčiarske voľnočasové aktivity",
+        "text": "Swiss Activities je tvoje miesto pre voľnočasové aktivity vo Švajčiarsku. Na Swiss Activities nájdeš nespočetné množstvo voľnočasových aktivít, môžeš ich porovnávať a rezervovať si ich na niekoľko kliknutí. Nikdy nebolo jednoduchšie nájsť aktivity pre tvoj voľný čas vo Švajčiarsku."
+      },
+      "who": {
+        "title": "Kto sme",
+        "text": "Sme motivovaný tím, ktorý sa zaujíma o voľnočasové aktivity vo Švajčiarsku. Poznáme krajinu a jej obyvateľov. Vyskúšať nové aktivity je naša vášeň. Preto sme vyvinuli Swiss Activities."
+      },
+      "start": {
+        "title": "Na začiatku",
+        "text": "Keď sme v roku 2020 zistili, že nemôžeme viac cestovať, hľadali sme platformu na voľnočasové aktivity vo Švajčiarsku zameranú na Švajčiarov, ale nenašli sme. To bol začiatok destinácie voľnočasových aktivít Swiss Activities.",
+        "milestones": {
+          "march_2020": {
+            "date": "Marec 2020",
+            "title": "Začiatok modelu business Swiss Activities"
+          },
+          "march_2021": {
+            "date": "Marec 2021",
+            "title": "Založenie firmy"
+          },
+          "june_2021": {
+            "date": "Jún 2021",
+            "title": "Spustenie vlastnej platformy"
+          },
+          "september_2021": {
+            "date": "September 2021",
+            "title": "500 live rezervovateľných aktivít aktivovaných"
+          },
+          "december_2021": {
+            "date": "December 2021",
+            "title": "Úspešne uzavretá pre-seed investičná kolo"
+          },
+          "march_2022": {
+            "date": "Marec 2022",
+            "title": "Spustenie affiliate programu"
+          },
+          "may_2022": {
+            "date": "Máj 2022",
+            "title": "Spustenie B2B partneričného programu"
+          }
+        }
+      },
+      "partner": {
+        "title": "Pomáhame ti získať nových zákazníkov",
+        "text": "Swiss Activities ti pomáha nájsť nových zákazníkov. Každý deň pracujeme na tom, aby sa Swiss Activities stala najväčšou destináciou pre voľnočasové aktivity vo Švajčiarsku. Tisíce ľudí navštívia každý deň www.swissactivities.com, aby hľadali voľnočasové aktivity vo Švajčiarsku. Zobrazením svojej ponuky na Swiss Activities dosiahneš nových zákazníkov."
+      },
+      "kunden": {
+        "title": "Destinácia so všetkými voľnočasovými aktivitami vo Švajčiarsku",
+        "text": "Naším cieľom je sprístupniť všetky voľnočasové aktivity vo Švajčiarsku na www.swissactivities.com. Takto uľahčujeme vyhľadávanie, porovnávanie a rezerváciu voľnočasových aktivít pre všetkých."
+      },
+      "promise": {
+        "title": "Naše sľubovanie",
+        "list": [
+          "žiadne zdĺhavé telefonovanie",
+          "žiadne nekonečné vyhľadávanie na nespočetných webových stránkach",
+          "priamo overiteľné dostupnosti",
+          "bezodkladné rezervácie bez obchádzania",
+          "žiadne skryté náklady",
+          "jednoduché a rýchle platobné možnosti",
+          "žiadne únavné fronty",
+          "prehľad atraktívnych zliav",
+          "miestne ponuky"
+        ]
+      },
+      "team": {
+        "title": "Tím Swiss Activities"
+      }
+    },
+    "tos_b2b": {
+      "title": "Všeobecné obchodné podmienky pre poskytovateľov",
+      "description": "Toto sú naše aktuálne obchodné podmienky pre poskytovateľov."
+    },
+    "tos_b2c": {
+      "title": "Podmienky používania platformy Swiss Activities pre zákazníkov",
+      "description": "Toto sú naše aktuálne podmienky používania platformy Swiss Activities pre zákazníkov."
+    },
+    "tos_aff": {
+      "title": "Všeobecné obchodné podmienky pre affiliate partnerov",
+      "description": "Toto sú naše aktuálne obchodné podmienky pre našich affiliate partnerov."
+    },
+    "imprint": {
+      "title": "Impresum",
+      "description": "Toto je naše impresum."
+    },
+    "privacy_policy": {
+      "title": "Ochrana osobných údajov",
+      "description": "Toto je naša politika ochrany súkromia."
+    },
+    "contact_us": {
+      "title": "Kontaktuj nás",
+      "description": "S radosťou ti pomôžeme, ak máš nejaké otázky."
+    },
+    "basket": {
+      "title": "Nákupný košík",
+      "delete": "Zmazať",
+      "warning": "Chceš zmazať túto rezerváciu z tvojho nákupného košíka?",
+      "edit": "Upraviť",
+      "cancel": "Zrušiť",
+      "update": "Aktualizovať nákupný košík",
+      "next": "Na pokladňu",
+      "empty": "Tvoj nákupný košík je prázdny",
+      "hold": "Túto rezerváciu podržíme pre",
+      "explore": "Objavuj voľnočasové aktivity"
+    },
+    "booking": {
+      "title": "Rezervácia"
+    },
+    "confirmation": {
+      "title": "Potvrdenie o rezervácii",
+      "tickets": "Tvoje vstupenky",
+      "download": "Mobilná vstupenka",
+      "more": "Viac informácií",
+      "cancel": "Zrušiť vstupenku",
+      "cancelled": "Zrušené",
+      "cancelWhy": "Prečo chceš zrušiť?",
+      "cancelReasons": [
+        "Môj dovolenkový zájazd bol zrušený",
+        "Našiel som lacnejšiu alternatívu",
+        "Potvrdzujúci e-mail som nedostal včas",
+        "Poskytovateľ ma požiadal, aby som zrušil rezerváciu",
+        "Moje preferované možnosti neboli dostupné",
+        "Rezervoval som si nesprávny dátum",
+        "Rezervoval som nesprávny počet účastníkov",
+        "Iné dôvody"
+      ],
+      "rebook": {
+        "title": "Preplánovať",
+        "text": "Zmenil sa plán? Preplánuj svoju aktivitu. Tvoja stará rezervácia bude automaticky zrušená.",
+        "button": "Preplánovať teraz"
+      },
+      "stay": "Prosím, zostaň na tejto stránke, tvoja rezervácia sa práve spracováva.",
+      "editBooking": "Zmeniť rezerváciu",
+      "showTickets": "Zobraziť lístky",
+      "drawerTitle": "Tvoja rezervácia",
+      "relatedBookings": "Súvisiace rezervácie"
+    },
+    "activities": {
+      "title": "Najlepšie voľnočasové aktivity vo Švajčiarsku {year}",
+      "description": "Nájdi a rezervuj svoju vhodnú aktivitu {year} vo Švajčiarsku. Švajčiarsko ako rozmanitá krajina ponúka nespočetné aktivity a nápady na celodenný výlet.",
+      "intro": "Počas celého roka nájdeš voľnočasové aktivity na každú príležitosť. Či už plánuješ výlet s rodinou, organizuješ rozlúčku so slobodou, hľadáš vonkajšiu aktivitu alebo inšpiráciu na program na daždivé dni, zde nájdeš niečo. Na Swiss Activities si môžeš naplánovať svoj výlet na deň a rovno si ho zarezervovať.",
+      "titleParentLocation": "{locationTitle} {year}: najlepšie aktivity a ponuky",
+      "descriptionParentLocation": "Nájdite a rezervujte si najlepšie aktivity v {locationTitle}: Rezervujte si lístky na výletné ciele alebo rodinné aktivity len pár kliknutiami.",
+      "titleChildLocation": "{locationTitle} {year}: najlepšie aktivity",
+      "descriptionChildLocation": "Rezervujte si najlepšie aktivity v {locationTitle}. Rezervujte si lístky na výletné ciele alebo rodinné aktivity len pár kliknutiami.",
+      "titleParentType": "{typeTitle} {year}: Najlepšie {typeTitle} vo Švajčiarsku",
+      "descriptionParentType": "Rezervujte si najlepšie {typeTitle} z celej Švajčiarska. Žiadne čakanie, žiadne poplatky za rezerváciu a možnosti bezplatného zrušenia.",
+      "titleChildType": "{typeTitle} {year}: Najlepšie {typeTitle} ponuky vo Švajčiarsku",
+      "descriptionChildType": "Rezervujte si najlepšie ponuky na {typeTitle} z celej Švajčiarska. Žiadne čakanie, žiadne poplatky za rezerváciu a možnosti bezplatného zrušenia.",
+      "titleParentLocationParentType": "{typeTitle} {locationTitle}: Top ponuky a ceny {year}",
+      "descriptionParentLocationParentType": "Rezervuj tie najlepšie ponuky na {typeTitle} {locationTitle} {year}. Žiadne rezervačné poplatky a možnosť bezplatného stornovania.",
+      "titleParentLocationChildType": "{typeTitle} {locationTitle}: Top ponuky a ceny {year}",
+      "descriptionParentLocationChildType": "Rezervuj tie najlepšie ponuky na {typeTitle} {locationTitle} {year}. Žiadne rezervačné poplatky a možnosť bezplatného stornovania.",
+      "titleChildLocationParentType": "{typeTitle} {locationTitle}: Top ponuky a ceny {year}",
+      "descriptionChildLocationParentType": "Rezervuj tie najlepšie ponuky na {typeTitle} {locationTitle} {year}. Žiadne rezervačné poplatky a možnosť bezplatného stornovania.",
+      "titleChildLocationChildType": "{typeTitle} {locationTitle}: Top ponuky a ceny {year}",
+      "descriptionChildLocationChildType": "Rezervuj tie najlepšie ponuky na {typeTitle} {locationTitle} {year}. Žiadne rezervačné poplatky a možnosť bezplatného stornovania."
+    },
+    "listing": {
+      "title": "{listingTitle}",
+      "offersTitle": "{title} Lístky a aktivity",
+      "activities": "Aktivity",
+      "relatedListings": "Najlepšie atrakcie v {value}",
+      "relatedListingsClose": "Najlepšie atrakcie blízko {value}",
+      "description": "Zoznam pre {listingTitle}",
+      "tableOfContent": "Obsah",
+      "destinationTitle": "{location} - Najlepších {num} atrakcií a aktivít {year}",
+      "more": "Zisti viac o {val}",
+      "locations": "Miesta v blízkosti {val}",
+      "regions": "Regióny v {val}",
+      "type": "Obľúbené miesta vo Švajčiarsku pre {val}",
+      "typeLocation": "Obľúbené miesta v {location} pre {type}",
+      "types": "Najlepšie {val} aktivity",
+      "combo": "{type} {location} - {num} Top ponuky a ceny {year}",
+      "map": "Mapa",
+      "attributeBadWeatherTitleAttribute": "Najlepších {val} nápadov na zlé počasie pre Švajčiarsko",
+      "attributeBadWeatherTitle": "Najlepších {val} nápadov na zlé počasie v {location}",
+      "attributeBadWeatherTeaser": "Či už prší, je hmlisto alebo sneží: v [{location}]({locationLink}) je množstvo aktivít, ktoré môžeš robiť aj napriek zlému počasiu. Dážď ti nemusí pokaziť deň a nájdeš tu aj vnútorné a [aktivity vonku]({outdoorLink}), ktoré sú vhodné na akékoľvek počasie. Sám sa rozhodneš, či chceš byť aktívny alebo si odpočinúť. Nájdite ďalšiu inšpiráciu pre množstvo [nápadov na zlé počasie]({badWeatherLink}) po celej Švajčiarsku.",
+      "attributeBadWeatherDesc": "Nájdite svoj nápad na zlé počasie v {location} a zúčastnite sa aktivity, ktorá sa môže konať za každého počasia.",
+      "attributeFamilyTitleAttribute": "Najlepších {val} nápadov na rodinný výlet pre Švajčiarsko",
+      "attributeFamilyTitle": "Najlepších {val} nápadov na rodinný výlet v {location}",
+      "attributeFamilyTeaser": "Naplánuj si svoj ďalší rodinný výlet v [{location}]({locationLink}) pre seba a svoje deti. Nezáleží na tom, či ste skôr dobrodružní, pri pohode alebo objavujete nové veci. Po celý rok je tu veľa aktivít, aj pri [zlého počasia v {location}]({locationBadWeatherLink}). Môžeš veselo ísť na výlet aj s kočiarom, sú tu možnosti vhodné pre menšie deti. Takže nič nestojí v ceste vášmu [rodinnému výletu]({familyLink}).",
+      "attributeFamilyDesc": "Nájdite správny nápad na svoj ďalší rodinný výlet v {location} a strávte vzrušujúci deň so svojimi deťmi.",
+      "attributeDogTitleAttribute": "Najlepších {val} výletov so psom pre Švajčiarsko",
+      "attributeDogTitle": "Najlepších {val} výletov so psom v {location}",
+      "attributeDogTeaser": "Hľadáš nápad na výlet so svojím psom v [{location}]({locationLink})? Ak si chceš vziať so sebou svojho verného spoločníka, tu nájdeš všetky aktivity, kde je povolené. Najvhodnejšie sú často [aktivity vonku]({outdoorLink}), kde sa tvoj pes môže vyblázniť na čerstvom vzduchu. Ale aj plavby loďou alebo výlety lanovkou sú skvelé. Naším tajným tipom sú [Escape Games]({escapeLink}), pretože sa odohrávajú vonku a ponúkajú ti peknú zmenu od bežných prechádzok so psom.",
+      "attributeDogDesc": "Plánujte výlet so svojím psom v {location} a vyskúšajte niečo nové ako zmenu od bežnej prechádzky.",
+      "attributeOutdoorTitleAttribute": "Najlepších {val} vonkajších aktivít pre Švajčiarsko",
+      "attributeOutdoorTitle": "Najlepších {val} vonkajších aktivít v {location}",
+      "attributeOutdoorTeaser": "V [{location}]({locationLink}) je počas celého roka množstvo [vonkajších aktivít]({outdoorLink}), ktoré môžeš podniknúť. Niektoré ti rozprúdia adrenalín, zatiaľ čo iné ťa odmenia úchvatným výhľadom alebo preveria tvoju zručnosť. Mimochodom, sú tu aj vonkajšie aktivity, ktoré sú vhodné ako [nápad na zlé počasie]({badWeatherLink}) alebo na [rodinný výlet]({familyLink}). Niekedy si so sebou môžeš vziať aj svojho [psa]({dogLink}). Určité vonkajšie aktivity zvládneš bez problémov sám, zatiaľ čo pri iných by si sa z bezpečnostných dôvodov mal pripojiť k profesionálne vedenej túre.",
+      "attributeOutdoorDesc": "Plánujte svoju ďalšiu vonkajšiu aktivitu v {location} a stráviť deň vonku na čerstvom vzduchu po celý rok.",
+      "attributeBachelorPartyTitleAttribute": "{val} najlepších nápadov na rozlúčku so slobodou pre Švajčiarsko",
+      "attributeBachelorPartyTitle": "{val} najlepších nápadov na rozlúčku so slobodou v {location}",
+      "attributeBachelorPartyTeaser": "Hľadáš skvelý nápad na rozlúčku so slobodou v [{location}]({locationLink})? Nezáleží na tom, či si labužník, dobrodruh alebo zvedavý objaviteľ: nájdeš niečo, čo ti bude vyhovovať. S našimi nápadmi nebudeš mať problém zorganizovať úspešnú [rozlúčku so slobodou]({attributeLink}) v {location}. Teš sa na zábavný deň so svojimi priateľmi.",
+      "attributeBachelorPartyDesc": "Plánujte svoju ďalšiu rozlúčku so slobodou v [{location}] a strávte zábavný deň so svojimi priateľmi.",
+      "attributeTeamEventTitleAttribute": "{val} najlepších nápadov na tímovú akciu pre Švajčiarsko",
+      "attributeTeamEventTitle": "{val} najlepších nápadov na tímovú akciu v {location}",
+      "attributeTeamEventTeaser": "Bola ti zverená úloha zorganizovať tímový event v [{location}]({locationLink})? Nie je to vždy jednoduché, pretože požiadavky sú často veľmi rôzne. S našimi nápadmi budeš inšpirovaný a dobre pripravený na blížiaci sa [tímový event]({attributeLink}). Či už pre labužníkov, objaviteľov, aktívnych, milovníkov hádaniek alebo dobrodruhov: nájdeš niečo vhodné pre každý vkus. Teš sa na úspešný a zábavný deň so svojimi kolegami.",
+      "attributeTeamEventDesc": "Naplánuj svoju ďalšiu tímovú akciu v {location} a strávte zábavný deň so svojimi kolegami.",
+      "attributeValentinesDayTitleAttribute": "{val} najlepších nápadov na Valentína pre Švajčiarsko",
+      "attributeValentinesDayTitle": "{val} najlepších nápadov na Valentína v {location}",
+      "attributeValentinesDayTeaser": "Každý rok sa opäť blíži: Valentín. Možno už presne vieš, čo chceš nabudúce na 14. februára zorganizovať. Ale možno nie si istý a hľadáš nápad na váš Valentín v [{location}]({locationLink}). Naše aktivity majú inšpirovať a pomôcť ti nájsť niečo vhodné. Či už romantické, útulné alebo dobrodružné: určite tu nájdete inšpiráciu pre [Valentín]({attributeLink}), ktorý rozprúdi vaše srdcia.",
+      "attributeValentinesDayDesc": "Naplánuj si svoj ďalší Valentín v {location} a stráv romantický deň so svojou obľúbenou osobou.",
+      "attributeFirstDateTitleAttribute": "{val} najlepších nápadov na tvoje prvé rande vo Švajčiarsku",
+      "attributeFirstDateTitle": "{val} najlepších nápadov na tvoje prvé rande v {location}",
+      "attributeFirstDateTeaser": "Hľadáš ten správny nápad na tvoje prvé rande v [{location}]({locationLink}) a nie si si istý, ako svojho partnera ohromiť? Potom si tu na správnom mieste. Na tejto stránke nájdeš potrebnú inšpiráciu, aby vaše [prvé rande]({attributeLink}) bolo úplným úspechom. Či už je leto alebo zima, dobrodružné alebo uvoľnené, určite tu nájdeš niečo, čím svojho partnera potešíš. A kto vie, možno natrafíš aj na niečo, čo sa hodí na ďalšie a ďalšie stretnutie.",
+      "attributeFirstDateDesc": "Naplánuj si svoje prvé rande v {location} a strávte romantický deň spolu.",
+      "attributeChildBirthdayTitleAttribute": "{val} nápadov na detskú oslavu vo Švajčiarsku",
+      "attributeChildBirthdayTitle": "{val} nápadov na detskú oslavu v {location}",
+      "attributeChildBirthdayTeaser": "Naplánuj si svoj ďalší detský narodeninový večierok v [{location}]({locationLink}). Narodeniny sú jedným z najvýznamnejších dní každého dieťaťa. Bez ohľadu na ročné obdobie je k dispozícii viac ako dosť nápadov, s ktorými môžeš svoje dieťa potešiť. Zorganizuj [aktivity vonku]({outdoorLink}) alebo hľadaj nápad na [program do zlého počasia]({badWeatherLink}). Takto bude váš ďalší detský narodeninový večierok určite úspech.",
+      "attributeChildBirthdayDesc": "Zorganizuj detskú oslavu v {location} a naplánuj nezabudnuteľný deň pre svoje dieťa.",
+      "attributeWheelchairTitleAttribute": "{val} nápadov na výlety pre vozíčkárov vo Švajčiarsku",
+      "attributeWheelchairTitle": "{val} nápadov na výlety pre vozíčkárov v {location}",
+      "attributeWheelchairTeaser": "Naplánuj si výlet na vozíku v [{location}]({locationLink}) a nájdi ideálnu bezbariérovú aktivitu pre seba. Cestovanie po Švajčiarsku na vozíku je vďaka pokročilej bezbariérovej prístupnosti a snahám krajiny poskytnúť všetkým turistom prístupnú skúsenosť relatívne jednoduché. To zahŕňa indoorové aj [aktivity vonku]({outdoorLink}).",
+      "attributeWheelchairDesc": "Inšpiruj sa nápadmi na výlety pre vozíčkárov v {location} a naplánuj si svoju aktivitu bez bariér.",
+      "attributePramTitleAttribute": "{val} nápadov na výlety s kočiarom vo Švajčiarsku",
+      "attributePramTitle": "{val} nápadov na výlety s kočiarom v {location}",
+      "attributePramTeaser": "Naplánuj si svoj výlet s kočíkom v [{location}]({locationLink}). Keď si na ceste s malými deťmi, existuje množstvo aktivít, ktoré môžeš podniknúť. Mnohé turistické trasy sú navrhnuté tak, aby boli priateľské k kočíkom, a verejná doprava je zameraná na pohodlie rodín s malými deťmi. Takže nič nebráni tvojmu [rodinnému výletu]({familyLink}).",
+      "attributePramDesc": "Cestuj do {location} s kočiarom a naplánuj si ďalší výlet so svojou rodinou.",
+      "attributesOther": "Ďalšie kategórie",
+      "attributesType": "Kategórie pre aktivity {val}",
+      "teamEvent": "Pošli nám svoju skupinovú žiadosť",
+      "recommended": "Odporúčané cestovateľmi",
+      "tickets": "Lístky",
+      "tours": "Sprievodné zájazdy"
+    },
+    "error": {
+      "title": "Je nám to ľúto, ale došlo k chybe. Vráť sa na domovskú stránku a hľadaj svoju vhodnú voľnočasovú aktivitu."
+    },
+    "supplier": {
+      "title": "Swiss Activities: najväčšia platforma voľnočasových aktivít vo Švajčiarsku",
+      "description": "Swiss Activities je najväčšia platforma voľnočasových aktivít vo Švajčiarsku. S nami dosiahneš viac zákazníkov a zvýšiš svoje rezervácie.",
+      "hero": {
+        "title": "Swiss Activities - Destinácia pre voľnočasové aktivity vo Švajčiarsku",
+        "button": "Staň sa naším partnerom v oblasti voľného času"
+      },
+      "numbers": {
+        "title": "Ako sme podporili našich partnerov v oblasti voľného času od založenia",
+        "blocks": [
+          {
+            "title": "Návštevníci webovej stránky",
+            "number": "7'500'000",
+            "text": "potenciálni zákazníci"
+          },
+          {
+            "title": "Rezervácie zákazníkov",
+            "number": ">300'000",
+            "text": "Umiestnení hostia"
+          },
+          {
+            "title": "Podpora zákazníkov",
+            "number": ">10'000",
+            "text": "Pohovory"
+          },
+          {
+            "title": "Rezervačné systémy",
+            "number": ">20",
+            "text": "Rezervačné systémy"
+          }
+        ]
+      },
+      "why": {
+        "title": "Prečo zverejniť svoje voľnočasové produkty na Swiss Activities",
+        "sales": {
+          "title": "Noví zákazníci",
+          "description": "Získaj nových zákazníkov z domáceho a zahraničného trhu a zlepši svoju obsadenosť."
+        },
+        "support": {
+          "title": "Automatizácia",
+          "description": "Swiss Activities prevezme váš existujúci predajný proces a prenesie transakcie do vášho systému."
+        },
+        "finances": {
+          "title": "Žiadne riziko",
+          "description": "Žiadne fixné náklady ani predinvestície. Platíš len za sprostredkovaného zákazníka."
+        },
+        "local": {
+          "title": "Získavanie nových segmentov zákazníkov",
+          "description": "Pripoj sa k resellerskej sieti Swiss Activities a rozšír svoju dosah v krajine aj v zahraničí."
+        }
+      },
+      "who": {
+        "title": "Viac ako 500 partnerov vo voľnom čase spolupracuje so Swiss Activities",
+        "partners": [
+          {
+            "blocks": [
+              "/assets/supplier/partner/bergbahnen/rigi.png",
+              "/assets/supplier/partner/bergbahnen/schilthorn.png",
+              "/assets/supplier/partner/bergbahnen/jungfrau.jpeg",
+              "/assets/supplier/partner/bergbahnen/engelberg.svg",
+              "/assets/supplier/partner/bergbahnen/pilatus.jpeg",
+              "/assets/supplier/partner/bergbahnen/monte-tamaro.png",
+              "/assets/supplier/partner/bergbahnen/brienz.png",
+              "/assets/supplier/partner/bergbahnen/gornergrat.png",
+              "/assets/supplier/partner/destinationen/rheinfelden.png",
+              "/assets/supplier/partner/destinationen/basel.svg",
+              "/assets/supplier/partner/destinationen/winterthur.svg",
+              "/assets/supplier/partner/destinationen/interlaken.png",
+              "/assets/supplier/partner/attraktionen/ballenberg.png",
+              "/assets/supplier/partner/attraktionen/bls.png",
+              "/assets/supplier/partner/attraktionen/cgn.png",
+              "/assets/supplier/partner/attraktionen/chillon.jpeg",
+              "/assets/supplier/partner/attraktionen/maestrani.png",
+              "/assets/supplier/partner/attraktionen/verkehrshaus.png",
+              "/assets/supplier/partner/attraktionen/vier.png",
+              "/assets/supplier/partner/outdoor/best-of-switzerland.jpeg",
+              "/assets/supplier/partner/outdoor/kayak.jpeg",
+              "/assets/supplier/partner/outdoor/outdoorch.jpeg",
+              "/assets/supplier/partner/outdoor/paragliding.png",
+              "/assets/supplier/partner/outdoor/wine-tours.webp",
+              "/assets/supplier/partner/outdoor/zermatters.png"
+            ]
+          }
+        ]
+      },
+      "pricing": {
+        "title": "Cenový model",
+        "subtitle": "Plať len pri úspešnej sprostredkovaní zákazníka",
+        "description": "Swiss Activities ti pomôže identifikovať vhodné predajné kanály lokálne aj globálne a predávať tvoje voľnočasové produkty tam, kde sa nachádzajú tvoji potenciálni zákazníci. Keďže Swiss Activities nemá poplatok za nastavenie, otváraš nové predajné kanály bez dodatočných investícií.",
+        "blocks": [
+          {
+            "pretitle": "",
+            "cost": "18% + CHF 0.30",
+            "subcost": "bez DPH",
+            "button": "Staňte sa partnerom vo voľnom čase",
+            "buttonLink": "https://k3qlq2fyp9o.typeform.com/to/CxWJub7f",
+            "subbutton": "",
+            "includes": [
+              "Zverejnenie voľnočasových aktivít na Swiss Activities",
+              "Neobmedzené zaznamenávanie voľnočasových aktivít",
+              "Príprava popisov produktov naším tímom obsahu",
+              "Prepojenie na viac ako 20 rezervačných systémov",
+              "Osobná podpora partnerov cez chat a telefón",
+              "Preberanie komunikácie s hostami v prípade otázok ohľadom aktivít",
+              "Spracovanie žiadostí hostí ohľadom rezervácií a zrušení",
+              "Monitorovanie a kontrola všetkých rezervácií a zrušení",
+              "Monitorovanie a kontrola vyhodnocovania",
+              "Vykonanie platby centralizované – vyrovnanie cez Swiss Activities",
+              "Zabezpečenie obchodného procesu (žiadne poukážky, len vstupenky)",
+              "Automatický prístup do siete affiliate",
+              "Zverejnenie aktivít na sieti predajcov"
+            ],
+            "faq": []
+          }
+        ]
+      },
+      "tech": {
+        "title": "Systémy rezervácií a predaja lístkov",
+        "description": "Okrem zverejnenia a digitalizácie všetkých švajčiarskych voľnočasových produktov je hlavným cieľom Swiss Activities zjednodušiť a automatizovať procesy predaja voľnočasových produktov doma i v zahraničí. Distribučná krajina sa stáva čoraz komplexnejšou a my pomáhame predajcom nezmeškať kontakt s cieľovými segmentmi. Priamočiare spojenie medzi našimi partnermi v oblasti voľného času a Swiss Activities je preto kľúčové. Neustále zavádzame nové systémy. Ak tvoj rezervačný a ticketingový systém nie je dostupný, neváhaj sa obrátiť na nás na sales@swissactivities.com.",
+        "partners": [
+          "/assets/supplier/technology/trekksoft.webp",
+          "/assets/supplier/technology/regiondo.webp",
+          "/assets/supplier/technology/tomas.webp",
+          "/assets/supplier/technology/waldhart.webp",
+          "/assets/supplier/technology/experiencebank.webp",
+          "/assets/supplier/technology/skidata.webp",
+          "/assets/supplier/technology/axess.webp",
+          "/assets/supplier/technology/smeetz.webp",
+          "/assets/supplier/technology/eatwith.webp",
+          "/assets/supplier/technology/fareharbor.webp",
+          "/assets/supplier/technology/bookingkit.webp",
+          "/assets/supplier/technology/ntree.webp",
+          "/assets/supplier/technology/secutix.webp",
+          "/assets/supplier/technology/tourcms.webp",
+          "/assets/supplier/technology/sbb.webp"
+        ],
+        "titleSoon": "Čoskoro k dispozícii",
+        "partnersSoon": [
+          "/assets/supplier/technology/feratel.webp"
+        ]
+      },
+      "faq": [
+        {
+          "title": "Všeobecné informácie pre partnerov vo voľnom čase",
+          "blocks": [
+            {
+              "title": "Kto sa môže stať partnerom pre voľný čas Swiss Activities?",
+              "text": "Partnerom Swiss Activities sa môže stať každý, kto chce predávať voľnočasové aktivity vo Švajčiarsku. Tvoje ponuky môžu byť veľmi rôznorodé a fantázii sú takmer žiadne hranice. Máme aktivity, vstupenky, dobrodružstvá, výlety, prenájmy atď. v približne 100 kategóriách. Tieto zahrňujú kurzy pečenia na torty pre jednorožce, ako aj tandemové paraglidingové lety či vstupenky do múzeí. Dôležité je, že ide o ponuky, ktoré sa buď uskutočňujú vo Švajčiarsku, alebo sú možné v rámci jednodňového výletu zo Švajčiarska."
+            },
+            {
+              "title": "Aké rezervačné systémy môžem spojiť so Swiss Activities?",
+              "list": [
+                "TrekkSoft",
+                "Regiondo",
+                "Waldhart",
+                "Experience Bank",
+                "Skidata",
+                "Axess",
+                "Tomas",
+                "Smeetz",
+                "Eatwith",
+                "Fareharbor",
+                "Booking Kit",
+                "N-Tree",
+                "Secutix",
+                "TourCMS",
+                "Palisis",
+                "Onedlho budú k dispozícii: SBB a Feratel"
+              ]
+            },
+            {
+              "title": "Nepracujem s rezervačným systémom. Môžem stále predávať moje aktivity cez Swiss Activities?",
+              "text": "Aj keď nepracuješ s rezervačným systémom, môžeš svoje aktivity u nás zverejniť. V takom prípade vytvoríme manuálne kalendár podľa tvojich pokynov. Ak by si chcel implementovať rezervačný systém, prosím, kontaktuj nás. Radi ti k tomu poradíme. Informácie, ktoré od teba potrebujeme, sú nasledujúce:",
+              "list": [
+                "Časové obdobie (dátum)",
+                "Čas začiatku",
+                "Dĺžka trvania",
+                "Cut-off (ako dlho vopred musí zákazník najneskôr rezervovať?)",
+                "Ceny podľa kategórie (dospelí, deti, prenájom atď.)",
+                "maximálne dostupné miesta na slot"
+              ]
+            },
+            {
+              "title": "Aké informácie sa prenášajú pri rezervácii?",
+              "text": "Keď zákazník urobí rezerváciu cez Swiss Activities, dostane potvrzujúci e-mail so všetkými dôležitými informáciami. To zahŕňa aj tvoje kontaktné údaje, aby sa mohol s otázkami priamo obrátiť na teba.",
+              "list": [
+                "Názov aktivity",
+                "Dátum",
+                "Čas",
+                "Miesto stretnutia",
+                "Počet rezervovaných lístkov",
+                "Tvoje kontaktné údaje (e-mail a telefón)"
+              ]
+            },
+            {
+              "title": "Sú na Swiss Activities zverejnené rovnaké ceny za moje aktivity ako na mojej webovej stránke?",
+              "text": "Áno, zákazník platí u nás rovnakú sumu, ako keby rezervoval priamo u teba. To je rovnako dôležité pre teba ako pre nás. Ak sú ceny na rôznych miestach rôzne, zákazník si to všimne, čo vedie k reklamáciám a nedorozumeniam. Takto obaja riskujeme stratu opätovného zákazníka."
+            },
+            {
+              "title": "Ako dlho je lehota na stornovanie na Swiss Activities?",
+              "text": "Zákazník má na Swiss Activities možnosť zrušiť zadarmo až 24 hodín pred aktivitami. Ak chceš zverejniť aktivitu, ktorá nie je možné stornovať, môžeme to takto spraviť. Avšak máme skúsenosti, že sprostredkovávame viac rezervácií pri aktivitách, ktoré ponúkajú možnosť stornovania. Ak musíš rezerváciu zrušiť, môžeš tak urobiť tiež. Okamžite informuj zákazníka a oznam nám to tiež, aby sme mohli zorganizovať vrátenie peňazí."
+            },
+            {
+              "title": "Ako sa zaobchádza s oneskorenými stornovaniami?",
+              "text": "Ak dostaneme žiadosť o oneskorené stornovanie prostredníctvom nášho formulára na stornovanie, nikdy nevydáme vrátenie peňazí bez predchádzajúcej konzultácie s tebou. Aby sme predišli podvodom, vždy získaš tvoju súhlas, aby sme potvrdili vyjadrenie zákazníka. Iba ak máme tvoje schválenie, vykonáme následne vrátenie peňazí."
+            }
+          ]
+        },
+        {
+          "title": "Proces zverejnenia voľnočasových produktov",
+          "blocks": [
+            {
+              "title": "Ako môžem zverejniť svoje ponuky na Swiss Activities?",
+              "text": "Ak chceš stať voľnočasovým partnerom Swiss Activities a zverejniť svoje ponuky, musíš prejsť nasledujúcimi krokmi:",
+              "list": [
+                "Najskôr sa zaregistruj ako voľnočasový partner.",
+                "Vyplň formulár pre každú aktivitu, ktorú chceš zverejniť. Odkaz naň dostaneš, keď potvrdíme tvoju registráciu.",
+                "Zvyčajne píšeme a zaznamenávame tvoje aktivity do dvoch týždňov.",
+                "Hneď ako budú aktivity online, informujeme ťa e-mailom."
+              ]
+            },
+            {
+              "title": "Aké informácie sú potrebné na zverejnenie mojich aktivít?",
+              "text": "Akonáhle sa zaregistruješ ako voľnočasový partner u nás, zašleme ti formulár, cez ktorý môžeš zadať svoje aktivity. Na to, aby sme ich mohli zverejniť, potrebujeme od teba nasledujúce údaje:",
+              "list": [
+                "Údaje o rezervačnom systéme (ak sú dostupné)",
+                "Názov aktivity",
+                "Odkaz na aktivitu",
+                "Aspoň 4 fotografie na aktivitu",
+                "Informácie o dátume, čase a trvaní, ak nepoužívaš rezervačný systém",
+                "Akékoľvek informácie o veku, jazykov, hmotnosti atď.",
+                "Vhodnosť aktivity: pes, kočík, vozík, rodiny atď.",
+                "Presný miesto stretnutia"
+              ]
+            },
+            {
+              "title": "Môžem kedykoľvek zmazať svoj záznam?",
+              "text": "Áno, môžeš od zmluvy odstúpiť kedykoľvek. Neexistuje žiadna minimálna doba zmluvy a zrušením nevznikjú žiadne náklady."
+            },
+            {
+              "title": "Čo mám robiť, ak chcem niečo zmeniť v aktivite?",
+              "text": "Ak máš požiadavky na zmeny v obsahu alebo chceš prispôsobiť ceny - pokiaľ nepoužívaš rezervačný systém - môžeš nám to oznámiť e-mailom."
+            },
+            {
+              "title": "Ako kontaktujem zákazníka?",
+              "text": "Po každej rezervácii dostaneš od nás potvrzujúci e-mail s údajmi o zákazníkovi. Tam nájdeš jeho meno, adresu e-mail a telefónne číslo, aby si ho mohol kontaktovať."
+            },
+            {
+              "title": "Ako dostanem svoje peniaze?",
+              "text": "Vyplatenie všetkých otvorených súm sa vykonáva vždy po dátume poskytnutia služby a automaticky sa prevádza na začiatku nasledujúceho mesiaca. Všetky rezervácie uskutočnené v uplynulom mesiaci sa zúčtujú a vyplatia v jednej súhrnnej platbe."
+            }
+          ]
+        }
+      ]
+    },
+    "supplierRegistration": {
+      "title": "Swiss Activities: najväčšia platforma na voľnočasové aktivity vo Švajčiarsku.",
+      "description": "Swiss Activities je najväčšia platforma na voľnočasové aktivity vo Švajčiarsku. S nami dosiahneš viac zákazníkov a zvýšiš svoje rezervácie.",
+      "hero": {
+        "title": "Staň sa súčasťou Swiss Activities",
+        "description": "Zaregistruj sa bezplatne na Swiss Activities a zvýš svoje dosahovanie u švajčiarskych a medzinárodných hostí. Tvoje výhody v prehľade",
+        "list": [
+          "Buď viditeľný na Googli ako firma a so svojimi ponukami. A to vo 4 jazykoch!",
+          "Otvoriť nový predajný kanál",
+          "Využite našu bezplatnú zákaznícku podporu.",
+          "Prepojte svoj rezervačný systém a spravujte svoje dostupnosti priamo v ňom.",
+          "Nová rezervácia - tvoj zákazník. Neschovávame našich partnerov a chceme zákazníkovi ponúknuť najlepší zážitok z rezervácie.",
+          "Žiadne fixné náklady alebo skryté poplatky.",
+          "Tvoji zákazníci môžu platiť všetkými miestnymi platobnými metódami ako Twint, nákup na účet a bežnými kreditnými kartami."
+        ]
+      }
+    },
+    "affiliate": {
+      "title": "Affiliate",
+      "description": "Zapoj sa ako partner Swiss Activities a zarábaj od prvej rezervácie 1% až 5% províziu. Neexistujú žiadne fixné náklady.",
+      "hero": {
+        "title": "Staň sa teraz affiliate partnerom Swiss Activities",
+        "description": "Zaregistruj sa do affiliate programu Swiss Activities a využívaj atraktívne integračné nástroje, 1% až 5% províziu a trvanie cookies 45 dní.",
+        "steps": [
+          "Prihlás sa",
+          "Implementuj naše aktivity",
+          "Generuj rezervácie a zarábaj peniaze"
+        ],
+        "button": "Prihlásiť sa teraz"
+      },
+      "form": {
+        "tos": "Súhlasím s <a target='_blank' href='/agb/affiliates/'>Všeobecnými obchodnými podmienkami</a>"
+      },
+      "advantagesTitle": "Aké sú tvoje výhody ako affiliate partnera Swiss Activities?",
+      "advantages": [
+        {
+          "title": "1'500+ voľnočasových aktivít",
+          "text": "Ako affiliate partner Swiss Activities máš prístup k viac ako 1'500 voľnočasovým aktivitám po celej Švajčiarskej."
+        },
+        {
+          "title": "Atraktívne podmienky",
+          "text": "Za každú sprostredkovanú rezerváciu dostaneš 1% až 5% províziu. Doba platnosti cookies je 45 dní."
+        },
+        {
+          "title": "Inšpiruj svojich čitateľov",
+          "text": "Oživenie tvojho blogu alebo webovej stránky inšpirujúcim obsahom a pomôž svojej komunite ušetriť čas pri plánovaní voľnočasových aktivít."
+        },
+        {
+          "title": "Jednoduchá registrácia",
+          "text": "Využi jednoduchú a rýchlu registráciu."
+        },
+        {
+          "title": "Priame predaje lístkov",
+          "text": "Máš možnosť predávať lístky priamo na svojej webovej stránke bez presmerovania svojich čitateľov k nám."
+        },
+        {
+          "title": "Vlastné HTML",
+          "text": "Vďaka našim všestranným a atraktívne navrhnutým vlastným HTML nástrojom môžeš personalizovať svoje predajné možnosti."
+        }
+      ],
+      "faqTitle": "Najdôležitejšie otázky zodpovedané",
+      "faq": [
+        {
+          "title": "Ako funguje registrácia do affiliate programu Swiss Activities?",
+          "text": "Zaregistruj sa prostredníctvom formulára na tejto stránke s všetkými potrebnými údajmi. Tvoju registráciu preveríme do jedného pracovného dňa a zašleme ti tvoje prihlasovacie údaje po prijatí."
+        },
+        {
+          "title": "Ako sa môžem prihlásiť do svojho affiliate partner dashboardu?",
+          "text": "Pri registrácii si určuješ svoje osobné heslo. Akonáhle budeš mať svoje údaje overené, budeš informovaný a môžeš sa prihlásiť do svojho affiliate dashboardu pomocou <a href='https://swissactivities.tapfiliate.com/login' target='_blank'>tohto odkazu</a>."
+        },
+        {
+          "title": "Kde nájdem ďalšie informácie o affiliate programe?",
+          "text": "V našom helpdesku nájdeš jednak <a href='https://intercom.help/swiss-activities/de/collections/3916117-affiliate-moglichkeiten-zur-einbindung' target='_blank'>prvé kroky</a> a najdôležitejšie otázky o <a href='https://intercom.help/swiss-activities/de/collections/3916117-affiliate-moglichkeiten-zur-einbindung' target='_blank'>integrácii našich aktivít</a>. Okrem toho, po registrácii, dostaneš sériu emailov s užitočnými tipmi."
+        },
+        {
+          "title": "Kto sa môže stať affiliate partnerom Swiss Activities?",
+          "text": "Ak vedieš blog alebo webovú stránku, ktorá je spojená so švajčiarskym cestovným ruchom, voľnočasovými aktivitami vo Švajčiarsku alebo s cestovaním vo všeobecnosti, môžeš sa zaregistrovať do nášho affiliate programu. Tak isto, ak máš Instagram, Pinterest alebo Facebook účet, kde môžeš vložiť affiliate odkaz, môžeš sa u nás prihlásiť."
+        },
+        {
+          "title": "Môžem sa odhlásiť z affiliate programu?",
+          "text": "Samozrejme. Nie si viazaný žiadnou minimálnou lehotou. Ak chceš svoj účet zrušiť, daj nám vedieť emailom alebo chatom a my zariadime všetko potrebné."
+        },
+        {
+          "title": "Koľko provízie dostanem za sprostredkovanú rezerváciu?",
+          "text": "Dostaneš medzi 1% a 5% províziu, ak nám sprostredkuješ zákazníka, ktorý realizuje aktivitu. Ak zákazník zruší svoju rezerváciu, bohužiaľ ti nemôžeme vyplatiť žiadnu províziu."
+        }
+      ]
+    },
+    "apps": {
+      "title": "Aplikácia Swiss Activities",
+      "description": "Zažiť Švajčiarsko s aplikáciou Swiss Activities – objavuj, porovnávaj a rezervuj voľnočasové aktivity priamo na svojom smartfóne.",
+      "hero": {
+        "title": "Tvoje švajčiarske dobrodružstvo vo vrecku",
+        "description": "S aplikáciou Swiss Activities máš priamy prístup k viac ako {amount} aktivitám v celej Švajčiarskej. Nájdite zážitky, rezervujte za sekundy a v každom okamihu si udržujte prehľad o všetkých svojich lístkoch a rezerváciách.",
+        "features": [
+          "Lístky vždy po ruke",
+          "Jednoduché spravovanie rezervácií",
+          "Objavuj nové zážitky pre každú chuť",
+          "Lístky dostupné aj offline"
+        ]
+      }
+    },
+    "travelGuide": {
+      "title": "Tvoj plánovač cesty pre Švajčiarsko",
+      "description": "Švajčiarsko je veľmi rozmanitá krajina a ponúka neuveriteľne veľa pre tvoju cestu. Tak sa nenechaj oklamať malou rozlohou. Hoci je Švajčiarsko približne desaťkrát menšie ako Švédsko, Kalifornia alebo Maroko, nájdeš niečo pre každý vkus. V stredozemnom Ticíne si v úplne inom svete ako v rušnej Bazileji. A hornatý Alpstein má úplne iné podnebie ako mierna oblasť jazera Ženeva. A to všetko, hoci sú tieto miesta vzdialené len tri až štyri hodiny. V našom blogu ti pomôžeme s plánovaním tvojej cesty. Poskytneme ti užitočné tipy na cesty a cenné informácie, aby si sa mohol dokonale pripraviť. Je jedno, či cestuješ do Švajčiarska prvýkrát alebo už poznáš cestu. Naše články sú vhodné nielen pre prvovrstovníkov, ale aj pre skutočných znalcov Švajčiarska.",
+      "intro": "Švajčiarsko je veľmi rozmanitá krajina a ponúka neuveriteľne veľa pre tvoju cestu. Tak sa nenechaj oklamať malou rozlohou. Hoci je Švajčiarsko približne desaťkrát menšie ako Švédsko, Kalifornia alebo Maroko, nájdeš niečo pre každý vkus. V stredozemnom Ticíne si v úplne inom svete ako v rušnej Bazileji. A hornatý Alpstein má úplne iné podnebie ako mierna oblasť jazera Ženeva. A to všetko, hoci sú tieto miesta vzdialené len tri až štyri hodiny. V našom blogu ti pomôžeme s plánovaním tvojej cesty. Poskytneme ti užitočné tipy na cesty a cenné informácie, aby si sa mohol dokonale pripraviť. Je jedno, či cestuješ do Švajčiarska prvýkrát alebo už poznáš cestu. Naše články sú vhodné nielen pre prvovrstovníkov, ale aj pre skutočných znalcov Švajčiarska."
+    },
+    "travelRoutes": {
+      "title": "Cestovné trasy Švajčiarska",
+      "description": "Švajčiarsko je veľmi rozmanitá krajina a má pre tvoju cestu neuveriteľne veľa ponúknuť. Nenechaj sa teda oklamať malou rozlohou. Hoci je Švajčiarsko približne desaťkrát menšie ako Švédsko, Kalifornia alebo Maroko, pre každý vkus tu nájdeš niečo. V mediteránskom Ticíne si v úplne inom svete ako v rušnej Bazileji. A horský Alpstein má úplne iné podnebie ako mierna oblasť okolo Ženevského jazera. A to aj napriek tomu, že sú tieto miesta len tri až štyri hodiny od seba. Na našom blogu ti pomôžeme s plánovaním tvojej cesty. Poskytneme ti užitočné tipy na cestovanie a cenné informácie, aby si sa mohol dokonale pripraviť. Nezáleží na tom, či cestuješ do Švajčiarska po prvýkrát alebo sa už dobre vyznáš, naše články sú vhodné ako pre nových návštevníkov, tak aj pre skutočných znalcov Švajčiarska."
+    },
+    "widget": {
+      "title": "Integruj Swiss Activities do svojej webovej stránky",
+      "description": "Zaradiť Swiss Activities do tvojej webovej stránky a predávať aktivity priamo cez tvoju webovú stránku.",
+      "hero": {
+        "title": "Integruj ponuky Swiss Activities do svojej webovej stránky",
+        "description": "Widget Swiss Activities je najjednoduchší spôsob, ako integrovať aktivity do svojej webovej stránky. Vyber si z rôznych typov widgetov a vlož ho behom minút.",
+        "button": "Začni teraz"
+      },
+      "cta": {
+        "title": "Staň sa affiliate partnerom",
+        "button": "Na formulár"
+      }
+    },
+    "newsletterConfirm": {
+      "title": "Ďakujeme za vašu registráciu. Práve sme vám poslali správu, prostredníctvom ktorej môžete potvrdiť svoju registráciu."
+    },
+    "newsletterSuccess": {
+      "title": "Ďakujeme! Teraz ste prihlásení na odber nášho newslettera."
+    },
+    "cookiePolicy": {
+      "title": "Zásady o cookies"
+    },
+    "vouchers": {
+      "title": "Nápady na darčeky zážitkov pre Švajčiarsko - najlepšie poukážky na Swiss Activities",
+      "description": "Daruj nezabudnuteľné chvíle s poukazom na zážitky od Swiss Activities! Objav najväčší výber voľnočasových aktivít vo Švajčiarsku - flexibilne, jednoducho a okamžite online dostupné. Perfektné ako nápad na darček pre každú príležitosť.",
+      "hero": {
+        "title": "Daruj poukaz na zážitok pre Švajčiarsko a rob radosť!",
+        "text": "Objav najlepšie nápady na darčeky a poukazy na zážitky na Swiss Activities. Či už na narodeniny, ako vianočný darček, alebo len tak pre radosť – poukaz na švajčiarske zážitky poteší každého a je to darček, ktorý si určite zapamätajú.",
+        "button": "Kúpiť poukaz"
+      },
+      "gift": {
+        "title": "Daruj najlepšie švajčiarske zážitky – od dobrodružstva po oddych",
+        "text": "Hľadáš jedinečný nápad na darček pre priateľov alebo rodinu vo Švajčiarsku? Poukaz na zážitok od Swiss Activities ti poskytuje prístup k najväčšiemu výberu voľnočasových aktivít, ktoré Švajčiarsko ponúka. Či už ide o vedené túry, dobrodružstvo v prírode, oddychové chvíle v termálnych kúpeľoch alebo kultúrne zážitky v múzeách – Swiss Activities umožňuje darovať výnimočné chvíle."
+      },
+      "why": {
+        "title": "Prečo poukaz na zážitok od Swiss Activities je dokonalý nápad na darček",
+        "items": [
+          {
+            "title": "Najväčší výber vo Švajčiarsku",
+            "text": "Viac ako 1,600 voľnočasových ponúk vo všetkých regiónoch, od outdoorových dobrodružstiev po relaxačné chvíle."
+          },
+          {
+            "title": "Viac ako 100'000 spokojných zákazníkov",
+            "text": "Swiss Activities je osvedčený partner pre výnimočné darčeky a výlety."
+          },
+          {
+            "title": "Možnosť bezplatného zrušenia",
+            "text": "Bezpečné a flexibilné rezervácie, ktoré môžu byť prispôsobené potrebám obdarovaného."
+          },
+          {
+            "title": "5-hviezdičkový zákaznícky servis",
+            "text": "Švajčiarska kvalita a podpora – na bezproblémový začiatok zážitku."
+          }
+        ]
+      },
+      "end": {
+        "title": "Daruj zážitkové poukážky vo Švajčiarsku a poteš s radosťou!",
+        "text": "Objav najlepšie nápady na darčeky a zážitkové poukážky na Swiss Activities. Či už k narodeninám, ako vianočný darček alebo jednoducho povedať ďakujem – poukaz na zážitky vo Švajčiarsku bude vyhovovať každému vkusu a prinesie nezabudnuteľné spomienky.",
+        "button": "Vybrať poukaz"
+      },
+      "banner": {
+        "tagline": "NOVÉ: Dokonalý nápad na darček!",
+        "title": "Zabezpeč si\nzážitkový poukaz",
+        "button": "Klikni tu"
+      }
+    }
+  },
+  "filter": {
+    "nearby": "Zobraziť aktivity v okolí",
+    "results": "Zobraziť výsledky",
+    "filter": "Filter",
+    "search": "Hľadať",
+    "location": "Miesto",
+    "types": "Typ",
+    "categories": "Kategória",
+    "activity": "Aktivita",
+    "activities": "Aktivity",
+    "today": "Dnes",
+    "tomorrow": "Zajtra",
+    "price": "Cena",
+    "noResults": "Žiadne výsledky",
+    "noExactResults": {
+      "title": "Žiadne presné výsledky",
+      "description": "Skús zmeniť alebo odstrániť niektoré z tvojich filtrov, alebo prispôsobiť svoj vyhľadávací rozsah.",
+      "showNearest": "Zobraziť najbližšie výsledky",
+      "resetDate": "Resetovať časové obdobie"
+    },
+    "lang": "Jazyky",
+    "sort": {
+      "relevance": "Relevancia",
+      "distance": "Vzdialenosť od teba",
+      "popularityDesc": "Popularita zostupne",
+      "ratingDesc": "Hodnotenie zostupne",
+      "ratingAsc": "Hodnotenie vzostupne",
+      "priceDesc": "Cena zostupne",
+      "priceAsc": "Cena vzostupne",
+      "dateDesc": "Najnovšie najprv",
+      "dateAsc": "Najstaršie najprv"
+    },
+    "navigationBreadcrumbs": {
+      "root": "Švajčiarsko"
+    },
+    "all": "Všetko",
+    "map": "Mapa",
+    "card": {
+      "from": "od",
+      "person": "na osobu"
+    },
+    "viewMore": "Zobraziť viac",
+    "ratingBetterThan": "Lepšie ako {val} hviezdičiek",
+    "ratingEqual": "{val} hviezdičiek",
+    "ratingNone": "NOVÉ / Žiadne hodnotenie",
+    "moreFilters": "Ďalšie {val} ukázať",
+    "lessFilters": "Zobraziť menej",
+    "usedFilters": "Použité filtre",
+    "resetFilters": "Resetovať",
+    "discountTypes": "Zľavy",
+    "calendar": "Kalendár",
+    "locationError": "Pozícia sa nedala načítať",
+    "textOnly": "Iba hodnotenia s textom"
+  },
+  "activity": {
+    "you": "teba",
+    "nearby": "{distance} km vzdialený od {location}",
+    "nearbyAlt": "{distance} km vzdialený",
+    "recommendation": "Odporúčanie",
+    "reviews": "Recenzie",
+    "reviewOriginalIn": "Originál v {language}",
+    "booked": "{val} krát rezervované",
+    "providedBy": "Poskytovateľ aktivity",
+    "save": "Uložiť",
+    "selectDate": "Vyber dátum",
+    "similarActivities": "Podobné aktivity",
+    "question": "Ako môžeme pomôcť?",
+    "rating": "Hodnotenie",
+    "highDemand": "Vysoký dopyt",
+    "widget": {
+      "free": "k dispozícii",
+      "error500": "Niečo sa pokazilo, prosím skús to znova o 1 minútu.",
+      "errorDate": "Žiaľ, na {val} už nie sú k dispozícii žiadne voľné termíny.",
+      "choose": "vybrať",
+      "titleTime": "Vyber si ponuku",
+      "titleTicketOption": "Vybrať možnosť lístka",
+      "titleParticipants": "Vybrať účastníkov",
+      "titleTickets": "Vybrať lístky",
+      "confirmOffer": "Potvrdiť možnosť lístka",
+      "confirmTickets": "Potvrdiť účastníkov",
+      "confirmDate": "Potvrdiť dátum",
+      "confirmDateTime": "Potvrdiť dátum a čas",
+      "cheapest": "Najlacnejšia cena",
+      "time": "Čas",
+      "navTicket": "Lístky",
+      "check": "Skontrolovať dostupnosť",
+      "notBookable": "Žiaľ, táto ponuka nie je v súčasnosti k dispozícii na rezerváciu.",
+      "paymentMethods": "Spôsoby platby",
+      "totalPrice": "Celková cena",
+      "taxes": "Dodatočné poplatky",
+      "offerTimeSelect": "Vyberte čas",
+      "basket": "Košík",
+      "basketAdd": "Pridať do košíka",
+      "selectedOffer": "Ponuka",
+      "adjust": "Upraviť rezerváciu",
+      "swissHalfFareCard": "Osoby s pobytom mimo Švajčiarska môžu&nbsp;<a href=\"/bahnpaesse/swiss-half-fare-card/\" target=\"_blank\" className=\"inline-block\">získať Swiss Half Fare Card tu</a>, aby ju mohli využiť na zľavy v mestskej doprave."
+    },
+    "tabs": {
+      "highlights": "Hlavné body",
+      "includes": "Súčasné služby",
+      "importantInformation": "Dôležité informácie",
+      "meetingPoints": "Miesto stretnutia"
+    },
+    "newsletter": {
+      "title": "Nezmeškaj žiadne aktivity",
+      "description": "Prihlás sa na odber newslettera a získaj tipy na cestovanie, inšpirácie a najnovšie cestovné sprievodcovia z Švajčiarska.",
+      "signup": "Prihlásiť sa",
+      "inputPlaceholder": "Tvoj e-mail"
+    },
+    "notRefundable": {
+      "title": "Nemožno stornovať",
+      "description": "Žiaľ, nemôžeme Vám ponúknuť refundáciu, ani zmeniť alebo zrušiť vašu rezerváciu pre tento konkrétny produkt z dôvodu našich politík partnerov."
+    }
+  },
+  "UI": {
+    "date": "Dátum"
+  },
+  "home": {
+    "title": "Tvoj zážitok začína tu"
+  },
+  "discover": {
+    "title": "Objavovať aktivity"
+  },
+  "booking": {
+    "cancelable": "Bezplatné zrušenie do",
+    "privacyMessage": "Pokračovaním v platbe akceptuješ <tos>{text}</tos> a zrušovacie podmienky spoločnosti Swiss Activities AG.",
+    "privacyPolicy": "všeobecné obchodné podmienky",
+    "personalTitle": "Údaje o rezervácii",
+    "personalSubtitle": "Aby si mohol dokončiť rezerváciu, vyplň prosím nasledujúce informácie.",
+    "mainGuest": "Kontaktná osoba",
+    "fullName": "Krstné meno",
+    "lastName": "Priezvisko",
+    "email": "E-mail",
+    "phoneNumber": "Telefónne číslo",
+    "cardDetails": "Metódy platby",
+    "paymentSecure": "Bezpečná platba - používame SSL šifrovanie na ochranu tvojich údajov",
+    "creditPayments": "Kreditné karty",
+    "total": "Celkom",
+    "fullDay": "Celodenný",
+    "booknow": "Rezervuj teraz",
+    "addMoreInformation": "Pridať ďalšie informácie",
+    "addPaymentMethod": "Vyberte spôsob platby",
+    "youBook": "Nákupný košík",
+    "rebate": "Kód zľavy",
+    "rebateEmailRequired": "Prosím zadaj najprv svoju e-mailovú adresu a potvrď ju, aby si mohol využiť zľavový kód.",
+    "important": "Prečítal(a) som si požiadavky pod \"Dôležité informácie\" aktivit(y).",
+    "importantShow": "Zobraziť informácie",
+    "importantHide": "Skryť informácie"
+  },
+  "confirm": {
+    "title": "Ďakujeme ti za rezerváciu cez Swiss Activities.",
+    "confirmed": "Tvoja rezervácia je potvrdená.",
+    "pending": "Tvoja rezervácia je v spracovaní.",
+    "cancelled": "Tvoja rezervácia bola zrušená.",
+    "failed": "Prepáč, niečo sa pokazilo.",
+    "failedPayment": "Platba nemohla byť spracovaná. Skús to s inou metódou platby.",
+    "failedReservation": "Žiaľ, rezerváciu sa nepodarilo potvrdiť. Tvoja platba bude vrátená. Skús to znova.",
+    "wait": "Čakáme na nášho poskytovateľa platieb, či je platba potvrdená.",
+    "waitEmail": "Dostaneš e-mail, hneď ako bude platba potvrdená.",
+    "caption": "Ďakujeme ti veľmi pekne za rezerváciu cez Swiss Activities. Poslali sme ti potvrdzovací e-mail.",
+    "bookingNumber": "Číslo rezervácie",
+    "point": "Miesto stretnutia",
+    "pointAddress": "Adresa stretnutia",
+    "number": "Mobilné číslo",
+    "end": "Koniec",
+    "email": "Tvoje potvrdenie rezervácie bolo odoslané na {email}. Ak ho do niekoľkých minút nedostaneš, prosím kontaktuj našu podporu prostredníctvom chatu.",
+    "transport": {
+      "title": "Cestovať verejnou dopravou?",
+      "from": "Tvoja lokalita",
+      "description": "Cestuj pohodlne verejnou dopravou a pridaj svoj mobilný lístok priamo k tejto rezervácii.",
+      "button": "Pridať lístok"
+    }
+  },
+  "footer": {
+    "company": {
+      "title": "Spoločnosť",
+      "about-us": "O nás",
+      "jobs": "Práca",
+      "legal": "Právne"
+    },
+    "resources": {
+      "title": "Zdroje"
+    },
+    "collaboration": {
+      "title": "Spolupráca",
+      "becomeapartner": "Staň sa partnerom",
+      "affiliate": "Partnerský program",
+      "widget": "Widget"
+    },
+    "affiliate": {
+      "title": "Affiliate kód",
+      "button": "Kopírovať kód",
+      "buttonCopied": "Kód bol skopírovaný!"
+    },
+    "contact": {
+      "title": "Zákaznícky servis",
+      "faq": "Otázky a odpovede (FAQ)",
+      "cookie": "Súhlas s cookie"
+    },
+    "mobileApp": "Stiahni si našu aplikáciu"
+  },
+  "tickets": {
+    "discounts": {
+      "noDiscount": "Bez zľavy"
+    },
+    "showDiscounts": "Zobraziť zákaznícke a zľavové karty",
+    "travelClass": "Cestovná trieda"
+  },
+  "supplier": {
+    "activities": "Aktivity"
+  },
+  "contactPopup": {
+    "modalTitle": "Ako ti môžeme dnes pomôcť?"
+  },
+  "contactForm": {
+    "fullname": "Meno",
+    "email": "E-mail",
+    "subject": "Predmet",
+    "messagePlaceholder": "Žiadosť, rezervácia, atď...",
+    "submit": "Odoslať",
+    "formError": "Niečo sa nepodarilo. Skús to znova."
+  },
+  "contactThankYou": {
+    "title": "Ďakujeme za kontakt!"
+  },
+  "internalLinkBlock": {
+    "destinations": "Top destinácie",
+    "locations": "Top dovolenkové regióny",
+    "topActivities": "Top aktivity",
+    "topAttractions": "Top atrakcie"
+  },
+  "offerCard": {
+    "bookNow": "Rezervuj teraz"
+  },
+  "breadcrumbsBasket": {
+    "stepOne": "Tvoj výber",
+    "stepOneDescription": "Nákupný košík",
+    "stepTwo": "Tvoje podrobnosti",
+    "stepTwoDescription": "Pokladňa",
+    "stepThree": "Posledný krok",
+    "stepThreeDescription": "Platba"
+  },
+  "usps": {
+    "or": "alebo",
+    "allDay": "Celý deň",
+    "bookable": {
+      "title": "Rezervovateľné",
+      "description": "Pre {val}"
+    },
+    "online": {
+      "title": "Okamžité potvrdenie rezervácie"
+    },
+    "payment": {
+      "title": "Rezervuj na účet alebo plať s Twint"
+    },
+    "duration": {
+      "title": "Trvanie",
+      "durationMinutes": "{val} minút",
+      "duration": "{val} hodina",
+      "durations": "{val} hodiny",
+      "durationDay": "{val} deň",
+      "durationDays": "{val} dní"
+    },
+    "mobileTicket": {
+      "title": "Mobilný lístok akceptovaný",
+      "description": "Použi svoj telefon alebo si vytlač voucher"
+    },
+    "confirmation": {
+      "title": "Okamžité potvrdenie rezervácie",
+      "description": "Žiadne ďalšie poplatky"
+    },
+    "queue": {
+      "title": "Žiadne rady"
+    },
+    "cancel": {
+      "title": "Bezplatné zrušenie",
+      "description": "Úplná náhrada pri zrušení až do {val}h pred začiatkom",
+      "descriptionDays": "Úplná náhrada pri zrušení až do {val} dni pred začiatkom",
+      "subtitle": "Až do {val} hodín pred plánovaným časom",
+      "subtitleDays": "Až do {val} dňa(dni) pred plánovaným časom <b>(</b>"
+    },
+    "meetingPoint": {
+      "title": "Miesto stretnutia"
+    },
+    "discount": {
+      "title": "Zľava"
+    },
+    "request": {
+      "title": "Rezervácia na požiadanie",
+      "description": "Túto rezerváciu musí poskytovateľ potvrdiť",
+      "extra": "Toto ponuka závisí od dostupnosti poskytovateľa. Rezerváciu musí najskôr potvrdiť poskytovateľ. Po rezervácii s tebou výrobca nadviaže kontakt. Ak sa aktivita nemôže vykonať, vrátiš všetky peniaze."
+    },
+    "validity": {
+      "title": "Platnosť"
+    },
+    "openingHours": {
+      "title": "Otváracie hodiny"
+    }
+  },
+  "widgetConfigurator": {
+    "title": "Konfigurovať widget",
+    "type": "Typ",
+    "lang": "Jazyk",
+    "other": "Vyberte inú aktivitu",
+    "topBar": "Nastavenia",
+    "hideAll": "Skryť všetko",
+    "hideSearch": "Skryť vyhľadávanie",
+    "hideSize": "Skryť prepínač veľkostí",
+    "hideFilter": "Skryť tlačidlo filtra",
+    "hideMap": "Skryť tlačidlo mapy",
+    "hideQuickFilter": "Skryť rýchly filter",
+    "hideSort": "Skryť triedenie",
+    "buttonText": "Text tlačidla",
+    "buttonBackground": "Pozadie tlačidla",
+    "buttonColor": "Farba textu tlačidla",
+    "search": "Predvyplnené vyhľadávanie"
+  },
+  "types": {
+    "activity": "Aktivita",
+    "overview": "Prehľad",
+    "location": "Miesto",
+    "locationType": "Miesto + Typ",
+    "type": "Typ",
+    "attribute": "Kategória",
+    "locationAttribute": "Miesto + Kategória",
+    "poi": "Pamiatka"
+  },
+  "reviewForm": {
+    "title": "Ohodnoť svoju skúsenosť",
+    "button": "Hodnotiť teraz",
+    "rating": "Hodnotenie",
+    "comment": "Komentár",
+    "thanks": "Ďakujeme za tvoje hodnotenie!",
+    "next": "Hodnotiť ďalšiu rezerváciu",
+    "finish": "Okno sa zavrie za 3 sekundy"
+  },
+  "user": {
+    "welcome": "Vitaj vo svojom dashboarde {name}!",
+    "menu": {
+      "activities": "Aktivity",
+      "bookings": "Rezervácie",
+      "suppliers": "Dodávatelia",
+      "reviews": "Hodnotenia",
+      "settings": "Nastavenia",
+      "chat": "Chat",
+      "logout": "Odhlásiť sa",
+      "login": "Prihlásiť sa"
+    }
+  },
+  "SettingsForm": {
+    "title": "Dopln svoj profil",
+    "titleUpdate": "Aktualizuj svoj profil",
+    "submit": "Odoslať",
+    "phoneNumber": "Prosím skontroluj svoje telefónne číslo znova",
+    "email": "E-mail nie je platný",
+    "iban": "IBAN nie je platný",
+    "reseller": {
+      "title": "Reseller",
+      "merchantName": "Názov obchodníka",
+      "merchantAddress": "Adresa obchodníka",
+      "bankAccountHolder": "Majiteľ účtu",
+      "bankAccountIban": "IBAN účtu",
+      "bankAccountHolderAddress": "Adresa majiteľa účtu",
+      "contact": {
+        "title": "Kontakty",
+        "name": "Meno",
+        "businessRole": "Obchodná rola",
+        "email": "E-mail",
+        "phone": "Telefón"
+      }
+    },
+    "payment": {
+      "title": "Uložené platobné metódy",
+      "removeTitle": "Odstrániť spôsob platby"
+    }
+  },
+  "Repeater": {
+    "add": "Pridať",
+    "remove": "Odstrániť"
+  },
+  "Table": {
+    "booking": {
+      "refresh": "Obnoviť"
+    },
+    "clearFilters": "Vymazať filtre",
+    "noResults": "Nenašli sa žiadne výsledky.",
+    "view": {
+      "title": "Zobrazenie",
+      "adjust": "Prispôsobiť stĺpce"
+    },
+    "header": {
+      "bookingId": "ID rezervácie",
+      "date": "Dátum",
+      "bookingDate": "Dátum rezervácie",
+      "serviceDate": "Dátum aktivity",
+      "description": "Popis",
+      "location": "Miesto",
+      "name": "Meno",
+      "email": "E-mail",
+      "type": "Typ",
+      "price": "Cena od",
+      "sold": "Predané",
+      "rating": "Hodnotenie",
+      "supplier": "Dodávateľ",
+      "bookingStatus": "Stav rezervácie",
+      "paymentStatus": "Stav platby",
+      "total": "Celkom",
+      "actions": "Akcie",
+      "duration": "Dĺžka",
+      "validity": "Platnosť",
+      "bookable": "Rezervovateľné",
+      "createdAt": "Vytvorené",
+      "commission": "Provizia",
+      "status": "Stav",
+      "reservationSystem": "Rezervačný systém",
+      "bapiId": "BAPI ID",
+      "capiId": "CAPI ID",
+      "notes": "Poznámky",
+      "distributor": "Distribútor",
+      "website": "Webová stránka",
+      "validities": "Platnosť"
+    },
+    "actions": {
+      "aria": "Otvor akcie",
+      "details": "Zobraziť detaily",
+      "book": "Rezervuj teraz"
+    },
+    "sort": {
+      "ascending": "Vzostupne",
+      "descending": "Prípadne",
+      "hide": "Skryť",
+      "bookable": "Zobraziť iba rezervovateľné aktivity"
+    },
+    "pagination": {
+      "page": "Stránka",
+      "of": "z",
+      "entriesPerPage": "Záznamy na stránku",
+      "goToFirstPage": "Prejdi na prvú stránku",
+      "goToLastPage": "Prejdi na poslednú stránku",
+      "goToNextPage": "Prejdi na ďalšiu stránku",
+      "goToPreviousPage": "Prejdi na predchádzajúcu stránku"
+    },
+    "search": {
+      "activities": "Hľadaj aktivity",
+      "bookings": "Hľadaj rezervácie",
+      "offers": "Hľadaj ponuky",
+      "suppliers": "Hľadať podľa dodávateľov",
+      "bookingId": "Hľadať podľa rezervačného čísla",
+      "email": "Hľadať podľa e-mailu",
+      "familyName": "Hľadať podľa priezviska"
+    },
+    "cell": {
+      "bookingStatusActive": "Potvrdené",
+      "bookingStatusPending": "Čakajúce",
+      "bookingStatusCancelled": "Zrušené",
+      "paymentStatusActive": "Zaplatené",
+      "paymentStatusPending": "Čakajúce",
+      "paymentStatusRefunded": "Vrátené"
+    }
+  },
+  "Drawer": {
+    "close": "Zavrieť"
+  },
+  "PaymentMethod": {
+    "card": {
+      "new": "Nová karta",
+      "store": "Prosím ulož moje údaje o kreditnej karte pre rýchlejší prístup k pokladni v budúcnosti.",
+      "endsIn": "Končí v {val}"
+    }
+  },
+  "Activity": {
+    "new": "Nová aktivita",
+    "nav": {
+      "general": "Všeobecné"
+    }
+  },
+  "Offer": {
+    "new": "Nová ponuka"
+  },
+  "Supplier": {
+    "new": "Nový dodávateľ"
+  },
+  "UspSlider": {
+    "title": "Prečo rezervovať cez Swiss Activities?",
+    "items": [
+      "Najväčší výber vo Švajčiarsku",
+      "Viac ako 100'000 spokojných zákazníkov",
+      "Možnosť bezplatného zrušenia",
+      "5-hviezdičkový zákaznícky servis vo Švajčiarsku",
+      "Rezervujte mobilné lístky za 90 sekúnd"
+    ]
+  },
+  "AppBanner": {
+    "title": "Stiahni si aplikáciu teraz",
+    "description": "Objavuj Swiss Activities – jednoducho a rýchlo"
+  },
+  "Transport": {
+    "bookTrip": "Rezervovať spojenie",
+    "button": {
+      "confirmTrip": "Potvrdiť spojenie",
+      "confirmTravelers": "Cestujúci potvrdzujú"
+    },
+    "checkDetails": "Skontrolovať detaily spojenia",
+    "class": {
+      "first": "1. trieda",
+      "second": "2. trieda"
+    },
+    "direct": "Prímo",
+    "duration": {
+      "minutes": "Min."
+    },
+    "earlierTrips": "Predchádzajúce spoje",
+    "errorLoadingTrips": "Nemožno načítať spojenia.",
+    "laterTrips": "Následné spoje",
+    "legend": "Legenda",
+    "loadingTrips": "Spojenia sa načítavajú...",
+    "oneWay": "Iba jednosmerná",
+    "roundTrip": "Spiatočná",
+    "searchTrips": "Hľadať spojenía",
+    "selectOriginDestination": "Vyberte odchádzajúce a cieľové miesto na hľadanie spojení.",
+    "selectProduct": "Vybrať lístok",
+    "selectTravelers": "Vyber si cestujúcich",
+    "switch": "Prestúpiť",
+    "ticket": "Lístok",
+    "tickets": "Lístky",
+    "transfer": "Prestupiť",
+    "tripResults": "Spojenia",
+    "upgradeTo1stClass": "Dodatočný komfort",
+    "upgradeTo1stClassDescription": "Cestovanie v prvej triede",
+    "cityTicketDescription": "Denný lístok na miestnu dopravu",
+    "via": "cez",
+    "travelDate": "Vybrať dátum cesty",
+    "confirmTravelDate": "Potvrdiť dátum cesty",
+    "departure": "Odchod",
+    "arrival": "Prílet",
+    "locationDisabled": "Zdieľanie polohy je vypnuté",
+    "locationError": "Nemožno zistiť polohu",
+    "noProductsAvailable": "Žiadne lístky nie sú k dispozícii",
+    "disclaimer": "Všetky informácie bez záruky.",
+    "validity": "Platnosť",
+    "validityOnSelectedRoute": "Iba na vybratej trase",
+    "validityForConnection": "Len pre vybranú spojenie",
+    "validityForConnectionWith2ndClass": "Len pre vybranú spojenie a s platným lístkom na 2. triedu",
+    "validityForRouteWith2ndClass": "Len pre vybranú trasu a s platným lístkom na 2. triedu",
+    "validityGARoutes": "Platné na všetkých GA-regionálnych trasách",
+    "validityDayClassUpgrade": "Iba s celodennou lístkou na polovičný tarif, GA alebo Swiss Travel Pass (Flex) pre druhú triedu.",
+    "includedIn": "Zahrnuté v",
+    "validityDateRange": "{fromDate} do {toDate}, {toTime}",
+    "validityConnection": "{date} od {fromTime}, do {toTime}",
+    "classUpgradeOnly": "Iba prechod triedy",
+    "loadingDestination": "Načítava sa",
+    "distanceToMeetingPoint": "Miesto stretnutia",
+    "walking": "Pešo",
+    "arrivalInfo": "Odhadovaný čas príchodu: {walkingTime} pešo + 15 min. rezervy do miesta stretnutia",
+    "timeBeforeEvent": "{minutes} min. pred aktivitami · {walkingMinutes} min. pešo od stanice",
+    "tooLateForActivity": "Nasledujúce spoje nedorazia na miesto stretnutia včas"
+  }
+}

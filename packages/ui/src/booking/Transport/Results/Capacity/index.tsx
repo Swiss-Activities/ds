@@ -1,4 +1,4 @@
-import { TransportTrip } from "../../../types/transport";
+import type { TransportTrip } from "../../../types/transport";
 import { cn } from "../../../utils/css/cn";
 
 type CapacityProps = {

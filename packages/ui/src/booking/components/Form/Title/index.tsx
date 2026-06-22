@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import type { ReactNode } from "react";
 import { I } from "../../I";
 import { Text } from "@swiss-activities/ui";
 import { Tooltip, TooltipContent, TooltipTrigger } from "../../../ui/Tooltip";

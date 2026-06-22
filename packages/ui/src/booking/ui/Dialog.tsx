@@ -1,6 +1,6 @@
 "use client";
 
-import { ComponentPropsWithoutRef, ElementRef, HTMLAttributes } from "react";
+import type { ComponentPropsWithoutRef, ElementRef, HTMLAttributes } from "react";
 import { Dialog as DialogPrimitive } from "@base-ui/react/dialog";
 import { X } from "lucide-react";
 import { cn } from "../utils/css/cn";

@@ -1,0 +1,1797 @@
+{
+  "general": {
+    "accountAdvantages": "Um Rabatte und weitere Vorteile zu genießen, erstelle ein Konto oder melde dich an.",
+    "activityBook": "Aktivität buchen",
+    "addTicket": "Ticket hinzufügen",
+    "adult": "{val} Erwachsener",
+    "adults": "{val} Erwachsene",
+    "ageChoose": "Alter wählen",
+    "ageFrom": "Ab {val} Jahre",
+    "ageOld": "{val} Jahre alt",
+    "ageUnder": "Unter {val} Jahre",
+    "all": "Alle",
+    "allReviews": "Alle Bewertungen",
+    "backToBookings": "Zurück zu den Buchungen",
+    "bookAsGuest": "Du schließt den Bestellvorgang als Gast ab.",
+    "cancel": "Abbrechen",
+    "cancelled": "Storniert",
+    "cartAmount": "Warenkorbwert",
+    "child": "{val} Kind",
+    "children": "{val} Kinder",
+    "chooseSelection": "Auswahl bestätigen",
+    "confirm": "Bestätigen",
+    "confirmCancel": "Bestätige die Stornierung",
+    "contact": "Kontakt",
+    "copyUrl": "URL kopieren",
+    "couple": "Paar",
+    "customerServiceFee": "Service Fee",
+    "data": "Daten",
+    "date": "Datum",
+    "dateChoose": "Datum wählen",
+    "delete": "Löschen",
+    "didYouMean": "Meinst du <suggestion>{email}</suggestion>?",
+    "duplicate": "Duplizieren",
+    "emailsDontMatch": "Die eingegebenen E-Mail-Adressen stimmen nicht überein.",
+    "export": "Exportieren",
+    "faqType": "Häufig gestellte Fragen zu {type} in der Schweiz",
+    "from": "Von",
+    "group": "Gruppe",
+    "helpfulQuestion": "Hilfreich?",
+    "informationPlural": "Informationen",
+    "language": "Sprache",
+    "loginOrRegister": "Anmelden oder Registrieren",
+    "manageBookings": "Buchungen verwalten",
+    "mobileAppAddon": "Lade jetzt unsere Mobile App herunter und verwalte bequem deine Buchungen, greife schnell auf deine Tickets zu und finde dein nächstes Abenteuer.",
+    "mostImportantInSummary": "Das Wichtigste in Kürze",
+    "noResults": "Leider konnten wir keine Ergebnisse zu deinem Suchbegriff finden",
+    "noReviewsYet": "Noch keine Bewertungen",
+    "notes": "Notizen",
+    "oneMonth": "1 Monat",
+    "openChat": "Chat öffnen",
+    "order": "Reihenfolge",
+    "partSum": "Zwischensumme",
+    "participants": "Teilnehmer",
+    "participantsChoose": "Teilnehmer wählen",
+    "past": "Vergangen",
+    "personalizeTickets": "Tickets personalisieren",
+    "pleaseSelect": "Bitte auswählen",
+    "pleaseSelectItem": "Bitte {val} auswählen",
+    "questionsChatActivity": "Hast du noch Fragen zu dieser Aktivität? Chatte mit uns",
+    "questionsChatBooking": "Hast du noch Fragen zur Buchung? Chatte mit uns",
+    "raw": "Raw",
+    "rebate": "Rabatt",
+    "recaptcha": "Diese Website ist durch reCAPTCHA geschützt. Die Google\n<a href=\"https://policies.google.com/privacy\" target=\"_blank\">Datenschutzrichtlinie</a> und\n<a href=\"https://policies.google.com/terms\" target=\"_blank\">Nutzungsbedingungen</a> gelten.",
+    "remove": "Entfernen",
+    "removeFromCart": "Aus dem Warenkorb entfernen",
+    "reset": "Zurücksetzen",
+    "searchNow": "Jetzt suchen",
+    "single": "Single",
+    "soldOut": "Ausverkauft",
+    "somethingWentWrongContact": "Es tut uns leid, aber etwas ist schief gelaufen. Bitte versuche es erneut oder wende dich an den Support.",
+    "successfullySaved": "Erfolgreich gespeichert",
+    "ticket": "Ticket",
+    "tickets": "Tickets",
+    "to": "Nach",
+    "currentLocation": "Aktueller Ort",
+    "toDashboard": "Meine Buchungen",
+    "translate": "Übersetzen",
+    "tryAgain": "Nochmal versuchen",
+    "upcoming": "Bevorstehend",
+    "when": "Wann",
+    "who": "Wer",
+    "wrongDate": "Etwas stimmt nicht mit dem Datum: Bitte prüfen und erneut auswählen.",
+    "wrongDateParticipant": "Das Geburtsdatum des Teilnehmers stimmt nicht mit dem Alter aus dem Angebot überein.",
+    "today": "Heute",
+    "apply": "Anwenden"
+  },
+  "aria": {
+    "forward": "Vorwärts",
+    "backward": "Rückwärts"
+  },
+  "auth0": {
+    "accept": "Ich akzeptiere die [Nutzungsbedingungen]({link})",
+    "error": "Bitte akzeptiere die Nutzungsbedingungen",
+    "resetPasswordHint": "Keine E-Mail erhalten? Überprüfe deinen Spam-Ordner. Falls du dich mit Apple oder Google registriert hast, nutze bitte diese Anmeldemethode."
+  },
+  "menu": {
+    "menu": "Menü",
+    "search": "Suchen",
+    "travelGuide": "Reiseplaner",
+    "travelRoutes": "Reiserouten",
+    "contactus": "Kontaktiere uns",
+    "switzerland": "Schweiz",
+    "help": "Chat",
+    "voucher": "Gutschein kaufen",
+    "voucherSm": "Gutschein",
+    "partners": "Partner",
+    "provider": "Anbieter",
+    "affiliate": "Affiliatepartner"
+  },
+  "chat": {
+    "chats": "Alle Chats",
+    "newChat": "Neuer Chat",
+    "noChatsYet": "Noch keine Chats",
+    "typeMessage": "Nachricht eingeben",
+    "welcome": "Hallo und willkommen bei Swiss Activities! Ich bin Housibot und helfe dir gerne bei deinen Fragen.",
+    "welcomeReview": "Hallo! Wie war deine Erfahrung? Ich bin Housibot und helfe dir gerne dabei, dein Feedback zu teilen."
+  },
+  "supportBanner": {
+    "title": "Brauchst du Hilfe die passende Skischule zu finden?",
+    "placeholder": "Wie können wir dir weiterhelfen?",
+    "send": "Senden"
+  },
+  "pages": {
+    "404": {
+      "title": "Seite nicht gefunden.",
+      "description": "Diese Seite existiert nicht.",
+      "button": "Zurück zur Startseite",
+      "search": "Suche starten"
+    },
+    "home": {
+      "title": "Swiss Activities - Schweizer Freizeitaktivitäten finden",
+      "description": "Swiss Activities ist deine Destination für Freizeitaktivitäten in der Schweiz. Entdecke, vergleiche und buche unzählige Freizeitaktivitäten.",
+      "gatewayCards": {
+        "categories": {
+          "castlesRuins": "Schloss / Ruine",
+          "castleEvents": "Schloss Event",
+          "exhibitions": "Ausstellung",
+          "fireplaces": "Feuerstelle",
+          "movies": "Film",
+          "museums": "Museum",
+          "playgrounds": "Spielplatz",
+          "swimmingBathing": "Schwimmen & Baden"
+        },
+        "dateRange": {
+          "from": "Ab",
+          "until": "Bis"
+        },
+        "distance": {
+          "unit": "km"
+        }
+      },
+      "gatewayDetail": {
+        "back": "Zurück",
+        "moreInfo": "Mehr Informationen",
+        "source": "Quelle öffnen",
+        "labels": {
+          "admission": "Eintritt",
+          "address": "Adresse",
+          "ageRating": "Alter",
+          "bookTickets": "Tickets buchen",
+          "canton": "Kanton",
+          "cast": "Besetzung",
+          "category": "Kategorie",
+          "cinema": "Kino",
+          "countryYear": "Land / Jahr",
+          "dateRange": "Zeitraum",
+          "director": "Regie",
+          "duration": "Dauer",
+          "entryFeeAdult": "Erwachsene",
+          "entryFeeChild": "Kinder",
+          "foundedYear": "Gegründet",
+          "genres": "Genres",
+          "location": "Ort",
+          "museumCategory": "Museumstyp",
+          "openTrailer": "Trailer öffnen",
+          "openingHours": "Öffnungszeiten",
+          "phone": "Telefon",
+          "poolLength": "Beckenlänge",
+          "trailer": "Trailer",
+          "venue": "Veranstaltungsort",
+          "waterType": "Wassertyp"
+        },
+        "sections": {
+          "amenities": "Ausstattung",
+          "badges": "Empfehlungen",
+          "information": "Informationen",
+          "prices": "Preise",
+          "showtimes": "Vorstellungen",
+          "venue": "Veranstaltungsort"
+        },
+        "amenities": {
+          "capacityPersons": "Kapazität",
+          "hasBenches": "Sitzbänke",
+          "hasChangingRooms": "Garderoben",
+          "hasDivingBoard": "Sprungbrett",
+          "hasFirewood": "Feuerholz",
+          "hasFoodService": "Verpflegung",
+          "hasGrillGrate": "Grillrost",
+          "hasKidsPool": "Kinderbecken",
+          "hasLifeguard": "Aufsicht",
+          "hasLockers": "Schliessfächer",
+          "hasPlaygroundNearby": "Spielplatz in der Nähe",
+          "hasShowers": "Duschen",
+          "hasSlide": "Rutschbahn",
+          "hasShelter": "Unterstand",
+          "hasTable": "Tisch",
+          "hasToilet": "Toilette",
+          "hasWater": "Wasser"
+        },
+        "waterTypes": {
+          "indoorPool": "Hallenbad",
+          "lake": "See",
+          "outdoorPool": "Freibad",
+          "pool": "Schwimmbad",
+          "river": "Fluss"
+        }
+      }
+    },
+    "s": {
+      "title": "Swiss Activities - Schweizer Freizeitaktivitäten finden",
+      "description": "Swiss Activities ist deine Destination für Freizeitaktivitäten in der Schweiz. Entdecke, vergleiche und buche unzählige Freizeitaktivitäten.",
+      "sort": {
+        "distance": {
+          "notSupported": "Standortdienste werden von deinem Browser nicht unterstützt. Sortierung nach Relevanz wird verwendet.",
+          "permissionDenied": "Um nach Entfernung zu sortieren, erlaube bitte den Zugriff auf deinen Standort in den Browsereinstellungen und lade die Seite neu.",
+          "positionUnavailable": "Standortinformationen sind nicht verfügbar.",
+          "timeout": "Zeitüberschreitung bei der Standortabfrage.",
+          "unknownError": "Ein unbekannter Fehler ist aufgetreten.",
+          "fallbackMessage": "Sortierung nach Relevanz wird verwendet.",
+          "errorPrefix": "Standort konnte nicht ermittelt werden. "
+        }
+      }
+    },
+    "chat": {
+      "title": "Swiss Activities Chat",
+      "description": "Swiss Activities ist deine Destination für Freizeitaktivitäten in der Schweiz. Entdecke, vergleiche und buche unzählige Freizeitaktivitäten."
+    },
+    "transport": {
+      "title": "Schweizer Bahn Tickets, Pässe & Tageskarten | Swiss Travel Pass, SBB Spartageskarte",
+      "description": "Vergleiche und buche Zugtickets, Swiss Travel Pass, Halbtax, SBB Spartageskarten & Regionalpässe für die ganze Schweiz. Sofort als Mobile-Ticket aufs Handy.",
+      "trust": {
+        "partners": "Offizieller Partner von",
+        "ratingValue": "4.8",
+        "ratingLabel": "400'000+ zufriedene Reisende",
+        "ratingShortLabel": "400'000+ Reisende"
+      },
+      "discountMap": {
+        "title": "Hier sparst du mit deinem Pass",
+        "subtitle": "Bergbahnen, Schiffe und Top-Ausflüge — wähle einen Pass und sieh wo's was gibt.",
+        "free": "Inklusive",
+        "discount50": "−50 %",
+        "discount25": "−25 %",
+        "noDiscount": "Kein Rabatt",
+        "altitude": "{m} m ü. M.",
+        "moreInfo": "Mehr erfahren",
+        "selectPass": "Pass wählen",
+        "selectCategory": "Kategorie wählen",
+        "categories": {
+          "mountain": "Bergbahnen",
+          "lake": "Seen & Schiffe",
+          "museum": "Museen"
+        },
+        "airports": {
+          "zrh": "Zürich",
+          "gva": "Genf"
+        },
+        "regions": {
+          "bernerOberland": "Berner Oberland",
+          "jungfrau": "Jungfrau",
+          "interlaken": "Interlaken",
+          "zentralschweiz": "Zentralschweiz",
+          "ostschweiz": "Ostschweiz",
+          "waadt": "Waadt",
+          "engadin": "Engadin",
+          "wallis": "Wallis",
+          "tessin": "Tessin",
+          "genferseeregion": "Genferseeregion",
+          "zuerich": "Zürich",
+          "mittelland": "Mittelland",
+          "luzern": "Luzern",
+          "basel": "Basel",
+          "bern": "Bern",
+          "lausanne": "Lausanne",
+          "geneve": "Genf",
+          "zermatt": "Zermatt",
+          "fribourg": "Freiburg",
+          "graubuenden": "Graubünden"
+        }
+      },
+      "hero": {
+        "title": "Zugtickets für die ganze",
+        "titleAccent": "Schweiz",
+        "lede": "Streckentickets, Tageskarten und Sparangebote der SBB – sofort als Mobile-Ticket auf dein Handy.",
+        "subtitle": "Streckentickets, Tageskarten und Sparangebote der SBB – sofort als Mobile-Ticket auf dein Handy.",
+        "searchTitle": "Verbindung suchen",
+        "searchMeta": "Bahnhof · Datum · Fahrgäste",
+        "fromPlaceholder": "Startbahnhof/Startort",
+        "toPlaceholder": "Zielbahnhof/Zielort",
+        "badges": {
+          "rating": "4.8 / 5 · 400'000+ Bewertungen",
+          "partner": "Offizieller Partner SBB"
+        },
+        "usps": {
+          "customers": {
+            "title": "400'000 glückliche Kunden",
+            "subline": "Vertrauen seit 2021 auf Swiss Activities"
+          },
+          "saver": {
+            "title": "Spare bis zu 50%",
+            "subline": "Mit Sparbilletten und Tageskarten der SBB"
+          },
+          "mobile": {
+            "title": "Sofort als Mobile-Ticket",
+            "subline": "Direkt aufs Handy, kein SBB-Login nötig"
+          },
+          "earlyBird": {
+            "title": "Vergünstigungen für Vorausbucher",
+            "subline": "Plane im Voraus und kaufe Spartickets und Spartageskarten der SBB"
+          }
+        }
+      },
+      "benefits": {
+        "title": "Deine Vorteile",
+        "discount": {
+          "eyebrow": "Sparbillette",
+          "title": "Spare bis zu 40%",
+          "subline": "SBB-Sparangebote und Tageskarten",
+          "badge": "Bestseller"
+        }
+      },
+      "passes": {
+        "title": "SBB- und Regionalpässe",
+        "subtitle": "Vergleiche Mehrtagespässe, Tagespässe und Regionalpässe – wähle den Pass, der für dich am meisten herausholt.",
+        "tabs": {
+          "multiDay": "Mehrtagespässe",
+          "dayPass": "Tagespässe",
+          "regional": "Regionalpässe"
+        },
+        "buy": "Jetzt kaufen",
+        "from": "ab",
+        "moreInfo": "Mehr Infos",
+        "seeDiscounts": "Alle Vergünstigungen ansehen",
+        "viewAllByTab": {
+          "multiDay": "Alle Bahnpässe ansehen",
+          "dayPass": "Alle SBB Tageskarten ansehen",
+          "regional": "Alle Regionalpässe ansehen"
+        },
+        "empty": "Aktuell keine Produkte verfügbar – schau in den anderen Kategorien rein.",
+        "descriptions": {
+          "fallback-stp": "Schweizweit unterwegs mit Bahn, Bus und Schiff – kostenlose Museumseintritte inklusive.",
+          "fallback-stpf": "Den öffentlichen Verkehr an wählbaren Tagen nutzen – inklusive kostenloser Museumseintritte.",
+          "fallback-shfc": "Einen Monat lang halber Preis auf Bahn, Bus, Schiff und Bergbahnen.",
+          "fallback-halbtax": "Den ganzen Tag freie Fahrt in der ganzen Schweiz – mit deinem Halbtax.",
+          "fallback-spar": "Tageskarte zum besten Preis bei früher Buchung – begrenztes Kontingent pro Tag.",
+          "fallback-ga": "Volle Mobilität für einen Tag – wie ein GA, nur für 24 Stunden.",
+          "fallback-tell": "Freie Fahrt in der Zentralschweiz: Bergbahnen, Schifffahrten und ÖV inklusive.",
+          "fallback-bo": "Erkunde die Region Jungfrau und Interlaken – Bahnen, Schiffe und Bergbahnen mit einem Pass.",
+          "fallback-jtp": "Top of Europe-Region: Bergbahnen, ÖV und Highlights rund um Grindelwald, Wengen, Mürren."
+        },
+        "usps": {
+          "1447": [
+            "Bahn, Bus & Schiff schweizweit gratis",
+            "Bis −50 % auf Bergbahnen (Jungfraujoch −25 %)",
+            "Über 500 Museen kostenlos"
+          ],
+          "1448": [
+            "An wählbaren Tagen schweizweit aktivieren",
+            "Bis −50 % auf Bergbahnen, Bus, Schiff",
+            "Über 500 Museen kostenlos"
+          ],
+          "1440": [
+            "1 Monat halber Preis schweizweit",
+            "Auf Bahn, Bus, Schiff & Bergbahnen",
+            "Auch auf Sparbillette der SBB"
+          ],
+          "1664": [
+            "Tageskarte ab CHF 29",
+            "Bis −70 % bei früher Buchung",
+            "Limitiertes Kontingent pro Tag"
+          ],
+          "1676": [
+            "1 Tag freie Fahrt mit Halbtax",
+            "Schweizweit auf SBB-Verbindungen",
+            "Günstiger als mehrere Einzelbillette"
+          ],
+          "1671": [
+            "Kinder 6–16 zum Familienpreis",
+            "Schweizweit alle SBB-Verbindungen",
+            "Perfekt für Familienausflüge"
+          ],
+          "1450": [
+            "Pilatus, Rigi & Stanserhorn inklusive",
+            "Schiffe Vierwaldstättersee gratis",
+            "Bahn, Bus & Bergbahnen Zentralschweiz"
+          ],
+          "1438": [
+            "First, Schynige Platte & Niesen inklusive",
+            "−25 % auf Jungfraujoch Top of Europe",
+            "Bahn, Schiff & Bergbahnen mit einem Pass"
+          ],
+          "1330": [
+            "Harder Kulm & Brienzer Rothorn inklusive",
+            "Bis −50 % auf Skigebiete Grindelwald-Wengen",
+            "ÖV & Bergbahnen Region Jungfrau"
+          ]
+        },
+        "soldCount": "{count} gebucht",
+        "reviews": "({count})",
+        "discounts": {
+          "1447": "Bergbahnen −50 %",
+          "1448": "Bergbahnen −50 %",
+          "1440": "Halber Preis",
+          "1664": "Bis −70 %",
+          "1671": "Familienpreis",
+          "1450": "Pilatus & Rigi inkl.",
+          "1438": "First & Niesen inkl.",
+          "1330": "Harder Kulm inkl."
+        },
+        "benefits": {
+          "includedHeading": "Inklusive",
+          "discountedHeading": "Vergünstigungen",
+          "expand": "Alle Vergünstigungen ansehen",
+          "collapse": "Weniger anzeigen",
+          "items": {
+            "1447": {
+              "included": [
+                "Bahn, Bus & Schiff schweizweit",
+                "Über 500 Museen",
+                "ÖV in 90 Schweizer Städten"
+              ],
+              "discounted": [
+                "Bergbahnen bis −50 %",
+                "Jungfraujoch Top of Europe −25 %",
+                "RailAway-Angebote der SBB −30 %"
+              ]
+            },
+            "1448": {
+              "included": [
+                "Bahn, Bus & Schiff an wählbaren Tagen",
+                "Über 500 Museen",
+                "ÖV in 90 Schweizer Städten"
+              ],
+              "discounted": [
+                "Bergbahnen bis −50 %",
+                "Jungfraujoch Top of Europe −25 %",
+                "RailAway-Angebote der SBB −30 %"
+              ]
+            },
+            "1440": {
+              "included": [],
+              "discounted": [
+                "50 % auf Bahn-, Bus- & Schifftickets",
+                "50 % auf Bergbahnen",
+                "Auch kombinierbar mit SBB-Sparbilletten"
+              ]
+            },
+            "1664": {
+              "included": [
+                "1 Tag freie Fahrt schweizweit"
+              ],
+              "discounted": [
+                "Tageskarte ab CHF 29",
+                "Bis −70 % bei früher Buchung"
+              ]
+            },
+            "1676": {
+              "included": [
+                "1 Tag freie Fahrt mit Halbtax"
+              ],
+              "discounted": [
+                "Günstiger als mehrere Einzelbillette"
+              ]
+            },
+            "1671": {
+              "included": [
+                "Schweizweit SBB-Verbindungen für 1 Tag"
+              ],
+              "discounted": [
+                "Familienpreis für Kinder 6–16",
+                "−50 % auf reguläre Tageskarten"
+              ]
+            },
+            "1450": {
+              "included": [
+                "Pilatus, Rigi & Stanserhorn",
+                "Schiffe Vierwaldstättersee",
+                "Bahn, Bus & Bergbahnen Zentralschweiz"
+              ],
+              "discounted": []
+            },
+            "1438": {
+              "included": [
+                "First, Schynige Platte & Niesen",
+                "Brienzer Rothorn & Stockhorn",
+                "Bahn, Schiff & Bergbahnen Region Jungfrau"
+              ],
+              "discounted": [
+                "Jungfraujoch Top of Europe −25 %",
+                "Schilthorn (James Bond) −50 %"
+              ]
+            },
+            "1330": {
+              "included": [
+                "Harder Kulm & Brienzer Rothorn",
+                "ÖV Region Jungfrau (Bahn, Bus, Schiff)"
+              ],
+              "discounted": [
+                "Skigebiete Grindelwald-Wengen bis −50 %",
+                "Skigebiet Mürren-Schilthorn bis −50 %",
+                "Jungfraujoch Top of Europe −25 %"
+              ]
+            }
+          }
+        }
+      },
+      "articles": {
+        "title": "Spannende Artikel rund um die Zugwelt",
+        "subtitle": "Tipps, Vergleiche und Praxiswissen zu SBB-Tickets, Travel Pässen und ÖV in der Schweiz.",
+        "read": "Artikel lesen",
+        "tag": "Magazin"
+      },
+      "dayPasses": {
+        "title": "Beliebte Tageskarten",
+        "subtitle": "Den ganzen Tag freie Fahrt – einfach kombinierbar mit deinem Ticket.",
+        "halbtax": {
+          "title": "Tageskarte zum Halbtax",
+          "description": "Den ganzen Tag freie Fahrt in der ganzen Schweiz – mit deinem Halbtax. Ideal für Tagesausflüge und Bergregionen.",
+          "fromPrice": "ab CHF 52.–",
+          "cta": "Verbindung suchen"
+        },
+        "spar": {
+          "title": "Spartageskarte",
+          "description": "Tageskarte zum besten Preis bei früher Buchung. Begrenztes Kontingent pro Tag – wer früh bucht, fährt günstiger.",
+          "fromPrice": "ab CHF 29.–",
+          "cta": "Verbindung suchen"
+        }
+      },
+      "groups": {
+        "mountains": "Bergerlebnisse mit dem Zug erreichbar",
+        "dayTrips": "Beliebte Tagesausflüge ab Zürich, Bern und Basel",
+        "cities": "Städte entdecken: Zug + Erlebnis",
+        "cityPasses": "City Passes: Eine Karte, die ganze Stadt"
+      },
+      "faq": {
+        "title": "Häufige Fragen rund um SBB-Tickets",
+        "items": [
+          {
+            "q": "Kann ich mein Ticket stornieren?",
+            "a": "<p><strong>Streckentickets</strong> kannst du bis am Tag vor der Fahrt kostenlos stornieren – das geht direkt in deinem Buchungs-Cockpit auf swissactivities.com.</p><p>Bei <strong><a href=\"/sbb-tageskarten/spartageskarte-sbb/\">Spartageskarten</a></strong> und Sparbilletten ist eine Stornierung leider nicht möglich. Diese sind ans gewählte Datum gebunden – ein klarer Hinweis vor dem Kauf erscheint auf der Buchungsseite.</p>"
+          },
+          {
+            "q": "Sind die SBB-Tickets gleich wie am SBB-Schalter?",
+            "a": "Ja, du erhältst dieselben offiziellen SBB-Tickets wie am Schalter oder in der SBB-App – ohne Aufpreis. Auch <a href=\"/sbb-tageskarten/\">SBB Tageskarten</a> und <a href=\"/bahnpaesse/\">Bahnpässe</a> sind 1:1 die Original-Produkte der SBB."
+          },
+          {
+            "q": "Wie schnell erhalte ich mein Ticket?",
+            "a": "Sofort. Nach erfolgreicher Buchung bekommst du das Mobile-Ticket per E-Mail und im Buchungs-Cockpit auf swissactivities.com. Kein SBB-Login nötig – direkt vorzeigen im Zug."
+          },
+          {
+            "q": "Kann ich Halbtax oder GA hinterlegen?",
+            "a": "Ja, beim Buchungsschritt kannst du dein Ermässigungsabonnement auswählen – der Preis passt sich automatisch an. Wenn du nur ein Halbtax hast und einen ganzen Tag unterwegs bist, lohnt sich oft die <a href=\"/sbb-tageskarten/sbb-tageskarte-halbtax/\">SBB Tageskarte zum Halbtax</a> statt mehrerer Einzelbillette."
+          },
+          {
+            "q": "Was ist, wenn mein Zug Verspätung hat?",
+            "a": "Dein Streckenticket gilt auch für die nächste Verbindung – einfach in den nächsten passenden Zug einsteigen. Bei mehr als einer Stunde Verspätung kannst du über die SBB eine Rückerstattung beantragen."
+          },
+          {
+            "q": "Lohnt sich der Swiss Travel Pass oder eine Spartageskarte?",
+            "a": "<p>Die Faustregel: Wer mindestens drei Tage hintereinander viel mit Bahn, Bus und Schiff unterwegs ist und gerne Museen besucht, fährt mit dem <a href=\"/bahnpaesse/swiss-travel-pass-kaufen/\">Swiss Travel Pass</a> günstiger. Inklusive sind über 500 Museen, ÖV in 90 Städten und Bergbahnen mit −50 % Rabatt.</p><p>Für einzelne Tagesausflüge ist die <a href=\"/sbb-tageskarten/spartageskarte-sbb/\">SBB Spartageskarte</a> ab CHF 29 fast immer die günstigste Variante – einfach früh genug buchen.</p>"
+          },
+          {
+            "q": "Welcher Regionalpass passt zu meiner Reise?",
+            "a": "<p>Für die Region Interlaken / Grindelwald / Wengen lohnt sich der <a href=\"/bahnpaesse/berner-oberland-pass/\">Berner Oberland Pass</a> oder im Winter der <a href=\"/bahnpaesse/jungfrau-travel-pass-winter/\">Jungfrau Travel Pass</a> – beide enthalten Bergbahnen, ÖV und Schiffe der Region.</p><p>Rund um den Vierwaldstättersee ist der <a href=\"/bahnpaesse/sbb-tellpass/\">Tell-Pass</a> ideal: Pilatus, Rigi, Stanserhorn und alle Schiffe sind inklusive.</p>"
+          }
+        ]
+      }
+    },
+    "about_us": {
+      "title": "Über uns - Swiss Activities",
+      "description": "Swiss Activities ist deine Destination für Freizeitaktivitäten in der Schweiz. Entdecke, vergleiche und buche unzählige Freizeitaktivitäten.",
+      "hero": {
+        "title": "Schweizer Freizeitaktivitäten finden",
+        "text": "Swiss Activities ist deine Destination für Freizeitaktivitäten in der Schweiz. Auf Swiss Activities findest du unzählige Freizeitaktivitäten, kannst diese miteinander vergleichen und mit wenigen Klicks buchen. Nie war es leichter, in der Schweiz Aktivitäten für deine Freizeit zu finden."
+      },
+      "who": {
+        "title": "Wer wir sind",
+        "text": "Wir sind ein motiviertes Team, das für Freizeitaktivitäten in der Schweiz brennt. Wir kennen das Land und die Leute. Selber neue Aktivitäten auszuprobieren ist unsere Leidenschaft. Darum haben wir Swiss Activities entwickelt."
+      },
+      "start": {
+        "title": "Unser Start",
+        "text": "Als wir im 2020 feststellten, dass wir nicht mehr Reisen konnten, haben wir eine Schweizer Freizeitaktivitäten Plattform gesucht mit Ausrichtung auf die Schweizerinnen und Schweizer, aber keine gefunden. Dass war der Startschuss der Freizeitaktivitäten Destination Swiss Activities.",
+        "milestones": {
+          "march_2020": {
+            "date": "März 2020",
+            "title": "Bootstrapping Swiss Activities als Geschäftsmodell"
+          },
+          "march_2021": {
+            "date": "März 2021",
+            "title": "Firmengründung"
+          },
+          "june_2021": {
+            "date": "Juni 2021",
+            "title": "Lancierung eigene Plattform"
+          },
+          "september_2021": {
+            "date": "September 2021",
+            "title": "500 live buchbare Aktivitäten aufgeschaltet"
+          },
+          "december_2021": {
+            "date": "Dezember 2021",
+            "title": "Pre-Seed Kapitalrunde abgeschlossen"
+          },
+          "march_2022": {
+            "date": "März 2021",
+            "title": "Lancierung Affiliate Programm"
+          },
+          "may_2022": {
+            "date": "Mai 2021",
+            "title": "Lancierung B2B Partner Programm"
+          }
+        }
+      },
+      "partner": {
+        "title": "Wir helfen dir, neue Kundinnen und Kunden zu gewinnen",
+        "text": "Swiss Activities hilft dir, neue Kundinnen und Kunden zu finden. Wir arbeiten täglich daran, Swiss Activities zur grössten Destination für Freizeitaktivitäten in der Schweiz zu machen. Tausende von Menschen kommen jeden Tag auf www.swissactivities.com, um nach Freizeitaktivitäten in der Schweiz zu suchen. Indem du dein Angebot auf Swiss Activities zeigst, erreichst du neue Kundinnen und Kunden."
+      },
+      "kunden": {
+        "title": "Eine Destination mit allen Freizeitaktivitäten in der Schweiz ",
+        "text": "Unser Ziel ist es, alle Freizeitaktivitäten in der ganzen Schweiz auf www.swissactivities.com auffindbar zu machen. Damit machen wir das Finden, Vergleichen und Buchen von Freizeitaktivitäten für alle einfacher."
+      },
+      "promise": {
+        "title": "Unser Kunden-Versprechen",
+        "list": [
+          "kein aufwändiges Telefonieren",
+          "keine endlose Recherche auf unzähligen Webseiten",
+          "direkt prüfbare Verfügbarkeiten",
+          "sofortige Reservationen ohne Umweg",
+          "keine Zusatzkosten Kosten",
+          "unkomplizierte und schnelle Zahlungsmöglichkeiten",
+          "keine mühsamen Warteschlangen",
+          "Übersicht von attraktiven Vergünstigungen",
+          "lokale Angebote"
+        ]
+      },
+      "team": {
+        "title": "Das Swiss Activities Team"
+      }
+    },
+    "tos_b2b": {
+      "title": "Allgemeine Geschäftsbedingungen für Anbieter",
+      "description": "Das sind unsere aktuellen Geschäftsbedingungen für unsere Anbieter."
+    },
+    "tos_b2c": {
+      "title": "Nutzungsbedingungen Swiss Activities Vermittlungsplattform für Kunden",
+      "description": "Das sind unsere aktuellen Nutzungsbedingungen Swiss Activities Vermittlungsplattform für Kunden."
+    },
+    "tos_aff": {
+      "title": "Allgemeine Geschäftsbedingungen für Affiliates",
+      "description": "Das sind unsere aktuellen Geschäftsbedingungen für unsere Affiliates."
+    },
+    "imprint": {
+      "title": "Impressum",
+      "description": "Das ist unser Impressum."
+    },
+    "privacy_policy": {
+      "title": "Datenschutz",
+      "description": "Das ist die Datenschutzerklärung."
+    },
+    "contact_us": {
+      "title": "Kontaktiere uns",
+      "description": "Bei Fragen helfen wir dir gerne weiter."
+    },
+    "basket": {
+      "title": "Warenkorb",
+      "delete": "Löschen",
+      "warning": "Möchtest du diese Reservierung aus deinem Warenkorb löschen?",
+      "edit": "Bearbeiten",
+      "cancel": "Abbrechen",
+      "update": "Warenkorb aktualisieren",
+      "next": "Zur Kasse",
+      "empty": "Dein Warenkorb ist leer",
+      "hold": "Wir halten diese Reservierung für",
+      "explore": "Entdecke Freizeitaktivitäten"
+    },
+    "booking": {
+      "title": "Buchung"
+    },
+    "confirmation": {
+      "title": "Buchungsbestätigung",
+      "tickets": "Deine Tickets",
+      "download": "Mobile Ticket",
+      "more": "Mehr Informationen",
+      "cancel": "Ticket stornieren",
+      "cancelled": "Storniert",
+      "cancelWhy": "Warum möchtest du stornieren?",
+      "cancelReasons": [
+        "Mein Urlaub ist abgesagt",
+        "Ich habe eine günstigere Alternative gefunden",
+        "Ich habe meine Bestätigung nicht rechtzeitig erhalten",
+        "Der Anbieter hat mich gebeten, die Buchung zu stornieren",
+        "Meine bevorzugten Optionen waren nicht verfügbar",
+        "Ich habe das falsche Datum gebucht",
+        "Ich habe die falsche Anzahl an Teilnehmenden gebucht",
+        "Andere Gründe"
+      ],
+      "rebook": {
+        "title": "Umbuchen",
+        "text": "Planänderung? Buche deine Aktivität um. Deine alte Reservation wird automatisch storniert.",
+        "button": "Jetzt umbuchen"
+      },
+      "stay": "Bitte bleibe auf dieser Seite, deine Buchung wird gerade verarbeitet.",
+      "editBooking": "Buchung ändern",
+      "showTickets": "Tickets anzeigen",
+      "drawerTitle": "Deine Buchung",
+      "relatedBookings": "Zugehörige Buchungen"
+    },
+    "activities": {
+      "title": "Die besten Freizeitaktivitäten Schweiz {year}",
+      "description": "Finde und buche deine passende Aktivität {year} in der Schweiz. Als vielfältiges Land bietet die Schweiz unzählige Aktivitäten und Ideen für einen Tagesausflug.",
+      "intro": "Das ganze Jahr über findest du Freizeitaktivitäten für jeden Anlass. Ob du nun einen Ausflug mit deiner Familie planst, einen Polterabend organisierst, eine Outdoor Aktivität oder Inspiration für dein Schlechtwetterprogramm suchst, hier findest du etwas. Auf Swiss Activities kannst du deinen Tagesausflug planen und gleich buchen.",
+      "titleParentLocation": "{locationTitle} {year}: die besten Aktivitäten und Angebote",
+      "descriptionParentLocation": "Finde und buche die besten Aktivitäten in der {locationTitle}: Buche Tickets für Ausflugsziele oder Familienaktivitäten mit wenigen Klicks.",
+      "titleChildLocation": "{locationTitle} {year}: die besten Aktivitäten",
+      "descriptionChildLocation": "Buche die besten Aktivitäten in {locationTitle}. Buche Tickets für Ausflugsziele oder Familienaktivitäten mit wenigen Klicks.",
+      "titleParentType": "{typeTitle} {year}: Die besten {typeTitle} in der Schweiz",
+      "descriptionParentType": "Buche die besten {typeTitle} aus der ganzen Schweiz. Keine Warteschlangen, keine Buchungsgebühr und kostenlose Stornierungsoptionen.",
+      "titleChildType": "{typeTitle} {year}: Die besten {typeTitle} Angebote in der Schweiz",
+      "descriptionChildType": "Buche die besten Angebote für {typeTitle} aus der ganzen Schweiz. Keine Warteschlangen, keine Buchungsgebühr und kostenlose Stornierungsoptionen.",
+      "titleParentLocationParentType": "{typeTitle} {locationTitle}: Top Angebote und Preise {year}",
+      "descriptionParentLocationParentType": "Buche die besten Angebote für {typeTitle} {locationTitle} {year}. Keine Buchungsgebühr und kostenlose Stornierungsoptionen.",
+      "titleParentLocationChildType": "{typeTitle} {locationTitle}: Top Angebote und Preise {year}",
+      "descriptionParentLocationChildType": "Buche die besten Angebote für {typeTitle} {locationTitle} {year}. Keine Buchungsgebühr und kostenlose Stornierungsoptionen.",
+      "titleChildLocationParentType": "{typeTitle} {locationTitle}: Top Angebote und Preise {year}",
+      "descriptionChildLocationParentType": "Buche die besten Angebote für {typeTitle} {locationTitle} {year}. Keine Buchungsgebühr und kostenlose Stornierungsoptionen.",
+      "titleChildLocationChildType": "{typeTitle} {locationTitle}: Top Angebote und Preise {year}",
+      "descriptionChildLocationChildType": "Buche die besten Angebote für {typeTitle} {locationTitle} {year}. Keine Buchungsgebühr und kostenlose Stornierungsoptionen."
+    },
+    "listing": {
+      "title": "{listingTitle}",
+      "offersTitle": "{title} Tickets und Aktivitäten",
+      "activities": "Aktivitäten",
+      "relatedListings": "Top {value} Sehenswürdigkeiten",
+      "relatedListingsClose": "{value} Sehenswürdigkeiten",
+      "description": "Auflistung für {listingTitle}",
+      "tableOfContent": "Inhaltsverzeichnis",
+      "destinationTitle": "{location} - Top {num} Sehenswürdigkeiten und Aktivitäten {year}",
+      "more": "Mehr über {val} erfahren",
+      "locations": "Orte in der Nähe von {val}",
+      "regions": "Regionen in der {val}",
+      "type": "Beliebte Orte in der Schweiz für {val}",
+      "typeLocation": "Beliebte Orte in {location} für {type}",
+      "types": "Top {val} Aktivitäten",
+      "combo": "{type} {location} - {num} Top Angebote und Preise {year}",
+      "map": "Karte",
+      "attributeBadWeatherTitleAttribute": "Die {val} besten Schlechtwetter Ideen für die Schweiz",
+      "attributeBadWeatherTitle": "Die {val} besten Schlechtwetter Ideen in {location}",
+      "attributeBadWeatherTeaser": "Ob Regen, Nebel oder Schneefall: in [{location}]({locationLink}) gibt es zahlreiche Aktivitäten, die du trotz schlechtem Wetter unternehmen kannst. Der Regen muss dir also nicht zwingend einen Strich durch die Rechnung machen. Du findest sowohl Indoor- als auch [Outdoor-Aktivitäten]({outdoorLink}), die sich bei jedem Wetter eignen. Dabei entscheidest du, ob du es aktiv oder eher ruhig angehen lassen möchtest. Finde weitere Inspiration für zahlreiche [Schlechtwetter Ideen]({badWeatherLink}) in der ganzen Schweiz.",
+      "attributeBadWeatherDesc": "Finde deine Schlechtwetter Idee in {location} und unternimm eine Aktivität, die bei jedem Wetter stattfinden kann.",
+      "attributeFamilyTitleAttribute": "Die {val} besten Ideen für deinen Familienausflug für die Schweiz",
+      "attributeFamilyTitle": "Die {val} besten Ideen für deinen Familienausflug in {location}",
+      "attributeFamilyTeaser": "Plane deinen nächsten Familienausflug in [{location}]({locationLink}) für dich und deine Kinder. Ob ihr eher abenteuerlustig, gemütlich oder als Entdecker unterwegs seid, spielt keine Rolle. Es gibt das ganze Jahr über, auch bei [schlechtem Wetter in {location}]({locationBadWeatherLink}), vieles zu unternehmen. Auch für einen Ausflug mit dem Kinderwagen habt ihr Optionen, die mit kleineren Kindern geeignet sind. Somit steht deinem [Familienausflug]({familyLink}) nichts mehr im Weg.",
+      "attributeFamilyDesc": "Finde die passende Idee für deinen nächsten Familienausflug in {location} und verbringe einen aufregenden Tag mit deinen Kindern.",
+      "attributeDogTitleAttribute": "Die {val} besten Ausflüge mit dem Hund für die Schweiz",
+      "attributeDogTitle": "Die {val} besten Ausflüge mit dem Hund in {location}",
+      "attributeDogTeaser": "Du bist auf der Suche nach einer Ausflugsidee mit deinem Hund in [{location}]({locationLink})? Wenn du deinen treuen Begleiter mitnehmen möchtest, findest du hier alle Aktivitäten, bei denen er mitkommen darf. Besonders geeignet sind oft [Outdoor-Aktivitäten]({outdoorLink}), bei denen sich dein Hund an der frischen Luft austoben kann. Aber auch Fahrten mit dem Schiff oder einer Bergbahn bieten sich an. Unser Geheimtipp sind [Escape Games]({escapeLink}), da sie draussen stattfinden und dir eine schöne Abwechslung zu den üblichen Gassi-Spaziergängen bieten.",
+      "attributeDogDesc": "Plane einen Ausflug mit deinem Hund in {location} und probiere etwas Neues aus als Abwechslung zu deinem üblichen Spaziergang.",
+      "attributeOutdoorTitleAttribute": "Die {val} besten Outdoor-Aktivitäten für die Schweiz",
+      "attributeOutdoorTitle": "Die {val} besten Outdoor-Aktivitäten in {location}",
+      "attributeOutdoorTeaser": "In [{location}]({locationLink}) gibt es das ganze Jahr über zahlreiche [Outdoor-Aktivitäten]({outdoorLink}) zu unternehmen. Manche kurbeln dein Adrenalin an, während andere mit einer beeindruckenden Aussicht auf dich warten oder deine Geschicklichkeit fordern. Es gibt übrigens auch Outdoor-Aktivitäten, die sich als [Schlechtwetter Idee]({badWeatherLink}) oder für einen [Familienausflug]({familyLink}) eignen. Teilweise kannst du auch deinen [Hund]({dogLink}) mitnehmen. Gewisse Outdoor-Aktivitäten kannst du problemlos alleine unternehmen, während du dich bei anderen aus Sicherheitsgründen einer professionell geführten Tour anschliessen solltest.",
+      "attributeOutdoorDesc": "Plane deine nächste Outdoor-Aktivität in {location} und verbringe das ganze Jahr über einen Tag draussen an der frischen Luft.",
+      "attributeBachelorPartyTitleAttribute": "Die {val} besten Polterabend Ideen für die Schweiz",
+      "attributeBachelorPartyTitle": "Die {val} besten Polterabend Ideen in {location}",
+      "attributeBachelorPartyTeaser": "Du suchst nach einer tollen Idee für einen Polterabend in [{location}]({locationLink})? Egal ob für Geniesser, Abenteuerlustige oder Entdecker: Du wirst für jeden Geschmack etwas Passendes finden. Mit unseren Ideen wirst du die Aufgabe, einen [Polterabend]({attributeLink}) in {location} zu organisieren, ohne Probleme meistern. Freu dich also auf einen gelungenen und spassigen Tag mit deinen Freunden.",
+      "attributeBachelorPartyDesc": "Plane deinen nächsten Polterabend in [{location}] und verbringe einen spassigen Tag mit deinen Freunden.",
+      "attributeTeamEventTitleAttribute": "Die {val} besten Ideen für einen Teamevent für die Schweiz",
+      "attributeTeamEventTitle": "Die {val} besten Ideen für einen Teamevent in {location}",
+      "attributeTeamEventTeaser": "Wurde dir die Aufgabe anvertraut, einen Teamevent in [{location}]({locationLink}) zu organisieren? Das ist nicht immer einfach, da die Ansprüche oft sehr unterschiedlich sind. Mit unseren Ideen wirst du für den anstehenden [Teamevent]({attributeLink}) bestens inspiriert und kannst dich vorbereiten. Egal ob für Geniesser, Entdecker, Aktive, Rätselfreunde oder Abenteurer: Du wirst für jeden Geschmack etwas Passendes finden. Freu dich also auf einen gelungenen und spassigen Tag mit deinen Kolleginnen und Kollegen.",
+      "attributeTeamEventDesc": "Plane deinen nächsten Teamevent in {location} und verbringe einen spassigen Tag mit deinen Kolleginnen und Kollegen.",
+      "attributeValentinesDayTitleAttribute": "Die {val} besten Ideen für den Valentinstag für die Schweiz",
+      "attributeValentinesDayTitle": "Die {val} besten Ideen für den Valentinstag in {location}",
+      "attributeValentinesDayTeaser": "Jedes Jahr steht er wieder vor der Tür: der Valentinstag. Vielleicht weisst du schon genau, was du nächstes mal am 14. Februar organisieren möchtest. Vielleicht bist du aber noch unsicher und auf der Suche nach einer Idee für euren Valentinstag in [{location}]({locationLink}). Unsere Aktivitäten sollen dich inspirieren und dir helfen, etwas Passendes zu finden. Ob romantisch, gemütlich oder abenteuerlich: hier findet ihr Turteltauben bestimmt Inspiration für einen [Valentinstag]({attributeLink}), der eure Herzen höher schlagen lässt.",
+      "attributeValentinesDayDesc": "Plane deinen nächsten Valentinstag in {location} und verbringe einen romantischen Tag mit deinem Lieblingsmenschen.",
+      "attributeFirstDateTitleAttribute": "Die {val} besten Ideen für dein erstes Date für die Schweiz",
+      "attributeFirstDateTitle": "Die {val} besten Ideen für dein erstes Date in {location}",
+      "attributeFirstDateTeaser": "Suchst du nach der passenden Idee für dein erstes Date in [{location}]({locationLink}) und bist unsicher, wie du dein Gegenüber beeindrucken kannst? Dann bist du hier genau richtig. Auf dieser Seite findest du die nötige Inspiration, damit euer [erstes Date]({attributeLink}) ein voller Erfolg wird. Ob Sommer oder Winter, abenteuerlich oder entspannt, hier findest du bestimmt etwas, womit du dein Date erfreuen kannst. Und wer weiss, vielleicht stösst du ja auch auf etwas, das sich für das nächste und das übernächste Treffen eignet.",
+      "attributeFirstDateDesc": "Plane das erste Date in {location} und verbringe einen romantischen Tag zu zweit.",
+      "attributeChildBirthdayTitleAttribute": "{val} Ideen für einen Kindergeburtstag für die Schweiz",
+      "attributeChildBirthdayTitle": "{val} Ideen für einen Kindergeburtstag in {location}",
+      "attributeChildBirthdayTeaser": "Plane deinen nächsten Kindergeburtstag in [{location}]({locationLink}). Der Geburtstag gehört zu den Highlights des Jahres von jedem Kind. Unabhängig von der Jahreszeit gibt es mehr als genug Ideen, mit denen du dein Kind glücklich machen kannst. Organisiere eine [Outdoor Aktivität]({outdoorLink}) oder suche nach einer Idee für das [Schlechtwetterprogramm]({badWeatherLink}). So wird euer nächster Kindergeburtstag bestimmt zum Erfolg.",
+      "attributeChildBirthdayDesc": "Organisiere einen Kindergeburtstag in {location} und plane einen unvergesslichen Tag für dein Kind.",
+      "attributeWheelchairTitleAttribute": "{val} Ausflugsideen mit dem Rollstuhl für die Schweiz",
+      "attributeWheelchairTitle": "{val} Ausflugsideen mit dem Rollstuhl in {location}",
+      "attributeWheelchairTeaser": "Plane einen Ausflug mit dem Rollstuhl in [{location}]({locationLink}) und finde die perfekte barrierefreie Aktivität für dich. Reisen in der Schweiz mit dem Rollstuhl ist dank der fortgeschrittenen Barrierefreiheit und der Bemühungen des Landes, allen Touristen eine zugängliche Erfahrung zu bieten, relativ einfach. Dazu gehören sowohl Indoor- wie auch [Outdoor Aktivitäten]({outdoorLink}).",
+      "attributeWheelchairDesc": "Lass dich inspirieren von rollstuhlgängigen Ausflugszielen in {location} und plane deine barrierefreie Aktivität.",
+      "attributePramTitleAttribute": "{val} Ausflugsideen mit dem Kinderwagen in für die Schweiz",
+      "attributePramTitle": "{val} Ausflugsideen mit dem Kinderwagen in {location}",
+      "attributePramTeaser": "Plane deinen Ausflug mit dem Kinderwagen in [{location}]({locationLink}). Wenn du mit kleinen Kindern unterwegs bist, gibt es viele Aktivitäten, die du unternehmen kannst. Zahlreiche Wanderwege sind kinderwagenfreundlich gestaltet, und die öffentlichen Verkehrsmittel sind auf den Komfort von Familien mit kleinen Kindern ausgerichtet. Somit steht deinem [Familienausflug]({familyLink}) nichts mehr im Weg.",
+      "attributePramDesc": "Bereise {location} mit dem Kinderwagen und plane den nächsten Ausflug mit deiner Familie.",
+      "attributesOther": "Weitere Kategorien",
+      "attributesType": "Kategorien für {val} Aktivitäten",
+      "teamEvent": "Sende uns deine Gruppenanfrage",
+      "recommended": "Von Reisenden empfohlen",
+      "tickets": "Tickets",
+      "tours": "Geführte Touren"
+    },
+    "error": {
+      "title": "Das tut uns leid aber es ist ein Fehler aufgetreten. Kehre auf die Startseite zurück und suche deine passende Freizeitaktivität."
+    },
+    "supplier": {
+      "title": "Swiss Activities: der grösste Freizeitaktivitäten Marktplatz der Schweiz",
+      "description": "Swiss Activities ist der grösste Freizeitaktivitäten Marktplatz der Schweiz. Mit uns erreichst du mehr Kunden und steigerst deine Buchungen.",
+      "hero": {
+        "title": "Swiss Activities - Die Destination für Freizeitaktivitäten in der Schweiz",
+        "button": "Freizeitpartner werden"
+      },
+      "numbers": {
+        "title": "Wie wir bei Swiss Activities unsere Freizeitpartner seit der Gründung unterstützt haben",
+        "blocks": [
+          {
+            "title": "Webseitenbesucher",
+            "number": "7'500'000",
+            "text": "potentielle Kunden"
+          },
+          {
+            "title": "Gästevermittlungen",
+            "number": ">300'000",
+            "text": "Gäste vermittelt"
+          },
+          {
+            "title": "Kundensupport",
+            "number": ">10'000",
+            "text": "Gespräche geführt"
+          },
+          {
+            "title": "Reservationssysteme",
+            "number": ">20",
+            "text": "Tickets anstatt Voucher"
+          }
+        ]
+      },
+      "why": {
+        "title": "Warum deine Freizeitprodukte auf Swiss Activities aufschalten",
+        "sales": {
+          "title": "Neukunden",
+          "description": "Erhalte neue Kunden aus dem In- und Ausland und verbessere deine Auslastung."
+        },
+        "support": {
+          "title": "Automatisierung",
+          "description": "Swiss Activities übernimmt deinen bestehenden Verkaufsprozess und übermittelt die Transaktionen an dein System."
+        },
+        "finances": {
+          "title": "Kein Risiko",
+          "description": "Keine Fixkosten oder Vorausinvestitionen. Du bezahlst nur bei einem vermittelten Kunden."
+        },
+        "local": {
+          "title": "Erschliessung neuer Kundesgemente",
+          "description": "Verbinde dich mit dem Reseller-Netzwerk von Swiss Activities und erweitere deine Reichweite im In- und Ausland."
+        }
+      },
+      "who": {
+        "title": "Über 500 Freizeitpartner arbeiten mit Swiss Activities",
+        "partners": [
+          {
+            "blocks": [
+              "/assets/supplier/partner/bergbahnen/rigi.png",
+              "/assets/supplier/partner/bergbahnen/schilthorn.png",
+              "/assets/supplier/partner/bergbahnen/jungfrau.jpeg",
+              "/assets/supplier/partner/bergbahnen/engelberg.svg",
+              "/assets/supplier/partner/bergbahnen/pilatus.jpeg",
+              "/assets/supplier/partner/bergbahnen/monte-tamaro.png",
+              "/assets/supplier/partner/bergbahnen/brienz.png",
+              "/assets/supplier/partner/bergbahnen/gornergrat.png",
+              "/assets/supplier/partner/destinationen/rheinfelden.png",
+              "/assets/supplier/partner/destinationen/basel.svg",
+              "/assets/supplier/partner/destinationen/winterthur.svg",
+              "/assets/supplier/partner/destinationen/interlaken.png",
+              "/assets/supplier/partner/attraktionen/ballenberg.png",
+              "/assets/supplier/partner/attraktionen/bls.png",
+              "/assets/supplier/partner/attraktionen/cgn.png",
+              "/assets/supplier/partner/attraktionen/chillon.jpeg",
+              "/assets/supplier/partner/attraktionen/maestrani.png",
+              "/assets/supplier/partner/attraktionen/verkehrshaus.png",
+              "/assets/supplier/partner/attraktionen/vier.png",
+              "/assets/supplier/partner/outdoor/best-of-switzerland.jpeg",
+              "/assets/supplier/partner/outdoor/kayak.jpeg",
+              "/assets/supplier/partner/outdoor/outdoorch.jpeg",
+              "/assets/supplier/partner/outdoor/paragliding.png",
+              "/assets/supplier/partner/outdoor/wine-tours.webp",
+              "/assets/supplier/partner/outdoor/zermatters.png"
+            ]
+          }
+        ]
+      },
+      "pricing": {
+        "title": "Preismodell",
+        "subtitle": "Bezahle nur bei der erfolgreichen Vermilttung eines Kunden",
+        "description": "Swiss Activities hilft dir dabei, lokal und global die passenden Verkaufskanäle zu identifizieren und deine Freizeitprodukte dort zu verkaufen, wo deine potentiellen Kunden sind. Da Swiss Activities keine Setup-Gebühr hat, erschliesst du neue Verkaufskanäle ohne zusätzliche Investitionen.",
+        "blocks": [
+          {
+            "pretitle": "",
+            "cost": "18% + CHF 0.30",
+            "subcost": "exkl. MwSt.",
+            "button": "Freizeitpartner werden",
+            "buttonLink": "https://k3qlq2fyp9o.typeform.com/to/CxWJub7f",
+            "subbutton": "",
+            "includes": [
+              "Aufschaltung von Freizeitaktivitäten auf Swiss Activities",
+              "Unlimitierte Erfassung von Freizeitaktivitäten",
+              "Erstellung der Produktbeschriebe durch unser Content-Team",
+              "Verbindung zu einem von über 20 Reservationssystemen",
+              "Persönlicher Partner-Support per Chat und Telefon",
+              "Übernahme der Gäste-Kommunikation bei Fragen rund um die Aktivitäten",
+              "Bearbeitung von Buchungs- und Stornierungsanfragen der Gäste",
+              "Überwachung und Kontrolle aller Buchungen und Stornierungen",
+              "Überwachung und Kontrolle der Abrechnungen",
+              "Cash-Settlement vereinheitlicht – Abrechnung über Swiss Activities",
+              "Sicherstellung des Vertriebsprozesses (keine Vouchers, sondern Tickets)",
+              "Automatischer Zugang zum Affiliate-Netzwerk",
+              "Aufschaltung der Aktivitäten auf dem Reseller-Netzwerk"
+            ],
+            "faq": []
+          }
+        ]
+      },
+      "tech": {
+        "title": "Reservations- und Ticketingssysteme",
+        "description": "Neben der Aufschaltung und Digitalisierung von sämtlichen Schweizer Freizeitprodukten ist es ein zentrales Ziel von Swiss Activities, den Wiederverkaufsprozesses von Freizeitprodukten im In- und Ausland zu vereinfachen und zu automatisieren. Die Vertriebslandschaft wird immer komplexer und wir helfen Wiederverkäufern dabei, den Anschluss an die Kundensegmente nicht zu verlieren. Umso zentraler ist die direkte Verbindung zwischen unseren Freizeit-Partnern und Swiss Activities. Wir sind laufend daran, neue Systeme zu implementieren. Falls dein Reservations- und Ticketingssystem nicht vorhanden ist, kannst du dich gerne unter sales@swissactivities.com bei uns melden.",
+        "partners": [
+          "/assets/supplier/technology/trekksoft.webp",
+          "/assets/supplier/technology/regiondo.webp",
+          "/assets/supplier/technology/tomas.webp",
+          "/assets/supplier/technology/waldhart.webp",
+          "/assets/supplier/technology/experiencebank.webp",
+          "/assets/supplier/technology/skidata.webp",
+          "/assets/supplier/technology/axess.webp",
+          "/assets/supplier/technology/smeetz.webp",
+          "/assets/supplier/technology/eatwith.webp",
+          "/assets/supplier/technology/fareharbor.webp",
+          "/assets/supplier/technology/bookingkit.webp",
+          "/assets/supplier/technology/ntree.webp",
+          "/assets/supplier/technology/secutix.webp",
+          "/assets/supplier/technology/tourcms.webp",
+          "/assets/supplier/technology/sbb.webp"
+        ],
+        "titleSoon": "Bald verfügbar",
+        "partnersSoon": ["/assets/supplier/technology/feratel.webp"]
+      },
+      "faq": [
+        {
+          "title": "Allegmeine Informationen für Freizeit-Partner",
+          "blocks": [
+            {
+              "title": "Wer kann Freizeitpartner von Swiss Activities werden?",
+              "text": "Partner von Swiss Activities kann werden, wer Freizeitaktivitäten in der Schweiz vertreiben möchte. Deine Angebote können sehr vielfältig sein und der Fantasie sind kaum Grenzen gesetzt. Wir haben Aktivitäten, Tickets, Abenteuer, Touren, Mieten usw. in rund 100 Kategorien. Dazu gehören Backkurse für Einhorntorten genauso wie Tandem Gleitschirmflüge oder Eintrittstickets in Museen. Wichtig ist, dass es sich um Angebote handelt, die entweder in der Schweiz stattfinden oder die innerhalb eines Tagesausfluges ab der Schweiz möglich sind."
+            },
+            {
+              "title": "Welche Reservationssysteme kann ich mit Swiss Activities verbinden?",
+              "list": [
+                "Trekksoft",
+                "Regiondo",
+                "Waldhart",
+                "Experience Bank",
+                "Skidata",
+                "Axess",
+                "Tomas",
+                "Smeetz",
+                "Eatwith",
+                "Fareharbor",
+                "Booking Kit",
+                "N-Tree",
+                "Secutix",
+                "TourCMS",
+                "Palisis",
+                "Bald verfügbar sind: SBB  sowie Feratel"
+              ]
+            },
+            {
+              "title": "Ich arbeite nicht mit einem Reservationssystem. Kann ich meine Aktivitäten trotzdem über Swiss Activities verkaufen?",
+              "text": "Auch wenn du nicht mit einem Reservationssystem arbeitest, kannst du deine Aktivitäten bei uns aufschalten. Wir erstellen in diesem Fall manuell einen Kalender gemäss deinen Angaben. Falls du gerne ein Reservationssystem implementieren möchtest, nimm bitte mit uns Kontakt auf. Wir beraten dich gerne zu diesem Thema. Die Informationen, die wir von dir benötigen, sind folgende:",
+              "list": [
+                "Zeitraum (Datum)",
+                "Startzeit(en)",
+                "Dauer",
+                "Cut-off (wie lange im Voraus muss der Kunde spätestens buchen?)",
+                "Preise pro Kategorie (Erwachsene, Kinder, Miete etc.)",
+                "maximal verfügbare Plätze pro Slot"
+              ]
+            },
+            {
+              "title": "Welche Informationen werden bei einer Buchung übermittelt?",
+              "text": "Wenn ein Kunde eine Buchung bei Swiss Activities tätigt, erhält er eine Bestätigungs E-Mail mit allen wichtigen Informationen. Dazu gehören unter anderem auch deine Kontaktdaten, damit er sich bei Fragen direkt bei dir melden kann.",
+              "list": [
+                "Name der Aktivität",
+                "Datum",
+                "Zeit",
+                "Treffpunkt",
+                "Anzahl gebuchte Tickets",
+                "Deine Kontaktdaten (E-Mail und Telefon)"
+              ]
+            },
+            {
+              "title": "Werden auf Swiss Activities die gleichen Preise für meine Aktivitäten publiziert wie auf meiner Webseite?",
+              "text": "Ja, bei uns bezahlt der Kunde gleich viel, wie wenn er direkt bei dir buchen würde. Dies ist für dich ebenso wichtig wie für uns. Falls die Preise an verschiedenen Orten unterschiedlich hoch sind, wird der Kunde das merken, was zu Reklamationen und Unverständnis führt. So laufen wir beide das Risiko, einen wiederkehrenden Kunden zu verlieren."
+            },
+            {
+              "title": "Wie lange ist die Stornofrist bei Swiss Activities?",
+              "text": "Der Kunde hat bei Swiss Activities die Möglichkeit, bis 24 Stunden vor der Aktivität kostenlos zu stornieren. Wenn du eine nicht stornierbare Aktivität aufschalten möchtest, können wir das so übernehmen. Allerdings haben wir die Erfahrung gemacht, dass wir mehr Buchungen vermitteln bei Aktivitäten, die die Möglichkeit zur Stornierung anbieten. Solltest du die Buchung stornieren müssen, kannst du dies ebenfalls tun. Informiere dazu umgehend den Kunden und teile es uns ebenfalls mit, damit wir eine Rückerstattung veranlassen können. "
+            },
+            {
+              "title": "Wie wird mit nachträglichen Stornierungen umgegangen?",
+              "text": "Falls wir über unser Stornierungsformular eine Anfrage für eine nachträgliche Stornierung erhalten, führen wir nie eine Rückerstattung aus, ohne vorher Rücksprache mit dir gehalten zu haben. Um Betrugsfälle zu vermeiden, holen wir immer dein Einverständnis ein, um die Schilderung des Kunden zu bestätigen. Nur, wenn wir dein OK haben, lösen wir nachträglich eine Rückerstattung aus."
+            }
+          ]
+        },
+        {
+          "title": "Aufschaltungsprozess von Freizeit-Produkten",
+          "blocks": [
+            {
+              "title": "Wie kann ich meine Angebote bei Swiss Activities aufschalten?",
+              "text": "Wenn du Freizeitpartner von Swiss Activities werden und deine Angebote aufschalten möchtest, gibt es folgende Schritte zu durchlaufen:",
+              "list": [
+                "Melde dich zuerst als Freizeitpartner an.",
+                "Fülle pro Aktivität, die du aufschalten möchtest, ein Formular aus. Den Link dazu erhältst du, nachdem wir deine Registrierung bestätigt haben.",
+                "Wir schreiben und erfassen deine Aktivitäten in der Regel innerhalb von zwei Wochen.",
+                "Sobald die Aktivitäten live sind, informieren wir dich per E-Mail."
+              ]
+            },
+            {
+              "title": "Welche Informationen werden für das Aufschalten meiner Aktivitäten benötigt?",
+              "text": "Nachdem du dich als Freizeitpartner bei uns angemeldet hast, senden wir dir ein Formular, über das du deine Aktivitäten eintragen kannst. Um diese aufschalten zu können, benötigen wir von dir folgende Angaben:",
+              "list": [
+                "Angaben zum Reservationssystem (falls vorhanden)",
+                "Titel der Aktivität",
+                "Link zur Aktivität",
+                "Mindestens 4 Fotos pro Aktivität",
+                "Angaben zu Daten, Zeit und Dauer, falls du kein Reservationssystem nutzt",
+                "Allfällige Informationen zu Alter, Sprachen, Gewicht usw.",
+                "Eignung der Aktivität: Hund, Kinderwagen, Rollstuhl, Familien usw.",
+                "Exakter Treffpunkt"
+              ]
+            },
+            {
+              "title": "Kann ich meinen Eintrag jederzeit löschen?",
+              "text": "Ja, du kannst jederzeit vom Vertrag zurücktreten. Es gibt keine minimale Vertragslaufzeit und es entstehen aus der Kündigung keine Kosten."
+            },
+            {
+              "title": "Was mache ich, wenn ich etwas in einer Aktivität ändern möchte?",
+              "text": "Falls du Änderungswünsche im Content hast oder Preise anpassen möchtest - sofern du kein Reservationssystem benutzt - kannst du uns dies per E-Mail mitteilen."
+            },
+            {
+              "title": "Wie kontaktiere ich den Kunden?",
+              "text": "Nach jeder Buchung erhältst du eine Bestätigungs E-Mail von uns mit den Angaben des Kunden. Dort findest du seinen Namen, seine E-Mail Adresse und seine Telefonnummer, um ihn zu kontaktieren."
+            },
+            {
+              "title": "Wie erhalte ich mein Geld?",
+              "text": "Die Auszahlung aller offenen Beträge erfolgt jeweils nach dem Servicedatum und wird zu Beginn des folgenden Monats automatisch überwiesen. Dabei werden sämtliche Buchungen, die im vergangenen Monat stattgefunden haben, gesammelt abgerechnet und in einer einzigen Auszahlung zusammengefasst."
+            }
+          ]
+        }
+      ]
+    },
+    "supplierRegistration": {
+      "title": "Swiss Activities: der grösste Freizeitaktivitäten Marktplatz der Schweiz",
+      "description": "Swiss Activities ist der grösste Freizeitaktivitäten Marktplatz der Schweiz. Mit uns erreichst du mehr Kunden und steigerst deine Buchungen.",
+      "hero": {
+        "title": "Werde Teil von Swiss Activities",
+        "description": "Registriere dich kostenlos bei Swiss Activities und steigere deine Reichweite bei schweizer- und internationalen Gästen. Deine Vorteile im Überblick",
+        "list": [
+          "Werde auf Google als Firma und mit deinen Angeboten gefunden. Und das in 4 Sprachen!",
+          "Erschliesse einen neuen Vertriebskanal",
+          "Profitiere von unserem kostenlosen Kundensupport",
+          "Verbinde dein Reservationssystem und verwalte deine Verfügbarkeiten direkt darin.",
+          "Eine neue Buchung - dein Kunde. Wir verstecken unsere Partner nicht und möchten dem Kunden das beste Buchungserlebnis bieten.",
+          "Keine Fixkosten oder versteckte Gebühren.",
+          "Deine Kunden können in allen lokalen Bezahlmethoden wie Twint, Kauf auf Rechnung sowie mit den gängigen Kreditkarten bezahlen."
+        ]
+      }
+    },
+    "affiliate": {
+      "title": "Affiliate",
+      "description": "Nimm teil als Partner bei Swiss Activities und verdiene ab der ersten Buchung 1% bis 5% Kommission. Es gibt keine Fixkosten.",
+      "hero": {
+        "title": "Werde jetzt Affiliate Partner von Swiss Activities",
+        "description": "Registriere dich für das Affiliate Programm von Swiss Activities und profitiere von attraktiven Einbindungstools, 1% bis 5 % Kommission und 45 Tagen Cookie Laufdauer.",
+        "steps": [
+          "Melde dich an",
+          "Implementiere unsere Aktivitäten",
+          "Generiere Buchungen und verdiene dabei Geld"
+        ],
+        "button": "Jetzt anmelden"
+      },
+      "form": {
+        "tos": "Ich stimme der <a target='_blank' href='/agb/affiliates/'>Allgemeinen Geschäftsbedingung</a> zu"
+      },
+      "advantagesTitle": "Was sind deine Vorteile als Affiliate-Partner von Swiss Activities?",
+      "advantages": [
+        {
+          "title": "1'500+ Freizeitaktivitäten",
+          "text": "Als Affiliate-Partner von Swiss Activities hast du mit wenigen Klicks Zugriff auf über 1'500 Freizeitaktivitäten in der ganzen Schweiz."
+        },
+        {
+          "title": "Attraktive Konditionen",
+          "text": "Für jede vermittelte Buchung erhältst du 1% bis 5% Kommission. Die Cookie Laufzeit beträgt 45 Tage."
+        },
+        {
+          "title": "Inspiriere deine Leser",
+          "text": "Belebe deinen Blog oder deine Webseite mit inspirierenden Inhalten und helfe deiner Community, bei der Freizeitplanung Zeit zu sparen."
+        },
+        {
+          "title": "Unkomplizierte Anmeldung",
+          "text": "Profitiere von einer unkomplizierten und schnellen Anmeldung."
+        },
+        {
+          "title": "Direkter Ticketverkauf",
+          "text": "Du hast die Möglichkeit, Tickets direkt auf deiner Webseite zu verkaufen, ohne deine Leser zu uns weiterzuleiten."
+        },
+        {
+          "title": "Custom HTML",
+          "text": "Dank unseren vielseitig und ansprechend gestalteten Custom HTML Tools kannst du deine Verkaufsmöglichkeiten personalisieren."
+        }
+      ],
+      "faqTitle": "Die wichtigsten Fragen beantwortet",
+      "faq": [
+        {
+          "title": "Wie funktioniert die Anmeldung zum Affiliate Programm von Swiss Activities?",
+          "text": "Melde dich im Formular auf dieser Seite mit allen erforderlichen Angaben an. Wir werden deine Anmeldung innerhalb eines Arbeitstages prüfen und dir deine Login-Daten bei Annahme per E-Mail zukommen lassen."
+        },
+        {
+          "title": "Wie kann ich mich in mein Affiliate Partner Dashboard einloggen?",
+          "text": "Bei deiner Registrierung definierst du dein persönliches Passwort. Sobald wir deine Angaben geprüft haben, wirst du benachrichtigt und kannst dich über <a href='https://swissactivities.tapfiliate.com/login' target='_blank'>diesen Link</a> in dein Affiliate Dashboard einloggen."
+        },
+        {
+          "title": "Wo finde ich weitere Informationen zum Affiliate Programm?",
+          "text": "In unserem Helpdesk findest du einerseits die <a href='https://intercom.help/swiss-activities/de/collections/3916117-affiliate-moglichkeiten-zur-einbindung' target='_blank'>Ersten Schritte</a> sowie die wichtigsten Fragen zur <a href='https://intercom.help/swiss-activities/de/collections/3916117-affiliate-moglichkeiten-zur-einbindung' target='_blank'>Einbindung unserer Aktivitäten</a> beschrieben. Ausserdem erhältst du nach deiner Registrierung eine Reihe von E-Mails mit hilfreichen Tipps."
+        },
+        {
+          "title": "Wer kann Affiliate Partner von Swiss Activities werden?",
+          "text": "Wenn du einen Blog oder eine Webseite betreibst, die einen Bezug zum Schweizer Tourismus, zu Freizeitaktivitäten in der Schweiz oder zum Reisen allgemein hat, kannst du dich für unser Affiliate Programm registrieren. Auch wenn du einen Instagram, Pinterest oder Facebook Account hast, über den du einen Affiliate Link einfügen kannst, kannst du dich bei uns anmelden."
+        },
+        {
+          "title": "Kann ich mich vom Affiliate Programm wieder abmelden?",
+          "text": "Selbstverständlich. Du bist an keine Mindestlaufzeit gebunden. Solltest du dein Konto löschen wollen, lass es uns per E-Mail oder per Chat wissen und wir werden alles Notwendige veranlassen."
+        },
+        {
+          "title": "Wie viel Kommission erhalte ich pro vermittelte Buchung?",
+          "text": "Du erhältst zwischen 1% und 5% Kommission, wenn du uns einen Kunden vermittelst, der die Aktivität durchführt. Sollte der Kunde seine Buchung stornieren, können wir dir leider keine Kommission auszahlen."
+        }
+      ]
+    },
+    "apps": {
+      "title": "Swiss Activities App",
+      "description": "Erlebe die Schweiz mit der Swiss Activities App – entdecke, vergleiche und buche Freizeitaktivitäten direkt auf deinem Smartphone.",
+      "hero": {
+        "title": "Dein Schweizer Abenteuer in der Tasche",
+        "description": "Mit der Swiss Activities App erhältst du direkten Zugriff auf über {amount} Aktivitäten in der ganzen Schweiz. Finde Erlebnisse, buche in Sekunden und behalte all deine Tickets und Buchungen jederzeit im Blick.",
+        "features": [
+          "Tickets jederzeit griffbereit",
+          "Buchungen einfach verwalten",
+          "Neue Erlebnisse für jeden Geschmack entdecken",
+          "Tickets auch offline verfügbar"
+        ]
+      }
+    },
+    "travelGuide": {
+      "title": "Dein Reiseplaner für die Schweiz",
+      "description": "Die Schweiz ist ein sehr vielseitiges Land und hat für deine Reise unglaublich viel zu bieten. Lass dich also von der kleinen Fläche nicht täuschen. Obwohl die Schweiz rund zehnmal kleiner ist als Schweden, Kalifornien oder Marokko, findest du für jeden Geschmack etwas. Im mediterranen Tessin bist du in einer völlig anderen Welt als im geschäftigen Basel. Und der gebirgige Alpstein hat ein ganz anderes Klima als die milde Genferseeregion. Und dies, obwohl diese Orte nur drei bis vier Stunden voneinander entfernt sind. In unserem Blog helfen wir dir bei deiner Reiseplanung. Wir versorgen dich mit hilfreichen Reisetipps und wissenswerten Informationen, damit du dich perfekt vorbereiten kannst. Ob du zum ersten mal in die Schweiz reist oder dich bereits gut auskennst, spielt dabei keine Rolle. Unsere Artikel sind sowohl für Erstbesucher, als auch für echte Schweiz-Kenner geeignet.",
+      "intro": "Die Schweiz ist ein sehr vielseitiges Land und hat für deine Reise unglaublich viel zu bieten. Lass dich also von der kleinen Fläche nicht täuschen. Obwohl die Schweiz rund zehnmal kleiner ist als Schweden, Kalifornien oder Marokko, findest du für jeden Geschmack etwas. Im mediterranen Tessin bist du in einer völlig anderen Welt als im geschäftigen Basel. Und der gebirgige Alpstein hat ein ganz anderes Klima als die milde Genferseeregion. Und dies, obwohl diese Orte nur drei bis vier Stunden voneinander entfernt sind. In unserem Blog helfen wir dir bei deiner Reiseplanung. Wir versorgen dich mit hilfreichen Reisetipps und wissenswerten Informationen, damit du dich perfekt vorbereiten kannst. Ob du zum ersten mal in die Schweiz reist oder dich bereits gut auskennst, spielt dabei keine Rolle. Unsere Artikel sind sowohl für Erstbesucher, als auch für echte Schweiz-Kenner geeignet."
+    },
+    "travelRoutes": {
+      "title": "Reiserouten Schweiz",
+      "description": "Die Schweiz ist ein sehr vielseitiges Land und hat für deine Reise unglaublich viel zu bieten. Lass dich also von der kleinen Fläche nicht täuschen. Obwohl die Schweiz rund zehnmal kleiner ist als Schweden, Kalifornien oder Marokko, findest du für jeden Geschmack etwas. Im mediterranen Tessin bist du in einer völlig anderen Welt als im geschäftigen Basel. Und der gebirgige Alpstein hat ein ganz anderes Klima als die milde Genferseeregion. Und dies, obwohl diese Orte nur drei bis vier Stunden voneinander entfernt sind. In unserem Blog helfen wir dir bei deiner Reiseplanung. Wir versorgen dich mit hilfreichen Reisetipps und wissenswerten Informationen, damit du dich perfekt vorbereiten kannst. Ob du zum ersten mal in die Schweiz reist oder dich bereits gut auskennst, spielt dabei keine Rolle. Unsere Artikel sind sowohl für Erstbesucher, als auch für echte Schweiz-Kenner geeignet."
+    },
+    "widget": {
+      "title": "Swiss Activities in deine Webseite einbinden",
+      "description": "Binde Swiss Activities in deine Webseite ein und verkaufe Aktivitäten direkt über deine Webseite.",
+      "hero": {
+        "title": "Integriere Angebote von Swiss Activities in deine Webseite",
+        "description": "Das Swiss Activities Widget ist die einfachste Möglichkeit Aktivitäten in deine Webseite einzubinden. Wähle von einer Vielzahl von Widget Arten aus und bette es innerhalb von Minuten ein.",
+        "button": "Jetzt einbinden"
+      },
+      "cta": {
+        "title": "Affiliate werden",
+        "button": "Zum Formular"
+      }
+    },
+    "newsletterConfirm": {
+      "title": "Vielen Dank für deine Anmeldung. Wir haben dir soeben eine Nachricht geschickt, über die du deine Registrierung bestätigen kannst."
+    },
+    "newsletterSuccess": {
+      "title": "Vielen Dank! Du bist nun für unseren Newsletter angemeldet."
+    },
+    "cookiePolicy": {
+      "title": "Cookie-Richtlinie"
+    },
+    "vouchers": {
+      "title": "Erlebnis-Geschenkideen für die Schweiz – die besten Gutscheine bei Swiss Activities",
+      "description": "Verschenke unvergessliche Momente mit einem Erlebnis-Gutschein von Swiss Activities! Entdecke die größte Auswahl an Freizeitaktivitäten in der Schweiz – flexibel, einfach und sofort online buchbar. Perfekt als Geschenkidee für jeden Anlass.",
+      "hero": {
+        "title": "Jetzt Erlebnis-Gutschein für die Schweiz verschenken und Freude bereiten!",
+        "text": "Entdecke jetzt die besten Geschenkideen und Erlebnis-Gutscheine bei Swiss Activities. Ob zum Geburtstag, als Weihnachtsgeschenk oder einfach, um Danke zu sagen – ein Gutschein für Schweizer Erlebnisse trifft jeden Geschmack und ist ein Geschenk, das garantiert in Erinnerung bleibt.",
+        "button": "Gutschein kaufen"
+      },
+      "gift": {
+        "title": "Verschenke die besten Schweizer Erlebnisse – von Abenteuer bis Erholung",
+        "text": "Suchst du nach einer einzigartigen Geschenkidee für Freunde oder Familie in der Schweiz? Ein Erlebnis-Gutschein von Swiss Activities bietet dir Zugang zur größten Auswahl an Freizeitaktivitäten, die die Schweiz zu bieten hat. Ob geführte Touren, Abenteuer in der Natur, entspannende Stunden in Thermalbädern oder kulturelle Highlights in Museen – Swiss Activities macht es möglich, besondere Momente zu verschenken."
+      },
+      "why": {
+        "title": "Warum ein Erlebnis-Gutschein von Swiss Activities die perfekte Geschenkidee ist",
+        "items": [
+          {
+            "title": "Grösste Auswahl der Schweiz",
+            "text": "Über 1,600 Freizeitangebote in allen Regionen, von Outdoor-Abenteuern bis hin zu Entspannungsmomenten."
+          },
+          {
+            "title": "Über 100'000 zufriedene Kunden",
+            "text": "Swiss Activities ist der bewährte Partner für besondere Geschenke und Ausflüge."
+          },
+          {
+            "title": "Kostenlose Stornierungsoption",
+            "text": "Sichere und flexible Buchungen, die an die Bedürfnisse des Beschenkten angepasst werden können."
+          },
+          {
+            "title": "5-Sterne-Kundensupport",
+            "text": "Schweizer Qualität und Unterstützung – für einen reibungslosen Erlebnisstart."
+          }
+        ]
+      },
+      "end": {
+        "title": "Schenke Erlebnis-Gutscheine in der Schweiz und bereite Freude!",
+        "text": "Entdecke die besten Geschenkideen und Erlebnis-Gutscheine bei Swiss Activities. Egal ob zum Geburtstag, als Weihnachtsgeschenk oder einfach, um Danke zu sagen – ein Gutschein für Erlebnisse in der Schweiz passt zu jedem Geschmack und sorgt für bleibende Erinnerungen.",
+        "button": "Gutschein auswählen"
+      },
+      "banner": {
+        "tagline": "NEU: Die perfekte Geschenkidee!",
+        "title": "Sichere dir einen\nErlebnis-Gutschein",
+        "button": "Hier drücken"
+      }
+    }
+  },
+  "filter": {
+    "nearby": "Aktivitäten in der Nähe anzeigen",
+    "results": "Resultate anzeigen",
+    "filter": "Filter",
+    "search": "Suche",
+    "location": "Ort",
+    "types": "Art",
+    "categories": "Kategorie",
+    "activity": "Aktivität",
+    "activities": "Aktivitäten",
+    "today": "Heute",
+    "tomorrow": "Morgen",
+    "price": "Preis",
+    "noResults": "Keine Ergebnisse",
+    "noExactResults": {
+      "title": "Keine genauen Treffer",
+      "description": "Versuche, einige deiner Filter zu ändern oder zu entfernen oder deinen Suchbereich anzupassen.",
+      "showNearest": "Nächstgelegene Ergebnisse anzeigen",
+      "resetDate": "Zeitraum zurücksetzen"
+    },
+    "lang": "Sprachen",
+    "sort": {
+      "relevance": "Relevanz",
+      "distance": "Distanz zu dir",
+      "popularityDesc": "Popularität absteigend",
+      "ratingDesc": "Bewertung absteigend",
+      "ratingAsc": "Bewertung aufsteigend",
+      "priceDesc": "Preis absteigend",
+      "priceAsc": "Preis aufsteigend",
+      "dateDesc": "Neueste zuerst",
+      "dateAsc": "Älteste zuerst"
+    },
+    "navigationBreadcrumbs": {
+      "root": "Schweiz"
+    },
+    "all": "Alle",
+    "map": "Karte",
+    "card": {
+      "from": "ab",
+      "person": "pro Person"
+    },
+    "viewMore": "Mehr sehen",
+    "ratingBetterThan": "Besser als {val} Sterne",
+    "ratingEqual": "{val} Sterne",
+    "ratingNone": "NEU / Keine Bewertung",
+    "moreFilters": "{val} weitere anzeigen",
+    "lessFilters": "Weniger anzeigen",
+    "usedFilters": "Angewandte Filter",
+    "resetFilters": "Zurücksetzen",
+    "discountTypes": "Discounts",
+    "calendar": "Kalendar",
+    "locationError": "Position konnte nicht geladen werden",
+    "textOnly": "Nur Bewertungen mit Text"
+  },
+  "activity": {
+    "you": "dir",
+    "nearby": "{distance}km entfernt von {location}",
+    "nearbyAlt": "{distance}km entfernt",
+    "recommendation": "Empfehlung",
+    "reviews": "Bewertungen",
+    "reviewOriginalIn": "Original auf {language}",
+    "booked": "{val} Mal gebucht",
+    "providedBy": "Anbieter",
+    "save": "Speichern",
+    "selectDate": "Datum auswählen",
+    "similarActivities": "Weitere Aktivitäten",
+    "question": "Wie dürfen wir helfen?",
+    "rating": "Bewertung",
+    "highDemand": "Hohe Nachfrage",
+    "widget": {
+      "free": "verfügbar",
+      "error500": "Etwas ist schief gelaufen, bitte versuche es in 1 Minute noch einmal.",
+      "errorDate": "Leider sind keine Slots mehr für den {val} verfügbar.",
+      "choose": "auswählen",
+      "titleTime": "Angebot auswählen",
+      "titleTicketOption": "Ticketoption auswählen",
+      "titleParticipants": "Teilnehmer auswählen",
+      "titleTickets": "Tickets auswählen",
+      "confirmOffer": "Ticketoption bestätigen",
+      "confirmTickets": "Teilnehmer bestätigen",
+      "confirmDate": "Datum bestätigen",
+      "confirmDateTime": "Datum & Zeit bestätigen",
+      "cheapest": "Günstigster Preis",
+      "time": "Zeit",
+      "navTicket": "Tickets",
+      "check": "Verfügbarkeit prüfen",
+      "notBookable": "Leider ist dieses Angebot derzeit nicht buchbar.",
+      "paymentMethods": "Bezahlmethoden",
+      "totalPrice": "Gesamtpreis",
+      "taxes": "Zusätzliche Gebühren",
+      "offerTimeSelect": "Zeit auswählen",
+      "basket": "Warenkorb",
+      "basketAdd": "Zum Warenkorb hinzufügen",
+      "selectedOffer": "Angebot",
+      "adjust": "Buchung anpassen",
+      "swissHalfFareCard": "Personen mit Wohnsitz ausserhalb der Schweiz können&nbsp;<a href=\"/bahnpaesse/swiss-half-fare-card/\" target=\"_blank\" className=\"inline-block\">hier eine Swiss Half Fare Card beziehen</a>, um diese für Vergünstigungen im öffentlichen Verkehr zu nutzen."
+    },
+    "tabs": {
+      "highlights": "Höhepunkte",
+      "includes": "Leistungen",
+      "importantInformation": "Wichtige Informationen",
+      "meetingPoints": "Treffpunkt"
+    },
+    "newsletter": {
+      "title": "Verpasse keine Aktivitäten mehr",
+      "description": "Abonniere den Newsletter und erhalte Travel Tips, Ideen für deine Freizeit sowie passende Reiseführer aus der Schweiz.",
+      "signup": "Anmelden",
+      "inputPlaceholder": "Deine E-mail"
+    },
+    "notRefundable": {
+      "title": "Nicht stornierbar",
+      "description": "Leider können wir dir aufgrund unserer Partnerrichtlinien weder eine Rückerstattung anbieten noch deine Buchung für dieses bestimmte Produkt ändern oder stornieren."
+    }
+  },
+  "UI": {
+    "date": "Datum"
+  },
+  "home": {
+    "title": "Dein Erlebnis beginnt hier"
+  },
+  "discover": {
+    "title": "Aktivitäten entdecken"
+  },
+  "booking": {
+    "cancelable": "Kostenlose Stornierung bis",
+    "privacyMessage": "Indem du mit der Zahlung fortsetzt, akzeptierst du die <tos>{text}</tos> sowie die darin enthaltenen Stornierungsbedingungen der Swiss Activities AG.",
+    "privacyPolicy": "Allgemeinen Geschäftsbedingungen",
+    "personalTitle": "Buchungsangaben",
+    "personalSubtitle": "Damit du die Buchung abschliessen kannst, fülle bitte die nachfolgenden Informationen aus.",
+    "mainGuest": "Kontaktperson",
+    "fullName": "Vorname",
+    "lastName": "Nachname",
+    "email": "E-Mail",
+    "phoneNumber": "Telefonnummer",
+    "cardDetails": "Bezahlmethoden",
+    "paymentSecure": "Sichere Zahlung - wir nutzen SSL Verschlüsselung um deine Daten zu schützen",
+    "creditPayments": "Kreditkarten",
+    "total": "Total",
+    "fullDay": "Ganztag",
+    "booknow": "Jetzt buchen",
+    "addMoreInformation": "Angaben hinzufügen",
+    "addPaymentMethod": "Bezahlmethode auswählen",
+    "youBook": "Warenkorb",
+    "rebate": "Rabattcode",
+    "rebateEmailRequired": "Bitte gib zuerst deine E-Mail-Adresse ein und bestätige sie, um einen Rabattcode einzulösen.",
+    "important": "Ich habe die Voraussetzungen unter \"Wichtige Informationen\" der Aktivität(en) zur Kenntnis genommen",
+    "importantShow": "Informationen anzeigen",
+    "importantHide": "Informationen ausblenden"
+  },
+  "confirm": {
+    "title": "Vielen Dank für deine Buchung mit Swiss Activities.",
+    "confirmed": "Deine Buchung ist bestätigt.",
+    "pending": "Deine Buchung ist in Bearbeitung.",
+    "cancelled": "Deine Buchung wurde storniert.",
+    "failed": "Entschuldige, da ist leider etwas schief gegangen.",
+    "failedPayment": "Die Zahlung konnte nicht verarbeitet werden. Bitte versuch es mit einem anderen Zahlungsmittel.",
+    "failedReservation": "Die Buchung konnte leider nicht bestätigt werden. Deine Zahlung wird zurückerstattet. Bitte versuche es noch einmal.",
+    "wait": "Wir warten auf unseren Zahlungsprovider, ob die Zahlung bestätigt ist.",
+    "waitEmail": "Du wirst eine E-Mail erhalten, sobald die Zahlung bestätigt ist.",
+    "caption": "Vielen herzlichen Dank für die Buchung über Swiss Activities. Wir haben dir eine Bestätigungsmail gesendet.",
+    "bookingNumber": "Buchungsnummer",
+    "point": "Treffpunkt",
+    "pointAddress": "Adresse Treffpunkt",
+    "number": "Handynummer",
+    "end": "Ende",
+    "email": "Deine Buchungsbestätigung wurde an {email} gesendet. Solltest du sie nicht in den nächsten Minuten erhalten, melde dich bitte über den Chat bei unserem Support.",
+    "transport": {
+      "title": "Mit dem öffentlichen Verkehr anreisen?",
+      "from": "Dein Ort",
+      "description": "Reise bequem mit dem öffentlichen Verkehr an und füge dein Mobile-Ticket direkt zur Buchung hinzu.",
+      "button": "Ticket hinzufügen"
+    }
+  },
+  "footer": {
+    "company": {
+      "title": "Unternehmung",
+      "about-us": "Über uns",
+      "jobs": "Jobs",
+      "legal": "Rechtliches"
+    },
+    "resources": {
+      "title": "Ressourcen"
+    },
+    "collaboration": {
+      "title": "Zusammenarbeit",
+      "becomeapartner": "Partner werden",
+      "affiliate": "Affiliate-Programm",
+      "widget": "Widget"
+    },
+    "affiliate": {
+      "title": "Affiliate code",
+      "button": "Code kopieren",
+      "buttonCopied": "Code kopiert!"
+    },
+    "contact": {
+      "title": "Kundenservice",
+      "faq": "Fragen & Antworten (FAQ)",
+      "cookie": "Cookie-Einwilligung"
+    },
+    "mobileApp": "Hol dir unsere App"
+  },
+  "tickets": {
+    "discounts": {
+      "noDiscount": "Kein Rabatt"
+    },
+    "showDiscounts": "Kunden- und Rabattkarten anzeigen",
+    "travelClass": "Reiseklasse"
+  },
+  "supplier": {
+    "activities": "Aktivitäten"
+  },
+  "contactPopup": {
+    "modalTitle": "Wie können wir dir heute helfen?"
+  },
+  "contactForm": {
+    "fullname": "Name",
+    "email": "E-Mail",
+    "subject": "Thema",
+    "messagePlaceholder": "Anfrage, Buchung, etc...",
+    "submit": "Senden",
+    "formError": "Etwas hat nicht geklappt. Versuche es noch einmal."
+  },
+  "contactThankYou": {
+    "title": "Vielen Dank für die Kontaktaufnahme!"
+  },
+  "internalLinkBlock": {
+    "destinations": "Top Destinationen",
+    "locations": "Top Ferienregionen",
+    "topActivities": "Top Aktivitäten",
+    "topAttractions": "Top Attraktionen"
+  },
+  "offerCard": {
+    "bookNow": "Buchen"
+  },
+  "breadcrumbsBasket": {
+    "stepOne": "Deine Auswahl",
+    "stepOneDescription": "Warenkorb",
+    "stepTwo": "Deine Details",
+    "stepTwoDescription": "Checkout",
+    "stepThree": "Letzter Schritt",
+    "stepThreeDescription": "Bezahlung"
+  },
+  "usps": {
+    "or": "oder",
+    "allDay": "Ganztag",
+    "bookable": {
+      "title": "Buchbar",
+      "description": "Für {val}"
+    },
+    "online": {
+      "title": "Sofortige Buchungsbestätigung"
+    },
+    "payment": {
+      "title": "Buche auf Rechnung oder bezahle mit Twint"
+    },
+    "duration": {
+      "title": "Dauer",
+      "durationMinutes": "{val} Minuten",
+      "duration": "{val} Stunde",
+      "durations": "{val} Stunden",
+      "durationDay": "{val} Tag",
+      "durationDays": "{val} Tage"
+    },
+    "mobileTicket": {
+      "title": "Mobiles Ticket akzeptiert",
+      "description": "Nutze dein Telefon oder drucke deinen Voucher aus"
+    },
+    "confirmation": {
+      "title": "Sofortige Buchungsbestätigung",
+      "description": "Keine Zusatzgebühren"
+    },
+    "queue": {
+      "title": "Kein Anstehen an der Kasse"
+    },
+    "cancel": {
+      "title": "Kostenlose Stornierung",
+      "description": "Vollständige Rückerstattung bei Stornierung bis {val}h vor Antritt",
+      "descriptionDays": "Vollständige Rückerstattung bei Stornierung bis {val} Tage vor Antritt",
+      "subtitle": "Bis zu {val} Stunden vor der Startzeit",
+      "subtitleDays": "Bis zu {val} Tag(en) vor der Startzeit"
+    },
+    "meetingPoint": {
+      "title": "Treffpunkt"
+    },
+    "discount": {
+      "title": "Discount"
+    },
+    "request": {
+      "title": "Buchung auf Anfrage",
+      "description": "Diese Buchung muss vom Anbieter rückbestätigt werden",
+      "extra": "Dieses Angebot basiert auf der Verfügbarkeit des Anbieters. Die Buchung muss zuerst durch den Anbieter bestätigt werden. Er wird dazu nach der Buchung mit dir Kontakt aufnehmen. Falls die Aktivität nicht durchgeführt werden kann, erhältst du den gesamten Betrag rückerstattet."
+    },
+    "validity": {
+      "title": "Gültigkeit"
+    },
+    "openingHours": {
+      "title": "Öffnungszeiten"
+    }
+  },
+  "widgetConfigurator": {
+    "title": "Widget konfigurieren",
+    "type": "Typ",
+    "lang": "Sprache",
+    "other": "Andere Aktivität auswählen",
+    "topBar": "Bedienungsleiste",
+    "hideAll": "Alles ausblenden",
+    "hideSearch": "Suche ausblenden",
+    "hideSize": "Größen Toggle ausblenden",
+    "hideFilter": "Filter Button ausblenden",
+    "hideMap": "Karten Button ausblenden",
+    "hideQuickFilter": "Quickfilter ausblenden",
+    "hideSort": "Sortierung ausblenden",
+    "buttonText": "Button Text",
+    "buttonBackground": "Button Hintergrund",
+    "buttonColor": "Button Textfarbe",
+    "search": "Vorausgefüllte Suche"
+  },
+  "types": {
+    "activity": "Aktivität",
+    "overview": "Übersicht",
+    "location": "Ort",
+    "locationType": "Ort + Typ",
+    "type": "Typ",
+    "attribute": "Kategorie",
+    "locationAttribute": "Ort + Kategorie",
+    "poi": "Sehenswürdigkeit"
+  },
+  "reviewForm": {
+    "title": "Bewerte deine Erfahrung",
+    "button": "Jetzt Bewerten",
+    "rating": "Bewertung",
+    "comment": "Kommentar",
+    "thanks": "Danke für deine Bewertung!",
+    "next": "Nächste Reservierung bewerten",
+    "finish": "Fenster schließt in 3 Sekunden"
+  },
+  "user": {
+    "welcome": "Willkommen in deinem Dashboard {name}!",
+    "menu": {
+      "activities": "Aktivitäten",
+      "bookings": "Buchungen",
+      "suppliers": "Suppliers",
+      "reviews": "Bewertungen",
+      "settings": "Einstellungen",
+      "chat": "Chat",
+      "logout": "Ausloggen",
+      "login": "Anmelden"
+    }
+  },
+  "SettingsForm": {
+    "title": "Vervollständige dein Profil",
+    "titleUpdate": "Aktualisiere dein Profil",
+    "submit": "Absenden",
+    "phoneNumber": "Bitte überprüfe deine Telefonnummer noch einmal",
+    "email": "E-Mail ist nicht gültig",
+    "iban": "IBAN ist nicht gültig",
+    "reseller": {
+      "title": "Reseller",
+      "merchantName": "Händlername",
+      "merchantAddress": "Händleradresse",
+      "bankAccountHolder": "Kontoinhaber",
+      "bankAccountIban": "IBAN des Kontos",
+      "bankAccountHolderAddress": "Adresse des Kontoinhabers",
+      "contact": {
+        "title": "Kontakte",
+        "name": "Name",
+        "businessRole": "Geschäftsrolle",
+        "email": "E-Mail",
+        "phone": "Telefon"
+      }
+    },
+    "payment": {
+      "title": "Gespeicherte Bezahlmethoden",
+      "removeTitle": "Bezahlmethode entfernen"
+    }
+  },
+  "Repeater": {
+    "add": "Hinzufügen",
+    "remove": "Entfernen"
+  },
+  "Table": {
+    "booking": {
+      "refresh": "Aktualisieren"
+    },
+    "clearFilters": "Filter zurücksetzen",
+    "noResults": "Nichts gefunden.",
+    "view": {
+      "title": "Ansicht",
+      "adjust": "Spalten anpassen"
+    },
+    "header": {
+      "bookingId": "Buchungsnummer",
+      "date": "Datum",
+      "bookingDate": "Buchungsdatum",
+      "serviceDate": "Datum der Aktivität",
+      "description": "Beschreibung",
+      "location": "Ort",
+      "name": "Name",
+      "email": "E-Mail",
+      "type": "Typ",
+      "price": "Preis ab",
+      "sold": "Verkauft",
+      "rating": "Bewertung",
+      "supplier": "Anbieter",
+      "bookingStatus": "Buchungsstatus",
+      "paymentStatus": "Zahlungsstatus",
+      "total": "Preis",
+      "actions": "Aktionen",
+      "duration": "Dauer",
+      "validity": "Gültigkeit",
+      "bookable": "Buchbar",
+      "createdAt": "Erstellt am",
+      "commission": "Kommission",
+      "status": "Status",
+      "reservationSystem": "Reservierungssystem",
+      "bapiId": "BAPI ID",
+      "capiId": "CAPI ID",
+      "notes": "Notizen",
+      "distributor": "Distributor",
+      "website": "Website",
+      "validities": "Gültigkeit"
+    },
+    "actions": {
+      "aria": "Aktionen öffnen",
+      "details": "Details anzeigen",
+      "book": "Jetzt buchen"
+    },
+    "sort": {
+      "ascending": "Aufsteigend",
+      "descending": "Absteigend",
+      "hide": "Ausblenden",
+      "bookable": "Nur buchbare Aktivitäten anzeigen"
+    },
+    "pagination": {
+      "page": "Seite",
+      "of": "von",
+      "entriesPerPage": "Einträge pro Seite",
+      "goToFirstPage": "Gehe zur ersten Seite",
+      "goToLastPage": "Gehe zur letzten Seite",
+      "goToNextPage": "Gehe zur nächsten Seite",
+      "goToPreviousPage": "Gehe zur vorherigen Seite"
+    },
+    "search": {
+      "activities": "Suche nach Aktivitäten",
+      "bookings": "Suche nach Buchungen",
+      "offers": "Suche nach Offers",
+      "suppliers": "Suche nach Suppliers",
+      "bookingId": "Suche nach Buchungsnummer",
+      "email": "Suche nach E-Mail",
+      "familyName": "Suche nach Nachname"
+    },
+    "cell": {
+      "bookingStatusActive": "Bestätigt",
+      "bookingStatusPending": "Ausstehend",
+      "bookingStatusCancelled": "Storniert",
+      "paymentStatusActive": "Bezahlt",
+      "paymentStatusPending": "Ausstehend",
+      "paymentStatusRefunded": "Rückerstattet"
+    }
+  },
+  "Drawer": {
+    "close": "Schließen"
+  },
+  "PaymentMethod": {
+    "card": {
+      "new": "Neue Karte",
+      "store": "Bitte speichere meine Kreditkartendaten für einen schnellen Check-out in der Zukunft.",
+      "endsIn": "Endet in {val}"
+    }
+  },
+  "Activity": {
+    "new": "Neue Aktivität",
+    "nav": {
+      "general": "Allgemein"
+    }
+  },
+  "Offer": {
+    "new": "Neues Offer"
+  },
+  "Supplier": {
+    "new": "Neuer Supplier"
+  },
+  "UspSlider": {
+    "title": "Warum bei Swiss Activities buchen?",
+    "items": [
+      "Grösste Auswahl der Schweiz",
+      "Über 100'000 zufriedene Kunden",
+      "Kostenlose Stornierungsoption",
+      "5 Sterne Schweizer Kundensupport",
+      "Mobile Tickets in 90 Sekunden buchen"
+    ]
+  },
+  "AppBanner": {
+    "title": "Jetzt die App herunterladen",
+    "description": "Entdecke Swiss Activities – einfach und schnell"
+  },
+  "Transport": {
+    "bookTrip": "Verbindung buchen",
+    "button": {
+      "confirmTrip": "Verbindung bestätigen",
+      "confirmTravelers": "Reisende bestätigen"
+    },
+    "checkDetails": "Verbindungdetails prüfen",
+    "class": {
+      "first": "1. Klasse",
+      "second": "2. Klasse"
+    },
+    "direct": "Direkt",
+    "duration": {
+      "minutes": "Min."
+    },
+    "earlierTrips": "Frühere Verbindungen",
+    "errorLoadingTrips": "Verbindungen konnten nicht geladen werden.",
+    "laterTrips": "Spätere Verbindungen",
+    "legend": "Legende",
+    "loadingTrips": "Verbindungen werden geladen...",
+    "oneWay": "Nur Hinweg",
+    "roundTrip": "Hin-/Rückweg",
+    "searchTrips": "Verbindungen suchen",
+    "selectOriginDestination": "Wähle Abfahrts- und Zielort aus, um nach Verbindungen zu suchen.",
+    "selectProduct": "Ticketoption wählen",
+    "selectTravelers": "Reisende auswählen",
+    "switch": "Umsteigen",
+    "ticket": "Billett",
+    "tickets": "Billette",
+    "transfer": "Umsteigen",
+    "tripResults": "Verbindungen",
+    "upgradeTo1stClass": "Zusätzlicher Komfort",
+    "upgradeTo1stClassDescription": "Reisen in der 1. Klasse",
+    "cityTicketDescription": "Tageskarte für den Ortsverkehr",
+    "via": "via",
+    "travelDate": "Reisedatum wählen",
+    "confirmTravelDate": "Reisedatum bestätigen",
+    "departure": "Abfahrt",
+    "arrival": "Ankunft",
+    "locationDisabled": "Standortfreigabe ist deaktiviert",
+    "locationError": "Standort konnte nicht ermittelt werden",
+    "noProductsAvailable": "Keine Tickets verfügbar",
+    "disclaimer": "Alle Angaben ohne Gewähr.",
+    "validity": "Gültigkeit",
+    "validityOnSelectedRoute": "Nur auf der gewählten Strecke",
+    "validityForConnection": "Nur für die gewählte Verbindung",
+    "validityForConnectionWith2ndClass": "Nur für die gewählte Verbindung und mit gültigem Billett für die 2. Klasse",
+    "validityForRouteWith2ndClass": "Nur für die gewählte Strecke und mit gültigem Billett für die 2. Klasse",
+    "validityGARoutes": "Gültig auf allen GA-Bereichsstrecken",
+    "validityDayClassUpgrade": "Nur mit Tageskarte zum Halbtax, GA oder Swiss Travel Pass (Flex) für die 2. Klasse.",
+    "includedIn": "Inbegriffen in",
+    "validityDateRange": "{fromDate} bis {toDate}, {toTime}",
+    "validityConnection": "{date} ab {fromTime}, an {toTime}",
+    "classUpgradeOnly": "Nur Klassenwechsel",
+    "loadingDestination": "Wird geladen",
+    "distanceToMeetingPoint": "Treffpunkt",
+    "walking": "Zu Fuss",
+    "arrivalInfo": "Ankunftszeit berechnet: {walkingTime} Fussweg + 15 Min. Puffer bis zum Treffpunkt",
+    "timeBeforeEvent": "{minutes} Min. vor Aktivität · {walkingMinutes} Min. Fussweg von der Station",
+    "tooLateForActivity": "Folgende Verbindungen erreichen den Treffpunkt nicht rechtzeitig"
+  }
+}

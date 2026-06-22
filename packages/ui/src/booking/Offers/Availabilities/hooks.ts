@@ -1,7 +1,7 @@
 import { useShallow } from "zustand/react/shallow";
 import { useBookingStore } from "../../store";
-import { TActivity } from "../../types/activity";
-import { TOfferBooking } from "../../types/offerBooking";
+import type { TActivity } from "../../types/activity";
+import type { TOfferBooking } from "../../types/offerBooking";
 import { useI18n } from "../../utils/i18n/useI18n";
 import { useGetPersonalizationFields } from "../../query/activity/getPersonalizationOptions";
 

@@ -1,0 +1,1799 @@
+{
+  "general": {
+    "accountAdvantages": "För att njuta av rabatter och fler förmåner, skapa ett konto eller logga in.",
+    "activityBook": "Boka aktivitet",
+    "addTicket": "Lägg till biljett",
+    "adult": "{val} vuxen",
+    "adults": "{val} vuxna",
+    "ageChoose": "Välj ålder",
+    "ageFrom": "Från {val} år",
+    "ageOld": "{val} år gammal",
+    "ageUnder": "Under {val} år",
+    "all": "Alla",
+    "allReviews": "Alla recensioner",
+    "backToBookings": "Tillbaka till bokningar",
+    "bookAsGuest": "Du slutför beställningsprocessen som gäst.",
+    "cancel": "Avbryt",
+    "cancelled": "Avbokad",
+    "cartAmount": "Kundvagnsvärde",
+    "child": "{val} barn",
+    "children": "{val} barn",
+    "chooseSelection": "Bekräfta val",
+    "confirm": "Bekräfta",
+    "confirmCancel": "Bekräfta avbokningen",
+    "contact": "Kontakt",
+    "copyUrl": "Kopiera URL",
+    "couple": "Par",
+    "customerServiceFee": "Serviceavgift",
+    "data": "Data",
+    "date": "Datum",
+    "dateChoose": "Välj datum",
+    "delete": "Ta bort",
+    "didYouMean": "Menade du <suggestion>{email}</suggestion>?",
+    "duplicate": "Duplicera",
+    "emailsDontMatch": "De angivna e-postadresserna matchar inte.",
+    "export": "\"Exportera\"",
+    "faqType": "Vanliga frågor om {type} i Schweiz",
+    "from": "Från",
+    "group": "Grupp",
+    "helpfulQuestion": "Hjälpsamt?",
+    "informationPlural": "Information",
+    "language": "Språk",
+    "loginOrRegister": "Logga in eller Registrera dig",
+    "manageBookings": "Hantera bokningar",
+    "mobileAppAddon": "Ladda ner vår mobilapp nu och hantera enkelt dina bokningar, få snabb tillgång till dina biljetter och hitta ditt nästa äventyr.",
+    "mostImportantInSummary": "Det viktigaste i korthet",
+    "noResults": "Tyvärr kunde vi inte hitta några resultat för ditt sökord",
+    "noReviewsYet": "Inga recensioner ännu",
+    "notes": "Anteckningar",
+    "oneMonth": "1 månad",
+    "openChat": "Öppna chatt",
+    "order": "Ordning",
+    "partSum": "Delsumma",
+    "participants": "Deltagare",
+    "participantsChoose": "Välj deltagare",
+    "past": "Tidigare",
+    "personalizeTickets": "Personalized biljetter",
+    "pleaseSelect": "Vänligen välj",
+    "pleaseSelectItem": "Vänligen välj {val}",
+    "questionsChatActivity": "Har du några frågor om den här aktiviteten? Chatta med oss",
+    "questionsChatBooking": "Har du några frågor om bokningen? Chatta med oss",
+    "raw": "Rå",
+    "rebate": "Rabatt",
+    "recaptcha": "Denna webbplats är skyddad av reCAPTCHA. Googles\n<a href=\"https://policies.google.com/privacy\" target=\"_blank\">Integritetspolicy</a> och\n<a href=\"https://policies.google.com/terms\" target=\"_blank\">Användarvillkor</a> gäller.",
+    "remove": "Ta bort",
+    "removeFromCart": "Ta bort från varukorgen",
+    "reset": "Återställ",
+    "searchNow": "Sök nu",
+    "single": "Singel",
+    "soldOut": "\"Slutsåld\"",
+    "somethingWentWrongContact": "Vi är ledsen, men något gick fel. Försök igen eller kontakta supporten.",
+    "successfullySaved": "Sparat med framgång",
+    "ticket": "Biljett",
+    "tickets": "Biljetter",
+    "to": "Till",
+    "currentLocation": "Aktuell plats",
+    "toDashboard": "Mina bokningar",
+    "translate": "Översätta",
+    "tryAgain": "Försök igen",
+    "upcoming": "Kommande",
+    "when": "När",
+    "who": "Vem",
+    "wrongDate": "Det är något fel med datumet: Vänligen kontrollera och välj igen.",
+    "wrongDateParticipant": "Deltagarens födelsedatum stämmer inte överens med åldern från erbjudandet.",
+    "today": "Idag",
+    "apply": "Tillämpa"
+  },
+  "aria": {
+    "forward": "Framåt",
+    "backward": "Bakåt"
+  },
+  "auth0": {
+    "accept": "Jag accepterar [användarvillkoren]({link})",
+    "error": "Var god acceptera användarvillkoren",
+    "resetPasswordHint": "Ingen e-post mottagen? Kolla din skräppost. Om du har registrerat dig med Apple eller Google, använd gärna den inloggningsmetoden."
+  },
+  "menu": {
+    "menu": "Meny",
+    "search": "Sök",
+    "travelGuide": "Planera din resa",
+    "travelRoutes": "Resrutter",
+    "contactus": "Kontakta oss",
+    "switzerland": "Schweiz",
+    "help": "Chatt",
+    "voucher": "Köp kupong",
+    "voucherSm": "Kupong",
+    "partners": "Partner",
+    "provider": "Leverantör",
+    "affiliate": "Affiliatepartner"
+  },
+  "chat": {
+    "chats": "Alla chattar",
+    "newChat": "Ny chatt",
+    "noChatsYet": "Inga chattar ännu",
+    "typeMessage": "Skriv meddelande",
+    "welcome": "Hej och välkommen till Swiss Activities! Jag är Housibot och hjälper dig gärna med dina frågor.",
+    "welcomeReview": "Hej! Hur var din upplevelse? Jag är Housibot och hjälper dig gärna att dela med dig av din feedback."
+  },
+  "supportBanner": {
+    "title": "Behöver du hjälp att hitta den rätta skolan för skidåkning?",
+    "placeholder": "Hur kan vi hjälpa dig vidare?",
+    "send": "Skicka"
+  },
+  "pages": {
+    "404": {
+      "title": "Sidan hittades inte.",
+      "description": "Denna sida finns inte.",
+      "button": "Tillbaka till startsidan",
+      "search": "Starta sökningen"
+    },
+    "home": {
+      "title": "Swiss Activities - Hitta och boka din aktivitet i Schweiz",
+      "description": "Swiss Activities är din destination för fritidsaktiviteter i Schweiz. Upptäck, jämför och boka otaliga fritidsaktiviteter.",
+      "gatewayCards": {
+        "categories": {
+          "castlesRuins": "Slot / Ruin",
+          "castleEvents": "Slottsaktivitet",
+          "exhibitions": "Utställning",
+          "fireplaces": "Eldplats",
+          "movies": "Film",
+          "museums": "Museum",
+          "playgrounds": "Lekplats",
+          "swimmingBathing": "Simning & Badning"
+        },
+        "dateRange": {
+          "from": "Från",
+          "until": "Till"
+        },
+        "distance": {
+          "unit": "km"
+        }
+      },
+      "gatewayDetail": {
+        "back": "Tillbaka",
+        "moreInfo": "Mer information",
+        "source": "Öppna källa",
+        "labels": {
+          "admission": "Entré",
+          "address": "Adress",
+          "ageRating": "Ålder",
+          "bookTickets": "Boka biljetter",
+          "canton": "Kantön",
+          "cast": "Besättning",
+          "category": "Kategori",
+          "cinema": "Biograf",
+          "countryYear": "Land / År",
+          "dateRange": "Tidsperiod",
+          "director": "Regissör",
+          "duration": "Längd",
+          "entryFeeAdult": "Vuxna",
+          "entryFeeChild": "Barn",
+          "foundedYear": "Grundad",
+          "genres": "Genrer",
+          "location": "Plats",
+          "museumCategory": "Museityp",
+          "openTrailer": "Öppna trailer",
+          "openingHours": "Öppettider",
+          "phone": "Telefon",
+          "poolLength": "Bassänglängd",
+          "trailer": "Trailer",
+          "venue": "Evenemangsplats",
+          "waterType": "Vattentyp"
+        },
+        "sections": {
+          "amenities": "Faciliteter",
+          "badges": "Rekommendationer",
+          "information": "Informationer",
+          "prices": "Priser",
+          "showtimes": "Föreställningar",
+          "venue": "Evenemangsplats"
+        },
+        "amenities": {
+          "capacityPersons": "Kapacitet",
+          "hasBenches": "Bänkar",
+          "hasChangingRooms": "Omklädningsrum",
+          "hasDivingBoard": "Dykbana",
+          "hasFirewood": "Ved",
+          "hasFoodService": "Mat och dryck",
+          "hasGrillGrate": "Grillgaller",
+          "hasKidsPool": "Barnbassäng",
+          "hasLifeguard": "Livräddare",
+          "hasLockers": "Skåp",
+          "hasPlaygroundNearby": "Lekplats i närheten",
+          "hasShowers": "Dusch",
+          "hasSlide": "Rutschkana",
+          "hasShelter": "Skydd",
+          "hasTable": "Bord",
+          "hasToilet": "Toalett",
+          "hasWater": "Vatten"
+        },
+        "waterTypes": {
+          "indoorPool": "Inomhuspool",
+          "lake": "Sjön",
+          "outdoorPool": "Utomhuspool",
+          "pool": "Simhall",
+          "river": "Flod"
+        }
+      }
+    },
+    "s": {
+      "title": "Swiss Activities - Hitta och boka din aktivitet",
+      "description": "Swiss Activities är din destination för fritidsaktiviteter i Schweiz. Upptäck, jämför och boka otaliga fritidsaktiviteter.",
+      "sort": {
+        "distance": {
+          "notSupported": "Positionsinformation stöds inte av din webbläsare. Sortering efter relevans används.",
+          "permissionDenied": "För att sortera efter avstånd, vänligen ge tillåtelse för åtkomst till din plats i webbläsarens inställningar och ladda om sidan.",
+          "positionUnavailable": "Positionsinformation är inte tillgänglig.",
+          "timeout": "Tidsgräns överskriden vid platsförfrågan.",
+          "unknownError": "Ett okänt fel har uppstått.",
+          "fallbackMessage": "Sortering efter relevans används.",
+          "errorPrefix": "Platsen kunde inte fastställas."
+        }
+      }
+    },
+    "chat": {
+      "title": "Swiss Activities Chat",
+      "description": "Swiss Activities är din destination för fritidsaktiviteter i Schweiz. Upptäck, jämför och boka otaliga fritidsaktiviteter."
+    },
+    "transport": {
+      "title": "Schweizer Bahn biljetter, pass & dagskort | Swiss Travel Pass, SBB Spartageskarte",
+      "description": "Jämför och boka tågbiljetter, Swiss Travel Pass, Halvtaxa, SBB Spartageskarten & regionpass för hela Schweiz. Direkt som mobilbiljett till din telefon.",
+      "trust": {
+        "partners": "Officiell partner av",
+        "ratingValue": "4.8",
+        "ratingLabel": "<b>400 000</b> nöjda resenärer",
+        "ratingShortLabel": "400'000+ resenärer"
+      },
+      "discountMap": {
+        "title": "Här sparar du med ditt pass",
+        "subtitle": "Bergbanor, båtar och topputflykter — välj ett pass och se var det finns något.",
+        "free": "Ingår",
+        "discount50": "−50 %",
+        "discount25": "−25 %",
+        "noDiscount": "Inga rabatter",
+        "altitude": "{m} m ö.h.",
+        "moreInfo": "Mer information",
+        "selectPass": "Välj pass",
+        "selectCategory": "Välj kategori",
+        "categories": {
+          "mountain": "Bergbanor",
+          "lake": "Sjön & båtar",
+          "museum": "Museer"
+        },
+        "airports": {
+          "zrh": "Zürich",
+          "gva": "Genève"
+        },
+        "regions": {
+          "bernerOberland": "Berner Oberland",
+          "jungfrau": "Jungfrau",
+          "interlaken": "Interlaken",
+          "zentralschweiz": "Centralschweiz",
+          "ostschweiz": "Östschweiz",
+          "waadt": "Vaud",
+          "engadin": "Engadin",
+          "wallis": "Valais",
+          "tessin": "Tessin",
+          "genferseeregion": "Geneva-regionen",
+          "zuerich": "Zürich",
+          "mittelland": "Mittelland",
+          "luzern": "Luzern",
+          "basel": "Basel",
+          "bern": "Bern",
+          "lausanne": "Lausanne",
+          "geneve": "Genève",
+          "zermatt": "Zermatt",
+          "fribourg": "Fribourg",
+          "graubuenden": "Graubünden"
+        }
+      },
+      "hero": {
+        "title": "Tågbiljetter för hela",
+        "titleAccent": "Schweiz",
+        "lede": "Streckentickets, dagskort och erbjudanden från SBB – direkt som mobilbiljett till din telefon.",
+        "subtitle": "Streckentickets, dagskort och erbjudanden från SBB – direkt som mobilbiljett till din telefon.",
+        "searchTitle": "Sök förbindelser",
+        "searchMeta": "Station · Datum · Resande",
+        "fromPlaceholder": "Avgångsstation/Utgångsplats",
+        "toPlaceholder": "Målgångsstation/Måldestination",
+        "badges": {
+          "rating": "4.8 / 5 · <b>400 000</b> recensioner",
+          "partner": "Officiell partner SBB"
+        },
+        "usps": {
+          "customers": {
+            "title": "<b>400 000</b> lyckliga kunder",
+            "subline": "Vi har varit betrodda sedan 2021 av Swiss Activities"
+          },
+          "saver": {
+            "title": "Spara upp till 50%",
+            "subline": "Med SBB:s erbjudanden och dagskort"
+          },
+          "mobile": {
+            "title": "Direkt som mobilbiljett",
+            "subline": "Direkt till din telefon, inget SBB-inlogg krävs"
+          },
+          "earlyBird": {
+            "title": "Rabatter för förhandsbokare",
+            "subline": "Planera i förväg och köp rabatterade biljetter och dagskort från SBB"
+          }
+        }
+      },
+      "benefits": {
+        "title": "Dina fördelar",
+        "discount": {
+          "eyebrow": "Rabattbiljetter",
+          "title": "Spara upp till 40%",
+          "subline": "SBB-rabatter och dagsbiljetter",
+          "badge": "Bästsäljare"
+        }
+      },
+      "passes": {
+        "title": "SBB- och regionalpass",
+        "subtitle": "Jämför flerdagarspass, dagspass och regionalpass – välj det pass som ger dig mest för pengarna.",
+        "tabs": {
+          "multiDay": "Flerdagarspass",
+          "dayPass": "Dagskort",
+          "regional": "Regionalpass"
+        },
+        "buy": "Köp nu",
+        "from": "från",
+        "moreInfo": "Mer information",
+        "seeDiscounts": "Se alla rabatter",
+        "viewAllByTab": {
+          "multiDay": "Se alla tågåtgånde pass",
+          "dayPass": "Se alla SBB dagskort",
+          "regional": "Se alla regionalpass"
+        },
+        "empty": "För närvarande inga produkter tillgängliga – kolla in andra kategorier.",
+        "descriptions": {
+          "fallback-stp": "Rör dig landets väg med tåg, buss och båt – gratis museuminträden ingår.",
+          "fallback-stpf": "Använd kollektivtrafik på valda dagar – inklusive gratis inträde till museer.",
+          "fallback-shfc": "En månad halvera avgifter för tåg, buss, båt och bergbanor.",
+          "fallback-halbtax": "Hela dagen fri resa över hela Schweiz – med ditt halvtaxa.",
+          "fallback-spar": "Dagskort till bästa pris vid tidig bokning – begränsat antal per dag.",
+          "fallback-ga": "Full mobilitet för en dag – som ett GA, men bara i 24 timmar.",
+          "fallback-tell": "Fri resa i centralschweiz: bergbanor, båtturer och kollektivtrafik ingår.",
+          "fallback-bo": "Upptäck regionen Jungfrau och Interlaken – biljetter, båtar och bergbanor med ett pass.",
+          "fallback-jtp": "Top of Europe-region: bergbanor, kollektivtrafik och höjdpunkter runt Grindelwald, Wengen, Mürren."
+        },
+        "usps": {
+          "1330": [
+            "Harder Kulm & Brienzer Rothorn ingår",
+            "Upp till −50 % på skidområden Grindelwald-Wengen",
+            "Kollektivtrafik & bergbanor region Jungfrau"
+          ],
+          "1438": [
+            "First, Schynige Platte & Niesen ingår",
+            "−25 % på Jungfraujoch Top of Europe",
+            "Tåg, båt & bergbanor med ett pass"
+          ],
+          "1440": [
+            "1 månad halva priset överallt",
+            "För tåg, buss, båt & bergbanor",
+            "Även på SBB:s rabatterade biljetter"
+          ],
+          "1447": [
+            "Tåg, buss & båt gratis i hela landet",
+            "Upp till −50 % på bergbanor (Jungfraujoch −25 %)",
+            "Över 500 museer gratis"
+          ],
+          "1448": [
+            "Aktivera på valda dagar för hela Schweiz",
+            "Upp till −50 % på bergbanor, buss, båt",
+            "Över 500 museer gratis"
+          ],
+          "1450": [
+            "Pilatus, Rigi & Stanserhorn ingår",
+            "Färjor på Vierwaldstättersee gratis",
+            "Tåg, buss & bergbanor centralschweiz"
+          ],
+          "1664": [
+            "Dagskort från CHF 29",
+            "Upp till −70 % vid tidig bokning",
+            "Begränsat antal per dag"
+          ],
+          "1671": [
+            "Barn 6–16 till familjepriser",
+            "Kollektivtrafik för alla SBB-förbindelser",
+            "Perfekt för familjeutflykter"
+          ],
+          "1676": [
+            "1 dag fri resa med halvtaxa",
+            "Över hela landet på SBB-förbindelser",
+            "Billigare än flera enskilda biljetter"
+          ]
+        },
+        "soldCount": "{count} bokad",
+        "reviews": "({count})",
+        "discounts": {
+          "1330": "Harder Kulm inkl.",
+          "1438": "First & Niesen inkl.",
+          "1440": "Halva priset",
+          "1447": "Bergbanor −50 %",
+          "1448": "Bergbanor −50 %",
+          "1450": "Pilatus & Rigi inkl.",
+          "1664": "Upp till −70 %",
+          "1671": "Familjepris"
+        },
+        "benefits": {
+          "includedHeading": "Ingår",
+          "discountedHeading": "Rabatter",
+          "expand": "Se alla rabatter",
+          "collapse": "Mindre visa",
+          "items": {
+            "1330": {
+              "included": [
+                "Harder Kulm & Brienzer Rothorn",
+                "Kollektivtrafik regionen Jungfrau (tåg, buss, båt)"
+              ],
+              "discounted": [
+                "Skidområdena Grindelwald-Wengen upp till −50 %",
+                "Skidområde Mürren-Schilthorn upp till −50 %",
+                "Jungfraujoch Top of Europe −25 %"
+              ]
+            },
+            "1438": {
+              "included": [
+                "First, Schynige Platte & Niesen",
+                "Brienzer Rothorn & Stockhorn",
+                "Tåg, båt & bergbanor i regionen Jungfrau"
+              ],
+              "discounted": [
+                "Jungfraujoch Top of Europe −25 %",
+                "Schilthorn (James Bond) −50 %"
+              ]
+            },
+            "1440": {
+              "included": [],
+              "discounted": [
+                "50 % på biljetter till tåg, buss & båt",
+                "50 % på bergbanor",
+                "Även kombinera med SBB:s rabatterade biljetter"
+              ]
+            },
+            "1447": {
+              "included": [
+                "Tåg, buss & båt i hela Schweiz",
+                "Över 500 museer",
+                "Kollektivtrafik i 90 schweiziska städer"
+              ],
+              "discounted": [
+                "Bergbanor upp till −50 %",
+                "Jungfraujoch Top of Europe −25 %",
+                "RailAway-erbjudanden från SBB −30 %"
+              ]
+            },
+            "1448": {
+              "included": [
+                "Tåg, buss & båt på valda dagar",
+                "Över 500 museer",
+                "Kollektivtrafik i 90 schweiziska städer"
+              ],
+              "discounted": [
+                "Bergbanor upp till −50 %",
+                "Jungfraujoch Top of Europe −25 %",
+                "RailAway-erbjudanden från SBB −30 %"
+              ]
+            },
+            "1450": {
+              "included": [
+                "Pilatus, Rigi & Stanserhorn",
+                "Fartyg på Vierwaldstättersee",
+                "Tåg, buss & bergbanor i centrala Schweiz"
+              ],
+              "discounted": []
+            },
+            "1664": {
+              "included": [
+                "1 dag fri resa i hela landet"
+              ],
+              "discounted": [
+                "Dagskort från CHF 29",
+                "Upp till −70 % vid tidig bokning"
+              ]
+            },
+            "1671": {
+              "included": [
+                "Rikstäckande SBB-förbindelser i 1 dag"
+              ],
+              "discounted": [
+                "Familjepris för barn 6–16",
+                "−50 % på ordinarie dagkort"
+              ]
+            },
+            "1676": {
+              "included": [
+                "1 dag fri resa med Halbtax"
+              ],
+              "discounted": [
+                "Billigare än flera enskilda biljetter"
+              ]
+            }
+          }
+        }
+      },
+      "articles": {
+        "title": "Spännande artiklar kring tågvärlden",
+        "subtitle": "Tips, jämförelser och praktisk kunskap om SBB-biljetter, Travel Pass och kollektivtrafik i Schweiz.",
+        "read": "Läs artikel",
+        "tag": "Magasin"
+      },
+      "dayPasses": {
+        "title": "Populära dagkort",
+        "subtitle": "Fri färd hela dagen – enkelt kombinerat med din biljett.",
+        "halbtax": {
+          "title": "Dagkort för Halbtax",
+          "description": "Fri färd hela dagen i hela Schweiz – med ditt Halbtax. Perfekt för dagsutflykter och bergsområden.",
+          "fromPrice": "från CHF 52.–",
+          "cta": "Sök förbindelse"
+        },
+        "spar": {
+          "title": "Sparbiljett",
+          "description": "Dagkort till bästa pris vid tidig bokning. Begränsat antal per dag – den som bokar tidigt får det billigare.",
+          "fromPrice": "från CHF 29.–",
+          "cta": "Sök förbindelse"
+        }
+      },
+      "groups": {
+        "mountains": "Bergerfarenheter nås med tåg",
+        "dayTrips": "Populära dagsutflykter från Zürich, Bern och Basel",
+        "cities": "Upptäck städer: Tåg + upplevelse",
+        "cityPasses": "City Pass: Ett kort, hela staden"
+      },
+      "faq": {
+        "title": "Vanliga frågor kring SBB-biljetter",
+        "items": [
+          {
+            "q": "Kan jag avboka min biljett?",
+            "a": "<p><strong>Sträckbiljetter</strong> kan du avboka kostnadsfritt fram till dagen före resan – det gör du direkt i din bokningscockpit på swissactivities.com.</p><p>För <strong><a href=\"/sbb-tageskarten/spartageskarte-sbb/\">Sparbiljetter</a></strong> och rabatterade biljetter är avbokning tyvärr inte möjlig. Dessa är bundna till det valda datumet – en tydlig information innan köp visas på bokningssidan.</p>"
+          },
+          {
+            "q": "Är SBB-biljetterna desamma som vid SBB-kassorna?",
+            "a": "Ja, du får samma officiella SBB-biljetter som vid kassan eller i SBB-appen – utan extra kostnad. Även <a href=\"/sbb-tageskarten/\">SBB dagkort</a> och <a href=\"/bahnpaesse/\">banpass</a> är 1:1 de originalprodukter som SBB erbjuder."
+          },
+          {
+            "q": "Hur snabbt får jag min biljett?",
+            "a": "Omedelbart. Efter lyckad bokning får du Mobilbiljetten via e-post och i bokningscockpiten på swissactivities.com. Ingen SBB-inloggning behövs – visa den direkt i tåget."
+          },
+          {
+            "q": "Kan jag registrera Halbtax eller GA?",
+            "a": "Ja, steg i bokningen kan du välja ditt rabatterade abonnemang – priset anpassas automatiskt. Om du bara har ett Halbtax och är ute hela dagen, lönar det sig ofta med <a href=\"/sbb-tageskarten/sbb-tageskarte-halbtax/\">SBB dagkort för Halbtax</a> istället för flera enskilda biljetter."
+          },
+          {
+            "q": "Vad händer om mitt tåg är försenat?",
+            "a": "Ditt sträckbiljett gäller även för nästa förbindelse – bara att gå på nästa passande tåg. Vid mer än en timmes försening kan du begära en återbetalning genom SBB."
+          },
+          {
+            "q": "Lönar det sig med Swiss Travel Pass eller Sparbiljett?",
+            "a": "<p>Fingerspetsregeln: Den som reser mycket med tåg, buss och båt under minst tre dagar i rad och gärna besöker muséer, åker billigare med <a href=\"/bahnpaesse/swiss-travel-pass-kaufen/\">Swiss Travel Pass</a>. Över 500 muséer, kollektivtrafik i 90 städer och bergbanor med −50 % rabatt ingår.</p><p>För enskilda dagsutflykter är <a href=\"/sbb-tageskarten/spartageskarte-sbb/\">SBB Sparbiljett</a> från CHF 29 nästan alltid det billigaste alternativet – kom ihåg att boka i god tid.</p>"
+          },
+          {
+            "q": "Vilket regionalpass passar min resa?",
+            "a": "<p>För regionen Interlaken / Grindelwald / Wengen lönar det sig med <a href=\"/bahnpaesse/berner-oberland-pass/\">Berner Oberland Pass</a> eller på vintern <a href=\"/bahnpaesse/jungfrau-travel-pass-winter/\">Jungfrau Travel Pass</a> – båda inkluderar bergbanor, kollektivtrafik och båtar i regionen.</p><p>Runt Vierwaldstättersee är <a href=\"/bahnpaesse/sbb-tellpass/\">Tell-Pass</a> idealisk: Pilatus, Rigi, Stanserhorn och alla fartyg ingår.</p>"
+          }
+        ]
+      }
+    },
+    "about_us": {
+      "title": "Om oss - Swiss Activities",
+      "description": "Swiss Activities är din destination för fritidsaktiviteter i Schweiz. Upptäck, jämför och boka otaliga fritidsaktiviteter.",
+      "hero": {
+        "title": "Hitta schweiziska fritidsaktiviteter",
+        "text": "Swiss Activities är din destination för fritidsaktiviteter i Schweiz. På Swiss Activities hittar du otaliga fritidsaktiviteter, kan jämföra dessa och boka med några få klick. Aldrig har det varit enklare att hitta aktiviteter för din fritid i Schweiz."
+      },
+      "who": {
+        "title": "Vem är vi",
+        "text": "Vi är ett motiverat team som brinner för fritidsaktiviteter i Schweiz. Vi känner landet och människorna. Att prova nya aktiviteter är vår passion. Därför har vi utvecklat Swiss Activities."
+      },
+      "start": {
+        "title": "Vår start",
+        "text": "När vi år 2020 insåg att vi inte längre kunde resa, sökte vi efter en schweizisk plattform för fritidsaktiviteter inriktad på svenskar, men hittade ingen. Det var starten för fritidsaktivitetsdestinationen Swiss Activities.",
+        "milestones": {
+          "march_2020": {
+            "date": "Mars 2020",
+            "title": "Bootstrapping Swiss Activities som affärsmodell"
+          },
+          "march_2021": {
+            "date": "Mars 2021",
+            "title": "Företagsbildning"
+          },
+          "june_2021": {
+            "date": "Juni 2021",
+            "title": "Lansering av egen plattform"
+          },
+          "september_2021": {
+            "date": "September 2021",
+            "title": "500 live bokningsbara aktiviteter aktiverade"
+          },
+          "december_2021": {
+            "date": "December 2021",
+            "title": "Pre-seed finansieringsrunda avslutad"
+          },
+          "march_2022": {
+            "date": "Mars 2021",
+            "title": "Lansering av affiliateprogrammet"
+          },
+          "may_2022": {
+            "date": "Maj 2021",
+            "title": "Lansering av B2B-partnerprogrammet"
+          }
+        }
+      },
+      "partner": {
+        "title": "Vi hjälper dig att få nya kunder",
+        "text": "Swiss Activities hjälper dig att hitta nya kunder. Vi arbetar dagligen för att göra Swiss Activities till den största destinationen för fritidsaktiviteter i Schweiz. Tusentals människor kommer varje dag till www.swissactivities.com för att söka fritidsaktiviteter i Schweiz. Genom att visa ditt erbjudande på Swiss Activities når du nya kunder."
+      },
+      "kunden": {
+        "title": "En destination med alla fritidsaktiviteter i Schweiz ",
+        "text": "Vårt mål är att göra alla fritidsaktiviteter i hela Schweiz synliga på www.swissactivities.com. Det gör det enklare för alla att hitta, jämföra och boka fritidsaktiviteter."
+      },
+      "promise": {
+        "title": "Vårt kundelöfte",
+        "list": [
+          "inga tidskrävande telefonsamtal",
+          "ingen ändlös forskning på otaliga webbplatser",
+          "direkt kontrollerbara tillgängligheter",
+          "omedelbara reservationer utan omvägar",
+          "inga dolda kostnader",
+          "okomplicerade och snabba betalningsalternativ",
+          "inga tråkiga köer",
+          "översikt över attraktiva rabatter",
+          "lokala erbjudanden"
+        ]
+      },
+      "team": {
+        "title": "Teamet bakom Swiss Activities"
+      }
+    },
+    "tos_b2b": {
+      "title": "Allmänna villkor för tjänsteleverantörer",
+      "description": "Det här är våra aktuella villkor för våra tjänsteleverantörer."
+    },
+    "tos_b2c": {
+      "title": "Användarvillkor för Swiss Activities för kunder",
+      "description": "Det här är våra aktuella användarvillkor för Swiss Activities för kunder."
+    },
+    "tos_aff": {
+      "title": "Allmänna villkor för affiliates",
+      "description": "Detta är våra aktuella allmänna villkor för våra affiliates."
+    },
+    "imprint": {
+      "title": "Juridisk information",
+      "description": "Detta är vårt impressum."
+    },
+    "privacy_policy": {
+      "title": "Dataskydd",
+      "description": "Det här är sekretesspolicyn."
+    },
+    "contact_us": {
+      "title": "Kontakta oss",
+      "description": "Om du har några frågor hjälper vi gärna till."
+    },
+    "basket": {
+      "title": "Varukorg",
+      "delete": "Ta bort",
+      "warning": "Vill du ta bort denna bokning från din kundvagn?",
+      "edit": "Redigera",
+      "cancel": "Avbryt",
+      "update": "Uppdatera varukorg",
+      "next": "Gå till kassan",
+      "empty": "Din varukorg är tom",
+      "hold": "Vi håller denna reservation för",
+      "explore": "Upptäck fritidsaktiviteter"
+    },
+    "booking": {
+      "title": "Bokning"
+    },
+    "confirmation": {
+      "title": "Bokningsbekräftelse",
+      "tickets": "Dina biljetter",
+      "download": "Mobilbiljett",
+      "more": "Mer information",
+      "cancel": "Avbryt biljett",
+      "cancelled": "Avbokad",
+      "cancelWhy": "Varför vill du avboka?",
+      "cancelReasons": [
+        "Min semester har blivit avbokad",
+        "Jag har hittat ett billigare alternativ",
+        "Jag fick inte min bekräftelse i tid",
+        "Leverantören bad mig att avboka",
+        "Mina föredragna alternativ var inte tillgängliga",
+        "Jag har bokat fel datum",
+        "Jag har bokat fel antal deltagare",
+        "Andra skäl"
+      ],
+      "rebook": {
+        "title": "Ombokning",
+        "text": "Planändring? Omboka din aktivitet. Din gamla reservation kommer att avbokas automatiskt.",
+        "button": "Omboka nu"
+      },
+      "stay": "Var vänlig stanna på denna sida, din bokning håller på att behandlas.",
+      "editBooking": "Ändra bokning",
+      "showTickets": "Biljetter",
+      "drawerTitle": "Din bokning",
+      "relatedBookings": "Relaterade bokningar"
+    },
+    "activities": {
+      "title": "De bästa fritidsaktiviteterna i Schweiz {year}",
+      "description": "Hitta och boka din passande aktivitet {year} i Schweiz. Som ett mångsidigt land erbjuder Schweiz otaliga aktiviteter och idéer för en dagsutflykt.",
+      "intro": "Året runt hittar du fritidsaktiviteter för alla tillfällen. Oavsett om du planerar en utflykt med din familj, organiserar en möhippa, söker en utomhusaktivitet eller inspiration för ditt dåliga väder-program, här hittar du något. På Swiss Activities kan du planera din dagsutflykt och boka direkt.",
+      "titleParentLocation": "{locationTitle} {year}: de bästa aktiviteterna och erbjudandena",
+      "descriptionParentLocation": "Hitta och boka de bästa aktiviteterna i {locationTitle}: Boka biljetter till utflyktsmål eller familjeaktiviteter med bara några klick.",
+      "titleChildLocation": "{locationTitle} {year}: de bästa aktiviteterna",
+      "descriptionChildLocation": "Boka de bästa aktiviteterna i {locationTitle}. Boka biljetter till utflyktsmål eller familjeaktiviteter med bara några klick.",
+      "titleParentType": "{typeTitle} {year}: De bästa {typeTitle} i Schweiz",
+      "descriptionParentType": "Boka de bästa {typeTitle} från hela Schweiz. Inga köer, ingen bokningsavgift och gratis avbokningsalternativ.",
+      "titleChildType": "{typeTitle} {year}: De bästa {typeTitle}-erbjudandena i Schweiz",
+      "descriptionChildType": "Boka de bästa erbjudandena för {typeTitle} från hela Schweiz. Inga köer, ingen bokningsavgift och gratis avbokningsalternativ.",
+      "titleParentLocationParentType": "{typeTitle} {locationTitle}: Top-erbjudanden och priser {year}",
+      "descriptionParentLocationParentType": "Boka de bästa erbjudandena för {typeTitle} {locationTitle} {year}. Ingen bokningsavgift och gratis avbokningsalternativ.",
+      "titleParentLocationChildType": "{typeTitle} {locationTitle}: Top-erbjudanden och priser {year}",
+      "descriptionParentLocationChildType": "Boka de bästa erbjudandena för {typeTitle} {locationTitle} {year}. Ingen bokningsavgift och gratis avbokningsalternativ.",
+      "titleChildLocationParentType": "{typeTitle} {locationTitle}: Top-erbjudanden och priser {year}",
+      "descriptionChildLocationParentType": "Boka de bästa erbjudandena för {typeTitle} {locationTitle} {year}. Ingen bokningsavgift och gratis avbokningsalternativ.",
+      "titleChildLocationChildType": "{typeTitle} {locationTitle}: Top-erbjudanden och priser {year}",
+      "descriptionChildLocationChildType": "Boka de bästa erbjudandena för {typeTitle} {locationTitle} {year}. Ingen bokningsavgift och gratis avbokningsalternativ."
+    },
+    "listing": {
+      "title": "{listingTitle}",
+      "offersTitle": "{title} Biljetter och aktiviteter",
+      "activities": "Aktiviteter",
+      "relatedListings": "Top {value} sevärdheter",
+      "relatedListingsClose": "{value} sevärdheter",
+      "description": "Uppräkning för {listingTitle}",
+      "tableOfContent": "Innehållsförteckning",
+      "destinationTitle": "{location} - Top {num} sevärdheter och aktiviteter {year}",
+      "more": "Läs mer om {val}",
+      "locations": "Platser nära {val}",
+      "regions": "Regioner i {val}",
+      "type": "Populära platser i Schweiz för {val}",
+      "typeLocation": "Populära platser i {location} för {type}",
+      "types": "Topp {val} aktiviteter",
+      "combo": "{type} {location} - {num} Topp erbjudanden och priser {year}",
+      "map": "Karta",
+      "attributeBadWeatherTitleAttribute": "De {val} bästa idéerna för dåligt väder i Schweiz",
+      "attributeBadWeatherTitle": "De {val} bästa idéerna för dåligt väder i {location}",
+      "attributeBadWeatherTeaser": "Oavsett regn, dimma eller snöfall: i [{location}]({locationLink}) finns det många aktiviteter som du kan göra trots dåligt väder. Regnet behöver alltså inte nödvändigtvis sabba dina planer. Du hittar både inomhus- och [utomhusaktiviteter]({outdoorLink}) som passar oavsett väder. Du bestämmer om du vill vara aktiv eller ta det lugnt. Hitta mer inspiration för många [dåligt väder-idéer]({badWeatherLink}) i hela Schweiz.",
+      "attributeBadWeatherDesc": "Hitta din dåligt väder idé i {location} och välj en aktivitet som kan äga rum i alla väder.",
+      "attributeFamilyTitleAttribute": "De {val} bästa idéerna för din familjeutflykt till Schweiz",
+      "attributeFamilyTitle": "De {val} bästa idéerna för din familjeutflykt i {location}",
+      "attributeFamilyTeaser": "Planera ditt nästa familjeutflyktsmål i [{location}]({locationLink}) för dig och dina barn. Det spelar ingen roll om ni är äventyrliga, avslappnade eller upptäckare. Det finns mycket att göra året runt, även vid [dåligt väder i {location}]({locationBadWeatherLink}). Ni har också alternativ för utflykter med barnvagn som passar yngre barn. Så ingenting står i vägen för er [familjeutflykt]({familyLink}).",
+      "attributeFamilyDesc": "Hitta den perfekta idén för din nästa familjeutflykt i {location} och spendera en spännande dag med dina barn.",
+      "attributeDogTitleAttribute": "De {val} bästa utflykterna med hund i Schweiz",
+      "attributeDogTitle": "De {val} bästa utflykterna med hund i {location}",
+      "attributeDogTeaser": "Söker du en utflyktsidé med din hund i [{location}]({locationLink})? Om du vill ta med din trogna följeslagare hittar du här alla aktiviteter där han får följa med. Särskilt lämpliga är ofta [utomhusaktiviteter]({outdoorLink}), där din hund kan få springa omkring i friska luften. Men även båtutflykter eller bergbanor är bra alternativ. Vårt insider-tips är [Escape Games]({escapeLink}), eftersom de äger rum utomhus och erbjuder en trevlig omväxling från de vanliga promenaderna.",
+      "attributeDogDesc": "Planera en utflykt med din hund i {location} och prova något nytt som omväxling till din vanliga promenad.",
+      "attributeOutdoorTitleAttribute": "De {val} bästa utomhusaktiviteterna i Schweiz",
+      "attributeOutdoorTitle": "De {val} bästa utomhusaktiviteterna i {location}",
+      "attributeOutdoorTeaser": "I [{location}]({locationLink}) finns det gott om [utomhusaktiviteter]({outdoorLink}) att göra året runt. Vissa ger dig en adrenalinkick, medan andra väntar med imponerande vyer eller utmanar dina färdigheter. Det finns även utomhusaktiviteter som lämpar sig som [dålig väderidé]({badWeatherLink}) eller för en [familjeutflykt]({familyLink}). I vissa fall kan du även ta med din [hund]({dogLink}). Vissa utomhusaktiviteter kan du göra på egen hand, medan du för andra av säkerhetsskäl bör gå med en professionellt ledd tur.",
+      "attributeOutdoorDesc": "Planera din nästa utomhusaktivitet i {location} och tillbringa en dag utomhus med frisk luft hela året.",
+      "attributeBachelorPartyTitleAttribute": "De {val} bästa polterabend idéerna för Schweiz",
+      "attributeBachelorPartyTitle": "De {val} bästa polterabend idéerna i {location}",
+      "attributeBachelorPartyTeaser": "Letar du efter en fantastisk idé för en svensexa i [{location}]({locationLink})? Oavsett om du är en matälskare, äventyrssökare eller upptäcktsresande: du kommer att hitta något som passar alla smaker. Med våra idéer kommer du att klara av uppgiften att organisera en [svensexa]({attributeLink}) i {location} utan problem. Så se fram emot en lyckad och rolig dag med dina vänner.",
+      "attributeBachelorPartyDesc": "Planera din nästa svensexa i [{location}] och tillbringa en rolig dag med dina vänner.",
+      "attributeTeamEventTitleAttribute": "De {val} bästa idéerna för ett teamevent i Schweiz",
+      "attributeTeamEventTitle": "De {val} bästa idéerna för ett teamevent i {location}",
+      "attributeTeamEventTeaser": "Har du fått i uppdrag att organisera ett teamevent i [{location}]({locationLink})? Det är inte alltid en enkel uppgift, eftersom kraven ofta är mycket olika. Med våra idéer kommer du att bli väl inspirerad för det kommande [teameventet]({attributeLink}) och du kan förbereda dig. Oavsett om du är en matälskare, upptäcktsresande, aktiv, pusselentusiast eller äventyrare: du kommer att hitta något som passar alla smaker. Så se fram emot en lyckad och rolig dag med dina kollegor.",
+      "attributeTeamEventDesc": "Planera ditt nästa teamevent i {location} och tillbringa en rolig dag med dina kollegor.",
+      "attributeValentinesDayTitleAttribute": "De {val} bästa idéerna för alla hjärtans dag i Schweiz",
+      "attributeValentinesDayTitle": "De {val} bästa idéerna för alla hjärtans dag i {location}",
+      "attributeValentinesDayTeaser": "Varje år kommer den tillbaka: Alla hjärtans dag. Kanske vet du redan exakt vad du vill organisera nästa gång den 14 februari. Kanske är du fortfarande osäker och letar efter en idé för er Alla hjärtans dag i [{location}]({locationLink}). Våra aktiviteter ska inspirera dig och hjälpa dig att hitta något passande. Oavsett om det är romantiskt, mysigt eller äventyrligt: här hittar ni bestämt inspiration för en [Alla hjärtans dag]({attributeLink}) som får era hjärtan att slå snabbare.",
+      "attributeValentinesDayDesc": "Planera din nästa Alla hjärtans dag i {location} och spendera en romantisk dag med din favoritperson.",
+      "attributeFirstDateTitleAttribute": "De {val} bästa idéerna för din första dejt i Schweiz",
+      "attributeFirstDateTitle": "De {val} bästa idéerna för din första dejt i {location}",
+      "attributeFirstDateTeaser": "Letar du efter den perfekta idén för din första dejt i [{location}]({locationLink}) och är osäker på hur du kan imponera på din dejt? Då har du kommit till rätt ställe. På den här sidan hittar du den inspiration du behöver för att göra er [första dejt]({attributeLink}) till en fullständig succé. Oavsett om det är sommar eller vinter, äventyrligt eller avslappnat, kommer du säkert att hitta något här som gläder din dejt. Och vem vet, kanske stöter du på något som passar för nästa och nästa dejt.",
+      "attributeFirstDateDesc": "Planera den första dejten i {location} och tillbringa en romantisk dag tillsammans.",
+      "attributeChildBirthdayTitleAttribute": "{val} idéer för en barnkalas i Schweiz",
+      "attributeChildBirthdayTitle": "{val} idéer för ett barnkalas i {location}",
+      "attributeChildBirthdayTeaser": "Planera ditt nästa barnkalas i [{location}]({locationLink}). Kalaset är en av höjdpunkterna under året för varje barn. Oavsett säsong finns det mer än tillräckligt med idéer för att göra ditt barn lyckligt. Organisera en [utomhusaktivitet]({outdoorLink}) eller leta efter en idé för [program vid dåligt väder]({badWeatherLink}). På så sätt kommer ert nästa barnkalas säkerligen att bli en succé.",
+      "attributeChildBirthdayDesc": "Organisera ett barnkalas i {location} och planera en oförglömlig dag för ditt barn.",
+      "attributeWheelchairTitleAttribute": "{val} utflyktstips för rullstol i Schweiz",
+      "attributeWheelchairTitle": "{val} utflyktstips för rullstol i {location}",
+      "attributeWheelchairTeaser": "Planera en utflykt med rullstol till [{location}]({locationLink}) och hitta den perfekta tillgängliga aktiviteten för dig. Att resa i Schweiz med rullstol är relativt enkelt tack vare den avancerade tillgängligheten och landets ansträngningar för att erbjuda alla turister en tillgänglig upplevelse. Detta inkluderar både inomhus- och [utomhusaktiviteter]({outdoorLink}).",
+      "attributeWheelchairDesc": "Låt dig inspireras av rullstolstillgängliga utflyktsmål i {location} och planera din tillgängliga aktivitet.",
+      "attributePramTitleAttribute": "{val} utflyktstips för barnvagn i Schweiz",
+      "attributePramTitle": "{val} utflyktstips för barnvagn i {location}",
+      "attributePramTeaser": "Planera din utflykt med barnvagn i [{location}]({locationLink}). Om du reser med små barn finns det många aktiviteter du kan göra. Många vandringsleder är barnvagnsvänliga, och kollektivtrafiken är inriktad på komforten för familjer med små barn. Därför står ingenting i vägen för din [familjeutflykt]({familyLink}).",
+      "attributePramDesc": "Res med barnvagn i {location} och planera den nästa utflykten med din familj.",
+      "attributesOther": "Fler kategorier",
+      "attributesType": "Kategorier för {val} aktiviteter",
+      "teamEvent": "Skicka oss din gruppförfrågan",
+      "recommended": "Rekommenderat av resenärer",
+      "tickets": "Biljetter",
+      "tours": "Guidad turer"
+    },
+    "error": {
+      "title": "Vi är ledsna, men ett fel har inträffat. Återgå till startsidan och leta efter din lämpliga fritidsaktivitet."
+    },
+    "supplier": {
+      "title": "Swiss Activities: den största marknadsplatsen för fritidsaktiviteter i Schweiz",
+      "description": "Swiss Activities är den största marknadsplatsen för fritidsaktiviteter i Schweiz. Med oss når du fler kunder och ökar dina bokningar.",
+      "hero": {
+        "title": "Swiss Activities - Destinationen för fritidsaktiviteter i Schweiz",
+        "button": "Bli fritidspartner"
+      },
+      "numbers": {
+        "title": "Så har vi stöttat våra fritidspartner sedan starten av Swiss Activities",
+        "blocks": [
+          {
+            "title": "Webbplatsbesökare",
+            "number": "7'500'000",
+            "text": "potentiella kunder"
+          },
+          {
+            "title": "Kundbokningar",
+            "number": ">300'000",
+            "text": "Gäster förmedlas"
+          },
+          {
+            "title": "Kundsupport",
+            "number": ">10'000",
+            "text": "Genomförda samtal"
+          },
+          {
+            "title": "Reservationssystem",
+            "number": ">20",
+            "text": "Biljetter istället för värdebevis"
+          }
+        ]
+      },
+      "why": {
+        "title": "Varför lista dina fritidsprodukter på Swiss Activities",
+        "sales": {
+          "title": "Nya kunder",
+          "description": "Få nya kunder från inrikes och utomlands och förbättra din beläggning."
+        },
+        "support": {
+          "title": "Automatisering",
+          "description": "Swiss Activities tar över din befintliga försäljningsprocess och överför transaktionerna till ditt system."
+        },
+        "finances": {
+          "title": "Inga risker",
+          "description": "Inga fasta kostnader eller förhandsinvesteringar. Du betalar endast vid förmedlad kund."
+        },
+        "local": {
+          "title": "Ett nytt kundsegment",
+          "description": "Koppla dig till Swiss Activities återförsäljarnätverk och utöka din räckvidd både i Sverige och utomlands."
+        }
+      },
+      "who": {
+        "title": "Över 500 fritidspartner arbetar med Swiss Activities",
+        "partners": [
+          {
+            "blocks": [
+              "/assets/supplier/partner/bergbahnen/rigi.png",
+              "/assets/supplier/partner/bergbahnen/schilthorn.png",
+              "/assets/supplier/partner/bergbahnen/jungfrau.jpeg",
+              "/assets/supplier/partner/bergbahnen/engelberg.svg",
+              "/assets/supplier/partner/bergbahnen/pilatus.jpeg",
+              "/assets/supplier/partner/bergbahnen/monte-tamaro.png",
+              "/assets/supplier/partner/bergbahnen/brienz.png",
+              "/assets/supplier/partner/bergbahnen/gornergrat.png",
+              "/assets/supplier/partner/destinationen/rheinfelden.png",
+              "/assets/supplier/partner/destinationen/basel.svg",
+              "/assets/supplier/partner/destinationen/winterthur.svg",
+              "/assets/supplier/partner/destinationen/interlaken.png",
+              "/assets/supplier/partner/attraktionen/ballenberg.png",
+              "/assets/supplier/partner/attraktionen/bls.png",
+              "/assets/supplier/partner/attraktionen/cgn.png",
+              "/assets/supplier/partner/attraktionen/chillon.jpeg",
+              "/assets/supplier/partner/attraktionen/maestrani.png",
+              "/assets/supplier/partner/attraktionen/verkehrshaus.png",
+              "/assets/supplier/partner/attraktionen/vier.png",
+              "/assets/supplier/partner/outdoor/best-of-switzerland.jpeg",
+              "/assets/supplier/partner/outdoor/kayak.jpeg",
+              "/assets/supplier/partner/outdoor/outdoorch.jpeg",
+              "/assets/supplier/partner/outdoor/paragliding.png",
+              "/assets/supplier/partner/outdoor/wine-tours.webp",
+              "/assets/supplier/partner/outdoor/zermatters.png"
+            ]
+          }
+        ]
+      },
+      "pricing": {
+        "title": "Prismodell",
+        "subtitle": "Betala bara vid en lyckad förmedling av en kund",
+        "description": "Swiss Activities hjälper dig att identifiera rätt försäljningskanaler lokalt och globalt och sälja dina fritidsprodukter där dina potentiella kunder finns. Eftersom Swiss Activities inte tar någon installationsavgift når du nya försäljningskanaler utan extra investeringar.",
+        "blocks": [
+          {
+            "pretitle": "",
+            "cost": "18 % + CHF 0.30",
+            "subcost": "exkl. moms.",
+            "button": "Bli fritidspartner",
+            "buttonLink": "https://k3qlq2fyp9o.typeform.com/to/CxWJub7f",
+            "subbutton": "",
+            "includes": [
+              "Lansering av fritidsaktiviteter på Swiss Activities",
+              "Obegränsad registrering av fritidsaktiviteter",
+              "Skapande av produktbeskrivningar av vårt content-team",
+              "Anslutning till ett av fler än 20 bokningssystem",
+              "Personligt partnersupport via chatt och telefon",
+              "Överta gästkommunikationen vid frågor om aktiviteter",
+              "Behandling av gästers boknings- och avbokningsförfrågningar",
+              "Övervakning och kontroll av alla bokningar och avbokningar",
+              "Övervakning och kontroll av avräkningar",
+              "Cash-Settlement standardiserat – avräkning via Swiss Activities",
+              "Säkerställande av försäljningsprocessen (inga voucher, endast biljetter)",
+              "Automatiskt tillgång till affiliate-nätverket",
+              "Lansering av aktiviteter på återförsäljarnätverket"
+            ],
+            "faq": []
+          }
+        ]
+      },
+      "tech": {
+        "title": "Reservations- och ticketingsystem",
+        "description": "Förutom att lansera och digitalisera alla schweiziska fritidsprodukter är ett centralt mål för Swiss Activities att förenkla och automatisera försäljningsprocessen för fritidsprodukter både inom och utom landet. Försäljningslandskapet blir alltmer komplext och vi hjälper återförsäljare att inte tappa kontakten med kundsegment. Så mycket viktigare är den direkta kopplingen mellan våra fritidspartners och Swiss Activities. Vi arbetar kontinuerligt med att implementera nya system. Om ditt reservations- och biljettssystem inte finns kan du gärna kontakta oss på sales@swissactivities.com.",
+        "partners": [
+          "/assets/supplier/technology/trekksoft.webp",
+          "/assets/supplier/technology/regiondo.webp",
+          "/assets/supplier/technology/tomas.webp",
+          "/assets/supplier/technology/waldhart.webp",
+          "/assets/supplier/technology/experiencebank.webp",
+          "/assets/supplier/technology/skidata.webp",
+          "/assets/supplier/technology/axess.webp",
+          "/assets/supplier/technology/smeetz.webp",
+          "/assets/supplier/technology/eatwith.webp",
+          "/assets/supplier/technology/fareharbor.webp",
+          "/assets/supplier/technology/bookingkit.webp",
+          "/assets/supplier/technology/ntree.webp",
+          "/assets/supplier/technology/secutix.webp",
+          "/assets/supplier/technology/tourcms.webp",
+          "/assets/supplier/technology/sbb.webp"
+        ],
+        "titleSoon": "Snart tillgänglig",
+        "partnersSoon": [
+          "/assets/supplier/technology/feratel.webp"
+        ]
+      },
+      "faq": [
+        {
+          "title": "Allmän information för fritidspartner",
+          "blocks": [
+            {
+              "title": "Vem kan bli fritidspartner med Swiss Activities?",
+              "text": "Alla som vill sälja fritidsaktiviteter i Schweiz kan bli partner till Swiss Activities. Ditt erbjudande kan vara mycket varierat och det finns knappt några gränser för din fantasi. Vi har aktiviteter, biljetter, äventyr, turer, uthyrningar osv. i omkring 100 kategorier. Det inkluderar bakkurser för enhörningstårtor såväl som tandemparaglidingflygningar eller entrébiljetter till museer. Det är viktigt att erbjudandena antingen sker i Schweiz eller är möjliga inom en dagsutflykt från Schweiz."
+            },
+            {
+              "title": "Vilka reservationssystem kan jag koppla till Swiss Activities?",
+              "list": [
+                "TrekkSoft",
+                "Regiondo",
+                "Waldhart",
+                "Experience Bank",
+                "Skidata",
+                "Axess",
+                "Tomas",
+                "Smeetz",
+                "Eatwith",
+                "Fareharbor",
+                "Booking Kit",
+                "N-Tree",
+                "Secutix",
+                "TourCMS",
+                "Palisis",
+                "Snart tillgängliga: SBB och Feratel"
+              ]
+            },
+            {
+              "title": "Jag arbetar inte med ett reservationssystem. Kan jag fortfarande sälja mina aktiviteter via Swiss Activities?",
+              "text": "Även om du inte arbetar med ett reservationssystem kan du lista dina aktiviteter hos oss. I så fall skapar vi manuellt en kalender enligt dina specifikationer. Om du vill implementera ett reservationssystem, vänligen kontakta oss. Vi hjälper gärna till med råd om detta ämne. Informationen vi behöver från dig är följande:",
+              "list": [
+                "Tidsperiod (datum)",
+                "Starttid(er)",
+                "Varaktighet",
+                "Cut-off (hur länge i förväg måste kunden senast boka?)",
+                "Priser per kategori (vuxna, barn, hyra osv.)",
+                "maximalt tillgängliga platser per slot"
+              ]
+            },
+            {
+              "title": "Vilken information överförs vid en bokning?",
+              "text": "När en kund gör en bokning hos Swiss Activities får de ett bekräftelsemail med all viktig information. Detta inkluderar även dina kontaktuppgifter så att de kan kontakta dig direkt om de har frågor.",
+              "list": [
+                "Aktivitetens namn",
+                "Datum",
+                "Tid",
+                "Mötespunkt",
+                "Antal bokade biljetter",
+                "Dina kontaktuppgifter (e-post och telefon)"
+              ]
+            },
+            {
+              "title": "Publiceras samma priser för mina aktiviteter på Swiss Activities som på min webbplats?",
+              "text": "Ja, hos oss betalar kunden samma belopp som om de bokade direkt hos dig. Detta är lika viktigt för dig som för oss. Om priserna är olika på olika platser kommer kunden att märka det, vilket leder till klagomål och missförstånd. På så sätt riskerar vi båda att förlora en återkommande kund."
+            },
+            {
+              "title": "Hur lång är avbokningstiden hos Swiss Activities?",
+              "text": "Kunden har möjlighet att avboka kostnadsfritt upp till 24 timmar före aktiviteten hos Swiss Activities. Om du vill lista en icke-annullerbar aktivitet kan vi överta det. Dock har vi erfarenhet av att vi förmedlar fler bokningar för aktiviteter som erbjuder avbokningsmöjlighet. Om du måste avboka bokningen kan du också göra det. Informera kunden omedelbart och meddela oss också, så att vi kan initiera en återbetalning. "
+            },
+            {
+              "title": "Hur hanteras efterföljande avbokningar?",
+              "text": "Om vi får en begäran om en efterföljande avbokning via vårt avbokningsformulär, utför vi aldrig en återbetalning utan att först ha rådfrågat dig. För att undvika bedrägerier begär vi alltid ditt samtycke för att bekräfta kundens redogörelse. Endast när vi har ditt godkännande genomför vi en efterföljande återbetalning."
+            }
+          ]
+        },
+        {
+          "title": "Processen för att lista fritidsprodukter",
+          "blocks": [
+            {
+              "title": "Hur kan jag lista mina erbjudanden hos Swiss Activities?",
+              "text": "Om du vill bli fritidspartner hos Swiss Activities och lista dina erbjudanden, finns följande steg att följa:",
+              "list": [
+                "Registrera dig först som fritidspartner.",
+                "Fyll i ett formulär för varje aktivitet som du vill lista. Länken får du efter att vi bekräftat din registrering.",
+                "Vi skriver och registrerar dina aktiviteter vanligtvis inom två veckor.",
+                "När aktiviteterna är aktiva kommer vi att informera dig via e-post."
+              ]
+            },
+            {
+              "title": "Vilken information behövs för att lista mina aktiviteter?",
+              "text": "När du har registrerat dig som fritidspartner hos oss skickar vi dig ett formulär som du kan använda för att ange dina aktiviteter. För att kunna lista dessa behöver vi följande uppgifter från dig:",
+              "list": [
+                "Uppgifter om reservationssystemet (om tillgängligt)",
+                "Aktivitets titel",
+                "Länk till aktiviteten",
+                "Minst 4 bilder per aktivitet",
+                "Uppgifter om datum, tid och varaktighet, om du inte använder ett reservationssystem",
+                "Eventuella information om ålder, språk, vikt, osv.",
+                "Lämplighet för aktiviteten: hund, barnvagn, rullstol, familjer, etc.",
+                "Exakt mötespunkt"
+              ]
+            },
+            {
+              "title": "Kan jag ta bort min registrering när som helst?",
+              "text": "Ja, du kan när som helst avbryta avtalet. Det finns ingen minimal avtalsperiod, och det uppstår inga kostnader för avbokningen."
+            },
+            {
+              "title": "Vad gör jag om jag vill ändra något i en aktivitet?",
+              "text": "Om du har ändringsönskemål i innehållet eller vill justera priser - så länge du inte använder ett reservationssystem - kan du meddela oss via e-post."
+            },
+            {
+              "title": "Hur kontaktar jag kunden?",
+              "text": "Efter varje bokning får du ett bekräftelsemejl från oss med kundens uppgifter. Där hittar du hans namn, hans e-postadress och hans telefonnummer för att kontakta honom."
+            },
+            {
+              "title": "Hur får jag mina pengar?",
+              "text": "Utbetalningen av alla utestående belopp görs efter servicen och överförs automatiskt i början av följande månad. Här samlas alla bokningar som har gjorts under den föregående månaden och avräknas i en och samma utbetalning."
+            }
+          ]
+        }
+      ]
+    },
+    "supplierRegistration": {
+      "title": "Swiss Activities: den största marknadsplatsen för fritidsaktiviteter i Schweiz",
+      "description": "Swiss Activities är den största marknadsplatsen för fritidsaktiviteter i Schweiz. Med oss kan du nå fler kunder och öka dina bokningar.",
+      "hero": {
+        "title": "Bli en del av Swiss Activities",
+        "description": "Registrera dig gratis hos Swiss Activities och öka din räckvidd bland schweiziska och internationella gäster. Dina fördelar i ett övergripande perspektiv",
+        "list": [
+          "Blir hittad på Google som företag och med dina erbjudanden. Och det på 4 språk!",
+          "Öppna en ny försäljningkanal",
+          "Dra nytta av vår gratis kundsupport",
+          "Anslut ditt bokningssystem och hantera din tillgänglighet direkt där.",
+          "En ny bokning - din kund. Vi döljer inte våra partners och vill erbjuda kunden den bästa bokningsupplevelsen.",
+          "Inga fasta kostnader eller dolda avgifter.",
+          "Dina kunder kan betala med alla lokala betalningsmetoder som Twint, köp på konto samt med vanliga kreditkort."
+        ]
+      }
+    },
+    "affiliate": {
+      "title": "Affiliate",
+      "description": "Delta som partner hos Swiss Activities och tjäna 1% till 5% provision från första bokningen. Det finns inga fasta kostnader.",
+      "hero": {
+        "title": "Bli nu affiliate-partner hos Swiss Activities",
+        "description": "Registrera dig för affiliate-programmet hos Swiss Activities och dra nytta av attraktiva integrationsverktyg, 1% till 5% provision och 45 dagar kakors giltighet.",
+        "steps": [
+          "Registrera dig",
+          "Genomför våra aktiviteter",
+          "Generera bokningar och tjäna pengar"
+        ],
+        "button": "Registrera dig nu"
+      },
+      "form": {
+        "tos": "Jag godkänner <a target='_blank' href='/agb/affiliates/'>Allmänna villkor</a>"
+      },
+      "advantagesTitle": "Vilka fördelar har du som affiliate-partner hos Swiss Activities?",
+      "advantages": [
+        {
+          "title": "1'500+ fritidsaktiviteter",
+          "text": "Som affiliatepartner till Swiss Activities har du med några få klick tillgång till över 1'500 fritidsaktiviteter i hela Schweiz."
+        },
+        {
+          "title": "Attraktiva villkor",
+          "text": "För varje bokning som du förmedlar får du 1% till 5% provision. Cookies varaktighet är 45 dagar."
+        },
+        {
+          "title": "Inspiration för dina läsare",
+          "text": "Gör din blogg eller din hemsida levande med inspirerande innehåll och hjälp ditt community att spara tid i sin fritidsplanering."
+        },
+        {
+          "title": "Enkel registrering",
+          "text": "Dra nytta av en enkel och snabb registrering."
+        },
+        {
+          "title": "Direkt biljettförsäljning",
+          "text": "Du har möjligheten att sälja biljetter direkt på din webbplats utan att omdirigera dina läsare till oss."
+        },
+        {
+          "title": "Anpassad HTML",
+          "text": "Tack vare våra mångsidiga och attraktivt designade anpassade HTML-verktyg kan du personalisera dina försäljningsmöjligheter."
+        }
+      ],
+      "faqTitle": "De viktigaste frågorna besvaras",
+      "faq": [
+        {
+          "title": "Hur fungerar registreringen för affiliateprogrammet för Swiss Activities?",
+          "text": "Registrera dig med formuläret på denna sida med alla nödvändiga uppgifter. Vi kommer att granska din ansökan inom en arbetsdag och skicka dina inloggningsuppgifter via e-post vid godkännande."
+        },
+        {
+          "title": "Hur loggar jag in på mitt affiliate-partnerdashboard?",
+          "text": "Vid din registrering definierar du ditt personliga lösenord. När vi har granskat dina uppgifter kommer du att få en avisering och kan logga in på ditt affiliate-dashboard via <a href='https://swissactivities.tapfiliate.com/login' target='_blank'>denna länk</a>."
+        },
+        {
+          "title": "Var kan jag hitta mer information om affiliateprogrammet?",
+          "text": "I vår hjälpdesk hittar du å ena sidan <a href='https://intercom.help/swiss-activities/de/collections/3916117-affiliate-moglichkeiten-zur-einbindung' target='_blank'>Första stegen</a> samt de viktigaste frågorna om <a href='https://intercom.help/swiss-activities/de/collections/3916117-affiliate-moglichkeiten-zur-einbindung' target='_blank'>integrering av våra aktiviteter</a>. Dessutom kommer du att efter registreringen få en serie e-postmeddelanden med användbara tips."
+        },
+        {
+          "title": "Vem kan bli affiliatepartner till Swiss Activities?",
+          "text": "Om du driver en blogg eller en webbplats som har koppling till schweizisk turism, fritidsaktiviteter i Schweiz eller resor i allmänhet kan du registrera dig för vårt affiliateprogram. Även om du har ett Instagram-, Pinterest- eller Facebook-konto där du kan lägga in en affiliate-länk kan du registrera dig hos oss."
+        },
+        {
+          "title": "Kan jag avregistrera mig från affiliateprogrammet?",
+          "text": "Självklart. Du är inte bunden av någon minimiavtalstid. Om du vill radera ditt konto är du välkommen att meddela oss via e-post eller chatt, så ska vi se till att allt görs."
+        },
+        {
+          "title": "Hur mycket provision får jag per förmedlad bokning?",
+          "text": "Du får mellan 1% och 5% provision om du hänvisar en kund till oss som genomför aktiviteten. Om kunden avbokar sin bokning kan vi tyvärr inte betala ut någon provision."
+        }
+      ]
+    },
+    "apps": {
+      "title": "Swiss Activities App",
+      "description": "Upplev Schweiz med Swiss Activities-appen – upptäck, jämför och boka fritidsaktiviteter direkt på din smartphone.",
+      "hero": {
+        "title": "Ditt schweiziska äventyr i fickan",
+        "description": "Med Swiss Activities-appen får du direkt tillgång till över {amount} aktiviteter i hela Schweiz. Hitta upplevelser, boka på några sekunder och håll alltid koll på alla dina biljetter och bokningar.",
+        "features": [
+          "Biljetter alltid tillgängliga",
+          "Enkelt att hantera bokningar",
+          "Upptäck nya upplevelser för alla smaker",
+          "Biljetter även tillgängliga offline"
+        ]
+      }
+    },
+    "travelGuide": {
+      "title": "Din reseplanerare för Schweiz",
+      "description": "Schweiz är ett mycket mångsidigt land och har otroligt mycket att erbjuda för din resa. Låt dig därför inte luras av den lilla ytan. Även om Schweiz är cirka tio gånger mindre än Sverige, Kalifornien eller Marocko, hittar du något för alla smaker. I det medelhavslika Ticino befinner du dig i en helt annan värld än i den hektiska Basel. Och det bergiga Alpstein har ett helt annat klimat än den milda Genèvesjöregionen. Och detta, trots att dessa platser bara ligger tre till fyra timmar från varandra. I vår blogg hjälper vi dig med din reseplanering. Vi förser dig med användbara resemallar och intressant information så att du kan förbereda dig perfekt. Det spelar ingen roll om du reser till Schweiz för första gången eller om du redan känner till området väl. Våra artiklar är lämpliga både för förstegångsbesökare och för riktiga Schweizkännare.",
+      "intro": "Schweiz är ett mycket mångsidigt land och har otroligt mycket att erbjuda för din resa. Låt dig därför inte luras av den lilla ytan. Även om Schweiz är cirka tio gånger mindre än Sverige, Kalifornien eller Marocko, hittar du något för alla smaker. I det medelhavslika Ticino befinner du dig i en helt annan värld än i den hektiska Basel. Och det bergiga Alpstein har ett helt annat klimat än den milda Genèvesjöregionen. Och detta, trots att dessa platser bara ligger tre till fyra timmar från varandra. I vår blogg hjälper vi dig med din reseplanering. Vi förser dig med användbara resemallar och intressant information så att du kan förbereda dig perfekt. Det spelar ingen roll om du reser till Schweiz för första gången eller om du redan känner till området väl. Våra artiklar är lämpliga både för förstegångsbesökare och för riktiga Schweizkännare."
+    },
+    "travelRoutes": {
+      "title": "Reserutter Schweiz",
+      "description": "Schweiz är ett mycket mångsidigt land och har otroligt mycket att erbjuda för din resa. Låt dig därför inte luras av det lilla området. Även om Schweiz är runt tio gånger mindre än Sverige, Kalifornien eller Marocko, kommer du att hitta något för varje smak. I det medelhavsliknande Ticino är du i en helt annan värld än i det hektiska Basel. Och den bergiga Alpstein har ett helt annat klimat än den milda Genèvesjöregionen. Och detta, trots att dessa platser bara ligger tre till fyra timmar ifrån varandra. I vår blogg hjälper vi dig med din reseplanering. Vi ger dig användbara resetips och intressant information så att du kan förbereda dig perfekt. Oavsett om du reser till Schweiz för första gången eller redan är bekant med landet spelar ingen roll. Våra artiklar är lämpliga både för första besökare och för verkliga Schweiz-kännare."
+    },
+    "widget": {
+      "title": "Integrera Swiss Activities på din webbplats",
+      "description": "Integrera Swiss Activities på din webbsida och sälj aktiviteter direkt genom din webbsida.",
+      "hero": {
+        "title": "Integrera erbjudanden från Swiss Activities på din webbplats",
+        "description": "Swiss Activities-widgeten är det enklaste sättet att integrera aktiviteter på din webbplats. Välj mellan olika widgettyper och bädda in den inom några minuter.",
+        "button": "Börja nu"
+      },
+      "cta": {
+        "title": "Bli affiliate",
+        "button": "Till formuläret"
+      }
+    },
+    "newsletterConfirm": {
+      "title": "Tack för din registrering. Vi har precis skickat ett meddelande till dig, via vilket du kan bekräfta din registrering."
+    },
+    "newsletterSuccess": {
+      "title": "Tack! Du är nu anmäld till vårt nyhetsbrev."
+    },
+    "cookiePolicy": {
+      "title": "Cookie-policy"
+    },
+    "vouchers": {
+      "title": "Upplevelsegåvor för Schweiz – de bästa presentkoderna hos Swiss Activities",
+      "description": "Ge bort oförglömliga stunder med ett upplevelsegåvan från Swiss Activities! Upptäck det största utbudet av fritidsaktiviteter i Schweiz – flexibelt, enkelt och omedelbart bokningsbara online. Perfekt som presentidea för alla tillfällen.",
+      "hero": {
+        "title": "Ge bort upplevelsegåvan för Schweiz nu och sprid glädje!",
+        "text": "Upptäck nu de bästa presentidéerna och upplevelsegåvorna hos Swiss Activities. Oavsett om det är till födelsedag, som julklapp eller bara för att säga tack – ett presentkort för schweiziska upplevelser passar för alla smaker och är en gåva som garanterat kommer att minnas.",
+        "button": "Köp presentkort"
+      },
+      "gift": {
+        "title": "Ge bort de bästa schweiziska upplevelserna – från äventyr till avkoppling",
+        "text": "Söker du en unik presentidé för vänner eller familj i Schweiz? Ett upplevelsegåvan från Swiss Activities ger dig tillgång till det största utbudet av fritidsaktiviteter som Schweiz har att erbjuda. Oavsett om det är guidade turer, äventyr i naturen, avkopplande stunder i termalbaden eller kulturella höjdpunkter i museer – Swiss Activities gör det möjligt att ge bort speciella stunder."
+      },
+      "why": {
+        "title": "Varför ett upplevelsegåvan från Swiss Activities är den perfekta presentidén",
+        "items": [
+          {
+            "title": "Största utbudet i Schweiz",
+            "text": "Över <b>1 600</b> fritidsaktiviteter i alla regioner, från utomhusäventyr till avkopplande stunder."
+          },
+          {
+            "title": "Över <b>100 000</b> nöjda kunder",
+            "text": "Swiss Activities är den pålitliga partnern för speciella gåvor och utflykter."
+          },
+          {
+            "title": "Gratis avbokningsalternativ",
+            "text": "Säkra och flexibla bokningar som kan anpassas efter mottagarens behov."
+          },
+          {
+            "title": "5-stjärnigt kundsupport",
+            "text": "Schweizisk kvalitet och support – för en smidig start på din upplevelse."
+          }
+        ]
+      },
+      "end": {
+        "title": "Ge bort upplevelse-presentkort i Schweiz och sprid glädje!",
+        "text": "Upptäck de bästa presentidéerna och upplevelse-presentkorten hos Swiss Activities. Oavsett om det är till födelsedagen, som julklapp eller bara för att säga tack – ett presentkort för upplevelser i Schweiz passar alla smaker och ger bestående minnen.",
+        "button": "Välj voucher"
+      },
+      "banner": {
+        "tagline": "NYTT: Den perfekta presentidén!",
+        "title": "Säkra dig en\nupplevelsescheck",
+        "button": "Tryck här"
+      }
+    }
+  },
+  "filter": {
+    "nearby": "Visa aktiviteter i närheten",
+    "results": "Visa resultat",
+    "filter": "Filter",
+    "search": "Sök",
+    "location": "Plats",
+    "types": "Typ",
+    "categories": "Kategori",
+    "activity": "Aktivitet",
+    "activities": "Aktiviteter",
+    "today": "Idag",
+    "tomorrow": "Imorgon",
+    "price": "Pris",
+    "noResults": "Inga resultat",
+    "noExactResults": {
+      "title": "Inga exakta träffar",
+      "description": "Försök att ändra eller ta bort några av dina filter, eller justera ditt sökområde.",
+      "showNearest": "Visa närmaste resultat",
+      "resetDate": "Återställ tidsperioden"
+    },
+    "lang": "Språk",
+    "sort": {
+      "relevance": "Relevans",
+      "distance": "Avstånd från dig",
+      "popularityDesc": "Popularitet fallande",
+      "ratingDesc": "Betyg fallande",
+      "ratingAsc": "Betyg stigande",
+      "priceDesc": "Pris fallande",
+      "priceAsc": "Pris stigande",
+      "dateDesc": "Nyast först",
+      "dateAsc": "Äldst först"
+    },
+    "navigationBreadcrumbs": {
+      "root": "Schweiz"
+    },
+    "all": "Alla",
+    "map": "Karta",
+    "card": {
+      "from": "från",
+      "person": "per person"
+    },
+    "viewMore": "Se mer",
+    "ratingBetterThan": "Bättre än {val} stjärnor",
+    "ratingEqual": "{val} stjärnor",
+    "ratingNone": "NY / Ingen bedömning",
+    "moreFilters": "{val} visa fler",
+    "lessFilters": "Visa mindre",
+    "usedFilters": "Tillämpade filter",
+    "resetFilters": "Återställ",
+    "discountTypes": "Rabatter",
+    "calendar": "Kalender",
+    "locationError": "Position kunde inte laddas",
+    "textOnly": "Endast recensioner med text"
+  },
+  "activity": {
+    "you": "du",
+    "nearby": "{distance} km bort från {location}",
+    "nearbyAlt": "{distance} km bort",
+    "recommendation": "Rekommendation",
+    "reviews": "Recensioner",
+    "reviewOriginalIn": "Original på {language}",
+    "booked": "{val} gånger bokad",
+    "providedBy": "Aktivitetsleverantör",
+    "save": "Spara",
+    "selectDate": "Välj datum",
+    "similarActivities": "Liknande aktiviteter",
+    "question": "Hur kan vi hjälpa till?",
+    "rating": "Betyg",
+    "highDemand": "Hög efterfrågan",
+    "widget": {
+      "free": "tillgänglig",
+      "error500": "Något gick fel, försök igen om 1 minut.",
+      "errorDate": "Tyvärr finns det inga fler tider tillgängliga för {val}.",
+      "choose": "välj",
+      "titleTime": "Välj erbjudande",
+      "titleTicketOption": "Välj biljettalternativ",
+      "titleParticipants": "Välj deltagare",
+      "titleTickets": "Välj biljetter",
+      "confirmOffer": "Bekräfta biljettalternativ",
+      "confirmTickets": "Bekräfta deltagare",
+      "confirmDate": "Bekräfta datum",
+      "confirmDateTime": "Bekräfta datum och tid",
+      "cheapest": "Lägsta pris",
+      "time": "Tid",
+      "navTicket": "Biljetter",
+      "check": "Kontrollera tillgänglighet",
+      "notBookable": "Tyvärr är detta erbjudande för närvarande inte bokbart.",
+      "paymentMethods": "Betalningsmetoder",
+      "totalPrice": "Totalt pris",
+      "taxes": "Ytterligare avgifter",
+      "offerTimeSelect": "Välj tid",
+      "basket": "Vagn",
+      "basketAdd": "Lägg till i vagnen",
+      "selectedOffer": "Erbjudande",
+      "adjust": "Justera bokningen",
+      "swissHalfFareCard": "Personer med hemvist utanför Schweiz kan&nbsp;<a href=\"/bahnpaesse/swiss-half-fare-card/\" target=\"_blank\" className=\"inline-block\">skaffa en Swiss Half Fare Card här</a>, för att använda den för rabatter på kollektivtrafiken."
+    },
+    "tabs": {
+      "highlights": "Höjdpunkter",
+      "includes": "Tjänster",
+      "importantInformation": "Viktig information",
+      "meetingPoints": "Mötespunkter"
+    },
+    "newsletter": {
+      "title": "Missa inga fler aktiviteter",
+      "description": "Prenumerera på vårt nyhetsbrev och få resetips, idéer för din fritid samt relevanta reseguider från Schweiz.",
+      "signup": "Registrera dig",
+      "inputPlaceholder": "Din e-post"
+    },
+    "notRefundable": {
+      "title": "Ej avbokningsbar",
+      "description": "Tyvärr kan vi inte erbjuda dig någon återbetalning eller ändra eller avboka din bokning för denna särskilda produkt."
+    }
+  },
+  "UI": {
+    "date": "Datum"
+  },
+  "home": {
+    "title": "Ditt äventyr börjar här"
+  },
+  "discover": {
+    "title": "Upptäck aktiviteter"
+  },
+  "booking": {
+    "cancelable": "Kostnadsfri avbokning fram till",
+    "privacyMessage": "Genom att fortsätta med betalningen accepterar du <tos>{text}</tos> och de avbokningsvillkor som anges av Swiss Activities AG.",
+    "privacyPolicy": "Allmänna villkor",
+    "personalTitle": "Bokningsuppgifter",
+    "personalSubtitle": "För att du ska kunna slutföra bokningen, vänligen fyll i följande information.",
+    "mainGuest": "Kontaktperson",
+    "fullName": "Förnamn",
+    "lastName": "Efternamn",
+    "email": "E-post",
+    "phoneNumber": "Telefonnummer",
+    "cardDetails": "Betalningsmetoder",
+    "paymentSecure": "Säker betalning - vi använder SSL-kryptering för att skydda dina uppgifter",
+    "creditPayments": "Kreditkort",
+    "total": "Totalt",
+    "fullDay": "Heldag",
+    "booknow": "Boka nu",
+    "addMoreInformation": "Lägg till uppgifter",
+    "addPaymentMethod": "Välj betalmetod",
+    "youBook": "Varukorg",
+    "rebate": "Rabattkod",
+    "rebateEmailRequired": "Vänligen ange din e-postadress först och bekräfta den för att lösa in en rabattkod.",
+    "important": "Jag har tagit del av villkoren under \"Viktig information\" för aktiviteten/aktiviteterna",
+    "importantShow": "Visa information",
+    "importantHide": "Dölj information"
+  },
+  "confirm": {
+    "title": "Tack för din bokning med Swiss Activities.",
+    "confirmed": "Din bokning är bekräftad.",
+    "pending": "Din bokning behandlas.",
+    "cancelled": "Din bokning har avbrutits.",
+    "failed": "Förlåt, något gick tyvärr fel.",
+    "failedPayment": "Betalningen kunde inte behandlas. Vänligen försök med en annan betalningsmetod.",
+    "failedReservation": "Tyvärr kunde inte bokningen bekräftas. Din betalning kommer att återbetalas. Vänligen försök igen.",
+    "wait": "Vi väntar på vår betalningsleverantör för att bekräfta betalningen.",
+    "waitEmail": "Du kommer att få ett email så snart betalningen bekräftas.",
+    "caption": "Stort tack för din bokning hos Swiss Activities. Vi har skickat en bekräftelse via e-post.",
+    "bookingNumber": "Bokningsnummer",
+    "point": "Mötesplats",
+    "pointAddress": "Adress för mötesplats",
+    "number": "Mobilnummer",
+    "end": "Slut",
+    "email": "Din bokningsbekräftelse har skickats till {email}. Om du inte får den inom några minuter, vänligen kontakta vår support via chatten.",
+    "transport": {
+      "title": "Ska du åka med kollektivtrafiken?",
+      "from": "Din plats",
+      "description": "Res bekvämt med kollektivtrafiken och lägg till din mobilbiljett direkt till bokningen.",
+      "button": "Lägg till biljett"
+    }
+  },
+  "footer": {
+    "company": {
+      "title": "Företag",
+      "about-us": "Om oss",
+      "jobs": "Jobb",
+      "legal": "Rättsligt"
+    },
+    "resources": {
+      "title": "Resurser"
+    },
+    "collaboration": {
+      "title": "Samarbete",
+      "becomeapartner": "Bli partner",
+      "affiliate": "Affiliate-program",
+      "widget": "Widget"
+    },
+    "affiliate": {
+      "title": "Affiliate-kod",
+      "button": "Kopiera kod",
+      "buttonCopied": "Koden kopierad!"
+    },
+    "contact": {
+      "title": "Kundtjänst",
+      "faq": "Frågor & Svar (FAQ)",
+      "cookie": "Cookies Samtycke"
+    },
+    "mobileApp": "Hämta vår app"
+  },
+  "tickets": {
+    "discounts": {
+      "noDiscount": "Ingen rabatt"
+    },
+    "showDiscounts": "Visa kund- och rabatterbjudanden",
+    "travelClass": "Reseklass"
+  },
+  "supplier": {
+    "activities": "Aktiviteter"
+  },
+  "contactPopup": {
+    "modalTitle": "Hur kan vi hjälpa dig idag?"
+  },
+  "contactForm": {
+    "fullname": "Namn",
+    "email": "E-post",
+    "subject": "Ämne",
+    "messagePlaceholder": "Förfrågan, bokning, etc...",
+    "submit": "Skicka",
+    "formError": "Något gick fel. Försök igen."
+  },
+  "contactThankYou": {
+    "title": "Tack för att du kontaktade oss!"
+  },
+  "internalLinkBlock": {
+    "destinations": "Toppdestinationer",
+    "locations": "Toppsemesterområden",
+    "topActivities": "Toppaktiviteter",
+    "topAttractions": "Toppattraktioner"
+  },
+  "offerCard": {
+    "bookNow": "Boka nu"
+  },
+  "breadcrumbsBasket": {
+    "stepOne": "Ditt val",
+    "stepOneDescription": "Kundvagn",
+    "stepTwo": "Dina detaljer",
+    "stepTwoDescription": "Kassan",
+    "stepThree": "Sista steget",
+    "stepThreeDescription": "Betalning"
+  },
+  "usps": {
+    "or": "eller",
+    "allDay": "Hela dagen",
+    "bookable": {
+      "title": "Bokningsbar",
+      "description": "För {val}"
+    },
+    "online": {
+      "title": "Omedelbar bokningsbekräftelse"
+    },
+    "payment": {
+      "title": "Boka med faktura eller betala med Twint"
+    },
+    "duration": {
+      "title": "Varaktighet",
+      "durationMinutes": "{val} minuter",
+      "duration": "{val} timme",
+      "durations": "{val} timmar",
+      "durationDay": "{val} dag",
+      "durationDays": "{val} dagar"
+    },
+    "mobileTicket": {
+      "title": "Mobilt biljet accepteras",
+      "description": "Använd din telefon eller skriv ut din voucher"
+    },
+    "confirmation": {
+      "title": "Omedelbar bokningsbekräftelse",
+      "description": "Inga extra avgifter"
+    },
+    "queue": {
+      "title": "Ingen kö i kassan"
+    },
+    "cancel": {
+      "title": "Gratis avbokning",
+      "description": "Full återbetalning vid avbokning upp till {val}h innan avresa",
+      "descriptionDays": "Full återbetalning vid avbokning upp till {val} dagar innan avresa",
+      "subtitle": "Upp till {val} timmar före starttiden",
+      "subtitleDays": "Upp till {val} dag(ar) före starttiden"
+    },
+    "meetingPoint": {
+      "title": "Mötespunkt"
+    },
+    "discount": {
+      "title": "Rabatt"
+    },
+    "request": {
+      "title": "Bokning på begäran",
+      "description": "Denna bokning måste bekräftas av leverantören",
+      "extra": "Detta erbjudande är baserat på tillgången hos leverantören. Bokningen måste först bekräftas av leverantören. Han eller hon kommer att kontakta dig efter bokningen. Om aktiviteten inte kan genomföras, får du hela beloppet tillbaka."
+    },
+    "validity": {
+      "title": "Giltighet"
+    },
+    "openingHours": {
+      "title": "Öppettider"
+    }
+  },
+  "widgetConfigurator": {
+    "title": "Konfigurera widget",
+    "type": "Typ",
+    "lang": "Språk",
+    "other": "Välj en annan aktivitet",
+    "topBar": "Inställningsfält",
+    "hideAll": "Dölj allt",
+    "hideSearch": "Dölj sök",
+    "hideSize": "Dölj storleksväxling",
+    "hideFilter": "Dölj filterknapp",
+    "hideMap": "Dölj kartknapp",
+    "hideQuickFilter": "Dölj snabbfilter",
+    "hideSort": "Dölj sortering",
+    "buttonText": "Knapptext",
+    "buttonBackground": "Knappens bakgrund",
+    "buttonColor": "Knappens textfärg",
+    "search": "Förifylld sökning"
+  },
+  "types": {
+    "activity": "Aktivitet",
+    "overview": "Översikt",
+    "location": "Plats",
+    "locationType": "Plats + Typ",
+    "type": "Typ",
+    "attribute": "Kategori",
+    "locationAttribute": "Plats + Kategori",
+    "poi": "Sevärdhet"
+  },
+  "reviewForm": {
+    "title": "Betygsätt din upplevelse",
+    "button": "Betygsätt nu",
+    "rating": "Betyg",
+    "comment": "Kommentar",
+    "thanks": "Tack för din bedömning!",
+    "next": "Betyg för nästa bokning",
+    "finish": "Fönstret stänger om 3 sekunder"
+  },
+  "user": {
+    "welcome": "Välkommen till din instrumentpanel {name}!",
+    "menu": {
+      "activities": "Aktiviteter",
+      "bookings": "Bokningar",
+      "suppliers": "Leverantörer",
+      "reviews": "Recensioner",
+      "settings": "Inställningar",
+      "chat": "Chatt",
+      "logout": "Logga ut",
+      "login": "Logga in"
+    }
+  },
+  "SettingsForm": {
+    "title": "Fullfölj din profil",
+    "titleUpdate": "Uppdatera din profil",
+    "submit": "Skicka",
+    "phoneNumber": "Kontrollera ditt telefonnummer igen",
+    "email": "E-post är inte giltig",
+    "iban": "IBAN är inte giltig",
+    "reseller": {
+      "title": "Återförsäljare",
+      "merchantName": "Återförsäljarnamn",
+      "merchantAddress": "Återförsäljaradress",
+      "bankAccountHolder": "Kontoinnehavare",
+      "bankAccountIban": "Kontots IBAN",
+      "bankAccountHolderAddress": "Adress för kontoinnehavare",
+      "contact": {
+        "title": "Kontakter",
+        "name": "Namn",
+        "businessRole": "Affärsroll",
+        "email": "E-post",
+        "phone": "Telefon"
+      }
+    },
+    "payment": {
+      "title": "Sparade betalningsmetoder",
+      "removeTitle": "Ta bort betalningsmetod"
+    }
+  },
+  "Repeater": {
+    "add": "Lägg till",
+    "remove": "Ta bort"
+  },
+  "Table": {
+    "booking": {
+      "refresh": "Uppdatera"
+    },
+    "clearFilters": "Återställ filter",
+    "noResults": "Inga resultat hittades.",
+    "view": {
+      "title": "Visning",
+      "adjust": "Justera kolumner"
+    },
+    "header": {
+      "bookingId": "Bokningsnummer",
+      "date": "Datum",
+      "bookingDate": "Bokningsdatum",
+      "serviceDate": "Aktivitetsdatum",
+      "description": "Beskrivning",
+      "location": "Plats",
+      "name": "Namn",
+      "email": "E-mail",
+      "type": "Typ",
+      "price": "Pris från",
+      "sold": "Såld",
+      "rating": "Betyg",
+      "supplier": "Leverantör",
+      "bookingStatus": "Bokningsstatus",
+      "paymentStatus": "Betalningsstatus",
+      "total": "Totalt",
+      "actions": "Åtgärder",
+      "duration": "Varaktighet",
+      "validity": "Giltighet",
+      "bookable": "Bokningsbar",
+      "createdAt": "Skapat den",
+      "commission": "Provision",
+      "status": "Status",
+      "reservationSystem": "Bokningssystem",
+      "bapiId": "BAPI ID",
+      "capiId": "CAPI ID",
+      "notes": "Anteckningar",
+      "distributor": "Distributör",
+      "website": "Webbplats",
+      "validities": "Giltighet"
+    },
+    "actions": {
+      "aria": "Öppna åtgärder",
+      "details": "Visa detaljer",
+      "book": "Boka nu"
+    },
+    "sort": {
+      "ascending": "Stigande",
+      "descending": "Sjunkande",
+      "hide": "Dölj",
+      "bookable": "Visa endast bokningsbara aktiviteter"
+    },
+    "pagination": {
+      "page": "Sida",
+      "of": "av",
+      "entriesPerPage": "Poster per sida",
+      "goToFirstPage": "Gå till första sidan",
+      "goToLastPage": "Gå till sista sidan",
+      "goToNextPage": "Gå till nästa sidan",
+      "goToPreviousPage": "Gå till föregående sidan"
+    },
+    "search": {
+      "activities": "Sök efter aktiviteter",
+      "bookings": "Sök efter bokningar",
+      "offers": "Sök efter erbjudanden",
+      "suppliers": "Sök efter leverantörer",
+      "bookingId": "Sök efter bokningsnummer",
+      "email": "Sök efter e-mail",
+      "familyName": "Sök efter efternamn"
+    },
+    "cell": {
+      "bookingStatusActive": "Bekräftad",
+      "bookingStatusPending": "Meddelandet",
+      "bookingStatusCancelled": "Avbokat",
+      "paymentStatusActive": "Betald",
+      "paymentStatusPending": "Utestående",
+      "paymentStatusRefunded": "Återbetald"
+    }
+  },
+  "Drawer": {
+    "close": "Stäng"
+  },
+  "PaymentMethod": {
+    "card": {
+      "new": "Nytt kort",
+      "store": "Spara mina kreditkortuppgifter för en snabb utcheckning i framtiden.",
+      "endsIn": "Slutar om {val}"
+    }
+  },
+  "Activity": {
+    "new": "Ny aktivitet",
+    "nav": {
+      "general": "Allmänt"
+    }
+  },
+  "Offer": {
+    "new": "Ny offert"
+  },
+  "Supplier": {
+    "new": "Ny leverantör"
+  },
+  "UspSlider": {
+    "title": "Varför boka hos Swiss Activities?",
+    "items": [
+      "Största utbudet i Schweiz",
+      "Över 100'000 nöjda kunder",
+      "Kostnadsfri avbokningsmöjlighet",
+      "5-stjärnigt schweiziskt kundsupport",
+      "Boka mobilbiljetter på 90 sekunder"
+    ]
+  },
+  "AppBanner": {
+    "title": "Ladda ner appen nu",
+    "description": "Upptäck Swiss Activities – enkelt och snabbt"
+  },
+  "Transport": {
+    "bookTrip": "Boka förbindelse",
+    "button": {
+      "confirmTrip": "Bekräfta förbindelse",
+      "confirmTravelers": "Bekräfta resande"
+    },
+    "checkDetails": "Kontrollera förbindelsedetaljer",
+    "class": {
+      "first": "Första klass",
+      "second": "Andra klass"
+    },
+    "direct": "Direkt",
+    "duration": {
+      "minutes": "Min."
+    },
+    "earlierTrips": "Tidigare förbindelser",
+    "errorLoadingTrips": "Anslutningar kunde inte laddas.",
+    "laterTrips": "Senare förbindelser",
+    "legend": "Legend",
+    "loadingTrips": "Förbindelser laddas...",
+    "oneWay": "Endast enkel väg",
+    "roundTrip": "Tur och retur",
+    "searchTrips": "Sök förbindelser",
+    "selectOriginDestination": "Välj avrese- och destinationsort för att söka efter förbindelser.",
+    "selectProduct": "Välj biljettalternativ",
+    "selectTravelers": "Välj resenärer",
+    "switch": "Byte",
+    "ticket": "Biljett",
+    "tickets": "Biljetter",
+    "transfer": "Byta",
+    "tripResults": "Förbindelser",
+    "upgradeTo1stClass": "Ytterligare komfort",
+    "upgradeTo1stClassDescription": "Resa i första klass",
+    "cityTicketDescription": "Dagsbiljett för lokal trafik",
+    "via": "via",
+    "travelDate": "Välj resedatum",
+    "confirmTravelDate": "Bekräfta resedatum",
+    "departure": "Avgång",
+    "arrival": "Ankomst",
+    "locationDisabled": "Platsdelning är inaktiverad",
+    "locationError": "Plats kunde inte bestämmas",
+    "noProductsAvailable": "Inga biljetter tillgängliga",
+    "disclaimer": "Alla uppgifter utan garantier.",
+    "validity": "Giltighet",
+    "validityOnSelectedRoute": "Endast på den valda sträckan",
+    "validityForConnection": "Endast för den valda förbindelsen",
+    "validityForConnectionWith2ndClass": "Endast för den valda förbindelsen och med giltigt biljet för 2. klass",
+    "validityForRouteWith2ndClass": "Endast för den valda sträckan och med giltigt biljet för 2. klass",
+    "validityGARoutes": "Giltig på alla GA-områdeslinjer",
+    "validityDayClassUpgrade": "Endast med dagskort för halvtax, GA eller Swiss Travel Pass (Flex) för andra klass.",
+    "includedIn": "Inbegriffen i",
+    "validityDateRange": "{fromDate} till {toDate}, {toTime}",
+    "validityConnection": "{date} från {fromTime}, till {toTime}",
+    "classUpgradeOnly": "Endast klassbyte",
+    "loadingDestination": "Laddar",
+    "distanceToMeetingPoint": "Mötespunkt",
+    "walking": "Till fots",
+    "arrivalInfo": "Beräknad ankomsttid: {walkingTime} gångtid + 15 min. buffert till mötespunkten",
+    "timeBeforeEvent": "{minutes} min. före aktivitet · {walkingMinutes} min. promenad från stationen",
+    "tooLateForActivity": "Följande förbindelser når inte mötesplatsen i tid"
+  }
+}

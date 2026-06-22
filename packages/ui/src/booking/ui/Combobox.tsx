@@ -1,8 +1,8 @@
-import { ComponentType, ReactNode, useEffect, useRef, useState } from "react";
+import { type ComponentType, type ReactNode, useEffect, useRef, useState } from "react";
 import { Check, ChevronDown, Loader2Icon, PlusCircle, X } from "lucide-react";
 import { I } from "../components/I";
 import { Text } from "@swiss-activities/ui";
-import { Button, ButtonProps } from "@swiss-activities/ui";
+import { Button, type ButtonProps } from "@swiss-activities/ui";
 import {
   Command,
   CommandEmpty,

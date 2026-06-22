@@ -1,6 +1,6 @@
 import { useDeposits } from "./useDeposits";
 import { Text } from "@swiss-activities/ui";
-import { TReservation } from "../../types/reservation";
+import type { TReservation } from "../../types/reservation";
 import { padRight } from "../../utils/data/padRight";
 import { useI18n } from "../../utils/i18n/useI18n";
 

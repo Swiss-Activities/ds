@@ -1,4 +1,4 @@
-const calculateDistance = (
+export const calculateDistance = (
   lat1: number,
   lon1: number,
   lat2: number,
@@ -25,5 +25,3 @@ const calculateDistance = (
   }
   return dist;
 };
-
-module.exports = { calculateDistance };

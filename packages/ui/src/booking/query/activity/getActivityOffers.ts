@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
-import { TActivity } from "../../types/activity";
-import { TOfferBooking } from "../../types/offerBooking";
+import type { TActivity } from "../../types/activity";
+import type { TOfferBooking } from "../../types/offerBooking";
 import { axiosInstance, axiosApiInstance } from "../axios";
 
 export type ActivityOffersParams = {

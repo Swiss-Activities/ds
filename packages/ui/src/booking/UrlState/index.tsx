@@ -8,7 +8,7 @@ import { useTickets } from "../Tickets/hooks";
 import { useIsReadyToBook } from "../Total/hooks";
 import { useUrlObject } from "./hooks";
 import { useBooking, usePostReservation } from "../hooks";
-import { BookingStore, useBookingStore } from "../store";
+import { type BookingStore, useBookingStore } from "../store";
 import { Loader as LoaderScreen } from "@swiss-activities/ui";
 import { useSearchStore } from "../store/search";
 import { DateService } from "../utils/dates/DateService";

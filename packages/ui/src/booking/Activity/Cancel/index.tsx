@@ -4,7 +4,7 @@ import { Form } from "../../components/Form";
 import { Radio } from "../../components/Form/Radio";
 import { Textarea } from "../../components/Form/Textarea";
 import { useI18n } from "../../utils/i18n/useI18n";
-import { dataLayerSend } from "../../utils/thirdParty/dataLayerSend";
+import { useDataLayer } from "../../utils/thirdParty/dataLayerSend";
 import { logError } from "../../utils/thirdParty/logError";
 import { cancelBookingItemApi } from "../../query/booking/cancelBookingItem";
 
@@ -20,6 +20,7 @@ type CancelProps = {
 };
 
 export const Cancel = ({ bookingObject, item }: CancelProps) => {
+  const { dataLayer } = useDataLayer();
   const { t } = useI18n();
   const [customReason, setCustomReason] = useState("");
   const [isCustom, setIsCustom] = useState(false);
@@ -39,7 +40,7 @@ export const Cancel = ({ bookingObject, item }: CancelProps) => {
         if (e.status === 500) {
           return logError(e.statusText);
         }
-        dataLayerSend(obj);
+        dataLayer(obj);
         window.location.reload();
       })
       .catch((err) => {

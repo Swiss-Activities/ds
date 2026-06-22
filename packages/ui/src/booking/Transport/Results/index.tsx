@@ -9,7 +9,7 @@ import { Text } from "@swiss-activities/ui";
 import { TransportTrip } from "../../types/transport";
 import { Button } from "@swiss-activities/ui";
 import { useI18n } from "../../utils/i18n/useI18n";
-import { dataLayerSend } from "../../utils/thirdParty/dataLayerSend";
+import { useDataLayer } from "../../utils/thirdParty/dataLayerSend";
 
 let lastViewItemListKey = "";
 
@@ -28,6 +28,7 @@ export const Results = ({
   bookingDate,
   walkingDurationSeconds,
 }: ResultsProps) => {
+  const { dataLayer } = useDataLayer();
   const { t } = useI18n();
   const { getDateKey, formatDate } = useDate();
   const {
@@ -73,7 +74,7 @@ export const Results = ({
 
     if (viewTimerRef.current) clearTimeout(viewTimerRef.current);
     viewTimerRef.current = setTimeout(() => {
-      dataLayerSend({
+      dataLayer({
         data: {
           event: "transport_view_item_list",
           search_term: `${fromValue} → ${toValue}`,

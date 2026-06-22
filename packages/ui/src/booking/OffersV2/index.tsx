@@ -4,10 +4,10 @@ import { Offer } from "./Offer";
 import { Title } from "../Title";
 import { useBookingStore } from "../store";
 import { Skeleton } from "@swiss-activities/ui";
-import { TActivity } from "../types/activity";
-import { TOfferBooking } from "../types/offerBooking";
+import type { TActivity } from "../types/activity";
+import type { TOfferBooking } from "../types/offerBooking";
 import { useI18n } from "../utils/i18n/useI18n";
-import { dataLayerSend } from "../utils/thirdParty/dataLayerSend";
+import { useDataLayer } from "../utils/thirdParty/dataLayerSend";
 import { useGetActivityOffers } from "../query/activity/getActivityOffers";
 import { useOffersCapi } from "../query/offers/getOffersCapi";
 
@@ -19,6 +19,7 @@ type ExpandedOffer = {
 };
 
 export const OffersV2 = () => {
+  const { dataLayer } = useDataLayer();
   const { t, locale } = useI18n();
   const { activity } = useBookingStore(
     useShallow((state) => ({
@@ -101,7 +102,7 @@ export const OffersV2 = () => {
         setCategoryType(firstExpandedOffer.forceCategoryType);
       }
 
-      dataLayerSend({ obj: { event: "select_offer" } });
+      dataLayer({ obj: { event: "select_offer" } });
     }
   }, [expandedOffers, offer, setOffer, setCategoryType]);
 

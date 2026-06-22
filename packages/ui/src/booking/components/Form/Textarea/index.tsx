@@ -1,4 +1,4 @@
-import { TextareaHTMLAttributes } from "react";
+import type { TextareaHTMLAttributes } from "react";
 import { Base } from "../Base";
 import { cn } from "../../../utils/css/cn";
 

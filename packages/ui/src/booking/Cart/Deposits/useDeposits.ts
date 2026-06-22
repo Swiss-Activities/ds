@@ -1,4 +1,4 @@
-import { TReservation } from "../../types/reservation";
+import type { TReservation } from "../../types/reservation";
 
 export const useDeposits = ({
   reservations,

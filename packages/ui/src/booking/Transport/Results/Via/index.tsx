@@ -1,5 +1,5 @@
 import { Text } from "@swiss-activities/ui";
-import { TransportTrip } from "../../../types/transport";
+import type { TransportTrip } from "../../../types/transport";
 
 type ViaProps = {
   trip: TransportTrip;

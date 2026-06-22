@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import { TUser } from "../../types/user";
+import type { TUser } from "../../types/user";
 import { useUser } from "../../utils/user/useUser";
 import { axiosApiInstance } from "../axios";
 

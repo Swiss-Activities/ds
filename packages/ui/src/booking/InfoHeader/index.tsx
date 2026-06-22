@@ -15,7 +15,7 @@ import { useBookingStore } from "../store";
 import { I } from "../components/I";
 import { Rating } from "../components/Rating";
 import { useSearchStore } from "../store/search";
-import { TActivity } from "../types/activity";
+import type { TActivity } from "../types/activity";
 import { Button as ButtonIcon } from "@swiss-activities/ui";
 import { cn } from "../utils/css/cn";
 import { niceDate } from "../utils/dates/niceDate";

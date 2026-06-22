@@ -1,4 +1,6 @@
-const { defaultLocale, formatLocaleForUrl } = require("../../data/i18n");
+import i18n from "../../data/i18n";
+
+const { defaultLocale, formatLocaleForUrl } = i18n;
 
 const buildPagePath = (
   locale: string,

@@ -1,14 +1,15 @@
 import dayjs from "dayjs";
 import replace from "lodash/replace";
 import posthog from "posthog-js";
+import { useCallback } from "react";
 import { v4 as uuidv4 } from "uuid";
 import { useCartStore } from "../../Cart/store";
 import { useComplementaryStore } from "../../ComplementaryActivity/store";
 import { useBookingStore } from "../../store";
 import { useFilterStore as filterStore } from "../../store/filter";
 import { useSearchStore } from "../../store/search";
-import { TActivity } from "../../types/activity";
-import { TOfferBooking } from "../../types/offerBooking";
+import type { TActivity } from "../../types/activity";
+import type { TOfferBooking } from "../../types/offerBooking";
 import { getOffers } from "../../query/offers/getOffersCapi";
 
 type TDataLayerOffer = TOfferBooking & { contentApiId?: number };
@@ -43,9 +44,46 @@ export type Activities = (TActivity & {
   };
 })[];
 
-export const dataLayerSend = ({
+export type DataLayerSendObj = {
+  ecommerce?: {
+    currency?: string;
+    item_list_id?: string;
+    item_list_name?: string;
+    items?: Items;
+    tax?: number;
+    transaction_id?: string;
+    value?: number;
+  };
+  customer_state?: "Existing Customer" | "New Customer";
+  event?: string;
+  filter_results?: number;
+  payment_type?: string;
+  search_results?: number;
+  search_term?: string;
+  user_country?: string;
+  user_email?: string;
+  algolia_query_id?: string;
+  event_id?: string;
+};
+
+export type DataLayerSendParams = {
+  activity?: TActivity;
+  activities?: Activities;
+  complementaryMap?: Record<string, number>;
+  data?: unknown;
+  filters?: boolean | { [key: string]: string | string[] };
+  index?: number;
+  listName?: string;
+  noActivities?: boolean;
+  obj?: DataLayerSendObj;
+  setItems?: boolean;
+  timeout?: number;
+  useFilterStore?: ReturnType<typeof filterStore>;
+  v2?: boolean;
+};
+
+const sendDataLayer = ({
   activity,
-  // @ts-ignore
   activities = [],
   complementaryMap,
   data,
@@ -58,41 +96,7 @@ export const dataLayerSend = ({
   timeout = 1000,
   useFilterStore,
   v2 = false,
-}: {
-  activity?: TActivity;
-  activities?: Activities;
-  complementaryMap?: Record<string, number>;
-  data?: unknown;
-  filters?: boolean | { [key: string]: string | string[] };
-  index?: number;
-  listName?: string;
-  noActivities?: boolean;
-  obj?: {
-    ecommerce?: {
-      currency?: string;
-      item_list_id?: string;
-      item_list_name?: string;
-      items?: Items;
-      tax?: number;
-      transaction_id?: string;
-      value?: number;
-    };
-    customer_state?: "Existing Customer" | "New Customer";
-    event?: string;
-    filter_results?: number;
-    payment_type?: string;
-    search_results?: number;
-    search_term?: string;
-    user_country?: string;
-    user_email?: string;
-    algolia_query_id?: string;
-    event_id?: string;
-  };
-  setItems?: boolean;
-  timeout?: number;
-  useFilterStore?: ReturnType<typeof filterStore>;
-  v2?: boolean;
-}) => {
+}: DataLayerSendParams) => {
   try {
     const trigger = async () => {
       if (activities?.length === 0 && !noActivities) {
@@ -436,4 +440,14 @@ export const dataLayerSend = ({
   } catch (error) {
     console.error("DataLayer Error: ", error);
   }
+};
+
+export { sendDataLayer };
+
+export const useDataLayer = () => {
+  const dataLayer = useCallback((params: DataLayerSendParams) => {
+    sendDataLayer(params);
+  }, []);
+
+  return { dataLayer };
 };

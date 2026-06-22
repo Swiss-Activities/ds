@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import type { ReactNode } from "react";
 import { Card } from "../Card";
 import { Button } from "@swiss-activities/ui";
 import { cn } from "../utils/css/cn";

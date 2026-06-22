@@ -1,15 +1,16 @@
 import { useState } from "react";
-import { CartStore } from "../../../Cart/store";
+import type { CartStore } from "../../../Cart/store";
 import { Button } from "@swiss-activities/ui";
 import { Drawer } from "../../../components/Drawer";
 import { Radio } from "../../../components/Form/Radio";
 import { Textarea } from "../../../components/Form/Textarea";
 import { useI18n } from "../../../utils/i18n/useI18n";
-import { dataLayerSend } from "../../../utils/thirdParty/dataLayerSend";
+import { useDataLayer } from "../../../utils/thirdParty/dataLayerSend";
 import { logError } from "../../../utils/thirdParty/logError";
 import { cancelBookingItemApi } from "../../../query/booking/cancelBookingItem";
 
 export const useCancelBookingItem = (bookingObject: any) => {
+  const { dataLayer } = useDataLayer();
   const [reason, setReason] = useState("");
   const [customReason, setCustomReason] = useState("");
   const [isCustom, setIsCustom] = useState(false);
@@ -29,7 +30,7 @@ export const useCancelBookingItem = (bookingObject: any) => {
         if (e.status === 500) {
           return logError(e.statusText);
         }
-        dataLayerSend(obj);
+        dataLayer(obj);
         setTimeout(() => {
           window.location.reload();
         }, 1000);

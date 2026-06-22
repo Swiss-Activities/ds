@@ -6,7 +6,7 @@ import { useTickets } from "../Tickets/hooks";
 import { useTransportStore } from "../Transport/store";
 import { useBookingStore } from "../store";
 import { useSearchStore } from "../store/search";
-import { TOfferBooking } from "../types/offerBooking";
+import type { TOfferBooking } from "../types/offerBooking";
 
 type TicketCategory = TOfferBooking["ticketCategories"][number];
 type Ticket = NonNullable<TOfferBooking["tickets"]>[number];

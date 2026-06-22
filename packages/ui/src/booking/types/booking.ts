@@ -1,5 +1,5 @@
 import type { BookingDistributor, Price } from "./generated";
-import { TUser as TCurrentUser } from "./user";
+import type { TUser as TCurrentUser } from "./user";
 
 export type TPrice = Price;
 export type TDistributor = Required<BookingDistributor>;

@@ -1,7 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
-import { TActivity } from "../../types/activity";
+import type { TActivity } from "../../types/activity";
 import { useDistributorId } from "../../utils/user/useDistributorId";
-import { MonthlyAvailability } from "./getMonthlyAvailabilities";
+import type { MonthlyAvailability } from "./getMonthlyAvailabilities";
 import { axiosInstance, axiosApiInstance } from "../axios";
 
 export type MonthlyDates = MonthlyAvailability;

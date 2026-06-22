@@ -1,4 +1,4 @@
-import { ChangeEvent, useEffect, useMemo, useRef } from "react";
+import { type ChangeEvent, useEffect, useMemo, useRef } from "react";
 import { useShallow } from "zustand/react/shallow";
 import { useAvailabilities } from "../Offers/Availabilities/hooks";
 import { SelectableCard } from "../SelectableCard";
@@ -6,7 +6,7 @@ import { SelectableCardGrid } from "../SelectableCardGrid";
 import { Title } from "../Title";
 import { useBookingStore } from "../store";
 import { Select } from "../components/Form/Select";
-import { TOfferBooking } from "../types/offerBooking";
+import type { TOfferBooking } from "../types/offerBooking";
 import { cn } from "../utils/css/cn";
 import { toISO } from "../utils/dates/toISO";
 import { useI18n } from "../utils/i18n/useI18n";

@@ -7,13 +7,14 @@ import {
 } from "@swiss-activities/ui";
 import { cn } from "../../../utils/css/cn";
 import { useI18n } from "../../../utils/i18n/useI18n";
-import { dataLayerSend } from "../../../utils/thirdParty/dataLayerSend";
+import { useDataLayer } from "../../../utils/thirdParty/dataLayerSend";
 
 type FromToProps = {
   displayOnly?: boolean;
 };
 
 export const FromTo = ({ displayOnly = false }: FromToProps) => {
+  const { dataLayer } = useDataLayer();
   const { t } = useI18n();
   const { direction, setDirection } = useTransportStoreLocal(
     useShallow((state) => ({
@@ -53,7 +54,7 @@ export const FromTo = ({ displayOnly = false }: FromToProps) => {
       value={direction}
       onChange={(value) => {
         setDirection(value);
-        dataLayerSend({
+        dataLayer({
           data: {
             event: "transport_select_direction",
             transport_direction: value,

@@ -1,7 +1,7 @@
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
-import { ChatType } from "../stubs";
-import { TActivity } from "../types/activity";
+import type { ChatType } from "../stubs";
+import type { TActivity } from "../types/activity";
 
 export type Message = {
   sessionId: string;

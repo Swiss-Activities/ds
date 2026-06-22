@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { create } from "zustand";
-import { TActivity } from "../types/activity";
+import type { TActivity } from "../types/activity";
 import { disableBodyLock, enableBodyLock } from "../utils/ui/bodylock";
 import { scrollToTarget } from "../utils/ui/scrollToTarget";
 

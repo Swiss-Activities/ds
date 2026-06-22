@@ -1,4 +1,4 @@
-import { CountryCode } from "libphonenumber-js";
+import type { CountryCode } from "libphonenumber-js";
 
 type TDistributorContact = {
   businessRole: string;

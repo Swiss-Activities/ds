@@ -1,10 +1,10 @@
-import { memo, ReactNode } from "react";
+import { memo, type ReactNode } from "react";
 import isArray from "lodash/isArray";
 import { DurationOrValidities } from "../DurationOrValidities";
 import { I } from "../I";
 import { StaticImage } from "../StaticImage";
 import { Text } from "@swiss-activities/ui";
-import { TActivity } from "../../types/activity";
+import type { TActivity } from "../../types/activity";
 import { cn } from "../../utils/css/cn";
 import { useI18n } from "../../utils/i18n/useI18n";
 import { formatGuideLanguages } from "./format";

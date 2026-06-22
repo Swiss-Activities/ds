@@ -1,4 +1,4 @@
-import { ReactNode, useEffect } from "react";
+import { type ReactNode, useEffect } from "react";
 import { InfoIcon, TicketIcon } from "lucide-react";
 import dynamic from "../utils/dynamic";
 import { useShallow } from "zustand/react/shallow";

@@ -1,10 +1,10 @@
-import { ReactNode } from "react";
+import type { ReactNode } from "react";
 import { useShallow } from "zustand/react/shallow";
 import { Card } from "../../Card";
 import { Participant as P } from "../../Participants";
 import { useBookingStore } from "../../store";
-import { TOfferBooking } from "../../types/offerBooking";
-import { dataLayerSend } from "../../utils/thirdParty/dataLayerSend";
+import type { TOfferBooking } from "../../types/offerBooking";
+import { useDataLayer } from "../../utils/thirdParty/dataLayerSend";
 
 export const Participant = ({
   children,
@@ -15,6 +15,7 @@ export const Participant = ({
   padding?: boolean;
   ticket: TOfferBooking["ticketCategories"][number];
 }) => {
+  const { dataLayer } = useDataLayer();
   const { availability, tickets, setTickets } = useBookingStore(
     useShallow((state) => ({
       availability: state.availability,
@@ -57,7 +58,7 @@ export const Participant = ({
       ...tickets,
       [ticket.ticketCategoryId]: currentTicketAmount - amount(false),
     });
-    dataLayerSend({
+    dataLayer({
       obj: {
         event: "select_ticket",
       },
@@ -69,7 +70,7 @@ export const Participant = ({
       ...tickets,
       [ticket.ticketCategoryId]: currentTicketAmount + amount(),
     });
-    dataLayerSend({
+    dataLayer({
       obj: {
         event: "select_ticket",
       },

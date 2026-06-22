@@ -3,7 +3,7 @@ import { GemIcon } from "lucide-react";
 import { DurationOrValidities } from "../../components/DurationOrValidities";
 import { I } from "../../components/I";
 import { Text } from "@swiss-activities/ui";
-import { TActivity } from "../../types/activity";
+import type { TActivity } from "../../types/activity";
 import { toISO } from "../../utils/dates/toISO";
 import { useI18n } from "../../utils/i18n/useI18n";
 

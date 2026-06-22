@@ -1,0 +1,1799 @@
+{
+  "general": {
+    "accountAdvantages": "Për të shijuar zbritje dhe përfitime të tjera, krijoni një llogari ose regjistrohuni.",
+    "activityBook": "Rezervo aktivitetin",
+    "addTicket": "Shto biletën",
+    "adult": "{val} të rritur",
+    "adults": "{val} të rritur",
+    "ageChoose": "Zgjidh moshën",
+    "ageFrom": "Nga {val} vjeç",
+    "ageOld": "{val} vjeç",
+    "ageUnder": "Nën {val} vjet",
+    "all": "Të gjitha",
+    "allReviews": "Të gjitha vlerësimet",
+    "backToBookings": "Kthehu te rezervimet",
+    "bookAsGuest": "Mund të përfundosh procesin e porosisë si mysafir.",
+    "cancel": "Anulo",
+    "cancelled": "Anuluar",
+    "cartAmount": "Vlera e shtëpisë",
+    "child": "{val} fëmijë",
+    "children": "{val} fëmijë",
+    "chooseSelection": "Konfirmo zgjedhjen",
+    "confirm": "Konfirmo",
+    "confirmCancel": "Konfirmo anulimin",
+    "contact": "Kontakto",
+    "copyUrl": "Kopjo URL",
+    "couple": "Çift",
+    "customerServiceFee": "Tarifa e shërbimit",
+    "data": "Të dhëna",
+    "date": "Data",
+    "dateChoose": "Zgjidh datën",
+    "delete": "Fshi",
+    "didYouMean": "A ki menduar <suggestion>{email}</suggestion>?",
+    "duplicate": "Dupliko",
+    "emailsDontMatch": "Adresat e e-mail-eve që ke futur nuk përputhen.",
+    "export": "Eksporto",
+    "faqType": "Pyetje të shpeshta rreth {type} në Zvicër",
+    "from": "Nga",
+    "group": "Grupi",
+    "helpfulQuestion": "E dobishme?",
+    "informationPlural": "Informacionet",
+    "language": "Gjuha",
+    "loginOrRegister": "Identifikohu ose Regjistrohu",
+    "manageBookings": "Menaxho rezervimet",
+    "mobileAppAddon": "Shkarko tani aplikacionin tonë mobil dhe menaxho lehtësisht rezervimet e tua, qasje shpejt në biletat e tua dhe gjej aventurën tënde të ardhshme.",
+    "mostImportantInSummary": "Elementet më të rëndësishme në përmbledhje",
+    "noResults": "Na vjen keq, nuk arritëm të gjejmë rezultate për kërkimin tënd",
+    "noReviewsYet": "Ende nuk ka vlerësime",
+    "notes": "Shënime",
+    "oneMonth": "1 muaj",
+    "openChat": "Hap bisedën",
+    "order": "Rendi",
+    "partSum": "Nëntotali",
+    "participants": "Pjesëmarrësit",
+    "participantsChoose": "Zgjidh pjesëmarrësit",
+    "past": "E kaluara",
+    "personalizeTickets": "Personalizo biletat",
+    "pleaseSelect": "Të lutem zgjidh",
+    "pleaseSelectItem": "Të lutem zgjidh {val}",
+    "questionsChatActivity": "A ke akoma pyetje rreth këtij aktiviteti? Bisedo me ne",
+    "questionsChatBooking": "A ke akoma pyetje rreth rezervimit? Bisedo me ne",
+    "raw": "Raw",
+    "rebate": "Zbritje",
+    "recaptcha": "Kjo faqe është e mbrojtur nga reCAPTCHA. Politika e\n<a href=\"https://policies.google.com/privacy\" target=\"_blank\">Privatësisë</a> dhe\n<a href=\"https://policies.google.com/terms\" target=\"_blank\">Kushtet e shërbimit</a> të Google-së janë në fuqi.",
+    "remove": "Remove",
+    "removeFromCart": "Hiq nga shporta",
+    "reset": "Rivendos",
+    "searchNow": "Kërko tani",
+    "single": "Vetëm",
+    "soldOut": "Shitur",
+    "somethingWentWrongContact": "Na vjen keq, por diçka ka shkuar gabim. Të lutem, provo përsëri ose kontakto mbështetjen.",
+    "successfullySaved": "Ruajtur me sukses",
+    "ticket": "Bileta",
+    "tickets": "Biletat",
+    "to": "Deri",
+    "currentLocation": "Vendi aktual",
+    "toDashboard": "Bashkëngjitjet e mia",
+    "translate": "Përkthe",
+    "tryAgain": "Provo përsëri",
+    "upcoming": "E ardhmja",
+    "when": "Kur",
+    "who": "Kush",
+    "wrongDate": "Dicka nuk është në rregull me datën: Të lutem kontrollo dhe zgjidh përsëri.",
+    "wrongDateParticipant": "Data e lindjes së pjesëmarrësit nuk përputhet me moshën nga ofrimi.",
+    "today": "Sot",
+    "apply": "Apliko"
+  },
+  "aria": {
+    "forward": "Përpara",
+    "backward": "Mbrapa"
+  },
+  "auth0": {
+    "accept": "Pranoj [kushtet e përdorimit]({link})",
+    "error": "Të lutem prano kushtet e përdorimit",
+    "resetPasswordHint": "Nuk ke marrë ndonjë email? Kontrollo dosjen e spam-it. Nëse je regjistruar me Apple ose Google, të lutem përdor këtë metodë conectimi."
+  },
+  "menu": {
+    "menu": "Meny",
+    "search": "Kërko",
+    "travelGuide": "Planifikuesi i udhëtimit",
+    "travelRoutes": "Rrugëtimi",
+    "contactus": "Na kontaktoni",
+    "switzerland": "Zvicra",
+    "help": "Bisedo",
+    "voucher": "Bli kupon",
+    "voucherSm": "Kupon",
+    "partners": "Partnerë",
+    "provider": "Ofrues",
+    "affiliate": "Partnerë aksesorë"
+  },
+  "chat": {
+    "chats": "Të gjitha bisedat",
+    "newChat": "Bisedë e re",
+    "noChatsYet": "Asnjë bisedë akoma",
+    "typeMessage": "Shkruaj një mesazh",
+    "welcome": "Përshëndetje dhe mirëseardhët në Swiss Activities! Unë jam Housibot dhe do të doja të të ndihmoj me pyetjet tua.",
+    "welcomeReview": "Përshëndetje! Si ishte përvoja jote? Unë jam Housibot dhe do të doja të të ndihmoj të ndash reagimin tënd."
+  },
+  "supportBanner": {
+    "title": "Të nevojitet ndihma për të gjetur shkollën e skiingut të duhur?",
+    "placeholder": "Si mund të të ndihmojmë?",
+    "send": "Dërgo"
+  },
+  "pages": {
+    "404": {
+      "title": "Faqja nuk u gjet.",
+      "description": "Kjo faqe nuk ekziston.",
+      "button": "Kthehu në faqen kryesore",
+      "search": "Filloni kërkimin"
+    },
+    "home": {
+      "title": "Swiss Activities - Gjej aktivitete për pushime në Zvicër",
+      "description": "Swiss Activities është destinacioni yt për aktivitete të lirë në Zvicër. Zbulo, krahaso dhe rezervo aktivitete të shumta.",
+      "gatewayCards": {
+        "categories": {
+          "castlesRuins": "Kështjellë / Rrënojë",
+          "castleEvents": "Ngjarje në Kështjellë",
+          "exhibitions": "Ekspozitë",
+          "fireplaces": "Vatra",
+          "movies": "Film",
+          "museums": "Muze",
+          "playgrounds": "Lojëra",
+          "swimmingBathing": "Not & Mundje"
+        },
+        "dateRange": {
+          "from": "Nga",
+          "until": "Deri"
+        },
+        "distance": {
+          "unit": "km"
+        }
+      },
+      "gatewayDetail": {
+        "back": "Kthehu",
+        "moreInfo": "Më shumë informacione",
+        "source": "Hap burimin",
+        "labels": {
+          "admission": "Biletë",
+          "address": "Adresë",
+          "ageRating": "Mosha",
+          "bookTickets": "Bli bileta",
+          "canton": "Kantoni",
+          "cast": "Aktorët",
+          "category": "Kategoria",
+          "cinema": "Kinema",
+          "countryYear": "Vendi / Viti",
+          "dateRange": "Periudha",
+          "director": "Regjisori",
+          "duration": "Koha e përgatitjes",
+          "entryFeeAdult": "Të rritur",
+          "entryFeeChild": "Fëmijët",
+          "foundedYear": "E themeluar",
+          "genres": "Gjinjtë",
+          "location": "Vendi",
+          "museumCategory": "Tipi i muzeut",
+          "openTrailer": "Hap filmin",
+          "openingHours": "Oraret e hapjes",
+          "phone": "Telefon",
+          "poolLength": "Gjatësia e pishinës",
+          "trailer": "Trailer",
+          "venue": "Vendi i ngjarjes",
+          "waterType": "Lloji i ujit"
+        },
+        "sections": {
+          "amenities": "Të mirat",
+          "badges": "Rekomandime",
+          "information": "Informacione",
+          "prices": "Çmimet",
+          "showtimes": "Shfaqjet",
+          "venue": "Vendi i ngjarjes"
+        },
+        "amenities": {
+          "capacityPersons": "Kapaciteti",
+          "hasBenches": "Bankat",
+          "hasChangingRooms": "Këmbënguljet",
+          "hasDivingBoard": "Kërcim",
+          "hasFirewood": "Dru zjarri",
+          "hasFoodService": "Shërbimi ushqimor",
+          "hasGrillGrate": "Grati",
+          "hasKidsPool": "Pishina për fëmijë",
+          "hasLifeguard": "Kujdestari",
+          "hasLockers": "Dhomat e ndërrimit",
+          "hasPlaygroundNearby": "Lojërat në afërsi",
+          "hasShowers": "Dushët",
+          "hasSlide": "Të lëvizësh",
+          "hasShelter": "Strehë",
+          "hasTable": "Tavë",
+          "hasToilet": "Tualet",
+          "hasWater": "Ujë"
+        },
+        "waterTypes": {
+          "indoorPool": "Pishina e brendshme",
+          "lake": "Liqeni",
+          "outdoorPool": "Pishina e jashtme",
+          "pool": "Pishina",
+          "river": "Lumi"
+        }
+      }
+    },
+    "s": {
+      "title": "Swiss Activities - Gjej dhe rezervo aktivitetin tënd",
+      "description": "Swiss Activities është destinacioni yt për aktivitete të lirë në Zvicër. Zbulo, krahaso dhe rezervo aktivitete të shumta.",
+      "sort": {
+        "distance": {
+          "notSupported": "Shërbimet e vendndodhjes nuk mbështeten nga shfletuesi yt. Klasifikimi sipas rëndësisë do të përdoret.",
+          "permissionDenied": "Për të klasifikuar sipas distancës, të lutem lej qasjen në vendndodhjen tënde në cilësimet e shfletuesit dhe rifresko faqen.",
+          "positionUnavailable": "Informacionet mbi vendndodhjen nuk janë të disponueshme.",
+          "timeout": "Kohëzgjatja e vendndodhjes është tejkaluar.",
+          "unknownError": "Ka ndodhur një gabim i panjohur.",
+          "fallbackMessage": "Klasifikimi sipas rëndësisë do të përdoret.",
+          "errorPrefix": "Vendndodhja nuk ka mundur të përcaktohet."
+        }
+      }
+    },
+    "chat": {
+      "title": "Biseda Swiss Activities",
+      "description": "Swiss Activities është destinacioni yt për aktivitete të lira në Zvicër. Zbulo, krahaso dhe rezervoni një mori aktivitetesh të lira."
+    },
+    "transport": {
+      "title": "Biletat e trenit të Zvicrës, kalimet dhe biletat për ditë | Swiss Travel Pass, SBB Spartageskarte",
+      "description": "Krahasoni dhe blini bileta treni, Swiss Travel Pass, Halbtax, SBB Spartageskarten & kalimet rajonale për tërë Zvicrën. Menjëherë si bileta mobile në telefonin tuaj.",
+      "trust": {
+        "partners": "Partneri zyrtar i",
+        "ratingValue": "4.8",
+        "ratingLabel": "400'000+ udhëtarë të kënaqur",
+        "ratingShortLabel": "400'000+ udhëtarë"
+      },
+      "discountMap": {
+        "title": "Këtu kurseni me kalimin tuaj",
+        "subtitle": "Teleferikët, anijet dhe ekskursionet kryesore - zgjidhni një kalim dhe shihni se ku gjendet çfarë.",
+        "free": "Inkluziv",
+        "discount50": "−50 %",
+        "discount25": "−25 %",
+        "noDiscount": "Asnjë zbritje",
+        "altitude": "{m} m mbi nivelin e detit.",
+        "moreInfo": "Mëso më shumë",
+        "selectPass": "Zgjidh kalimin",
+        "selectCategory": "Zgjidh kategori",
+        "categories": {
+          "mountain": "Teleferikët",
+          "lake": "Liqenet dhe anijet",
+          "museum": "Muzeumet"
+        },
+        "airports": {
+          "zrh": "Zyrih",
+          "gva": "Gjenevë"
+        },
+        "regions": {
+          "bernerOberland": "Berner Oberland",
+          "jungfrau": "Jungfrau",
+          "interlaken": "Interlaken",
+          "zentralschweiz": "Qendra e Zvicrës",
+          "ostschweiz": "Zvicra Lindore",
+          "waadt": "Vaud",
+          "engadin": "Engadin",
+          "wallis": "Valais",
+          "tessin": "Tessinë",
+          "genferseeregion": "Rajoni i liqenit të Gjenevës",
+          "zuerich": "Zyrih",
+          "mittelland": "Mesdheun",
+          "luzern": "Luzern",
+          "basel": "Basel",
+          "bern": "Bern",
+          "lausanne": "Lausanne",
+          "geneve": "Gjenevë",
+          "zermatt": "Zermatt",
+          "fribourg": "Fribourg",
+          "graubuenden": "Graubünden"
+        }
+      },
+      "hero": {
+        "title": "Biletat e trenit për tërë",
+        "titleAccent": "Zvicra",
+        "lede": "Biletat, biletat e ditës dhe ofertat e kursimit të SBB - menjëherë si bileta mobile në telefonin tuaj.",
+        "subtitle": "Biletat, biletat e ditës dhe ofertat e kursimit të SBB - menjëherë si bileta mobile në telefonin tuaj.",
+        "searchTitle": "Kërko lidhjen",
+        "searchMeta": "Stacioni · Data · Pasagjerë",
+        "fromPlaceholder": "Stacioni i nisjes/Fillimi",
+        "toPlaceholder": "Stacioni i destinacionit/Objekti",
+        "badges": {
+          "rating": "4.8 / 5 · 400'000+ Vlerësime",
+          "partner": "Partneri zyrtar SBB"
+        },
+        "usps": {
+          "customers": {
+            "title": "400'000 klientë të lumtur",
+            "subline": "Beso në Swiss Activities që nga 2021"
+          },
+          "saver": {
+            "title": "Kurseni deri në 50%",
+            "subline": "Me biletat e kursimit dhe biletat e ditës të SBB"
+          },
+          "mobile": {
+            "title": "Menjëherë si bileta mobile",
+            "subline": "Direkt në telefon, pa nevojë për SBB-login"
+          },
+          "earlyBird": {
+            "title": "Zbritjet për ata që rezervojnë paraprakisht",
+            "subline": "Planifikoni paraprakisht dhe blini bileta kursimi dhe biletat e ditës të SBB"
+          }
+        }
+      },
+      "benefits": {
+        "title": "Avantazhet e tua",
+        "discount": {
+          "eyebrow": "Bileta me zbritje",
+          "title": "Kurset deri në 40%",
+          "subline": "Ofertat e SBB-së dhe biletat për një ditë",
+          "badge": "Më të kërkuarat"
+        }
+      },
+      "passes": {
+        "title": "Kalimet SBB dhe rajonale",
+        "subtitle": "Krahasoni kalimet për ditë, biletat për ditë dhe kalimet rajonale - zgjidh kalimin që të sjell më shumë.",
+        "tabs": {
+          "multiDay": "Kalimet për Ditë",
+          "dayPass": "Biletat për ditë",
+          "regional": "Kalimet Rajonale"
+        },
+        "buy": "Bli tani",
+        "from": "nga",
+        "moreInfo": "Më shumë informacione",
+        "seeDiscounts": "Shiko të gjitha zbritjet",
+        "viewAllByTab": {
+          "multiDay": "Shiko të gjithë kalimet",
+          "dayPass": "Shiko të gjitha biletat SBB për ditë",
+          "regional": "Shiko të gjitha kalimet rajonale"
+        },
+        "empty": "Aktualisht nuk ka produkte të disponueshme - shiko në kategoritë e tjera.",
+        "descriptions": {
+          "fallback-stp": "Këtu për të udhëtuar me tren, autobus dhe anije - hyrjet në muze janë falas.",
+          "fallback-stpf": "Përdor transportin publik në ditë të zgjedhura - duke përfshirë hyrje falas në muze.",
+          "fallback-shfc": "Një muaj gjysmë çmimi në tren, autobus, anije dhe teleferikë.",
+          "fallback-halbtax": "Këtu udhëton gjatë gjithë ditës në të gjithë Zvicrën - me Halbtax-in tuaj.",
+          "fallback-spar": "Bileta për ditë në çmimin më të mirë kur rezervoni herët - numri i kufizuar për çdo ditë.",
+          "fallback-ga": "Mobilitet qëndror për një ditë - si GA, vetëm për 24 orë.",
+          "fallback-tell": "Shfrytzo lirinë për të udhëtuar në Qendrën e Zvicrës: plani i komunikimit, shërbimin e transportit dhe udhëtimin në transportin e rëndë.",
+          "fallback-bo": "Eksploro rajonin Jungfrau dhe Interlaken - trenat, anijet dhe teleferikët me një kalim.",
+          "fallback-jtp": "Rajoni më i lartë në Evropë: teleferikët, shërbimet e transportit dhe atraksionet përreth Grindelwald, Wengen, Mürren."
+        },
+        "usps": {
+          "1330": [
+            "Harder Kulm & Brienzer Rothorn përfshirë",
+            "Deri në −50 % në teleferikët e Grindelwald-Wengen",
+            "Lëvizjet dhe teleferikët në rajonin e Jungfrau"
+          ],
+          "1438": [
+            "First, Schynige Platte & Niesen përfshirë",
+            "−25 % në Jungfraujoch Top of Europe",
+            "Treni, anija dhe teleferikët me një kalim"
+          ],
+          "1440": [
+            "1 muaj gjysmë çmimi në të gjithë Zvicrën",
+            "Përdorur në tren, autobus, anije dhe teleferikë",
+            "Përfshin gjithashtu biletat e kursimit të SBB"
+          ],
+          "1447": [
+            "Treni, autobusi dhe anija falas në të gjithë Zvicrën",
+            "Deri në −50 % në teleferikë (Jungfraujoch −25 %)",
+            "Më shumë se 500 muze falas"
+          ],
+          "1448": [
+            "Aktivizoni në ditë të zgjedhura në të gjithë Zvicrën",
+            "Derisa −50 % në teleferikë, autobus, anije",
+            "Më shumë se 500 muze falas"
+          ],
+          "1450": [
+            "Pilatus, Rigi & Stanserhorn përfshirë",
+            "Anijet e Vierwaldstättersee falas",
+            "Treni, autobusi dhe teleferikët në Qendrën e Zvicrës"
+          ],
+          "1664": [
+            "Bileta për ditë nga CHF 29",
+            "Derisa −70 % për rezervime herët",
+            "Numri i kufizuar për çdo ditë"
+          ],
+          "1671": [
+            "Fëmijët 6–16 në çmimin familjar",
+            "Të gjitha lidhjet SBB në të gjithë Zvicrën",
+            "Përkryer për ekskursione familjare"
+          ],
+          "1676": [
+            "1 ditë e lirë për të udhëtuar me Halbtax",
+            "Zvicra është e njohur për lidhjet me SBB",
+            "Më shpesh se biletat e hollësishme"
+          ]
+        },
+        "soldCount": "{count} rezervuar",
+        "reviews": "({count})",
+        "discounts": {
+          "1330": "Harder Kulm përfshirë.",
+          "1438": "First & Niesen përfshirë.",
+          "1440": "Gjysmë çmimi",
+          "1447": "Teleferikët −50 %",
+          "1448": "Teleferikët −50 %",
+          "1450": "Pilatus & Rigi përfshirë.",
+          "1664": "Derisa −70 %",
+          "1671": "Çmimi familjar"
+        },
+        "benefits": {
+          "includedHeading": "Inkluziv",
+          "discountedHeading": "Zbritjet",
+          "expand": "Shiko të gjitha zbritjet",
+          "collapse": "Të shfaqim më pak",
+          "items": {
+            "1330": {
+              "included": [
+                "Harder Kulm & Brienzer Rothorn",
+                "ÖV Rajoni Jungfrau (Tren, Autobus, Anije)"
+              ],
+              "discounted": [
+                "Zone skijimi Grindelwald-Wengen deri në −50 %",
+                "Zone skijimi Mürren-Schilthorn deri në −50 %",
+                "Jungfraujoch Top of Europe −25 %"
+              ]
+            },
+            "1438": {
+              "included": [
+                "First, Schynige Platte & Niesen",
+                "Brienzer Rothorn & Stockhorn",
+                "Trena, Anije & Teleferik në rajonin e Jungfrau"
+              ],
+              "discounted": [
+                "Jungfraujoch Top of Europe −25 %",
+                "Schilthorn (James Bond) −50 %"
+              ]
+            },
+            "1440": {
+              "included": [],
+              "discounted": [
+                "50 % në biletat e trenit, autobusit dhe anijes",
+                "50 % në teleferikë",
+                "E përshtatshme me biletat e kursimit të SBB"
+              ]
+            },
+            "1447": {
+              "included": [
+                "Treni, autobusi dhe anija në të gjithë Zvicrën",
+                "Më shumë se 500 muze",
+                "Transport publik në 90 qytete të Zvicrës"
+              ],
+              "discounted": [
+                "Teleferikët deri në −50 %",
+                "Jungfraujoch Top of Europe −25 %",
+                "Ofertat RailAway të SBB −30 %"
+              ]
+            },
+            "1448": {
+              "included": [
+                "Treni, autobusi dhe anija në ditë të zgjedhura",
+                "Më shumë se 500 muze",
+                "Transport publik në 90 qytete të Zvicrës"
+              ],
+              "discounted": [
+                "Teleferikët deri në −50 %",
+                "Jungfraujoch Top of Europe −25 %",
+                "Ofertat RailAway të SBB −30 %"
+              ]
+            },
+            "1450": {
+              "included": [
+                "Pilatus, Rigi & Stanserhorn",
+                "Anije në Liqenin Vierwaldstättersee",
+                "Trena, Autobus & Teleferik në Zvicrën Qendrore"
+              ],
+              "discounted": []
+            },
+            "1664": {
+              "included": [
+                "1 ditë e lirë për të udhëtuar në të gjithë Zvicrën"
+              ],
+              "discounted": [
+                "Biletë nga CHF 29",
+                "Derisa −70 % për rezervime herët"
+              ]
+            },
+            "1671": {
+              "included": [
+                "Lidhje SBB në gjithë Zvicrën për 1 ditë"
+              ],
+              "discounted": [
+                "Çmimi për familje për fëmijët 6–16",
+                "−50 % mbi biletat e zakonshme të ditës"
+              ]
+            },
+            "1676": {
+              "included": [
+                "1 ditë e lirë për të udhëtuar me Halbtax"
+              ],
+              "discounted": [
+                "Më e lirë se disa bileta individuale"
+              ]
+            }
+          }
+        }
+      },
+      "articles": {
+        "title": "Artikuj emocionues rreth botës së trenave",
+        "subtitle": "Këshilla, krahasime dhe njohuri praktike për biletat SBB, pasat e udhëtimit dhe transportin publik në Zvicër.",
+        "read": "Lexo artikullin",
+        "tag": "Revista"
+      },
+      "dayPasses": {
+        "title": "Biletat e njohura të ditës",
+        "subtitle": "Kthimi i lirë gjatë gjithë ditës – i lehtë për t'u kombinuar me biletën tënde.",
+        "halbtax": {
+          "title": "Bileta e ditës me çmim të ulët",
+          "description": "Kthimi i lirë gjatë gjithë ditës në të gjithë Zvicrën – me gjysmë çmimi. Ideal për ekskursione dhe rajone malore.",
+          "fromPrice": "nga CHF 52.–",
+          "cta": "Kërko lidhje"
+        },
+        "spar": {
+          "title": "Bileta për të kursyer",
+          "description": "Bileta e ditës me çmimin më të mirë për rezervime të hershme. Sasi e kufizuar për ditë – kush rezervon herët, udhëton më lirë.",
+          "fromPrice": "nga CHF 29.–",
+          "cta": "Kërko lidhje"
+        }
+      },
+      "groups": {
+        "mountains": "Eksperienca malore të arritshme me tren",
+        "dayTrips": "Ekskursione të njohura nga Zyrihu, Berni dhe Bazeli",
+        "cities": "Shoqe të qytetit: Tren + Eksperiencë",
+        "cityPasses": "City Pass: Një kartë për të gjithë qytetin"
+      },
+      "faq": {
+        "title": "Pyetje të shpeshta rreth biletave SBB",
+        "items": [
+          {
+            "q": "A mund ta anuloj biletën time?",
+            "a": "<p><strong>Biletat e linjave</strong> mund të anulohen falas deri ditën përpara udhëtimit – kjo bëhet direkt në qendrën e rezervimeve të tua në swissactivities.com.</p><p>Për <strong><a href=\"/sbb-tageskarten/spartageskarte-sbb/\">Biletat e kurseve</a></strong> dhe biletat e kurseve, anulimi nuk është i mundur. Ato janë të lidhura me datën e zgjedhur – një njoftim i qartë para blerjes shfaqet në faqen e rezervimit.</p>"
+          },
+          {
+            "q": "A janë biletat SBB të njëjta si në sportel SBB?",
+            "a": "Po, ti merr të njëjtat bileta zyrtare SBB si në sportel apo në aplikacionin SBB – pa tarifë shtesë. Edhe <a href=\"/sbb-tageskarten/\">Biletat e ditës SBB</a> dhe <a href=\"/bahnpaesse/\">Pasat e trenit</a> janë 1:1 produktet origjinale të SBB."
+          },
+          {
+            "q": "Sa shpejt marr biletën time?",
+            "a": "Menjëherë. Pas një rezervimi të suksesshëm, ti merr biletën mobile përmes email-it dhe në qendrën e rezervimeve në swissactivities.com. Nuk është e nevojshme një log-in në SBB – thjesht e trego në tren."
+          },
+          {
+            "q": "A mund të përdor Halbtax ose GA?",
+            "a": "Po, në hapin e rezervimit mund të zgjedhësh abonimin tënd të uljes – çmimi përshtatet automatikisht. Nëse ke vetëm një Halbtax dhe je jashtë për një ditë të tërë, shpesh ia vlen një <a href=\"/sbb-tageskarten/sbb-tageskarte-halbtax/\">Biletë e ditës SBB me Halbtax</a> në vend të disa biletave individuale."
+          },
+          {
+            "q": "Çfarë ndodh nëse treni im ka vonesë?",
+            "a": "Bileta jote e linjës vlen gjithashtu për lidhjen e ardhshme – thjesht hip në trenin e duhur që ndjek. Nëse vonesa është më shumë se një orë, mund të aplikosh për një rimbursim përmes SBB."
+          },
+          {
+            "q": "A ia vlen Swiss Travel Pass ose një biletë kursimi?",
+            "a": "<p>Rregulli i artë: Ata që udhëtojnë me tren, autobus dhe anije për të paktën tri ditë rresht dhe pëlqejnë të vizitojnë muze, udhëtojnë më lirë me <a href=\"/bahnpaesse/swiss-travel-pass-kaufen/\">Swiss Travel Pass</a>. Përfshihen më shumë se 500 muze, transport publik në 90 qytete dhe teleferikë me −50 % zbritje.</p><p>Për ekskursione të veçanta të ditës, <a href=\"/sbb-tageskarten/spartageskarte-sbb/\">Bileta e kursimit SBB</a> nga CHF 29 është zakonisht opsioni më i lirë – thjesht rezervo sa më herët të jetë e mundur.</p>"
+          },
+          {
+            "q": "Cila pasë rajonale i përshtatet udhëtimit tim?",
+            "a": "<p>Për rajonin e Interlaken / Grindelwald / Wengen, ia vlen të marrësh <a href=\"/bahnpaesse/berner-oberland-pass/\">Pasin Berner Oberland</a> ose në dimër <a href=\"/bahnpaesse/jungfrau-travel-pass-winter/\">Pasin e Udhëtimit Jungfrau</a> – të dy përfshijnë teleferikë, transport publik dhe anije në rajon.</p><p>Për rreth Liqenit Vierwaldstättersee, <a href=\"/bahnpaesse/sbb-tellpass/\">Pasi Tell</a> është ideal: Pilatus, Rigi, Stanserhorn dhe të gjitha anijet përfshihen.</p>"
+          }
+        ]
+      }
+    },
+    "about_us": {
+      "title": "Rreth nesh - Swiss Activities",
+      "description": "Swiss Activities është destinacioni yt për aktivitete të lirë në Zvicër. Zbulo, krahaso dhe rezervo aktivitete të shumta.",
+      "hero": {
+        "title": "Aktivitetet e kohës së lirë në Zvicër",
+        "text": "Swiss Activities është destinacioni yt për aktivitete të lirë në Zvicër. Në Swiss Activities, mund të gjesh shumë aktivitete për pushim, mund t'i krahasosh ato dhe mund të rezervosh me disa klikime. Kurrë nuk ka qenë më e lehtë të gjesh aktivitete për pushime në Zvicër."
+      },
+      "who": {
+        "title": "Kush jemi ne",
+        "text": "Ne jemi një ekip motivuar që digjet për aktivitete të lirë në Zvicër. E njohim vendin dhe njerëzit. Të provojmë aktivitete të reja është pasioni ynë. Prandaj e zhvilluam Swiss Activities."
+      },
+      "start": {
+        "title": "Fillimi ynë",
+        "text": "Kur ne vërejtëm në 2020 se nuk mund të udhëtonim më, kërkuam një platformë për aktivitete të lirë në Zvicër që i drejtohej zviceranëve, por nuk gjetëm asnjë. Kjo ishte pika e fillimit për destinacionin e aktiviteteve të lirë Swiss Activities.",
+        "milestones": {
+          "march_2020": {
+            "date": "Mars 2020",
+            "title": "Ndërthurja e Swiss Activities si model biznesi"
+          },
+          "march_2021": {
+            "date": "Mars 2021",
+            "title": "Formimi i shoqërisë"
+          },
+          "june_2021": {
+            "date": "Qershor 2021",
+            "title": "Lansimi i platformës sonë"
+          },
+          "september_2021": {
+            "date": "Shtator 2021",
+            "title": "500 aktivitete të rezervueshme në kohë reale aktivizuar"
+          },
+          "december_2021": {
+            "date": "Dhjetor 2021",
+            "title": "Raundi i financimit të para-fundit përfunduar"
+          },
+          "march_2022": {
+            "date": "Mars 2021",
+            "title": "Lansimi i programit aksesor"
+          },
+          "may_2022": {
+            "date": "Maj 2021",
+            "title": "Lansimi i programit të partnerëve B2B"
+          }
+        }
+      },
+      "partner": {
+        "title": "Ne të ndihmojmë të fitosh klientë të rinj",
+        "text": "Swiss Activities të ndihmon të gjesh klientë të rinj. Ne punojmë çdo ditë për ta bërë Swiss Activities destinacionin më të madh për aktivitete të lirë në Zvicër. Qindra njerëz vizitojnë çdo ditë www.swissactivities.com për të kërkuar aktivitete të lirë në Zvicër. Duke ekspozuar ofertën tënde në Swiss Activities, arrin klientë të rinj."
+      },
+      "kunden": {
+        "title": "Një destinacion me të gjitha aktivitetet e lirë në Zvicër",
+        "text": "Qëllimi ynë është të bëjmë që të gjitha aktivitetet e lirë të jenë të dukshme në www.swissactivities.com. Në këtë mënyrë, gjejmë, krahasojmë dhe rezervojmë aktivitete për të gjithë më të lehta."
+      },
+      "promise": {
+        "title": "Premtimi ynë",
+        "list": [
+          "pa telefonata të lodhshme",
+          "pa kërkime të pafund në shumë faqe interneti",
+          "disponueshmëri të verifikueshme menjëherë",
+          "rezervime të menjëhershme pa kthim",
+          "pa shpenzime shtesë",
+          "mundësi pagese të thjeshta dhe të shpejta",
+          "pa radhë lodhshme",
+          "përmbledhje e zbritjeve atraktive",
+          "oferta lokale"
+        ]
+      },
+      "team": {
+        "title": "Ekipi i Swiss Activities"
+      }
+    },
+    "tos_b2b": {
+      "title": "Kushtet e përgjithshme të shërbimit për ofruesit",
+      "description": "Këtu janë kushtet e tanishme të shërbimit për ofruesit tanë."
+    },
+    "tos_b2c": {
+      "title": "Kushtet e përdorimit të platformës Swiss Activities për klientët",
+      "description": "Këtu janë kushtet e tanishme të përdorimit të platformës Swiss Activities për klientët."
+    },
+    "tos_aff": {
+      "title": "Kushtet e përgjithshme për partnerët aksesorë",
+      "description": "Këto janë kushtet tona të shërbimit për partnerët aksesorë."
+    },
+    "imprint": {
+      "title": "Imprimatur",
+      "description": "Këtu mund të gjesh imprimaturën tonë."
+    },
+    "privacy_policy": {
+      "title": "Politika e privatësisë",
+      "description": "Këtu mund të gjesh politikën tonë të privatësisë."
+    },
+    "contact_us": {
+      "title": "Na kontaktoni",
+      "description": "Nëse ke ndonjë pyetje, do të jemi të lumtur të ndihmojmë."
+    },
+    "basket": {
+      "title": "Shporta",
+      "delete": "Fshij",
+      "warning": "A do të fshish këtë rezervim nga karroca jote?",
+      "edit": "Modifiko",
+      "cancel": "Anulo",
+      "update": "Përditëso shportën",
+      "next": "Shko në pagesë",
+      "empty": "Shporta jote është e zbrazët",
+      "hold": "Ne do ta mbajmë këtë rezervim për",
+      "explore": "Zbulo aktivitete të lirë"
+    },
+    "booking": {
+      "title": "Rezervim"
+    },
+    "confirmation": {
+      "title": "Konfirmimi i rezervimit",
+      "tickets": "Biletat tuaja",
+      "download": "Bileta mobile",
+      "more": "Më shumë informacion",
+      "cancel": "Anulo biletën",
+      "cancelled": "Anuluar",
+      "cancelWhy": "Pse dëshiron të anulosh?",
+      "cancelReasons": [
+        "Pushimi im është anuluar",
+        "Kam gjetur një alternativë më të lirë",
+        "Nuk kam marrë konfirmimin tim në kohë",
+        "Ofertuesi më kërkoi të anuloja rezervimin",
+        "Opsionet e mia të preferuara nuk ishin të disponueshme",
+        "Kam rezervuar datën e gabuar",
+        "Kam rezervuar numrin e gabuar të pjesëmarrësve",
+        "Arsyet e tjera"
+      ],
+      "rebook": {
+        "title": "Rerezervo",
+        "text": "Ndryshim planesh? Rerezervo aktivitetin tënd. Rezervimi yt i vjetër do të anulohet automatikisht.",
+        "button": "Rerezervo tani"
+      },
+      "stay": "Të lutem qëndro në këtë faqe, porosia jote po përpunohet.",
+      "editBooking": "Ndrysho rezervimin",
+      "showTickets": "Shiko biletat",
+      "drawerTitle": "Rezervimi yt",
+      "relatedBookings": "Rezervimet e lidhura"
+    },
+    "activities": {
+      "title": "Aktivitetet më të mira në Zvicër {year}",
+      "description": "Gjej dhe rezervo aktivitetin e përshtatshëm {year} në Zvicër. Si një vend i larmishëm, Zvicra ofron një sërë aktivitetesh dhe ide për një ekskursion ditor.",
+      "intro": "Gjatë gjithë vitit do të gjesh aktivitete për çdo rast. Nëse po planifikon një ekskursion me familjen tënde, po organizon një festë beqarie, po kërkon një aktivitet në natyrë ose frymëzim për planin tënd për kohë të keqe, do të gjesh diçka. Në Swiss Activities mund të planifikosh ekskursionin tënd të ditës dhe ta rezervosh.",
+      "titleParentLocation": "{locationTitle} {year}: aktivitetet dhe ofertat më të mira",
+      "descriptionParentLocation": "Gjej dhe rezervo aktivitetet më të mira në {locationTitle}: Rezervo bileta për destinacione ekskursionesh ose aktivitete familjare me disa klikime.",
+      "titleChildLocation": "{locationTitle} {year}: aktivitetet më të mira",
+      "descriptionChildLocation": "Rezervo aktivitetet më të mira në {locationTitle}. Rezervo bileta për destinacione ekskursionesh ose aktivitete familjare me disa klikime.",
+      "titleParentType": "{typeTitle} {year}: Aktivitetet më të mira {typeTitle} në Zvicër",
+      "descriptionParentType": "Rezervo aktivitetet më të mira {typeTitle} nga e gjithë Zvicra. Pa radhë, pa tarifë rezervimi dhe mundësi anulimi pa pagesë.",
+      "titleChildType": "{typeTitle} {year}: Oferta më të mira {typeTitle} në Zvicër",
+      "descriptionChildType": "Rezervo ofertat më të mira për {typeTitle} nga e gjithë Zvicra. Pa radhë, pa tarifë rezervimi dhe mundësi anulimi pa pagesë.",
+      "titleParentLocationParentType": "{typeTitle} {locationTitle}: Oferta dhe çmimet më të mira {year}",
+      "descriptionParentLocationParentType": "Rezervo ofertat më të mira për {typeTitle} {locationTitle} {year}. Nuk ka tarifë rezervimi dhe opsione anullimi pa pagesë.",
+      "titleParentLocationChildType": "{typeTitle} {locationTitle}: Oferta dhe çmimet më të mira {year}",
+      "descriptionParentLocationChildType": "Rezervo ofertat më të mira për {typeTitle} {locationTitle} {year}. Nuk ka tarifë rezervimi dhe opsione anullimi pa pagesë.",
+      "titleChildLocationParentType": "{typeTitle} {locationTitle}: Oferta dhe çmimet më të mira {year}",
+      "descriptionChildLocationParentType": "Rezervo ofertat më të mira për {typeTitle} {locationTitle} {year}. Nuk ka tarifë rezervimi dhe opsione anullimi pa pagesë.",
+      "titleChildLocationChildType": "{typeTitle} {locationTitle}: Oferta dhe çmimet më të mira {year}",
+      "descriptionChildLocationChildType": "Rezervo ofertat më të mira për {typeTitle} {locationTitle} {year}. Nuk ka tarifë rezervimi dhe opsione anullimi pa pagesë."
+    },
+    "listing": {
+      "title": "{listingTitle}",
+      "offersTitle": "{title} Biletat dhe aktivitete",
+      "activities": "Aktivitetet",
+      "relatedListings": "{value} atraksione më të mira",
+      "relatedListingsClose": "{value} atraksione më të mira",
+      "description": "Përshkrimi për {listingTitle}",
+      "tableOfContent": "Tabela e përmbajtjes",
+      "destinationTitle": "{location} - {num} atraksione dhe aktivitete më të mira {year}",
+      "more": "Mëso më shumë rreth {val}",
+      "locations": "Vendet pranë {val}",
+      "regions": "Rajonet në {val}",
+      "type": "Vendet më të njohura në Zvicër për {val}",
+      "typeLocation": "Vendet më të njohura në {location} për {type}",
+      "types": "Aktivitetet më të mira në {val}",
+      "combo": "{type} {location} - {num} Oferta dhe çmime kryesore {year}",
+      "map": "Harta",
+      "attributeBadWeatherTitleAttribute": "Ide të {val} më të mira për mot të keq në Zvicër",
+      "attributeBadWeatherTitle": "Ide të {val} më të mira për mot të keq në {location}",
+      "attributeBadWeatherTeaser": "Pavarësisht nëse bie shi, ka mjegull apo borë: në [{location}]({locationLink}) ka shumë aktivitete që mund të bësh pavarësisht nga moti i keq. Prandaj, shiu nuk duhet domosdoshmërisht të prishë planet tuaja. Do të gjesh aktivitete si brenda, ashtu edhe [në natyrë]({outdoorLink}), që janë të përshtatshme për çdo lloj moti. Ti vendos se a do të jesh aktiv apo do të preferosh ta kalosh një kohë më të qetë. Gjej më shumë frymëzim për shumë [ide për mot të keq]({badWeatherLink}) në gjithë Zvicrën.",
+      "attributeBadWeatherDesc": "Gjej idenë tënde për mot të keq në {location} dhe zgjidh një aktivitet që mund të zhvillohet në çdo mot.",
+      "attributeFamilyTitleAttribute": "Ide të {val} më të mira për ekskursionin tënd familjar në Zvicër",
+      "attributeFamilyTitle": "Ide të {val} më të mira për ekskursionin tënd familjar në {location}",
+      "attributeFamilyTeaser": "Planifiko ekskursioni tënd të ardhshëm familjar në [{location}]({locationLink}) për ty dhe fëmijët e tu. Nuk ka rëndësi nëse jeni aventurier, të qetë ose në kërkim të zbulimeve të reja, gjithçka është në rregull. Ka shumë për të bërë gjatë gjithë vitit, madje edhe në [mot të keq në {location}]({locationBadWeatherLink}). Edhe për ekskursione me karrocë ka mundësi që janë të përshtatshme për fëmijët e vegjël. Në këtë mënyrë, nuk ke asnjë pengesë për [eksursionin familjar]({familyLink}).",
+      "attributeFamilyDesc": "Gjej idenë e duhur për ekskursionin tënd të ardhshëm familjar në {location} dhe kaloni një ditë emocionuese me fëmijët tuaj.",
+      "attributeDogTitleAttribute": "Ide të {val} më të mira për ekskursionet me qen në Zvicër",
+      "attributeDogTitle": "Ide të {val} më të mira për ekskursionet me qen në {location}",
+      "attributeDogTeaser": "Po kërkon një ide ekskursioni me qenushin tënd në [{location}]({locationLink})? Nëse dëshiron ta marrësh shoqëruesin tënd besnik, këtu do të gjesh të gjitha aktivitetet ku ai mund të vijë. Aktivitetet [në natyrë]({outdoorLink}) janë shpesh veçanërisht të përshtatshme, pasi e lejojnë qenushin të shijojë ajrin e freskëta. Por, gjithashtu janë të mundshme ekskursione me anije ose me harta malore. Këshilla jonë sekrete janë [Lojërat e Shkumbit]({escapeLink}), pasi ato zhvillohen jashtë dhe të ofrojnë një ndryshim të bukur nga shëtitjet e zakonshme të qenit.",
+      "attributeDogDesc": "Planifiko një ekskursion me qenin tënd në {location} dhe provo diçka të re si ndryshim nga shëtitjet e zakonshme.",
+      "attributeOutdoorTitleAttribute": "Ide të {val} më të mira për aktivitete në natyrë në Zvicër",
+      "attributeOutdoorTitle": "Ide të {val} më të mira për aktivitete në natyrë në {location}",
+      "attributeOutdoorTeaser": "Në [{location}]({locationLink}) ka gjatë gjithë vitit shumë [aktivitete në natyrë]({outdoorLink}) për të bërë. Disa të rrisin adrenalinën, ndërsa të tjera të presin me një pamje të mahnitshme ose sfidojnë shkathtësinë tënde. Ka gjithashtu aktivitete në natyrë që përshtaten si [ide për mot të keq]({badWeatherLink}) ose për një [ekskursion familjar]({familyLink}). Në disa raste mund të marrësh me vete edhe [qenin]({dogLink}) tënd. Disa aktivitete në natyrë mund t'i bësh lehtësisht vetëm, ndërsa te të tjerat, për arsye sigurie, duhet të bashkohesh me një tur të udhëhequr nga profesionistë.",
+      "attributeOutdoorDesc": "Planifiko aktivitetin tënd të ardhshëm në natyrë në {location} dhe kaloni një ditë të shkëlqyer jashtë në ajrin e pastër gjatë gjithë vitit.",
+      "attributeBachelorPartyTitleAttribute": "Ide të {val} më të mira për festa beqarie në Zvicër",
+      "attributeBachelorPartyTitle": "Ide të {val} më të mira për festa beqarie në {location}",
+      "attributeBachelorPartyTeaser": "Po kërkon një ide të shkëlqyer për një festë beqarie në [{location}]({locationLink})? Qoftë për gurmanët, aventurierët apo eksploruesit: Do të gjesh diçka të përshtatshme për çdo shije. Me idetë tona, do të kesh qasje të lehtë për të organizuar një [festë beqarie]({attributeLink}) në {location}. Gëzohemi për një ditë të suksesshme dhe argëtuese me miqtë e tu.",
+      "attributeBachelorPartyDesc": "Planifiko festën tënde të ardhshme beqari në [{location}] dhe kaloni një ditë argëtuese me miqtë tuaj.",
+      "attributeTeamEventTitleAttribute": "Ide të {val} më të mira për ngjarje ekipore në Zvicër",
+      "attributeTeamEventTitle": "Ide të {val} më të mira për ngjarje ekipore në {location}",
+      "attributeTeamEventTeaser": "Të është besuar detyra për të organizuar një ngjarje ekipore në [{location}]({locationLink})? Nuk është gjithmonë e lehtë, pasi kërkesat shpesh janë shumë të ndryshme. Me idetë tona, do të jesh i inspiruar dhe i përgatitur për [ngjarjen ekipore]({attributeLink}) që po vjen. Pavarësisht nëse je një njohës, eksplorues, aktiv, dashamirës i enigmave apo aventurier: Do të gjesh diçka të përshtatshme për çdo shije. Pra, prit një ditë të suksesshme dhe argëtuese me kolegët e tuaj.",
+      "attributeTeamEventDesc": "Planifiko ngjarjen tënde të ardhshme ekipore në {location} dhe kaloni një ditë argëtuese me kolegët tuaj.",
+      "attributeValentinesDayTitleAttribute": "Ide të {val} më të mira për ditën e Shën Valentinit në Zvicër",
+      "attributeValentinesDayTitle": "Ide të {val} më të mira për ditën e Shën Valentinit në {location}",
+      "attributeValentinesDayTeaser": "Çdo vit ai rikthehet përsëri: Dita e Shën Valentinit. Ndofta tashmë di saktësisht se çfarë dëshiron të organizosh herën tjetër më 14 shkurt. Ose ndoshta je ende në dyshim dhe po kërkon një ide për Dita e Shën Valentinit në [{location}]({locationLink}). Aktivitetet tona janë krijuar për të të frymëzuar dhe për të të ndihmuar të gjesh diçka të përshtatshme. Qoftë romantike, e rehatshme apo aventuroze: këtu do të gjesh me siguri frymëzim për një [Dita e Shën Valentinit]({attributeLink}) që do t'ju bëjë zemrat të rrahin më shpejt.",
+      "attributeValentinesDayDesc": "Planifiku Ditën e Shën Valentinit tënd në {location} dhe kaloni një ditë romantike me personin tënd të preferuar.",
+      "attributeFirstDateTitleAttribute": "Idetë {val} më të mira për takimin tënd të parë në Zvicër",
+      "attributeFirstDateTitle": "Idetë {val} më të mira për takimin tënd të parë në {location}",
+      "attributeFirstDateTeaser": "A po kërkon ide të përshtatshme për takimin tënd të parë në [{location}]({locationLink}) dhe je në dyshim se si ta impresionosh? Atëherë je në vendin e duhur. Në këtë faqe do të gjesh frymëzimin që të nevojitet që [takimi yt i parë]({attributeLink}) të jetë një sukses i plotë. Qoftë verë apo dimër, aventurë apo relaksuese, këtu me siguri do të gjesh diçka që do të gëzojë takimin tënd. Dhe kush e di, ndoshta do të gjesh diçka që i përshtatet takimit tënd të ardhshëm dhe atij që do të vijë pas tij.",
+      "attributeFirstDateDesc": "Planifiko takimin e parë në {location} dhe kaloni një ditë romantike së bashku.",
+      "attributeChildBirthdayTitleAttribute": "Idetë {val} për një ditëlindje fëmijësh në Zvicër",
+      "attributeChildBirthdayTitle": "Idetë {val} për një ditëlindje fëmijësh në {location}",
+      "attributeChildBirthdayTeaser": "Planifiko ditëlindjen e ardhshme të fëmijës tënd në [{location}]({locationLink}). Ditëlindja është një nga momentet më të rëndësishme të vitit për çdo fëmijë. Pavarësisht nga stina, ka mjaft ide që mund të bëjnë fëmijën tënd të lumtur. Organizo një [aktivitet në natyrë]({outdoorLink}) ose kërko një ide për [programin për mot të keq]({badWeatherLink}). Kështu do të sigurosh që ditëlindja e ardhshme e fëmijës do të jetë me sukses.",
+      "attributeChildBirthdayDesc": "Organizo një ditëlindje fëmijësh në {location} dhe planifiko një ditë të paharrueshme për fëmijën tënd.",
+      "attributeWheelchairTitleAttribute": "Idetë {val} për ekskursione me karrocë për Zvicrën",
+      "attributeWheelchairTitle": "Idetë {val} për ekskursione me karrocë në {location}",
+      "attributeWheelchairTeaser": "Planifiko një ekskursion me karrocë në [{location}]({locationLink}) dhe gjej aktivitetin e përshtatshëm pa pengesa për ty. Të udhëtosh në Zvicër me karrocë është relativisht e lehtë falë aksesueshmërisë së përparuar dhe përpjekjeve të vendit për të ofruar një përvojë të aksesueshme për të gjithë turistët. Kjo përfshin si aktivitete brenda ashtu edhe [aktivitetet në natyrë]({outdoorLink}).",
+      "attributeWheelchairDesc": "Le të frymëzohesh nga destinacionet e aksesueshme me karrocë në {location} dhe planifiko aktivitetin tënd pa pengesa.",
+      "attributePramTitleAttribute": "Idetë {val} për ekskursione me karrocë nënë për Zvicrën",
+      "attributePramTitle": "Idetë {val} për ekskursione me karrocë në {location}",
+      "attributePramTeaser": "Planifiko ekskursioni yt me karrocë në [{location}]({locationLink}). Kur je duke udhëtuar me fëmijë të vegjël, ka shumë aktivitete që mund të bësh. Shumica e shtigjeve të ecjes janë dizajnuar për t'u përshtatur me karrocë, dhe transporti publik është i orientuar për komoditetin e familjeve me fëmijë të vegjël. Kështu, asgjë nuk e pengon ekskursioni tuaj [familjar]({familyLink}).",
+      "attributePramDesc": "Udhëto në {location} me karrocë dhe planifiko ekskursione të tua me familjen.",
+      "attributesOther": "Kategoritë e tjera",
+      "attributesType": "Kategoritë për aktivitetet {val}",
+      "teamEvent": "Na dërgo kërkesën tënde për grup",
+      "recommended": "Të rekomanduara nga udhëtarët",
+      "tickets": "Biletat",
+      "tours": "Turë të udhëzuara"
+    },
+    "error": {
+      "title": "Na vjen keq, por ka ndodhur një gabim. Kthehu në faqen kryesore dhe kërko aktivitetin tënd të lirë të përshtatshëm."
+    },
+    "supplier": {
+      "title": "Swiss Activities: tregu më i madh i aktiviteteve të lirë të kohës së lirë në Zvicër",
+      "description": "Swiss Activities është tregu më i madh i aktiviteteve të lirë të kohës së lirë në Zvicër. Me ne do të arrish më shumë klientë dhe do të rritesh rezervimet e tua.",
+      "hero": {
+        "title": "Swiss Activities - Destinacioni për aktivitete të kohës së lirë në Zvicër",
+        "button": "Bëhu partner i aktiviteteve të lirë"
+      },
+      "numbers": {
+        "title": "Si i kemi mbështetur partnerët tanë të aktiviteteve të lirë që nga themelimi",
+        "blocks": [
+          {
+            "title": "Vizitat e klientëve",
+            "number": "7'500'000",
+            "text": "klientët potencialë"
+          },
+          {
+            "title": "Rezervimet e klientëve",
+            "number": ">300'000",
+            "text": "Klientët e shpërndarë"
+          },
+          {
+            "title": "Mbështetje për klientët",
+            "number": ">10'000",
+            "text": "Bisedat e zhvilluara"
+          },
+          {
+            "title": "Sistemet e rezervimeve",
+            "number": ">20",
+            "text": "Sistemet e rezervimit"
+          }
+        ]
+      },
+      "why": {
+        "title": "Pse të regjistrosh produktet e tua të aktiviteteve të lira në Swiss Activities",
+        "sales": {
+          "title": "Klientë të rinj",
+          "description": "Merr klientë të rinj nga tregjet e brendshme dhe ndërkombëtare dhe përmirëso kapacitetin tënd."
+        },
+        "support": {
+          "title": "Automatizimi",
+          "description": "Swiss Activities merr përsipër procesin tënd të ekzistueshëm të shitjes dhe transferon transaksionet në sistemin tënd."
+        },
+        "finances": {
+          "title": "Pa rrezik",
+          "description": "Nuk ka费用 fikse ose investime të parapaguara. Ti paguan vetëm për një klient të referuar."
+        },
+        "local": {
+          "title": "Hapja e segmenteve të reja të klientëve",
+          "description": "Bashkohu me rrjetin e shitësve të Swiss Activities dhe zgjeroje arritjen tënde në vend dhe jashtë vendit."
+        }
+      },
+      "who": {
+        "title": "Më shumë se 500 partnerë të aktiviteteve të lirë punojnë me Swiss Activities",
+        "partners": [
+          {
+            "blocks": [
+              "/assets/supplier/partner/bergbahnen/rigi.png",
+              "/assets/supplier/partner/bergbahnen/schilthorn.png",
+              "/assets/supplier/partner/bergbahnen/jungfrau.jpeg",
+              "/assets/supplier/partner/bergbahnen/engelberg.svg",
+              "/assets/supplier/partner/bergbahnen/pilatus.jpeg",
+              "/assets/supplier/partner/bergbahnen/monte-tamaro.png",
+              "/assets/supplier/partner/bergbahnen/brienz.png",
+              "/assets/supplier/partner/bergbahnen/gornergrat.png",
+              "/assets/supplier/partner/destinationen/rheinfelden.png",
+              "/assets/supplier/partner/destinationen/basel.svg",
+              "/assets/supplier/partner/destinationen/winterthur.svg",
+              "/assets/supplier/partner/destinationen/interlaken.png",
+              "/assets/supplier/partner/attraktionen/ballenberg.png",
+              "/assets/supplier/partner/attraktionen/bls.png",
+              "/assets/supplier/partner/attraktionen/cgn.png",
+              "/assets/supplier/partner/attraktionen/chillon.jpeg",
+              "/assets/supplier/partner/attraktionen/maestrani.png",
+              "/assets/supplier/partner/attraktionen/verkehrshaus.png",
+              "/assets/supplier/partner/attraktionen/vier.png",
+              "/assets/supplier/partner/outdoor/best-of-switzerland.jpeg",
+              "/assets/supplier/partner/outdoor/kayak.jpeg",
+              "/assets/supplier/partner/outdoor/outdoorch.jpeg",
+              "/assets/supplier/partner/outdoor/paragliding.png",
+              "/assets/supplier/partner/outdoor/wine-tours.webp",
+              "/assets/supplier/partner/outdoor/zermatters.png"
+            ]
+          }
+        ]
+      },
+      "pricing": {
+        "title": "Modeli i Çmimeve",
+        "subtitle": "Paguaj vetëm në rast të dështimit të një klienti",
+        "description": "Swiss Activities ndihmon që të identifikosh kanalet e duhura të shitjes në nivel lokal dhe global dhe të shesësh produktet e tua të kohës së lirë atje ku janë klientët e tu potencial. Duke qenë se Swiss Activities nuk ka taksë për vendosje, ti e hap një kanale të reja shitjeje pa investime shtesë.",
+        "blocks": [
+          {
+            "pretitle": "",
+            "cost": "18% + CHF 0.30",
+            "subcost": "pa TVSH.",
+            "button": "Bëhu partner i kohës së lirë",
+            "buttonLink": "https://k3qlq2fyp9o.typeform.com/to/CxWJub7f",
+            "subbutton": "",
+            "includes": [
+              "Publikimi i aktiviteteve të kohës së lirë në Swiss Activities",
+              "Regjistrim i pakufizuar i aktiviteteve të kohës së lirë",
+              "Krijimi i përshkrimeve të produkteve nga ekipi ynë të përmbajtjes",
+              "Lidhja me një nga më shumë se 20 sisteme rezervimi",
+              "Mbështetje personale për partnerët përmes bisedave dhe telefonit",
+              "Marrja në dorë e komunikimit me mysafirët për pyetje në lidhje me aktivitetet",
+              "Përpunimi i kërkesave për rezervim dhe anulim të mysafirëve",
+              "Mbikëqyrja dhe kontrolli i të gjitha rezervimeve dhe anulimeve",
+              "Mbikëqyrja dhe kontrolli i faturimeve",
+              "Rregullimi i pagesave – faturimi përmes Swiss Activities",
+              "Sigurimi i procesit të shitjes (pa bonuse, vetëm bileta)",
+              "Qasje automatike në rrjetin e partnerëve",
+              "Publikimi i aktiviteteve në rrjetin e ri-shitjes"
+            ],
+            "faq": []
+          }
+        ]
+      },
+      "tech": {
+        "title": "Sistemet e rezervimeve dhe biletimeve",
+        "description": "Në përveç aktivizimit dhe digitalizimit të të gjitha produkteve të lajmeve zvicerane, një qellim qendror i Swiss Activities është thjeshtimi dhe automatizimi i procesit të rishitjes së produkteve të lirë brenda dhe jashtë vendit. Peizazhi i shpërndarjes bëhet gjithnjë e më kompleks dhe ne ndihmojmë rishitësit që të mos humbasin lidhjen me segmentet e klientëve. Sa më qendror që është lidhja direkte midis partnerëve tanë të aktiviteteve dhe Swiss Activities. Ne jemi duke implementuar vazhdimisht sisteme të reja. Nëse sistemi yt të rezervimeve dhe biletave nuk është i pranishëm, mund të na kontaktoni në sales@swissactivities.com.",
+        "partners": [
+          "/assets/supplier/technology/trekksoft.webp",
+          "/assets/supplier/technology/regiondo.webp",
+          "/assets/supplier/technology/tomas.webp",
+          "/assets/supplier/technology/waldhart.webp",
+          "/assets/supplier/technology/experiencebank.webp",
+          "/assets/supplier/technology/skidata.webp",
+          "/assets/supplier/technology/axess.webp",
+          "/assets/supplier/technology/smeetz.webp",
+          "/assets/supplier/technology/eatwith.webp",
+          "/assets/supplier/technology/fareharbor.webp",
+          "/assets/supplier/technology/bookingkit.webp",
+          "/assets/supplier/technology/ntree.webp",
+          "/assets/supplier/technology/secutix.webp",
+          "/assets/supplier/technology/tourcms.webp",
+          "/assets/supplier/technology/sbb.webp"
+        ],
+        "titleSoon": "Shpejt do të jetë në dispozicion",
+        "partnersSoon": [
+          "/assets/supplier/technology/feratel.webp"
+        ]
+      },
+      "faq": [
+        {
+          "title": "Informata të Përgjithshme për Partnerët e Kohës së Lirë",
+          "blocks": [
+            {
+              "title": "Kush mund të bëhet partner i kohës së lirë të Swiss Activities?",
+              "text": "Ata që duan të shpërndajnë aktivitete të kohës së lirë në Zvicër mund të bëhen partnerë të Swiss Activities. Ofertat tuaja mund të jenë shumë të ndryshme dhe praktikisht nuk ka kufij për imagjinatën tuaj. Ne kemi aktivitete, bileta, aventura, ekskursione, qira etj. në rreth 100 kategori. Këtu përfshihen kurse pjekjeje për torta me një dërrasë si dhe fluturime tandem në parashutë ose bileta për muze. E rëndësishme është që ofertat të ndodhin ose në Zvicër ose të jenë të mundshme brenda një ekskursioni ditor nga Zvicra."
+            },
+            {
+              "title": "Cilat sisteme rezervimi mund të lidh me Swiss Activities?",
+              "list": [
+                "Trekksoft",
+                "Regiondo",
+                "Waldhart",
+                "Banka e Experiencave",
+                "Skidata",
+                "Axess",
+                "Tomas",
+                "Smeetz",
+                "Eatwith",
+                "Fareharbor",
+                "Booking Kit",
+                "N-Tree",
+                "Secutix",
+                "TourCMS",
+                "Palisis",
+                "Shpejtë do të jenë të disponueshme: SBB dhe Feratel"
+              ]
+            },
+            {
+              "title": "Nuk punoj me një sistem rezervimi. A mund të shes aktivitetet e mia përmes Swiss Activities?",
+              "text": "Edhe nëse ti nuk punon me një sistem rezervimi, mund të listosh aktivitetet e tua me ne. Në këtë rast, ne krijojmë me dorë një kalendar sipas specifikimeve tuaja. Nëse dëshiron të implementosh një sistem rezervimi, lutemi na kontakto. Ne do të jemi të lumtur të të këshillojmë për këtë temë. Informacionet që na nevojiten nga ty përfshijnë:",
+              "list": [
+                "Periudha e kohës (data)",
+                "Koha e fillimit",
+                "Kohëzgjatja",
+                "Afati (sa herët duhet të rezervojë klienti?)",
+                "Çmimet sipas kategorisë (të rritur, fëmijë, qera etj.)",
+                "vendet maksimale të disponueshme për slot"
+              ]
+            },
+            {
+              "title": "Cilat informacione dërgohen gjatë një rezervimi?",
+              "text": "Kur një klient bën një rezervim me Swiss Activities, ai merr një email konfirmimi me të gjitha informacionet e rëndësishme. Këtu përfshihen gjithashtu të dhënat e tua të kontaktit, në mënyrë që ata të mund të kontaktojnë drejtpërdrejt nëse kanë pyetje.",
+              "list": [
+                "Emri i aktivitetit",
+                "Data",
+                "Koha",
+                "Pika e takimit",
+                "Numri i biletave të rezervuara",
+                "Të dhënat e tua të kontaktit (email dhe telefon)"
+              ]
+            },
+            {
+              "title": "A publikohen të njëjtat çmime për aktivitetet e mia në Swiss Activities si dhe në faqen time të internetit?",
+              "text": "Po, tek ne klienti paguan po aq sa do të paguante nëse do të rezervonte drejtpërdrejt me ty. Kjo është e rëndësishme për ty po aq sa për ne. Nëse çmimet janë të ndryshme në vende të ndryshme, klienti do ta vërejë, çka çon në ankesat dhe keqkuptimet. Në këtë mënyrë, të dy jemi në rrezik të humbim një klient të rikthyer."
+            },
+            {
+              "title": "Sa është afati i anulimit në Swiss Activities?",
+              "text": "Klienti ka mundësinë të anulojë pa pagesë deri 24 orë para aktivitetit në Swiss Activities. Nëse dëshiron të listosh një aktivitet që nuk mund të anulohet, ne mund ta marrim këtë. Megjithatë, përvoja jonë ka treguar se ne ndërmjetësojmë më shumë rezervime për aktivitete që ofrojnë mundësinë e anulimit. Nëse duhet të anulosh rezervimin, mund ta bësh edhe këtë. Trego menjëherë klientit dhe na njofto gjithashtu, në mënyrë që ne të mund të fillojmë një rimbursim."
+            },
+            {
+              "title": "Si përballen me anulimet pasuese?",
+              "text": "Nëse marrim një kërkesë për një anulim pasues përmes formularit tonë të anulimit, ne kurrë nuk lëshojmë një rimbursim pa komunikuar gjithmonë me ty së pari. Për të parandaluar rastet e mashtrimit, ne gjithmonë marrim miratimin tënd për të konfirmuar tregimin e klientit. Vetëm kur kemi miratimin tënd, ne lëshojmë më pas një rimbursim."
+            }
+          ]
+        },
+        {
+          "title": "Procesi i Listingut të Produkteve të Lirë",
+          "blocks": [
+            {
+              "title": "Si mund të listoj ofertat e mia në Swiss Activities?",
+              "text": "Nëse dëshiron të bëhesh një partner pushimesh të Swiss Activities dhe të listosh ofertat e tua, ka disa hapa për t'u ndjekur:",
+              "list": [
+                "Regjistrohu për herë të parë si një partner pushimesh.",
+                "Plotëso një formular për secilën aktivitet që dëshiron të listosh. Linkun për këtë do ta marrësh pasi të kemi konfirmuar regjistrimin tuaj.",
+                "Ne zakonisht i shkruajmë dhe regjistrojmë aktivitetet tuaja brenda dy javësh.",
+                "Sa herë që aktivitetet janë aktive, ne do të të informojmë përmes emailit."
+              ]
+            },
+            {
+              "title": "Cilat informacione nevojiten për të listuar aktivitetet e mia?",
+              "text": "Pas regjistrimit si partner pushimesh me ne, do të të dërgojmë një formular, përmes të cilit mund të regjistrosh aktivitetet e tua. Për t'i listuar ato, na nevojiten informacionet e mëposhtme nga ty:",
+              "list": [
+                "Informacione për sistemin e rezervimit (nëse egziston)",
+                "Titulli i aktivitetit",
+                "Linku për aktivitetin",
+                "Të paktën 4 foto për aktivitet",
+                "Informacione mbi datat, kohët, dhe kohëzgjatjen, nëse nuk përdor një sistem rezervimi",
+                "Çdo informacion mbi moshën, gjuhët, peshën etj.",
+                "Përshtatshmëria e aktivitetit: qen, karrocë fëmijësh, karrocë me rrota, familje etj.",
+                "Pika e takimit e saktë"
+              ]
+            },
+            {
+              "title": "A mund të fshij regjistrimin tim në çdo kohë?",
+              "text": "Po, mund të tërhiqesh nga kontrata në çdo kohë. Nuk ka një afat minimal të kontratës dhe nuk ka shpenzime të lidhura me anulimin."
+            },
+            {
+              "title": "Çfarë duhet të bëj, nëse dua të ndërronjë diçka në një aktivitet?",
+              "text": "Nëse ke dëshira për të bërë ndryshime në përmbajtje ose dëshiron të rregullosh çmimet - për sa kohë që nuk përdor një sistem rezervimi - mund të na njoftosh përmes emailit."
+            },
+            {
+              "title": "Si mund ta kontaktoj klientin?",
+              "text": "Pas çdo rezervimi, do të marrësh një email konfirmimi nga ne me të dhënat e klientit. Aty do të gjesh emrin e tij, adresën e emailit dhe numrin e telefonit për ta kontaktuar."
+            },
+            {
+              "title": "Si do ta marr paratë e mia?",
+              "text": "Pagesa e të gjitha shumëve të hapura ndodh pas datës së shërbimit dhe transferohet automatikisht në fillim të muajit të ardhshëm. Të gjitha rezervimet që janë bërë gjatë muajit të kaluar mblidhen dhe llogariten dhe përfundimisht paguhen në një pagesë të vetme."
+            }
+          ]
+        }
+      ]
+    },
+    "supplierRegistration": {
+      "title": "Aktivitetet Zvicerane: tregu më i madh i aktiviteteve të lirë në Zvicër",
+      "description": "Aktivitetet Zvicerane janë tregu më i madh i aktiviteteve të lirë në Zvicër. Me ne, arrin më shumë klientë dhe rrit rezervimet e tua.",
+      "hero": {
+        "title": "Bëhu pjesë e Aktivitetet Zvicerane",
+        "description": "Regjistrohu falas në Aktivitetet Zvicerane dhe rrit shtrirjen tënde me mysafirët zviceranë dhe ata ndërkombëtarë. Përfitimet e tua në një përmbledhje",
+        "list": [
+          "Bëhu i njohur në Google si kompani dhe me ofertat tua. Dhe kjo në 4 gjuhë!",
+          "Hap një kanal të ri shitjeje",
+          "Përfito nga mbështetja jonë e diel.",
+          "Lidh sistemin tënd të rezervimeve dhe menaxho disponueshmërinë direkt aty.",
+          "Një rezervim i ri - klienti yt. Ne nuk i fshehim partnerët tanë dhe duam t'i ofrojmë klientit përvojën më të mirë të rezervimit.",
+          "Nuk ka kosto fikse ose tarifa të fshehura.",
+          "Klientët tuaj mund të paguajnë në të gjitha metodat lokale të pagesës si Twint, blerje me faturë si dhe me kartat e kreditit të zakonshme."
+        ]
+      }
+    },
+    "affiliate": {
+      "title": "Affiliate",
+      "description": "Merr pjesë si partner në Aktivitetet Zvicerane dhe fito 1% deri në 5% komision që nga rezervimi i parë. Nuk ka kosto fikse.",
+      "hero": {
+        "title": "Bëhu tani partner afiliat i Aktivitetet Zvicerane",
+        "description": "Regjistrohu në programin e afiliatëve të Aktivitetet Zvicerane dhe përfito nga mjete integrimi atraktive, 1% deri në 5% komision dhe një afat të cookies prej 45 ditësh.",
+        "steps": [
+          "Regjistrohu",
+          "Implemento aktivitetet tona",
+          "Genero rezervime dhe fito para"
+        ],
+        "button": "Regjistrohu tani"
+      },
+      "form": {
+        "tos": "Pranoj <a target='_blank' href='/agb/affiliates/'>Kushtet e Shërbimit</a>"
+      },
+      "advantagesTitle": "Cilat janë përfitimet e tua si partner afiliat i Aktivitetet Zvicerane?",
+      "advantages": [
+        {
+          "title": "1'500+ aktivitete argëtuese",
+          "text": "Si një partner affiliate i Swiss Activities, me disa klikime ke qasje në mbi 1'500 aktivitete argëtuese në gjithë Zvicrën."
+        },
+        {
+          "title": "Kushtet atraktive",
+          "text": "Për çdo rezervim që rekomandon, do të marrësh një komision prej 1% deri në 5%. Afati i cookies është 45 ditë."
+        },
+        {
+          "title": "Inspiro lexuesit tuaj",
+          "text": "Gjallëro blogun ose faqen tuaj të internetit me përmbajtje frymëzuese dhe ndihmo komunitetin tënd të kursejë kohë në planifikimin e aktiviteteve të tyre të lirë."
+        },
+        {
+          "title": "Regjistrim i thjeshtë",
+          "text": "Përfito nga një regjistrim i thjeshtë dhe të shpejtë."
+        },
+        {
+          "title": "Shitje të drejtpërdrejta të biletave",
+          "text": "Ke mundësinë të shesësh bileta direkt në faqen tënde të internetit, pa e drejtuar lexuesin tënd te ne."
+        },
+        {
+          "title": "HTML i personalizuar",
+          "text": "Falë mjeteve tona personalizuese dhe tërheqëse HTML, mund të personalizosh mundësitë e tua të shitjes."
+        }
+      ],
+      "faqTitle": "Pyetje të rëndësishme të përgjigjura",
+      "faq": [
+        {
+          "title": "Si funksionon regjistrimi për programin e afiliatëve të Aktivitetet Zvicerane?",
+          "text": "Regjistrohu me formularin në këtë faqe me të gjitha të dhënat e nevojshme. Ne do të shqyrtojmë aplikimin tënd brenda një dite pune dhe do të dërgojmë të dhënat e tua të hyrjes përmes e-mailit pas pranimit."
+        },
+        {
+          "title": "Si mund të hyj në panelin tim të partnerëve afiliatë?",
+          "text": "Gjatë regjistrimit, ti përcakton fjalëkalimin tënd personal. Sapo të kemi verifikuar të dhënat e tua, do të njoftohesh dhe mund të hysh në panelin tënd të partnerëve afiliatë përmes <a href='https://swissactivities.tapfiliate.com/login' target='_blank'>këtij linku</a>."
+        },
+        {
+          "title": "Ku mund të gjej më shumë informacion rreth programit të afiliatëve?",
+          "text": "Në shërbimin tonë të ndihmës, do të gjesh përveç <a href='https://intercom.help/swiss-activities/de/collections/3916117-affiliate-moglichkeiten-zur-einbindung' target='_blank'>hapat fillestarë</a> si dhe pyetje të rëndësishme rreth <a href='https://intercom.help/swiss-activities/de/collections/3916117-affiliate-moglichkeiten-zur-einbindung' target='_blank'>integrimit të aktiviteteve tona</a>. Gjithashtu, pas regjistrimit tënd do të marrësh një sërë e-mails me këshilla të dobishme."
+        },
+        {
+          "title": "Kush mund të bëhet partner afiliat i Aktivitetet Zvicerane?",
+          "text": "Nëse udhëheq një blog ose një faqe interneti që ka lidhje me turizmin zviceran, aktivitete të lirë në Zvicër, ose udhëtime në përgjithësi, mund të regjistrohesh për programin tonë të afiliatëve. Po ashtu, nëse ke një llogari në Instagram, Pinterest ose Facebook ku mund të vendosësh një lidhje të afiliatëve, mund të regjistrohesh me ne."
+        },
+        {
+          "title": "Mund të anullohem nga programi i afiliatëve?",
+          "text": "Natyrisht. Ti nuk je i lidhur me ndonjë kohë minimale. Nese dëshiron të fshish llogarinë tënde, na lajmëro përmes e-mailit ose bisedës dhe ne do të organizojmë çdo gjë të nevojshme."
+        },
+        {
+          "title": "Sa komision do të marrësh për çdo rezervim të rekomanduar?",
+          "text": "Merr mesatarisht mes 1% dhe 5% komisioni nëse na rekomandon një klient që realizon aktivitetin. Nëse klienti anullon rezervimin e tij, ne nuk mund të të paguajmë ndonjë komision."
+        }
+      ]
+    },
+    "apps": {
+      "title": "Aplikacioni Swiss Activities",
+      "description": "Shijo Zvicrën me aplikacionin Swiss Activities – zbuloni, krahasoni dhe rezervoni aktivitete të lira direkt në telefonin tuaj.",
+      "hero": {
+        "title": "Avventura jote zvicerane në xhep",
+        "description": "Me aplikacionin Swiss Activities ke qasje të drejtpërdrejtë në mbi {amount} aktivitete në tërë Zvicrën. Gjej eksperienca, rezervo në sekonda dhe mbaj gjithnjë nën kontroll të gjitha biletat dhe rezervimet e tua.",
+        "features": [
+          "Biletat gjithmonë të gatshme",
+          "Menaxho rezervimet lehtësisht",
+          "Zbuloni përvoja të reja për çdo shije",
+          "Biletat gjithashtu në dispozicion offline"
+        ]
+      }
+    },
+    "travelGuide": {
+      "title": "Planifikuesi yt i udhëtimit për Zvicrën",
+      "description": "Zvicra është një vend shumë i larmishëm dhe ka shumë për të ofruar për udhëtimin tënd. Pra, mos lejo që sipërfaqja e vogël të të mashtrojë. Edhe pse Zvicra është rreth njëzet herë më e vogël se Suedia, Kaliforni apo Maroku, do të gjesh diçka për çdo shije. Në Ticino mesdhetar je në një botë krejtësisht tjetër se në Bazel e zhurmshme. Dhe Alpe të Alpeve kanë një klimë krejt tjetër se rajoni i butë i Liqenit të Gjenovës. Dhe kjo, ndonëse këto vende janë vetëm tre deri në katër orë larg njëra-tjetrës. Në blogun tonë, ne të ndihmojmë me planifikimin e udhëtimit tënd. Të ofrojmë këshilla të dobishme dhe informacione të rëndësishme që të mund të përgatitesh perfekt. Çfarëdo që të jetë, nëse je duke udhëtuar për herë të parë në Zvicër ose je duke njohur mirë vendin.",
+      "intro": "Zvicra është një vend shumë i larmishëm dhe ka shumë për të ofruar për udhëtimin tënd. Pra, mos lejo që sipërfaqja e vogël të të mashtrojë. Edhe pse Zvicra është rreth njëzet herë më e vogël se Suedia, Kaliforni apo Maroku, do të gjesh diçka për çdo shije. Në Ticino mesdhetar je në një botë krejtësisht tjetër se në Bazel e zhurmshme. Dhe Alpe të Alpeve kanë një klimë krejt tjetër se rajoni i butë i Liqenit të Gjenovës. Dhe kjo, ndonëse këto vende janë vetëm tre deri në katër orë larg njëra-tjetrës. Në blogun tonë, ne të ndihmojmë me planifikimin e udhëtimit tënd. Të ofrojmë këshilla të dobishme dhe informacione të rëndësishme që të mund të përgatitesh perfekt. Çfarëdo që të jetë, nëse je duke udhëtuar për herë të parë në Zvicër ose je duke njohur mirë vendin."
+    },
+    "travelRoutes": {
+      "title": "Itineraret Zvicër",
+      "description": "Zvicra është një vend shumë i larmishëm dhe ka shumë për të ofruar për udhëtimin tënd. Mos lejo që sipërfaqja e vogël të të gënjejë. Edhe pse Zvicra është rreth dhjetë herë më e vogël se Suedia, Kalifornia apo Maroku, do të gjesh diçka për çdo shije. Në Ticino mediteran je në një botë krejt ndryshe nga baza e ngjeshur. Dhe Alpstein, i malet, ka një klimë krejt tjetër nga rajoni i butë i Liqenit të Gjenevës. Dhe kjo, edhe pse këto vende janë vetëm tre deri në katër orë larg nga njëra-tjetra. Në blogun tonë, të ndihmojmë në planifikimin e udhëtimit tënd. Të ofrojmë këshilla dhe informacion të dobishëm për udhëtime që ti të mund të përgatitesh plotësisht. Nuk ka rëndësi nëse po udhëton në Zvicër për herë të parë apo je tashmë i njohur me të, kjo nuk ka rëndësi. Artiket tona janë të përshtatshme si për vizitorët e parë ashtu edhe për vërtetësitë e Zvicrës."
+    },
+    "widget": {
+      "title": "Integroni Swiss Activities në faqen tuaj",
+      "description": "Integromi Swiss Activities në faqen tuaj dhe shisni aktivitete direkt përmes faqes suaj.",
+      "hero": {
+        "title": "Integroni ofertat e Swiss Activities në faqen tuaj",
+        "description": "Widget-i i Swiss Activities është mënyra më e lehtë për të integruar aktivitete në faqen tuaj. Zgjidhni nga një shumicë stilesh widget dhe përfshini në pak minuta.",
+        "button": "Nisni tani"
+      },
+      "cta": {
+        "title": "Bëhu një partner",
+        "button": "Shkonte në formular"
+      }
+    },
+    "newsletterConfirm": {
+      "title": "Faleminderit për regjistrimin tënd. Ne sapo të kemi dërguar një mesazh, nëpërmjet të cilit mund ta konfirmosh regjistrimin tënd."
+    },
+    "newsletterSuccess": {
+      "title": "Faleminderit! Tani je i regjistruar për newsletter-in tonë."
+    },
+    "cookiePolicy": {
+      "title": "Politika e cookie-ve"
+    },
+    "vouchers": {
+      "title": "Ide dhurata për përvoja në Zvicër – biletat më të mira te Swiss Activities",
+      "description": "Dhuroni momente të paharrueshme me një biletë për përvoja nga Swiss Activities! Zbuloni zgjedhjen më të madhe të aktiviteteve në Zvicër – fleksibël, e thjeshtë dhe e disponueshme për rezervim online menjëherë. E përshtatshme si ide dhurate për çdo rast.",
+      "hero": {
+        "title": "Dhuroni tani biletë për përvoja në Zvicër dhe sillni gëzim!",
+        "text": "Zbuloni tani idetë më të mira të dhuratave dhe biletat për përvoja te Swiss Activities. Qoftë për ditëlindje, dhuratë për Krishtlindje apo thjesht për të thënë faleminderit – një biletë për përvoja zvicerane është një dhuratë që do të mbetet në kujtesë.",
+        "button": "Bli biletën"
+      },
+      "gift": {
+        "title": "Dhuroni përvojat më të mira zvicerane – nga aventura deri te relaksimi",
+        "text": "Po kërkon një ide unike dhurate për miqtë ose familjen në Zvicër? Një biletë për përvoja nga Swiss Activities të ofron akses te zgjedhja më e madhe të aktiviteteve të lirshme që ka Zvicra për të ofruar. Qoftë për ekskursione të udhëhequra, aventura në natyrë, çaste relaksuese në banja termale apo theksime kulturore në muze – Swiss Activities e bën të mundur dhurimin e momenteve speciale."
+      },
+      "why": {
+        "title": "Pse një biletë për përvoja nga Swiss Activities është ideja perfekte e dhuratës",
+        "items": [
+          {
+            "title": "Zgjedhja më e madhe në Zvicër",
+            "text": "Më shumë se 1,600 oferta aktivitetesh në të gjitha rajonet, nga aventura në natyrë deri te çaste relaksuese."
+          },
+          {
+            "title": "Më shumë se 100,000 klientë të kënaqur",
+            "text": "Swiss Activities është partneri i provuar për dhurata speciale dhe ekskursione."
+          },
+          {
+            "title": "Opsioni i anullimit pa pagesë",
+            "text": "Rezervime të sigurta dhe fleksibile që mund të përshtaten sipas nevojave të atij që do të dhurohet."
+          },
+          {
+            "title": "Mbështetje për klientët 5 yje",
+            "text": "Cilësia dhe mbështetje zvicerane – për një fillim të suksesshëm të përvojës."
+          }
+        ]
+      },
+      "end": {
+        "title": "Dhuro bonuse për përvoja në Zvicer dhe sjell gëzim!",
+        "text": "Zbuloni idetë më të mira për dhurata dhe bonuse për përvoja te Swiss Activities. Pavarësisht nëse është për ditëlindje, si dhuratë për Krishtlindje, ose thjesht për të thënë faleminderit – një bonus për përvoja në Zvicer është i përshtatshëm për çdo shije dhe sjell kujtime të paharrueshme.",
+        "button": "Zgjidh biletën"
+      },
+      "banner": {
+        "tagline": "E RE: Ide e përsosur për dhurata!",
+        "title": "Siguro një\nvaucher për përvojë",
+        "button": "Kliko këtu"
+      }
+    }
+  },
+  "filter": {
+    "nearby": "Shiko aktivitete në afërsi",
+    "results": "Trego rezultatet",
+    "filter": "Filtri",
+    "search": "Kërko",
+    "location": "Vend",
+    "types": "Lloji",
+    "categories": "Kategoria",
+    "activity": "Aktiviteti",
+    "activities": "Aktivitetet",
+    "today": "Sot",
+    "tomorrow": "Nesër",
+    "price": "Çmimi",
+    "noResults": "Nuk ka rezultate",
+    "noExactResults": {
+      "title": "Asnjë rezultat i saktë",
+      "description": "Provo të ndryshosh ose të heqësh disa nga filtrat e tu dhe të përshtatësh zonën e kërkimit.",
+      "showNearest": "Shiko rezultatet më të afërta",
+      "resetDate": "Rivendos periudhën"
+    },
+    "lang": "Gjuha",
+    "sort": {
+      "relevance": "Relevanca",
+      "distance": "Distanca nga ti",
+      "popularityDesc": "Popullariteti në rënie",
+      "ratingDesc": "Vlerësimi në rënie",
+      "ratingAsc": "Vlerësimi ngjitës",
+      "priceDesc": "Çmimi në rënie",
+      "priceAsc": "Çmimi në ngjitje",
+      "dateDesc": "Më të rejat parë",
+      "dateAsc": "Të vjetrat parë"
+    },
+    "navigationBreadcrumbs": {
+      "root": "Zvicra"
+    },
+    "all": "Të gjitha",
+    "map": "Harta",
+    "card": {
+      "from": "nga",
+      "person": "për person"
+    },
+    "viewMore": "Shiko më shumë",
+    "ratingBetterThan": "Më mirë se {val} yje",
+    "ratingEqual": "{val} yje",
+    "ratingNone": "E RE / Pa vlerësim",
+    "moreFilters": "Trego {val} më shumë",
+    "lessFilters": "Trego më pak",
+    "usedFilters": "Filtrat e aplikuar",
+    "resetFilters": "Rivendos",
+    "discountTypes": "Zbritjet",
+    "calendar": "Kalendar",
+    "locationError": "Pozita nuk mund të ngarkohet",
+    "textOnly": "Vlerësime vetëm me tekst"
+  },
+  "activity": {
+    "you": "ti",
+    "nearby": "{distance}km larg nga {location}",
+    "nearbyAlt": "{distance}km larg",
+    "recommendation": "Rekomandimi",
+    "reviews": "Vlerësimet",
+    "reviewOriginalIn": "Origjinal në {language}",
+    "booked": "rezervuar {val} herë",
+    "providedBy": "Ofruesi i aktivitetit",
+    "save": "Ruaj",
+    "selectDate": "Zgjidh datën",
+    "similarActivities": "Aktivitetet e ngjashme",
+    "question": "Si mund të ndihmojmë?",
+    "rating": "Vlerësimi",
+    "highDemand": "Kërkesë e madhe",
+    "widget": {
+      "free": "i disponueshëm",
+      "error500": "Diçka ka shkuar gabim, të lutem provo përsëri në 1 minutë.",
+      "errorDate": "Fatkeqësisht, nuk ka më vende të disponueshme për {val}.",
+      "choose": "zgjidh",
+      "titleTime": "Zgjidh ofertën",
+      "titleTicketOption": "Zgjidh opsionin e biletës",
+      "titleParticipants": "Zgjidh pjesëmarrësit",
+      "titleTickets": "Zgjidh biletat",
+      "confirmOffer": "Konfirmo opsionin e biletës",
+      "confirmTickets": "Konfirmo pjesëmarrësit",
+      "confirmDate": "Konfirmo datën",
+      "confirmDateTime": "Konfirmo datën dhe orën",
+      "cheapest": "Çmimi më i lirë",
+      "time": "Koha",
+      "navTicket": "Bileta",
+      "check": "Kontrollo disponibilitetin",
+      "notBookable": "Fatkeqësisht, kjo ofertë nuk është e rezervueshme për momentin.",
+      "paymentMethods": "Metodat e pagesës",
+      "totalPrice": "Çmimi total",
+      "taxes": "Tarifat shtesë",
+      "offerTimeSelect": "Zgjidh kohën",
+      "basket": "Karroca",
+      "basketAdd": "Shto në karrocë",
+      "selectedOffer": "Ofertë",
+      "adjust": "Edito rezervimin",
+      "swissHalfFareCard": "Personat që jetojnë jashtë Zvicrës mund të&nbsp;<a href=\"/bahnpaesse/swiss-half-fare-card/\" target=\"_blank\" className=\"inline-block\">marrin një Swiss Half Fare Card këtu</a>, për ta përdorur për ulje në transportin publik."
+    },
+    "tabs": {
+      "highlights": "Pikat kryesore",
+      "includes": "Përfshirë",
+      "importantInformation": "Informacion të rëndësishëm",
+      "meetingPoints": "Pika e takimit"
+    },
+    "newsletter": {
+      "title": "Mos humbisni aktivitete më",
+      "description": "Abonohu në buletin dhe merr Këshilla për udhëtim, ide për argëtim dhe udhëzues të fundit për udhëtime nga Zvicra.",
+      "signup": "Regjistrohu",
+      "inputPlaceholder": "Emaili yt"
+    },
+    "notRefundable": {
+      "title": "Nuk mund të anullohet",
+      "description": "Fatkeqësisht nuk mund të ofrojmë një rimbursim ose të ndryshojmë ose anullojmë rezervimin tënd për këtë produkt specifik për shkak të politikave të partnerëve tanë"
+    }
+  },
+  "UI": {
+    "date": "Data"
+  },
+  "home": {
+    "title": "Përvoja jote fillon këtu"
+  },
+  "discover": {
+    "title": "Zbulo aktivitete"
+  },
+  "booking": {
+    "cancelable": "Anulim i lirë deri më",
+    "privacyMessage": "Duke vazhduar me pagesën, pranon <tos>{text}</tos> si dhe kushtet e anulimit të Swiss Activities AG.",
+    "privacyPolicy": "kushtet e përgjithshme të shërbimit",
+    "personalTitle": "Detajet e faturimit",
+    "personalSubtitle": "Për të përfunduar rezervimin, të lutemi plotëso informacionet e mëposhtme.",
+    "mainGuest": "Persona kontaktues",
+    "fullName": "Emri",
+    "lastName": "Mbiemri",
+    "email": "Email",
+    "phoneNumber": "Numri i telefonit",
+    "cardDetails": "Metodat e pagesës",
+    "paymentSecure": "Pagesë e sigurt - ne përdorim enkriptimin SSL për të mbrojtur të dhënat tuaja",
+    "creditPayments": "Kartat e Kreditit",
+    "total": "Totali",
+    "fullDay": "Ditë të Plotë",
+    "booknow": "Rezervo tani",
+    "addMoreInformation": "Shto më shumë informacion",
+    "addPaymentMethod": "Zgjidh një metodë pagese",
+    "youBook": "Basket",
+    "rebate": "Kodi i zbritjes",
+    "rebateEmailRequired": "Të lutem, fillo duke futur adresën tënde të email-it dhe konfirmo atë për të përdorur një kod zbritjeje.",
+    "important": "Unë kam marrë parasysh kushtet në \"Informacionet e rëndësishme\" të aktivitetit(ëve)",
+    "importantShow": "Shfaq informacionin",
+    "importantHide": "Fsheh informacionin"
+  },
+  "confirm": {
+    "title": "Faleminderit për rezervimin tuaj me Swiss Activities.",
+    "confirmed": "Rezervimi yt është i konfirmuar.",
+    "pending": "Rezervimi yt është duke u përpunuar.",
+    "cancelled": "Rezervimi yt është anuluar.",
+    "failed": "Na vjen keq, diçka shkoi keq.",
+    "failedPayment": "Pagesa nuk mund të përpunohej. Të lutemi provoni me një tjetër metodë pagese.",
+    "failedReservation": "Do të të rikthejmë para nëse rezervimi nuk konfirmohet. Të lutemi provoni përsëri.",
+    "wait": "Po presim shkak për statusin e pagesës.",
+    "waitEmail": "Do të marrësh një email sapo të konfirmohet pagesa.",
+    "caption": "Faleminderit shumë për rezervimin përmes Swiss Activities. Të kemi dërguar një email konfirmimi.",
+    "bookingNumber": "Numri i Rezervimit",
+    "point": "Pika e Takimit",
+    "pointAddress": "Adresa e Pikës së Takimit",
+    "number": "Numri i telefonit celular",
+    "end": "Përfundimi",
+    "email": "Konfirmimi i rezervimit tënd është dërguar në {email}. Nëse nuk e merr brenda disa minutash, të lutemi kontakto mbështetjen tonë përmes chat-it.",
+    "transport": {
+      "title": "Vjen me transport publik?",
+      "from": "Vendi yt",
+      "description": "Udhëto me komoditet me transportin publik dhe shto bileten tënde mobile direkt në këtë rezervim.",
+      "button": "Shto biletë"
+    }
+  },
+  "footer": {
+    "company": {
+      "title": "Kompania",
+      "about-us": "Rreth Nesh",
+      "jobs": "Punë",
+      "legal": "Ligji"
+    },
+    "resources": {
+      "title": "Burimet"
+    },
+    "collaboration": {
+      "title": "Bashkëpunimi",
+      "becomeapartner": "Bëhu Partnere",
+      "affiliate": "Programi i Partnerëve",
+      "widget": "Widget"
+    },
+    "affiliate": {
+      "title": "Kodi i Affiliate",
+      "button": "Kopjo kodin",
+      "buttonCopied": "Kodi u kopjua!"
+    },
+    "contact": {
+      "title": "Shërbimi ndaj klientit",
+      "faq": "Pyetje & Përgjigje (FAQ)",
+      "cookie": "Pranimi i Cookie-ve"
+    },
+    "mobileApp": "Merr aplikacionin tonë"
+  },
+  "tickets": {
+    "discounts": {
+      "noDiscount": "Nuk ka zbritje"
+    },
+    "showDiscounts": "Trego kartat e klientëve dhe zbritjet",
+    "travelClass": "Klasa e udhëtimit"
+  },
+  "supplier": {
+    "activities": "Aktivitete"
+  },
+  "contactPopup": {
+    "modalTitle": "Si mund të të ndihmojmë sot?"
+  },
+  "contactForm": {
+    "fullname": "Emri",
+    "email": "Email",
+    "subject": "Subjekti",
+    "messagePlaceholder": "Pyetje, rezervim, etj...",
+    "submit": "Dërgo",
+    "formError": "Diçka nuk shkoi siç duhet. Provo përsëri."
+  },
+  "contactThankYou": {
+    "title": "Të falenderojmë për kontaktin!"
+  },
+  "internalLinkBlock": {
+    "destinations": "Destinacionet kryesore",
+    "locations": "Rajonet kryesore",
+    "topActivities": "Aktivitetet kryesore",
+    "topAttractions": "Atraksionet kryesore"
+  },
+  "offerCard": {
+    "bookNow": "Rezervo tani"
+  },
+  "breadcrumbsBasket": {
+    "stepOne": "Zgjedhja jote",
+    "stepOneDescription": "Shporta e blerjes",
+    "stepTwo": "Detajet tua",
+    "stepTwoDescription": "Pasqyrimi",
+    "stepThree": "Hapi i fundit",
+    "stepThreeDescription": "Pagesa"
+  },
+  "usps": {
+    "or": "ose",
+    "allDay": "I gjithë ditës",
+    "bookable": {
+      "title": "E libri",
+      "description": "Për {val}"
+    },
+    "online": {
+      "title": "Konfirmimi i menjëhershëm i rezervimit"
+    },
+    "payment": {
+      "title": "Rezervo duke paguar me faturë ose me Twint"
+    },
+    "duration": {
+      "title": "Kohëzgjatja",
+      "durationMinutes": "{val} minuta",
+      "duration": "{val} orë",
+      "durations": "{val} orë",
+      "durationDay": "{val} ditë",
+      "durationDays": "{val} ditë"
+    },
+    "mobileTicket": {
+      "title": "Bileta mobile pranohet",
+      "description": "Përdor telefonin tënd ose printo kuponin"
+    },
+    "confirmation": {
+      "title": "Konfirmimi i menjëhershëm i rezervimit",
+      "description": "Nuk ka tarifa shtesë"
+    },
+    "queue": {
+      "title": "Nuk ka rend në kasë"
+    },
+    "cancel": {
+      "title": "Anullim falas",
+      "description": "Rimbursim i plotë në rastin e anulimit deri në {val} orë përpara fillimit",
+      "descriptionDays": "Rimbursim i plotë në rastin e anulimit deri në {val} ditë përpara fillimit",
+      "subtitle": "Derisa {val} orë para kohës së nisjes",
+      "subtitleDays": "Derisa {val} ditë përpara kohës së nisjes."
+    },
+    "meetingPoint": {
+      "title": "Pika e takimit"
+    },
+    "discount": {
+      "title": "Zbritja"
+    },
+    "request": {
+      "title": "Rezervimi me kërkesë",
+      "description": "Kjo rezervim duhet të konfirmohet nga ofruesi",
+      "extra": "Ky ofertim bazohet në disponueshmërinë e ofruesit. Rezervimi duhet së pari të konfirmohet nga ofruesi. Ai do të kontaktojë me ty pas rezervimit. Nëse aktiviteti nuk mund të realizohet, do të marrësh tërë shumën më kthim."
+    },
+    "validity": {
+      "title": "Validiteti"
+    },
+    "openingHours": {
+      "title": "Orari i hapjes"
+    }
+  },
+  "widgetConfigurator": {
+    "title": "Konfiguro widgetin",
+    "type": "Lloji",
+    "lang": "Gjuha",
+    "other": "Zgjidh një aktivitet tjetër",
+    "topBar": "Shiritin e cilësimeve",
+    "hideAll": "Fshih të gjitha",
+    "hideSearch": "Fshih kërkimin",
+    "hideSize": "Fshih kalimin e madhësive",
+    "hideFilter": "Fshih butonin e filtrit",
+    "hideMap": "Fshih butonin e hartës",
+    "hideQuickFilter": "Fshih shpejtësinë",
+    "hideSort": "Fshih renditjen",
+    "buttonText": "Teksti i butonit",
+    "buttonBackground": "Sfona e butonit",
+    "buttonColor": "Ngjyra e tekstit të butonit",
+    "search": "Kërkimi i parapërcaktuar"
+  },
+  "types": {
+    "activity": "Aktiviteti",
+    "overview": "Përmbledhja",
+    "location": "Vendi",
+    "locationType": "Vendi + Lloji",
+    "type": "Lloji",
+    "attribute": "Kategoria",
+    "locationAttribute": "Vendi + Kategoria",
+    "poi": "Atraksion turistik"
+  },
+  "reviewForm": {
+    "title": "Vlerëso përvojën tuaj",
+    "button": "Vlerëso tani",
+    "rating": "Vlerësimi",
+    "comment": "Koment",
+    "thanks": "Faleminderit për vlerësimin tuaj!",
+    "next": "Vlerëso rezervimin tjetër",
+    "finish": "Dritarja mbyllet në 3 sekonda"
+  },
+  "user": {
+    "welcome": "Mirë se erdhe në tabelën tënde {name}!",
+    "menu": {
+      "activities": "Aktivitete",
+      "bookings": "Rezervimet",
+      "suppliers": "Furnizuesit",
+      "reviews": "Vlerësimet",
+      "settings": "Cilësimet",
+      "chat": "Bisedë",
+      "logout": "Shkyçu",
+      "login": "Identifikohu"
+    }
+  },
+  "SettingsForm": {
+    "title": "Plotëso profili yt",
+    "titleUpdate": "Përditëso profili yt",
+    "submit": "Dërgo",
+    "phoneNumber": "Të lutem kontrollo përsëri numrin tënd të telefonit",
+    "email": "E-maili nuk është i vlefshëm",
+    "iban": "IBAN nuk është i vlefshëm",
+    "reseller": {
+      "title": "Rishitës",
+      "merchantName": "Emri i tregtarit",
+      "merchantAddress": "Adresa e tregtarit",
+      "bankAccountHolder": "Banesori i llogarisë",
+      "bankAccountIban": "IBAN i llogarisë",
+      "bankAccountHolderAddress": "Adresa e banesori i llogarisë",
+      "contact": {
+        "title": "Kontakct",
+        "name": "Emri",
+        "businessRole": "Roli biznesor",
+        "email": "E-mail",
+        "phone": "Telefoni"
+      }
+    },
+    "payment": {
+      "title": "Metodat e pagesës të ruajtura",
+      "removeTitle": "Hiq metodën e pagesës"
+    }
+  },
+  "Repeater": {
+    "add": "Shto",
+    "remove": "Hiq"
+  },
+  "Table": {
+    "booking": {
+      "refresh": "Rifresko"
+    },
+    "clearFilters": "Rivendos filtrat",
+    "noResults": "Nuk u gjet asnjë rezultat.",
+    "view": {
+      "title": "Shikimi",
+      "adjust": "Përshtat kolonat"
+    },
+    "header": {
+      "bookingId": "Numri i rezervimit",
+      "date": "Data",
+      "bookingDate": "Data e rezervimit",
+      "serviceDate": "Data e aktivitetit",
+      "description": "Përshkrimi",
+      "location": "Vendi",
+      "name": "Emri",
+      "email": "E-mail",
+      "type": "Lloj",
+      "price": "Çmimi nga",
+      "sold": "Shitur",
+      "rating": "Vlerësimi",
+      "supplier": "Furnizuesi",
+      "bookingStatus": "Statusi i rezervimit",
+      "paymentStatus": "Statusi i pagesës",
+      "total": "Totali",
+      "actions": "Veprimet",
+      "duration": "Kohëzgjatja",
+      "validity": "Validiteti",
+      "bookable": "I rezervueshëm",
+      "createdAt": "Krijuar më",
+      "commission": "Komisioni",
+      "status": "Statusi",
+      "reservationSystem": "Sistemi i rezervimit",
+      "bapiId": "BAPI ID",
+      "capiId": "CAPI ID",
+      "notes": "Shënime",
+      "distributor": "Shpërndarës",
+      "website": "Uebfaqja",
+      "validities": "Validiteti"
+    },
+    "actions": {
+      "aria": "Hap Veprimet",
+      "details": "Trego Detajet",
+      "book": "Rezervo tani"
+    },
+    "sort": {
+      "ascending": "Rritës",
+      "descending": "Zbritës",
+      "hide": "Fshih",
+      "bookable": "Trego vetëm aktivitetet e rezervueshme"
+    },
+    "pagination": {
+      "page": "Faqja",
+      "of": "nga",
+      "entriesPerPage": "Hyrjet për faqe",
+      "goToFirstPage": "Shko në faqen e parë",
+      "goToLastPage": "Shko në faqen e fundit",
+      "goToNextPage": "Shko në faqen tjetër",
+      "goToPreviousPage": "Shko në faqen e mëparshme"
+    },
+    "search": {
+      "activities": "Kërko për aktivitete",
+      "bookings": "Kërko për rezervime",
+      "offers": "Kërko për ofertat",
+      "suppliers": "Kërko sipas furnizuesve",
+      "bookingId": "Kërko sipas numrit të rezervimit",
+      "email": "Kërko sipas emailit",
+      "familyName": "Kërko sipas mbiemrit"
+    },
+    "cell": {
+      "bookingStatusActive": "I konfirmuar",
+      "bookingStatusPending": "Në pritje",
+      "bookingStatusCancelled": "Kanceluar",
+      "paymentStatusActive": "E paguar",
+      "paymentStatusPending": "Në pritje",
+      "paymentStatusRefunded": "Të rikthyer"
+    }
+  },
+  "Drawer": {
+    "close": "Mbyll"
+  },
+  "PaymentMethod": {
+    "card": {
+      "new": "Kartë e re",
+      "store": "Të lutem, ruaj të dhënat e mia të kartës së kreditit për një pagesë të shpejtë në të ardhmen.",
+      "endsIn": "Mbyllet në {val}"
+    }
+  },
+  "Activity": {
+    "new": "Aktivitet i ri",
+    "nav": {
+      "general": "Përgjithshme"
+    }
+  },
+  "Offer": {
+    "new": "Ofertë e re"
+  },
+  "Supplier": {
+    "new": "Furnizues i ri"
+  },
+  "UspSlider": {
+    "title": "Pse të rezervosh me Swiss Activities?",
+    "items": [
+      "Zgjedhja më e madhe në Zvicër",
+      "Më shumë se 100'000 klientë të kënaqur",
+      "Opsioni i anullimit pa pagesë",
+      "5 yje për mbështetje për klientët zviceranë",
+      "Rezervo bileta në 90 sekonda"
+    ]
+  },
+  "AppBanner": {
+    "title": "Shkarko tani aplikacionin",
+    "description": "Zbulo Swiss Activities – thjesht dhe shpejt"
+  },
+  "Transport": {
+    "bookTrip": "Rezervo lidhjen",
+    "button": {
+      "confirmTrip": "Konfirmo lidhjen",
+      "confirmTravelers": "Të udhëtaret e konfirmojnë"
+    },
+    "checkDetails": "Kontrollo detajet e lidhjes",
+    "class": {
+      "first": "Klasa e parë",
+      "second": "Klasa e dytë"
+    },
+    "direct": "Drejtpërdrejt",
+    "duration": {
+      "minutes": "Min."
+    },
+    "earlierTrips": "Udhtime të mëparshme",
+    "errorLoadingTrips": "Nuk arritëm të ngarkojmë lidhjet.",
+    "laterTrips": "Udhtime të ardhshme",
+    "legend": "Legjenda",
+    "loadingTrips": "Lidhjet po ngarkohen...",
+    "oneWay": "Vetëm drejtim të njëanshëm",
+    "roundTrip": "Drejtim i ardhshëm/drejtim kthimi",
+    "searchTrips": "Kërko lidhje",
+    "selectOriginDestination": "Zgjidh vendin e nisjes dhe të arritjes për të kërkuar lidhje.",
+    "selectProduct": "Zgjidh opsionin e biletës",
+    "selectTravelers": "Zgjidh udhëtarët",
+    "switch": "Ndrysho",
+    "ticket": "Bilet",
+    "tickets": "Biljeta",
+    "transfer": "Ndërrim",
+    "tripResults": "Lidhjet",
+    "upgradeTo1stClass": "Komoditet shtesë",
+    "upgradeTo1stClassDescription": "Udhëtime në klasën e parë",
+    "cityTicketDescription": "Bileta ditore për transportin lokal",
+    "via": "nga",
+    "travelDate": "Zgjidh datën e udhëtimit",
+    "confirmTravelDate": "Konfirmo datën e udhëtimit",
+    "departure": "Nisja",
+    "arrival": "Ardhja",
+    "locationDisabled": "Shpërndarja e vendndodhjes është e çaktivizuar",
+    "locationError": "Lokacioni nuk mund të identifikohet",
+    "noProductsAvailable": "Nuk ka bileta të disponueshme",
+    "disclaimer": "Të gjitha informacionet pa garanci.",
+    "validity": "Vlefshmëria",
+    "validityOnSelectedRoute": "Vetëm në rrugën e zgjedhur",
+    "validityForConnection": "Vetëm për lidhjen e zgjedhur",
+    "validityForConnectionWith2ndClass": "Vetëm për lidhjen e zgjedhur dhe me biletë të vlefshme për klasën e 2-të",
+    "validityForRouteWith2ndClass": "Vetëm për rrugën e zgjedhur dhe me biletë të vlefshme për klasën e 2-të",
+    "validityGARoutes": "Validhe në të gjitha rrugët GAR",
+    "validityDayClassUpgrade": "Vetëm me kartelën e ditës për gjysmë çmimi, GA ose Swiss Travel Pass (Flex) për klasën e dytë.",
+    "includedIn": "E përfshirë në",
+    "validityDateRange": "{fromDate} deri {toDate}, {toTime}",
+    "validityConnection": "{date} nga {fromTime}, në {toTime}",
+    "classUpgradeOnly": "Vetëm ndërrimi i klasës",
+    "loadingDestination": "Po ngarkohet",
+    "distanceToMeetingPoint": "Pika e takimit",
+    "walking": "Me këmbë",
+    "arrivalInfo": "Koha e arritjes e llogaritur: {walkingTime} ecje + 15 minuta buffer deri në pikën e takimit",
+    "timeBeforeEvent": "{minutes} min. para aktivitetit · {walkingMinutes} min. në këmbë nga stacioni",
+    "tooLateForActivity": "Këto lidhje nuk arrijnë në pikën e takimit në kohë"
+  }
+}

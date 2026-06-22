@@ -2,12 +2,12 @@
 
 import {
   Children,
-  ComponentPropsWithoutRef,
-  ComponentPropsWithRef,
-  ComponentRef,
-  HTMLAttributes,
-  ReactElement,
-  Ref,
+  type ComponentPropsWithoutRef,
+  type ComponentPropsWithRef,
+  type ComponentRef,
+  type HTMLAttributes,
+  type ReactElement,
+  type Ref,
 } from "react";
 import { Menu } from "@base-ui/react/menu";
 import { Check, ChevronRight, Circle } from "lucide-react";

@@ -7,7 +7,7 @@ import type {
 import { useTrips } from "../queries";
 import { useTransportStore } from "../store";
 import { useBookingStore } from "../../store";
-import { TOfferBooking } from "../../types/offerBooking";
+import type { TOfferBooking } from "../../types/offerBooking";
 import { useI18n } from "../../utils/i18n/useI18n";
 import { useGetProductsTicketCategories } from "../../query/transport/productsTicketCategories";
 import { useGetOfferTicketCategories } from "../../query/transport/ticketCategories";

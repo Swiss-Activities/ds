@@ -1,4 +1,4 @@
-import { ChangeEvent, Fragment, useEffect } from "react";
+import { type ChangeEvent, Fragment, useEffect } from "react";
 import unset from "lodash/unset";
 import {
   usePersonalizedOptions,
@@ -10,11 +10,11 @@ import { useBookingStore } from "../../store";
 import { Input } from "../../components/Form/Input";
 import { Select } from "../../components/Form/Select";
 import { Toast } from "../../components/Toast";
-import { TOfferBooking } from "../../types/offerBooking";
-import { TReservation } from "../../types/reservation";
+import type { TOfferBooking } from "../../types/offerBooking";
+import type { TReservation } from "../../types/reservation";
 import { useDebounce } from "../../utils/data/useDebounce";
 import { useI18n } from "../../utils/i18n/useI18n";
-import { dataLayerSend } from "../../utils/thirdParty/dataLayerSend";
+import { useDataLayer } from "../../utils/thirdParty/dataLayerSend";
 
 type InputsProps = {
   index?: number;
@@ -24,6 +24,7 @@ type InputsProps = {
 };
 
 export const Inputs = ({ index, id, scope, ticketCategory }: InputsProps) => {
+  const { dataLayer } = useDataLayer();
   const { t, locale } = useI18n();
   const {
     personalizedOptions,
@@ -40,7 +41,7 @@ export const Inputs = ({ index, id, scope, ticketCategory }: InputsProps) => {
     if (isTransport) {
       sendTransportEvent("transport_add_information_value");
     } else {
-      dataLayerSend({ obj: { event: "add_information_value" } });
+      dataLayer({ obj: { event: "add_information_value" } });
     }
   }, [datalayerDebounce]);
 

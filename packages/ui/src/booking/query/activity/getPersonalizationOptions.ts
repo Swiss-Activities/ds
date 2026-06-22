@@ -1,5 +1,5 @@
 import { useMutation } from "@tanstack/react-query";
-import { TActivity } from "../../types/activity";
+import type { TActivity } from "../../types/activity";
 import { axiosInstance } from "../axios";
 
 const getGetPersonalizationFields = async (

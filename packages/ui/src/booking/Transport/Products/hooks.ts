@@ -2,7 +2,7 @@ import { useMemo } from "react";
 import { useShallow } from "zustand/react/shallow";
 import { useProductsTicketCategories } from "../Tickets/hooks";
 import { useTransportStore } from "../store";
-import {
+import type {
   ProductWithTicketCategories,
   TransportAreaCode,
   TransportTicketCategory,

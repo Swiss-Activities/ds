@@ -13,12 +13,13 @@ import { getPageUrl } from "../../../utils/content/loaders";
 import { getGaCookie } from "../../../utils/cookies/getCookie";
 import { useWidget } from "../../../utils/env/useWidget";
 import { useI18n } from "../../../utils/i18n/useI18n";
-import { Activities, dataLayerSend } from "../../../utils/thirdParty/dataLayerSend";
+import { type Activities, useDataLayer } from "../../../utils/thirdParty/dataLayerSend";
 import { scrollToTarget } from "../../../utils/ui/scrollToTarget";
 import { useUser } from "../../../utils/user/useUser";
 import { usePostPaymentAttempt } from "../../../query/payment/paymentAttempt";
 
 export const usePayyo = () => {
+  const { dataLayer } = useDataLayer();
   const { locale } = useI18n();
   const { user } = useUser();
   const isWidget = useWidget();
@@ -79,7 +80,7 @@ export const usePayyo = () => {
       ? window.location.href
       : returnUrl || `${baseUrl}${getPageUrl("booking", locale)}`;
 
-    dataLayerSend({
+    dataLayer({
       obj: {
         event: "payment_initiate",
         payment_type: dataPayyo.paymentMethod,

@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { AdyenCheckout, Dropin, SubmitData } from "@adyen/adyen-web/auto";
+import { AdyenCheckout, Dropin, type SubmitData } from "@adyen/adyen-web/auto";
 import "@adyen/adyen-web/styles/adyen.css";
 import { useShallow } from "zustand/react/shallow";
 import { useCartStore } from "../../../Cart/store";
@@ -14,13 +14,13 @@ import { useBookingStore } from "../../../store";
 import { useDrawerStore } from "../../../store/drawer";
 import { Skeleton } from "@swiss-activities/ui";
 import i18n from "../../../data/i18n";
-import { TBooking } from "../../../types/booking";
+import type { TBooking } from "../../../types/booking";
 import { getPageUrl } from "../../../utils/content/loaders";
 import { getGaCookie } from "../../../utils/cookies/getCookie";
 import { cn } from "../../../utils/css/cn";
 import { useWidget } from "../../../utils/env/useWidget";
 import { useI18n } from "../../../utils/i18n/useI18n";
-import { Activities, dataLayerSend } from "../../../utils/thirdParty/dataLayerSend";
+import { type Activities, useDataLayer } from "../../../utils/thirdParty/dataLayerSend";
 import { useUser } from "../../../utils/user/useUser";
 import { useGetPaymentMethods } from "../../../query/payment/getPaymentMethods";
 import { useMakePayment } from "../../../query/payment/makePayment";
@@ -28,6 +28,7 @@ import { useMakePaymentDetails } from "../../../query/payment/makePaymentDetails
 import { useValidateApplePayMerchant } from "../../../query/payment/validateApplePayMerchant";
 
 export const PaymentAdyen = () => {
+  const { dataLayer } = useDataLayer();
   const { locale } = useI18n();
   const { user, isLoading: userIsLoading } = useUser();
   const adyenLocale = i18n.mapLocaleToAdyen(locale);
@@ -83,7 +84,7 @@ export const PaymentAdyen = () => {
   const handlePayment = async (booking: TBooking, state: SubmitData) => {
     const successReturnUrl = getRedirectUrl(booking);
 
-    dataLayerSend({
+    dataLayer({
       obj: {
         event: "payment_initiate",
         payment_type: state.data.paymentMethod?.type || "unknown",
@@ -223,7 +224,7 @@ export const PaymentAdyen = () => {
           instantPaymentTypes: ["applepay", "googlepay", "paywithgoogle"],
           openFirstPaymentMethod: false,
           onSelect(paymentMethod) {
-            dataLayerSend({
+            dataLayer({
               obj: {
                 event: "add_payment_info",
                 payment_type: paymentMethod?.props?.type || "unknown",

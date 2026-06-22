@@ -1,4 +1,4 @@
-import { ChangeEvent, Fragment } from "react";
+import { type ChangeEvent, Fragment } from "react";
 import { X } from "lucide-react";
 import { Card } from "../Card";
 import { ClassPicker } from "../ClassPicker";

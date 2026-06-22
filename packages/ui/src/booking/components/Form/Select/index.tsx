@@ -1,9 +1,9 @@
 import {
   useEffect,
   useState,
-  ChangeEvent,
+  type ChangeEvent,
   useMemo,
-  ReactNode,
+  type ReactNode,
   useRef,
 } from "react";
 import type { ComponentProps } from "react";

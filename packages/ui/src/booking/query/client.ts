@@ -1,5 +1,4 @@
 import { useMemo } from "react";
-import { withScope } from "@sentry/nextjs";
 import { MutationCache, QueryCache, QueryClient } from "@tanstack/react-query";
 import { useBookingStore } from "../store";
 import { useSearchStore } from "../store/search";
@@ -68,10 +67,7 @@ export const useQueryClient = () => {
         queryCache: new QueryCache({
           onError: (err, query) => {
             const fingerprint = [query.queryHash.replaceAll(/[0-9]/g, "0")];
-            withScope((scope) => {
-              scope.setContext("query", { queryHash: query.queryHash });
-              logError(err, fingerprint);
-            });
+            logError(err, fingerprint);
           },
         }),
         mutationCache: new MutationCache({
@@ -83,13 +79,7 @@ export const useQueryClient = () => {
                   mutation.mutationId.toString().replaceAll(/[0-9]/g, "0"),
                 ];
 
-            withScope((scope) => {
-              scope.setContext("mutation", {
-                mutationId: mutation.mutationId,
-                variables: mutation.state.variables,
-              });
-              logError(err, fingerprint);
-            });
+            logError(err, fingerprint);
           },
         }),
       }),

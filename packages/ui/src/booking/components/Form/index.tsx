@@ -1,5 +1,5 @@
-import { ReactNode, useRef, useEffect, FormEvent } from "react";
-import { CountryCode } from "libphonenumber-js";
+import { type ReactNode, useRef, useEffect, type FormEvent } from "react";
+import type { CountryCode } from "libphonenumber-js";
 import { cn } from "../../utils/css/cn";
 import { useI18n } from "../../utils/i18n/useI18n";
 import { checkPhoneNumber } from "../../utils/phone/checkPhoneNumber";

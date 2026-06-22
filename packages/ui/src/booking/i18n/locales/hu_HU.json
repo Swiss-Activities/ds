@@ -1,0 +1,1799 @@
+{
+  "general": {
+    "accountAdvantages": "Hogy kedvezményekhez és egyéb előnyökhöz juss, hozz létre egy fiókot vagy jelentkezz be.",
+    "activityBook": "Tevékenység lefoglalása",
+    "addTicket": "Jegyet hozzáadni",
+    "adult": "{val} Felnőtt",
+    "adults": "{val} Felnőttek",
+    "ageChoose": "Kor választása",
+    "ageFrom": "{val} évtől",
+    "ageOld": "{val} éves",
+    "ageUnder": "{val} év alatti",
+    "all": "Összes",
+    "allReviews": "Összes értékelés",
+    "backToBookings": "Vissza a foglalásokhoz",
+    "bookAsGuest": "Vásárlást vendégként fejezed be.",
+    "cancel": "Mégse",
+    "cancelled": "Törölve",
+    "cartAmount": "Kosár értéke",
+    "child": "{val} Gyermek",
+    "children": "{val} Gyerekek",
+    "chooseSelection": "Választás megerősítése",
+    "confirm": "Megerősítés",
+    "confirmCancel": "A lemondás megerősítése",
+    "contact": "Kapcsolat",
+    "copyUrl": "URL másolása",
+    "couple": "Pár",
+    "customerServiceFee": "Szolgáltatási díj",
+    "data": "Adatok",
+    "date": "Dátum",
+    "dateChoose": "Dátum választása",
+    "delete": "Törlés",
+    "didYouMean": "A <suggestion>{email}</suggestion> email címet szeretted volna?",
+    "duplicate": "Duplikálás",
+    "emailsDontMatch": "A megadott email címek nem egyeznek.",
+    "export": "Exportálás",
+    "faqType": "Gyakran ismételt kérdések {type} Svájcban",
+    "from": "Tól",
+    "group": "Csoport",
+    "helpfulQuestion": "Hasznos?",
+    "informationPlural": "Információk",
+    "language": "Nyelv",
+    "loginOrRegister": "Bejelentkezés vagy Regisztráció",
+    "manageBookings": "Foglalások kezelése",
+    "mobileAppAddon": "Töltsd le most mobilalkalmazásunkat, és kényelmesen kezeld foglalásaidat, gyorsan férj hozzá jegyeidhez és találd meg a következő kalandodat.",
+    "mostImportantInSummary": "A legfontosabbak röviden",
+    "noResults": "Sajnálom, nem találtunk eredményt a keresőkifejezésedre",
+    "noReviewsYet": "Eddig nincs értékelés",
+    "notes": "Megjegyzések",
+    "oneMonth": "1 hónap",
+    "openChat": "Chat megnyitása",
+    "order": "Sorrend",
+    "partSum": "Részösszeg",
+    "participants": "Résztvevők",
+    "participantsChoose": "Résztvevők választása",
+    "past": "Múlt",
+    "personalizeTickets": "Jegyek testreszabása",
+    "pleaseSelect": "Kérlek válassz",
+    "pleaseSelectItem": "Kérlek válassz {val}",
+    "questionsChatActivity": "Van még kérdésed ezzel az aktivitással kapcsolatban? Chatelj velünk",
+    "questionsChatBooking": "Van még kérdésed a foglalással kapcsolatban? Chatelj velünk",
+    "raw": "Nyers",
+    "rebate": "Kedvezmény",
+    "recaptcha": "Ez a weboldal reCAPTCHA védelme alatt áll. A Google\n<a href=\"https://policies.google.com/privacy\" target=\"_blank\">Adatvédelmi tájékoztatója</a> és\n<a href=\"https://policies.google.com/terms\" target=\"_blank\">Szolgáltatási feltételek</a> vonatkoznak rá.",
+    "remove": "Eltávolítás",
+    "removeFromCart": "Eltávolítás a kosárból",
+    "reset": "Visszaállítás",
+    "searchNow": "Keresés most",
+    "single": "Egyes",
+    "soldOut": "Kifogyott",
+    "somethingWentWrongContact": "Sajnáljuk, valami hiba történt. Kérlek, próbáld újra, vagy vedd fel a kapcsolatot a támogatással.",
+    "successfullySaved": "Sikeresen mentve",
+    "ticket": "Jegy",
+    "tickets": "Jegyek",
+    "to": "Ig",
+    "currentLocation": "Aktuális hely",
+    "toDashboard": "Saját foglalásaim",
+    "translate": "Fordítás",
+    "tryAgain": "Próbáld újra",
+    "upcoming": "Közelgő",
+    "when": "Mikor",
+    "who": "Ki",
+    "wrongDate": "Valami nem stimmel a dátummal: Kérlek ellenőrizd, és válaszd újra.",
+    "wrongDateParticipant": "A résztvevő születési dátuma nem egyezik az ajánlatban szereplő életkorral.",
+    "today": "Ma",
+    "apply": "Alkalmaz"
+  },
+  "aria": {
+    "forward": "Tovább",
+    "backward": "Vissza"
+  },
+  "auth0": {
+    "accept": "Elfogadom a [Használati feltételeket]({link})",
+    "error": "Kérlek, fogadd el a használati feltételeket",
+    "resetPasswordHint": "Nem érkezett e-mail? Ellenőrizd a spam mappádat. Ha Apple vagy Google fiókkal regisztráltál, kérlek használd ezt a bejelentkezési módot."
+  },
+  "menu": {
+    "menu": "Menü",
+    "search": "Keresés",
+    "travelGuide": "Utazástervező",
+    "travelRoutes": "Útvonalak",
+    "contactus": "Lépj velünk kapcsolatba",
+    "switzerland": "Svájc",
+    "help": "Csevegés",
+    "voucher": "Ajándékutalvány vásárlás",
+    "voucherSm": "Ajándékutalvány",
+    "partners": "Partnerek",
+    "provider": "Szolgáltatók",
+    "affiliate": "Affiliate partnerek"
+  },
+  "chat": {
+    "chats": "Minden csevegés",
+    "newChat": "Új csevegés",
+    "noChatsYet": "Még nincs csevegés",
+    "typeMessage": "Üzenet megadása",
+    "welcome": "Helló és üdvözlünk a Swiss Activities-nél! Housibot vagyok, és örömmel segítek kérdéseidben.",
+    "welcomeReview": "Helló! Milyen volt a tapasztalatod? Housibot vagyok és örömmel segítek a visszajelzésed megosztásában."
+  },
+  "supportBanner": {
+    "title": "Segíthetek megtalálni a megfelelő síiskolát?",
+    "placeholder": "Hogyan tudunk segíteni neked?",
+    "send": "Küldés"
+  },
+  "pages": {
+    "404": {
+      "title": "Az oldal nem található.",
+      "description": "Ez az oldal nem létezik.",
+      "button": "Vissza a főoldalra",
+      "search": "Keresés indítása"
+    },
+    "home": {
+      "title": "Swiss Activities - Szabadidős tevékenységek keresése Svájcban",
+      "description": "A Swiss Activities a te célpontod a svájci szabadidős tevékenységekhez. Fedezd fel, hasonlítsd össze és foglalj le számtalan szabadidős tevékenységet.",
+      "gatewayCards": {
+        "categories": {
+          "castlesRuins": "Kastély / Rom",
+          "castleEvents": "Kastélyes esemény",
+          "exhibitions": "Kiállítás",
+          "fireplaces": "Tűzrakó hely",
+          "movies": "Film",
+          "museums": "Múzeum",
+          "playgrounds": "Játszótér",
+          "swimmingBathing": "Úszás és fürdés"
+        },
+        "dateRange": {
+          "from": "Tól",
+          "until": "Ig"
+        },
+        "distance": {
+          "unit": "km"
+        }
+      },
+      "gatewayDetail": {
+        "back": "Vissza",
+        "moreInfo": "További információk",
+        "source": "Forrást megnyitni",
+        "labels": {
+          "admission": "Belépés",
+          "address": "Cím",
+          "ageRating": "Kor",
+          "bookTickets": "Jegyek foglalása",
+          "canton": "Kanton",
+          "cast": "Szereplők",
+          "category": "Kategória",
+          "cinema": "Mozi",
+          "countryYear": "Ország / Év",
+          "dateRange": "Időtartam",
+          "director": "Rendező",
+          "duration": "Időtartam",
+          "entryFeeAdult": "Felnőttek",
+          "entryFeeChild": "Gyerekek",
+          "foundedYear": "Alapítva",
+          "genres": "Műfajok",
+          "location": "Hely",
+          "museumCategory": "Múzeum típusa",
+          "openTrailer": "Trailer megnyitása",
+          "openingHours": "Nyitvatartási idő",
+          "phone": "Telefon",
+          "poolLength": "Medence hossza",
+          "trailer": "Előzetes",
+          "venue": "Helyszín",
+          "waterType": "Víz típus"
+        },
+        "sections": {
+          "amenities": "Felszereltség",
+          "badges": "Ajánlások",
+          "information": "Információk",
+          "prices": "Árak",
+          "showtimes": "Előadások",
+          "venue": "Helyszín"
+        },
+        "amenities": {
+          "capacityPersons": "Kapacitás",
+          "hasBenches": "Padok",
+          "hasChangingRooms": "Öltözők",
+          "hasDivingBoard": "Ugródeszka",
+          "hasFirewood": "Tűzifa",
+          "hasFoodService": "Ellátás",
+          "hasGrillGrate": "Grillrács",
+          "hasKidsPool": "Gyermekmedence",
+          "hasLifeguard": "Felügyelő",
+          "hasLockers": "Széfek",
+          "hasPlaygroundNearby": "Játszótér a közelben",
+          "hasShowers": "Zuhanyzók",
+          "hasSlide": "Csúszda",
+          "hasShelter": "Fedett hely",
+          "hasTable": "Asztal",
+          "hasToilet": "Toillete",
+          "hasWater": "Víz"
+        },
+        "waterTypes": {
+          "indoorPool": "Beltéri medence",
+          "lake": "Tó",
+          "outdoorPool": "Kültéri medence",
+          "pool": "Medence",
+          "river": "Folyó"
+        }
+      }
+    },
+    "s": {
+      "title": "Swiss Activities - Szabadidős tevékenységek keresése és foglalása",
+      "description": "A Swiss Activities a te célpontod a svájci szabadidős tevékenységekhez. Fedezd fel, hasonlítsd össze és foglalj le számtalan szabadidős tevékenységet.",
+      "sort": {
+        "distance": {
+          "notSupported": "A helymeghatározási szolgáltatásokat a böngésződ nem támogatja. A relevancia szerinti rendezés kerül alkalmazásra.",
+          "permissionDenied": "A távolság szerinti rendezéshez kérlek, engedélyezd a böngésződ beállításaiban a helymeghatározási hozzáférést, és frissítsd az oldalt.",
+          "positionUnavailable": "A helymeghatározási információk nem állnak rendelkezésre.",
+          "timeout": "Időkorlát lépett fel a helymeghatározás során.",
+          "unknownError": "Ismeretlen hiba lépett fel.",
+          "fallbackMessage": "A rendezés a relevancia szerint kerül alkalmazásra.",
+          "errorPrefix": "A helymeghatározás nem történt meg. "
+        }
+      }
+    },
+    "chat": {
+      "title": "Swiss Activities Chat",
+      "description": "A Swiss Activities a te helyed a svájci szabadidős tevékenységekhez. Fedezd fel, hasonlítsd össze és foglalj le számtalan szabadidős tevékenységet."
+    },
+    "transport": {
+      "title": "Svájci vonatjegyek, bérletek és napijegyek | Swiss Travel Pass, SBB Spartageskarte",
+      "description": "Hasonlítsd össze és foglald le a vonatjegyeket, Swiss Travel Pass-t, Halbtaxot, SBB Spartageskarte-kat és regionális bérleteket az egész Svájcra. Azonnal mobiljegyként a telefonodra.",
+      "trust": {
+        "partners": "Hivatalos partner",
+        "ratingValue": "4.8",
+        "ratingLabel": "<b>400 000</b> elégedett utas",
+        "ratingShortLabel": "<b>400 000</b>+ utazó"
+      },
+      "discountMap": {
+        "title": "Itt spórolhatsz a bérleteddel",
+        "subtitle": "Liftek, hajók és legjobb kirándulások — válassz egy bérletet és nézd, hol van lehetőség.",
+        "free": "Belépőjegyek tartalmazva",
+        "discount50": "−50 %",
+        "discount25": "−25 %",
+        "noDiscount": "Nincs kedvezmény",
+        "altitude": "{m} m tengerszint felett.",
+        "moreInfo": "További részletek",
+        "selectPass": "Bérlet kiválasztása",
+        "selectCategory": "Kategória kiválasztása",
+        "categories": {
+          "mountain": "Liftek",
+          "lake": "Tavak és hajók",
+          "museum": "Múzeumok"
+        },
+        "airports": {
+          "zrh": "Zürich",
+          "gva": "Genf"
+        },
+        "regions": {
+          "bernerOberland": "Berner Oberland",
+          "jungfrau": "Jungfrau",
+          "interlaken": "Interlaken",
+          "zentralschweiz": "Közép-Svájc",
+          "ostschweiz": "Kelet-Svájc",
+          "waadt": "Vaud",
+          "engadin": "Engadin",
+          "wallis": "Valais",
+          "tessin": "Tessin",
+          "genferseeregion": "Genfi-tó környéke",
+          "zuerich": "Zürich",
+          "mittelland": "Középsvájc",
+          "luzern": "Lucerna",
+          "basel": "Basel",
+          "bern": "Bern",
+          "lausanne": "Lausanne",
+          "geneve": "Genf",
+          "zermatt": "Zermatt",
+          "fribourg": "Fribourg",
+          "graubuenden": "Graubünden"
+        }
+      },
+      "hero": {
+        "title": "Vonaljegyek az egész",
+        "titleAccent": "Svájc",
+        "lede": "Vonaljegyek, napijegyek és kedvezményes ajánlatok a SBB-től – azonnal mobiljegyként a telefonodra.",
+        "subtitle": "Vonaljegyek, napijegyek és kedvezményes ajánlatok a SBB-től – azonnal mobiljegyként a telefonodra.",
+        "searchTitle": "Kapcsolat keresése",
+        "searchMeta": "Vasútállomás · Dátum · Utasok",
+        "fromPlaceholder": "Kiindulási állomás/indulási hely",
+        "toPlaceholder": "Célállomás/célhely",
+        "badges": {
+          "rating": "4.8 / 5 · <b>400'000</b> értékelés",
+          "partner": "Hivatalos partner SBB"
+        },
+        "usps": {
+          "customers": {
+            "title": "<b>400 000</b> boldog ügyfél",
+            "subline": "Kezdettől fogva 2021 óta a Swiss Activities-t bízzák"
+          },
+          "saver": {
+            "title": "Spórolj 50%-ig",
+            "subline": "A SBB spórolós jegyeivel és napijegyeivel"
+          },
+          "mobile": {
+            "title": "Azonnal mobiljegyként",
+            "subline": "Közvetlenül a telefonodra, nincs SBB-bejelentkezés szükséges"
+          },
+          "earlyBird": {
+            "title": "Kedvezmények előre foglalóknak",
+            "subline": "Tervezd meg előre és vásárold meg a SBB spórolós jegyeit és napijegyeit"
+          }
+        }
+      },
+      "benefits": {
+        "title": "Előnyeid",
+        "discount": {
+          "eyebrow": "Kedvezményes jegyek",
+          "title": "Takaríts meg akár 40%-ot",
+          "subline": "SBB kedvezmények és napi jegyek",
+          "badge": "Legnépszerűbb"
+        }
+      },
+      "passes": {
+        "title": "SBB- és regionális bérletek",
+        "subtitle": "Hasonlítsd össze a több napos bérleteket, napijegyeket és regionális bérleteket – válaszd ki azt a bérletet, ami a legtöbbet hozza ki számodra.",
+        "tabs": {
+          "multiDay": "Többnapos bérletek",
+          "dayPass": "Napijegyek",
+          "regional": "Regionális bérletek"
+        },
+        "buy": "Most vásárolj",
+        "from": "tól",
+        "moreInfo": "További info",
+        "seeDiscounts": "Az összes kedvezmény megtekintése",
+        "viewAllByTab": {
+          "multiDay": "Az összes vonatbérlet megtekintése",
+          "dayPass": "Az összes SBB napijegy megtekintése",
+          "regional": "Az összes regionális bérlet megtekintése"
+        },
+        "empty": "Jelenleg nincs elérhető termék – nézd meg a többi kategóriát.",
+        "descriptions": {
+          "fallback-stp": "Svájc-szerte vonattal, busszal és hajóval – ingyenes múzeumi belépők is benne.",
+          "fallback-stpf": "A tömegközlekedést választható napokon használhatod – ingyenes múzeumi belépőkkel együtt.",
+          "fallback-shfc": "Egy hónapon át fél áron a vonatokra, buszokra, hajókra és liftekre.",
+          "fallback-halbtax": "Egész nap szabadon utazhatsz Svájc-szerte – az Halbtaxoddal.",
+          "fallback-spar": "Napijegy legjobb áron előre foglaláskor – korlátozott mennyiség naponta.",
+          "fallback-ga": "Teljes mobilitás egy napra – mint egy GA, csak 24 órára.",
+          "fallback-tell": "Szabad utazás Közép-Svájcban: liftek, hajóutak és tömegközlekedés benne.",
+          "fallback-bo": "Fedezd fel a Jungfrau és Interlaken régiót – vonatok, hajók és liftek egy bérlettel.",
+          "fallback-jtp": "Top of Europe régió: liftek, tömegközlekedés és látnivalók Grindelwald, Wengen, Mürren környékén."
+        },
+        "usps": {
+          "1330": [
+            "Harder Kulm és Brienzer Rothorn benne",
+            "Akár −50 % a Grindelwald-Wengen síterületeken",
+            "Tömegközlekedés és liftek a Jungfrau régióban"
+          ],
+          "1438": [
+            "First, Schynige Platte és Niesen benne",
+            "−25 % a Jungfraujoch Top of Europe-ra",
+            "Vonat, hajó és liftek egy bérlettel"
+          ],
+          "1440": [
+            "1 hónap fél áron Svájc-szerte",
+            "Vonatra, buszra, hajóra és liftekre",
+            "Akár SBB spórolós jegyekre is"
+          ],
+          "1447": [
+            "Vonat, busz és hajó ingyenes Svájc-szerte",
+            "Akár −50 % liftekre (Jungfraujoch −25 %)",
+            "Több mint 500 múzeum ingyenesen"
+          ],
+          "1448": [
+            "Választható napokon aktiválható házunk köré",
+            "Akár −50 % liftekre, buszokra, hajókra",
+            "Több mint 500 múzeum ingyenesen"
+          ],
+          "1450": [
+            "Pilatus, Rigi és Stanserhorn benne van",
+            "Hajók a Vierwaldstättersee-n ingyen",
+            "Vonaljegy, busz és liftek Közép-Svájc"
+          ],
+          "1664": [
+            "Napijegy CHF 29-tól",
+            "Akár −70 % előrendeléskor",
+            "Korlátozott mennyiség naponta"
+          ],
+          "1671": [
+            "Gyerekek 6–16 éves korig családi áron",
+            "Svájc-szerte ÖSSZES SBB kapcsolat",
+            "Tökéletes családi kirándulásokhoz"
+          ],
+          "1676": [
+            "<b>1</b> nap ingyenes utazás Halbtaxoddal",
+            "Svájcszerte SBB kapcsolatokon",
+            "Olcsóbb, mint a több egyedi jegy"
+          ]
+        },
+        "soldCount": "{count} foglalva",
+        "reviews": "({count})",
+        "discounts": {
+          "1330": "Harder Kulm benne.",
+          "1438": "First és Niesen benne.",
+          "1440": "Fél áron",
+          "1447": "Liftek −50 %",
+          "1448": "Liftek −50 %",
+          "1450": "Pilatus és Rigi benne.",
+          "1664": "Akár −70 %",
+          "1671": "Családi ár"
+        },
+        "benefits": {
+          "includedHeading": "Benne van",
+          "discountedHeading": "Kedvezmények",
+          "expand": "Az összes kedvezmény megtekintése",
+          "collapse": "Kevesebb megjelenítése",
+          "items": {
+            "1330": {
+              "included": [
+                "Harder Kulm és Brienzer Rothorn",
+                "ÖV Jungfrau régió (vonat, busz, hajó)"
+              ],
+              "discounted": [
+                "Grindelwald-Wengen síterület −50 %-ig",
+                "Mürren-Schilthorn síterület −50 %-ig",
+                "Jungfraujoch - Európa teteje −25 %"
+              ]
+            },
+            "1438": {
+              "included": [
+                "First, Schynige Platte és Niesen",
+                "Brienzer Rothorn és Stockhorn",
+                "Vasutak, hajó és libegők a Jungfrau régióban"
+              ],
+              "discounted": [
+                "Jungfraujoch - Európa teteje −25 %",
+                "Schilthorn (James Bond) −50 %"
+              ]
+            },
+            "1440": {
+              "included": [],
+              "discounted": [
+                "50 % a vonat-, busz- és hajójegyekre",
+                "50 % a liftekre",
+                "Szintén kombinálható a SBB spórolós jegyeivel"
+              ]
+            },
+            "1447": {
+              "included": [
+                "Vonat, busz és hajó Svájc-szerte",
+                "Több mint 500 múzeum",
+                "Tömegközlekedés 90 svájci városban"
+              ],
+              "discounted": [
+                "Liftek akár −50 %",
+                "Jungfraujoch Top of Europe −25 %",
+                "RailAway ajánlatok a SBB-től −30 %"
+              ]
+            },
+            "1448": {
+              "included": [
+                "Vonat, busz és hajó a választható napokon",
+                "Több mint 500 múzeum",
+                "Tömegközlekedés 90 svájci városban"
+              ],
+              "discounted": [
+                "Liftek akár −50 %",
+                "Jungfraujoch Top of Europe −25 %",
+                "RailAway ajánlatok a SBB-től −30 %"
+              ]
+            },
+            "1450": {
+              "included": [
+                "Pilatus, Rigi és Stanserhorn",
+                "Hajók a Vierwaldstättersee-n",
+                "Vasutak, buszok és libegők Közép-Svájcban"
+              ],
+              "discounted": []
+            },
+            "1664": {
+              "included": [
+                "1 nap ingyenes utazás Svájc-szerte"
+              ],
+              "discounted": [
+                "Napijegy CHF 29-tól",
+                "Akár −70 % előrendeléskor"
+              ]
+            },
+            "1671": {
+              "included": [
+                "Svájc-szerte SBB-járatok 1 napra"
+              ],
+              "discounted": [
+                "Családi ár a 6–16 éves gyerekeknek",
+                "−50 % a normál napi jegyekből"
+              ]
+            },
+            "1676": {
+              "included": [
+                "1 nap ingyenes utazás Halbtaxoddal"
+              ],
+              "discounted": [
+                "Olcsóbb, mint több külön jegy"
+              ]
+            }
+          }
+        }
+      },
+      "articles": {
+        "title": "Érdekes cikkek a vonatvilágról",
+        "subtitle": "Tippek, összehasonlítások és praktikus tudnivalók SBB-jegyekről, Travel Pass-okról és a svájci tömegközlekedésről.",
+        "read": "Cikk olvasása",
+        "tag": "Magazin"
+      },
+      "dayPasses": {
+        "title": "Népszerű napi jegyek",
+        "subtitle": "Egész nap szabad utazás – könnyen kombinálható a jegyeddel.",
+        "halbtax": {
+          "title": "Napi jegy félárra",
+          "description": "Egész nap szabad utazás Svájc-szerte – a féláras jegyeddel. Ideális napos kirándulásokhoz és hegyvidékekhez.",
+          "fromPrice": "tól CHF 52.–",
+          "cta": "Kapcsolat keresése"
+        },
+        "spar": {
+          "title": "Spórolós napi jegy",
+          "description": "Napi jegy a legjobb áron korai foglalás esetén. Napi korlátozott mennyiségben – aki korán foglal, olcsóbban utazik.",
+          "fromPrice": "tól CHF 29.–",
+          "cta": "Kapcsolat keresése"
+        }
+      },
+      "groups": {
+        "mountains": "Hegyi élmények vonattal elérhetők",
+        "dayTrips": "Népszerű napi kirándulások Zürichből, Bernből és Baselből",
+        "cities": "Városok felfedezése: Vonat + Élmény",
+        "cityPasses": "City Pass: Egy kártya az egész városra"
+      },
+      "faq": {
+        "title": "Gyakori kérdések SBB-jegyekkel kapcsolatban",
+        "items": [
+          {
+            "q": "Lemondhatom a jegyemet?",
+            "a": "<p><strong>Útvonal jegyeket</strong> akár az utazás előtti napon ingyen lemondhatod – ezt közvetlenül a foglalási cockpitben a swissactivities.com oldalon tudod megtenni.</p><p>A <strong><a href=\"/sbb-tageskarten/spartageskarte-sbb/\">Spórolós napi jegyek</a></strong> és spórolós jegyek lemondása sajnos nem lehetséges. Ezek a kiválasztott dátumhoz kötöttek – a vásárlás előtt egy tiszta figyelmeztetés jelenik meg a foglalási oldalon.</p>"
+          },
+          {
+            "q": "Az SBB-jegyek ugyanazok, mint a SBB-ablaknál?",
+            "a": "Igen, ugyanolyan hivatalos SBB-jegyeket kapsz, mint az ablaknál vagy az SBB alkalmazásban – felár nélkül. Az <a href=\"/sbb-tageskarten/\">SBB napi jegyek</a> és <a href=\"/bahnpaesse/\">vasúti bérletek</a> is pontosan az SBB eredeti termékei."
+          },
+          {
+            "q": "Mennyi idő alatt kapom meg a jegyemet?",
+            "a": "Azonnal. Sikeres foglalás után e-mailben és a foglalási cockpitben a swissactivities.com oldalon megkapod a mobiljegyet. SBB-bejelentkezés nem szükséges – közvetlenül a vonaton meg kell mutatnod."
+          },
+          {
+            "q": "Feltudom tölteni a féláras vagy GA-t?",
+            "a": "Igen, a foglalás lépésénél ki tudod választani a kedvezményes bérletedet – az ár automatikusan igazodik. Ha csak féláras jegyed van, és egész nap utazol, gyakran érdemesebb a <a href=\"/sbb-tageskarten/sbb-tageskarte-halbtax/\">SBB féláras napi jegyére</a> váltani, mint több külön jegyre."
+          },
+          {
+            "q": "Mi van, ha késik a vonatom?",
+            "a": "Az útvonal jegyed érvényes a következő járatra is – csak szállj fel a legközelebbi, megfelelő vonatra. Ha több mint egy órát késik, a SBB-nél kérhetsz visszatérítést."
+          },
+          {
+            "q": "Megéri a Swiss Travel Pass vagy egy spórolós napi jegy?",
+            "a": "<p>A szabály: Aki legalább három egymást követő napon sokat utazik vonattal, busszal és hajóval, valamint szívesen látogat múzeumokat, az jobban jár a <a href=\"/bahnpaesse/swiss-travel-pass-kaufen/\">Swiss Travel Pass-szal</a>. Több mint 500 múzeum, tömegközlekedés 90 városban és hegyi felvonók az −50 % kedvezménnyel vannak benne.</p><p>Egyszeri napi kirándulásokhoz a <a href=\"/sbb-tageskarten/spartageskarte-sbb/\">SBB spórolós napi jegy</a> tól CHF 29 szinte mindig a legolcsóbb lehetőség – csak időben foglalj.</p>"
+          },
+          {
+            "q": "Melyik regionális bérlet illik az utazásomhoz?",
+            "a": "<p>Az Interlaken / Grindelwald / Wengen régióhoz a <a href=\"/bahnpaesse/berner-oberland-pass/\">Berner Oberland Pass</a> vagy télen a <a href=\"/bahnpaesse/jungfrau-travel-pass-winter/\">Jungfrau Travel Pass</a> éri meg – mindkettő tartalmazza a hegyi felvonókat, a tömegközlekedést és a régió hajóit.</p><p>A Vierwaldstättersee környékén a <a href=\"/bahnpaesse/sbb-tellpass/\">Tell-Pass</a> ideális: Pilatus, Rigi, Stanserhorn és az összes hajó is benne van.</p>"
+          }
+        ]
+      }
+    },
+    "about_us": {
+      "title": "Rólunk - Swiss Activities",
+      "description": "A Swiss Activities megosztja a szabadidős tevékenységek iránti szenvedélyét.",
+      "hero": {
+        "title": "Svájci szabadidős tevékenységek keresése",
+        "text": "A Swiss Activities a te célpontod a svájci szabadidős tevékenységekhez. A Swiss Activities-en számtalan szabadidős tevékenységet találsz, amelyeket összehasonlíthatsz és néhány kattintással foglalhatsz. Még sosem volt ennyire könnyű szabadidős tevékenységeket találni Svájcban."
+      },
+      "who": {
+        "title": "Kik vagyunk",
+        "text": "Egy motivált csapat vagyunk, aki lelkesedik a svájci szabadidős tevékenységek iránt. Ismerjük az országot és az embereket. Az új tevékenységek kipróbálása a szenvedélyünk. Ezért hoztuk létre a Swiss Activities-t."
+      },
+      "start": {
+        "title": "Kezdet",
+        "text": "Amikor 2020-ban észrevettük, hogy már nem tudunk utazni, keresni kezdtünk egy svájci szabadidős tevékenységekre orientált platformot a svájciak számára, de nem találtunk ilyet. Ez volt a Swiss Activities szabadidős tevékenységek célpont indítása.",
+        "milestones": {
+          "march_2020": {
+            "date": "2020 március",
+            "title": "A Swiss Activities üzleti modelljének indítása"
+          },
+          "march_2021": {
+            "date": "2021 március",
+            "title": "Cég alapítása"
+          },
+          "june_2021": {
+            "date": "2021 június",
+            "title": "Saját platform elindítása"
+          },
+          "september_2021": {
+            "date": "2021 szeptember",
+            "title": "500 élő és foglalható tevékenység aktiválva"
+          },
+          "december_2021": {
+            "date": "2021 december",
+            "title": "Pre-seed tőkebevonási kör befejezve"
+          },
+          "march_2022": {
+            "date": "2021 március",
+            "title": "Affiliate program elindítása"
+          },
+          "may_2022": {
+            "date": "2021 május",
+            "title": "B2B partnerprogram elindítása"
+          }
+        }
+      },
+      "partner": {
+        "title": "Segítünk neked új ügyfelek megszerzésében",
+        "text": "A Swiss Activities segít neked új ügyfelek megtalálásában. Nap mint nap azon dolgozunk, hogy a Swiss Activities-t Svájc legnagyobb szabadidős tevékenységek célpontjává tegyük. Ezrek keresnek fel naponta a www.swissactivities.com oldalon szabadidős tevékenységeket keresve Svájcban. Azáltal, hogy bemutatod ajánlatodat a Swiss Activities-en, új ügyfeleket érsz el."
+      },
+      "kunden": {
+        "title": "Egy célállomás minden svájci szabadidős tevékenységért",
+        "text": "Célunk, hogy minden szabadidős tevékenység könnyen megtalálható legyen Svájcban a www.swissactivities.com oldalon. Ezzel megkönnyítjük a szabadidős tevékenységek megtalálását, összehasonlítását és foglalását mindenki számára."
+      },
+      "promise": {
+        "title": "Ügyfél Ígéretünk",
+        "list": [
+          "nincs időigényes telefonálás a tisztázásokért",
+          "nincs végtelen keresés számtalan weboldalon",
+          "azonnal ellenőrizhető elérhetőségek",
+          "azonnali foglalás kerülőutak nélkül",
+          "nincs rejtett költség",
+          "egyszerű és gyors fizetési lehetőségek",
+          "nincs fárasztó sorban állás",
+          "áttekintés vonzó kedvezményekről",
+          "helyi ajánlatok"
+        ]
+      },
+      "team": {
+        "title": "A Swiss Activities Csapat"
+      }
+    },
+    "tos_b2b": {
+      "title": "Általános szerződési feltételek a szolgáltatók számára",
+      "description": "Ezek a jelenlegi üzleti feltételeink szolgáltatóink számára."
+    },
+    "tos_b2c": {
+      "title": "Felhasználási feltételek Swiss Activities közvetítőplatform ügyfelek számára",
+      "description": "Ezek a jelenlegi felhasználási feltételeink a Swiss Activities közvetítőplatform ügyfelei számára."
+    },
+    "tos_aff": {
+      "title": "Általános Szerződési Feltételek az Affiliáltaknak",
+      "description": "Ezek a jelenlegi általános szerződési feltételeink az affiliáltak számára."
+    },
+    "imprint": {
+      "title": "Impresszum",
+      "description": "Ez a mi impresszumunk."
+    },
+    "privacy_policy": {
+      "title": "Adatvédelem",
+      "description": "Ez az adatvédelmi tájékoztató."
+    },
+    "contact_us": {
+      "title": "Lépj velünk kapcsolatba",
+      "description": "Kérdésed van? Szívesen segítünk."
+    },
+    "basket": {
+      "title": "Kosár",
+      "delete": "Törlés",
+      "warning": "Szeretnéd törölni ezt a foglalást a kosárból?",
+      "edit": "Szerkesztés",
+      "cancel": "Megszakítás",
+      "update": "Kosár frissítése",
+      "next": "Tovább a pénztárhoz",
+      "empty": "A kosarad üres",
+      "hold": "Ezt a foglalást",
+      "explore": "Fedezd fel a szabadidős tevékenységeket"
+    },
+    "booking": {
+      "title": "Foglalás"
+    },
+    "confirmation": {
+      "title": "Foglalás megerősítése",
+      "tickets": "Jegyeid",
+      "download": "Mobiljegy",
+      "more": "További információk",
+      "cancel": "Jegy visszavonása",
+      "cancelled": "Törölve",
+      "cancelWhy": "Miért szeretnéd lemondani?",
+      "cancelReasons": [
+        "Az én nyaralásomat lemondták",
+        "Találtam egy olcsóbb alternatívát",
+        "Nem kaptam meg a visszaigazolást időben",
+        "A szolgáltató kérte, hogy mondjam le a foglalást",
+        "A kedvenc lehetőségeim nem voltak elérhetők",
+        "Rossz dátumot foglaltam",
+        "Rossz számú résztvevőt foglaltam",
+        "Egyéb okok"
+      ],
+      "rebook": {
+        "title": "Lemondás",
+        "text": "Változtatás a terveken? Foglald át az aktivitásod. A régi foglalásodat automatikusan lemondjuk.",
+        "button": "Foglald át most"
+      },
+      "stay": "Kérlek, maradj ezen az oldalon, a foglalásodat éppen feldolgozzuk.",
+      "editBooking": "Foglalás módosítása",
+      "showTickets": "Jegyek megtekintése",
+      "drawerTitle": "A te foglalásod",
+      "relatedBookings": "Kapcsolódó foglalások"
+    },
+    "activities": {
+      "title": "A legjobb szabadidős tevékenységek Svájcban {year}",
+      "description": "Találd meg és foglald le a számodra megfelelő tevékenységet {year} Svájcban. Mint sokoldalú ország, Svájc számtalan tevékenységet és ötletet kínál egy napos kiránduláshoz.",
+      "intro": "Az év folyamán minden alkalomra találsz szabadidős tevékenységeket. Akár családi kirándulást tervezel, lánybúcsú napot szervezel, szabadtéri programokat keresel, vagy inspirációt egy esős napra, itt mindent megtalálsz. A Swiss Activities-en megtervezheted a napodat, és pár kattintással egyből foglalhatsz.",
+      "titleParentLocation": "{locationTitle} {year}: a legjobb tevékenységek és ajánlatok",
+      "descriptionParentLocation": "Fedezd fel és foglald le a legjobb aktivitásokat a {locationTitle}: pár kattintással jegyeket foglalhatsz városlátogatásokra vagy családi programokra.",
+      "titleChildLocation": "{locationTitle} {year}: a legjobb tevékenységek",
+      "descriptionChildLocation": "Foglald le a legjobb tevékenységeket a {locationTitle}. Pár kattintással jegyet foglalhatsz városlátogatásokra vagy családi programokra.",
+      "titleParentType": "{typeTitle} {year}: A legjobb {typeTitle} Svájcban",
+      "descriptionParentType": "Foglald le a legjobb {typeTitle} az egész Svájcból. Nincs sorban állás, nincs foglalási díj és ingyenes lemondási lehetőségek.",
+      "titleChildType": "{typeTitle} {year}: A legjobb {typeTitle} ajánlatok Svájcban",
+      "descriptionChildType": "Foglald le a legjobb ajánlatokat {typeTitle} az egész Svájcból. Nincs sorban állás, nincs foglalási díj és ingyenes lemondási lehetőségek.",
+      "titleParentLocationParentType": "{typeTitle} {locationTitle}: Legjobb ajánlatok és árak {year}",
+      "descriptionParentLocationParentType": "Fogld le a legjobb ajánlatokat {typeTitle} {locationTitle} {year}. Nincs foglalási díj, és ingyenes lemondási lehetőségek.",
+      "titleParentLocationChildType": "{typeTitle} {locationTitle}: Legjobb ajánlatok és árak {year}",
+      "descriptionParentLocationChildType": "Fogld le a legjobb ajánlatokat {typeTitle} {locationTitle} {year}. Nincs foglalási díj, és ingyenes lemondási lehetőségek.",
+      "titleChildLocationParentType": "{typeTitle} {locationTitle}: Legjobb ajánlatok és árak {year}",
+      "descriptionChildLocationParentType": "Fogld le a legjobb ajánlatokat {typeTitle} {locationTitle} {year}. Nincs foglalási díj, és ingyenes lemondási lehetőségek.",
+      "titleChildLocationChildType": "{typeTitle} {locationTitle}: Legjobb ajánlatok és árak {year}",
+      "descriptionChildLocationChildType": "Fogld le a legjobb ajánlatokat {typeTitle} {locationTitle} {year}. Nincs foglalási díj, és ingyenes lemondási lehetőségek."
+    },
+    "listing": {
+      "title": "{listingTitle}",
+      "offersTitle": "{title} jegyek és aktivitások",
+      "activities": "Aktivitások",
+      "relatedListings": "A legjobb {value} látványosságok",
+      "relatedListingsClose": "A {value} közeli legjobb látványosságok",
+      "description": "Lista a {listingTitle} számára",
+      "tableOfContent": "Tartalomjegyzék",
+      "destinationTitle": "{location} - Top {num} látnivaló és aktivitás {year}",
+      "more": "Tudd meg többet {val}-ról",
+      "locations": "Helyek {val} közelében",
+      "regions": "Területek {val} környékén",
+      "type": "Népszerű helyek Svájcban {val} számára",
+      "typeLocation": "Népszerű helyek {location} környékén {type} számára",
+      "types": "Top {val} aktivitások",
+      "combo": "{type} {location} - {num} Legjobb ajánlatok és árak {year}",
+      "map": "Térkép",
+      "attributeBadWeatherTitleAttribute": "A {val} legjobb programok esős időre Svájcban",
+      "attributeBadWeatherTitle": "A {val} legjobb ötletek esős időjárásra {location}",
+      "attributeBadWeatherTeaser": "Akár esik, akár ködös vagy havas idő: [{location}]({locationLink}) számos olyan aktivitást kínál, amelyet rossz időben is elvégezhetsz. Így az eső nem feltétlenül kell, hogy keresztbe álljon a számodra. Találsz mind fedett, mind [szabadtéri tevékenységeket]({outdoorLink}), amelyek bármilyen időjárási körülmény között megfelelnek. Te döntesz, hogy aktívan élsz vagy inkább nyugalomban szeretnél lenni. További inspirációkért, számos [rossz időjárásos ötletet]({badWeatherLink}) találhatsz Svájc-szerte.",
+      "attributeBadWeatherDesc": "Találd meg az esős időjárásra való ötletedet {location}-ban, és válassz egy olyan tevékenységet, ami bármilyen időjárásban elvégezhető.",
+      "attributeFamilyTitleAttribute": "A {val} legjobb ötletek a családi kirándulásodhoz Svájcban",
+      "attributeFamilyTitle": "A {val} legjobb ötletek a családi kirándulásodhoz {location} környékén",
+      "attributeFamilyTeaser": "Tervezd meg a következő családi kirándulásodat [{location}]({locationLink}) neked és a gyermekeidnek. Nem számít, hogy kalandvágyó, kényelmes vagy felfedező szellemű vagy, mert rengeteg szórakozást ígér az év minden szakaszában, akár [rossz időjárás esetén {location} területén]({locationBadWeatherLink}) is. Babakocsival is vannak lehetőségeitek, amelyek megfelelnek a kisebb gyermekeknek is. Ebből kifolyólag semmi sem állhat a következő [családi kirándulásod]({familyLink}) elé.",
+      "attributeFamilyDesc": "Találd meg a megfelelő ötletet a következő családi kirándulásodhoz {location} környékén, és tölts el izgalmas napot a gyermekeiddel.",
+      "attributeDogTitleAttribute": "A {val} legjobb kutyás programok Svájcban",
+      "attributeDogTitle": "A {val} legjobb kutyás programok {location} környékén",
+      "attributeDogTeaser": "Keresel egy kirándulási ötletet a kutyáddal [{location}]({locationLink})? Ha el szeretnéd hozni a hűséges társadat, itt találod az összes olyan aktivitást, ahol ő is részt vehet. Különösen alkalmasak a [szabadtéri tevékenységek]({outdoorLink}), ahol a kutyád kiélheti magát a friss levegőn. De hajóútra vagy hegyi vasútra is viheted. Titkos tippünk a [Menekülő játékok]({escapeLink}), mivel ezeket kültéren tartják, és szép alternatívát kínálnak a szokásos kutyasétáltatásokkal szemben.",
+      "attributeDogDesc": "Tervezd meg a következő kirándulásodat a kutyáddal {location} környékén, és próbálj ki valami újat az állandó sétáddal szemben.",
+      "attributeOutdoorTitleAttribute": "A {val} legjobb szabadtéri aktivitások Svájcban",
+      "attributeOutdoorTitle": "A {val} legjobb szabadtéri aktivitások {location} környékén",
+      "attributeOutdoorTeaser": "[{location}]({locationLink}) egész évben számos [szabadtéri tevékenységet]({outdoorLink}) kínál. Egyesek megpörgetik az adrenalinodat, míg mások lenyűgöző kilátással várnak rád, vagy próbára teszik a ügyességedet. Egyébként vannak olyan szabadtéri tevékenységek is, amelyek megfelelnek [rossz időjárásos ötleteknek]({badWeatherLink}) vagy egy [családi kirándulásnak]({familyLink}). Részben még a [kutyád]({dogLink}) is hozhatod. Egyes szabadtéri tevékenységeket könnyen elvégezhetsz egyedül, míg másokat biztonsági okokból ajánlott szakemberrel végezni.",
+      "attributeOutdoorDesc": "Tervezd meg a következő szabadtéri aktivitásodat {location} környékén, és tölts egy napot a friss levegőn az év bármely időszakában.",
+      "attributeBachelorPartyTitleAttribute": "A {val} legjobb legénybúcsú ötletek Svájcban",
+      "attributeBachelorPartyTitle": "A {val} legjobb legénybúcsú ötletek {location} környékén",
+      "attributeBachelorPartyTeaser": "Keresel egy nagyszerű ötletet a legénybúcsúdhoz [{location}]({locationLink})? Akár ínycsiklandó vagy kalandos vagy, vagy kíváncsi felfedező: minden ízlésnek megfelelően találsz valamit. Az ötleteinkkel könnyen megszervezheted a [legénybúcsúd]({attributeLink})at {location}. Készülj fel a szórakoztató és sikeres napra a barátaiddal.",
+      "attributeBachelorPartyDesc": "Tervezd meg a következő legénybúcsúdat {location} környékén, és tölts el egy szórakoztató napot a barátaiddal.",
+      "attributeTeamEventTitleAttribute": "A {val} legjobb ötletek a csapatépítő eseményhez Svájcban",
+      "attributeTeamEventTitle": "A {val} legjobb ötletek csapatépítő eseményhez {location} környékén",
+      "attributeTeamEventTeaser": "Rád bízták, hogy szervezz egy csapatépítő eseményt [{location}]({locationLink})? Nem mindig egyszerű feladat, hiszen az igények gyakran eltérőek. Az ötleteinkkel inspirálódhatsz és jól felkészülhetsz a közelgő [csapatépítő eseményre]({attributeLink}). Legyen szó ínycsiklandókról, felfedezőkről, aktív résztvevőkről, rejtvényrajongókról vagy kalandorokról: minden ízlésnek találhatsz valamit. Készülj fel egy sikeres és szórakoztató napra a kollégáiddal.",
+      "attributeTeamEventDesc": "Tervezd meg a következő csapatépítő eseményedet {location} környékén, és tölts el egy szórakoztató napot a kollégáiddal.",
+      "attributeValentinesDayTitleAttribute": "A {val} legjobb ötletek Valentin-napra Svájcban",
+      "attributeValentinesDayTitle": "A {val} legjobb ötletek Valentin-napra {location} környékén",
+      "attributeValentinesDayTeaser": "Minden évben ismét itt van: a Valentin-nap. Lehet, hogy már pontosan tudod, mit szeretnél szervezni február 14-én. De lehet, hogy még nem vagy biztos a dolgodban, és keresel egy ötletet a Valentin-napra [{location}]({locationLink}). Tevékenységeink inspirálhatnak, és segíthetnek megtalálni a megfelelő programot. Akár romantikus, akár kényelmes, akár kalandos: itt biztosan találtok ihletet egy olyan [Valentin-napra]({attributeLink}), ami felgyorsítja a szíveteket.",
+      "attributeValentinesDayDesc": "Tervezd meg a következő Valentin-napodat {location}-ban, és tölts el egy romantikus napot a kedvenc embereddel.",
+      "attributeFirstDateTitleAttribute": "A {val} legjobb ötlet az első randira Svájcban",
+      "attributeFirstDateTitle": "A {val} legjobb ötlet az első randira {location}-ban",
+      "attributeFirstDateTeaser": "Keresel egy megfelelő ötletet az első randira [{location}]({locationLink}), és nem tudod, hogyan tudnád lenyűgözni a partneredet? Akkor jó helyen jársz. Ezen az oldalon megtalálod a szükséges inspirációt, hogy a [első randit]({attributeLink}) igazán sikeressé tedd. Legyen nyár vagy tél, kalandos vagy pihentető, itt biztosan találsz valamit, amivel örömet szerezhetsz a randidnak. És ki tudja, lehet, hogy rátalálsz valamire, ami a következő és az azt követő találkozóra is megfelelő.",
+      "attributeFirstDateDesc": "Tervezd meg az első randit {location}-ban, és tölts el egy romantikus napot együtt.",
+      "attributeChildBirthdayTitleAttribute": "{val} ötlet a gyerek születésnapjára Svájcban",
+      "attributeChildBirthdayTitle": "{val} ötlet a gyerek születésnapjára {location}-ban",
+      "attributeChildBirthdayTeaser": "Tervezd meg a következő gyerek születésnapi bulidat [{location}]({locationLink}). A születésnap minden gyerek számára az év egyik csúcspontja. Évszaktól függetlenül bőven van ötlet, amivel boldoggá teheted a gyermeked. Szervezz egy [szabadtéri programot]({outdoorLink}) vagy keress ötletet egy [rossz időjárási programhoz]({badWeatherLink}). Így a következő gyerek születésnapotok biztosan sikerülni fog.",
+      "attributeChildBirthdayDesc": "Szervezz egy gyerek születésnapot {location}-ban, és tervezz meg egy felejthetetlen napot a gyerekednek.",
+      "attributeWheelchairTitleAttribute": "{val} kirándulási ötletek kerekesszékkel Svájcban",
+      "attributeWheelchairTitle": "{val} kirándulási ötletek kerekesszékkel {location}-ban",
+      "attributeWheelchairTeaser": "Tervezd meg a kerekesszékkel történő kirándulásodat [{location}]({locationLink}), és találd meg a tökéletes akadálymentes tevékenységet számodra. Kerekesszékkel utazni Svájcban viszonylag egyszerű az előrehaladott akadálymentesség és az ország erőfeszítései miatt, hogy minden turista számára hozzáférhető élményt nyújtson. Ide tartoznak az [szabadtéri tevékenységek]({outdoorLink}) is.",
+      "attributeWheelchairDesc": "Inspirálódj kerekesszékkel is látogatható kirándulási helyekből {location}-ban, és tervezd meg a bárki számára hozzáférhető tevékenységedet.",
+      "attributePramTitleAttribute": "{val} kirándulási ötletek babakocsival Svájcban",
+      "attributePramTitle": "{val} kirándulási ötletek babakocsival {location}-ban",
+      "attributePramTeaser": "Tervezd meg a gyerek kocsival történő kirándulásodat [{location}]({locationLink}). Ha kisgyerekekkel utazol, sok olyan tevékenység van, amit csinálhatsz. Számos túraútvonal kocsibarát kialakítású, és a tömegközlekedés a kisgyerekes családok kényelmét szolgálja. Így semmi sem állhat a [családi kirándulásotok]({familyLink}) útjába.",
+      "attributePramDesc": "Utazz {location}-ban babakocsival, és tervezd meg a következő családi kirándulást.",
+      "attributesOther": "További kategóriák",
+      "attributesType": "Kategóriák a {val} tevékenységekhez",
+      "teamEvent": "Küldd el nekünk a csoportos kérésedet",
+      "recommended": "Utazók ajánlása",
+      "tickets": "Jegyek",
+      "tours": "Vezetett túrák"
+    },
+    "error": {
+      "title": "Sajnáljuk, de hiba történt. Térj vissza a kezdőlapra, és keresd meg a megfelelő szabadidős tevékenységet."
+    },
+    "supplier": {
+      "title": "Swiss Activities: Svájc legnagyobb szabadidős tevékenységeinek piactere",
+      "description": "A Swiss Activities Svájc legnagyobb szabadidős piactere. Velünk több vásárlót érhetsz el és növelheted a foglalásaidat.",
+      "hero": {
+        "title": "Swiss Activities - A szabadidős tevékenységek úti célja Svájcban",
+        "button": "Légy szabadidős partner"
+      },
+      "numbers": {
+        "title": "Hogyan támogattuk a szabadidős partnereinket a Swiss Activities alapítása óta",
+        "blocks": [
+          {
+            "title": "Weboldallátogatók",
+            "number": "7'500'000",
+            "text": "potenciális vásárlók"
+          },
+          {
+            "title": "Vásárlói foglalások",
+            "number": ">300'000",
+            "text": "Meghívott vendégek"
+          },
+          {
+            "title": "Ügyféltámogatás",
+            "number": ">10'000",
+            "text": "Lezajlott beszélgetések"
+          },
+          {
+            "title": "Foglalási rendszerek",
+            "number": ">20",
+            "text": "Jegyek helyett"
+          }
+        ]
+      },
+      "why": {
+        "title": "Miért érdemes a szabadidős termékeidet a Swiss Activities-en hirdetni",
+        "sales": {
+          "title": "Új vásárlók",
+          "description": "Szerezz új vásárlókat belföldről és külföldről, és javítsd a kihasználtságodat."
+        },
+        "support": {
+          "title": "Automatizálás",
+          "description": "A Swiss Activities átvállalja a meglévő értékesítési folyamatodat, és továbbítja a tranzakciókat a rendszeredre."
+        },
+        "finances": {
+          "title": "Nincs kockázat",
+          "description": "Nincsenek fix költségek vagy előzetes befektetések. Csak akkor fizetsz, ha vásárlót közvetítesz."
+        },
+        "local": {
+          "title": "Új vásárlói szegmensek kihasználása",
+          "description": "Kapcsolódj a Swiss Activities viszonteladó hálózatához, és bővítsd elérhetőségedet belföldön és külföldön."
+        }
+      },
+      "who": {
+        "title": "Több mint 500 szabadidős partner dolgozik a Swiss Activities-szel",
+        "partners": [
+          {
+            "blocks": [
+              "/assets/supplier/partner/bergbahnen/rigi.png",
+              "/assets/supplier/partner/bergbahnen/schilthorn.png",
+              "/assets/supplier/partner/bergbahnen/jungfrau.jpeg",
+              "/assets/supplier/partner/bergbahnen/engelberg.svg",
+              "/assets/supplier/partner/bergbahnen/pilatus.jpeg",
+              "/assets/supplier/partner/bergbahnen/monte-tamaro.png",
+              "/assets/supplier/partner/bergbahnen/brienz.png",
+              "/assets/supplier/partner/bergbahnen/gornergrat.png",
+              "/assets/supplier/partner/destinationen/rheinfelden.png",
+              "/assets/supplier/partner/destinationen/basel.svg",
+              "/assets/supplier/partner/destinationen/winterthur.svg",
+              "/assets/supplier/partner/destinationen/interlaken.png",
+              "/assets/supplier/partner/attraktionen/ballenberg.png",
+              "/assets/supplier/partner/attraktionen/bls.png",
+              "/assets/supplier/partner/attraktionen/cgn.png",
+              "/assets/supplier/partner/attraktionen/chillon.jpeg",
+              "/assets/supplier/partner/attraktionen/maestrani.png",
+              "/assets/supplier/partner/attraktionen/verkehrshaus.png",
+              "/assets/supplier/partner/attraktionen/vier.png",
+              "/assets/supplier/partner/outdoor/best-of-switzerland.jpeg",
+              "/assets/supplier/partner/outdoor/kayak.jpeg",
+              "/assets/supplier/partner/outdoor/outdoorch.jpeg",
+              "/assets/supplier/partner/outdoor/paragliding.png",
+              "/assets/supplier/partner/outdoor/wine-tours.webp",
+              "/assets/supplier/partner/outdoor/zermatters.png"
+            ]
+          }
+        ]
+      },
+      "pricing": {
+        "title": "Árazási modell",
+        "subtitle": "Csak akkor fizess, ha sikeresen közvetítettél egy ügyfelet",
+        "description": "A Swiss Activities segít azonosítani a megfelelő értékesítési csatornákat helyben és globálisan, valamint értékesíteni a szabadidős termékeidet ott, ahol a potenciális vásárlóid vannak. Mivel a Swiss Activities-nek nincs regisztrációs díja, új értékesítési csatornákat nyithatsz meg további beruházások nélkül.",
+        "blocks": [
+          {
+            "pretitle": "",
+            "cost": "18% + CHF 0.30",
+            "subcost": "exkl. Áfa.",
+            "button": "Szabadidős partner leszel",
+            "buttonLink": "https://k3qlq2fyp9o.typeform.com/to/CxWJub7f",
+            "subbutton": "",
+            "includes": [
+              "Szabadidős tevékenységek megjelentetése a Swiss Activities oldalon",
+              "Korlátlan számú szabadidős tevékenység rögzítése",
+              "A termékleírások elkészítése a tartalomcsapatunk által",
+              "Kapcsolat egy több mint 20 foglalási rendszer egyikével",
+              "Személyes partner támogatás csevegésen és telefonon",
+              "A vendégekkel való kommunikáció átvétele a tevékenységekkel kapcsolatos kérdésekben",
+              "A vendégek foglalási és lemondási kéréseinek feldolgozása",
+              "Minden foglalás és lemondás nyomon követése és ellenőrzése",
+              "A számlázások nyomon követése és ellenőrzése",
+              "Készpénzes elszámolás egységesen – elszámolás a Swiss Activities-on keresztül",
+              "A forgalmi folyamat biztosítása (nincs utalvány, csak jegyek)",
+              "Automatikus hozzáférés az affiliate hálózathoz",
+              "A tevékenységek megjelenítése a viszonteladói hálózaton"
+            ],
+            "faq": []
+          }
+        ]
+      },
+      "tech": {
+        "title": "Foglalási és jegykezelési rendszerek",
+        "description": "A svájci szabadidős termékek digitális megjelenítése és digitalizálása mellett a Swiss Activities középpontjában a szabadidős termékek belföldi és külföldi értékesítési folyamatának egyszerűsítése és automatizálása áll. Az értékesítési környezet egyre bonyolultabb, és segítünk a viszonteladóknak, hogy ne veszítsék el kapcsolatukat az ügyfélszegmensekkel. Központi szerepet játszik a közvetlen kapcsolat a szabadidős partnereink és a Swiss Activities között. Folyamatosan új rendszerek bevezetésén dolgozunk. Ha a te foglalási és jegyrendszered nem elérhető, kérlek, írj nekünk a sales@swissactivities.com címre.",
+        "partners": [
+          "/assets/supplier/technology/trekksoft.webp",
+          "/assets/supplier/technology/regiondo.webp",
+          "/assets/supplier/technology/tomas.webp",
+          "/assets/supplier/technology/waldhart.webp",
+          "/assets/supplier/technology/experiencebank.webp",
+          "/assets/supplier/technology/skidata.webp",
+          "/assets/supplier/technology/axess.webp",
+          "/assets/supplier/technology/smeetz.webp",
+          "/assets/supplier/technology/eatwith.webp",
+          "/assets/supplier/technology/fareharbor.webp",
+          "/assets/supplier/technology/bookingkit.webp",
+          "/assets/supplier/technology/ntree.webp",
+          "/assets/supplier/technology/secutix.webp",
+          "/assets/supplier/technology/tourcms.webp",
+          "/assets/supplier/technology/sbb.webp"
+        ],
+        "titleSoon": "Hamarosan elérhető",
+        "partnersSoon": [
+          "/assets/supplier/technology/feratel.webp"
+        ]
+      },
+      "faq": [
+        {
+          "title": "Általános információk szabadidős partnereknek",
+          "blocks": [
+            {
+              "title": "Ki lehet a Swiss Activities szabadidős partnere?",
+              "text": "Aki szeretné a svájci szabadidős tevékenységeket értékesíteni, az lehet a Swiss Activities partnere. Az ajánlataid sokfélék lehetnek, és szinte minden képzelet határain belül kell, hogy legyen. Kb. 100 kategóriában vannak tevékenységek, jegyek, kalandok, túrák, bérbeadások stb. Ezek közé tartoznak az unikornis torták készítő tanfolyamai, a tandem ejtőernyőzés vagy múzeumok belépőjegyei. Fontos, hogy az ajánlatok Svájcban történjenek, vagy Svájcból induló napos kirándulás keretein belül megvalósíthatók legyenek."
+            },
+            {
+              "title": "Melyik foglalási rendszereket tudom összekapcsolni a Swiss Activities-szal?",
+              "list": [
+                "Trekksoft",
+                "Regiondo",
+                "Waldhart",
+                "Experience Bank",
+                "Skidata",
+                "Axess",
+                "Tomas",
+                "Smeetz",
+                "Eatwith",
+                "Fareharbor",
+                "Booking Kit",
+                "N-Tree",
+                "Secutix",
+                "TourCMS",
+                "Palisis",
+                "Hamarosan elérhető: SBB és Feratel"
+              ]
+            },
+            {
+              "title": "Nem dolgozom foglalási rendszerrel. Akkor is el tudom adni az aktivitásaimat a Swiss Activities-en?",
+              "text": "Még ha nem is dolgozol foglalási rendszerrel, akkor is fel tudod tölteni az aktivitásaidat nálunk. Ez esetben manuálisan készítünk egy naptárt a megadott információid alapján. Ha szeretnéd megvalósítani a foglalási rendszert, kérlek vedd fel velünk a kapcsolatot. Szívesen segítünk ebben a témában. Az alábbi információkra van szükségünk tőled:",
+              "list": [
+                "Időszak (dátum)",
+                "Indulás időpontja(i)",
+                "Időtartam",
+                "Határidő (mennyi idővel előre kell a vásárlónak legkésőbb foglalnia?)",
+                "Árak kategóriánként (felnőttek, gyerekek, kölcsönzés stb.)",
+                "maximálisan rendelkezésre álló helyek slotonként"
+              ]
+            },
+            {
+              "title": "Milyen információk kerülnek átadásra a foglalás során?",
+              "text": "Ha egy vásárló a Swiss Activities-en foglal, akkor egy megerősítő e-mailt kap minden fontos információval. Ebben szerepelnek a te elérhetőségeid is, hogy ha kérdése van, közvetlenül hozzád tudjon fordulni.",
+              "list": [
+                "Az aktivitás neve",
+                "Dátum",
+                "Idő",
+                "Találkozóhely",
+                "Foglalások száma",
+                "A te elérhetőségeid (e-mail és telefon)"
+              ]
+            },
+            {
+              "title": "A Swiss Activities-en az én aktivitásaim árai ugyanazok, mint a weboldalamon?",
+              "text": "Igen, nálunk a vásárló annyit fizet, mint ha közvetlenül nálad foglalna. Ez ugyanúgy fontos számodra, mint számunkra. Ha különböző helyeken eltérő árak léteznek, a vásárló észre fogja venni, ami panaszokhoz és félreértésekhez vezethet. Így mindketten kockázatot vállalunk, hogy elveszíthetjük az ismétlődő vásárlókat."
+            },
+            {
+              "title": "Mennyi a lemondási határidő a Swiss Activities-en?",
+              "text": "A vásárlóknak a Swiss Activities-en lehetőségük van ingyenesen lemondani az aktivitást 24 órával a kezdés előtt. Ha egy nem lemondható aktivitást szeretnél közzétenni, azt is meg tudjuk oldani. Azonban tapasztalataink szerint több foglalást közvetítünk, ha az aktivitások lehetőséget nyújtanak a lemondásra. Ha le kell mondanod a foglalást, azt is megteheted. Azonnal értesítsd a vásárlót és tájékoztass minket is, hogy jelezhessük a visszatérítést."
+            },
+            {
+              "title": "Hogyan kezelik a későbbi lemondásokat?",
+              "text": "Ha a lemondási űrlapunkon egy későbbi lemondás iránti kérelmet kapunk, soha nem kezdeményezünk visszatérítést anélkül, hogy előtte konzultáltunk volna veled. A csalások elkerülése érdekében mindig kikérjük a beleegyezésedet, hogy megerősíthessük a vásárló verzióját. Csak akkor indítunk el visszatérítést, ha megvan a beleegyezésed."
+            }
+          ]
+        },
+        {
+          "title": "Szabadidős termékek közzétételi folyamata",
+          "blocks": [
+            {
+              "title": "Hogyan tudom közzétenni az ajánlataimat a Swiss Activities-en?",
+              "text": "Ha szabadidős partner szeretnél lenni a Swiss Activities-en és közzétenni az ajánlataidat, az alábbi lépéseket kell követned:",
+              "list": [
+                "Először regisztrálj szabadidős partnerként.",
+                "Minden tevékenységhez, melyet közzé szeretnél tenni, tölts ki egy űrlapot. A linket akkor kapod meg, ha megerősítettük a regisztrációdat.",
+                "Általában két héten belül megírjuk és rögzítjük az aktivitásaidat.",
+                "Amint az aktivitások élesben vannak, e-mailben értesítünk."
+              ]
+            },
+            {
+              "title": "Milyen információkra van szükség a te aktivitásaid közzétételéhez?",
+              "text": "Miután regisztráltál szabadidős partnerként nálunk, küldünk neked egy űrlapot, amelyen megadhatod az aktivitásaidat. A közzétételhez a következő információkra van szükségünk tőled:",
+              "list": [
+                "Információk a foglalási rendszerről (ha van)",
+                "Az aktivitás címe",
+                "Link az aktivitáshoz",
+                "Legalább 4 fotó aktivitásonként",
+                "Információk a dátumokról, időpontokról és időtartamról, ha nem használsz foglalási rendszert",
+                "Bármilyen információ életkorral, nyelvekkel, súlyokkal stb.",
+                "Az aktivitás alkalmas: kutya, babakocsi, kerekesszék, családok stb.",
+                "Pontosan találkozási hely"
+              ]
+            },
+            {
+              "title": "Bármikor törölhetem a bejegyzésemet?",
+              "text": "Igen, bármikor elállhatsz a szerződéstől. Nincs minimális szerződéses időtartam, és a felmondásnak nincsenek költségei."
+            },
+            {
+              "title": "Mi a teendőm, ha módosítani szeretnék valamit egy aktivitáson?",
+              "text": "Ha módosítási igényeid vannak a tartalommal kapcsolatban, vagy árat szeretnél módosítani - amennyiben nem használsz foglalási rendszert - ezt e-mailben közölheted velünk."
+            },
+            {
+              "title": "Hogyan léphetek kapcsolatba a vásárlóval?",
+              "text": "Minden foglalás után kapsz tőlünk egy megerősítő e-mailt a vásárló adataival. Ott találod a nevét, e-mail címét és telefonszámát, hogy fel tudd venni vele a kapcsolatot."
+            },
+            {
+              "title": "Hogyan juthatok hozzá a pénzemhez?",
+              "text": "Minden nyitott összeg kifizetése a szolgáltatási dátum után történik, és a következő hónap elején automatikusan átutalják. Eközben az előző hónapban történt összes foglalás összegyűjtve számolódik el, és egyetlen kifizetésben kerül kifizetésre."
+            }
+          ]
+        }
+      ]
+    },
+    "supplierRegistration": {
+      "title": "Swiss Activities: Svájc legnagyobb szabadidős tevékenységeinek piactere.",
+      "description": "A Swiss Activities Svájc legnagyobb szabadidős aktivitásainak szolgáltatója. Velünk elérheted a több ügyfelet és növelheted a foglalásaidat.",
+      "hero": {
+        "title": "Legyél a Swiss Activities része",
+        "description": "Regisztrálj ingyen a Swiss Activities-nél, és növeld elérhetőségedet a svájci és nemzetközi vendégeknél. Előnyeid egy helyen",
+        "list": [
+          "Legyél megtalálva a Google-on cégek és ajánlataid által. És mindezt 4 nyelven!",
+          "Új értékesítési csatornát nyitsz",
+          "Élvezd ingyenes ügyfélszolgálatunk előnyeit",
+          "Kapcsold össze a foglalási rendszeredet, és közvetlenül ott kezeld az elérhetőségeidet.",
+          "Egy új foglalás - a te ügyfeled. Nem rejtjük el partnereinket, és azt akarjuk, hogy a vásárlók a legjobb foglalási élményt kapják.",
+          "Nincsenek fix költségek vagy rejtett díjak.",
+          "Ügyfeleid a helyi fizetési módokban, mint a Twint, számlás vásárlás vagy a szokásos hitelkártyák segítségével fizethetnek."
+        ]
+      }
+    },
+    "affiliate": {
+      "title": "Partneri program",
+      "description": "Csatlakozz partnerként a Swiss Activities-hez, és már az első foglalás után 1%-tól 5%-ig terjedő jutalékot kereshetsz. Nincs fix költséged.",
+      "hero": {
+        "title": "Legyél most a Swiss Activities affiliate partnere",
+        "description": "Regisztrálj a Swiss Activities affiliate programjába, és élvezd az vonzó integrációs eszközöket, 1%-tól 5%-ig terjedő jutalékot és 45 napos cookie időtartamot.",
+        "steps": [
+          "Jelentkezz",
+          "Implementáld tevékenységeinket",
+          "Generálj foglalásokat, és keress pénzt közben"
+        ],
+        "button": "Jelentkezz most"
+      },
+      "form": {
+        "tos": "Elfogadom az <a target='_blank' href='/agb/affiliates/'>Általános Szerződési Feltételeket</a>"
+      },
+      "advantagesTitle": "Mik a te előnyeid a Swiss Activities affiliate partnerként?",
+      "advantages": [
+        {
+          "title": "1'500+ szabadidős tevékenység",
+          "text": "A Swiss Activities affiliate partnereként néhány kattintással hozzáférhetsz az egész Svájcban található több mint 1'500 szabadidős tevékenységhez."
+        },
+        {
+          "title": "Vonzó feltételek",
+          "text": "Minden közvetített foglalás után 1%-tól 5%-ig terjedő jutalékot kapsz. A cookie időtartama 45 nap."
+        },
+        {
+          "title": "Inspiráld olvasóidat",
+          "text": "Éleszd fel blogodat vagy weboldaladat inspiráló tartalmakkal és segíts a közösségednek időt megtakarítani a szabadidős tervezésnél."
+        },
+        {
+          "title": "Könnyű regisztráció",
+          "text": "Élvezd a gyors és zökkenőmentes regisztráció előnyeit."
+        },
+        {
+          "title": "Közvetlen jegyértékesítés",
+          "text": "Lehetőséged van jegyeket közvetlenül eladni a weboldaladon, anélkül, hogy olvasóidat átirányítanád hozzánk."
+        },
+        {
+          "title": "Egyedi HTML",
+          "text": "Sokoldalú és vonzó Custom HTML eszközeink segítségével személyre szabhatod értékesítési lehetőségeidet."
+        }
+      ],
+      "faqTitle": "A legfontosabb kérdések megválaszolva",
+      "faq": [
+        {
+          "title": "Hogyan működik a regisztráció a Swiss Activities affiliate programra?",
+          "text": "Jelentkezz a jelentkezési lapon ezen az oldalon, minden szükséges adat megadásával. Az elbírálás után egy munkanapon belül értesítünk, és ha elfogadjuk, megküldjük a belépési adataidat emailben."
+        },
+        {
+          "title": "Hogyan tudok bejelentkezni az affiliate partneri irányítópultra?",
+          "text": "A regisztrációd során megadod a személyes jelszavadat. Miután ellenőriztük az adataidat, értesítünk, és a <a href='https://swissactivities.tapfiliate.com/login' target='_blank'>linken</a> keresztül be tudsz lépni az affiliate irányítópultra."
+        },
+        {
+          "title": "Hol találok további információkat az affiliate programról?",
+          "text": "A segítségnyújtó központunkban megtalálod <a href='https://intercom.help/swiss-activities/de/collections/3916117-affiliate-moglichkeiten-zur-einbindung' target='_blank'>az első lépéseket</a> és a legfontosabb kérdéseket <a href='https://intercom.help/swiss-activities/de/collections/3916117-affiliate-moglichkeiten-zur-einbindung' target='_blank'>a tevékenységeink integrálásáról</a>. Ráadásul a regisztrációd után hasznos tippek listáját is megkapod emailben."
+        },
+        {
+          "title": "Ki lehet a Swiss Activities affiliate partnere?",
+          "text": "Ha blogot vagy weboldalt üzemeltetsz, ami a svájci turizmussal, a svájci szabadidős tevékenységekkel vagy általában az utazással foglalkozik, regisztrálhatsz a partnerprogramunkra. Ha Instagram, Pinterest vagy Facebook fiókod van, ahol affiliate linket tudsz beilleszteni, te is csatlakozhatsz."
+        },
+        {
+          "title": "Lehet-e leiratkozni az affiliate programról?",
+          "text": "Természetesen. Nincs minimális időtartamra kötelezve. Ha szeretnéd törölni a fiókod, jelezd nálunk emailben vagy chatben, és mindent elintézünk."
+        },
+        {
+          "title": "Mennyi jutalékot kapok minden közvetített foglalásért?",
+          "text": "1% és 5% közötti jutalékot kapsz, ha ügyfelet ajánlasz nekünk, aki végrehajtja az aktivitást. Ha az ügyfél lemondja a foglalását, sajnos nem tudunk jutalékot kifizetni neked."
+        }
+      ]
+    },
+    "apps": {
+      "title": "Swiss Activities App",
+      "description": "Fedezd fel Svájcot a Swiss Activities App segítségével – ismerj meg, hasonlíts össze és foglalj szabadidős tevékenységeket közvetlenül okostelefonodon.",
+      "hero": {
+        "title": "A te svájci kalandod a zsebedben",
+        "description": "A Swiss Activities alkalmazással közvetlen hozzáférést kapsz több mint {amount} tevékenységhez Svájc szerte. Találj élményeket, foglalj másodpercek alatt, és tartsd mindig szem előtt az összes jegyedet és foglalásodat.",
+        "features": [
+          "Jegyek mindig kéznél",
+          "Foglalások egyszerű kezelése",
+          "Új élmények felfedezése minden ízléshez",
+          "Jegyek offline is elérhetők"
+        ]
+      }
+    },
+    "travelGuide": {
+      "title": "Utazási terveződ Svájcban",
+      "description": "Svájc egy nagyon sokoldalú ország, és hihetetlenül sokat kínál a utazásod során. Ne hagyd, hogy a kis terület megtévesszen. Bár Svájc körülbelül tízszer kisebb, mint Svédország, Kalifornia vagy Marokkó, minden ízlésnek találhatsz valamit. A mediterrán Ticino-ban teljesen más világban vagy, mint a forgalmas Bázelben. Az Alpstein hegyvidéki környezete teljesen más klímájú a enyhe Genfi-tó régióval. És ez, bár ezek a helyek csak három-négy órára vannak egymástól. Blogunkban segítünk az utazásod megtervezésében. Hasznos utazási tippekkel és érdekes információkkal látunk el, hogy tökéletesen felkészülj. Mindegy, hogy először utaznasz Svájcba vagy jól ismered a helyet, cikkeink mind az első látogatók, mind a valódi svájci ismeretekkel rendelkező emberek számára alkalmasak.",
+      "intro": "Svájc egy nagyon sokoldalú ország, és hihetetlenül sokat kínál a utazásod során. Ne hagyd, hogy a kis terület megtévesszen. Bár Svájc körülbelül tízszer kisebb, mint Svédország, Kalifornia vagy Marokkó, minden ízlésnek találhatsz valamit. A mediterrán Ticino-ban teljesen más világban vagy, mint a forgalmas Bázelben. Az Alpstein hegyvidéki környezete teljesen más klímájú a enyhe Genfi-tó régióval. És ez, bár ezek a helyek csak három-négy órára vannak egymástól. Blogunkban segítünk az utazásod megtervezésében. Hasznos utazási tippekkel és érdekes információkkal látunk el, hogy tökéletesen felkészülj. Mindegy, hogy először utaznasz Svájcba vagy jól ismered a helyet, cikkeink mind az első látogatók, mind a valódi svájci ismeretekkel rendelkező emberek számára alkalmasak."
+    },
+    "travelRoutes": {
+      "title": "Svájc útiterve",
+      "description": "Svájc nagyon sokszínű ország, és hihetetlenül sokat kínál az utazásodhoz. Ne hagyd, hogy a kis terület megtévesszen. Bár Svájc körülbelül tízszer kisebb, mint Svédország, Kalifornia vagy Marokkó, minden ízlésnek találhatsz valamit. A mediterrán Ticino teljesen más világ, mint a mozgalmas Basel. A hegyvidéki Alpstein klímája pedig egészen eltér a mérsékelt Genfi-tó vidékétől. És ez annak ellenére van, hogy ezek a helyek csak három-négy órányira vannak egymástól. A blogunkban segítünk az utazásod megtervezésében. Hasznos utazási tippekkel és tudnivalókkal látunk el, hogy tökéletesen fel tudj készülni. Nem számít, hogy először utazol Svájcba, vagy már jól ismered az országot, cikkeink mind az első látogatóknak, mind a valódi Svájc-rajongóknak szólnak."
+    },
+    "widget": {
+      "title": "Integráld a Swiss Activities-t a weboldaladba",
+      "description": "Illeszd be a Swiss Activities-t a weboldaladba, és értékesíts aktivitásokat közvetlenül a weboldaladon.",
+      "hero": {
+        "title": "Integráld a Swiss Activities ajánlatait a weboldaladba",
+        "description": "A Swiss Activities Widget a legegyszerűbb módja az aktivitások integrálásának a weboldaladba. Válassz különböző widget típusok közül és illeszd be néhány perc alatt.",
+        "button": "Kezdj el most"
+      },
+      "cta": {
+        "title": "Legyél társult",
+        "button": "Az űrlaphoz"
+      }
+    },
+    "newsletterConfirm": {
+      "title": "Köszönjük a jelentkezésed. Éppen most küldtünk egy üzenetet, amellyel megerősítheted a regisztrációd."
+    },
+    "newsletterSuccess": {
+      "title": "Köszönjük! Most már fel vagy iratkozva a hírlevelünkre."
+    },
+    "cookiePolicy": {
+      "title": "Cookie irányelve"
+    },
+    "vouchers": {
+      "title": "Élmény ajándékötletek Svájcban – a legjobb kuponok a Swiss Activities-nél",
+      "description": "Ajándékozz felejthetetlen pillanatokat egy élménykuponnal a Swiss Activities-től! Fedezd fel Svájc legnagyobb szabadidős tevékenységeinek választékát – rugalmasan, egyszerűen, és azonnal online foglalható. Tökéletes ajándékötlet bármilyen alkalomra.",
+      "hero": {
+        "title": "Ajándékozz élménykuponokat Svájcban, és szerezz örömet!",
+        "text": "Fedezd fel most a legjobb ajándékötleteket és élménykuponokat a Swiss Activities-nél. Legyen szó születésnapról, karácsonyi ajándékról, vagy csak azért, hogy köszönetet mondj – egy kupon a svájci élményekért biztosan minden ízlésnek megfelelő ajándék, ami garantáltan emlékezetes marad.",
+        "button": "Kupon vásárlása"
+      },
+      "gift": {
+        "title": "Ajándékozd a legjobb svájci élményeket – kalandoktól a pihenésig",
+        "text": "Keresel egy egyedi ajándékötletet barátoknak vagy családnak Svájcban? Egy élménykupon a Swiss Activities-től hozzáférést biztosít a legnagyobb szabadidős tevékenységek választékához, amit Svájc kínál. Legyen szó vezetett túrákról, kalandokról a természetben, pihenőórákról termálfürdőkben vagy kulturális látnivalókról múzeumokban – a Swiss Activities lehetővé teszi, hogy különleges pillanatokat ajándékozz."
+      },
+      "why": {
+        "title": "Miért az élménykupon a Swiss Activities-től a tökéletes ajándékötlet",
+        "items": [
+          {
+            "title": "Svájc legnagyobb választéka",
+            "text": "Több mint 1,600 szabadidős ajánlat minden régióban, a szabadtéri kalandoktól a pihentető pillanatokig."
+          },
+          {
+            "title": "Több mint 100'000 elégedett ügyfél",
+            "text": "A Swiss Activities a különleges ajándékok és kirándulások megbízható partnere."
+          },
+          {
+            "title": "Ingyenes lemondási opció",
+            "text": "Biztonságos és rugalmas foglalások, amelyeket az ajándékozott igényeihez lehet igazítani."
+          },
+          {
+            "title": "5 csillagos ügyféltámogatás",
+            "text": "Svájci minőség és támogatás – a zavartalan élménykezdésért."
+          }
+        ]
+      },
+      "end": {
+        "title": "Ajándékozz élményutalványokat Svájcban, és okozz örömet!",
+        "text": "Fedezd fel a legjobb ajándékötleteket és élményutalványokat a Swiss Activities-nél. Akár születésnapra, karácsonyi ajándékként, vagy csak úgy, hogy megköszönd – egy időszakos utalvány Svájcban minden ízléshez passzol, és maradandó emlékeket biztosít.",
+        "button": "Kupon kiválasztása"
+      },
+      "banner": {
+        "tagline": "ÚJDONSÁG: A tökéletes ajándékötlet!",
+        "title": "Szerezz meg egy\nélményutalványt",
+        "button": "Itt nyomj"
+      }
+    }
+  },
+  "filter": {
+    "nearby": "Nézd meg a közeli aktivitásokat",
+    "results": "Eredmények megjelenítése",
+    "filter": "Szűrő",
+    "search": "Keresés",
+    "location": "Helyszín",
+    "types": "Típus",
+    "categories": "Kategória",
+    "activity": "Aktivitás",
+    "activities": "Aktivitások",
+    "today": "Ma",
+    "tomorrow": "Holnap",
+    "price": "Ár",
+    "noResults": "Nincs eredmény",
+    "noExactResults": {
+      "title": "Nincsenek pontos találatok",
+      "description": "Próbáld meg megváltoztatni vagy eltávolítani néhány szűrődet, vagy állítsd be a keresési terjedelmet.",
+      "showNearest": "Legközelebbi eredmények megjelenítése",
+      "resetDate": "Időszak visszaállítása"
+    },
+    "lang": "Nyelvek",
+    "sort": {
+      "relevance": "Relevancia",
+      "distance": "Távolság tőled",
+      "popularityDesc": "Népszerűség csökkenő",
+      "ratingDesc": "Értékelés csökkenő",
+      "ratingAsc": "Értékelés növekvő",
+      "priceDesc": "Ár csökkenő",
+      "priceAsc": "Ár emelkedő",
+      "dateDesc": "Legújabbak először",
+      "dateAsc": "Legrégebbiek először"
+    },
+    "navigationBreadcrumbs": {
+      "root": "Svájc"
+    },
+    "all": "Minden",
+    "map": "Térkép",
+    "card": {
+      "from": "tól",
+      "person": "főre"
+    },
+    "viewMore": "Több nézése",
+    "ratingBetterThan": "Jobb, mint {val} csillag",
+    "ratingEqual": "{val} csillag",
+    "ratingNone": "ÚJ / Nincs értékelés",
+    "moreFilters": "{val} többet mutatni",
+    "lessFilters": "Kevesebb mutatása",
+    "usedFilters": "Alkalmazott szűrők",
+    "resetFilters": "Visszaállítás",
+    "discountTypes": "Kedvezmények",
+    "calendar": "Naptár",
+    "locationError": "A pozíciót nem sikerült betölteni",
+    "textOnly": "Csak szöveges értékelések"
+  },
+  "activity": {
+    "you": "te",
+    "nearby": "{distance}km távolságra {location}",
+    "nearbyAlt": "{distance}km távolságra",
+    "recommendation": "Ajánlás",
+    "reviews": "Vélemények",
+    "reviewOriginalIn": "Eredeti {language} nyelven",
+    "booked": "{val} alkalommal foglalták",
+    "providedBy": "Szolgáltató",
+    "save": "Mentés",
+    "selectDate": "Dátum kiválasztása",
+    "similarActivities": "További aktivitások",
+    "question": "Hogyan segíthetünk?",
+    "rating": "Értékelés",
+    "highDemand": "Nagy kereslet",
+    "widget": {
+      "free": "elérhető",
+      "error500": "Valami hiba történt, kérlek, próbáld meg újra 1 perc múlva.",
+      "errorDate": "Sajnos a {val} dátumra már nincs elérhető időpont.",
+      "choose": "válaszd ki",
+      "titleTime": "Ajánlat kiválasztása",
+      "titleTicketOption": "Jegyopció kiválasztása",
+      "titleParticipants": "Résztvevők kiválasztása",
+      "titleTickets": "Jegyek kiválasztása",
+      "confirmOffer": "Jegyopció megerősítése",
+      "confirmTickets": "Résztvevők megerősítése",
+      "confirmDate": "Dátum megerősítése",
+      "confirmDateTime": "Dátum és idő megerősítése",
+      "cheapest": "Legkedvezőbb ár",
+      "time": "Idő",
+      "navTicket": "Jegy",
+      "check": "Ellenőrizd az elérhetőséget",
+      "notBookable": "Sajnos ez az ajánlat jelenleg nem foglalható.",
+      "paymentMethods": "Fizetési módok",
+      "totalPrice": "Összesített ár",
+      "taxes": "További díjak",
+      "offerTimeSelect": "Kezdő idő kiválasztása",
+      "basket": "Kosár",
+      "basketAdd": "Hozzáadás a kosárhoz",
+      "selectedOffer": "Ajánlat",
+      "adjust": "Foglalás módosítása",
+      "swissHalfFareCard": "A Svájcon kívül élő személyek&nbsp;<a href=\"/bahnpaesse/swiss-half-fare-card/\" target=\"_blank\" className=\"inline-block\">itt szerezhetnek Swiss Half Fare Card-ot</a>, hogy kedvezményeket kapjanak a tömegközlekedésben."
+    },
+    "tabs": {
+      "highlights": "Főbb jellemzők",
+      "includes": "Szolgáltatások",
+      "importantInformation": "Fontos információk",
+      "meetingPoints": "Találkozóhelyek"
+    },
+    "newsletter": {
+      "title": "Ne maradj le az aktivitásokról",
+      "description": "Iratkozz fel a hírlevélre, és kapj utazási tippeket, szabadidős ötleteket és a legfrissebb svájci útikalauzokat az e-mail fiókodba.",
+      "signup": "Jelentkezés",
+      "inputPlaceholder": "Az e-mailed"
+    },
+    "notRefundable": {
+      "title": "Nem lemondható",
+      "description": "Sajnos nem tudunk visszatérítést adni, és a foglalásodat erre a konkrét termékre sem tudjuk megváltoztatni vagy lemondani az üzleti partneri irányelvek miatt."
+    }
+  },
+  "UI": {
+    "date": "Dátum"
+  },
+  "home": {
+    "title": "A te élményed itt kezdődik"
+  },
+  "discover": {
+    "title": "Tevékenységek felfedezése"
+  },
+  "booking": {
+    "cancelable": "Ingyenes lemondás",
+    "privacyMessage": "Azzal, hogy folytatod a kifizetést, elfogadod a <tos>{text}</tos> és a Swiss Activities AG által megadott lemondási feltételeket.",
+    "privacyPolicy": "Általános szerződési feltételek",
+    "personalTitle": "Foglalási adatok",
+    "personalSubtitle": "A foglalás befejezéséhez kérlek töltsd ki az alábbi információkat.",
+    "mainGuest": "Kapcsolattartó személy",
+    "fullName": "Keresztnév",
+    "lastName": "Vezetéknév",
+    "email": "E-mail",
+    "phoneNumber": "Telefonszám",
+    "cardDetails": "Fizetési módok",
+    "paymentSecure": "Biztonságos fizetés - SSL titkosítást használunk az adataid védelmére",
+    "creditPayments": "Hitelkártyák",
+    "total": "Összesen",
+    "fullDay": "Egész napos",
+    "booknow": "Foglalj most",
+    "addMoreInformation": "További információk hozzáadása",
+    "addPaymentMethod": "Fizetési mód kiválasztása",
+    "youBook": "Kosár",
+    "rebate": "Kedvezménykód",
+    "rebateEmailRequired": "Kérlek, először add meg az e-mail címedet, és erősítsd meg, hogy beválthasd a kedvezménykódot.",
+    "important": "Tudomásul vettem a tevékenység(ek) \"Fontos információk\" részében található feltételeket",
+    "importantShow": "Információk megjelenítése",
+    "importantHide": "Információk elrejtése"
+  },
+  "confirm": {
+    "title": "Köszönjük, hogy a Swiss Activities-tel foglaltál.",
+    "confirmed": "A foglalásod megerősítve van.",
+    "pending": "A foglalásod feldolgozás alatt van.",
+    "cancelled": "A foglalásod lemondva.",
+    "failed": "Sajnáljuk, de valami hiba történt.",
+    "failedPayment": "A fizetést nem tudtuk feldolgozni. Kérlek, próbálj meg egy másik fizetési móddal.",
+    "failedReservation": "Sajnos a foglalás nem tudott megerősített lenni. A pénzed visszatérítésre kerül. Kérlek, próbáld újra.",
+    "wait": "Várunk a fizetési szolgáltatónkra, hogy a fizetés megerősítve van-e.",
+    "waitEmail": "Emailt fogsz kapni, amint a fizetés megerősítve van.",
+    "caption": "Köszönjük szépen a foglalást a Swiss Activities-en. Küldtünk egy megerősítő e-mailt.",
+    "bookingNumber": "Foglalási szám",
+    "point": "Találkozási pont",
+    "pointAddress": "Találkozási pont címe",
+    "number": "Mobiltelefon szám",
+    "end": "Vége",
+    "email": "A foglalási megerősítésedet elküldtük ide: {email}. Ha nem kapod meg az elkövetkező néhány percben, kérlek, lépj kapcsolatba ügyfélszolgálatunkkal chat-en.",
+    "transport": {
+      "title": "Mennyire utazol a tömegközlekedéssel?",
+      "from": "A te helyed",
+      "description": "Utazz kényelmesen a tömegközlekedéssel, és add hozzá a mobiljegyed közvetlenül a foglaláshoz.",
+      "button": "Jegy hozzáadása"
+    }
+  },
+  "footer": {
+    "company": {
+      "title": "Vállalat",
+      "about-us": "Rólunk",
+      "jobs": "Állások",
+      "legal": "Jogi"
+    },
+    "resources": {
+      "title": "Források"
+    },
+    "collaboration": {
+      "title": "Együttműködés",
+      "becomeapartner": "Legyél partner",
+      "affiliate": "Affiliate program",
+      "widget": "Widget"
+    },
+    "affiliate": {
+      "title": "Partneri kód",
+      "button": "Kód másolása",
+      "buttonCopied": "Kód másolva!"
+    },
+    "contact": {
+      "title": "Ügyfélszolgálat",
+      "faq": "Kérdések és válaszok (GYIK)",
+      "cookie": "Cookie-hozzájárulás"
+    },
+    "mobileApp": "Szerezd meg az alkalmazásunkat"
+  },
+  "tickets": {
+    "discounts": {
+      "noDiscount": "Nincs kedvezmény"
+    },
+    "showDiscounts": "Kedvezmény és ügyfélkártyák megtekintése",
+    "travelClass": "Utazási osztály"
+  },
+  "supplier": {
+    "activities": "Tevékenységek"
+  },
+  "contactPopup": {
+    "modalTitle": "Hogyan segíthetünk neked ma?"
+  },
+  "contactForm": {
+    "fullname": "Név",
+    "email": "E-mail",
+    "subject": "Téma",
+    "messagePlaceholder": "Kérés, foglalás stb...",
+    "submit": "Küldés",
+    "formError": "Valami nem működött. Próbáld meg újra."
+  },
+  "contactThankYou": {
+    "title": "Köszönjük, hogy felvetted velünk a kapcsolatot!"
+  },
+  "internalLinkBlock": {
+    "destinations": "Legjobb Desztinációk",
+    "locations": "Legjobb Üdülőhelyek",
+    "topActivities": "Legjobb Tevékenységek",
+    "topAttractions": "Legjobb Attrakciók"
+  },
+  "offerCard": {
+    "bookNow": "Foglalj most"
+  },
+  "breadcrumbsBasket": {
+    "stepOne": "A te választásod",
+    "stepOneDescription": "Bevásárlókocsi",
+    "stepTwo": "A te adataid",
+    "stepTwoDescription": "Kasszázás",
+    "stepThree": "Utolsó lépés",
+    "stepThreeDescription": "Fizetés"
+  },
+  "usps": {
+    "or": "vagy",
+    "allDay": "Egész nap",
+    "bookable": {
+      "title": "Foglalható",
+      "description": "{val} számára"
+    },
+    "online": {
+      "title": "Azonnali foglalás visszaigazolás"
+    },
+    "payment": {
+      "title": "Fizess számlára vagy Twintel"
+    },
+    "duration": {
+      "title": "Időtartam",
+      "durationMinutes": "{val} perc",
+      "duration": "{val} óra",
+      "durations": "{val} óra",
+      "durationDay": "{val} nap",
+      "durationDays": "{val} nap"
+    },
+    "mobileTicket": {
+      "title": "Mobiljegy elfogadva",
+      "description": "Használj telefont vagy nyomtasd ki a vouchert"
+    },
+    "confirmation": {
+      "title": "Azonnali foglalás visszaigazolás",
+      "description": "Nincs plusz költség"
+    },
+    "queue": {
+      "title": "Nincs sorban állás a pénztárnál"
+    },
+    "cancel": {
+      "title": "Ingyenes lemondás",
+      "description": "Teljes visszatérítés lemondás esetén {val} órával az indulás előtt",
+      "descriptionDays": "Teljes visszatérítés lemondás esetén {val} nappal az indulás előtt",
+      "subtitle": "Legfeljebb {val} órával az indulási idő előtt",
+      "subtitleDays": "Legfeljebb {val} nap(nal) az indulási idő előtt"
+    },
+    "meetingPoint": {
+      "title": "Találkozóhely"
+    },
+    "discount": {
+      "title": "Kedvezmény"
+    },
+    "request": {
+      "title": "Foglalás kérésre",
+      "description": "Ezt a foglalást a szolgáltatónak vissza kell igazolnia",
+      "extra": "Ez az ajánlat a szolgáltató rendelkezésre állásán alapul. A foglalást először a szolgáltatónak kell megerősítenie. Ezért a foglalást követően fel fog veled venni a kapcsolatot. Ha a tevékenység nem valósítható meg, a teljes összeget vissza fogod kapni."
+    },
+    "validity": {
+      "title": "Érvényesség"
+    },
+    "openingHours": {
+      "title": "Nyitvatartási idő"
+    }
+  },
+  "widgetConfigurator": {
+    "title": "Widget konfigurálása",
+    "type": "Típus",
+    "lang": "Nyelv",
+    "other": "Válassz másik tevékenységet",
+    "topBar": "Beállítási sáv",
+    "hideAll": "Mindent elrejteni",
+    "hideSearch": "Keresés elrejtése",
+    "hideSize": "Méret váltó elrejtése",
+    "hideFilter": "Szűrőgomb elrejtése",
+    "hideMap": "Térképgomb elrejtése",
+    "hideQuickFilter": "Gyorsszűrő elrejtése",
+    "hideSort": "Rendezés elrejtése",
+    "buttonText": "Gomb szövege",
+    "buttonBackground": "Gomb háttér",
+    "buttonColor": "Gomb szöveg színe",
+    "search": "Előre kitöltött keresés"
+  },
+  "types": {
+    "activity": "Tevékenység",
+    "overview": "Áttekintés",
+    "location": "Helyszín",
+    "locationType": "Helyszín + Típus",
+    "type": "Típus",
+    "attribute": "Kategória",
+    "locationAttribute": "Helyszín + Kategória",
+    "poi": "Látnivaló"
+  },
+  "reviewForm": {
+    "title": "Értékeld a tapasztalataidat",
+    "button": "Értékeld most",
+    "rating": "Értékelés",
+    "comment": "Megjegyzés",
+    "thanks": "Köszönjük az értékelésedet!",
+    "next": "Értékeld a következő foglalást",
+    "finish": "Az ablak 3 másodperc múlva bezárul"
+  },
+  "user": {
+    "welcome": "Üdvözöllek a műszerfaladon {name}!",
+    "menu": {
+      "activities": "Tevékenységek",
+      "bookings": "Foglalások",
+      "suppliers": "Szolgáltatók",
+      "reviews": "Értékelések",
+      "settings": "Beállítások",
+      "chat": "Csevegés",
+      "logout": "Kijelentkezés",
+      "login": "Bejelentkezés"
+    }
+  },
+  "SettingsForm": {
+    "title": "Fejezd be a profilod",
+    "titleUpdate": "Frissítsd a profilod",
+    "submit": "Küldés",
+    "phoneNumber": "Kérlek, ellenőrizd újra a telefonszámod.",
+    "email": "Az e-mail cím érvénytelen",
+    "iban": "Az IBAN érvénytelen",
+    "reseller": {
+      "title": "Viszonteladó",
+      "merchantName": "Kereskedő neve",
+      "merchantAddress": "Kereskedő címe",
+      "bankAccountHolder": "Számlatulajdonos",
+      "bankAccountIban": "Számla IBAN",
+      "bankAccountHolderAddress": "Számlatulajdonos címe",
+      "contact": {
+        "title": "Kapcsolatok",
+        "name": "Név",
+        "businessRole": "Üzleti szerep",
+        "email": "E-mail",
+        "phone": "Telefon"
+      }
+    },
+    "payment": {
+      "title": "Mentett fizetési módok",
+      "removeTitle": "Fizetési mód eltávolítása"
+    }
+  },
+  "Repeater": {
+    "add": "Hozzáadás",
+    "remove": "Eltávolítás"
+  },
+  "Table": {
+    "booking": {
+      "refresh": "Frissítés"
+    },
+    "clearFilters": "Szűrők törlése",
+    "noResults": "Nincs találat.",
+    "view": {
+      "title": "Nézet",
+      "adjust": "Oszlopok beállítása"
+    },
+    "header": {
+      "bookingId": "Foglalási szám",
+      "date": "Dátum",
+      "bookingDate": "Foglalás dátuma",
+      "serviceDate": "Szolgáltatás dátuma",
+      "description": "Leírás",
+      "location": "Hely",
+      "name": "Név",
+      "email": "E-mail",
+      "type": "Típus",
+      "price": "Ár és",
+      "sold": "Eladott",
+      "rating": "Értékelés",
+      "supplier": "Szállító",
+      "bookingStatus": "Foglalási állapot",
+      "paymentStatus": "Fizetési állapot",
+      "total": "Összesen",
+      "actions": "Akciók",
+      "duration": "Időtartam",
+      "validity": "Érvényesség",
+      "bookable": "Foglalható",
+      "createdAt": "Létrehozva",
+      "commission": "Bizottság",
+      "status": "Állapot",
+      "reservationSystem": "Foglalási rendszer",
+      "bapiId": "BAPI ID",
+      "capiId": "CAPI ID",
+      "notes": "Megjegyzések",
+      "distributor": "Disztribútor",
+      "website": "Weboldal",
+      "validities": "Érvényesség"
+    },
+    "actions": {
+      "aria": "Akciók megnyitása",
+      "details": "Részletek megjelenítése",
+      "book": "Most foglalj"
+    },
+    "sort": {
+      "ascending": "Növekvő",
+      "descending": "Csökkenő",
+      "hide": "Elrejtés",
+      "bookable": "Csak a foglalható tevékenységek megjelenítése"
+    },
+    "pagination": {
+      "page": "Oldal",
+      "of": "az",
+      "entriesPerPage": "Bejegyzések oldalonként",
+      "goToFirstPage": "Ugrás az első oldalra",
+      "goToLastPage": "Ugrás az utolsó oldalra",
+      "goToNextPage": "Ugrás a következő oldalra",
+      "goToPreviousPage": "Ugrás az előző oldalra"
+    },
+    "search": {
+      "activities": "Tevékenységek keresése",
+      "bookings": "Foglalások keresése",
+      "offers": "Ajánlatok keresése",
+      "suppliers": "Keresés szolgáltatókra",
+      "bookingId": "Keresés foglalási számra",
+      "email": "Keresés e-mail címmel",
+      "familyName": "Keresés vezetéknéven"
+    },
+    "cell": {
+      "bookingStatusActive": "Megerősítve",
+      "bookingStatusPending": "Függőben",
+      "bookingStatusCancelled": "Törölve",
+      "paymentStatusActive": "Kifizetve",
+      "paymentStatusPending": "Függőben",
+      "paymentStatusRefunded": "Visszatérítve"
+    }
+  },
+  "Drawer": {
+    "close": "Bezárás"
+  },
+  "PaymentMethod": {
+    "card": {
+      "new": "Új kártya",
+      "store": "Kérlek, mentsd el a bankkártyámat a gyorsabb vásárlás érdekében a jövőben.",
+      "endsIn": "Záródik: {val}"
+    }
+  },
+  "Activity": {
+    "new": "Új aktivitás",
+    "nav": {
+      "general": "Általános"
+    }
+  },
+  "Offer": {
+    "new": "Új ajánlat"
+  },
+  "Supplier": {
+    "new": "Új szolgáltató"
+  },
+  "UspSlider": {
+    "title": "Miért érdemes a Swiss Activities-nél foglalni?",
+    "items": [
+      "Svájc legnagyobb választéka",
+      "Több mint 100'000 elégedett ügyfél",
+      "Ingyenes lemondási lehetőség",
+      "5 csillagos svájci ügyfélszolgálat",
+      "Mobiljegyek 90 másodperc alatt"
+    ]
+  },
+  "AppBanner": {
+    "title": "Most töltsd le az alkalmazást",
+    "description": "Fedezd fel a Swiss Activities-t – egyszerűen és gyorsan"
+  },
+  "Transport": {
+    "bookTrip": "Összeköttetés foglalása",
+    "button": {
+      "confirmTrip": "Összeköttetés megerősítése",
+      "confirmTravelers": "Utazók megerősítése"
+    },
+    "checkDetails": "Összeköttetés részleteinek ellenőrzése",
+    "class": {
+      "first": "1. osztály",
+      "second": "2. osztály"
+    },
+    "direct": "Közvetlen",
+    "duration": {
+      "minutes": "Perc."
+    },
+    "earlierTrips": "Korábbi járatok",
+    "errorLoadingTrips": "A kapcsolatok nem tölthetők be.",
+    "laterTrips": "Későbbi járatok",
+    "legend": "Legenda",
+    "loadingTrips": "Összeköttetések betöltése...",
+    "oneWay": "Csak egy útra",
+    "roundTrip": "Menet-/visszautazás",
+    "searchTrips": "Összeköttetések keresése",
+    "selectOriginDestination": "Válaszd ki a kiindulási és célhelyet az összeköttetések kereséséhez.",
+    "selectProduct": "Jegyopció választása",
+    "selectTravelers": "Utazók kiválasztása",
+    "switch": "Átszállás",
+    "ticket": "Jegy",
+    "tickets": "Jegyek",
+    "transfer": "Átszállás",
+    "tripResults": "Összeköttetések",
+    "upgradeTo1stClass": "További kényelem",
+    "upgradeTo1stClassDescription": "Utazás az 1. osztályban",
+    "cityTicketDescription": "Napi jegy a városi közlekedéshez",
+    "via": "által",
+    "travelDate": "Utazási dátum választása",
+    "confirmTravelDate": "Utazási dátum megerősítése",
+    "departure": "Indulás",
+    "arrival": "Érkezés",
+    "locationDisabled": "A helymeghatározás le van tiltva",
+    "locationError": "A helyszín nem határozható meg",
+    "noProductsAvailable": "Nincsenek elérhető jegyek",
+    "disclaimer": "Minden információ a lehetőségek figyelembevételével.",
+    "validity": "Érvényesség",
+    "validityOnSelectedRoute": "Csak a kiválasztott útvonalon",
+    "validityForConnection": "Csak a választott kapcsolat érvényes",
+    "validityForConnectionWith2ndClass": "Csak a választott kapcsolat és érvényes jegy a 2. osztályra",
+    "validityForRouteWith2ndClass": "Csak a választott útvonal és érvényes jegy a 2. osztályra",
+    "validityGARoutes": "Érvényes minden GA-szakterületen",
+    "validityDayClassUpgrade": "Csak napijeggyel, Félárú bérlettel, GA-val vagy Swiss Travel Pass-szal (Flex) a 2. osztályhoz.",
+    "includedIn": "Benne van",
+    "validityDateRange": "{fromDate} -tól {toDate} -ig, {toTime}",
+    "validityConnection": "{date} {fromTime} -tól, {toTime} -ig",
+    "classUpgradeOnly": "Csak osztályváltás",
+    "loadingDestination": "Betöltés folyamatban",
+    "distanceToMeetingPoint": "Találkozási pont",
+    "walking": "Gyalog",
+    "arrivalInfo": "Érkezési idő: {walkingTime} gyaloglás + 15 perc puffert a találkozási pontig",
+    "timeBeforeEvent": "{minutes} perc múlva a tevékenység előtt · {walkingMinutes} perc séta az állomástól",
+    "tooLateForActivity": "A következő járatok nem érnek a találkozópontra időben"
+  }
+}

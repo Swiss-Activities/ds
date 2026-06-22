@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import { TActivity } from "../../types/activity";
+import type { TActivity } from "../../types/activity";
 import { useDistributorId } from "../../utils/user/useDistributorId";
 import { axiosInstance } from "../axios";
 

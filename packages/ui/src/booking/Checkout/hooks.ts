@@ -5,7 +5,7 @@ import { useCheckoutStore } from "./store";
 import { useBookingStore } from "../store";
 import { PAYMENT_PROVIDER } from "../data/constants/paymentProvider";
 import { useAffiliateStore } from "../store/affiliateStore";
-import { TBooking } from "../types/booking";
+import type { TBooking } from "../types/booking";
 import { getCookie } from "../utils/cookies/getCookie";
 import { secureLocalStorage } from "../utils/data/secureLocalStorage";
 import { useI18n } from "../utils/i18n/useI18n";

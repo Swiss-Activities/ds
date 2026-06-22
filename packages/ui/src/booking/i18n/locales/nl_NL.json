@@ -1,0 +1,1799 @@
+{
+  "general": {
+    "accountAdvantages": "Om kortingen en andere voordelen te genieten, maak een account aan of log in.",
+    "activityBook": "Activiteit boeken",
+    "addTicket": "Ticket toevoegen",
+    "adult": "{val} Volwassene",
+    "adults": "{val} Volwassenen",
+    "ageChoose": "Leeftijd kiezen",
+    "ageFrom": "Vanaf {val} jaar",
+    "ageOld": "{val} jaar oud",
+    "ageUnder": "Onder {val} jaar",
+    "all": "Alle",
+    "allReviews": "Alle beoordelingen",
+    "backToBookings": "Terug naar boekingen",
+    "bookAsGuest": "Je voltooit de bestelling als gast.",
+    "cancel": "Annuleren",
+    "cancelled": "Geannuleerd",
+    "cartAmount": "Winkelwaarde",
+    "child": "{val} kind",
+    "children": "{val} Kinderen",
+    "chooseSelection": "Keuze bevestigen",
+    "confirm": "Bevestigen",
+    "confirmCancel": "Bevestig de annulering",
+    "contact": "Contact",
+    "copyUrl": "URL kopiëren",
+    "couple": "Koppel",
+    "customerServiceFee": "Servicevergoeding",
+    "data": "Gegevens",
+    "date": "Datum",
+    "dateChoose": "Kies een datum",
+    "delete": "Verwijderen",
+    "didYouMean": "Bedoelde je <suggestion>{email}</suggestion>?",
+    "duplicate": "Dupliceren",
+    "emailsDontMatch": "De ingevoerde e-mailadressen komen niet overeen.",
+    "export": "Exporteren",
+    "faqType": "Veelgestelde vragen over {type} in Zwitserland",
+    "from": "Van",
+    "group": "Groep",
+    "helpfulQuestion": "Nuttig?",
+    "informationPlural": "Informatie",
+    "language": "Taal",
+    "loginOrRegister": "Inloggen of Registreren",
+    "manageBookings": "Boekingen beheren",
+    "mobileAppAddon": "Download nu onze mobiele app en beheer eenvoudig je boekingen, krijg snel toegang tot je tickets en vind je volgende avontuur.",
+    "mostImportantInSummary": "Het belangrijkste in het kort",
+    "noResults": "Helaas hebben we geen resultaten gevonden voor je zoekopdracht",
+    "noReviewsYet": "Nog geen beoordelingen",
+    "notes": "Notities",
+    "oneMonth": "1 maand",
+    "openChat": "Chat openen",
+    "order": "Volgorde",
+    "partSum": "Tussenbedrag",
+    "participants": "Deelnemers",
+    "participantsChoose": "Deelnemers kiezen",
+    "past": "Verleden",
+    "personalizeTickets": "Tickets personaliseren",
+    "pleaseSelect": "Gelieve te selecteren",
+    "pleaseSelectItem": "Selecteer {val}",
+    "questionsChatActivity": "Heb je nog vragen over deze activiteit? Chat met ons",
+    "questionsChatBooking": "Heb je nog vragen over de boeking? Chat met ons",
+    "raw": "Raw",
+    "rebate": "Korting",
+    "recaptcha": "Deze website is beschermd door reCAPTCHA. De Google\n<a href=\"https://policies.google.com/privacy\" target=\"_blank\">Privacybeleid</a> en\n<a href=\"https://policies.google.com/terms\" target=\"_blank\">Gebruiksvoorwaarden</a> zijn van toepassing.",
+    "remove": "Verwijderen",
+    "removeFromCart": "Verwijderen uit winkelwagentje",
+    "reset": "Resetten",
+    "searchNow": "Nu zoeken",
+    "single": "Enkel",
+    "soldOut": "Uitverkocht",
+    "somethingWentWrongContact": "Het spijt ons, maar er is iets misgelopen. Probeer het opnieuw of neem contact op met de ondersteuning.",
+    "successfullySaved": "Succesvol opgeslagen",
+    "ticket": "Ticket",
+    "tickets": "Tickets",
+    "to": "Naar",
+    "currentLocation": "Huidige locatie",
+    "toDashboard": "Mijn boekingen",
+    "translate": "Vertalen",
+    "tryAgain": "Opnieuw proberen",
+    "upcoming": "Aankomend",
+    "when": "Wanneer",
+    "who": "Wie",
+    "wrongDate": "Er is iets mis met de datum: Controleer en selecteer opnieuw.",
+    "wrongDateParticipant": "De geboortedatum van de deelnemer komt niet overeen met de leeftijd in de aanbieding.",
+    "today": "Vandaag",
+    "apply": "Toepassen"
+  },
+  "aria": {
+    "forward": "Vooruit",
+    "backward": "Achteruit"
+  },
+  "auth0": {
+    "accept": "Ik accepteer de [gebruikersvoorwaarden]({link})",
+    "error": "Gelieve de gebruiksvoorwaarden te aanvaarden",
+    "resetPasswordHint": "Geen e-mail ontvangen? Controleer je spamfolder. Als je je met Apple of Google hebt geregistreerd, gebruik dan deze aanmeldmethode."
+  },
+  "menu": {
+    "menu": "Menu",
+    "search": "Zoeken",
+    "travelGuide": "Reisplanner",
+    "travelRoutes": "Reisroutes",
+    "contactus": "Neem contact met ons op",
+    "switzerland": "Zwitserland",
+    "help": "Chat",
+    "voucher": "Vouchers kopen",
+    "voucherSm": "Vouchers",
+    "partners": "Partners",
+    "provider": "Aanbieder",
+    "affiliate": "Affiliatepartner"
+  },
+  "chat": {
+    "chats": "Alle chats",
+    "newChat": "Nieuwe chat",
+    "noChatsYet": "Nog geen chats",
+    "typeMessage": "Bericht invoeren",
+    "welcome": "Hallo en welkom bij Swiss Activities! Ik ben Housibot en help je graag met je vragen.",
+    "welcomeReview": "Hallo! Hoe was je ervaring? Ik ben Housibot en ik help je graag je feedback te delen."
+  },
+  "supportBanner": {
+    "title": "Heb je hulp nodig om de juiste skischool te vinden?",
+    "placeholder": "Hoe kunnen we je verder helpen?",
+    "send": "Verzenden"
+  },
+  "pages": {
+    "404": {
+      "title": "Pagina niet gevonden.",
+      "description": "Deze pagina bestaat niet.",
+      "button": "Terug naar de startpagina",
+      "search": "Zoekopdracht starten"
+    },
+    "home": {
+      "title": "Swiss Activities - Vind Zwitserse vrijetijdsactiviteiten",
+      "description": "Swiss Activities is jouw bestemming voor vrijetijdsactiviteiten in Zwitserland. Ontdek, vergelijk en boek talloze vrijetijdsactiviteiten.",
+      "gatewayCards": {
+        "categories": {
+          "castlesRuins": "Kasteel / Ruïne",
+          "castleEvents": "Kasteel evenement",
+          "exhibitions": "Tentoonstelling",
+          "fireplaces": "Vuurplaats",
+          "movies": "Film",
+          "museums": "Museum",
+          "playgrounds": "Speelplaats",
+          "swimmingBathing": "Zwemmen & Baden"
+        },
+        "dateRange": {
+          "from": "Vanaf",
+          "until": "Tot"
+        },
+        "distance": {
+          "unit": "km"
+        }
+      },
+      "gatewayDetail": {
+        "back": "Terug",
+        "moreInfo": "Meer informatie",
+        "source": "Bron openen",
+        "labels": {
+          "admission": "Toegang",
+          "address": "Adres",
+          "ageRating": "Leeftijd",
+          "bookTickets": "Tickets boeken",
+          "canton": "Kanton",
+          "cast": "Casting",
+          "category": "Categorie",
+          "cinema": "Bioscoop",
+          "countryYear": "Land / Jaar",
+          "dateRange": "Periode",
+          "director": "Regie",
+          "duration": "Duur",
+          "entryFeeAdult": "Volwassenen",
+          "entryFeeChild": "Kinderen",
+          "foundedYear": "Opgericht",
+          "genres": "Genres",
+          "location": "Plaats",
+          "museumCategory": "Museumtype",
+          "openTrailer": "Trailer openen",
+          "openingHours": "Openingstijden",
+          "phone": "Telefoon",
+          "poolLength": "Badlengte",
+          "trailer": "Trailer",
+          "venue": "Evenementlocatie",
+          "waterType": "Watertype"
+        },
+        "sections": {
+          "amenities": "Voorzieningen",
+          "badges": "Aanbevelingen",
+          "information": "Informatie",
+          "prices": "Prijzen",
+          "showtimes": "Voorstellingen",
+          "venue": "Evenementlocatie"
+        },
+        "amenities": {
+          "capacityPersons": "Capaciteit",
+          "hasBenches": "Banken",
+          "hasChangingRooms": "Kleedkamers",
+          "hasDivingBoard": "Duikplank",
+          "hasFirewood": "Brandhout",
+          "hasFoodService": "Verfrissingen",
+          "hasGrillGrate": "Grillrooster",
+          "hasKidsPool": "Kinderbad",
+          "hasLifeguard": "Toezicht",
+          "hasLockers": "Kastjes",
+          "hasPlaygroundNearby": "Speelplaats in de buurt",
+          "hasShowers": "Douches",
+          "hasSlide": "Glijbaan",
+          "hasShelter": "Schuilplaats",
+          "hasTable": "Tafel",
+          "hasToilet": "Toilet",
+          "hasWater": "Water"
+        },
+        "waterTypes": {
+          "indoorPool": "Overdekt zwembad",
+          "lake": "Meer",
+          "outdoorPool": "Buitenbad",
+          "pool": "Zwembad",
+          "river": "Rivier"
+        }
+      }
+    },
+    "s": {
+      "title": "Swiss Activities - Vind Zwitserse vrijetijdsactiviteiten",
+      "description": "Swiss Activities is jouw bestemming voor vrijetijdsactiviteiten in Zwitserland. Ontdek, vergelijk en boek talloze vrijetijdsactiviteiten.",
+      "sort": {
+        "distance": {
+          "notSupported": "Locatiediensten worden niet door jouw browser ondersteund. Sorteren op relevantie wordt gebruikt.",
+          "permissionDenied": "Om op afstand te sorteren, geef alsjeblieft toestemming voor toegang tot je locatie in de browserinstellingen en vernieuw de pagina.",
+          "positionUnavailable": "Locatie-informatie is niet beschikbaar.",
+          "timeout": "Timeout bij het opvragen van de locatie.",
+          "unknownError": "Er is een onbekende fout opgetreden.",
+          "fallbackMessage": "Sorteren op relevantie wordt gebruikt.",
+          "errorPrefix": "Locatie kon niet worden bepaald."
+        }
+      }
+    },
+    "chat": {
+      "title": "Swiss Activities Chat",
+      "description": "Swiss Activities is jouw bestemming voor recreatieve activiteiten in Zwitserland. Ontdek, vergelijk en boek ontelbare recreatieve activiteiten."
+    },
+    "transport": {
+      "title": "Zwitserse trein tickets, passen & dagkaarten | Swiss Travel Pass, SBB Spar dagkaart",
+      "description": "Vergelijk en boek trein tickets, Swiss Travel Pass, Halbtax, SBB Spar dagkaarten & regionale passen voor heel Zwitserland. Direct als mobiel ticket op je telefoon.",
+      "trust": {
+        "partners": "Officiële partner van",
+        "ratingValue": "4,8",
+        "ratingLabel": "400.000+ tevreden reizigers",
+        "ratingShortLabel": "400.000+ reizigers"
+      },
+      "discountMap": {
+        "title": "Hier bespaar je met je pas",
+        "subtitle": "Bergbanen, schepen en topuitstapjes — kies een pas en ontdek wat er te doen is.",
+        "free": "Inclusief",
+        "discount50": "−50 %",
+        "discount25": "−25 %",
+        "noDiscount": "Geen korting",
+        "altitude": "{m} m boven zeeniveau.",
+        "moreInfo": "Meer informatie",
+        "selectPass": "Kies een pas",
+        "selectCategory": "Kies een categorie",
+        "categories": {
+          "mountain": "Bergbanen",
+          "lake": "Meren & Schepen",
+          "museum": "Musea"
+        },
+        "airports": {
+          "zrh": "Zürich",
+          "gva": "Genève"
+        },
+        "regions": {
+          "bernerOberland": "Berner Oberland",
+          "jungfrau": "Jungfrau",
+          "interlaken": "Interlaken",
+          "zentralschweiz": "Centraal-Zwitserland",
+          "ostschweiz": "Oost-Zwitserland",
+          "waadt": "Vaud",
+          "engadin": "Engadin",
+          "wallis": "Wallis",
+          "tessin": "Ticino",
+          "genferseeregion": "Regio Genève",
+          "zuerich": "Zürich",
+          "mittelland": "Middenland",
+          "luzern": "Luzern",
+          "basel": "Bazel",
+          "bern": "Bern",
+          "lausanne": "Lausanne",
+          "geneve": "Genève",
+          "zermatt": "Zermatt",
+          "fribourg": "Fribourg",
+          "graubuenden": "Graubünden"
+        }
+      },
+      "hero": {
+        "title": "Trein tickets voor heel",
+        "titleAccent": "Zwitserland",
+        "lede": "Route tickets, dagkaarten en aanbiedingen van de SBB – direct als mobiel ticket op je telefoon.",
+        "subtitle": "Route tickets, dagkaarten en aanbiedingen van de SBB – direct als mobiel ticket op je telefoon.",
+        "searchTitle": "Zoek verbinding",
+        "searchMeta": "Station · Datum · Passagiers",
+        "fromPlaceholder": "Vertrekstation / Plaats",
+        "toPlaceholder": "Bestemming / Plaats",
+        "badges": {
+          "rating": "4,8 / 5 · 400.000+ beoordelingen",
+          "partner": "Officiële partner SBB"
+        },
+        "usps": {
+          "customers": {
+            "title": "400.000 gelukkige klanten",
+            "subline": "Vertrouwen sinds 2021 op Swiss Activities"
+          },
+          "saver": {
+            "title": "Bespaar tot 50%",
+            "subline": "Met kortingskaarten en dagkaarten van de SBB"
+          },
+          "mobile": {
+            "title": "Direct als mobiel ticket",
+            "subline": "Rechtstreeks op je telefoon, geen SBB-login nodig"
+          },
+          "earlyBird": {
+            "title": "Korting voor vroegboekkopers",
+            "subline": "Plan vooruit en koop kortingskaarten en dagkaarten van de SBB"
+          }
+        }
+      },
+      "benefits": {
+        "title": "Jouw voordelen",
+        "discount": {
+          "eyebrow": "Kortingstickets",
+          "title": "Bespaar tot 40%",
+          "subline": "SBB-kortingsaanbiedingen en dagkaarten",
+          "badge": "Best verkoper"
+        }
+      },
+      "passes": {
+        "title": "SBB- en regionale passen",
+        "subtitle": "Vergelijk meerdaagse passen, dagpassen en regionale passen – kies de pas die het beste bij jou past.",
+        "tabs": {
+          "multiDay": "Meerdaagse passen",
+          "dayPass": "Dagpassen",
+          "regional": "Regionale passen"
+        },
+        "buy": "Nu kopen",
+        "from": "vanaf",
+        "moreInfo": "Meer info",
+        "seeDiscounts": "Bekijk alle kortingen",
+        "viewAllByTab": {
+          "multiDay": "Bekijk alle treinpassen",
+          "dayPass": "Bekijk alle SBB dagpassen",
+          "regional": "Bekijk alle regionale passen"
+        },
+        "empty": "Momenteel geen producten beschikbaar – kijk bij de andere categorieën.",
+        "descriptions": {
+          "fallback-stp": "Zwitserland door met trein, bus en schip – ook gratis toegang tot musea.",
+          "fallback-stpf": "gebruik van het openbaar vervoer op geselecteerde dagen – inclusief gratis toegang tot musea.",
+          "fallback-shfc": "Een maand lang de helft van de prijs voor trein, bus, schip en bergbanen.",
+          "fallback-halbtax": "De hele dag gratis reizen in heel Zwitserland – met je Halbtax.",
+          "fallback-spar": "Dagkaart voor de beste prijs bij vroeg boeken – beperkt aantal per dag.",
+          "fallback-ga": "Volledige mobiliteit voor een dag – als een GA, maar dan voor 24 uur.",
+          "fallback-tell": "Gratis reizen in Midden-Zwitserland: bergbanen, boottochten en OV inbegrepen.",
+          "fallback-bo": "Verken de regio Jungfrau en Interlaken – treinen, boten en kabelbanen met één pas.",
+          "fallback-jtp": "Top of Europe-regio: bergbanen, OV en hoogtepunten rond Grindelwald, Wengen, Mürren."
+        },
+        "usps": {
+          "1330": [
+            "Harder Kulm & Brienzer Rothorn inbegrepen",
+            "Tot −50 % op skigebieden Grindelwald-Wengen",
+            "OV & bergbanen regio Jungfrau"
+          ],
+          "1438": [
+            "First, Schynige Platte & Niesen inbegrepen",
+            "−25 % op Jungfraujoch Top of Europe",
+            "Trein, schip & bergbanen met één pas"
+          ],
+          "1440": [
+            "1 maand halve prijs in heel Zwitserland",
+            "Op trein, bus, schip & bergbanen",
+            "Ook op SBB kortingskaarten"
+          ],
+          "1447": [
+            "Trein, bus & schip gratis in heel Zwitserland",
+            "Tot −50 % op bergbanen (Jungfraujoch −25 %)",
+            "Meer dan 500 musea gratis"
+          ],
+          "1448": [
+            "Activeren op geselecteerde dagen",
+            "Tot −50 % op bergbanen, bus, schip",
+            "Meer dan 500 musea gratis"
+          ],
+          "1450": [
+            "Pilatus, Rigi & Stanserhorn inbegrepen",
+            "Schepen op het Vierwoudstrekenmeer gratis",
+            "Trein, bus & bergbanen in Midden-Zwitserland"
+          ],
+          "1664": [
+            "Dagkaart vanaf CHF 29",
+            "Tot −70 % bij vroeg boeken",
+            "Beperkt aantal per dag"
+          ],
+          "1671": [
+            "Kinderen 6–16 voor familietarief",
+            "In heel Zwitserland op alle SBB-verbindingen",
+            "Perfect voor gezinsuitstapjes"
+          ],
+          "1676": [
+            "1 dag gratis reizen met Halbtax",
+            "In heel Zwitserland op SBB-verbindingen",
+            "Goedkoper dan meerdere enkele kaarten"
+          ]
+        },
+        "soldCount": "{count} geboekt",
+        "reviews": "({count})",
+        "discounts": {
+          "1330": "Harder Kulm inbegrepen.",
+          "1438": "First & Niesen inbegrepen.",
+          "1440": "Halve prijs",
+          "1447": "Bergbanen −50 %",
+          "1448": "Bergbanen −50 %",
+          "1450": "Pilatus & Rigi inbegrepen.",
+          "1664": "Tot −70 %",
+          "1671": "Familietarief"
+        },
+        "benefits": {
+          "includedHeading": "Inclusief",
+          "discountedHeading": "Korting",
+          "expand": "Bekijk alle kortingen",
+          "collapse": "Minder weergeven",
+          "items": {
+            "1330": {
+              "included": [
+                "Harder Kulm & Brienzer Rothorn",
+                "Openbaar vervoer regio Jungfrau (trein, bus, schip)"
+              ],
+              "discounted": [
+                "Skigebieden Grindelwald-Wengen tot −50 %",
+                "Skigebied Mürren-Schilthorn tot −50 %",
+                "Jungfraujoch Top of Europe −25 %"
+              ]
+            },
+            "1438": {
+              "included": [
+                "First, Schynige Platte & Niesen",
+                "Brienzer Rothorn & Stockhorn",
+                "Trein, schip & bergbanen regio Jungfrau"
+              ],
+              "discounted": [
+                "Jungfraujoch Top of Europe −25 %",
+                "Schilthorn (James Bond) −50 %"
+              ]
+            },
+            "1440": {
+              "included": [],
+              "discounted": [
+                "50 % korting op trein-, bus- & schip tickets",
+                "50 % korting op bergbanen",
+                "Ook te combineren met SBB-kortingskaarten"
+              ]
+            },
+            "1447": {
+              "included": [
+                "Trein, bus & schip in heel Zwitserland",
+                "Meer dan 500 musea",
+                "OV in 90 Zwitserse steden"
+              ],
+              "discounted": [
+                "Bergbanen tot −50 %",
+                "Jungfraujoch Top of Europe −25 %",
+                "RailAway-aanbiedingen van de SBB −30 %"
+              ]
+            },
+            "1448": {
+              "included": [
+                "Trein, bus & schip op geselecteerde dagen",
+                "Meer dan 500 musea",
+                "OV in 90 Zwitserse steden"
+              ],
+              "discounted": [
+                "Bergbanen tot −50 %",
+                "Jungfraujoch Top of Europe −25 %",
+                "RailAway-aanbiedingen van de SBB −30 %"
+              ]
+            },
+            "1450": {
+              "included": [
+                "Pilatus, Rigi & Stanserhorn",
+                "Schepen op het Vierwaldstättersee",
+                "Trein, bus & bergbanen Centraal-Zwitserland"
+              ],
+              "discounted": []
+            },
+            "1664": {
+              "included": [
+                "1 dag gratis reizen in heel Zwitserland"
+              ],
+              "discounted": [
+                "Dagkaart vanaf CHF 29",
+                "Tot −70 % bij vroeg boeken"
+              ]
+            },
+            "1671": {
+              "included": [
+                "SBB-verbindingen in heel Zwitserland voor 1 dag"
+              ],
+              "discounted": [
+                "Gezinsprijs voor kinderen van 6-16 jaar",
+                "−50 % op reguliere dagkaarten"
+              ]
+            },
+            "1676": {
+              "included": [
+                "1 dag gratis reizen met Halbtax"
+              ],
+              "discounted": [
+                "Goedkoper dan verschillende enkele kaartjes"
+              ]
+            }
+          }
+        }
+      },
+      "articles": {
+        "title": "Spannende artikelen over de wereld van de trein",
+        "subtitle": "Tips, vergelijkingen en praktische kennis over SBB-tickets, Travel-passen en openbaar vervoer in Zwitserland.",
+        "read": "Artikel lezen",
+        "tag": "Magazine"
+      },
+      "dayPasses": {
+        "title": "Populaire dagkaarten",
+        "subtitle": "De hele dag vrij reizen – eenvoudig te combineren met jouw ticket.",
+        "halbtax": {
+          "title": "Dagkaart voor Halbtax",
+          "description": "De hele dag vrij reizen in heel Zwitserland – met jouw Halbtax. Ideaal voor dagtochten en berggebieden.",
+          "fromPrice": "vanaf CHF 52.–",
+          "cta": "Verbinding zoeken"
+        },
+        "spar": {
+          "title": "Spartageskaart",
+          "description": "Dagkaart tegen de beste prijs bij vroeg boeken. Beperkt aantal beschikbaar per dag - wie vroeg boekt, reist goedkoper.",
+          "fromPrice": "vanaf CHF 29.–",
+          "cta": "Verbinding zoeken"
+        }
+      },
+      "groups": {
+        "mountains": "Bergervaringen bereikbaar met de trein",
+        "dayTrips": "Populaire dagtochten vanuit Zürich, Bern en Basel",
+        "cities": "Steden ontdekken: trein + ervaring",
+        "cityPasses": "City Passes: Een kaart voor de hele stad"
+      },
+      "faq": {
+        "title": "Veelgestelde vragen over SBB-tickets",
+        "items": [
+          {
+            "q": "Kan ik mijn ticket annuleren?",
+            "a": "<p><strong>Routekaarten</strong> kun je tot de dag voor de reis gratis annuleren – dat kan rechtstreeks in jouw boekingscockpit op swissactivities.com.</p><p>Voor <strong><a href=\"/sbb-tageskarten/spartageskarte-sbb/\">Spartageskaarten</a></strong> en spartaartickets is annuleren helaas niet mogelijk. Deze zijn gebonden aan de gekozen datum - een duidelijke waarschuwing verschijnt vóór de aankoop op de boekingspagina.</p>"
+          },
+          {
+            "q": "Zijn de SBB-tickets hetzelfde als aan de SBB-balie?",
+            "a": "Ja, je ontvangt dezelfde officiële SBB-tickets als aan de balie of in de SBB-app – zonder extra kosten. Ook <a href=\"/sbb-tageskarten/\">SBB dagkaarten</a> en <a href=\"/bahnpaesse/\">treinpassen</a> zijn 1:1 de originele producten van SBB."
+          },
+          {
+            "q": "Hoe snel krijg ik mijn ticket?",
+            "a": "Direct. Na een succesvolle boeking ontvang je het mobiele ticket per e-mail en in de boekingscockpit op swissactivities.com. Geen SBB-login nodig – gewoon voorleggen in de trein."
+          },
+          {
+            "q": "Kan ik Halbtax of GA koppelen?",
+            "a": "Ja, tijdens het boekingsproces kun je jouw kortingsabonnement selecteren – de prijs past zich automatisch aan. Als je alleen een Halbtax hebt en de hele dag onderweg bent, is de <a href=\"/sbb-tageskarten/sbb-tageskarte-halbtax/\">SBB dagkaart voor Halbtax</a> in plaats van meerdere enkele tickets vaak voordeliger."
+          },
+          {
+            "q": "Wat als mijn trein vertraging heeft?",
+            "a": "Jouw routekaart is ook geldig voor de volgende verbinding - stap gewoon in de volgende geschikte trein. Bij meer dan een uur vertraging kun je via de SBB een terugbetaling aanvragen."
+          },
+          {
+            "q": "Loont de Swiss Travel Pass of een Spartageskaart?",
+            "a": "<p>De vuistregel: Wie minimaal drie dagen achtereen veel met trein, bus en schip onderweg is en graag musea bezoekt, heeft met de <a href=\"/bahnpaesse/swiss-travel-pass-kopen/\">Swiss Travel Pass</a> de beste deal. Inclusief toegang tot meer dan 500 musea, openbaar vervoer in 90 steden en bergbanen met −50 % korting.</p><p>Voor individuele dagtochten is de <a href=\"/sbb-tageskarten/spartageskarte-sbb/\">SBB Spartageskaart</a> vanaf CHF 29 bijna altijd de voordeligste optie – gewoon op tijd boeken.</p>"
+          },
+          {
+            "q": "Welke regionale pas past bij mijn reis?",
+            "a": "<p>Voor de regio Interlaken / Grindelwald / Wengen is de <a href=\"/bahnpaesse/berner-oberland-pass/\">Berner Oberland Pass</a> of in de winter de <a href=\"/bahnpaesse/jungfrau-travel-pass-winter/\">Jungfrau Travel Pass</a> handig - beide bevatten bergbanen, openbaar vervoer en schepen van de regio.</p><p>Rond het Vierwaldstättersee is de <a href=\"/bahnpaesse/sbb-tellpass/\">Tell-Pass</a> ideaal: Pilatus, Rigi, Stanserhorn en alle schepen zijn inclusief.</p>"
+          }
+        ]
+      }
+    },
+    "about_us": {
+      "title": "Over ons - Swiss Activities",
+      "description": "Swiss Activities is jouw bestemming voor vrijetijdsactiviteiten in Zwitserland. Ontdek, vergelijk en boek talloze vrijetijdsactiviteiten.",
+      "hero": {
+        "title": "Vind Zwitserse vrijetijdsactiviteiten",
+        "text": "Swiss Activities is jouw bestemming voor vrijetijdsactiviteiten in Zwitserland. Op Swiss Activities vind je talloze vrijetijdsactiviteiten, kun je ze vergelijken en met een paar klikken boeken. Het was nog nooit zo eenvoudig om activiteiten voor je vrijetijd in Zwitserland te vinden."
+      },
+      "who": {
+        "title": "Wie wij zijn",
+        "text": "Wij zijn een gemotiveerd team dat gepassioneerd is over vrijetijdsactiviteiten in Zwitserland. We kennen het land en de mensen. Nieuwe activiteiten uitproberen is onze passie. Daarom hebben we Swiss Activities ontwikkeld."
+      },
+      "start": {
+        "title": "Onze start",
+        "text": "Toen we in 2020 ontdekten dat we niet meer konden reizen, zochten we een Zwitserse vrijetijdsactiviteitenplatform gericht op Zwitsers, maar we konden er geen vinden. Dat was het startschot voor de vrijetijdsactiviteitenbestemming Swiss Activities.",
+        "milestones": {
+          "march_2020": {
+            "date": "Maart 2020",
+            "title": "Bootstrapping Swiss Activities als bedrijfsmodel"
+          },
+          "march_2021": {
+            "date": "Maart 2021",
+            "title": "Oprichtingsdatum"
+          },
+          "june_2021": {
+            "date": "Juni 2021",
+            "title": "Lancering van eigen platform"
+          },
+          "september_2021": {
+            "date": "September 2021",
+            "title": "500 live boekbare activiteiten beschikbaar"
+          },
+          "december_2021": {
+            "date": "December 2021",
+            "title": "Pre-seed financieringsronde afgerond"
+          },
+          "march_2022": {
+            "date": "Maart 2022",
+            "title": "Lancering affiliateprogramma"
+          },
+          "may_2022": {
+            "date": "Mei 2022",
+            "title": "Lancering B2B partnerprogramma"
+          }
+        }
+      },
+      "partner": {
+        "title": "Wij helpen je nieuwe klanten te winnen",
+        "text": "Swiss Activities helpt je nieuwe klanten te vinden. We werken elke dag aan Swiss Activities als de grootste bestemming voor vrijetijdsactiviteiten in Zwitserland. Duizenden mensen bezoeken elke dag www.swissactivities.com om naar vrijetijdsactiviteiten in Zwitserland te zoeken. Door je aanbod op Swiss Activities te tonen, bereik je nieuwe klanten."
+      },
+      "kunden": {
+        "title": "Een bestemming met alle vrijetijdsactiviteiten in Zwitserland ",
+        "text": "Onze doel is om alle vrijetijdsactiviteiten in heel Zwitserland op www.swissactivities.com vindbaar te maken. Hierdoor maken we het vinden, vergelijken en boeken van vrijetijdsactiviteiten voor iedereen eenvoudiger."
+      },
+      "promise": {
+        "title": "Onze klantenbelofte",
+        "list": [
+          "geen ingewikkeld bellen",
+          "geen eindeloze zoektocht op talloze websites",
+          "direct controleerbare beschikbaarheid",
+          "directe reserveringen zonder omhaal",
+          "geen extra kosten",
+          "eenvoudige en snelle betaalmogelijkheden",
+          "geen vervelende wachtrijen",
+          "Overzicht van aantrekkelijke kortingen",
+          "lokale aanbiedingen"
+        ]
+      },
+      "team": {
+        "title": "Het Swiss Activities Team"
+      }
+    },
+    "tos_b2b": {
+      "title": "Algemene Voorwaarden voor Aanbieders",
+      "description": "Dit zijn onze huidige algemene voorwaarden voor onze aanbieders."
+    },
+    "tos_b2c": {
+      "title": "Gebruiksvoorwaarden Swiss Activities Bemiddelingsplatform voor Klanten",
+      "description": "Dit zijn onze huidige gebruiksvoorwaarden voor het Swiss Activities Bemiddelingsplatform voor Klanten."
+    },
+    "tos_aff": {
+      "title": "Algemene voorwaarden voor Affiliates",
+      "description": "Dit zijn onze huidige algemene voorwaarden voor onze Affiliates."
+    },
+    "imprint": {
+      "title": "Colofon",
+      "description": "Dit is ons impressum."
+    },
+    "privacy_policy": {
+      "title": "Privacybeleid",
+      "description": "Dit is de privacyverklaring."
+    },
+    "contact_us": {
+      "title": "Neem contact met ons op",
+      "description": "Bij vragen helpen we je graag verder."
+    },
+    "basket": {
+      "title": "Winkelwagentje",
+      "delete": "Verwijderen",
+      "warning": "Wil je deze reservering uit je winkelwagentje verwijderen?",
+      "edit": "Bewerken",
+      "cancel": "Annuleren",
+      "update": "Winkelwagentje bijwerken",
+      "next": "Naar de kassa",
+      "empty": "Je winkelwagentje is leeg",
+      "hold": "We houden deze reservering voor",
+      "explore": "Ontdek vrijetijdsactiviteiten"
+    },
+    "booking": {
+      "title": "Boeking"
+    },
+    "confirmation": {
+      "title": "Boekingsbevestiging",
+      "tickets": "Jouw tickets",
+      "download": "Mobiel ticket",
+      "more": "Meer informatie",
+      "cancel": "Ticket annuleren",
+      "cancelled": "Geannuleerd",
+      "cancelWhy": "Waarom wil je annuleren?",
+      "cancelReasons": [
+        "Mijn vakantie is geannuleerd",
+        "Ik heb een goedkopere optie gevonden",
+        "Ik heb mijn bevestiging niet op tijd ontvangen",
+        "De aanbieder heeft me gevraagd de boeking te annuleren",
+        "Mijn voorkeursopties waren niet beschikbaar",
+        "Ik heb de verkeerde datum geboekt",
+        "Ik heb het verkeerde aantal deelnemers geboekt",
+        "Andere redenen"
+      ],
+      "rebook": {
+        "title": "Omboeken",
+        "text": "Wijziging van plan? Boek je activiteit om. Je oude reservering wordt automatisch geannuleerd.",
+        "button": "Nu omboeken"
+      },
+      "stay": "Blijf alsjeblieft op deze pagina, je boeking wordt verwerkt.",
+      "editBooking": "Buching wijzigen",
+      "showTickets": "Tickets",
+      "drawerTitle": "Jouw boeking",
+      "relatedBookings": "Gerelateerde boekingen"
+    },
+    "activities": {
+      "title": "De beste vrijetijdsactiviteiten in Zwitserland {year}",
+      "description": "Vind en boek jouw geschikte activiteit {year} in Zwitserland. Als veelzijdig land biedt Zwitserland ontelbare activiteiten en ideeën voor een dagtocht.",
+      "intro": "Het hele jaar door vind je vrijetijdsactiviteiten voor elke gelegenheid. Of je nu een uitje met je gezin plant, een vrijgezellenfeest organiseert, een buitenactiviteit zoekt of inspiratie voor je programma op een regenachtige dag nodig hebt, hier vind je iets. Bij Swiss Activities kun je je dagje uit plannen en meteen boeken.",
+      "titleParentLocation": "{locationTitle} {year}: de beste activiteiten en aanbiedingen",
+      "descriptionParentLocation": "Vind en boek de beste activiteiten in {locationTitle}: Boek tickets voor bestemmingen of familieactiviteiten met een paar klikken.",
+      "titleChildLocation": "{locationTitle} {year}: de beste activiteiten",
+      "descriptionChildLocation": "Boek de beste activiteiten in {locationTitle}. Boek tickets voor bestemmingen of familieactiviteiten met een paar klikken.",
+      "titleParentType": "{typeTitle} {year}: De beste {typeTitle} in Zwitserland",
+      "descriptionParentType": "Boek de beste {typeTitle} van heel Zwitserland. Geen wachttijden, geen boekingskosten en gratis annuleringsopties.",
+      "titleChildType": "{typeTitle} {year}: De beste aanbiedingen voor {typeTitle} in Zwitserland",
+      "descriptionChildType": "Boek de beste aanbiedingen voor {typeTitle} van heel Zwitserland. Geen wachttijden, geen boekingskosten en gratis annuleringsopties.",
+      "titleParentLocationParentType": "{typeTitle} {locationTitle}: Top aanbiedingen en prijzen {year}",
+      "descriptionParentLocationParentType": "Boek de beste aanbiedingen voor {typeTitle} {locationTitle} {year}. Geen boekingskosten en gratis annuleringsopties.",
+      "titleParentLocationChildType": "{typeTitle} {locationTitle}: Top aanbiedingen en prijzen {year}",
+      "descriptionParentLocationChildType": "Boek de beste aanbiedingen voor {typeTitle} {locationTitle} {year}. Geen boekingskosten en gratis annuleringsopties.",
+      "titleChildLocationParentType": "{typeTitle} {locationTitle}: Top aanbiedingen en prijzen {year}",
+      "descriptionChildLocationParentType": "Boek de beste aanbiedingen voor {typeTitle} {locationTitle} {year}. Geen boekingskosten en gratis annuleringsopties.",
+      "titleChildLocationChildType": "{typeTitle} {locationTitle}: Top aanbiedingen en prijzen {year}",
+      "descriptionChildLocationChildType": "Boek de beste aanbiedingen voor {typeTitle} {locationTitle} {year}. Geen boekingskosten en gratis annuleringsopties."
+    },
+    "listing": {
+      "title": "{listingTitle}",
+      "offersTitle": "{title} Tickets en activiteiten",
+      "activities": "Activiteiten",
+      "relatedListings": "Top {value} bezienswaardigheden",
+      "relatedListingsClose": "{value} bezienswaardigheden",
+      "description": "Lijst voor {listingTitle}",
+      "tableOfContent": "Inhoudsopgave",
+      "destinationTitle": "{location} - Top {num} bezienswaardigheden en activiteiten {year}",
+      "more": "Meer over {val} ontdekken",
+      "locations": "Plaatsen in de buurt van {val}",
+      "regions": "Regio's in de {val}",
+      "type": "Populaire plaatsen in Zwitserland voor {val}",
+      "typeLocation": "Populaire plaatsen in {location} voor {type}",
+      "types": "Top {val} activiteiten",
+      "combo": "{type} {location} - {num} Topaanbiedingen en prijzen {year}",
+      "map": "Kaart",
+      "attributeBadWeatherTitleAttribute": "De {val} beste ideeën voor slecht weer in Zwitserland",
+      "attributeBadWeatherTitle": "De {val} beste ideeën voor slecht weer in {location}",
+      "attributeBadWeatherTeaser": "Ob regen, mist of sneeuwval: in [{location}]({locationLink}) zijn er tal van activiteiten die je ondanks slecht weer kunt ondernemen. De regen hoeft je dus niet per se in de weg te staan. Je vindt zowel indoor- als [buitenactiviteiten]({outdoorLink}) die geschikt zijn voor elk weertype. Het is aan jou om te beslissen of je actief of liever rustig wilt zijn. Vind meer inspiratie voor talrijke [slecht weer ideeën]({badWeatherLink}) in heel Zwitserland.",
+      "attributeBadWeatherDesc": "Vind jouw idee voor slecht weer in {location} en onderneem een activiteit die bij elk weer kan plaatsvinden.",
+      "attributeFamilyTitleAttribute": "De {val} beste ideeën voor je gezinsuitje in Zwitserland",
+      "attributeFamilyTitle": "De {val} beste ideeën voor je gezinsuitje in {location}",
+      "attributeFamilyTeaser": "Planeer je volgende gezinsuitje in [{location}]({locationLink}) voor jou en je kinderen. Of jullie nu avontuurlijk, gezellig of als ontdekkingsreizigers zijn, dat maakt niet uit. Er is het hele jaar door, zelfs bij [slecht weer in {location}]({locationBadWeatherLink}), van alles te doen. Ook voor een uitje met de kinderwagen zijn er mogelijkheden die geschikt zijn voor kleine kinderen. Je staat dus niets meer in de weg voor je [gezinsuitje]({familyLink}).",
+      "attributeFamilyDesc": "Vind het juiste idee voor je volgende gezinsuitje in {location} en breng een opwindende dag door met je kinderen.",
+      "attributeDogTitleAttribute": "De {val} beste uitjes met de hond in Zwitserland",
+      "attributeDogTitle": "De {val} beste uitjes met de hond in {location}",
+      "attributeDogTeaser": "Ben je op zoek naar een uitje met je hond in [{location}]({locationLink})? Als je je trouwe viervoeter mee wilt nemen, vind je hier alle activiteiten waar hij mee mag. Vooral [buitenactiviteiten]({outdoorLink}) zijn vaak geschikt, waar je hond lekker in de buitenlucht kan rennen. Maar ook vaartochten met een schip of kabelbaan zijn aan te raden. Onze tip zijn [Escape Games]({escapeLink}), omdat ze buiten plaatsvinden en je een leuke afwisseling bieden van de gebruikelijke wandelingen.",
+      "attributeDogDesc": "Plan een uitje met je hond in {location} en probeer iets nieuws als afwisseling van je gebruikelijke wandeling.",
+      "attributeOutdoorTitleAttribute": "De {val} beste outdooractiviteiten in Zwitserland",
+      "attributeOutdoorTitle": "De {val} beste outdooractiviteiten in {location}",
+      "attributeOutdoorTeaser": "In [{location}]({locationLink}) zijn er het hele jaar door talrijke [buitenactiviteiten]({outdoorLink}) te ondernemen. Sommige activiteiten zorgen voor een adrenalinekick, terwijl andere op je wachten met een indrukwekkend uitzicht of je vaardigheden op de proef stellen. Er zijn overigens ook buitenactiviteiten die geschikt zijn als [slecht weer idee]({badWeatherLink}) of voor een [gezinsuitje]({familyLink}). Soms kun je ook je [hond]({dogLink}) meenemen. Sommige buitenactiviteiten kun je probleemloos alleen doen, terwijl je je bij anderen om veiligheidsredenen bij een professioneel geleide tour moet aansluiten.",
+      "attributeOutdoorDesc": "Plan je volgende outdooractiviteit in {location} en breng het hele jaar door een dag buiten door in de frisse lucht.",
+      "attributeBachelorPartyTitleAttribute": "De {val} beste ideeën voor de vrijgezellenparty in Zwitserland",
+      "attributeBachelorPartyTitle": "De {val} beste ideeën voor de vrijgezellenparty in {location}",
+      "attributeBachelorPartyTeaser": "Ben je op zoek naar een toffe idee voor een vrijgezellenfeest in [{location}]({locationLink})? Of je nu houdt van lekker genieten, avontuur of ontdekken: je vindt voor ieder wat wils. Met onze ideeën word je goed geïnspireerd om een [vrijgezellenfeest]({attributeLink}) in {location} te organiseren. Kijk er dus naar uit om een geslaagde en leuke dag met je vrienden te beleven.",
+      "attributeBachelorPartyDesc": "Plan je volgende vrijgezellenfeest in [{location}] en beleef een gezellige dag met je vrienden.",
+      "attributeTeamEventTitleAttribute": "De {val} beste ideeën voor een teamuitje in Zwitserland",
+      "attributeTeamEventTitle": "De {val} beste ideeën voor een teamuitje in {location}",
+      "attributeTeamEventTeaser": "Is jou de taak toevertrouwd om een teamuitje in [{location}]({locationLink}) te organiseren? Dat is niet altijd eenvoudig, omdat de verwachtingen vaak zeer verschillend zijn. Met onze ideeën ben je goed geïnspireerd voor de aanstaande [teamuitje]({attributeLink}) en kun je je voorbereiden. Of je nu houdt van lekker eten, ontdekken, actief bezig zijn, puzzels of avontuur: voor ieder wat wils. Kijk er dus naar uit om een geslaagde en leuk dag met je collega’s te beleven.",
+      "attributeTeamEventDesc": "Plan je volgende teamuitje in {location} en beleef een leuke dag met je collega’s.",
+      "attributeValentinesDayTitleAttribute": "De {val} beste ideeën voor Valentijnsdag in Zwitserland",
+      "attributeValentinesDayTitle": "De {val} beste ideeën voor Valentijnsdag in {location}",
+      "attributeValentinesDayTeaser": "Elk jaar staat hij weer voor de deur: Valentijnsdag. Misschien weet je al precies wat je de volgende keer op 14 februari wilt organiseren. Misschien ben je nog onzeker en op zoek naar een idee voor jullie Valentijnsdag in [{location}]({locationLink}). Onze activiteiten zijn bedoeld om je te inspireren en je te helpen iets passends te vinden. Of het nu romantisch, gezellig of avontuurlijk is: hier vinden jullie vast inspiratie voor een [Valentijnsdag]({attributeLink}) die jullie harten sneller doet kloppen.",
+      "attributeValentinesDayDesc": "Plan je volgende Valentijnsdag in {location} en beleef een romantische dag met je geliefde.",
+      "attributeFirstDateTitleAttribute": "De {val} beste ideeën voor je eerste date in Zwitserland",
+      "attributeFirstDateTitle": "De {val} beste ideeën voor je eerste date in {location}",
+      "attributeFirstDateTeaser": "Ben je op zoek naar het juiste idee voor je eerste date in [{location}]({locationLink}) en weet je niet goed hoe je je date kunt indrukken? Dan ben je hier aan het juiste adres. Op deze pagina vind je de nodige inspiratie zodat jullie [eerste date]({attributeLink}) een succes wordt. Of het nu zomer of winter is, avontuurlijk of ontspannen, hier vind je zeker iets waarmee je je date kunt blij maken. En wie weet, misschien kom je ook iets tegen dat geschikt is voor de volgende en de overvolgende ontmoeting.",
+      "attributeFirstDateDesc": "Plan de eerste date in {location} en breng een romantische dag samen door.",
+      "attributeChildBirthdayTitleAttribute": "{val} ideeën voor een kinder verjaardag in Zwitserland",
+      "attributeChildBirthdayTitle": "{val} ideeën voor een kinder verjaardag in {location}",
+      "attributeChildBirthdayTeaser": "Planeer je volgende kinderfeestje in [{location}]({locationLink}). De verjaardag is een van de hoogtepunten van het jaar voor elk kind. Ongeacht het seizoen zijn er meer dan genoeg ideeën om je kind gelukkig te maken. Organiseer een [buitenactiviteit]({outdoorLink}) of zoek naar een idee voor het [slecht weer programma]({badWeatherLink}). Zo wordt je volgende kinderfeestje zeker een succes.",
+      "attributeChildBirthdayDesc": "Organiseer een kinder verjaardag in {location} en plan een onvergetelijke dag voor je kind.",
+      "attributeWheelchairTitleAttribute": "{val} uitjes met de rolstoel voor Zwitserland",
+      "attributeWheelchairTitle": "{val} uitjes met de rolstoel in {location}",
+      "attributeWheelchairTeaser": "Plan een uitje met de rolstoel in [{location}]({locationLink}) en vind de perfecte rolstoeltoegankelijke activiteit voor jou. Reizen in Zwitserland met de rolstoel is dankzij de geavanceerde toegankelijkheid en de inspanningen van het land om alle toeristen een toegankelijke ervaring te bieden, relatief eenvoudig. Dit omvat zowel indoor- als [buitenactiviteiten]({outdoorLink}).",
+      "attributeWheelchairDesc": "Laat je inspireren door rolstoeltoegankelijke uitjes in {location} en plan je barrièrevrije activiteit.",
+      "attributePramTitleAttribute": "{val} uitjes met de kinderwagen voor Zwitserland",
+      "attributePramTitle": "{val} uitjes met de kinderwagen in {location}",
+      "attributePramTeaser": "Plan je uitje met de kinderwagen in [{location}]({locationLink}). Als je met kleine kinderen onderweg bent, zijn er veel activiteiten die je kunt ondernemen. Talrijke wandelpaden zijn kinderwagenvriendelijk en het openbaar vervoer is ingericht op het comfort van gezinnen met jonge kinderen. Zo staat je [gezinsuitje]({familyLink}) niets meer in de weg.",
+      "attributePramDesc": "Verken {location} met de kinderwagen en plan je volgende uitje met je gezin.",
+      "attributesOther": "Meer categorieën",
+      "attributesType": "Categorieën voor {val} activiteiten",
+      "teamEvent": "Stuur ons je groepsaanvraag",
+      "recommended": "Aanbevolen door reizigers",
+      "tickets": "Tickets",
+      "tours": "Georganiseerde tours"
+    },
+    "error": {
+      "title": "Het spijt ons, maar er is een fout opgetreden. Ga terug naar de startpagina en zoek je geschikte vrijetijdsactiviteit."
+    },
+    "supplier": {
+      "title": "Swiss Activities: de grootste marktplaats voor vrijetijdsactiviteiten in Zwitserland",
+      "description": "Swiss Activities is de grootste marktplaats voor vrijetijdsactiviteiten in Zwitserland. Met ons bereik je meer klanten en verhoog je je boekingen.",
+      "hero": {
+        "title": "Swiss Activities - De bestemming voor vrijetijdsactiviteiten in Zwitserland",
+        "button": "Word vrijetijdspartner"
+      },
+      "numbers": {
+        "title": "Hoe we onze vrijetijdspartners ondersteunen sinds de oprichting van Swiss Activities",
+        "blocks": [
+          {
+            "title": "Websitesbezoekers",
+            "number": "7.500.000",
+            "text": "potentiële klanten"
+          },
+          {
+            "title": "Gastvermittelingen",
+            "number": ">300.000",
+            "text": "Gasten verwezen"
+          },
+          {
+            "title": "Klantondersteuning",
+            "number": ">10.000",
+            "text": "Geadviseerde gesprekken"
+          },
+          {
+            "title": "Reserveringssystemen",
+            "number": ">20",
+            "text": "Tickets in plaats van vouchers"
+          }
+        ]
+      },
+      "why": {
+        "title": "Waarom je vrijetijdsproducten op Swiss Activities aanbieden",
+        "sales": {
+          "title": "Nieuwe klanten",
+          "description": "Verkrijg nieuwe klanten uit binnen- en buitenland en verbeter je bezettingsgraad."
+        },
+        "support": {
+          "title": "Automatisering",
+          "description": "Swiss Activities neemt je bestaande verkoopproces over en stuurt de transacties naar jouw systeem."
+        },
+        "finances": {
+          "title": "Geen risico",
+          "description": "Geen vaste kosten of voorafgaande investeringen. Je betaalt alleen bij een doorverwezen klant."
+        },
+        "local": {
+          "title": "Ontwikkeling van nieuwe klantsegmenten",
+          "description": "Verbind jezelf met het reseller-netwerk van Swiss Activities en breid je bereik uit in binnen- en buitenland."
+        }
+      },
+      "who": {
+        "title": "Meer dan 500 recreatiepartners werken samen met Swiss Activities",
+        "partners": [
+          {
+            "blocks": [
+              "/assets/supplier/partner/bergbahnen/rigi.png",
+              "/assets/supplier/partner/bergbahnen/schilthorn.png",
+              "/assets/supplier/partner/bergbahnen/jungfrau.jpeg",
+              "/assets/supplier/partner/bergbahnen/engelberg.svg",
+              "/assets/supplier/partner/bergbahnen/pilatus.jpeg",
+              "/assets/supplier/partner/bergbahnen/monte-tamaro.png",
+              "/assets/supplier/partner/bergbahnen/brienz.png",
+              "/assets/supplier/partner/bergbahnen/gornergrat.png",
+              "/assets/supplier/partner/destinationen/rheinfelden.png",
+              "/assets/supplier/partner/destinationen/basel.svg",
+              "/assets/supplier/partner/destinationen/winterthur.svg",
+              "/assets/supplier/partner/destinationen/interlaken.png",
+              "/assets/supplier/partner/attraktionen/ballenberg.png",
+              "/assets/supplier/partner/attraktionen/bls.png",
+              "/assets/supplier/partner/attraktionen/cgn.png",
+              "/assets/supplier/partner/attraktionen/chillon.jpeg",
+              "/assets/supplier/partner/attraktionen/maestrani.png",
+              "/assets/supplier/partner/attraktionen/verkehrshaus.png",
+              "/assets/supplier/partner/attraktionen/vier.png",
+              "/assets/supplier/partner/outdoor/best-of-switzerland.jpeg",
+              "/assets/supplier/partner/outdoor/kayak.jpeg",
+              "/assets/supplier/partner/outdoor/outdoorch.jpeg",
+              "/assets/supplier/partner/outdoor/paragliding.png",
+              "/assets/supplier/partner/outdoor/wine-tours.webp",
+              "/assets/supplier/partner/outdoor/zermatters.png"
+            ]
+          }
+        ]
+      },
+      "pricing": {
+        "title": "Prijsmodel",
+        "subtitle": "Betaal alleen bij succesvolle bemiddeling van een klant",
+        "description": "Swiss Activities helpt je bij het identificeren van de juiste verkoopkanalen, zowel lokaal als wereldwijd, en bij het verkopen van je vrijetijdsproducten waar je potentiële klanten zich bevinden. Omdat Swiss Activities geen setupkosten heeft, creëer je nieuwe verkoopkanalen zonder extra investeringen.",
+        "blocks": [
+          {
+            "pretitle": "",
+            "cost": "18% + CHF 0.30",
+            "subcost": "excl. btw.",
+            "button": "Word vrijetijdspartner",
+            "buttonLink": "https://k3qlq2fyp9o.typeform.com/to/CxWJub7f",
+            "subbutton": "",
+            "includes": [
+              "Plaatsing van recreatieve activiteiten op Swiss Activities",
+              "Onbeperkte opname van vrijetijdsactiviteiten",
+              "Opstellen van productomschrijvingen door ons contentteam",
+              "Verbinding met meer dan 20 reserveringssystemen",
+              "Persoonlijke partnerondersteuning via chat en telefoon",
+              "Communicatie met gasten bij vragen over de activiteiten",
+              "Behandeling van boekings- en annuleringsverzoeken van gasten",
+              "Bewaking en controle van alle boekingen en annuleringen",
+              "Bewaking en controle van de afrekeningen",
+              "Cash-settlement gestandaardiseerd – afrekening via Swiss Activities",
+              "Zorg voor het verkoopproces (geen vouchers, maar tickets)",
+              "Automatische toegang tot het affiliate-netwerk",
+              "Plaatsing van de activiteiten op het reseller-netwerk"
+            ],
+            "faq": []
+          }
+        ]
+      },
+      "tech": {
+        "title": "Reserverings- en ticketingsystemen",
+        "description": "Naast de opname en digitalisering van alle Zwitserse recreatieproducten is het een centraal doel van Swiss Activities om het wederverkoopproces van recreatieproducten in binnen- en buitenland te vereenvoudigen en te automatiseren. De distributielandschap wordt steeds complexer en we helpen wederverkopers om het contact met de klantsegmenten niet te verliezen. Des te belangrijker is de directe verbinding tussen onze recreatiepartners en Swiss Activities. We zijn voortdurend bezig nieuwe systemen te implementeren. Als jouw reserverings- en ticketingsysteem niet aanwezig is, kun je gerust contact met ons opnemen via sales@swissactivities.com.",
+        "partners": [
+          "/assets/supplier/technology/trekksoft.webp",
+          "/assets/supplier/technology/regiondo.webp",
+          "/assets/supplier/technology/tomas.webp",
+          "/assets/supplier/technology/waldhart.webp",
+          "/assets/supplier/technology/experiencebank.webp",
+          "/assets/supplier/technology/skidata.webp",
+          "/assets/supplier/technology/axess.webp",
+          "/assets/supplier/technology/smeetz.webp",
+          "/assets/supplier/technology/eatwith.webp",
+          "/assets/supplier/technology/fareharbor.webp",
+          "/assets/supplier/technology/bookingkit.webp",
+          "/assets/supplier/technology/ntree.webp",
+          "/assets/supplier/technology/secutix.webp",
+          "/assets/supplier/technology/tourcms.webp",
+          "/assets/supplier/technology/sbb.webp"
+        ],
+        "titleSoon": "Binnenkort beschikbaar",
+        "partnersSoon": [
+          "/assets/supplier/technology/feratel.webp"
+        ]
+      },
+      "faq": [
+        {
+          "title": "Algemene informatie voor vrijetijdspartners",
+          "blocks": [
+            {
+              "title": "Wie kan vrijetijdspartner van Swiss Activities worden?",
+              "text": "Iedereen die vrijetijdsactiviteiten in Zwitserland wil verkopen, kan partner van Swiss Activities worden. Je aanbod kan zeer gevarieerd zijn en de verbeelding kent nauwelijks grenzen. We hebben activiteiten, tickets, avonturen, tours, verhuur enzovoort in ongeveer 100 categorieën. Dit omvat bakcursussen voor eenhoornentaarten tot tandemparagliden of entreebewijzen voor musea. Belangrijk is dat het om aanbiedingen gaat die plaatsvinden in Zwitserland of die binnen een dagtrip vanuit Zwitserland mogelijk zijn."
+            },
+            {
+              "title": "Welke reserveringssystemen kan ik met Swiss Activities verbinden?",
+              "list": [
+                "TrekkSoft",
+                "Regiondo",
+                "Waldhart",
+                "Experience Bank",
+                "Skidata",
+                "Axess",
+                "Tomas",
+                "Smeetz",
+                "Eatwith",
+                "Fareharbor",
+                "Booking Kit",
+                "N-Tree",
+                "Secutix",
+                "TourCMS",
+                "Palisis",
+                "Bald beschikbaar zijn: SBB evenals Feratel"
+              ]
+            },
+            {
+              "title": "Ik werk niet met een reserveringssysteem. Kan ik mijn activiteiten toch via Swiss Activities verkopen?",
+              "text": "Ook als je niet met een reserveringssysteem werkt, kun je jouw activiteiten bij ons aanmelden. In dat geval maken we handmatig een kalender op basis van jouw gegevens. Als je graag een reserveringssysteem wilt implementeren, neem dan contact met ons op. Wij adviseren je graag over dit onderwerp. De informatie die we van jou nodig hebben, is als volgt:",
+              "list": [
+                "Periode (datum)",
+                "Starttijd(en)",
+                "Duur",
+                "Cut-off (hoe lang van tevoren moet de klant uiterlijk boeken?)",
+                "Prijzen per categorie (volwassenen, kinderen, verhuur etc.)",
+                "Maximaal beschikbare plaatsen per slot"
+              ]
+            },
+            {
+              "title": "Welke informatie wordt bij een boeking verzonden?",
+              "text": "Wanneer een klant een boeking bij Swiss Activities maakt, ontvangt hij een bevestigings-e-mail met alle belangrijke informatie. Dit omvat onder andere jouw contactgegevens, zodat hij bij vragen direct contact met je kan opnemen.",
+              "list": [
+                "Naam van de activiteit",
+                "Datum",
+                "Tijd",
+                "Ontmoetingspunt",
+                "Aantal geboekte tickets",
+                "Jouw contactgegevens (e-mail en telefoon)"
+              ]
+            },
+            {
+              "title": "Worden op Swiss Activities dezelfde prijzen voor mijn activiteiten gepubliceerd als op mijn website?",
+              "text": "Ja, bij ons betaalt de klant evenveel als wanneer hij direct bij jou zou boeken. Dit is voor jou net zo belangrijk als voor ons. Als de prijzen op verschillende plaatsen verschillend zijn, zal de klant dat opmerken, wat leidt tot klachten en onbegrip. Zo lopen we beiden het risico een terugkerende klant te verliezen."
+            },
+            {
+              "title": "Hoe lang is de annuleringsperiode bij Swiss Activities?",
+              "text": "De klant heeft bij Swiss Activities de mogelijkheid om tot 24 uur voor de activiteit kosteloos te annuleren. Als je een niet-annuleerbare activiteit wilt aanmelden, kunnen we dat zo overnemen. Echter, we hebben de ervaring dat we meer boekingen binnenhalen bij activiteiten waarbij de mogelijkheid tot annulering wordt aangeboden. Mocht je de boeking moeten annuleren, dan kun je dat ook doen. Informeer de klant onmiddellijk en laat het ons ook weten, zodat we een terugbetaling kunnen regelen. "
+            },
+            {
+              "title": "Hoe wordt er omgegaan met latere annuleringen?",
+              "text": "Als we via ons annuleringsformulier een aanvraag voor een latere annulering ontvangen, voeren we nooit een terugbetaling uit zonder eerst overlegd te hebben met jou. Om fraude te voorkomen, vragen we altijd jouw toestemming om de verklaring van de klant te bevestigen. Alleen als we jouw goedkeuring hebben, voeren we een terugbetaling uit."
+            }
+          ]
+        },
+        {
+          "title": "Aanmeldingsproces van vrijetijdsproducten",
+          "blocks": [
+            {
+              "title": "Hoe kan ik mijn aanbiedingen bij Swiss Activities aanmelden?",
+              "text": "Als je vrijetijdspartner van Swiss Activities wilt worden en jouw aanbiedingen wilt aanmelden, doorloop dan de volgende stappen:",
+              "list": [
+                "Meld je eerst aan als vrijetijdspartner.",
+                "Vul voor elke activiteit die je wilt aanmelden een formulier in. De link hiervoor ontvang je nadat we jouw registratie hebben bevestigd.",
+                "Wij schrijven en registreren jouw activiteiten doorgaans binnen twee weken.",
+                "Zodra de activiteiten live zijn, informeren we je per e-mail."
+              ]
+            },
+            {
+              "title": "Welke informatie is nodig voor het aanmelden van mijn activiteiten?",
+              "text": "Nadat je je als vrijetijdspartner bij ons hebt aangemeld, sturen we je een formulier waarmee je jouw activiteiten kunt registreren. Om deze aan te kunnen melden, hebben we de volgende gegevens van jou nodig:",
+              "list": [
+                "Gegevens over het reserveringssysteem (indien aanwezig)",
+                "Titel van de activiteit",
+                "Link naar de activiteit",
+                "Minimaal 4 foto's per activiteit",
+                "Gegevens over data, tijd en duur, als je geen reserveringssysteem gebruikt",
+                "Informatie over leeftijd, talen, gewicht, enz.",
+                "Geschiktheid van de activiteit: hond, kinderwagen, rolstoel, gezinnen, enz.",
+                "Exacte ontmoetingspunt"
+              ]
+            },
+            {
+              "title": "Kan ik mijn registratie op elk moment verwijderen?",
+              "text": "Ja, je kunt op elk moment van het contract afzien. Er is geen minimale looptijd van het contract en er zijn geen kosten verbonden aan de opzegging."
+            },
+            {
+              "title": "Wat doe ik als ik iets in een activiteit wil wijzigen?",
+              "text": "Als je wijzigingen in de content hebt of prijzen wilt aanpassen - zolang je geen reserveringssysteem gebruikt - kun je dit per e-mail aan ons doorgeven."
+            },
+            {
+              "title": "Hoe contacteer ik de klant?",
+              "text": "Na elke boeking ontvang je een bevestigings-e-mail van ons met de gegevens van de klant. Daar vind je zijn naam, zijn e-mailadres en zijn telefoonnummer om hem te contacteren."
+            },
+            {
+              "title": "Hoe krijg ik mijn geld?",
+              "text": "De uitbetaling van alle openstaande bedragen vindt plaats na de servicedatum en wordt aan het begin van de volgende maand automatisch overgemaakt. Alle boekingen die in de afgelopen maand hebben plaatsgevonden, worden samengevoegd en in één enkele uitbetaling afgewikkeld."
+            }
+          ]
+        }
+      ]
+    },
+    "supplierRegistration": {
+      "title": "Swiss Activities: de grootste online marktplaats voor vrijetijdsactiviteiten in Zwitserland",
+      "description": "Swiss Activities is de grootste online marktplaats voor vrijetijdsactiviteiten in Zwitserland. Met ons bereik je meer klanten en verhoog je jouw boekingen.",
+      "hero": {
+        "title": "Word een deel van Swiss Activities",
+        "description": "Registreer je gratis bij Swiss Activities en vergroot jouw bereik bij Zwitserse en internationale gasten. Je voordelen in één oogopslag",
+        "list": [
+          "Word gevonden als bedrijf op Google en met jouw aanbiedingen. En dat in 4 talen!",
+          "Ontwikkel een nieuw verkoopkanaal",
+          "Profiteer van onze gratis klantenservice",
+          "Koppel jouw reserveringssysteem en beheer jouw beschikbaarheid er direct in.",
+          "Een nieuwe boeking - jouw klant. We verbergen onze partners niet en willen de klant de beste boekervaring bieden.",
+          "Geen vaste kosten of verborgen fees.",
+          "Jouw klanten kunnen betalen met alle lokale betaalmethoden zoals Twint, aankoop op rekening en de gangbare creditcards."
+        ]
+      }
+    },
+    "affiliate": {
+      "title": "Affiliate",
+      "description": "Neem als partner deel aan Swiss Activities en verdien al vanaf de eerste boeking 1% tot 5% commissie. Er zijn geen vaste kosten.",
+      "hero": {
+        "title": "Word nu affiliate-partner van Swiss Activities",
+        "description": "Registreer je voor het affiliate-programma van Swiss Activities en profiteer van aantrekkelijke integratietools, 1% tot 5% commissie en een cookieduur van 45 dagen.",
+        "steps": [
+          "Meld je aan",
+          "Implementeer onze activiteiten",
+          "Genereer boekingen en verdien geld"
+        ],
+        "button": "Nu aanmelden"
+      },
+      "form": {
+        "tos": "Ik stem in met de <a target='_blank' href='/agb/affiliates/'>algemene voorwaarden</a>"
+      },
+      "advantagesTitle": "Wat zijn jouw voordelen als affiliate-partner van Swiss Activities?",
+      "advantages": [
+        {
+          "title": "1.500+ vrijetijdsactiviteiten",
+          "text": "Als affiliate-partner van Swiss Activities heb je met een paar klikken toegang tot meer dan 1.500 vrijetijdsactiviteiten in heel Zwitserland."
+        },
+        {
+          "title": "Aantrekkelijke voorwaarden",
+          "text": "Voor elke geleverde boeking ontvang je 1% tot 5% commissie. De cookie duur bedraagt 45 dagen."
+        },
+        {
+          "title": "Inspireer je lezers",
+          "text": "Breng leven in je blog of website met inspirerende content en help je community tijd te besparen bij de planning van hun vrijetijdsbesteding."
+        },
+        {
+          "title": "Eenvoudige aanmelding",
+          "text": "Profiteer van een eenvoudige en snelle aanmelding."
+        },
+        {
+          "title": "Directe ticketverkoop",
+          "text": "Je hebt de mogelijkheid om tickets direct op je website te verkopen, zonder je lezers naar ons door te sturen."
+        },
+        {
+          "title": "Aangepaste HTML",
+          "text": "Dankzij onze veelzijdige en aantrekkelijk ontworpen aangepaste HTML-tools kun je jouw verkoopmogelijkheden personaliseren."
+        }
+      ],
+      "faqTitle": "De belangrijkste vragen beantwoord",
+      "faq": [
+        {
+          "title": "Hoe werkt de aanmelding voor het affiliate-programma van Swiss Activities?",
+          "text": "Meld je aan in het formulier op deze pagina met alle vereiste gegevens. We zullen je aanmelding binnen één werkdag beoordelen en je inloggegevens per e-mail toezenden bij acceptatie."
+        },
+        {
+          "title": "Hoe kan ik inloggen op mijn affiliate-partnerdashboard?",
+          "text": "Bij jouw registratie definieer je jouw persoonlijke wachtwoord. Zodra we jouw gegevens hebben gecontroleerd, word je op de hoogte gesteld en kun je je via <a href='https://swissactivities.tapfiliate.com/login' target='_blank'>deze link</a> inloggen op je affiliate-dashboard."
+        },
+        {
+          "title": "Waar vind ik meer informatie over het affiliate-programma?",
+          "text": "In onze helpdesk vind je aan de ene kant de <a href='https://intercom.help/swiss-activities/de/collections/3916117-affiliate-moglichkeiten-zur-einbindung' target='_blank'>Eerste stappen</a> evenals de belangrijkste vragen over de <a href='https://intercom.help/swiss-activities/de/collections/3916117-affiliate-moglichkeiten-zur-einbindung' target='_blank'>integratie van onze activiteiten</a> beschreven. Ook ontvang je na je registratie een reeks e-mails met handige tips."
+        },
+        {
+          "title": "Wie kan affiliate-partner van Swiss Activities worden?",
+          "text": "Als je een blog of website hebt die betrekking heeft op het Zwitserse toerisme, vrijetijdsactiviteiten in Zwitserland of reizen in het algemeen, kun je je registreren voor ons affiliate-programma. Zelfs als je een Instagram-, Pinterest- of Facebook-account hebt waarop je een affiliate-link kunt plaatsen, kun je je bij ons aanmelden."
+        },
+        {
+          "title": "Kan ik me afmelden voor het affiliate-programma?",
+          "text": "Natuurlijk. Je bent aan geen minimale looptijd gebonden. Mocht je jouw account willen verwijderen, laat het ons dan weten per e-mail of chat en wij zullen alles noodzakelijke regelen."
+        },
+        {
+          "title": "Hoeveel commissie ontvang ik per geleverde boeking?",
+          "text": "Je ontvangt tussen 1% en 5% commissie wanneer je ons een klant aanlevert die de activiteit uitvoert. Mocht de klant zijn boeking annuleren, kunnen we je helaas geen commissie uitbetalen."
+        }
+      ]
+    },
+    "apps": {
+      "title": "Swiss Activities App",
+      "description": "Ervaar Zwitserland met de Swiss Activities App – ontdek, vergelijk en boek recreatieve activiteiten direct op je smartphone.",
+      "hero": {
+        "title": "Jouw Zwitserse avontuur in je zak",
+        "description": "Met de Swiss Activities-app heb je direct toegang tot meer dan {amount} activiteiten in heel Zwitserland. Vind ervaringen, boek in een paar seconden en houd al je tickets en boekingen altijd in de gaten.",
+        "features": [
+          "Tickets altijd binnen handbereik",
+          "Boekingen eenvoudig beheren",
+          "Nieuwe ervaringen voor elk wat wils ontdekken",
+          "Tickets ook offline beschikbaar"
+        ]
+      }
+    },
+    "travelGuide": {
+      "title": "Jouw reisplanner voor Zwitserland",
+      "description": "Zwitserland is een zeer veelzijdig land en heeft ongelooflijk veel te bieden voor jouw reis. Laat je dus niet misleiden door de kleine oppervlakte. Hoewel Zwitserland ongeveer tien keer kleiner is dan Zweden, Californië of Marokko, vind je voor elke smaak iets. In het mediterrane Tessin bevind je je in een totaal andere wereld dan in het drukke Bazel. En de bergachtige Alpstein heeft een heel ander klimaat dan de milde Genferseeregio. En dit, terwijl deze plaatsen slechts drie tot vier uur van elkaar verwijderd zijn. In onze blog helpen we je bij het plannen van jouw reis. We voorzien je van handige reistips en interessante informatie, zodat je je perfect kunt voorbereiden. Of je nu voor de eerste keer naar Zwitserland reist of al goed bekend bent, dat maakt geen verschil. Onze artikelen zijn zowel geschikt voor eerste bezoekers als voor echte Zwitserland-kenners.",
+      "intro": "Zwitserland is een zeer veelzijdig land en heeft ongelooflijk veel te bieden voor jouw reis. Laat je dus niet misleiden door de kleine oppervlakte. Hoewel Zwitserland ongeveer tien keer kleiner is dan Zweden, Californië of Marokko, vind je voor elke smaak iets. In het mediterrane Tessin bevind je je in een totaal andere wereld dan in het drukke Bazel. En de bergachtige Alpstein heeft een heel ander klimaat dan de milde Genferseeregio. En dit, terwijl deze plaatsen slechts drie tot vier uur van elkaar verwijderd zijn. In onze blog helpen we je bij het plannen van jouw reis. We voorzien je van handige reistips en interessante informatie, zodat je je perfect kunt voorbereiden. Of je nu voor de eerste keer naar Zwitserland reist of al goed bekend bent, dat maakt geen verschil. Onze artikelen zijn zowel geschikt voor eerste bezoekers als voor echte Zwitserland-kenners."
+    },
+    "travelRoutes": {
+      "title": "Reisroute Zwitserland",
+      "description": "Zwitserland is een zeer veelzijdig land en heeft ongelooflijk veel te bieden voor jouw reis. Laat je dus niet misleiden door de kleine oppervlakte. Hoewel Zwitserland ongeveer tien keer kleiner is dan Zweden, Californië of Marokko, vind je voor elke smaak iets. In het mediterrane Tessin bevind je je in een totaal andere wereld dan in het drukke Bazel. En de bergachtige Alpstein heeft een heel ander klimaat dan de milde Genferseeregio. En dit, terwijl deze plaatsen slechts drie tot vier uur van elkaar verwijderd zijn. In onze blog helpen we je bij het plannen van jouw reis. We voorzien je van handige reistips en interessante informatie, zodat je je perfect kunt voorbereiden. Of je nu voor de eerste keer naar Zwitserland reist of al goed bekend bent, dat maakt geen verschil. Onze artikelen zijn zowel geschikt voor eerste bezoekers als voor echte Zwitserland-kenners."
+    },
+    "widget": {
+      "title": "Swiss Activities in jouw website integreren",
+      "description": "Bind Swiss Activities aan je website en verkoop activiteiten direct via je website.",
+      "hero": {
+        "title": "Integreer aanbiedingen van Swiss Activities in jouw website",
+        "description": "De Swiss Activities-widget is de eenvoudigste manier om activiteiten in jouw website te integreren. Kies uit een verscheidenheid aan widgettypes en voeg het binnen enkele minuten in.",
+        "button": "Nu integreren"
+      },
+      "cta": {
+        "title": "Word affiliate",
+        "button": "Naar het formulier"
+      }
+    },
+    "newsletterConfirm": {
+      "title": "Bedankt voor je aanmelding. We hebben je zojuist een bericht gestuurd waarmee je je registratie kunt bevestigen."
+    },
+    "newsletterSuccess": {
+      "title": "Bedankt! Je bent nu aangemeld voor onze nieuwsbrief."
+    },
+    "cookiePolicy": {
+      "title": "Cookiebeleid"
+    },
+    "vouchers": {
+      "title": "Erlebnis-Geschenkideen voor Zwitserland – de beste cadeaubonnen bij Swiss Activities",
+      "description": "Geef onvergetelijke momenten cadeau met een ervaring-cadeaubon van Swiss Activities! Ontdek de grootste selectie aan recreatieve activiteiten in Zwitserland – flexibel, eenvoudig en direct online te boeken. Perfect als cadeau-idee voor elke gelegenheid.",
+      "hero": {
+        "title": "Geef nu een belevenisbon voor Zwitserland cadeau en breng vreugde!",
+        "text": "Ontdek nu de beste cadeau-ideeën en belevenis-vouchers bij Swiss Activities. Of het nu voor een verjaardag is, als kerstcadeau of gewoon om 'Dank je' te zeggen – een voucher voor Swiss ervaringen voldoet aan elke smaak en is een cadeau dat zeker in herinnering blijft.",
+        "button": "Vouchers kopen"
+      },
+      "gift": {
+        "title": "Geef de beste Zwitserse ervaringen – van avontuur tot ontspanning",
+        "text": "Zoek je een uniek cadeau-idee voor vrienden of familie in Zwitserland? Een ervaring cadeaukaart van Swiss Activities biedt je toegang tot de grootste selectie aan vrijetijdsactiviteiten die Zwitserland te bieden heeft. Of het nu gaat om begeleide tochten, avonturen in de natuur, ontspannende uren in thermale baden of culturele hoogtepunten in musea – Swiss Activities maakt het mogelijk om bijzondere momenten cadeau te doen."
+      },
+      "why": {
+        "title": "Waarom een Erlebnis-Gutschein van Swiss Activities de perfecte cadeau-idee is",
+        "items": [
+          {
+            "title": "Grootste selectie van Zwitserland",
+            "text": "Meer dan <b>1.600</b> vrijetijdsaanbiedingen in alle regio's, van buitenavonturen tot ontspanningsmomenten."
+          },
+          {
+            "title": "Meer dan 100.000 tevreden klanten",
+            "text": "Swiss Activities is de betrouwbare partner voor bijzondere cadeaus en uitjes."
+          },
+          {
+            "title": "Gratis annuleringsoptie",
+            "text": "Veilige en flexibele boekingen die kunnen worden aangepast aan de behoeften van de ontvanger."
+          },
+          {
+            "title": "5-sterren klantenservice",
+            "text": "Zwitserse kwaliteit en ondersteuning – voor een vlot begin van de ervaring."
+          }
+        ]
+      },
+      "end": {
+        "title": "Geef belevenisbonnen in Zwitserland cadeau en breng vreugde!",
+        "text": "Ontdek de beste cadeau-ideeën en belevenis-vouchers bij Swiss Activities. Of het nu voor een verjaardag is, als kerstcadeau of gewoon om 'Dank je' te zeggen – een voucher voor ervaringen in Zwitserland past bij elke smaak en zorgt voor blijvende herinneringen.",
+        "button": "Vouchers kiezen"
+      },
+      "banner": {
+        "tagline": "NIEU: Het perfecte cadeau-idee!",
+        "title": "Verzeker jezelf van een\nervaring-cadeaubon",
+        "button": "Hier klikken"
+      }
+    }
+  },
+  "filter": {
+    "nearby": "Toon activiteiten in de buurt",
+    "results": "Toon resultaten",
+    "filter": "Filter",
+    "search": "Zoeken",
+    "location": "Plaats",
+    "types": "Soort",
+    "categories": "Categorie",
+    "activity": "Activiteit",
+    "activities": "Activiteiten",
+    "today": "Vandaag",
+    "tomorrow": "Morgen",
+    "price": "Prijs",
+    "noResults": "Geen resultaten",
+    "noExactResults": {
+      "title": "Geen exacte resultaten",
+      "description": "Probeer een aantal van je filters te wijzigen of te verwijderen, of pas je zoekgebied aan.",
+      "showNearest": "Toon dichtstbijzijnde resultaten",
+      "resetDate": "Periode resetten"
+    },
+    "lang": "Talen",
+    "sort": {
+      "relevance": "Relevantie",
+      "distance": "Afstand tot jou",
+      "popularityDesc": "Populariteit aflopend",
+      "ratingDesc": "Beoordeling aflopend",
+      "ratingAsc": "Oplopende beoordeling",
+      "priceDesc": "Prijs aflopend",
+      "priceAsc": "Prijs oplopend",
+      "dateDesc": "Nieuwste eerst",
+      "dateAsc": "Oudste eerst"
+    },
+    "navigationBreadcrumbs": {
+      "root": "Zwitserland"
+    },
+    "all": "Alle",
+    "map": "Kaart",
+    "card": {
+      "from": "van",
+      "person": "per persoon"
+    },
+    "viewMore": "Meer zien",
+    "ratingBetterThan": "Beter dan {val} sterren",
+    "ratingEqual": "{val} sterren",
+    "ratingNone": "NEU / Geen beoordeling",
+    "moreFilters": "{val} meer weergeven",
+    "lessFilters": "Minder weergeven",
+    "usedFilters": "Toegepaste filters",
+    "resetFilters": "Resetten",
+    "discountTypes": "Kortingen",
+    "calendar": "Kalender",
+    "locationError": "Locatie kon niet worden geladen",
+    "textOnly": "Alleen beoordelingen met tekst"
+  },
+  "activity": {
+    "you": "jij",
+    "nearby": "{distance}km verwijderd van {location}",
+    "nearbyAlt": "{distance}km verwijderd",
+    "recommendation": "Aanbeveling",
+    "reviews": "Beoordelingen",
+    "reviewOriginalIn": "Origineel in {language}",
+    "booked": "{val} keer geboekt",
+    "providedBy": "Aanbieder",
+    "save": "Opslaan",
+    "selectDate": "Datum selecteren",
+    "similarActivities": "Meer activiteiten",
+    "question": "Hoe kunnen we helpen?",
+    "rating": "Beoordeling",
+    "highDemand": "Hoge vraag",
+    "widget": {
+      "free": "beschikbaar",
+      "error500": "Er is iets misgelopen, probeer het alstublieft over 1 minuut opnieuw.",
+      "errorDate": "Helaas zijn er geen tijdstippen meer beschikbaar voor {val}.",
+      "choose": "selecteren",
+      "titleTime": "Aanbod selecteren",
+      "titleTicketOption": "Selecteer ticketoptie",
+      "titleParticipants": "Deelnemers selecteren",
+      "titleTickets": "Tickets selecteren",
+      "confirmOffer": "Bevestig ticketoptie",
+      "confirmTickets": "Bevestig deelnemers",
+      "confirmDate": "Bevestig datum",
+      "confirmDateTime": "Bevestig datum & tijd",
+      "cheapest": "Goedkoopste prijs",
+      "time": "Tijd",
+      "navTicket": "Tickets",
+      "check": "Beschikbaarheid controleren",
+      "notBookable": "Helaas is dit aanbod momenteel niet boekbaar.",
+      "paymentMethods": "Betaalmethoden",
+      "totalPrice": "Totaalprijs",
+      "taxes": "Aanvullende kosten",
+      "offerTimeSelect": "Selecteer tijd",
+      "basket": "Winkelmandje",
+      "basketAdd": "Toevoegen aan winkelmandje",
+      "selectedOffer": "Aanbod",
+      "adjust": "Boeking aanpassen",
+      "swissHalfFareCard": "Personen met een woonplaats buiten Zwitserland kunnen&nbsp;<a href=\"/bahnpaesse/swiss-half-fare-card/\" target=\"_blank\" className=\"inline-block\">hier een Swiss Half Fare Card aanvragen</a> om deze voor kortingen in het openbaar vervoer te gebruiken."
+    },
+    "tabs": {
+      "highlights": "Hoogtepunten",
+      "includes": "Inbegrepen",
+      "importantInformation": "Belangrijke informatie",
+      "meetingPoints": "Ontmoetingspunt"
+    },
+    "newsletter": {
+      "title": "Mis geen activiteiten meer",
+      "description": "Abonneer je op de nieuwsbrief en ontvang reisetips, ideeën voor je vrije tijd en geschikte reisgidsen uit Zwitserland.",
+      "signup": "Aanmelden",
+      "inputPlaceholder": "Jouw e-mail"
+    },
+    "notRefundable": {
+      "title": "Niet annuleerbaar",
+      "description": "Helaas kunnen we je geen terugbetaling aanbieden of je boeking voor dit specifieke product wijzigen of annuleren vanwege onze partnerbeleid."
+    }
+  },
+  "UI": {
+    "date": "Datum"
+  },
+  "home": {
+    "title": "Je ervaring begint hier"
+  },
+  "discover": {
+    "title": "Activiteiten ontdekken"
+  },
+  "booking": {
+    "cancelable": "Gratis annulering tot",
+    "privacyMessage": "Door door te gaan met de betaling, accepteer je de <tos>{text}</tos> en de daarin opgenomen annuleringsvoorwaarden van Swiss Activities AG.",
+    "privacyPolicy": "Algemene voorwaarden",
+    "personalTitle": "Boekingsgegevens",
+    "personalSubtitle": "Om de boeking te voltooien, vul alstublieft de onderstaande informatie in.",
+    "mainGuest": "Contactpersoon",
+    "fullName": "Voornaam",
+    "lastName": "Achternaam",
+    "email": "E-mailadres",
+    "phoneNumber": "Telefoonnummer",
+    "cardDetails": "Betaalmethoden",
+    "paymentSecure": "Veilige betaling - we gebruiken SSL-encryptie om je gegevens te beschermen",
+    "creditPayments": "Creditcards",
+    "total": "Totaal",
+    "fullDay": "Dagtocht",
+    "booknow": "Boek nu",
+    "addMoreInformation": "Voeg informatie toe",
+    "addPaymentMethod": "Kies betalingsmethode",
+    "youBook": "Winkelwagentje",
+    "rebate": "Kortingscode",
+    "rebateEmailRequired": "Voer eerst je e-mailadres in en bevestig het om een kortingscode in te wisselen.",
+    "important": "Ik heb de voorwaarden onder \"Belangrijke informatie\" van de activiteit(en) ter kennis genomen",
+    "importantShow": "Informatie weergeven",
+    "importantHide": "Informatie verbergen"
+  },
+  "confirm": {
+    "title": "Bedankt voor je boeking met Swiss Activities.",
+    "confirmed": "Je boeking is bevestigd.",
+    "pending": "Je boeking is in behandeling.",
+    "cancelled": "Je boeking is geannuleerd.",
+    "failed": "Sorry, er is iets mis gegaan.",
+    "failedPayment": "De betaling kon niet worden verwerkt. Probeer het met een andere betaalmethode.",
+    "failedReservation": "De boeking kon helaas niet worden bevestigd. Je betaling wordt terugbetaald. Probeer het opnieuw.",
+    "wait": "We wachten op onze betalingsprovider of de betaling is bevestigd.",
+    "waitEmail": "Je ontvangt een e-mail zodra de betaling is bevestigd.",
+    "caption": "Hartelijk dank voor de boeking via Swiss Activities. We hebben je een bevestigingsmail gestuurd.",
+    "bookingNumber": "Boekingsnummer",
+    "point": "Verzamelpunt",
+    "pointAddress": "Adres van het verzamelpunt",
+    "number": "Telefoonnummer",
+    "end": "Einde",
+    "email": "Je bevestiging is verzonden naar {email}. Als je deze niet binnen enkele minuten ontvangt, neem dan alsjeblieft contact op met onze support via de chat.",
+    "transport": {
+      "title": "Met het openbaar vervoer komen?",
+      "from": "Jouw locatie",
+      "description": "Reis comfortabel met het openbaar vervoer en voeg je mobiele ticket direct toe aan deze boeking.",
+      "button": "Ticket toevoegen"
+    }
+  },
+  "footer": {
+    "company": {
+      "title": "Onderneming",
+      "about-us": "Over ons",
+      "jobs": "Banen",
+      "legal": "Juridisch"
+    },
+    "resources": {
+      "title": "Hulpbronnen"
+    },
+    "collaboration": {
+      "title": "Samenwerking",
+      "becomeapartner": "Word partner",
+      "affiliate": "Affiliate-programma",
+      "widget": "Widget"
+    },
+    "affiliate": {
+      "title": "Affiliate code",
+      "button": "Code kopiëren",
+      "buttonCopied": "Code gekopieerd!"
+    },
+    "contact": {
+      "title": "Klantenservice",
+      "faq": "Vragen & Antwoorden (FAQ)",
+      "cookie": "Cookie-toestemming"
+    },
+    "mobileApp": "Download onze app"
+  },
+  "tickets": {
+    "discounts": {
+      "noDiscount": "Geen korting"
+    },
+    "showDiscounts": "Toon klanten- en kortingskaarten",
+    "travelClass": "Reisklasse"
+  },
+  "supplier": {
+    "activities": "Activiteiten"
+  },
+  "contactPopup": {
+    "modalTitle": "Hoe kunnen we je vandaag helpen?"
+  },
+  "contactForm": {
+    "fullname": "Naam",
+    "email": "E-mail",
+    "subject": "Onderwerp",
+    "messagePlaceholder": "Vraag, boeking, enz...",
+    "submit": "Verzenden",
+    "formError": "Er is iets misgegaan. Probeer het opnieuw."
+  },
+  "contactThankYou": {
+    "title": "Bedankt voor je contact!"
+  },
+  "internalLinkBlock": {
+    "destinations": "Topbestemmingen",
+    "locations": "Topvakantiebestemmingen",
+    "topActivities": "Topactiviteiten",
+    "topAttractions": "Topattracties"
+  },
+  "offerCard": {
+    "bookNow": "Boek nu"
+  },
+  "breadcrumbsBasket": {
+    "stepOne": "Jouw selectie",
+    "stepOneDescription": "Winkelwagentje",
+    "stepTwo": "Jouw details",
+    "stepTwoDescription": "Afrekenen",
+    "stepThree": "Laatste stap",
+    "stepThreeDescription": "Betaling"
+  },
+  "usps": {
+    "or": "of",
+    "allDay": "Dagtocht",
+    "bookable": {
+      "title": "Boekbaar",
+      "description": "Voor {val}"
+    },
+    "online": {
+      "title": "Onmiddellijke boekingsbevestiging"
+    },
+    "payment": {
+      "title": "Boek op factuur of betaal met Twint"
+    },
+    "duration": {
+      "title": "Duur",
+      "durationMinutes": "{val} minuten",
+      "duration": "{val} uur",
+      "durations": "{val} uren",
+      "durationDay": "{val} dag",
+      "durationDays": "{val} dagen"
+    },
+    "mobileTicket": {
+      "title": "Mobiel ticket geaccepteerd",
+      "description": "Gebruik je telefoon of print je voucher uit"
+    },
+    "confirmation": {
+      "title": "Onmiddellijke boekingsbevestiging",
+      "description": "Geen extra kosten"
+    },
+    "queue": {
+      "title": "Niet wachten bij de kassa"
+    },
+    "cancel": {
+      "title": "Gratis annulering",
+      "description": "Volledige terugbetaling bij annulering tot {val}u voor aanvang",
+      "descriptionDays": "Volledige terugbetaling bij annulering tot {val} dagen voor aanvang",
+      "subtitle": "Tot {val} uur voor de starttijd",
+      "subtitleDays": "Tot {val} dag(en) voor de starttijd"
+    },
+    "meetingPoint": {
+      "title": "Verzamelpunt"
+    },
+    "discount": {
+      "title": "Korting"
+    },
+    "request": {
+      "title": "Boeking op aanvraag",
+      "description": "Deze boeking moet door de aanbieder opnieuw bevestigd worden.",
+      "extra": "Dit aanbod is afhankelijk van de beschikbaarheid van de aanbieder. De boeking moet eerst door de aanbieder worden bevestigd. Hij zal na de boeking contact met je opnemen. Als de activiteit niet kan plaatsvinden, krijg je het volledige bedrag terug."
+    },
+    "validity": {
+      "title": "Geldigheid"
+    },
+    "openingHours": {
+      "title": "Openingstijden"
+    }
+  },
+  "widgetConfigurator": {
+    "title": "Widget configureren",
+    "type": "Type",
+    "lang": "Taal",
+    "other": "Kies een andere activiteit",
+    "topBar": "Bedieningsbalk",
+    "hideAll": "Alles verbergen",
+    "hideSearch": "Zoeken verbergen",
+    "hideSize": "Grootte toggle verbergen",
+    "hideFilter": "Filter knop verbergen",
+    "hideMap": "Kaart knop verbergen",
+    "hideQuickFilter": "Snelle filter verbergen",
+    "hideSort": "Sortering verbergen",
+    "buttonText": "Knop tekst",
+    "buttonBackground": "Knop achtergrond",
+    "buttonColor": "Knop tekstkleur",
+    "search": "Voreingevoerde zoekopdracht"
+  },
+  "types": {
+    "activity": "Activiteit",
+    "overview": "Overzicht",
+    "location": "Plaats",
+    "locationType": "Plaats + Type",
+    "type": "Type",
+    "attribute": "Categorie",
+    "locationAttribute": "Plaats + Categorie",
+    "poi": "Bezienswaardigheid"
+  },
+  "reviewForm": {
+    "title": "Beoordeel je ervaring",
+    "button": "Beoordeel nu",
+    "rating": "Beoordeling",
+    "comment": "Opmerking",
+    "thanks": "Bedankt voor je beoordeling!",
+    "next": "Beoordeel je volgende reservering",
+    "finish": "Venster sluit in 3 seconden"
+  },
+  "user": {
+    "welcome": "Welkom in je dashboard {name}!",
+    "menu": {
+      "activities": "Activiteiten",
+      "bookings": "Boekingen",
+      "suppliers": "Leveranciers",
+      "reviews": "Beoordelingen",
+      "settings": "Instellingen",
+      "chat": "Chat",
+      "logout": "Uitloggen",
+      "login": "Inloggen"
+    }
+  },
+  "SettingsForm": {
+    "title": "Vul je profiel aan",
+    "titleUpdate": "Werk je profiel bij",
+    "submit": "Verzenden",
+    "phoneNumber": "Controleer je telefoonnummer nogmaals.",
+    "email": "E-mailadres is ongeldig",
+    "iban": "IBAN is ongeldig",
+    "reseller": {
+      "title": "Reseller",
+      "merchantName": "Naam van de handelaar",
+      "merchantAddress": "Adres van de handelaar",
+      "bankAccountHolder": "Rekeninghouder",
+      "bankAccountIban": "IBAN van de rekening",
+      "bankAccountHolderAddress": "Adres van de rekeninghouder",
+      "contact": {
+        "title": "Contacten",
+        "name": "Naam",
+        "businessRole": "Zakelijke rol",
+        "email": "E-mail",
+        "phone": "Telefoon"
+      }
+    },
+    "payment": {
+      "title": "Opgeslagen betaalmethoden",
+      "removeTitle": "Betaalmethode verwijderen"
+    }
+  },
+  "Repeater": {
+    "add": "Toevoegen",
+    "remove": "Verwijderen"
+  },
+  "Table": {
+    "booking": {
+      "refresh": "Bijwerken"
+    },
+    "clearFilters": "Filters resetten",
+    "noResults": "Niets gevonden.",
+    "view": {
+      "title": "Weergave",
+      "adjust": "Kolommen aanpassen"
+    },
+    "header": {
+      "bookingId": "Boekingsnummer",
+      "date": "Datum",
+      "bookingDate": "Boekingsdatum",
+      "serviceDate": "Datum van de activiteit",
+      "description": "Beschrijving",
+      "location": "Locatie",
+      "name": "Naam",
+      "email": "E-mail",
+      "type": "Type",
+      "price": "Prijs vanaf",
+      "sold": "Verkocht",
+      "rating": "Beoordeling",
+      "supplier": "Aanbieder",
+      "bookingStatus": "Boekingsstatus",
+      "paymentStatus": "Betalingsstatus",
+      "total": "Prijs",
+      "actions": "Acties",
+      "duration": "Duur",
+      "validity": "Geldigheid",
+      "bookable": "Boekbaar",
+      "createdAt": "Gemaakt op",
+      "commission": "Commissie",
+      "status": "Status",
+      "reservationSystem": "Reserveringssysteem",
+      "bapiId": "BAPI ID",
+      "capiId": "CAPI ID",
+      "notes": "Notities",
+      "distributor": "Distributeur",
+      "website": "Website",
+      "validities": "Geldigheid"
+    },
+    "actions": {
+      "aria": "Open acties",
+      "details": "Details weergeven",
+      "book": "Boek nu"
+    },
+    "sort": {
+      "ascending": "Oplopend",
+      "descending": "Aflopend",
+      "hide": "Verbergen",
+      "bookable": "Alleen boekbare activiteiten weergeven"
+    },
+    "pagination": {
+      "page": "Pagina",
+      "of": "van",
+      "entriesPerPage": "Inkomens per pagina",
+      "goToFirstPage": "Ga naar de eerste pagina",
+      "goToLastPage": "Ga naar de laatste pagina",
+      "goToNextPage": "Ga naar de volgende pagina",
+      "goToPreviousPage": "Ga naar de vorige pagina"
+    },
+    "search": {
+      "activities": "Zoek naar activiteiten",
+      "bookings": "Zoek naar boekingen",
+      "offers": "Zoek naar Offers",
+      "suppliers": "Zoek naar leveranciers",
+      "bookingId": "Zoek naar boekingsnummer",
+      "email": "Zoek naar e-mail",
+      "familyName": "Zoek naar achternaam"
+    },
+    "cell": {
+      "bookingStatusActive": "Bevestigd",
+      "bookingStatusPending": "In afwachting",
+      "bookingStatusCancelled": "Geannuleerd",
+      "paymentStatusActive": "Betaald",
+      "paymentStatusPending": "In afwachting",
+      "paymentStatusRefunded": "Terugbetaald"
+    }
+  },
+  "Drawer": {
+    "close": "Sluiten"
+  },
+  "PaymentMethod": {
+    "card": {
+      "new": "Nieuwe kaart",
+      "store": "Sla mijn kredietkaartgegevens op voor een snelle afhandeling in de toekomst.",
+      "endsIn": "Eindigt in {val}"
+    }
+  },
+  "Activity": {
+    "new": "Nieuwe activiteit",
+    "nav": {
+      "general": "Algemeen"
+    }
+  },
+  "Offer": {
+    "new": "Nieuwe Offer"
+  },
+  "Supplier": {
+    "new": "Nieuwe leverancier"
+  },
+  "UspSlider": {
+    "title": "Waarom boeken bij Swiss Activities?",
+    "items": [
+      "Grootste selectie van Zwitserland",
+      "Meer dan 100.000 tevreden klanten",
+      "Gratis annuleringsoptie",
+      "5 sterren Zwitserse klantenservice",
+      "Mobiele tickets binnen 90 seconden boeken"
+    ]
+  },
+  "AppBanner": {
+    "title": "Download nu de app",
+    "description": "Ontdek Swiss Activities – eenvoudig en snel"
+  },
+  "Transport": {
+    "bookTrip": "Boek verbinding",
+    "button": {
+      "confirmTrip": "Bevestig verbinding",
+      "confirmTravelers": "Reizigers bevestigen"
+    },
+    "checkDetails": "Controleer verbindingdetails",
+    "class": {
+      "first": "1e klas",
+      "second": "2e klas"
+    },
+    "direct": "Direct",
+    "duration": {
+      "minutes": "min."
+    },
+    "earlierTrips": "Vorig vervoer",
+    "errorLoadingTrips": "Verbindingen konden niet worden geladen.",
+    "laterTrips": "Later vervoer",
+    "legend": "Legenda",
+    "loadingTrips": "Verbinden worden geladen...",
+    "oneWay": "Enkele reis",
+    "roundTrip": "Heen- en terugreis",
+    "searchTrips": "Zoek verbindingen",
+    "selectOriginDestination": "Selecteer vertrek- en bestemming om naar verbindingen te zoeken.",
+    "selectProduct": "Ticketoptie kiezen",
+    "selectTravelers": "Reizigers selecteren",
+    "switch": "Overstappen",
+    "ticket": "Ticket",
+    "tickets": "Tickets",
+    "transfer": "Overstappen",
+    "tripResults": "Verbindingen",
+    "upgradeTo1stClass": "Extra comfort",
+    "upgradeTo1stClassDescription": "Reizen in de 1e klas",
+    "cityTicketDescription": "Dagkaart voor plaatselijk verkeer",
+    "via": "via",
+    "travelDate": "Reisdatum kiezen",
+    "confirmTravelDate": "Reisdatum bevestigen",
+    "departure": "Vertrek",
+    "arrival": "Aankomst",
+    "locationDisabled": "Locatiebescherming is uitgeschakeld",
+    "locationError": "Locatie kon niet worden vastgesteld",
+    "noProductsAvailable": "Geen tickets beschikbaar",
+    "disclaimer": "Alle informatie zonder garantie.",
+    "validity": "Geldigheid",
+    "validityOnSelectedRoute": "Alleen op de gekozen route",
+    "validityForConnection": "Alleen voor de gekozen verbinding",
+    "validityForConnectionWith2ndClass": "Alleen voor de gekozen verbinding en met een geldig ticket voor de 2e klas",
+    "validityForRouteWith2ndClass": "Alleen voor de gekozen route en met een geldig ticket voor de 2e klas",
+    "validityGARoutes": "Geldig op alle GA-gebiedslijnen",
+    "validityDayClassUpgrade": "Alleen met een dagkaart voor Halbtax, GA of Swiss Travel Pass (Flex) voor de 2e klas.",
+    "includedIn": "Inbegrepen in",
+    "validityDateRange": "{fromDate} tot {toDate}, {toTime}",
+    "validityConnection": "{date} om {fromTime}, bij {toTime}",
+    "classUpgradeOnly": "Alleen klaswissel",
+    "loadingDestination": "Wordt geladen",
+    "distanceToMeetingPoint": "Ontmoetingspunt",
+    "walking": "Te voet",
+    "arrivalInfo": "Aankomsttijd berekend: {walkingTime} minuten lopen + 15 minuten speling tot aan het ontmoetingspunt",
+    "timeBeforeEvent": "{minutes} min. voor activiteit · {walkingMinutes} min. lopen vanaf het station",
+    "tooLateForActivity": "De volgende verbindingen bereiken het ontmoetingspunt niet op tijd"
+  }
+}

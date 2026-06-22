@@ -32,7 +32,7 @@ import { Tabs, TabsList, TabsTrigger } from "../../ui/Tabs";
 import { cn } from "../../utils/css/cn";
 import { useDebounce } from "../../utils/data/useDebounce";
 import { useI18n } from "../../utils/i18n/useI18n";
-import { dataLayerSend } from "../../utils/thirdParty/dataLayerSend";
+import { useDataLayer } from "../../utils/thirdParty/dataLayerSend";
 import { useGeolocation } from "../../utils/ui/useGeolocation";
 import { useGetPlaces } from "../../query/transport/places";
 
@@ -67,6 +67,7 @@ export const Places = ({
   children,
   onFromSelect,
 }: PlacesProps = {}) => {
+  const { dataLayer } = useDataLayer();
   const { t, locale } = useI18n();
   const searchParams = useSearchParams();
   const hasInitializedTo = useRef(false);
@@ -435,7 +436,7 @@ export const Places = ({
     lastSearchTermRef.current[field] = debouncedSheetSearchTerm;
 
     const fire = () => {
-      dataLayerSend({
+      dataLayer({
         data: {
           event: `transport_search_${field}`,
           search_term: debouncedSheetSearchTerm,
@@ -480,7 +481,7 @@ export const Places = ({
     source: "search" | "geolocation" = "search"
   ) => {
     flushPendingSearch(field);
-    dataLayerSend({
+    dataLayer({
       data: {
         event: `transport_search_${field}_select`,
         search_term: name,
@@ -647,7 +648,7 @@ export const Places = ({
                       e.stopPropagation();
                       const next = direction === "from" ? "to" : "from";
                       setDirection(next);
-                      dataLayerSend({
+                      dataLayer({
                         data: {
                           event: "transport_select_direction",
                           transport_direction: next,

@@ -1,9 +1,17 @@
-import {
-  UserContext,
-  useUser as useAuth0User,
-} from "@auth0/nextjs-auth0/client";
-import { TUser } from "../../types/user";
+import type { TUser } from "../../types/user";
 
-export const useUser = () => {
-  return useAuth0User() as UserContext & { user: TUser };
+type TUseUserResult = {
+  user: TUser;
+  error: Error | undefined;
+  isLoading: boolean;
+  checkSession: () => Promise<void>;
+};
+
+export const useUser = (): TUseUserResult => {
+  return {
+    user: null as unknown as TUser,
+    error: undefined,
+    isLoading: false,
+    checkSession: () => Promise.resolve(),
+  };
 };

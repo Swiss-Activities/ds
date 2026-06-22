@@ -1,0 +1,1799 @@
+{
+  "general": {
+    "accountAdvantages": "Za uživanje u popustima i drugim pogodnostima, stvori račun ili se prijavi.",
+    "activityBook": "Rezerviraj aktivnost",
+    "addTicket": "Dodaj ulaznicu",
+    "adult": "{val} Odrasla osoba",
+    "adults": "{val} Odraslih",
+    "ageChoose": "Odaberi dob",
+    "ageFrom": "Od {val} godina",
+    "ageOld": "{val} godina",
+    "ageUnder": "Ispod {val} godina",
+    "all": "Sve",
+    "allReviews": "Sve ocjene",
+    "backToBookings": "Povratak na rezervacije",
+    "bookAsGuest": "Završavaš proces narudžbe kao gost.",
+    "cancel": "Otkaži",
+    "cancelled": "Otkaži",
+    "cartAmount": "Vrijednost košarice",
+    "child": "{val} Dijete",
+    "children": "{val} Djeca",
+    "chooseSelection": "Potvrdi odabir",
+    "confirm": "Potvrdi",
+    "confirmCancel": "Potvrdi otkazivanje",
+    "contact": "Kontakt",
+    "copyUrl": "Kopiraj URL",
+    "couple": "Par",
+    "customerServiceFee": "Naknada za uslugu",
+    "data": "Podaci",
+    "date": "Datum",
+    "dateChoose": "Odaberi datum",
+    "delete": "Izbriši",
+    "didYouMean": "Misliš na <suggestion>{email}</suggestion>?",
+    "duplicate": "Dupliciraj",
+    "emailsDontMatch": "Unesene e-mail adrese se ne podudaraju.",
+    "export": "Izvesti",
+    "faqType": "Često postavljana pitanja o {type} u Švicarskoj",
+    "from": "Od",
+    "group": "Grupa",
+    "helpfulQuestion": "Koristan?",
+    "informationPlural": "Informacije",
+    "language": "Jezik",
+    "loginOrRegister": "Prijavite se ili registrirajte",
+    "manageBookings": "Upravljanje rezervacijama",
+    "mobileAppAddon": "Preuzmi našu mobilnu aplikaciju i lako upravljaj svojim rezervacijama, brzo dođi do svojih karata i pronađi svoju sljedeću avanturu.",
+    "mostImportantInSummary": "Najvažnije u nekoliko riječi",
+    "noResults": "Nažalost, nismo mogli pronaći rezultate za tvoj pojam pretraživanja",
+    "noReviewsYet": "Još nema ocjena",
+    "notes": "Bilješke",
+    "oneMonth": "1 mjesec",
+    "openChat": "Otvorite chat",
+    "order": "Redoslijed",
+    "partSum": "Međuzbroj",
+    "participants": "Sudionici",
+    "participantsChoose": "Odaberi sudionike",
+    "past": "Prošlo",
+    "personalizeTickets": "Personaliziraj karte",
+    "pleaseSelect": "Odaberi",
+    "pleaseSelectItem": "Molimo odabrati {val}",
+    "questionsChatActivity": "Imaš li još pitanja o ovoj aktivnosti? Chataj s nama",
+    "questionsChatBooking": "Imaš li još pitanja o rezervaciji? Chataj s nama",
+    "raw": "Sirovi",
+    "rebate": "Popust",
+    "recaptcha": "Ova web stranica je zaštićena reCAPTCHA-om. Googleova\n<a href=\"https://policies.google.com/privacy\" target=\"_blank\">Politika privatnosti</a> i\n<a href=\"https://policies.google.com/terms\" target=\"_blank\">Uvjeti korištenja</a> se primjenjuju.",
+    "remove": "Ukloni",
+    "removeFromCart": "Ukloni iz košarice",
+    "reset": "Resetiraj",
+    "searchNow": "Traži sada",
+    "single": "Samac",
+    "soldOut": "Rasprodano",
+    "somethingWentWrongContact": "Žao nam je, ali nešto je pošlo po zlu. Pokušaj ponovno ili se obrati podršci.",
+    "successfullySaved": "Uspješno spremljeno",
+    "ticket": "Karta",
+    "tickets": "Karte",
+    "to": "Do",
+    "currentLocation": "Trenutna lokacija",
+    "toDashboard": "Moje rezervacije",
+    "translate": "Prevedi",
+    "tryAgain": "Pokušaj ponovo",
+    "upcoming": "Nadolazeće",
+    "when": "Kada",
+    "who": "Tko",
+    "wrongDate": "Nešto nije u redu s datumom: Molimo provjerite i ponovno odaberite.",
+    "wrongDateParticipant": "Datum rođenja sudionika ne odgovara dobi navednoj u ponudi.",
+    "today": "Danas",
+    "apply": "Primijeni"
+  },
+  "aria": {
+    "forward": "Naprijed",
+    "backward": "Nazad"
+  },
+  "auth0": {
+    "accept": "Prihvaćam [uvjete korištenja]({link})",
+    "error": "Molimo te prihvati uvjete korištenja",
+    "resetPasswordHint": "Nisi primio e-mail? Provjeri svoj spam folder. Ako si se registrirao s Appleom ili Googleom, molim te koristi tu metodu prijave."
+  },
+  "menu": {
+    "menu": "Izbornik",
+    "search": "Pretraži",
+    "travelGuide": "Planer putovanja",
+    "travelRoutes": "Putne rute",
+    "contactus": "Kontaktiraj nas",
+    "switzerland": "Švicarska",
+    "help": "Chat",
+    "voucher": "Kupi vaučer",
+    "voucherSm": "Vaučer",
+    "partners": "Partneri",
+    "provider": "Pružatelj",
+    "affiliate": "Affiliate partner"
+  },
+  "chat": {
+    "chats": "Svi chatovi",
+    "newChat": "Novi chat",
+    "noChatsYet": "Još nema chatova",
+    "typeMessage": "Unesi poruku",
+    "welcome": "Pozdrav i dobrodošao/la u Swiss Activities! Ja sam Housibot i rado ću ti pomoći s tvojim pitanjima.",
+    "welcomeReview": "Pozdrav! Kako je bilo tvoje iskustvo? Ja sam Housibot i rado ću ti pomoći da podijeliš svoje mišljenje."
+  },
+  "supportBanner": {
+    "title": "Trebaš li pomoć da pronađeš pravu školu skijanja?",
+    "placeholder": "Kako ti možemo pomoći?",
+    "send": "Pošalji"
+  },
+  "pages": {
+    "404": {
+      "title": "Stranica nije pronađena.",
+      "description": "Ova stranica ne postoji.",
+      "button": "Povratak na početnu stranicu",
+      "search": "Započni pretragu"
+    },
+    "home": {
+      "title": "Swiss Activities - Pronađi i rezerviraj svoju aktivnost u Švicarskoj",
+      "description": "Swiss Activities je tvoje odredište za slobodne aktivnosti u Švicarskoj. Otkrij, usporedi i rezerviraj brojne slobodne aktivnosti.",
+      "gatewayCards": {
+        "categories": {
+          "castlesRuins": "Dvorac / Ruševina",
+          "castleEvents": "Događaj u dvorcu",
+          "exhibitions": "Izložba",
+          "fireplaces": "Vatra",
+          "movies": "Film",
+          "museums": "Muzej",
+          "playgrounds": "Igraonica",
+          "swimmingBathing": "Plivanje i kupanje"
+        },
+        "dateRange": {
+          "from": "Od",
+          "until": "Do"
+        },
+        "distance": {
+          "unit": "km"
+        }
+      },
+      "gatewayDetail": {
+        "back": "Nazad",
+        "moreInfo": "Više informacija",
+        "source": "Otvori izvor",
+        "labels": {
+          "admission": "Ulaz",
+          "address": "Adresa",
+          "ageRating": "Godine",
+          "bookTickets": "Rezerviraj karte",
+          "canton": "Kanton",
+          "cast": "Glumačka postava",
+          "category": "Kategorija",
+          "cinema": "Kino",
+          "countryYear": "Zemlja / Godina",
+          "dateRange": "Razdoblje",
+          "director": "Redatelj",
+          "duration": "Trajanje",
+          "entryFeeAdult": "Odrasli",
+          "entryFeeChild": "Djeca",
+          "foundedYear": "Osnovan",
+          "genres": "Žanrovi",
+          "location": "Mjesto",
+          "museumCategory": "Vrsta muzeja",
+          "openTrailer": "Otvori trailer",
+          "openingHours": "Radno vrijeme",
+          "phone": "Telefon",
+          "poolLength": "Duljina bazena",
+          "trailer": "Trailer",
+          "venue": "Mjesto događanja",
+          "waterType": "Tip vode"
+        },
+        "sections": {
+          "amenities": "Oprema",
+          "badges": "Preporuke",
+          "information": "Informacije",
+          "prices": "Cijene",
+          "showtimes": "Prikazivanja",
+          "venue": "Mjesto događanja"
+        },
+        "amenities": {
+          "capacityPersons": "Kapacitet",
+          "hasBenches": "Klupe",
+          "hasChangingRooms": "Svlačionice",
+          "hasDivingBoard": "Skakaonica",
+          "hasFirewood": "Drva za vatru",
+          "hasFoodService": "Usluga hrane",
+          "hasGrillGrate": "Rešetka za roštilj",
+          "hasKidsPool": "Bazen za djecu",
+          "hasLifeguard": "Spasitelj",
+          "hasLockers": "Ormarčići",
+          "hasPlaygroundNearby": "Igraonica u blizini",
+          "hasShowers": "Tuševi",
+          "hasSlide": "Tobogan",
+          "hasShelter": "Krov",
+          "hasTable": "Stol",
+          "hasToilet": "WC",
+          "hasWater": "Voda"
+        },
+        "waterTypes": {
+          "indoorPool": "Zatvoreni bazen",
+          "lake": "Jezero",
+          "outdoorPool": "Otvoreni bazen",
+          "pool": "Bazen",
+          "river": "Rijeka"
+        }
+      }
+    },
+    "s": {
+      "title": "Swiss Activities - Pronađi i rezerviraj svoju aktivnost",
+      "description": "Swiss Activities je tvoje odredište za slobodne aktivnosti u Švicarskoj. Otkrij, usporedi i rezerviraj brojne slobodne aktivnosti.",
+      "sort": {
+        "distance": {
+          "notSupported": "Usluge lokacije ne podržava tvoj preglednik. Koristi se sortiranje po relevantnosti.",
+          "permissionDenied": "Da bi se sortirali prema udaljenosti, molimo dopusti pristup svojoj lokaciji u postavkama preglednika i ponovno učitaj stranicu.",
+          "positionUnavailable": "Informacije o lokaciji nisu dostupne.",
+          "timeout": "Isteklo vrijeme čekanja za upit lokacije.",
+          "unknownError": "Došlo je do nepoznate greške.",
+          "fallbackMessage": "Sortiranje po relevantnosti se koristi.",
+          "errorPrefix": "Lokacija nije mogla biti određena. "
+        }
+      }
+    },
+    "chat": {
+      "title": "Swiss Activities Chat",
+      "description": "Swiss Activities je tvoje odredište za aktivnosti u slobodnom vremenu u Švicarskoj. Otkrij, usporedi i rezerviraj brojne aktivnosti za slobodno vrijeme."
+    },
+    "transport": {
+      "title": "Švicarska željeznica karte, propusnice & dnevne karte | Swiss Travel Pass, SBB Spar Tageskarte",
+      "description": "Usporedi i rezerviraj željezničke karte, Swiss Travel Pass, Halbtax, SBB Spar Tageskarte & Regionalne propusnice za cijelu Švicarsku. Odmah kao mobilna karta na telefon.",
+      "trust": {
+        "partners": "Službeni partner",
+        "ratingValue": "<b>4,8</b>",
+        "ratingLabel": "400.000+ zadovoljnih putnika",
+        "ratingShortLabel": "400'000+ putnika"
+      },
+      "discountMap": {
+        "title": "Ovdje štediš s tvojom propusnicom",
+        "subtitle": "Žičare, brodovi i vrhunski izleti — odaberi propusnicu i vidi gdje se što nudi.",
+        "free": "Uključuje",
+        "discount50": "−50 %",
+        "discount25": "−25 %",
+        "noDiscount": "Bez popusta",
+        "altitude": "{m} m n.m.",
+        "moreInfo": "Saznaj više",
+        "selectPass": "Odaberi propusnicu",
+        "selectCategory": "Odaberi kategoriju",
+        "categories": {
+          "mountain": "Žičare",
+          "lake": "Jezera & brodovi",
+          "museum": "Muzeji"
+        },
+        "airports": {
+          "zrh": "Zürich",
+          "gva": "Ženeva"
+        },
+        "regions": {
+          "bernerOberland": "Berner Oberland",
+          "jungfrau": "Jungfrau",
+          "interlaken": "Interlaken",
+          "zentralschweiz": "Središnja Švicarska",
+          "ostschweiz": "Istočna Švicarska",
+          "waadt": "Vaud",
+          "engadin": "Engadin",
+          "wallis": "Wallis",
+          "tessin": "Ticino",
+          "genferseeregion": "Regija Genève",
+          "zuerich": "Zürich",
+          "mittelland": "Središnja regija",
+          "luzern": "Lucerne",
+          "basel": "Basel",
+          "bern": "Bern",
+          "lausanne": "Lausanne",
+          "geneve": "Ženeva",
+          "zermatt": "Zermatt",
+          "fribourg": "Fribourg",
+          "graubuenden": "Graubünden"
+        }
+      },
+      "hero": {
+        "title": "Željezničke karte za cijelu",
+        "titleAccent": "Švicarsku",
+        "lede": "Karte za putovanje, dnevne karte i ponudе SBB - odmah kao mobilna karta na tvoj telefon.",
+        "subtitle": "Karte za putovanje, dnevne karte i ponudе SBB - odmah kao mobilna karta na tvoj telefon.",
+        "searchTitle": "Traži vezu",
+        "searchMeta": "Željeznička stanica · Datum · Putnici",
+        "fromPlaceholder": "Početna stanica / pocečni grad",
+        "toPlaceholder": "Odredišna stanica / odredišni grad",
+        "badges": {
+          "rating": "<b>4,8</b> / 5 · 400'000+ recenzija",
+          "partner": "Službeni partner SBB"
+        },
+        "usps": {
+          "customers": {
+            "title": "400.000 sretnh kupaca",
+            "subline": "Povjerenje od 2021. na Swiss Activities"
+          },
+          "saver": {
+            "title": "Uštedi do 50%",
+            "subline": "S pomoću štednih karata i dnevnih karata SBB"
+          },
+          "mobile": {
+            "title": "Odmah kao mobilna karta",
+            "subline": "Direktno na telefon, SBB prijava nije potrebna"
+          },
+          "earlyBird": {
+            "title": "Pogodnosti za rane rezervacije",
+            "subline": "Planiraj unaprijed i kupi štedne karte i dnevne karte SBB"
+          }
+        }
+      },
+      "benefits": {
+        "title": "Tvoje prednosti",
+        "discount": {
+          "eyebrow": "Popust karte",
+          "title": "Uštedi do 40%",
+          "subline": "SBB popuste i dnevne karte",
+          "badge": "Najprodavanije"
+        }
+      },
+      "passes": {
+        "title": "SBB i regionalne propusnice",
+        "subtitle": "Usporedi višednevne propusnice, dnevne propusnice i regionalne propusnice - odaberi propusnicu koja će ti donijeti najviše.",
+        "tabs": {
+          "multiDay": "Višednevne propusnice",
+          "dayPass": "Dnevne propusnice",
+          "regional": "Regionalne propusnice"
+        },
+        "buy": "Kupite sada",
+        "from": "od",
+        "moreInfo": "Više informacija",
+        "seeDiscounts": "Pogledaj sve popuste",
+        "viewAllByTab": {
+          "multiDay": "Pogledaj sve željezničke propusnice",
+          "dayPass": "Pogledaj sve SBB dnevne karte",
+          "regional": "Pogledaj sve regionalne propusnice"
+        },
+        "empty": "Trenutno nema dostupnih proizvoda – pogledaj i ostale kategorije.",
+        "descriptions": {
+          "fallback-stp": "Putuj diljem Švicarske vlakom, autobusom i brodom – besplatni ulazi u muzeje uključeni.",
+          "fallback-stpf": "Koristi javni prijevoz na odabranim danima – uključeni besplatni ulazi u muzeje.",
+          "fallback-shfc": "Jedan mjesec polovična cijena na vlak, autobus, brod i žičare.",
+          "fallback-halbtax": "Cjelodnevno putovanje diljem Švicarske – s tvojom Halbtax.",
+          "fallback-spar": "Dnevna karta po najboljoj cijeni prilikom rane rezervacije – ograničena ponuda na dan.",
+          "fallback-ga": "Potpuna mobilnost na jedan dan – kao GA, samo za 24 sata.",
+          "fallback-tell": "Slobodan ulaz u središnju Švicarsku: žičare, brodske plovidbe i javni prijevoz uključeni.",
+          "fallback-bo": "Istražite regiju Jungfrau i Interlaken – vlakovi, brodovi i žičare s jednom propusnicom.",
+          "fallback-jtp": "Top of Europe: žičare, javni prijevoz i vrhunac oko Grindelwalda, Wengen, Mürren."
+        },
+        "usps": {
+          "1330": [
+            "Harder Kulm & Brienzer Rothorn uključeno",
+            "Do −50 % na skijališta Grindelwald-Wengen",
+            "Javni prijevoz & žičare regije Jungfrau"
+          ],
+          "1438": [
+            "First, Schynige Platte & Niesen uključeno",
+            "−25 % na Jungfraujoch Top of Europe",
+            "Vlak, brod & žičare s jednim prolazom"
+          ],
+          "1440": [
+            "1 mjesec polovična cijena diljem Švicarske",
+            "Za vlak, autobus, brod & žičare",
+            "Također na štedne karte SBB"
+          ],
+          "1447": [
+            "Vlak, autobus & brod besplatno diljem Švicarske",
+            "Do −50 % na žičare (Jungfraujoch −25 %)",
+            "Više od 500 muzeja besplatno"
+          ],
+          "1448": [
+            "Aktivirati na odabranim danima diljem Švicarske",
+            "Do −50 % na žičare, autobuse, brod",
+            "Više od 500 muzeja besplatno"
+          ],
+          "1450": [
+            "Pilatus, Rigi & Stanserhorn uključeno",
+            "Brodovi po Vierwaldstättersee besplatno",
+            "Vlak, autobus & žičare središnje Švicarske"
+          ],
+          "1664": [
+            "Dnevna karta od CHF 29",
+            "Do −70 % za ranu rezervaciju",
+            "Ograničena ponuda na dan"
+          ],
+          "1671": [
+            "Djeca 6–16 po cijeni za obitelj",
+            "Sve SBB veze diljem Švicarske",
+            "Idealno za obiteljske izlete"
+          ],
+          "1676": [
+            "1 dan slobodnog putovanja s Halbtax",
+            "Diljem Švicarske na SBB vezama",
+            "Jeftinije nego više pojedinačnih karata"
+          ]
+        },
+        "soldCount": "{count} rezervirano",
+        "reviews": "({count})",
+        "discounts": {
+          "1330": "Harder Kulm uključeno.",
+          "1438": "First & Niesen uključeno.",
+          "1440": "Polovična cijena",
+          "1447": "Žičare −50 %",
+          "1448": "Žičare −50 %",
+          "1450": "Pilatus & Rigi uključeno.",
+          "1664": "Do −70 %",
+          "1671": "Cijena za obitelj"
+        },
+        "benefits": {
+          "includedHeading": "Uključuje",
+          "discountedHeading": "Popusti",
+          "expand": "Pogledaj sve popuste",
+          "collapse": "Prikaži manje",
+          "items": {
+            "1330": {
+              "included": [
+                "Harder Kulm & Brienzer Rothorn",
+                "Javni prijevoz u regiji Jungfrau (željeznica, autobus, brod)"
+              ],
+              "discounted": [
+                "Skijaške oblasti Grindelwald-Wengen do −50 %",
+                "Skijaški centar Mürren-Schilthorn do −50 %",
+                "Jungfraujoch Top of Europe −25 %"
+              ]
+            },
+            "1438": {
+              "included": [
+                "First, Schynige Platte & Niesen",
+                "Brienzer Rothorn & Stockhorn",
+                "Željeznica, brod & žičare regije Jungfrau"
+              ],
+              "discounted": [
+                "Jungfraujoch Top of Europe −25 %",
+                "Schilthorn (James Bond) −50 %"
+              ]
+            },
+            "1440": {
+              "included": [],
+              "discounted": [
+                "50 % na karte za vlak, autobus & brod",
+                "50 % na žičare",
+                "Također možeš kombinirati s SBB štednim kartama"
+              ]
+            },
+            "1447": {
+              "included": [
+                "Vlak, autobus & brod diljem Švicarske",
+                "Više od 500 muzeja",
+                "Javni prijevoz u 90 švicarskih gradova"
+              ],
+              "discounted": [
+                "Žičare do −50 %",
+                "Jungfraujoch Top of Europe −25 %",
+                "RailAway ponude SBB −30 %"
+              ]
+            },
+            "1448": {
+              "included": [
+                "Vlak, autobus & brod na odabranim danima",
+                "Više od 500 muzeja",
+                "Javni prijevoz u 90 švicarskih gradova"
+              ],
+              "discounted": [
+                "Žičare do −50 %",
+                "Jungfraujoch Top of Europe −25 %",
+                "RailAway ponude SBB −30 %"
+              ]
+            },
+            "1450": {
+              "included": [
+                "Pilatus, Rigi & Stanserhorn",
+                "Brodske veze na Vierwaldstättersee",
+                "Željeznica, autobus & žičare Srednje Švicarske"
+              ],
+              "discounted": []
+            },
+            "1664": {
+              "included": [
+                "1 dan slobodnog putovanja diljem Švicarske"
+              ],
+              "discounted": [
+                "Dnevna karta od CHF 29",
+                "Do −70 % za ranu rezervaciju"
+              ]
+            },
+            "1671": {
+              "included": [
+                "SBB veze širom Švicarske za 1 dan"
+              ],
+              "discounted": [
+                "Porodična cijena za djecu 6–16 godina",
+                "−50 % na redovne dnevne karte"
+              ]
+            },
+            "1676": {
+              "included": [
+                "1 dan slobodnog putovanja s Halbtax"
+              ],
+              "discounted": [
+                "Povoljnije od nekoliko pojedinačnih karata"
+              ]
+            }
+          }
+        }
+      },
+      "articles": {
+        "title": "Zanimljivi članci o svijetu vlakova",
+        "subtitle": "Savjeti, usporedbe i praktične informacije o SBB kartama, putnim kartama i javnom prijevozu u Švicarskoj.",
+        "read": "Pročitaj članak",
+        "tag": "Magazin"
+      },
+      "dayPasses": {
+        "title": "Popularne dnevne karte",
+        "subtitle": "Cijeli dan slobodna vožnja – lako se kombinira s tvojom kartom.",
+        "halbtax": {
+          "title": "Dnevna karta s halbtax",
+          "description": "Cijeli dan slobodna vožnja širom Švicarske – s tvojim halbtaxom. Idealno za cjelodnevne izlete i planinske regije.",
+          "fromPrice": "od CHF 52.–",
+          "cta": "Potraži vezu"
+        },
+        "spar": {
+          "title": "Dnevna karta po akcijskoj cijeni",
+          "description": "Dnevna karta po najboljoj cijeni uz pravovremenu rezervaciju. Ograničena količina karata dnevno – tko rano kupuje, vozi jeftinije.",
+          "fromPrice": "od CHF 29.–",
+          "cta": "Potraži vezu"
+        }
+      },
+      "groups": {
+        "mountains": "Planinska iskustva dostupna vlakom",
+        "dayTrips": "Popularni dnevni izleti iz Züricha, Berna i Bazela",
+        "cities": "Otkrij gradove: Vlak + iskustvo",
+        "cityPasses": "Gradske karte: Jedna karta za cijeli grad"
+      },
+      "faq": {
+        "title": "Često postavljana pitanja o SBB kartama",
+        "items": [
+          {
+            "q": "Mogu li otkazati svoju kartu?",
+            "a": "<p><strong>Putne karte</strong> možeš otkazati do dan prije putovanja besplatno – to možeš učiniti direktno u svom rezervacijskom centru na swissactivities.com.</p><p>Za <strong><a href=\"/sbb-tageskarten/spartageskarte-sbb/\">kartice za akcijsku cijenu</a></strong> i karte za popust, nažalost, otkazivanje nije moguće. Ove karte su vezane za određeni datum – jasan natpis prije kupnje prikazuje se na stranici s rezervacijom.</p>"
+          },
+          {
+            "q": "Da li su SBB karte iste kao i kod SBB šalter?",
+            "a": "Da, dobivaš iste službene SBB karte kao na šalteru ili u SBB aplikaciji – bez dodatne naknade. Također su <a href=\"/sbb-tageskarten/\">SBB dnevne karte</a> i <a href=\"/bahnpaesse/\">železnice</a> 1:1 originalni proizvodi SBB-a."
+          },
+          {
+            "q": "Koliko brzo dobijem svoju kartu?",
+            "a": "Odmah. Nakon uspješne rezervacije, dobit ćeš mobilnu kartu putem e-maila i u svom rezervacijskom centru na swissactivities.com. Nije potreban SBB login – jednostavno pokaži u vlaku."
+          },
+          {
+            "q": "Mogu li unijeti halbtax ili GA?",
+            "a": "Da, u koraku rezervacije možeš odabrati svoj pretplatni popust – cijena se automatski prilagođava. Ako imaš samo halbtax i cijeli dan si na putu, često je isplativije uzeti <a href=\"/sbb-tageskarten/sbb-tageskarte-halbtax/\">SBB dnevnu kartu sa halbtax</a> umjesto više pojedinačnih karata."
+          },
+          {
+            "q": "Što ako moj vlak zakasni?",
+            "a": "Tvoja putna karta važi i za sljedeću vezu – jednostavno se ukrcaj u sljedeći odgovarajući vlak. U slučaju kašnjenja dužeg od sat vremena, možeš preko SBB-a zatražiti povrat novca."
+          },
+          {
+            "q": "Isplati li se Swiss Travel Pass ili dnevna karta po akcijskoj cijeni?",
+            "a": "<p>Osnovno pravilo: Tko je barem tri dana zaredom mnogo na putu vlakom, autobusom i brodom, a voli posjetiti muzeje, putuje jeftinije s <a href=\"/bahnpaesse/swiss-travel-pass-kaufen/\">Swiss Travel Pass</a>. Uključeno je više od 500 muzeja, javni prijevoz u 90 gradova i žičare sa −50 % popusta.</p><p>Za pojedinačne dnevne izlete, <a href=\"/sbb-tageskarten/spartageskarte-sbb/\">SBB dnevna karta po akcijskoj cijeni</a> od CHF 29 gotovo uvijek je najpovoljnija opcija – jednostavno rezerviši dovoljno rano.</p>"
+          },
+          {
+            "q": "Koji regionalni pass odgovara mojoj putovanju?",
+            "a": "<p>Za regiju Interlaken / Grindelwald / Wengen isplati se <a href=\"/bahnpaesse/berner-oberland-pass/\">Berner Oberland Pass</a> ili zimi <a href=\"/bahnpaesse/jungfrau-travel-pass-winter/\">Jungfrau Travel Pass</a> – oba sadrže žičare, javni prijevoz i brodove regije.</p><p>Oko Vierwaldstättersee idealan je <a href=\"/bahnpaesse/sbb-tellpass/\">Tell-Pass</a>: Pilatus, Rigi, Stanserhorn i svi brodovi su uključeni.</p>"
+          }
+        ]
+      }
+    },
+    "about_us": {
+      "title": "O nama - Swiss Activities",
+      "description": "Swiss Activities dijeli strast prema putovanjima i slobodnim aktivnostima.",
+      "hero": {
+        "title": "Vrijeme je slobodno",
+        "text": "Swiss Activities je tvoje odredište za slobodne aktivnosti u Švicarskoj. Na Swiss Activities možeš pronaći brojne slobodne aktivnosti, uspoređivati ih i rezervirati s nekoliko klikova. Nikada nije bilo lakše naći aktivnosti za svoje slobodno vrijeme u Švicarskoj."
+      },
+      "who": {
+        "title": "Tko smo mi",
+        "text": "Mi smo motivirani tim koji strastveno voli slobodne aktivnosti u Švicarskoj. Poznajemo zemlju i ljude. Isprobavanje novih aktivnosti je naša strast. Zato smo razvili Swiss Activities."
+      },
+      "start": {
+        "title": "Naš početak",
+        "text": "Kada smo 2020. godine shvatili da ne možemo više putovati, tražili smo švicarsku platformu za slobodne aktivnosti usmjerenu prema Švicarcima, ali je nismo mogli naći. To je bio početak destinacije slobodnih aktivnosti, Swiss Activities.",
+        "milestones": {
+          "march_2020": {
+            "date": "Ožujak 2020",
+            "title": "Bootstrapping Swiss Activities kao poslovni model"
+          },
+          "march_2021": {
+            "date": "Ožujak 2021",
+            "title": "Osnivanje tvrtke"
+          },
+          "june_2021": {
+            "date": "Lipanj 2021",
+            "title": "Pokretanje vlastite platforme"
+          },
+          "september_2021": {
+            "date": "Rujan 2021",
+            "title": "Aktiviranih 500 aktivnosti koje se mogu rezervirati uživo"
+          },
+          "december_2021": {
+            "date": "Prosinac 2021",
+            "title": "Završena pre-seed runda financiranja"
+          },
+          "march_2022": {
+            "date": "Ožujak 2021",
+            "title": "Pokretanje programa affiliate"
+          },
+          "may_2022": {
+            "date": "Svibanj 2021",
+            "title": "Pokretanje B2B partner programa"
+          }
+        }
+      },
+      "partner": {
+        "title": "Pomažemo ti da privučeš nove korisnike",
+        "text": "Swiss Activities ti pomaže da pronađeš nove korisnike. Svakodnevno radimo na tome da Swiss Activities postane najveća destinacija za slobodne aktivnosti u Švicarskoj. Tisuće ljudi dolaze svakodnevno na www.swissactivities.com da traže slobodne aktivnosti u Švicarskoj. Pokazivanjem svoje ponude na Swiss Activities, dosežeš nove korisnike."
+      },
+      "kunden": {
+        "title": "Destinacija sa svim slobodnim aktivnostima u Švicarskoj",
+        "text": "Naš cilj je učiniti sve slobodne aktivnosti dostupnima na www.swissactivities.com. To olakšava pronalaženje, uspoređivanje i rezerviranje slobodnih aktivnosti svima."
+      },
+      "promise": {
+        "title": "Naša obećanja",
+        "list": [
+          "nema dugotrajnih telefonskih poziva za pojašnjenja",
+          "nema beskrajnih pretraživanja na brojnim web stranicama",
+          "izravno provjerljive dostupnosti",
+          "odmah rezervacije bez zaobilaznica",
+          "nema dodatnih troškova",
+          "nekomplicirane i brze opcije plačanja",
+          "nema zamornih redova",
+          "pregled privlačnih popusta",
+          "lokalne ponude"
+        ]
+      },
+      "team": {
+        "title": "Tim Swiss Activities"
+      }
+    },
+    "tos_b2b": {
+      "title": "Opći uvjeti poslovanja za pružatelje usluga",
+      "description": "Ovo su naši trenutni uvjeti poslovanja za naše pružatelje usluga."
+    },
+    "tos_b2c": {
+      "title": "Uslovi korištenja platforme Swiss Activities za korisnike",
+      "description": "Ovo su naši trenutni uvjeti korištenja platforme Swiss Activities za korisnike."
+    },
+    "tos_aff": {
+      "title": "Opći uvjeti za affiliate",
+      "description": "Ovo su naši trenutno važeći uvjeti i odredbe za naše affiliate."
+    },
+    "imprint": {
+      "title": "Impressum",
+      "description": "Ovo je naš Impressum."
+    },
+    "privacy_policy": {
+      "title": "Politika privatnosti",
+      "description": "Ovo je izjava o zaštiti podataka."
+    },
+    "contact_us": {
+      "title": "Kontaktiraj nas",
+      "description": "Za sva pitanja rado ćemo ti pomoći."
+    },
+    "basket": {
+      "title": "Korpa",
+      "delete": "Obriši",
+      "warning": "Želiš li izbrisati ovu rezervaciju iz svog košarice?",
+      "edit": "Uredi",
+      "cancel": "Otkaži",
+      "update": "Ažuriraj korpu",
+      "next": "Na blagajnu",
+      "empty": "Tvoja korpa je prazna",
+      "hold": "Zadržat ćemo ovu rezervaciju za",
+      "explore": "Otkrij slobodne aktivnosti"
+    },
+    "booking": {
+      "title": "Rezervacija"
+    },
+    "confirmation": {
+      "title": "Potvrda o rezervaciji",
+      "tickets": "Tvoji karte",
+      "download": "Mobilna karta",
+      "more": "Više informacija",
+      "cancel": "Otkaži kartu",
+      "cancelled": "Otkaženo",
+      "cancelWhy": "Zašto želiš otkazati?",
+      "cancelReasons": [
+        "Moj odmor je otkazan",
+        "Našao sam jeftiniju alternativu",
+        "Nisam primio svoju potvrdu na vrijeme",
+        "Pružatelj me zamolio da otkažem rezervaciju",
+        "Moje omiljene opcije nisu bile dostupne",
+        "Rezervirao sam pogrešan datum",
+        "Rezervirao sam pogrešan broj sudionika",
+        "Ostali razlozi"
+      ],
+      "rebook": {
+        "title": "Ponovno rezerviranje",
+        "text": "Promjena planova? Ponovno rezerviraj svoju aktivnost. Tvoja stara rezervacija bit će automatski otkazana.",
+        "button": "Ponovno rezerviraj sada"
+      },
+      "stay": "Molim te ostani na ovoj stranici, tvoja rezervacija se obrađuje.",
+      "editBooking": "Promijeni rezervaciju",
+      "showTickets": "Pogledaj karte",
+      "drawerTitle": "Tvoja rezervacija",
+      "relatedBookings": "Povezane rezervacije"
+    },
+    "activities": {
+      "title": "Najbolje slobodne aktivnosti Švicarska {year}",
+      "description": "Pronađi i rezerviraj svoju savršenu aktivnost {year} u Švicarskoj. Kao raznolika zemlja, Švicarska nudi bezbroj aktivnosti i ideja za dnevni izlet.",
+      "intro": "Tijekom cijele godine pronaći ćeš aktivnosti za svaku prigodu. Bilo da planiraš izlet s obitelji, organiziraš momačku večer, tražiš aktivnosti na otvorenom ili inspiraciju za plan kada pada kiša, ovdje ćeš pronaći nešto. Na Swiss Activities možeš planirati i odmah rezervirati svoj jednodnevni izlet.",
+      "titleParentLocation": "{locationTitle} {year}: najbolje aktivnosti i ponude",
+      "descriptionParentLocation": "Pronađi i rezerviraj najbolje aktivnosti u {locationTitle}: Rezerviraj ulaznice za izletničke destinacije ili obiteljske aktivnosti s nekoliko klikova.",
+      "titleChildLocation": "{locationTitle} {year}: najbolje aktivnosti",
+      "descriptionChildLocation": "Rezerviraj najbolje aktivnosti u {locationTitle}. Rezerviraj ulaznice za izletničke destinacije ili obiteljske aktivnosti s nekoliko klikova.",
+      "titleParentType": "{typeTitle} {year}: Najbolje {typeTitle} u Švicarskoj",
+      "descriptionParentType": "Rezerviraj najbolje {typeTitle} iz cijele Švicarske. Nema čekanja, nema naknade za rezervaciju i opcije besplatne otkaza.",
+      "titleChildType": "{typeTitle} {year}: Najbolje {typeTitle} ponude u Švicarskoj",
+      "descriptionChildType": "Rezerviraj najbolje ponude za {typeTitle} iz cijele Švicarske. Nema čekanja, nema naknade za rezervaciju i opcije besplatne otkaza.",
+      "titleParentLocationParentType": "{typeTitle} {locationTitle}: Najbolje ponude i cijene {year}",
+      "descriptionParentLocationParentType": "Rezerviraj najbolje ponude za {typeTitle} {locationTitle} {year}. Nema naknade za rezervaciju i opcije besplatnog otkazivanja.",
+      "titleParentLocationChildType": "{typeTitle} {locationTitle}: Najbolje ponude i cijene {year}",
+      "descriptionParentLocationChildType": "Rezerviraj najbolje ponude za {typeTitle} {locationTitle} {year}. Nema naknade za rezervaciju i opcije besplatnog otkazivanja.",
+      "titleChildLocationParentType": "{typeTitle} {locationTitle}: Najbolje ponude i cijene {year}",
+      "descriptionChildLocationParentType": "Rezerviraj najbolje ponude za {typeTitle} {locationTitle} {year}. Nema naknade za rezervaciju i opcije besplatnog otkazivanja.",
+      "titleChildLocationChildType": "{typeTitle} {locationTitle}: Najbolje ponude i cijene {year}",
+      "descriptionChildLocationChildType": "Rezerviraj najbolje ponude za {typeTitle} {locationTitle} {year}. Nema naknade za rezervaciju i opcije besplatnog otkazivanja."
+    },
+    "listing": {
+      "title": "{listingTitle}",
+      "offersTitle": "{title} Ulaznice i aktivnosti",
+      "activities": "Aktivnosti",
+      "relatedListings": "Najbolje atrakcije u {value}",
+      "relatedListingsClose": "Najbolje atrakcije blizu {value}",
+      "description": "Popis za {listingTitle}",
+      "tableOfContent": "Sadržaj",
+      "destinationTitle": "{location} - Top {num} atrakcija i aktivnosti {year}",
+      "more": "Saznaj više o {val}",
+      "locations": "Mjesta u blizini {val}",
+      "regions": "Regije u {val}",
+      "type": "Popularna mjesta u Švicarskoj za {val}",
+      "typeLocation": "Popularna mjesta u {location} za {type}",
+      "types": "Top {val} aktivnosti",
+      "combo": "{type} {location} - {num} najbolja ponuda i cijene {year}",
+      "map": "Karta",
+      "attributeBadWeatherTitleAttribute": "{val} najbolje ideje za loše vrijeme u Švicarskoj",
+      "attributeBadWeatherTitle": "{val} najbolje ideje za loše vrijeme u {location}",
+      "attributeBadWeatherTeaser": "Bilo da pada kiša, magla ili snijeg: u [{location}]({locationLink}) postoji mnogo aktivnosti koje možeš raditi unatoč lošem vremenu. Kiša ti ne mora da pokvari dan. Ovdje možeš pronaći i unutarnje i [vanjske aktivnosti]({outdoorLink}) koje su prikladne za svako vrijeme. Ti odlučuješ želiš li biti aktivan ili radije uživati u miru. Pronađi više inspiracije za mnoge [ideje u lošem vremenu]({badWeatherLink}) širom Švicarske.",
+      "attributeBadWeatherDesc": "Pronađi svoju ideju za loše vrijeme u {location} i odaberi aktivnost koja može trajati u svakom vremenu.",
+      "attributeFamilyTitleAttribute": "{val} najbolje ideje za izlet s obitelji po Švicarskoj",
+      "attributeFamilyTitle": "{val} najbolje ideje za obiteljski izlet u {location}",
+      "attributeFamilyTeaser": "Planiraj svoj sljedeći obiteljski izlet u [{location}]({locationLink}) za tebe i tvoju djecu. Nije važno jeste li avanturisti, uživate u miru ili istražujete. Tijekom cijele godine, čak i tijekom [lošeg vremena u {location}]({locationBadWeatherLink}), imaš puno opcija. Također, postoje opcije za izlete s kolicima koje su prikladne za mlađu djecu. Dakle, ništa ne stoji na putu tvom [obiteljskom izletu]({familyLink}).",
+      "attributeFamilyDesc": "Pronađi pravu ideju za svoj sljedeći obiteljski izlet u {location} i provedi uzbudljiv dan s djecom.",
+      "attributeDogTitleAttribute": "{val} najbolje ideje za izlete s psom po Švicarskoj",
+      "attributeDogTitle": "{val} najbolje ideje za izlete s psom u {location}",
+      "attributeDogTeaser": "Tražiš ideju za izlet sa svojim psom u [{location}]({locationLink})? Ako želiš ponijeti svog vjernog pratioca, ovdje možeš pronaći sve aktivnosti gdje je on dobrodošao. Osobito su prikladne [vanjske aktivnosti]({outdoorLink}), gdje tvoj pas može uživati na svježem zraku. No, također su moguće vožnje brodom ili planinskim žičarama. Naš tajni savjet su [Escape Games]({escapeLink}), budući da se odvijaju na otvorenom i pružaju lijepu promjenu od uobičajenih šetnji.",
+      "attributeDogDesc": "Planiraj izlet sa svojim psom u {location} i isprobaj nešto novo kao promjenu od svoje uobičajene šetnje.",
+      "attributeOutdoorTitleAttribute": "{val} najbolje aktivnosti na otvorenom za Švicarsku",
+      "attributeOutdoorTitle": "{val} najbolje aktivnosti na otvorenom u {location}",
+      "attributeOutdoorTeaser": "U [{location}]({locationLink}) možeš tijekom cijele godine pronaći brojne [vanjske aktivnosti]({outdoorLink}). Neke ubrzavaju tvoj adrenalin, dok te druge dočekuju s zapanjujućim pogledom ili izazivaju tvoju spretnost. Također, postoje vanjske aktivnosti koje su prikladne kao [ideja u lošem vremenu]({badWeatherLink}) ili za [obiteljski izlet]({familyLink}). Povremeno možeš povesti i svog [psa]({dogLink}). Neke vanjske aktivnosti možeš lako raditi sam, dok te za druge trebaš pridružiti profesionalnom vođenju zbog sigurnosti.",
+      "attributeOutdoorDesc": "Planiraj svoju sljedeću aktivnost na otvorenom u {location} i provedi ceo dan napolju na svežem vazduhu tokom cele godine.",
+      "attributeBachelorPartyTitleAttribute": "{val} najbolje ideje za momačku večer po Švicarskoj",
+      "attributeBachelorPartyTitle": "{val} najbolje ideje za momačku večer u {location}",
+      "attributeBachelorPartyTeaser": "Tražiš sjajnu ideju za momačku večer u [{location}]({locationLink})? Bez obzira da li si gurman, avanturista ili istraživač: pronaći ćeš nešto za svoj ukus. Sa našim idejama nećeš imati problema da organizuješ uspešnu [momačku večer]({attributeLink}) u {location}. Pripremi se za zabavan i uspešan dan s prijateljima.",
+      "attributeBachelorPartyDesc": "Planiraj svoju sljedeću momačku večer u [{location}] i provedi zabavan dan sa svojim prijateljima.",
+      "attributeTeamEventTitleAttribute": "{val} najbolje ideje za timski događaj po Švicarskoj",
+      "attributeTeamEventTitle": "{val} najbolje ideje za timski događaj u {location}",
+      "attributeTeamEventTeaser": "Povjerena ti je zadatak da organiziraš timski događaj u [{location}]({locationLink})? To nije uvijek jednostavna misija, budući da su zahtjevi često vrlo različiti. Sa našim idejama ćeš biti inspirisan i dobro pripremljen za nadolazeći [timskog događaj]({attributeLink}). Bilo da si gurman, istraživač, aktivna osoba, ljubitelj zagonetki ili avanturista: pronaći ćeš nešto prikladno za svaki ukus. Pripremi se na uspešan i zabavan dan s kolegama.",
+      "attributeTeamEventDesc": "Planiraj svoj sljedeći timski događaj u {location} i provedi zabavan dan s kolegama.",
+      "attributeValentinesDayTitleAttribute": "{val} najbolje ideje za Dan zaljubljenih u Švajcarskoj",
+      "attributeValentinesDayTitle": "{val} najbolje ideje za Dan zaljubljenih u {location}",
+      "attributeValentinesDayTeaser": "Svake godine ponovno dolazi: Dan svetog Valentina. Možda već znaš što želiš organizirati sljedeći put 14. veljače. Ili možda još nisi siguran i tražiš ideju za svoj Dan svetog Valentina u [{location}]({locationLink}). Naše aktivnosti trebaju te inspirirati i pomoći ti da pronađeš nešto prikladno. Bilo da je romantično, ugodno ili avanturistički: ovdje ćete sigurno pronaći inspiraciju za jedan [Dan svetog Valentina]({attributeLink}) koji će natjerati vaša srca da brže kucaju.",
+      "attributeValentinesDayDesc": "Planiraj svoj sljedeći Dan svetog Valentina u {location} i provedite romantičan dan s osobom koju voliš.",
+      "attributeFirstDateTitleAttribute": "{val} najbolje ideje za tvoj prvi sastanak u Švicarskoj",
+      "attributeFirstDateTitle": "{val} najbolje ideje za tvoj prvi sastanak u {location}",
+      "attributeFirstDateTeaser": "Tražiš savršenu ideju za svoj prvi sastanak u [{location}]({locationLink}) i nisi siguran kako impresionirati? Ovdje si na pravom mjestu. Na ovoj stranici pronaći ćeš inspiraciju koja ti treba da vaš [prvi sastanak]({attributeLink}) bude pravi uspjeh. Bilo da je ljeto ili zima, avanturistički ili opušten, ovdje ćeš sigurno pronaći nešto čime ćeš razveseliti svoju „sajmu“. I tko zna, možda nađeš nešto što će odgovarati i sljedećem i sljedećem susretu.",
+      "attributeFirstDateDesc": "Planiraj prvi sastanak u {location} i provedite romantičan dan zajedno.",
+      "attributeChildBirthdayTitleAttribute": "{val} ideje za dječji rođendan u Švicarskoj",
+      "attributeChildBirthdayTitle": "{val} ideje za dječji rođendan u {location}",
+      "attributeChildBirthdayTeaser": "Planiraj sljedeći rođendan za djecu u [{location}]({locationLink}). Rođendan je jedan od najvažnijih događaja u godini za svako dijete. Bez obzira na sezonu, ima više nego dovoljno ideja kako bi tvoje dijete bilo sretno. Organiziraj [aktivnost na otvorenom]({outdoorLink}) ili potraži ideju za [program u lošem vremenu]({badWeatherLink}). Tako će vaš sljedeći dječji rođendan zasigurno biti uspješan.",
+      "attributeChildBirthdayDesc": "Organiziraj dječji rođendan u {location} i planiraj nezaboravan dan za svoje dijete.",
+      "attributeWheelchairTitleAttribute": "{val} ideje za izlet s invalidskim kolicima u Švicarskoj",
+      "attributeWheelchairTitle": "{val} ideje za izlet s invalidskim kolicima u {location}",
+      "attributeWheelchairTeaser": "Planiraj izlet s invalidskim kolicima u [{location}]({locationLink}) i pronađi savršenu aktivnost bez prepreka za sebe. Putovanje po Švicarskoj s invalidskim kolicima je relativno lako zahvaljujući naprednoj pristupačnosti i trudovima zemlje da svakom turistu pruži pristupačno iskustvo. To uključuje i unutarnje i [aktivnosti na otvorenom]({outdoorLink}).",
+      "attributeWheelchairDesc": "Inspiriraj se od destinacija prilagođenih invalidskim kolicima u {location} i planiraj svoju aktivnost bez prepreka.",
+      "attributePramTitleAttribute": "{val} ideje za izlet s kolicima za bebe u Švicarskoj",
+      "attributePramTitle": "{val} ideje za izlet s kolicima za bebe u {location}",
+      "attributePramTeaser": "Planiraj izlet s kolicima u [{location}]({locationLink}). Kada putuješ s malom djecom, ima mnogo aktivnosti koje možeš odabrati. Brojne planinarske staze su prilagođene za kolica, a javni prijevoz je usmjeren na udobnost obitelji s malom djecom. Tako da ne postoji ništa što bi moglo stajati na putu vašem [obiteljskom izletu]({familyLink}).",
+      "attributePramDesc": "Putuj u {location} s kolicima za bebe i planiraj sljedeći izlet s obitelji.",
+      "attributesOther": "Druge kategorije",
+      "attributesType": "Kategorije za {val} aktivnosti",
+      "teamEvent": "Pošalji nam svoju grupnu upit",
+      "recommended": "Preporučeno od putnika",
+      "tickets": "Ulaznice",
+      "tours": "Vođene ture"
+    },
+    "error": {
+      "title": "Žao nam je, ali došlo je do greške. Vratite se na početnu stranicu i potražite svoju odgovarajuću aktivnost."
+    },
+    "supplier": {
+      "title": "Swiss Activities: najveća platforma za aktivnosti u slobodno vrijeme u Švicarskoj",
+      "description": "Swiss Activities je najveća platforma za aktivnosti u slobodno vrijeme u Švicarskoj. S nama možeš doći do više kupaca i povećati svoje rezervacije.",
+      "hero": {
+        "title": "Swiss Activities - Destinacija za aktivnosti u slobodno vrijeme u Švicarskoj",
+        "button": "Postani naš partner u slobodnom vremenu"
+      },
+      "numbers": {
+        "title": "Kako smo u Swiss Activities podržavali naše partnere u slobodnom vremenu od osnutka",
+        "blocks": [
+          {
+            "title": "Posjete kupaca",
+            "number": "7'500'000",
+            "text": "potencijalni kupci"
+          },
+          {
+            "title": "Rezervacije kupaca",
+            "number": ">300'000",
+            "text": "Korisnici"
+          },
+          {
+            "title": "Podrška korisnicima",
+            "number": ">10'000",
+            "text": "Obavljeni razgovori"
+          },
+          {
+            "title": "Sustavi rezervacija",
+            "number": ">20",
+            "text": "Sustavi rezervacija"
+          }
+        ]
+      },
+      "why": {
+        "title": "Zašto promovisati svoje proizvode za slobodno vrijeme na Swiss Activities",
+        "sales": {
+          "title": "Novi kupci",
+          "description": "Dobij nove korisnike iz domaćih i stranih tržišta i poboljšaj svoj kapacitet."
+        },
+        "support": {
+          "title": "Automatizacija",
+          "description": "Swiss Activities preuzima tvoj postojeći prodajni proces i prenosi transakcije u tvoj sustav."
+        },
+        "finances": {
+          "title": "Nema rizika",
+          "description": "Nema fiksnih troškova ili unaprijed investicija. Plaćaš samo za poslanog kupca."
+        },
+        "local": {
+          "title": "Istraživanje novih segmenata kupaca",
+          "description": "Poveži se s mrežom prodavača Swiss Activities i proširi svoj doseg unutar i izvan zemlje."
+        }
+      },
+      "who": {
+        "title": "Više od 500 partnera za slobodno vrijeme surađuje sa Swiss Activities",
+        "partners": [
+          {
+            "blocks": [
+              "/assets/supplier/partner/bergbahnen/rigi.png",
+              "/assets/supplier/partner/bergbahnen/schilthorn.png",
+              "/assets/supplier/partner/bergbahnen/jungfrau.jpeg",
+              "/assets/supplier/partner/bergbahnen/engelberg.svg",
+              "/assets/supplier/partner/bergbahnen/pilatus.jpeg",
+              "/assets/supplier/partner/bergbahnen/monte-tamaro.png",
+              "/assets/supplier/partner/bergbahnen/brienz.png",
+              "/assets/supplier/partner/bergbahnen/gornergrat.png",
+              "/assets/supplier/partner/destinationen/rheinfelden.png",
+              "/assets/supplier/partner/destinationen/basel.svg",
+              "/assets/supplier/partner/destinationen/winterthur.svg",
+              "/assets/supplier/partner/destinationen/interlaken.png",
+              "/assets/supplier/partner/attraktionen/ballenberg.png",
+              "/assets/supplier/partner/attraktionen/bls.png",
+              "/assets/supplier/partner/attraktionen/cgn.png",
+              "/assets/supplier/partner/attraktionen/chillon.jpeg",
+              "/assets/supplier/partner/attraktionen/maestrani.png",
+              "/assets/supplier/partner/attraktionen/verkehrshaus.png",
+              "/assets/supplier/partner/attraktionen/vier.png",
+              "/assets/supplier/partner/outdoor/best-of-switzerland.jpeg",
+              "/assets/supplier/partner/outdoor/kayak.jpeg",
+              "/assets/supplier/partner/outdoor/outdoorch.jpeg",
+              "/assets/supplier/partner/outdoor/paragliding.png",
+              "/assets/supplier/partner/outdoor/wine-tours.webp",
+              "/assets/supplier/partner/outdoor/zermatters.png"
+            ]
+          }
+        ]
+      },
+      "pricing": {
+        "title": "Model cijena",
+        "subtitle": "Plaćaj samo kada uspješno posreduješ kupca",
+        "description": "Swiss Activities pomaže ti da identificiraš odgovarajuće prodajne kanale lokalno i globalno i prodaješ svoje proizvode za slobodno vrijeme tamo gdje su tvoji potencijalni kupci. Pošto Swiss Activities nema trošak za postavljanje, otvaraš nove prodajne kanale bez dodatnih ulaganja.",
+        "blocks": [
+          {
+            "pretitle": "",
+            "cost": "18% + CHF 0.30",
+            "subcost": "bez PDV-a",
+            "button": "Postani partner za slobodno vrijeme",
+            "buttonLink": "https://k3qlq2fyp9o.typeform.com/to/CxWJub7f",
+            "subbutton": "",
+            "includes": [
+              "Objavljivanje slobodnih aktivnosti na Swiss Activities",
+              "Neograničeno evidentiranje aktivnosti za slobodno vrijeme",
+              "Izrada opisa proizvoda od strane našeg Content tima",
+              "Veza sa više od 20 rezervacijskih sustava",
+              "Osobna partnerska podrška putem chata i telefona",
+              "Preuzimanje komunikacije s gostima u vezi s aktivnostima",
+              "Obrada upita za rezervaciju i otkazivanje gostiju",
+              "Praćenje i kontrola svih rezervacija i otkazivanja",
+              "Praćenje i kontrola obračuna",
+              "Jednostavan obračun - obračun preko Swiss Activities",
+              "Osiguravanje procesa prodaje (nema kupona, već ulaznice)",
+              "Automatski pristup affiliate mreži",
+              "Objavljivanje aktivnosti na reseller mreži"
+            ],
+            "faq": []
+          }
+        ]
+      },
+      "tech": {
+        "title": "Sistem rezervacija i prodaje karata",
+        "description": "Osim aktiviranja i digitalizacije svih švicarskih proizvoda za slobodno vrijeme, jedan od glavnih ciljeva Swiss Activities je pojednostaviti i automatizirati proces ponovne prodaje proizvoda za slobodno vrijeme u zemlji i inozemstvu. Prodajna scena postaje sve složenija i pomažemo prodavačima da ne izgube vezu s segmentima kupaca. Zato je direktna veza između naših partnera za slobodne aktivnosti i Swiss Activities od vitalnog značaja. Kontinuirano implementiramo nove sustave. Ako tvoj sustav rezervacija i tiketinga nije prisutan, slobodno nam se obrati putem sales@swissactivities.com.",
+        "partners": [
+          "/assets/supplier/technology/trekksoft.webp",
+          "/assets/supplier/technology/regiondo.webp",
+          "/assets/supplier/technology/tomas.webp",
+          "/assets/supplier/technology/waldhart.webp",
+          "/assets/supplier/technology/experiencebank.webp",
+          "/assets/supplier/technology/skidata.webp",
+          "/assets/supplier/technology/axess.webp",
+          "/assets/supplier/technology/smeetz.webp",
+          "/assets/supplier/technology/eatwith.webp",
+          "/assets/supplier/technology/fareharbor.webp",
+          "/assets/supplier/technology/bookingkit.webp",
+          "/assets/supplier/technology/ntree.webp",
+          "/assets/supplier/technology/secutix.webp",
+          "/assets/supplier/technology/tourcms.webp",
+          "/assets/supplier/technology/sbb.webp"
+        ],
+        "titleSoon": "Uskoro dostupno",
+        "partnersSoon": [
+          "/assets/supplier/technology/feratel.webp"
+        ]
+      },
+      "faq": [
+        {
+          "title": "Opće informacije za partnere za slobodno vrijeme",
+          "blocks": [
+            {
+              "title": "Tko može postati partner za slobodno vrijeme Swiss Activities?",
+              "text": "Partnerom Swiss Activities može postati svatko tko želi prodavati aktivnosti za slobodno vrijeme u Švicarskoj. Tvoje ponude mogu biti vrlo raznolike i mašti gotovo da nema granica. Imamo aktivnosti, ulaznice, avanture, ture, iznajmljivanja itd. u oko 100 kategorija. Tu su uključeni tečajevi pečenja za rođendanske torte jednoroga, kao i tandem paragliding letovi ili ulaznice za muzeje. Bitno je da se ponude odvijaju u Švicarj ili su moguće unutar jednodnevnog izleta iz Švicarske."
+            },
+            {
+              "title": "Koje rezervacijske sustave mogu povezati sa Swiss Activities?",
+              "list": [
+                "Trekksoft",
+                "Regiondo",
+                "Waldhart",
+                "Bank iskustava",
+                "Skidata",
+                "Axess",
+                "Tomas",
+                "Smeetz",
+                "Eatwith",
+                "Fareharbor",
+                "Booking Kit",
+                "N-Tree",
+                "Secutix",
+                "TourCMS",
+                "Palisis",
+                "Ubrzo dostupni: SBB i Feratel"
+              ]
+            },
+            {
+              "title": "Ne radim s rezervacijskim sustavom. Mogu li svoje aktivnosti prodavati putem Swiss Activities?",
+              "text": "Čak i ako ne radiš s rezervacijskim sustavom, možeš svoje aktivnosti objaviti kod nas. U tom slučaju, ručno ćemo stvoriti kalendar prema tvojim potrebama. Ako želiš implementirati rezervacijski sustav, slobodno nas kontaktiraj. Rado ćemo ti pomoći u vezi s tim. Informacije koje od tebe trebamo uključuju:",
+              "list": [
+                "Razdoblje (datum)",
+                "Vrijeme početka",
+                "Trajanje",
+                "Zadnji rok (kada najkasnije kupiti?)",
+                "Cijene po kategoriji (odrasli, djeca, najam itd.)",
+                "maksimalan broj dostupnih mjesta po termini"
+              ]
+            },
+            {
+              "title": "Koje informacije se šalju prilikom rezervacije?",
+              "text": "Kada kupac izvrši rezervaciju preko Swiss Activities, dobija potvrdu putem e-maila s svim važnim informacijama. Ovo uključuje i tvoje kontakt podatke, kako bi se mogao obratiti izravno tebi u slučaju pitanja.",
+              "list": [
+                "Naziv aktivnosti",
+                "Datum",
+                "Vrijeme",
+                "Mjesto okupljanja",
+                "Broj rezerviranih karata",
+                "Tvoji kontakt podaci (e-mail i telefon)"
+              ]
+            },
+            {
+              "title": "Hoće li cijene za moje aktivnosti na Swiss Activities biti iste kao na mojoj web stranici?",
+              "text": "Da, kupac plaća istu cijenu kod nas kao da rezervira izravno kod tebe. Ovo je jednako važno za tebe kao i za nas. Ako su cijene različite na različitim mjestima, kupac će to primijetiti što će dovesti do pritužbi i nesporazuma. Tako oboje riskiramo gubitak povratnog kupca."
+            },
+            {
+              "title": "Koliko je trajanje otkazivanja na Swiss Activities?",
+              "text": "Kupac može besplatno otkazati do 24 sata prije aktivnosti na Swiss Activities. Ako želiš objaviti aktivnost koja se ne može otkazati, možemo to omogućiti. Međutim, naše iskustvo pokazuje da više rezervacija ostvarujemo za aktivnosti koje nude mogućnost otkazivanja. Ako trebaš otkazati rezervaciju, to također možeš učiniti. Odmah obavijesti kupca i obavijesti nas, kako bismo mogli izvršiti povrat."
+            },
+            {
+              "title": "Kako se postupa s naknadnim otkazivanjima?",
+              "text": "Ako primimo zahtjev za naknadno otkazivanje putem našeg obrasca, nikada ne izvršavamo povrat bez da smo prvo kontaktirali tebe. Kako bismo spriječili prijevaru, uvijek tražimo tvoju suglasnost kako bismo potvrdili priču kupca. Tek kada dobijemo tvoje odobrenje, izvršavamo povrat."
+            }
+          ]
+        },
+        {
+          "title": "Proces postavljanja proizvoda za slobodno vrijeme",
+          "blocks": [
+            {
+              "title": "Kako mogu objaviti svoje ponude na Swiss Activities?",
+              "text": "Ako želiš postati partner za slobodno vrijeme u Swiss Activities i objaviti svoje ponude, slijedi sljedeće korake:",
+              "list": [
+                "Prvo, prijavi se kao partner za slobodno vrijeme.",
+                "Ispuni obrazac za svaku aktivnost koju želiš objaviti. Link ćeš dobiti nakon što potvrdimo tvoju registraciju.",
+                "Obično zapisujemo i unosimo tvoje aktivnosti unutar dva tjedna.",
+                "Jednom kada aktivnosti postanu aktivne, obavjestit ćemo te putem e-maila."
+              ]
+            },
+            {
+              "title": "Koje informacije su potrebne za objavljivanje mojih aktivnosti?",
+              "text": "Nakon što si se registrirao kao partner za slobodno vrijeme kod nas, poslat ćemo ti obrazac preko kojeg možeš unijeti svoje aktivnosti. Kako bismo ih mogli objaviti, trebamo od tebe sljedeće informacije:",
+              "list": [
+                "Podaci o rezervacijskom sustavu (ako je dostupno)",
+                "Naziv aktivnosti",
+                "Link prema aktivnosti",
+                "Najmanje 4 fotografije po aktivnost",
+                "Informacije o datumima, vremenima i trajanju, ako ne koristiš rezervacijski sustav",
+                "Sve informacije o dobi, jezicima, težini itd.",
+                "Prikladnost aktivnosti: pas, kolica, invalidska kolica, obitelji itd.",
+                "Točna lokacija okupljanja"
+              ]
+            },
+            {
+              "title": "Mogu li svoj unos izbrisati u bilo kojem trenutku?",
+              "text": "Da, možeš bilo kada odustati od ugovora. Nema minimalnog trajanja ugovora i nema troškova nastalih otkazivanjem."
+            },
+            {
+              "title": "Što učiniti ako želim promijeniti nešto u aktivnosti?",
+              "text": "Ako želiš promijeniti sadržaj ili prilagoditi cijene - ako ne koristiš rezervacijski sustav - možeš nas obavijestiti putem e-maila."
+            },
+            {
+              "title": "Kako kontaktiram kupca?",
+              "text": "Nakon svake rezervacije primit ćeš od nas potvrdni e-mail s podacima kupca. Tu ćeš naći njegovo ime, e-mail adresu i telefonski broj kako bi ga mogao kontaktirati."
+            },
+            {
+              "title": "Kako primam svoj novac?",
+              "text": "Isplata svih otvorenih iznosa vrši se nakon datuma usluge i automatski se prenosi na početku sljedećeg mjeseca. Pri tome se svi rezervacije koje su se dogodile u prethodnom mjesecu obračunavaju i isplaćuju u jednoj jedinstvenoj isplati."
+            }
+          ]
+        }
+      ]
+    },
+    "supplierRegistration": {
+      "title": "Swiss Activities: najveća tržišta slobodnih aktivnosti u Švicarskoj",
+      "description": "Swiss Activities je najveće tržište slobodnih aktivnosti u Švicarskoj. S nama možeš doseći više kupaca i povećati svoju rezervaciju.",
+      "hero": {
+        "title": "Postani dio Swiss Activities",
+        "description": "Registriraj se besplatno kod Swiss Activities i povećaj svoj doseg među švicarskim i međunarodnim gostima. Tvoje prednosti u pregledu",
+        "list": [
+          "Budi pronađen na Googleu kao tvrtka i sa svojim ponudama. I to na 4 jezika!",
+          "Otvori novi prodajni kanal",
+          "Iskoristi naš besplatan korisnički servis",
+          "Poveži svoj sustav rezervacija i upravljaj svojom dostupnošću izravno u njemu.",
+          "Nova rezervacija - tvoj kupac. Ne skrivamo naše partnere i želimo pružiti kupcu najbolje iskustvo rezervacije.",
+          "Nema fiksnih troškova ili skrivenih naknada.",
+          "Tvoji kupci mogu plaćati svim lokalnim metodama plaćanja, poput Twint, kupovine na račun i uobičajenim kreditnim karticama."
+        ]
+      }
+    },
+    "affiliate": {
+      "title": "Affiliate",
+      "description": "Sudjeluj kao partner kod Swiss Activities i zaradite od prve rezervacije 1% do 5% provizije. Nema fiksnih troškova.",
+      "hero": {
+        "title": "Postani sada Affiliate Partner Swiss Activities",
+        "description": "Registriraj se za affiliate program Swiss Activities i iskoristi atraktivne alate za integraciju, proviziju od 1% do 5% i 45 dana trajanje kolačića.",
+        "steps": [
+          "Prijavi se",
+          "Implementiraj naše aktivnosti",
+          "Generiraj rezervacije i zarađuj novac"
+        ],
+        "button": "Prijavi se sada"
+      },
+      "form": {
+        "tos": "Slažem se s <a target='_blank' href='/agb/affiliates/'>Općim uvjetima</a>"
+      },
+      "advantagesTitle": "Koje su tvoje prednosti kao Affiliate partnera Swiss Activities?",
+      "advantages": [
+        {
+          "title": "1'500+ slobodnih aktivnosti",
+          "text": "Kao partnerski affiliate Swiss Activities, sa samo nekoliko klikova, imaš pristup preko 1'500 slobodnih aktivnosti širom Švicarske."
+        },
+        {
+          "title": "Atraktivni uvjeti",
+          "text": "Za svaku posredovanu rezervaciju dobiti ćeš 1% do 5% provizije. Trajanje kolačića iznosi 45 dana."
+        },
+        {
+          "title": "Inspiriši svoje čitatelje",
+          "text": "Oživite svoj blog ili svoju web stranicu inspirativnim sadržajem i pomoći svojoj zajednici da uštedi vrijeme prilikom planiranja slobodnih aktivnosti."
+        },
+        {
+          "title": "Jednostavna registracija",
+          "text": "Iskoristi jednostavnu i brzu registraciju."
+        },
+        {
+          "title": "Direkta prodaja ulaznica",
+          "text": "Imaš mogućnost prodavati ulaznice direktno na svojoj web stranici, bez preusmjeravanja svojih čitatelja na nas."
+        },
+        {
+          "title": "Prilagođen HTML",
+          "text": "Zahvaljujući našim svestranim i privlačno dizajniranim alatima za HTML, možeš prilagoditi svoje prodajne mogućnosti."
+        }
+      ],
+      "faqTitle": "Najvažnija pitanja odgovaraju",
+      "faq": [
+        {
+          "title": "Kako funkcionira registracija za affiliate program Swiss Activities?",
+          "text": "Prijavi se putem obrasca na ovoj stranici s svim potrebnim podacima. Pregledat ćemo tvoju prijavu unutar jednog radnog dana i poslati ćemo ti tvoje prijavne podatke e-poštom nakon prihvaćanja."
+        },
+        {
+          "title": "Kako se mogu prijaviti na svoju affiliate partner nadzornu ploču?",
+          "text": "Tijekom tvoje registracije definiraš svoju osobnu lozinku. Kada provjerimo tvoje podatke, bit ćeš obaviješten i možeš se prijaviti na svoju affiliate nadzornu ploču putem <a href='https://swissactivities.tapfiliate.com/login' target='_blank'>ove veze</a>."
+        },
+        {
+          "title": "Gdje mogu pronaći dodatne informacije o affiliate programu?",
+          "text": "U našem helpdesku možeš pronaći s jedne strane <a href='https://intercom.help/swiss-activities/de/collections/3916117-affiliate-moglichkeiten-zur-einbindung' target='_blank'>prve korake</a> i najvažnija pitanja o <a href='https://intercom.help/swiss-activities/de/collections/3916117-affiliate-moglichkeiten-zur-einbindung' target='_blank'>integraciji naših aktivnosti</a>. Osim toga, nakon registracije dobit ćeš niz e-poruka s korisnim savjetima."
+        },
+        {
+          "title": "Tko može postati affiliate partner Swiss Activities?",
+          "text": "Ako vodiš blog ili web stranicu koja je povezana s švicarskim turizmom, slobodnim aktivnostima u Švicarskoj ili putovanjima općenito, možeš se prijaviti za naš affiliate program. Također, ako imaš Instagram, Pinterest ili Facebook račun na kojem možeš dodati affiliate link, možeš se prijaviti kod nas."
+        },
+        {
+          "title": "Mogu li se odjaviti iz affiliate programa?",
+          "text": "Naravno. Nisi vezan nijednim minimalnim vremenom. Ako želiš izbrisati svoj račun, obavijestite nas e-poštom ili putem chata i učinit ćemo sve potrebno."
+        },
+        {
+          "title": "Koliko provizije dobijem po posredovanoj rezervaciji?",
+          "text": "Dobit ćeš između 1% i 5% provizije ako nam preporučiš kupca koji izvrši aktivnost. Ako kupac otkaže svoju rezervaciju, nažalost, ne možemo ti isplatiti proviziju."
+        }
+      ]
+    },
+    "apps": {
+      "title": "Swiss Activities App",
+      "description": "Doživi Švicarsku s aplikacijom Swiss Activities – otkrij, usporedi i rezerviraj aktivnosti za slobodno vrijeme izravno na svom pametnom telefonu.",
+      "hero": {
+        "title": "Tvoja švicarska avantura u džepu",
+        "description": "Uz Swiss Activities aplikaciju dobivaš izravan pristup preko {amount} aktivnosti širom Švicarske. Pronađi doživljaje, rezerviraj u nekoliko sekundi i uvijek imaj sve svoje karte i rezervacije na dohvat ruke.",
+        "features": [
+          "Karate uvijek pri ruci",
+          "Jednostavno upravljanje rezervacijama",
+          "Otkrij nove doživljaje za svaki ukus",
+          "Karate dostupne i offline"
+        ]
+      }
+    },
+    "travelGuide": {
+      "title": "Tvoj planer putovanja za Švicarsku",
+      "description": "Švicarska je vrlo raznolika zemlja i ima nevjerojatno puno toga za ponuditi za tvoje putovanje. Ne daj se zavarati malom površinom. Iako je Švicarska oko deset puta manja od Švedske, Kalifornije ili Maroka, pronaći ćeš nešto za svaki ukus. U mediteranskom Ticinu si u potpuno drugom svijetu nego u užurbanom Baselu. A planinski Alpstein ima potpuno drugačiju klimu od blage regije Ženevskog jezera. I to, iako su ta mjesta udaljena samo tri do četiri sata. U našem blogu pomažemo ti u planiranju putovanja. Pružamo ti korisne savjete za putovanja i zanimljive informacije kako bi se mogao savršeno pripremiti. Nije važno odlaziš li prvi put u Švicarsku ili se već dobro snalaziš.",
+      "intro": "Švicarjska je vrlo raznolika zemlja i ima nevjerojatno puno toga za ponuditi za tvoje putovanje. Ne daj se zavarati malom površinom. Iako je Švicarska oko deset puta manja od Švedske, Kalifornije ili Maroka, pronaći ćeš nešto za svaki ukus. U mediteranskom Ticinu si u potpuno drugom svijetu nego u užurbanom Baselu. A planinski Alpstein ima potpuno drugačiju klimu od blage regije Ženevskog jezera. I to, iako su ta mjesta udaljena samo tri do četiri sata. U našem blogu pomažemo ti u planiranju putovanja. Pružamo ti korisne savjete za putovanja i zanimljive informacije kako bi se mogao savršeno pripremiti. Nije važno odlaziš li prvi put u Švicarsku ili se već dobro snalaziš."
+    },
+    "travelRoutes": {
+      "title": "Putne rute Švicarska",
+      "description": "Švicarska je vrlo raznolika zemlja i nudi nevjerojatno mnogo za tvoje putovanje. Ne daj se prevariti malom površinom. Iako je Švicarska otprilike deset puta manja od Švedske, Kalifornije ili Maroka, pronaći ćeš nešto za svaki ukus. U mediteranskom Ticinu nalaziš se u potpuno drugačijem svijetu nego u užurbanom Baselu. A planinski Alpstein ima potpuno drugačiju klimu od blage regije jezera Geneva. I to, iako su ova mjesta udaljena samo tri do četiri sata. Na našem blogu pomažemo ti u planiranju putovanja. Opskrbljujemo te korisnim savjetima za putovanja i korisnim informacijama kako bi se mogao savršeno pripremiti. Nema veze putuješ li u Švicarsku prvi put ili se već dobro snalaziš. naši članci su prikladni kako za prvašiće, tako i za prave poznavatelje Švicarske."
+    },
+    "widget": {
+      "title": "Integriraj Swiss Activities na svoju web stranicu",
+      "description": "Uključi Swiss Activities na svoju web stranicu i prodaj aktivnosti direktno preko svoje web stranice.",
+      "hero": {
+        "title": "Integriraj ponude od Swiss Activities na svoju web stranicu",
+        "description": "Swiss Activities Widget najjednostavniji je način za integraciju aktivnosti na tvoju web stranicu. Odaberi između raznih vrsta widgeta i uključi ga u nekoliko minuta.",
+        "button": "Započni sada"
+      },
+      "cta": {
+        "title": "Postani partner",
+        "button": "Idi na obrazac"
+      }
+    },
+    "newsletterConfirm": {
+      "title": "Hvala ti na prijavi. Upravo smo ti poslali poruku putem koje možeš potvrditi svoju registraciju."
+    },
+    "newsletterSuccess": {
+      "title": "Hvala! Sada si prijavljen na naš newsletter."
+    },
+    "cookiePolicy": {
+      "title": "Pravilnik o kolačićima"
+    },
+    "vouchers": {
+      "title": "Ideje za poklone s iskustvima u Švicarskoj – najbolji vaučeri kod Swiss Activities",
+      "description": "Pokloni nezaboravne trenutke s vaučerom za iskustvo od Swiss Activities! Otkrij najveći izbor slobodnih aktivnosti u Švicarskoj – fleksibilno, lako i odmah dostupno za online rezervaciju. Savršeno kao ideja za poklon za svaku prigodu.",
+      "hero": {
+        "title": "Pokloni vaučer za iskustvo u Švicarskoj i napravi nekome radost!",
+        "text": "Otkrij sada najbolje ideje za poklone i vaučere s iskustvima kod Swiss Activities. Bilo rođendan, božićni poklon ili jednostavno da se zahvališ – vaučer za švicarska iskustva odgovara svakom ukusu i poklon je koji će se sigurno pamtiti.",
+        "button": "Kupite vaučer"
+      },
+      "gift": {
+        "title": "Pokloni najbolje švicarske doživljaje – od avanture do opuštanja",
+        "text": "Tražiš jedinstvenu ideju za poklon za prijatelje ili obitelj u Švicarskoj? Vaučer za iskustvo od Swiss Activities ti nudi pristup najvećem izboru slobodnih aktivnosti koje Švicarska nudi. Bilo da su to vođene ture, avanture u prirodi, opuštajuće sate u termalnim kupalištima ili kulturne znamenitosti u muzejima – Swiss Activities omogućava poklanjanje posebnih trenutaka."
+      },
+      "why": {
+        "title": "Zašto je vaučer za iskustvo od Swiss Activities savršena ideja za poklon",
+        "items": [
+          {
+            "title": "Najveći izbor u Švicarskoj",
+            "text": "Više od 1.600 slobodnih ponuda u svim regijama, od avantura na otvorenom do trenutaka opuštanja."
+          },
+          {
+            "title": "Više od 100.000 zadovoljnih kupaca",
+            "text": "Swiss Activities je provjereni partner za posebne poklone i izlete."
+          },
+          {
+            "title": "Opcija besplatnog otkazivanja",
+            "text": "Sigurne i fleksibilne rezervacije koje se mogu prilagoditi potrebama obdarene osobe."
+          },
+          {
+            "title": "5-zvjezdasta korisnička podrška",
+            "text": "Švicarska kvaliteta i podrška – za nesmetani početak iskustva."
+          }
+        ]
+      },
+      "end": {
+        "title": "Pokloni vaučere za doživljaje u Švicarskoj i donesi radost!",
+        "text": "Otkrij najbolje ideje za poklone i vaučere za doživljaje na Swiss Activities. Bilo da je za rođendan, kao božićni poklon ili jednostavno da se zahvališ – vaučer za doživljaje u Švicarskoj odgovara svakom ukusu i osigurava trajne uspomene.",
+        "button": "Odaberi vaučer"
+      },
+      "banner": {
+        "tagline": "NOVO: Savršena ideja za poklon!",
+        "title": "Osiguraj si\niskustveni vaučer",
+        "button": "Klikni ovdje"
+      }
+    }
+  },
+  "filter": {
+    "nearby": "Prikaži aktivnosti u blizini",
+    "results": "Prikaži rezultate",
+    "filter": "Filter",
+    "search": "Pretraži",
+    "location": "Mjesto",
+    "types": "Vrsta",
+    "categories": "Kategorija",
+    "activity": "Aktivnost",
+    "activities": "Aktivnosti",
+    "today": "Danas",
+    "tomorrow": "Sutra",
+    "price": "Cijena",
+    "noResults": "Nema rezultata",
+    "noExactResults": {
+      "title": "Nema točnih rezultata",
+      "description": "Pokušaj promijeniti ili ukloniti neke od svojih filtara ili prilagoditi područje pretraživanja.",
+      "showNearest": "Prikaži najbliže rezultate",
+      "resetDate": "Resetiraj razdoblje"
+    },
+    "lang": "Jezici",
+    "sort": {
+      "relevance": "Relevancija",
+      "distance": "Udaljenost od tebe",
+      "popularityDesc": "Popularnost silazno",
+      "ratingDesc": "Ocjena silazno",
+      "ratingAsc": "Ocjena uzlazno",
+      "priceDesc": "Cijena silazno",
+      "priceAsc": "Cijena uzlazno",
+      "dateDesc": "Najnovije prvo",
+      "dateAsc": "Najstarije prvo"
+    },
+    "navigationBreadcrumbs": {
+      "root": "Švicarska"
+    },
+    "all": "Sve",
+    "map": "Karta",
+    "card": {
+      "from": "od",
+      "person": "po osobi"
+    },
+    "viewMore": "Pogledaj više",
+    "ratingBetterThan": "Bolje od {val} zvjezdica",
+    "ratingEqual": "{val} zvjezdica",
+    "ratingNone": "NOVE / Nema ocjene",
+    "moreFilters": "Prikaži {val} više",
+    "lessFilters": "Prikaži manje",
+    "usedFilters": "Primijenjeni filteri",
+    "resetFilters": "Ponovno postavi",
+    "discountTypes": "Popusti",
+    "calendar": "Kalendar",
+    "locationError": "Pozicija se nije mogla učitati",
+    "textOnly": "Samo ocjene s tekstom"
+  },
+  "activity": {
+    "you": "tebe",
+    "nearby": "{distance}km udaljeno od {location}",
+    "nearbyAlt": "{distance}km udaljeno",
+    "recommendation": "Preporuka",
+    "reviews": "Recenzije",
+    "reviewOriginalIn": "Original na {language}",
+    "booked": "rezervirano {val} puta",
+    "providedBy": "Pružatelj aktivnosti",
+    "save": "Spremi",
+    "selectDate": "Odaberi datum",
+    "similarActivities": "Slične aktivnosti",
+    "question": "Kako ti možemo pomoći?",
+    "rating": "Ocjena",
+    "highDemand": "Velika potražnja",
+    "widget": {
+      "free": "dostupno",
+      "error500": "Nešto je pošlo po zlu, pokušaj ponovno za 1 minutu.",
+      "errorDate": "Nažalost, više nema slobodnih termina za {val}.",
+      "choose": "odabrati",
+      "titleTime": "Odaberi ponudu",
+      "titleTicketOption": "Odaberite opciju karte",
+      "titleParticipants": "Odaberi sudionike",
+      "titleTickets": "Odaberite ulaznice",
+      "confirmOffer": "Potvrdi opciju karte",
+      "confirmTickets": "Potvrdi sudionike",
+      "confirmDate": "Potvrdi datum",
+      "confirmDateTime": "Potvrdi datum i vrijeme",
+      "cheapest": "Najniža cijena",
+      "time": "Vrijeme",
+      "navTicket": "Ulaznice",
+      "check": "Provjeri raspoloživost",
+      "notBookable": "Nažalost, ova ponuda trenutno nije dostupna za rezervaciju.",
+      "paymentMethods": "Metode plaćanja",
+      "totalPrice": "Ukupna cijena",
+      "taxes": "Dodatne naknade",
+      "offerTimeSelect": "Odaberite vrijeme",
+      "basket": "Košarica",
+      "basketAdd": "Dodaj u košaricu",
+      "selectedOffer": "Ponuda",
+      "adjust": "Prilagodi rezervaciju",
+      "swissHalfFareCard": "Osobe s prebivalištem izvan Švicarske mogu&nbsp;<a href=\"/bahnpaesse/swiss-half-fare-card/\" target=\"_blank\" className=\"inline-block\">ovdje dobiti Swiss Half Fare Card</a>, kako bi je koristili za popuste u javnom prijevozu."
+    },
+    "tabs": {
+      "highlights": "Istaknuto",
+      "includes": "Uključuje",
+      "importantInformation": "Važne informacije",
+      "meetingPoints": "Mjesto susreta"
+    },
+    "newsletter": {
+      "title": "Više ne propuštajte aktivnosti",
+      "description": "Pretplatite se na Newsletter i dobijajte putne savjete, ideje za slobodno vrijeme i prikladne vodiče iz Švicarske.",
+      "signup": "Prijavi se",
+      "inputPlaceholder": "Tvoja e-pošta"
+    },
+    "notRefundable": {
+      "title": "Ne može se otkazati",
+      "description": "Nažalost, ne možemo vam ponuditi povrat novca niti možemo promijeniti ili otkazati vašu rezervaciju za ovaj određeni proizvod prema politici naših partnera."
+    }
+  },
+  "UI": {
+    "date": "Datum"
+  },
+  "home": {
+    "title": "Tvoje iskustvo počinje ovdje"
+  },
+  "discover": {
+    "title": "Otkrij aktivnosti"
+  },
+  "booking": {
+    "cancelable": "Besplatno otkazivanje do",
+    "privacyMessage": "Nastavljajući s plaćanjem, prihvaćaš <tos>{text}</tos> i uvjete otkazivanja tvrtke Swiss Activities AG.",
+    "privacyPolicy": "Opći uvjeti poslovanja",
+    "personalTitle": "Podaci o rezervaciji",
+    "personalSubtitle": "Da bi mogao završiti rezervaciju, molimo te da ispuniš sljedeće informacije.",
+    "mainGuest": "Kontakt osoba",
+    "fullName": "Ime",
+    "lastName": "Prezime",
+    "email": "E-mail",
+    "phoneNumber": "Broj telefona",
+    "cardDetails": "Metode plačanja",
+    "paymentSecure": "Sigurno plaćanje - koristimo SSL enkripciju kako bi zaštitili tvoje podatke.",
+    "creditPayments": "Kreditne kartice",
+    "total": "Ukupno",
+    "fullDay": "Cjelodnevni",
+    "booknow": "Rezerviraj sada",
+    "addMoreInformation": "Dodaj više informacija",
+    "addPaymentMethod": "Odaberi način plaćanja",
+    "youBook": "Košarica",
+    "rebate": "Kod za popust",
+    "rebateEmailRequired": "Molim te, prvo unesite svoju e-mail adresu i potvrdite je kako biste iskoristili kod za popust.",
+    "important": "Primetio/la sam uvjete pod \"Važne informacije\" aktivnosti(a)",
+    "importantShow": "Prikaži informacije",
+    "importantHide": "Sakrij informacije"
+  },
+  "confirm": {
+    "title": "Hvala ti na rezervaciji s Swiss Activities.",
+    "confirmed": "Tvoja rezervacija je potvrđena.",
+    "pending": "Tvoja rezervacija je u obradi.",
+    "cancelled": "Tvoja rezervacija je otkazana.",
+    "failed": "Izvini, došlo je do greške.",
+    "failedPayment": "Plačanje nije moglo biti obrađeno. Pokušaj s drugim sredstvom plačanja.",
+    "failedReservation": "Nažalost, rezervacija nije mogla biti potvrđena. Tvoja uplata će biti vraćena. Pokušaj ponovo.",
+    "wait": "Čekamo našeg pružatelja usluga plačanja kako bismo provjerili je li uplata potvrđena.",
+    "waitEmail": "Dobit ćeš e-mail odmah nakon što uplata bude potvrđena.",
+    "caption": "Hvala ti puno na rezervaciji preko Swiss Activities. Poslali smo ti e-mail s potvrdom.",
+    "bookingNumber": "Broj rezervacije",
+    "point": "Mjesto sastanka",
+    "pointAddress": "Adresa mjesta sastanka",
+    "number": "Broj mobilnog telefona",
+    "end": "Kraj",
+    "email": "Tvoja potvrda rezervacije poslana je na {email}. Ako je ne primiš u sljedećih nekoliko minuta, kontaktiraj našu podršku putem chata.",
+    "transport": {
+      "title": "Putuješ li javnim prijevozom?",
+      "from": "Tvoje mjesto",
+      "description": "Putuj udobno javnim prijevozom i dodaj svoju mobilnu kartu izravno u ovu rezervaciju.",
+      "button": "Dodaj kartu"
+    }
+  },
+  "footer": {
+    "company": {
+      "title": "Tvrtka",
+      "about-us": "O nama",
+      "jobs": "Poslovi",
+      "legal": "Pravno"
+    },
+    "resources": {
+      "title": "Resursi"
+    },
+    "collaboration": {
+      "title": "Suradnja",
+      "becomeapartner": "Postani partner",
+      "affiliate": "Affiliate program",
+      "widget": "Widget"
+    },
+    "affiliate": {
+      "title": "Affiliate kod",
+      "button": "Kopiraj kod",
+      "buttonCopied": "Kod kopiran!"
+    },
+    "contact": {
+      "title": "Korisnička podrška",
+      "faq": "Pitanja i odgovori (FAQ)",
+      "cookie": "Sukladnost s kolačićima"
+    },
+    "mobileApp": "Preuzmi našu aplikaciju"
+  },
+  "tickets": {
+    "discounts": {
+      "noDiscount": "Nema popusta"
+    },
+    "showDiscounts": "Prikaži članske i popust kartice",
+    "travelClass": "Razred putovanja"
+  },
+  "supplier": {
+    "activities": "Aktivnosti"
+  },
+  "contactPopup": {
+    "modalTitle": "Kako ti možemo pomoći danas?"
+  },
+  "contactForm": {
+    "fullname": "Ime",
+    "email": "E-mail",
+    "subject": "Tema",
+    "messagePlaceholder": "Upit, rezervacija itd...",
+    "submit": "Pošalji",
+    "formError": "Nešto nije uspjelo. Pokušaj ponovo."
+  },
+  "contactThankYou": {
+    "title": "Hvala ti na kontaktu!"
+  },
+  "internalLinkBlock": {
+    "destinations": "Najbolje destinacije",
+    "locations": "Najbolje turističke regije",
+    "topActivities": "Najbolje aktivnosti",
+    "topAttractions": "Najbolje atrakcije"
+  },
+  "offerCard": {
+    "bookNow": "Rezerviraj sada"
+  },
+  "breadcrumbsBasket": {
+    "stepOne": "Tvoj izbor",
+    "stepOneDescription": "Košarica",
+    "stepTwo": "Tvoji detalji",
+    "stepTwoDescription": "Plačanje",
+    "stepThree": "Posljednji korak",
+    "stepThreeDescription": "Plaćanje"
+  },
+  "usps": {
+    "or": "ili",
+    "allDay": "Cijeli dan",
+    "bookable": {
+      "title": "Moguće rezervirati",
+      "description": "Za {val}"
+    },
+    "online": {
+      "title": "Brza potvrda rezervacije"
+    },
+    "payment": {
+      "title": "Rezerviraj na račun ili plati Twintom"
+    },
+    "duration": {
+      "title": "Trajanje",
+      "durationMinutes": "{val} minuta",
+      "duration": "{val} sat",
+      "durations": "{val} sati",
+      "durationDay": "{val} dan",
+      "durationDays": "{val} dana"
+    },
+    "mobileTicket": {
+      "title": "Prijemni mobilni tiket",
+      "description": "Iskoristi svoj telefon ili otisni svoj vaučer"
+    },
+    "confirmation": {
+      "title": "Brza potvrda rezervacije",
+      "description": "Bez dodatnih troškova"
+    },
+    "queue": {
+      "title": "Bez čekanja na blagajni"
+    },
+    "cancel": {
+      "title": "Besplatno otkazivanje",
+      "description": "Puni povrat u slučaju otkazivanja do {val}h prije početka",
+      "descriptionDays": "Puni povrat u slučaju otkazivanja do {val} dana prije početka",
+      "subtitle": "Do {val} sati prije početka",
+      "subtitleDays": "Do {val} dan(a) prije početka"
+    },
+    "meetingPoint": {
+      "title": "Mjesto sastanka"
+    },
+    "discount": {
+      "title": "Popust"
+    },
+    "request": {
+      "title": "Rezervacija na zahtjev",
+      "description": "Ovu rezervaciju mora potvrditi pružatelj",
+      "extra": "Ova ponuda se temelji na dostupnosti pružatelja usluga. Rezervacija mora prvo biti potvrđena od strane pružatelja usluga. Stupit će u kontakt s tobom nakon rezervacije. Ako aktivnost ne može biti provedena, cijeli iznos će ti biti vraćen."
+    },
+    "validity": {
+      "title": "Valjanost"
+    },
+    "openingHours": {
+      "title": "Radno vrijeme"
+    }
+  },
+  "widgetConfigurator": {
+    "title": "Konfiguriraj widget",
+    "type": "Tip",
+    "lang": "Jezik",
+    "other": "Odaberi drugu aktivnost",
+    "topBar": "Trajna traka za postavke",
+    "hideAll": "Sakrij sve",
+    "hideSearch": "Sakrij pretraživanje",
+    "hideSize": "Sakrij prekidač veličine",
+    "hideFilter": "Sakrij gumb za filtriranje",
+    "hideMap": "Sakrij gumb karte",
+    "hideQuickFilter": "Sakrij brzi filtar",
+    "hideSort": "Sakrij sortiranje",
+    "buttonText": "Tekst gumba",
+    "buttonBackground": "Pozadina gumba",
+    "buttonColor": "Boja teksta gumba",
+    "search": "Jednostavno pretraživanje"
+  },
+  "types": {
+    "activity": "Aktivnost",
+    "overview": "Pregled",
+    "location": "Mjesto",
+    "locationType": "Mjesto + Tip",
+    "type": "Tip",
+    "attribute": "Kategorija",
+    "locationAttribute": "Mjesto + Kategorija",
+    "poi": "Znamenitost"
+  },
+  "reviewForm": {
+    "title": "Ocijeni svoje iskustvo",
+    "button": "Ocijeni sada",
+    "rating": "Ocjena",
+    "comment": "Komentar",
+    "thanks": "Hvala na tvojoj ocjeni!",
+    "next": "Ocijeni sljedeću rezervaciju",
+    "finish": "Prozor se zatvara za 3 sekunde"
+  },
+  "user": {
+    "welcome": "Dobrodošao u svoje upravljačko sučelje {name}!",
+    "menu": {
+      "activities": "Aktivnosti",
+      "bookings": "Rezervacije",
+      "suppliers": "Dobavljači",
+      "reviews": "Recenzije",
+      "settings": "Postavke",
+      "chat": "Čavrljanje",
+      "logout": "Odjavi se",
+      "login": "Prijavite se"
+    }
+  },
+  "SettingsForm": {
+    "title": "Dovrši svoj profil",
+    "titleUpdate": "Ažuriraj svoj profil",
+    "submit": "Pošalji",
+    "phoneNumber": "Molim te, još jednom provjeri svoj broj telefona",
+    "email": "E-mail nije valjan",
+    "iban": "IBAN nije valjan",
+    "reseller": {
+      "title": "Preprodavač",
+      "merchantName": "Ime trgovca",
+      "merchantAddress": "Adresa trgovca",
+      "bankAccountHolder": "Vlasnik računa",
+      "bankAccountIban": "IBAN računa",
+      "bankAccountHolderAddress": "Adresa vlasnika računa",
+      "contact": {
+        "title": "Kontakti",
+        "name": "Ime",
+        "businessRole": "Poslovna uloga",
+        "email": "E-mail",
+        "phone": "Telefon"
+      }
+    },
+    "payment": {
+      "title": "Spremene metode plaćanja",
+      "removeTitle": "Ukloni metodu plaćanja"
+    }
+  },
+  "Repeater": {
+    "add": "Dodaj",
+    "remove": "Ukloni"
+  },
+  "Table": {
+    "booking": {
+      "refresh": "Ažuriraj"
+    },
+    "clearFilters": "Resetiraj filtre",
+    "noResults": "Nema pronađenih rezultata.",
+    "view": {
+      "title": "Pogled",
+      "adjust": "Prilagodi stupce"
+    },
+    "header": {
+      "bookingId": "ID rezervacije",
+      "date": "Datum",
+      "bookingDate": "Datum rezervacije",
+      "serviceDate": "Datum aktivnosti",
+      "description": "Opis",
+      "location": "Mjesto",
+      "name": "Ime",
+      "email": "E-mail",
+      "type": "Tip",
+      "price": "Cijena od",
+      "sold": "Prodano",
+      "rating": "Ocjena",
+      "supplier": "Dobavljač",
+      "bookingStatus": "Status rezervacije",
+      "paymentStatus": "Status plaćanja",
+      "total": "Ukupno",
+      "actions": "Akcije",
+      "duration": "Trajanje",
+      "validity": "Valjanost",
+      "bookable": "Moguće rezervirati",
+      "createdAt": "Stvoreno",
+      "commission": "Provizija",
+      "status": "Status",
+      "reservationSystem": "Sustav za rezervacije",
+      "bapiId": "BAPI ID",
+      "capiId": "CAPI ID",
+      "notes": "Bilješke",
+      "distributor": "Distributer",
+      "website": "Web stranica",
+      "validities": "Valjanost"
+    },
+    "actions": {
+      "aria": "Otvorite akcije",
+      "details": "Prikaži detalje",
+      "book": "Rezerviraj sada"
+    },
+    "sort": {
+      "ascending": "Rastuće",
+      "descending": "Opadajuće",
+      "hide": "Sakrij",
+      "bookable": "Prikaži samo aktivnosti koje se mogu rezervirati"
+    },
+    "pagination": {
+      "page": "Stranica",
+      "of": "od",
+      "entriesPerPage": "Unosa po stranici",
+      "goToFirstPage": "Idi na prvu stranicu",
+      "goToLastPage": "Idi na posljednju stranicu",
+      "goToNextPage": "Idi na sljedeću stranicu",
+      "goToPreviousPage": "Idi na prethodnu stranicu"
+    },
+    "search": {
+      "activities": "Pretraži aktivnosti",
+      "bookings": "Pretraži rezervacije",
+      "offers": "Pretraži ponude",
+      "suppliers": "Pretraži po dobavljačima",
+      "bookingId": "Pretraži po broju rezervacije",
+      "email": "Pretraži po e-mailu",
+      "familyName": "Pretraži po prezimenu"
+    },
+    "cell": {
+      "bookingStatusActive": "Potvrđeno",
+      "bookingStatusPending": "Na čekanju",
+      "bookingStatusCancelled": "Otkazano",
+      "paymentStatusActive": "Plaćeno",
+      "paymentStatusPending": "Na čekanju",
+      "paymentStatusRefunded": "Povrat novca"
+    }
+  },
+  "Drawer": {
+    "close": "Zatvori"
+  },
+  "PaymentMethod": {
+    "card": {
+      "new": "Nova kartica",
+      "store": "Molim te, spremi moje podatke o kreditnoj kartici za bržu kupovinu u budućnosti.",
+      "endsIn": "Ističe za {val}"
+    }
+  },
+  "Activity": {
+    "new": "Nova aktivnost",
+    "nav": {
+      "general": "Općenito"
+    }
+  },
+  "Offer": {
+    "new": "Nova ponuda"
+  },
+  "Supplier": {
+    "new": "Novi dobavljač"
+  },
+  "UspSlider": {
+    "title": "Zašto rezervirati kod Swiss Activities?",
+    "items": [
+      "Najveći izbor u Švicarskoj",
+      "Više od 100'000 zadovoljnih kupaca",
+      "Opcija besplatnog otkazivanja",
+      "5 zvjezdica švicarske korisničke podrške",
+      "Rezerviraj mobilne karte za 90 sekundi"
+    ]
+  },
+  "AppBanner": {
+    "title": "Preuzmi aplikaciju sada",
+    "description": "Otkrij Swiss Activities – jednostavno i brzo"
+  },
+  "Transport": {
+    "bookTrip": "Rezerviraj vezu",
+    "button": {
+      "confirmTrip": "Potvrdi vezu",
+      "confirmTravelers": "Potvrdi putnike"
+    },
+    "checkDetails": "Provjeri pojedinosti veze",
+    "class": {
+      "first": "1. razred",
+      "second": "2. razred"
+    },
+    "direct": "Direktno",
+    "duration": {
+      "minutes": "Min."
+    },
+    "earlierTrips": "Prethodne veze",
+    "errorLoadingTrips": "Nisu se mogle učitati veze.",
+    "laterTrips": "Kasnije veze",
+    "legend": "Legenda",
+    "loadingTrips": "Učitavanje veza...",
+    "oneWay": "Samo u jednom smjeru",
+    "roundTrip": "Povratna karta",
+    "searchTrips": "Pretraži veze",
+    "selectOriginDestination": "Odaberite mjesto polaska i odredište kako biste tražili veze.",
+    "selectProduct": "Odaberi opciju karte",
+    "selectTravelers": "Odaberi putnike",
+    "switch": "Presjedanje",
+    "ticket": "Ulaznica",
+    "tickets": "Ulaznice",
+    "transfer": "Presjedni",
+    "tripResults": "Veze",
+    "upgradeTo1stClass": "Dodatna udobnost",
+    "upgradeTo1stClassDescription": "Putovanja u 1. razredu",
+    "cityTicketDescription": "Jednodnevna karta za lokalni prijevoz",
+    "via": "preko",
+    "travelDate": "Odaberi datum putovanja",
+    "confirmTravelDate": "Potvrdi datum putovanja",
+    "departure": "Polazak",
+    "arrival": "Dolazak",
+    "locationDisabled": "Dijeljenje lokacije je onemogućeno",
+    "locationError": "Lokacija nije mogla biti utvrđena",
+    "noProductsAvailable": "Nema dostupnih karata",
+    "disclaimer": "Sve informacije bez jamstva.",
+    "validity": "Valjanost",
+    "validityOnSelectedRoute": "Samo na odabranoj ruti",
+    "validityForConnection": "Samo za odabranu vezu",
+    "validityForConnectionWith2ndClass": "Samo za odabranu vezu i s valjanim kartonom za 2. razred",
+    "validityForRouteWith2ndClass": "Samo za odabranu rutu i s valjanim kartonom za 2. razred",
+    "validityGARoutes": "Važi na svim GA područnim rutama",
+    "validityDayClassUpgrade": "Samo sa dnevnom kartom za Halbtax, GA ili Swiss Travel Pass (Flex) za 2. razred.",
+    "includedIn": "Uključeno u",
+    "validityDateRange": "{fromDate} do {toDate}, {toTime}",
+    "validityConnection": "{date} od {fromTime}, do {toTime}",
+    "classUpgradeOnly": "Samo promjena klase",
+    "loadingDestination": "Učitava se",
+    "distanceToMeetingPoint": "Mjesto susreta",
+    "walking": "Pješice",
+    "arrivalInfo": "Vrijeme dolaska izračunato: {walkingTime} minuta hoda + 15 min. rezerva do mjesta susreta",
+    "timeBeforeEvent": "{minutes} min. prije aktivnosti · {walkingMinutes} min. pješice od stanice",
+    "tooLateForActivity": "Sljedeće veze ne stižu na vrijeme na mjesto sastanka"
+  }
+}

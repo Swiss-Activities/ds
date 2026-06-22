@@ -1,4 +1,6 @@
-const { defaultLocale } = require("./i18n");
+import i18n from "./i18n";
+
+const { defaultLocale } = i18n;
 
 const pages = {
   "about-us": {

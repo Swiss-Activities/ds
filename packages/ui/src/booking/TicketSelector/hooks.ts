@@ -1,7 +1,7 @@
 import { useEffect } from "react";
-import { GroupedTicket } from ".";
+import type { GroupedTicket } from ".";
 import { useSearchStore } from "../store/search";
-import { dataLayerSend } from "../utils/thirdParty/dataLayerSend";
+import { useDataLayer } from "../utils/thirdParty/dataLayerSend";
 
 type UseAutoSelectTicketsParams = {
   groupedTickets: GroupedTicket[];
@@ -20,6 +20,7 @@ export const useAutoSelectTickets = ({
   incrementTicketAudience,
   onAutoSelect,
 }: UseAutoSelectTicketsParams) => {
+  const { dataLayer } = useDataLayer();
   const { participants } = useSearchStore((state) => ({
     participants: state.participants,
   }));
@@ -70,7 +71,7 @@ export const useAutoSelectTickets = ({
       if (onAutoSelect) {
         onAutoSelect();
       } else {
-        dataLayerSend({ obj: { event: "select_ticket" } });
+        dataLayer({ obj: { event: "select_ticket" } });
       }
       setHasAutoSelectedTicket(true);
     }

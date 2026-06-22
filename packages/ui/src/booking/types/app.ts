@@ -9,6 +9,14 @@ declare global {
     fbq: any;
     botpress: any;
     botpressWebChat: any;
+    __NEXT_DATA__?: {
+      props?: {
+        pageProps?: {
+          pageType?: string;
+          page?: { title?: string };
+        };
+      };
+    };
   }
 }
 

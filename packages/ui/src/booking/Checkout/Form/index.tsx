@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { CountryCode } from "libphonenumber-js";
+import type { CountryCode } from "libphonenumber-js";
 import { useShallow } from "zustand/react/shallow";
 import { useCartStore } from "../../Cart/store";
 import { ImportantAgree } from "./ImportantAgree";
@@ -25,18 +25,19 @@ import { Textarea } from "../../components/Form/Textarea";
 import { I } from "../../components/I";
 import { SignUpCard } from "../../stubs";
 import { Text } from "@swiss-activities/ui";
-import { TBooking } from "../../types/booking";
+import type { TBooking } from "../../types/booking";
 import { getPageUrl } from "../../utils/content/loaders";
 import { cn } from "../../utils/css/cn";
 import { secureLocalStorage } from "../../utils/data/secureLocalStorage";
 import { useWidget } from "../../utils/env/useWidget";
 import { useI18n } from "../../utils/i18n/useI18n";
-import { Activities, dataLayerSend } from "../../utils/thirdParty/dataLayerSend";
+import { type Activities, useDataLayer } from "../../utils/thirdParty/dataLayerSend";
 import { scrollToTarget } from "../../utils/ui/scrollToTarget";
 import { useUser } from "../../utils/user/useUser";
 import { useMakePayment } from "../../query/payment/makePayment";
 
 export const FormBooking = () => {
+  const { dataLayer } = useDataLayer();
   const { t, locale } = useI18n();
   const booking = getPageUrl("booking", locale);
   const hasFilled = useRef(false);
@@ -117,7 +118,7 @@ export const FormBooking = () => {
       const booking = await handleCheckout();
       const successReturnUrl = getRedirectUrl(booking);
 
-      dataLayerSend({
+      dataLayer({
         obj: {
           event: "payment_initiate",
           payment_type: "free",
@@ -193,7 +194,7 @@ export const FormBooking = () => {
     ) {
       return;
     }
-    dataLayerSend({
+    dataLayer({
       obj: {
         event: "add_shipping_info",
       },

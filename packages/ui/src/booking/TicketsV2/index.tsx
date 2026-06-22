@@ -2,7 +2,7 @@ import { useEffect, useMemo } from "react";
 import { useShallow } from "zustand/react/shallow";
 import { useOriginalOffer } from "../OffersV2/hooks";
 import { TicketSelector } from "../TicketSelector";
-import {
+import type {
   GroupedTicket,
   TicketCategoryItem,
 } from "../TicketSelector";
@@ -10,9 +10,10 @@ import { useAutoSelectTickets } from "../TicketSelector/hooks";
 import { Title } from "../Title";
 import { useBookingStore } from "../store";
 import { useI18n } from "../utils/i18n/useI18n";
-import { dataLayerSend } from "../utils/thirdParty/dataLayerSend";
+import { useDataLayer } from "../utils/thirdParty/dataLayerSend";
 
 export const TicketsV2 = () => {
+  const { dataLayer } = useDataLayer();
   const { t } = useI18n();
   const {
     offer: selectedOffer,
@@ -64,7 +65,7 @@ export const TicketsV2 = () => {
     } else {
       incrementTicketAudience(audience);
     }
-    dataLayerSend({ obj: { event: "select_ticket" } });
+    dataLayer({ obj: { event: "select_ticket" } });
   };
 
   const handleDecrementAudience = (audience: string) => {
@@ -79,12 +80,12 @@ export const TicketsV2 = () => {
     } else {
       decrementTicketAudience(audience);
     }
-    dataLayerSend({ obj: { event: "select_ticket" } });
+    dataLayer({ obj: { event: "select_ticket" } });
   };
 
   const handleRemoveParticipant = (audience: string, index: number) => {
     removeParticipant(audience, index);
-    dataLayerSend({ obj: { event: "select_ticket" } });
+    dataLayer({ obj: { event: "select_ticket" } });
   };
 
   const handleSetTicketSelection = (key: string, ticketCategoryId: number) => {
@@ -97,7 +98,7 @@ export const TicketsV2 = () => {
       discountType: selectedTicket?.discountType || null,
       categoryTypeKey: selectedTicket?.categoryTypeKey || null,
     });
-    dataLayerSend({ obj: { event: "select_ticket" } });
+    dataLayer({ obj: { event: "select_ticket" } });
   };
 
   const groupedTickets = useMemo<GroupedTicket[]>(() => {

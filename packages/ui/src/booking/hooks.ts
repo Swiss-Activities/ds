@@ -19,14 +19,14 @@ import { sendTransportEvent } from "./Transport/tracking";
 import { useBookingStore } from "./store";
 import { useDrawerStore } from "./store/drawer";
 import { useSearchStore } from "./store/search";
-import { TActivity } from "./types/activity";
-import { TBooking } from "./types/booking";
-import { TReservation } from "./types/reservation";
+import type { TActivity } from "./types/activity";
+import type { TBooking } from "./types/booking";
+import type { TReservation } from "./types/reservation";
 import { getPageUrl } from "./utils/content/loaders";
 import { secureLocalStorage } from "./utils/data/secureLocalStorage";
 import { niceDate } from "./utils/dates/niceDate";
 import { useI18n } from "./utils/i18n/useI18n";
-import { Activities, dataLayerSend } from "./utils/thirdParty/dataLayerSend";
+import { type Activities, useDataLayer } from "./utils/thirdParty/dataLayerSend";
 import { useDistributorId } from "./utils/user/useDistributorId";
 import { useGetCart } from "./query/booking/getCart";
 import { usePostReservation as usePostReservationMutation } from "./query/booking/postReservation";
@@ -41,6 +41,7 @@ export const usePostReservation = (
 ) => {
   const { queryClient } = useQueryClient();
   const router = useRouter();
+  const { dataLayer } = useDataLayer();
   let cartId = secureLocalStorage.getItem("cartId") as string;
   const { data: cart, isError: isErrorCart } = useGetCart(cartId);
   if (cartId && isErrorCart) {
@@ -627,9 +628,9 @@ export const usePostReservation = (
     }
 
     if (isReservation) {
-      dataLayerSend({ obj: { event: "update_cart" }, timeout: 0 });
+      dataLayer({ obj: { event: "update_cart" }, timeout: 0 });
     } else {
-      dataLayerSend({ obj: { event: "add_to_cart" }, timeout: 0 });
+      dataLayer({ obj: { event: "add_to_cart" }, timeout: 0 });
 
       if (complementaryReference) {
         addComplementaryItem(res.reservationId, complementaryReference);
@@ -669,6 +670,7 @@ export const useHasStartedBooking = () => {
 };
 
 export const useBooking = () => {
+  const { dataLayer } = useDataLayer();
   const isOpen = useDrawerStore((state) => state.isOpen);
   const setOpen = useDrawerStore((state) => state.setOpen);
   const {
@@ -761,7 +763,7 @@ export const useBooking = () => {
           setFlowType("date-offers");
           setActive("date");
         }
-        dataLayerSend({
+        dataLayer({
           obj: {
             event: "open_reservation",
           },
@@ -769,7 +771,7 @@ export const useBooking = () => {
         });
       }
     } else if (!skipBookNow) {
-      dataLayerSend({
+      dataLayer({
         obj: {
           event: "book_now",
         },

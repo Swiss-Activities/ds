@@ -1,0 +1,1799 @@
+{
+  "general": {
+    "accountAdvantages": "Untuk menikmati diskaun dan faedah lain, buat akaun atau log masuk.",
+    "activityBook": "Tempah aktiviti",
+    "addTicket": "Tambah Tiket",
+    "adult": "{val} dewasa",
+    "adults": "{val} dewasa",
+    "ageChoose": "Pilih usia",
+    "ageFrom": "Dari {val} tahun",
+    "ageOld": "{val} tahun",
+    "ageUnder": "Di bawah {val} tahun",
+    "all": "Semua",
+    "allReviews": "Semua ulasan",
+    "backToBookings": "Kembali ke tempahan",
+    "bookAsGuest": "Anda menyelesaikan proses pesanan sebagai tetamu.",
+    "cancel": "Batal",
+    "cancelled": "Dibatalkan",
+    "cartAmount": "Jumlah troli",
+    "child": "{val} anak",
+    "children": "{val} anak",
+    "chooseSelection": "Sahkan pilihan",
+    "confirm": "Sahkan",
+    "confirmCancel": "Sahkan pembatalan",
+    "contact": "Hubungi",
+    "copyUrl": "Salin URL",
+    "couple": "Pasangan",
+    "customerServiceFee": "Yuran Servis",
+    "data": "Data",
+    "date": "Tanggal",
+    "dateChoose": "Pilih tarikh",
+    "delete": "Padam",
+    "didYouMean": "Adakah kamu maksudkan <suggestion>{email}</suggestion>?",
+    "duplicate": "Duplikasi",
+    "emailsDontMatch": "Alamat E-mel yang dimasukkan tidak sepadan.",
+    "export": "Eksport",
+    "faqType": "Soalan Lazim tentang {type} di Switzerland",
+    "from": "Dari",
+    "group": "Kumpulan",
+    "helpfulQuestion": "Bermanfaat?",
+    "informationPlural": "Maklumat",
+    "language": "Bahasa",
+    "loginOrRegister": "Log masuk atau Daftar",
+    "manageBookings": "Urus tempahan",
+    "mobileAppAddon": "Muat turun aplikasi mudah alih kami sekarang dan urus tempahan anda dengan mudah, akses tiket anda dengan cepat dan temukan petualangan seterusnya.",
+    "mostImportantInSummary": "Yang paling penting secara ringkas",
+    "noResults": "Malangnya, kami tidak dapat menemui sebarang hasil untuk istilah carian anda",
+    "noReviewsYet": "Belum ada ulasan",
+    "notes": "Catatan",
+    "oneMonth": "1 Bulan",
+    "openChat": "Buka chat",
+    "order": "Pesanan",
+    "partSum": "Subtotal",
+    "participants": "Peserta",
+    "participantsChoose": "Pilih peserta",
+    "past": "Masa lalu",
+    "personalizeTickets": "Peribadikan tiket",
+    "pleaseSelect": "Sila pilih",
+    "pleaseSelectItem": "Sila pilih {val}",
+    "questionsChatActivity": "Adakah anda mempunyai soalan mengenai aktiviti ini? Bercakap dengan kami",
+    "questionsChatBooking": "Adakah anda mempunyai soalan mengenai tempahan? Bercakap dengan kami",
+    "raw": "Mentah",
+    "rebate": "Diskaun",
+    "recaptcha": "Laman web ini dilindungi oleh reCAPTCHA. Dasar\n<a href=\"https://policies.google.com/privacy\" target=\"_blank\">Privasi</a> dan\n<a href=\"https://policies.google.com/terms\" target=\"_blank\">Terma Perkhidmatan</a> Google adalah terpakai.",
+    "remove": "Buang",
+    "removeFromCart": "Keluarkan dari troli",
+    "reset": "Tetapkan semula",
+    "searchNow": "Cari sekarang",
+    "single": "Bujang",
+    "soldOut": "Tercapai",
+    "somethingWentWrongContact": "Maaf, tetapi ada sesuatu yang tidak kena. Sila cuba lagi atau hubungi sokongan.",
+    "successfullySaved": "Berjaya disimpan",
+    "ticket": "Tiket",
+    "tickets": "Tiket",
+    "to": "Ke",
+    "currentLocation": "Lokasi Semasa",
+    "toDashboard": "Tempahan Saya",
+    "translate": "Terjemahkan",
+    "tryAgain": "Cuba lagi",
+    "upcoming": "Akan datang",
+    "when": "Bila",
+    "who": "Siapa",
+    "wrongDate": "Ada sesuatu yang tidak betul dengan tarikh: Sila periksa dan pilih semula.",
+    "wrongDateParticipant": "Tarikh lahir peserta tidak sepadan dengan umur dari tawaran.",
+    "today": "Hari ini",
+    "apply": "Gunakan"
+  },
+  "aria": {
+    "forward": "Ke depan",
+    "backward": "Ke belakang"
+  },
+  "auth0": {
+    "accept": "Saya menerima [syarat penggunaan]({link})",
+    "error": "Sila terima syarat penggunaan",
+    "resetPasswordHint": "Tiada e-mel diterima? Semak folder spam anda. Jika anda mendaftar dengan Apple atau Google, sila gunakan kaedah log masuk ini."
+  },
+  "menu": {
+    "menu": "Menu",
+    "search": "Cari",
+    "travelGuide": "Rancangan perjalanan",
+    "travelRoutes": "Itinerari",
+    "contactus": "Hubungi kami",
+    "switzerland": "Swiss",
+    "help": "Sembang",
+    "voucher": "Beli kupon",
+    "voucherSm": "Kupon",
+    "partners": "Rakan kongsi",
+    "provider": "Penyedia",
+    "affiliate": "Rakan Sekutu"
+  },
+  "chat": {
+    "chats": "Semua Perbualan",
+    "newChat": "Perbualan Baharu",
+    "noChatsYet": "Belum ada Perbualan",
+    "typeMessage": "Masukkan mesej",
+    "welcome": "Hai dan selamat datang ke Swiss Activities! Saya Housibot dan saya sedia membantu anda dengan soalan anda.",
+    "welcomeReview": "Hai! Bagaimana pengalaman anda? Saya Housibot dan dengan senang hati akan membantu anda untuk berkongsi maklumbalas anda."
+  },
+  "supportBanner": {
+    "title": "Perlukan bantuan untuk mencari sekolah ski yang sesuai?",
+    "placeholder": "Bagaimana kami boleh membantu kamu?",
+    "send": "Hantar"
+  },
+  "pages": {
+    "404": {
+      "title": "Halaman tidak ditemukan.",
+      "description": "Halaman ini tidak ada.",
+      "button": "Kembali ke halaman utama",
+      "search": "Mulai pencarian"
+    },
+    "home": {
+      "title": "Swiss Activities - Cari dan tempah aktiviti anda di Switzerland",
+      "description": "Swiss Activities adalah destinasi anda untuk aktiviti rekreasi di Switzerland. Temukan, bandingkan, dan pesan berbagai aktiviti rekreasi.",
+      "gatewayCards": {
+        "categories": {
+          "castlesRuins": "Istana / Runtuhan",
+          "castleEvents": "Acara Istana",
+          "exhibitions": "Pameran",
+          "fireplaces": "Tempat api",
+          "movies": "Filem",
+          "museums": "Muzium",
+          "playgrounds": "Taman Permainan",
+          "swimmingBathing": "Berenang & Mandian"
+        },
+        "dateRange": {
+          "from": "Daripada",
+          "until": "Hingga"
+        },
+        "distance": {
+          "unit": "km"
+        }
+      },
+      "gatewayDetail": {
+        "back": "Kembali",
+        "moreInfo": "Lebih banyak maklumat",
+        "source": "Buka sumber",
+        "labels": {
+          "admission": "Tiket Masuk",
+          "address": "Alamat",
+          "ageRating": "Umur",
+          "bookTickets": "Tempah tiket",
+          "canton": "Kanton",
+          "cast": "Pelakon",
+          "category": "Kategori",
+          "cinema": "Tayangan",
+          "countryYear": "Negara / Tahun",
+          "dateRange": "Julat Tarikh",
+          "director": "Pengarah",
+          "duration": "Tempoh",
+          "entryFeeAdult": "Dewasa",
+          "entryFeeChild": "Kanak-kanak",
+          "foundedYear": "Ditubuhkan",
+          "genres": "Genre",
+          "location": "Lokasi",
+          "museumCategory": "Jenis Muzium",
+          "openTrailer": "Buka treler",
+          "openingHours": "Waktu Pembukaan",
+          "phone": "Telefon",
+          "poolLength": "Panjang kolam",
+          "trailer": "Treler",
+          "venue": "Tempat Acara",
+          "waterType": "Jenis air"
+        },
+        "sections": {
+          "amenities": "Kemudahan",
+          "badges": "Syor",
+          "information": "Maklumat",
+          "prices": "Harga",
+          "showtimes": "Jadual tayangan",
+          "venue": "Tempat Acara"
+        },
+        "amenities": {
+          "capacityPersons": "Kapasiti",
+          "hasBenches": "Bangku",
+          "hasChangingRooms": "Bilik ganti",
+          "hasDivingBoard": "Jalan terjun",
+          "hasFirewood": "Kayu api",
+          "hasFoodService": "Perkhidmatan makanan",
+          "hasGrillGrate": "Pemanggang",
+          "hasKidsPool": "Kolam kanak-kanak",
+          "hasLifeguard": "Pengawas",
+          "hasLockers": "Loker",
+          "hasPlaygroundNearby": "Taman Permainan Berhampiran",
+          "hasShowers": "Mandi",
+          "hasSlide": "Seluncur",
+          "hasShelter": "Tempat berlindung",
+          "hasTable": "Meja",
+          "hasToilet": "Tandas",
+          "hasWater": "Air"
+        },
+        "waterTypes": {
+          "indoorPool": "Kolam dalam",
+          "lake": "Tasik",
+          "outdoorPool": "Kolam luar",
+          "pool": "Kolam renang",
+          "river": "Sungai"
+        }
+      }
+    },
+    "s": {
+      "title": "Swiss Activities - Cari dan tempah aktiviti",
+      "description": "Swiss Activities adalah destinasi anda untuk aktiviti rekreasi di Switzerland. Temukan, bandingkan, dan pesan berbagai aktiviti rekreasi.",
+      "sort": {
+        "distance": {
+          "notSupported": "Perkhidmatan lokasi tidak disokong oleh pelayar anda. Urutan berdasarkan relevansi akan digunakan.",
+          "permissionDenied": "Untuk menyusun mengikut jarak, sila benarkan akses kepada lokasi anda dalam tetapan pelayar dan muat semula halaman.",
+          "positionUnavailable": "Maklumat lokasi tidak tersedia.",
+          "timeout": "Masa tamat semasa permintaan lokasi.",
+          "unknownError": "Ralat tidak dikenali telah berlaku.",
+          "fallbackMessage": "Urutan berdasarkan relevansi akan digunakan.",
+          "errorPrefix": "Lokasi tidak dapat ditentukan."
+        }
+      }
+    },
+    "chat": {
+      "title": "Sembang Swiss Activities",
+      "description": "Swiss Activities ialah destinasi anda untuk aktiviti riadah di Switzerland. Terokai, bandingkan dan tempah pelbagai aktiviti riadah yang tidak terhingga."
+    },
+    "transport": {
+      "title": "Tiket Kereta Api Swiss, Pas & Tiket Hari | Swiss Travel Pass, SBB Spartageskarte",
+      "description": "Bandingkan dan tempah tiket kereta api, Swiss Travel Pass, Halbtax, SBB Spartageskarten & pas serantau untuk seluruh Switzerland. Segera sebagai Tiket Mudah Alih ke telefon bimbit anda.",
+      "trust": {
+        "partners": "Rakan kongsi rasmi dari",
+        "ratingValue": "4.8",
+        "ratingLabel": "<b>400,000</b> pelanggan yang berpuas hati",
+        "ratingShortLabel": "400,000+ pengembara"
+      },
+      "discountMap": {
+        "title": "Di sini kamu dapat penjimatan dengan pas kamu",
+        "subtitle": "Kereta kabel, kapal dan lawatan terbaik — pilih pas dan lihat di mana ada yang menarik.",
+        "free": "Termasuk",
+        "discount50": "−50 %",
+        "discount25": "−25 %",
+        "noDiscount": "Tiada diskaun",
+        "altitude": "{m} m di atas aras laut.",
+        "moreInfo": "Ketahui lebih lanjut",
+        "selectPass": "Pilih pas",
+        "selectCategory": "Pilih kategori",
+        "categories": {
+          "mountain": "Kereta kabel",
+          "lake": "Tasik & kapal",
+          "museum": "Muzium"
+        },
+        "airports": {
+          "zrh": "Zürich",
+          "gva": "Geneva"
+        },
+        "regions": {
+          "bernerOberland": "Berner Oberland",
+          "jungfrau": "Jungfrau",
+          "interlaken": "Interlaken",
+          "zentralschweiz": "Switzerland Tengah",
+          "ostschweiz": "Switzerland Timur",
+          "waadt": "Vaud",
+          "engadin": "Engadin",
+          "wallis": "Valais",
+          "tessin": "Ticino",
+          "genferseeregion": "Wilayah Tasik Geneva",
+          "zuerich": "Zürich",
+          "mittelland": "Mittelland",
+          "luzern": "Lucerne",
+          "basel": "Basel",
+          "bern": "Bern",
+          "lausanne": "Lausanne",
+          "geneve": "Geneva",
+          "zermatt": "Zermatt",
+          "fribourg": "Fribourg",
+          "graubuenden": "Graubünden"
+        }
+      },
+      "hero": {
+        "title": "Tiket kereta untuk seluruh",
+        "titleAccent": "Switzerland",
+        "lede": "Tiket sambungan, tiket harian dan tawaran penjimatan SBB - segera sebagai Tiket Mudah Alih di telefon anda.",
+        "subtitle": "Tiket sambungan, tiket harian dan tawaran penjimatan SBB - segera sebagai Tiket Mudah Alih di telefon anda.",
+        "searchTitle": "Cari sambungan",
+        "searchMeta": "Stesen · Tarikh · Penumpang",
+        "fromPlaceholder": "Stesen permulaan/tempat asal",
+        "toPlaceholder": "Stesen tujuan/tempat destinasi",
+        "badges": {
+          "rating": "4.8 / 5 · <b>400,000</b> ulasan",
+          "partner": "Rakan kongsi rasmi SBB"
+        },
+        "usps": {
+          "customers": {
+            "title": "<b>400,000</b> pelanggan yang bahagia",
+            "subline": "Kepercayaan sejak 2021 kepada Swiss Activities"
+          },
+          "saver": {
+            "title": "Jimat sehingga 50%",
+            "subline": "Dengan tiket penjimatan dan tiket harian SBB"
+          },
+          "mobile": {
+            "title": "Segera sebagai Tiket Mudah Alih",
+            "subline": "Terus ke telefon, tanpa perlu log masuk SBB"
+          },
+          "earlyBird": {
+            "title": "Diskaun untuk tempahan awal",
+            "subline": "Rancang lebih awal dan beli tiket penjimatan dan tiket harian SBB"
+          }
+        }
+      },
+      "benefits": {
+        "title": "Kelebihan anda",
+        "discount": {
+          "eyebrow": "Tiket potongan",
+          "title": "Jimatan sehingga 40%",
+          "subline": "Tawaran potongan SBB dan tiket harian",
+          "badge": "Terlaris"
+        }
+      },
+      "passes": {
+        "title": "Pas SBB dan serantau",
+        "subtitle": "Bandingkan pas multi-hari, pas harian dan pas serantau - pilih pas yang paling menguntungkan untuk anda.",
+        "tabs": {
+          "multiDay": "Pas multi-hari",
+          "dayPass": "Pas harian",
+          "regional": "Pas serantau"
+        },
+        "buy": "Beli sekarang",
+        "from": "daripada",
+        "moreInfo": "Ketahui lebih lanjut",
+        "seeDiscounts": "Lihat semua diskaun",
+        "viewAllByTab": {
+          "multiDay": "Lihat semua pas kereta",
+          "dayPass": "Lihat semua tiket harian SBB",
+          "regional": "Lihat semua pas serantau"
+        },
+        "empty": "Tiada produk tersedia buat masa ini - lihat dalam kategori lain.",
+        "descriptions": {
+          "fallback-stp": "Bergerak di seluruh Switzerland dengan kereta api, bas dan kapal – termasuk kemasukan ke muzium secara percuma.",
+          "fallback-stpf": "Menggunakan pengangkutan awam pada hari yang dipilih - termasuk kemasukan ke muzium secara percuma.",
+          "fallback-shfc": "Satu bulan dengan harga separuh untuk kereta api, bas, kapal dan kereta kabel.",
+          "fallback-halbtax": "Perjalanan percuma sepanjang hari di seluruh Switzerland – dengan Halbtax kamu.",
+          "fallback-spar": "Tiket harian pada harga terbaik untuk tempahan awal – kuota terhad setiap hari.",
+          "fallback-ga": "Mobiliti penuh untuk satu hari - seperti GA, hanya selama 24 jam.",
+          "fallback-tell": "Perjalanan percuma di Zentralschweiz: Kereta kabel, kapal dan pengangkutan awam termasuk.",
+          "fallback-bo": "Jelajahi wilayah Jungfrau dan Interlaken - kereta api, kapal dan kereta kabel dengan satu pas.",
+          "fallback-jtp": "Wilayah Top of Europe: Kereta kabel, pengangkutan awam dan pemandangan menarik di sekitar Grindelwald, Wengen, Mürren."
+        },
+        "usps": {
+          "1330": [
+            "Harder Kulm & Brienzer Rothorn termasuk",
+            "Hingga −50 % di kawasan ski Grindelwald-Wengen",
+            "Pengangkutan awam & kereta kabel di wilayah Jungfrau"
+          ],
+          "1438": [
+            "First, Schynige Platte & Niesen termasuk",
+            "−25 % ke Jungfraujoch Top of Europe",
+            "Kereta api, kapal & kereta kabel dengan satu pas"
+          ],
+          "1440": [
+            "1 bulan harga separuh di seluruh Switzerland",
+            "Untuk kereta api, bas, kapal & kereta kabel",
+            "Juga pada tiket penjimatan SBB"
+          ],
+          "1447": [
+            "Kereta api, bas & kapal secara percuma di seluruh Switzerland",
+            "Hingga −50 % di kereta kabel (Jungfraujoch −25 %)",
+            "Lebih 500 muzium secara percuma"
+          ],
+          "1448": [
+            "Aktifkan pada hari yang dipilih di seluruh Switzerland",
+            "Hingga −50 % di kereta kabel, bas, kapal",
+            "Lebih 500 muzium secara percuma"
+          ],
+          "1450": [
+            "Pilatus, Rigi & Stanserhorn termasuk",
+            "Kapal di Tasik Lucerne secara percuma",
+            "Kereta api, bas & kereta kabel di Zentralschweiz"
+          ],
+          "1664": [
+            "Tiket harian bermula dari CHF 29",
+            "Hingga −70 % untuk tempahan awal",
+            "Kuota terhad setiap hari"
+          ],
+          "1671": [
+            "Kanak-kanak 6–16 dengan harga keluarga",
+            "Seluruh SBB di Switzerland",
+            "Sempurna untuk percutian keluarga"
+          ],
+          "1676": [
+            "1 hari perjalanan percuma dengan Halbtax",
+            "Di seluruh SBB",
+            "Lebih murah daripada beberapa tiket tunai"
+          ]
+        },
+        "soldCount": "{count} ditempah",
+        "reviews": "({count})",
+        "discounts": {
+          "1330": "Harder Kulm termasuk.",
+          "1438": "First & Niesen termasuk.",
+          "1440": "Harga separuh",
+          "1447": "Kereta kabel −50 %",
+          "1448": "Kereta kabel −50 %",
+          "1450": "Pilatus & Rigi termasuk.",
+          "1664": "Hingga −70 %",
+          "1671": "Harga keluarga"
+        },
+        "benefits": {
+          "includedHeading": "Termasuk",
+          "discountedHeading": "Diskaun",
+          "expand": "Lihat semua diskaun",
+          "collapse": "Tunjukkan kurang",
+          "items": {
+            "1330": {
+              "included": [
+                "Harder Kulm & Brienzer Rothorn",
+                "Pengangkutan Awam di kawasan Jungfrau (Kereta Api, Bas, Kapal)"
+              ],
+              "discounted": [
+                "Kawasan ski Grindelwald-Wengen hingga −50 %",
+                "Kawasan ski Mürren-Schilthorn hingga −50 %",
+                "Jungfraujoch, Puncak Eropah −25 %"
+              ]
+            },
+            "1438": {
+              "included": [
+                "First, Schynige Platte & Niesen",
+                "Brienzer Rothorn & Stockhorn",
+                "Kereta api, kapal & kereta kabel di kawasan Jungfrau"
+              ],
+              "discounted": [
+                "Jungfraujoch, Puncak Eropah −25 %",
+                "Schilthorn (James Bond) −50 %"
+              ]
+            },
+            "1440": {
+              "included": [],
+              "discounted": [
+                "50 % untuk tiket kereta, bas & kapal",
+                "50 % untuk kereta kabel",
+                "Juga boleh digabungkan dengan tiket penjimatan SBB"
+              ]
+            },
+            "1447": {
+              "included": [
+                "Kereta api, bas & kapal di seluruh Switzerland",
+                "Lebih 500 muzium",
+                "Pengangkutan awam di 90 bandar di Switzerland"
+              ],
+              "discounted": [
+                "Kereta kabel hingga −50 %",
+                "Jungfraujoch Top of Europe −25 %",
+                "Tawaran RailAway SBB −30 %"
+              ]
+            },
+            "1448": {
+              "included": [
+                "Kereta api, bas & kapal pada hari yang dipilih",
+                "Lebih 500 muzium",
+                "Pengangkutan awam di 90 bandar di Switzerland"
+              ],
+              "discounted": [
+                "Kereta kabel hingga −50 %",
+                "Jungfraujoch Top of Europe −25 %",
+                "Tawaran RailAway SBB −30 %"
+              ]
+            },
+            "1450": {
+              "included": [
+                "Pilatus, Rigi & Stanserhorn",
+                "Kapal di Tasik Vierwaldstätter",
+                "Kereta api, bas & kereta kabel di Zentralschweiz"
+              ],
+              "discounted": []
+            },
+            "1664": {
+              "included": [
+                "1 hari perjalanan percuma di seluruh Switzerland"
+              ],
+              "discounted": [
+                "Tiket harian bermula dari CHF 29",
+                "Hingga −70 % untuk tempahan awal"
+              ]
+            },
+            "1671": {
+              "included": [
+                "Sambungan SBB di seluruh Switzerland untuk 1 hari"
+              ],
+              "discounted": [
+                "Harga keluarga untuk kanak-kanak 6–16",
+                "−50 % pada tiket harian biasa"
+              ]
+            },
+            "1676": {
+              "included": [
+                "1 Hari perjalanan percuma dengan Halbtax"
+              ],
+              "discounted": [
+                "Lebih murah daripada beberapa tiket individu"
+              ]
+            }
+          }
+        }
+      },
+      "articles": {
+        "title": "Artikel menarik mengenai dunia kereta api",
+        "subtitle": "Tip, perbandingan dan pengetahuan praktikal tentang tiket SBB, Pas Travel dan Pengangkutan Awam di Switzerland.",
+        "read": "Baca artikel",
+        "tag": "Majalah"
+      },
+      "dayPasses": {
+        "title": "Tiket Harian Popular",
+        "subtitle": "Perjalanan percuma sepanjang hari – mudah dikombinasikan dengan tiket anda.",
+        "halbtax": {
+          "title": "Tiket harian dengan Halbtax",
+          "description": "Perjalanan percuma sepanjang hari di seluruh Switzerland – dengan Halbtax anda. Sesuai untuk perjalanan sehari dan kawasan gunung.",
+          "fromPrice": "dari CHF 52.–",
+          "cta": "Cari sambungan"
+        },
+        "spar": {
+          "title": "Tiket penjimatan",
+          "description": "Tiket harian dengan harga terbaik jika ditempah lebih awal. Kuota terhad setiap hari – siapa yang menempah awal, berpeluang lebih murah.",
+          "fromPrice": "dari CHF 29.–",
+          "cta": "Cari sambungan"
+        }
+      },
+      "groups": {
+        "mountains": "Pengalaman di gunung yang dapat dicapai dengan kereta api",
+        "dayTrips": "Perjalanan sehari yang popular dari Zürich, Bern dan Basel",
+        "cities": "Jelajahi bandar: Kereta + Pengalaman",
+        "cityPasses": "City Pass: Satu kad, seluruh bandar"
+      },
+      "faq": {
+        "title": "Soalan Lazim tentang tiket SBB",
+        "items": [
+          {
+            "q": "Bolehkah saya membatalkan tiket saya?",
+            "a": "<p><strong>Tiket berdasarkan jarak</strong> boleh anda batalkan secara percuma sehingga sehari sebelum perjalanan – ini boleh dilakukan terus dalam Cockpit tempahan anda di swissactivities.com.</p><p>Untuk <strong><a href=\"/sbb-tageskarten/spartageskarte-sbb/\">Tiket Harian Penjimatan</a></strong> dan tiket penjimatan, pembatalan tidak mungkin dilakukan. Tiket ini terikat pada tarikh yang dipilih – amaran yang jelas akan ditunjukkan sebelum pembelian di laman tempahan.</p>"
+          },
+          {
+            "q": "Adakah tiket SBB sama seperti di kaunter SBB?",
+            "a": "Ya, anda akan menerima tiket SBB rasmi yang sama seperti di kaunter atau dalam aplikasi SBB – tanpa sebarang bayaran tambahan. Juga <a href=\"/sbb-tageskarten/\">Tiket Harian SBB</a> dan <a href=\"/bahnpaesse/\">Pas Kereta Api</a> adalah 1:1 produk asal daripada SBB."
+          },
+          {
+            "q": "Seberapa cepat saya menerima tiket saya?",
+            "a": "Segera. Selepas tempahan berjaya, anda akan menerima Tiket Mudah Alih melalui E-mel dan dalam Cockpit tempahan di swissactivities.com. Tiada log masuk SBB diperlukan – hanya tunjukkan terus dalam kereta api."
+          },
+          {
+            "q": "Bolehkah saya mengemukakan Halbtax atau GA?",
+            "a": "Ya, dalam langkah tempahan anda boleh memilih langganan diskaun anda – harga akan disesuaikan secara automatik. Jika anda hanya memiliki Halbtax dan merancang perjalanan sepanjang hari, tiket <a href=\"/sbb-tageskarten/sbb-tageskarte-halbtax/\">Tiket Harian SBB dengan Halbtax</a> sering kali lebih menguntungkan berbanding beberapa tiket individu."
+          },
+          {
+            "q": "Apa yang berlaku jika kereta api saya lewat?",
+            "a": "Tiket jarak anda juga sah untuk sambungan seterusnya – hanya naik ke kereta api yang sesuai seterusnya. Sekiranya lewat lebih daripada satu jam, anda boleh memohon pemulangan melalui SBB."
+          },
+          {
+            "q": "Adakah Swiss Travel Pass atau tiket penjimatan berbaloi?",
+            "a": "<p>Peraturan umum: Siapa yang merancang untuk banyak menggunakan kereta api, bas dan kapal selama tiga hari berturut-turut dan gemar mengunjungi muzium, lebih baik menggunakan <a href=\"/bahnpaesse/swiss-travel-pass-kaufen/\">Swiss Travel Pass</a>. Termasuk di dalamnya lebih daripada 500 muzium, pengangkutan awam di 90 bandar dan kereta kabel dengan diskaun −50 %.</p><p>Untuk perjalanan sehari yang tertentu, <a href=\"/sbb-tageskarten/spartageskarte-sbb/\">Tiket Harian Penjimatan SBB</a> bermula dari CHF 29 adalah hampir sempre pilihan yang paling murah – tempah awal.</p>"
+          },
+          {
+            "q": "Pas wilayah manakah yang sesuai untuk perjalanan saya?",
+            "a": "<p>Untuk kawasan Interlaken / Grindelwald / Wengen, <a href=\"/bahnpaesse/berner-oberland-pass/\">Berner Oberland Pass</a> atau pada musim sejuk <a href=\"/bahnpaesse/jungfrau-travel-pass-winter/\">Jungfrau Travel Pass</a> sangat sesuai – kedua-duanya merangkumi kereta kabel, pengangkutan awam dan kapal di kawasan tersebut.</p><p>Di sekitar Tasik Vierwaldstätter, <a href=\"/bahnpaesse/sbb-tellpass/\">Tell-Pass</a> adalah ideal: Pilatus, Rigi, Stanserhorn dan semua kapal adalah termasuk.</p>"
+          }
+        ]
+      }
+    },
+    "about_us": {
+      "title": "Tentang Kami - Swiss Activities",
+      "description": "Swiss Activities adalah destinasi anda untuk aktiviti rekreasi di Switzerland. Temui, bandingkan dan tempah pelbagai aktiviti rekreasi yang tidak terhitung.",
+      "hero": {
+        "title": "Cari aktiviti rekreasi Switzerland",
+        "text": "Swiss Activities adalah destinasi anda untuk aktiviti rekreasi di Switzerland. Di Swiss Activities, anda akan menemui pelbagai aktiviti rekreasi yang tidak terhitung, anda boleh membandingkannya dan menempahnya dengan beberapa klik sahaja. Tidak pernah semudah ini untuk mencari aktiviti untuk masa lapang anda di Switzerland."
+      },
+      "who": {
+        "title": "Siapa kami",
+        "text": "Kami adalah sebuah pasukan yang bermotivasi yang sangat bersemangat tentang aktiviti rekreasi di Switzerland. Kami mengenali negara dan rakyatnya. Mencuba aktiviti baru adalah minat kami. Itulah sebabnya kami telah membangunkan Swiss Activities."
+      },
+      "start": {
+        "title": "Permulaan kami",
+        "text": "Ketika kami menyedari pada tahun 2020 bahawa kami tidak lagi dapat melakukan perjalanan, kami mencari platform aktiviti rekreasi Switzerland yang menyasarkan rakyat Swiss, tetapi tidak menemukannya. Itu adalah permulaan bagi destinasi aktiviti rekreasi Swiss Activities.",
+        "milestones": {
+          "march_2020": {
+            "date": "Maret 2020",
+            "title": "Penubuhan Swiss Activities sebagai model perniagaan"
+          },
+          "march_2021": {
+            "date": "Maret 2021",
+            "title": "Penubuhan syarikat"
+          },
+          "june_2021": {
+            "date": "Jun 2021",
+            "title": "Pelancaran platform sendiri"
+          },
+          "september_2021": {
+            "date": "September 2021",
+            "title": "500 aktiviti boleh tempah secara langsung diaktifkan"
+          },
+          "december_2021": {
+            "date": "Disember 2021",
+            "title": "Pusingan dana pra-benih diselesaikan"
+          },
+          "march_2022": {
+            "date": "Maret 2021",
+            "title": "Pelancaran program afiliasi"
+          },
+          "may_2022": {
+            "date": "Mei 2021",
+            "title": "Pelancaran program rakan B2B"
+          }
+        }
+      },
+      "partner": {
+        "title": "Kami membantu anda untuk mendapatkan pelanggan baru",
+        "text": "Swiss Activities membantu anda mencari pelanggan baru. Kami bekerja setiap hari untuk menjadikan Swiss Activities sebagai destinasi terbesar untuk aktiviti rekreasi di Switzerland. Ribuan orang mengunjungi www.swissactivities.com setiap hari untuk mencari aktiviti rekreasi di Switzerland. Dengan menunjukkan tawaran anda di Swiss Activities, anda mencapai pelanggan baru."
+      },
+      "kunden": {
+        "title": "Destinasi dengan semua aktiviti rekreasi di Switzerland ",
+        "text": "Matlamat kami adalah untuk menjadikan semua aktiviti rekreasi di seluruh Switzerland boleh didapati di www.swissactivities.com. Ini memudahkan semua orang untuk mencari, membandingkan dan menempah aktiviti rekreasi."
+      },
+      "promise": {
+        "title": "Janji pelanggan kami",
+        "list": [
+          "tiada panggilan telefon yang memakan masa",
+          "tiada penyelidikan tanpa henti di pelbagai laman web",
+          "ketersediaan yang boleh disahkan secara langsung",
+          "tempahan segera tanpa jalan jauh",
+          "tiada kos tersembunyi",
+          "pilihan pembayaran yang tidak rumit dan pantas",
+          "tiada barisan membosankan",
+          "tinjauan manfaat menarik",
+          "tawaran tempatan"
+        ]
+      },
+      "team": {
+        "title": "Pasukan Swiss Activities"
+      }
+    },
+    "tos_b2b": {
+      "title": "Terma dan syarat umum bagi penyedia",
+      "description": "Ini adalah syarat dan ketentuan terkini kami untuk penyedia."
+    },
+    "tos_b2c": {
+      "title": "Syarat Layanan Platform Perantara Swiss Activities untuk pelanggan",
+      "description": "Ini adalah syarat dan ketentuan terkini kami untuk Platform Perantara Swiss Activities bagi Pelanggan."
+    },
+    "tos_aff": {
+      "title": "Terma dan syarat umum untuk rakan kongsi",
+      "description": "Ini adalah terma dan syarat semasa untuk rakan kongsi kami."
+    },
+    "imprint": {
+      "title": "Imprint",
+      "description": "Ini adalah imprint kami."
+    },
+    "privacy_policy": {
+      "title": "Dasar Privasi",
+      "description": "Ini adalah pernyataan privasi."
+    },
+    "contact_us": {
+      "title": "Hubungi kami",
+      "description": "Jika anda mempunyai sebarang pertanyaan, kami dengan senang hati akan membantu anda."
+    },
+    "basket": {
+      "title": "Keranjang",
+      "delete": "Padam",
+      "warning": "Adakah kamu ingin membuang tempahan ini daripada troli kamu?",
+      "edit": "Edit",
+      "cancel": "Batal",
+      "update": "Kemas kini troli",
+      "next": "Ke pembayaran",
+      "empty": "Troli anda kosong",
+      "hold": "Kami akan menahan tempahan ini untuk",
+      "explore": "Temui aktiviti rekreasi"
+    },
+    "booking": {
+      "title": "Tempahan"
+    },
+    "confirmation": {
+      "title": "Pengesahan tempahan",
+      "tickets": "Tiket anda",
+      "download": "Tiket Mudah Alih",
+      "more": "Lebih banyak informasi",
+      "cancel": "Batal tiket",
+      "cancelled": "Dibatalkan",
+      "cancelWhy": "Kenapa anda mahu membatalkan?",
+      "cancelReasons": [
+        "Cuti saya dibatalkan",
+        "Saya telah menemui alternatif yang lebih murah",
+        "Saya tidak menerima pengesahan saya tepat pada masanya",
+        "Pembekal telah meminta saya untuk membatalkan tempahan",
+        "Pilihan yang saya gemari tidak tersedia",
+        "Saya telah menempah tarikh yang salah",
+        "Saya telah menempah jumlah peserta yang salah",
+        "Sebab-sebab lain"
+      ],
+      "rebook": {
+        "title": "Tempahan semula",
+        "text": "Perubahan rancangan? Tempah aktiviti anda semula. Tempahan lama anda akan dibatalkan secara automatik.",
+        "button": "Tempah semula sekarang"
+      },
+      "stay": "Sila kekalkan pada halaman ini, tempahan anda sedang diproses.",
+      "editBooking": "Ubah tempahan",
+      "showTickets": "Tiket",
+      "drawerTitle": "Tempahan kamu",
+      "relatedBookings": "Tempahan Berkaitan"
+    },
+    "activities": {
+      "title": "Aktiviti riang terbaikan di Switzerland {year}",
+      "description": "Cari dan tempah aktiviti yang sesuai untuk anda {year} di Switzerland. Sebagai sebuah negara yang pelbagai, Switzerland menawarkan pelbagai aktiviti dan idea untuk lawatan sehari.",
+      "intro": "Sepanjang tahun, anda akan menemui aktiviti rekreasi untuk setiap acara. Sama ada anda merancang perjalanan dengan keluarga, menganjurkan pesta bujangan, mencari aktiviti luar atau mencari inspirasi untuk program cuaca buruk, di sini anda akan menemui sesuatu. Di Swiss Activities, anda boleh merancang dan membuat tempahan perjalanan sehari anda.",
+      "titleParentLocation": "{locationTitle} {year}: aktiviti dan tawaran terbaik",
+      "descriptionParentLocation": "Cari dan tempah aktiviti terbaik di {locationTitle}: Tempah tiket untuk destinasi atau aktiviti keluarga dengan beberapa klik.",
+      "titleChildLocation": "{locationTitle} {year}: aktiviti terbaik",
+      "descriptionChildLocation": "Tempah aktiviti terbaik di {locationTitle}. Tempah tiket untuk destinasi atau aktiviti keluarga dengan beberapa klik.",
+      "titleParentType": "{typeTitle} {year}: Aktiviti {typeTitle} terbaikan di Switzerland",
+      "descriptionParentType": "Tempah aktiviti {typeTitle} terbaik dari seluruh Switzerland. Tiada barisan, tiada yuran tempahan dan pilihan pembatalan percuma.",
+      "titleChildType": "{typeTitle} {year}: Tawaran {typeTitle} terbaikan di Switzerland",
+      "descriptionChildType": "Tempah tawaran terbaik untuk {typeTitle} dari seluruh Switzerland. Tiada barisan, tiada yuran tempahan dan pilihan pembatalan percuma.",
+      "titleParentLocationParentType": "{typeTitle} {locationTitle}: Tawaran dan harga terbaik {year}",
+      "descriptionParentLocationParentType": "Tempah tawaran terbaik untuk {typeTitle} {locationTitle} {year}. Tiada yuran tempahan dan pilihan pembatalan percuma.",
+      "titleParentLocationChildType": "{typeTitle} {locationTitle}: Tawaran dan harga terbaik {year}",
+      "descriptionParentLocationChildType": "Tempah tawaran terbaik untuk {typeTitle} {locationTitle} {year}. Tiada yuran tempahan dan pilihan pembatalan percuma.",
+      "titleChildLocationParentType": "{typeTitle} {locationTitle}: Tawaran dan harga terbaik {year}",
+      "descriptionChildLocationParentType": "Tempah tawaran terbaik untuk {typeTitle} {locationTitle} {year}. Tiada yuran tempahan dan pilihan pembatalan percuma.",
+      "titleChildLocationChildType": "{typeTitle} {locationTitle}: Tawaran dan harga terbaik {year}",
+      "descriptionChildLocationChildType": "Tempah tawaran terbaik untuk {typeTitle} {locationTitle} {year}. Tiada yuran tempahan dan pilihan pembatalan percuma."
+    },
+    "listing": {
+      "title": "{listingTitle}",
+      "offersTitle": "{title} Tiket dan Aktiviti",
+      "activities": "Aktiviti",
+      "relatedListings": "Tarikan Terbaik di {value}",
+      "relatedListingsClose": "Tarikan {value}",
+      "description": "Senarai untuk {listingTitle}",
+      "tableOfContent": "Daftar Isi",
+      "destinationTitle": "{location} - Tarikan {num} dan Aktiviti {year}",
+      "more": "Ketahui lebih lanjut tentang {val}",
+      "locations": "Tempat di {val}",
+      "regions": "Wilayah di {val}",
+      "type": "Tempat Popular di Switzerland untuk {val}",
+      "typeLocation": "Tempat Popular di {location} untuk {type}",
+      "types": "Aktiviti {val}",
+      "combo": "{type} {location} - {num} Tawaran dan Harga Terbaik {year}",
+      "map": "Peta",
+      "attributeBadWeatherTitleAttribute": "Idea {val} Terbaik untuk Cuaca Buruk di Switzerland",
+      "attributeBadWeatherTitle": "Idea {val} Terbaik untuk Cuaca Buruk di {location}",
+      "attributeBadWeatherTeaser": "Sama ada hujan, kabus atau salji: di [{location}]({locationLink}) terdapat banyak aktiviti yang boleh anda lakukan walaupun cuaca buruk. Oleh itu, hujan tidak semestinya akan merencatkan perancangan anda. Anda akan menemui kedua-dua aktiviti dalaman dan [aktiviti luar]({outdoorLink}) yang sesuai untuk semua cuaca. Anda boleh memilih sama ada anda ingin aktif atau mengambil pendekatan yang lebih tenang. Cari lebih banyak inspirasi untuk pelbagai [idea cuaca buruk]({badWeatherLink}) di seluruh Switzerland.",
+      "attributeBadWeatherDesc": "Cari idea cuaca buruk anda di {location} dan lakukan aktiviti yang boleh dilakukan dalam apa jua cuaca.",
+      "attributeFamilyTitleAttribute": "Idea {val} terbaik untuk perjalanan keluarga anda ke Switzerland",
+      "attributeFamilyTitle": "Idea {val} terbaik untuk perjalanan keluarga anda di {location}",
+      "attributeFamilyTeaser": "Rancang perjalanan keluarga seterusnya di [{location}]({locationLink}) untuk kamu dan anak-anakmu. Tidak kira sama ada kamu suka pengembaraan, bersantai atau ingin meneroka sesuatu yang baharu. Terdapat banyak aktiviti untuk dilakukan sepanjang tahun, walaupun pada [ cuaca buruk di {location}]({locationBadWeatherLink}). Kamu juga mempunyai pilihan untuk perjalanan dengan kereta bayi yang sesuai untuk anak-anak kecil. Dengan itu, tiada apa pun yang menghalang [perjalanan keluargamu]({familyLink}).",
+      "attributeFamilyDesc": "Cari idea yang sesuai untuk perjalanan keluarga anda yang seterusnya di {location} dan habiskan hari yang menarik dengan anak-anak anda.",
+      "attributeDogTitleAttribute": "Idea {val} terbaik untuk perjalanan dengan anjing di Switzerland",
+      "attributeDogTitle": "Idea {val} terbaik untuk perjalanan dengan anjing di {location}",
+      "attributeDogTeaser": "Adakah kamu mencari idea untuk aktiviti dengan anjingmu di [{location}]({locationLink})? Jika kamu mahu membawa teman setiamu bersamamu, di sini kamu akan menemukan semua aktiviti yang membenarkan dia ikut serta. Aktiviti [luar]({outdoorLink}) sering kali sangat sesuai, di mana anjingmu dapat bebas bermain di udara segar. Tetapi perjalanan dengan kapal atau kereta kabel juga merupakan pilihan yang baik. Tip rahsia kami adalah [Permainan Pelarian]({escapeLink}), kerana mereka dijalankan di luar dan menawarkan variasi yang menyenangkan dari jalan-jalan biasa.",
+      "attributeDogDesc": "Rancang perjalanan dengan anjing anda di {location} dan cuba sesuatu yang baru sebagai ganti - berjalan seperti biasa.",
+      "attributeOutdoorTitleAttribute": "Idea {val} terbaik untuk aktiviti luar di Switzerland",
+      "attributeOutdoorTitle": "Idea {val} terbaik untuk aktiviti luar di {location}",
+      "attributeOutdoorTeaser": "Di [{location}]({locationLink}) terdapat banyak [aktiviti luar]({outdoorLink}) yang boleh dilakukan sepanjang tahun. Sebahagian aktiviti meningkatkan tahap adrenalin kamu, sementara yang lain menunggu dengan pemandangan yang menakjubkan atau mencabar kemahiranmu. Terdapat juga aktiviti luar yang sesuai sebagai [idea cuaca buruk]({badWeatherLink}) atau untuk [perjalanan keluarga]({familyLink}). Dalam beberapa kes, kamu juga boleh membawa [anjingmu]({dogLink}) bersama. Beberapa aktiviti luar dapat diikuti dengan mudah secara sendirian, sementara yang lain, kerana alasan keselamatan, kamu harus menyertai tur yang dipandu secara profesional.",
+      "attributeOutdoorDesc": "Rancang aktiviti luar anda yang seterusnya di {location} dan habiskan hari di luar sepanjang tahun.",
+      "attributeBachelorPartyTitleAttribute": "Idea {val} terbaik untuk pesta bujang di Switzerland",
+      "attributeBachelorPartyTitle": "Idea {val} terbaik untuk pesta bujang di {location}",
+      "attributeBachelorPartyTeaser": "Anda sedang mencari idea hebat untuk pesta bujang di [{location}]({locationLink})? Sama ada untuk golongan yang menyukai makanan, pengembara atau penjelajah: anda akan mendapatkan sesuatu yang sesuai untuk semua selera. Dengan idea-idea kami, anda akan mengatasi tugasan untuk menganjurkan [pesta bujang]({attributeLink}) di {location} tanpa masalah. Jadi, bersiaplah untuk hari yang menyeronokkan bersama kawan-kawan anda.",
+      "attributeBachelorPartyDesc": "Rancang pesta bujang seterusnya anda di [{location}] dan habiskan hari yang menyeronokkan dengan rakan-rakan anda.",
+      "attributeTeamEventTitleAttribute": "Idea {val} terbaik untuk acara kumpulan di Switzerland",
+      "attributeTeamEventTitle": "Idea {val} terbaik untuk acara berkumpulan di {location}",
+      "attributeTeamEventTeaser": "Adakah anda ditugaskan untuk menganjurkan acara pasukan di [{location}]({locationLink})? Ini tidak selalunya mudah, kerana kehendak sering kali berbeza-beza. Dengan idea-idea kami, anda akan diinspirasikan untuk [acara pasukan]({attributeLink}) yang akan datang dan dapat mempersiapkan diri. Tidak kira sama ada untuk pencinta makanan, penjelajah, orang aktif, peminat teka-teki atau pengembara: anda akan menemui sesuatu yang sesuai untuk setiap selera. Jadi, bersiaplah untuk hari yang berjaya dan menyeronokkan bersama rakan sekerja anda.",
+      "attributeTeamEventDesc": "Rancang acara pasukan anda yang seterusnya di {location} dan habiskan hari yang menyeronokkan bersama rakan sekerja anda.",
+      "attributeValentinesDayTitleAttribute": "Idea terbaik {val} untuk Hari Valentine di Switzerland",
+      "attributeValentinesDayTitle": "Idea terbaik {val} untuk Hari Valentine di {location}",
+      "attributeValentinesDayTeaser": "Setiap tahun ia datang lagi: Hari Valentine. Mungkin anda sudah tahu dengan tepat apa yang ingin anda rancang pada 14 Februari akan datang. Atau mungkin anda masih ragu dan mencari idea untuk Hari Valentine anda di [{location}]({locationLink}). Aktiviti kami bertujuan untuk memberi inspirasi kepada anda dan membantu anda mencari sesuatu yang sesuai. Sama ada romantis, santai atau penuh pengembaraan: di sini anda pasti menemukan inspirasi untuk [Hari Valentine]({attributeLink}) yang akan membuat hati anda berdegup lebih kencang.",
+      "attributeValentinesDayDesc": "Rancang Hari Valentine anda yang seterusnya di {location} dan habiskan hari romantik bersama orang yang anda sayangi.",
+      "attributeFirstDateTitleAttribute": "Idea terbaik {val} untuk kencan pertama di Schweiz",
+      "attributeFirstDateTitle": "Idea terbaik {val} untuk kencan pertama di {location}",
+      "attributeFirstDateTeaser": "Adakah anda mencari idea yang sesuai untuk kencan pertama anda di [{location}]({locationLink}) dan tidak pasti bagaimana untuk mengagumkan pasangan anda? Maka anda berada di tempat yang tepat. Di halaman ini, anda akan menemui inspirasi yang diperlukan agar [kencan pertama]({attributeLink}) anda menjadi suatu kejayaan. Sama ada musim panas atau musim sejuk, mencabar atau santai, pasti ada sesuatu di sini yang boleh menggembirakan kencan anda. Dan siapa tahu, mungkin anda juga akan menemui sesuatu yang sesuai untuk pertemuan seterusnya dan seterusnya.",
+      "attributeFirstDateDesc": "Rancang kencan pertama anda di {location} dan habiskan hari yang romantis berdua.",
+      "attributeChildBirthdayTitleAttribute": "{val} idea untuk ulang tahun kanak-kanak di Switzerland",
+      "attributeChildBirthdayTitle": "{val} idea untuk ulang tahun kanak-kanak di {location}",
+      "attributeChildBirthdayTeaser": "Rancang hari jadi anak anda seterusnya di [{location}]({locationLink}). Hari jadi adalah salah satu perkara paling menarik dalam setahun bagi setiap kanak-kanak. Tanpa mengira musim, terdapat lebih daripada cukup idea untuk membuat anak anda gembira. Atur [aktiviti luar]({outdoorLink}) atau cari idea untuk [program cuaca buruk]({badWeatherLink}). Dengan cara ini, hari jadi anak anda yang seterusnya pasti akan berjaya.",
+      "attributeChildBirthdayDesc": "Anjurkan sambutan ulang tahun kanak-kanak di {location} dan rancang hari yang tidak dapat dilupakan untuk anak anda.",
+      "attributeWheelchairTitleAttribute": "{val} idea lawatan dengan kerusi roda untuk Switzerland",
+      "attributeWheelchairTitle": "{val} idea lawatan dengan kerusi roda di {location}",
+      "attributeWheelchairTeaser": "Rancang lawatan dengan kerusi roda di [{location}]({locationLink}) dan cari aktiviti yang mesra akses untuk anda. Melancong di Switzerland dengan kerusi roda adalah agak mudah berkat aksesibiliti yang maju dan usaha negara untuk memberikan pengalaman yang boleh diakses kepada semua pelancong. Ini termasuk aktiviti dalam dan [aktiviti luar]({outdoorLink}).",
+      "attributeWheelchairDesc": "Dapatkan inspirasi daripada idea lawatan mesra kerusi roda di {location} dan rancang aktiviti tanpa halangan anda.",
+      "attributePramTitleAttribute": "{val} idea lawatan dengan kereta bayi untuk Switzerland",
+      "attributePramTitle": "{val} idea lawatan dengan kereta bayi di {location}",
+      "attributePramTeaser": "Rancang perjalanan anda dengan kereta dorong di [{location}]({locationLink}). Jika anda mengembara dengan anak kecil, terdapat banyak aktiviti yang boleh anda lakukan. Banyak laluan mendaki direka untuk mesra kereta dorong, dan pengangkutan awam disusun untuk keselesaan keluarga dengan anak kecil. Jadi, tiada apa yang menghalang [perjalanan keluarga]({familyLink}) anda.",
+      "attributePramDesc": "Perjalanan ke {location} dengan kereta bayi dan rancang perjalanan seterusnya dengan keluarga anda.",
+      "attributesOther": "Kategori lain",
+      "attributesType": "Kategori untuk aktiviti {val}",
+      "teamEvent": "Hantar permintaan kumpulan anda kepada kami",
+      "recommended": "Disyorkan oleh pelancong",
+      "tickets": "Tiket",
+      "tours": "Tour berpemandu"
+    },
+    "error": {
+      "title": "Maaf, tetapi terjadi kesalahan. Kembali ke halaman utama dan cari kegiatan rekreasi yang sesuai."
+    },
+    "supplier": {
+      "title": "Swiss Activities: Pasar Aktiviti Rekreasi Terbesar di Switzerland",
+      "description": "Swiss Activities adalah pasar kegiatan rekreasi terbesar di Swiss. Dengan kami, kamu akan menjangkau lebih banyak pelanggan dan meningkatkan jumlah pemesananmu.",
+      "hero": {
+        "title": "Swiss Activities - Destinasi untuk Kegiatan Rekreasi di Switzerland",
+        "button": "Jadilah rakan rekreasi"
+      },
+      "numbers": {
+        "title": "Apa yang telah kami lakukan untuk rakan rekreasi kami di Swiss Activities sejak penubuhan",
+        "blocks": [
+          {
+            "title": "Pelawat laman web",
+            "number": "7'500'000",
+            "text": "pelanggan berpotensi"
+          },
+          {
+            "title": "Tempahan pelanggan",
+            "number": ">300'000",
+            "text": "Tamu yang disampaikan"
+          },
+          {
+            "title": "Sokongan pelanggan",
+            "number": ">10'000",
+            "text": "Perbincangan dilakukan"
+          },
+          {
+            "title": "Sistem Tempahan",
+            "number": ">20",
+            "text": "Sistem tempahan"
+          }
+        ]
+      },
+      "why": {
+        "title": "Mengapa menyenaraikan produk rekreasi anda di Swiss Activities",
+        "sales": {
+          "title": "Pelanggan Baru",
+          "description": "Dapatkan pelanggan baru dari dalam dan luar negeri dan tingkatkan penggunaan kapasiti anda."
+        },
+        "support": {
+          "title": "Automasi",
+          "description": "Swiss Activities mengambil alih proses penjualan anda yang ada dan menghantar transaksi kepada sistem anda."
+        },
+        "finances": {
+          "title": "Tanpa Risiko",
+          "description": "Tiada kos tetap atau pelaburan awal. Anda hanya membayar untuk pelanggan yang dirujuk."
+        },
+        "local": {
+          "title": "Mengakses Segmen Pelanggan Baharu",
+          "description": "Sambungkan diri anda dengan rangkaian penjual Swiss Activities dan tingkatkan capaian anda di dalam dan luar negara."
+        }
+      },
+      "who": {
+        "title": "Lebih daripada 500 rakan aktiviti berkerja dengan Swiss Activities",
+        "partners": [
+          {
+            "blocks": [
+              "/assets/supplier/partner/bergbahnen/rigi.png",
+              "/assets/supplier/partner/bergbahnen/schilthorn.png",
+              "/assets/supplier/partner/bergbahnen/jungfrau.jpeg",
+              "/assets/supplier/partner/bergbahnen/engelberg.svg",
+              "/assets/supplier/partner/bergbahnen/pilatus.jpeg",
+              "/assets/supplier/partner/bergbahnen/monte-tamaro.png",
+              "/assets/supplier/partner/bergbahnen/brienz.png",
+              "/assets/supplier/partner/bergbahnen/gornergrat.png",
+              "/assets/supplier/partner/destinationen/rheinfelden.png",
+              "/assets/supplier/partner/destinationen/basel.svg",
+              "/assets/supplier/partner/destinationen/winterthur.svg",
+              "/assets/supplier/partner/destinationen/interlaken.png",
+              "/assets/supplier/partner/attraktionen/ballenberg.png",
+              "/assets/supplier/partner/attraktionen/bls.png",
+              "/assets/supplier/partner/attraktionen/cgn.png",
+              "/assets/supplier/partner/attraktionen/chillon.jpeg",
+              "/assets/supplier/partner/attraktionen/maestrani.png",
+              "/assets/supplier/partner/attraktionen/verkehrshaus.png",
+              "/assets/supplier/partner/attraktionen/vier.png",
+              "/assets/supplier/partner/outdoor/best-of-switzerland.jpeg",
+              "/assets/supplier/partner/outdoor/kayak.jpeg",
+              "/assets/supplier/partner/outdoor/outdoorch.jpeg",
+              "/assets/supplier/partner/outdoor/paragliding.png",
+              "/assets/supplier/partner/outdoor/wine-tours.webp",
+              "/assets/supplier/partner/outdoor/zermatters.png"
+            ]
+          }
+        ]
+      },
+      "pricing": {
+        "title": "Model Harga",
+        "subtitle": "Bayar hanya apabila berjaya mendapatkan pelanggan",
+        "description": "Swiss Activities membantu anda mengenal pasti saluran jualan yang sesuai secara tempatan dan global serta menjual produk masa lapang anda di tempat pelanggan berpotensi anda berada. Memandangkan Swiss Activities tidak mengenakan yuran persediaan, anda boleh membuka saluran jualan baharu tanpa pelaburan tambahan.",
+        "blocks": [
+          {
+            "pretitle": "",
+            "cost": "18% + CHF 0.30",
+            "subcost": "exkl. GST.",
+            "button": "Jadi rakan kongsi aktiviti riadah",
+            "buttonLink": "https://k3qlq2fyp9o.typeform.com/to/CxWJub7f",
+            "subbutton": "",
+            "includes": [
+              "Penambahan aktiviti rekreasi di Swiss Activities",
+              "Pendaftaran aktiviti riadah tanpa had",
+              "Penyediaan penerangan produk oleh pasukan kandungan kami",
+              "Sambungan kepada lebih daripada 20 sistem tempahan",
+              "Sokongan rakan kongsi secara peribadi melalui chat dan telefon",
+              "Mengambil alih komunikasi dengan tetamu mengenai soalan tentang aktiviti",
+              "Pengendalian permintaan tempahan dan pembatalan dari tetamu",
+              "Pemantauan dan kawalan semua tempahan dan pembatalan",
+              "Pemantauan dan kawalan penyata akhir",
+              "Penyelesaian tunai diselaraskan - Penagihan melalui Swiss Activities",
+              "Memastikan proses jualan (bukan voucher, tetapi tiket)",
+              "Akses automatik ke rangkaian afiliasi",
+              "Penambahan aktiviti di rangkaian reseller"
+            ],
+            "faq": []
+          }
+        ]
+      },
+      "tech": {
+        "title": "Sistem Reservasi dan Tiket",
+        "description": "Selain daripada pelancaran dan digitalisasi semua produk rekreasi Switzerland, satu matlamat utama Swiss Activities adalah untuk memudahkan dan mengautomasikan proses penjualan semula produk rekreasi di dalam dan luar negara. Landskap pengedaran semakin kompleks dan kami membantu penjual semula untuk tidak kehilangan hubungan dengan segmen pelanggan. Oleh itu, hubungan langsung antara rakan kongsi rekreasi kami dan Swiss Activities menjadi lebih penting. Kami sentiasa berusaha untuk melaksanakan sistem baru. Jika sistem tempahan dan tiket anda tidak tersedia, sila hubungi kami di sales@swissactivities.com.",
+        "partners": [
+          "/assets/supplier/technology/trekksoft.webp",
+          "/assets/supplier/technology/regiondo.webp",
+          "/assets/supplier/technology/tomas.webp",
+          "/assets/supplier/technology/waldhart.webp",
+          "/assets/supplier/technology/experiencebank.webp",
+          "/assets/supplier/technology/skidata.webp",
+          "/assets/supplier/technology/axess.webp",
+          "/assets/supplier/technology/smeetz.webp",
+          "/assets/supplier/technology/eatwith.webp",
+          "/assets/supplier/technology/fareharbor.webp",
+          "/assets/supplier/technology/bookingkit.webp",
+          "/assets/supplier/technology/ntree.webp",
+          "/assets/supplier/technology/secutix.webp",
+          "/assets/supplier/technology/tourcms.webp",
+          "/assets/supplier/technology/sbb.webp"
+        ],
+        "titleSoon": "Akan datang",
+        "partnersSoon": [
+          "/assets/supplier/technology/feratel.webp"
+        ]
+      },
+      "faq": [
+        {
+          "title": "Maklumat Umum untuk Rakan Riadah",
+          "blocks": [
+            {
+              "title": "Siapa yang boleh menjadi rakan riadah Swiss Activities?",
+              "text": "Sesiapa yang ingin menjual aktiviti riadah di Switzerland boleh menjadi rakan Swiss Activities. Tawaran anda boleh sangat pelbagai dan tidak ada batasan untuk imaginasi anda. Kami mempunyai aktiviti, tiket, pengembaraan, lawatan, sewaan dan sebagainya dalam sekitar 100 kategori. Ini termasuk kursus memasak untuk kek unicorn serta penerbangan paragliding tandem atau tiket masuk ke muzium. Yang penting adalah tawaran ini diadakan sama ada di Switzerland atau dapat dilakukan dalam perjalanan sehari dari Switzerland."
+            },
+            {
+              "title": "Sistem tempahan mana yang boleh saya sambungkan dengan Swiss Activities?",
+              "list": [
+                "Trekksoft",
+                "Regiondo",
+                "Waldhart",
+                "Experience Bank",
+                "Skidata",
+                "Axess",
+                "Tomas",
+                "Smeetz",
+                "Eatwith",
+                "Fareharbor",
+                "Booking Kit",
+                "N-Tree",
+                "Secutix",
+                "TourCMS",
+                "Palisis",
+                "Akan datang: SBB dan Feratel"
+              ]
+            },
+            {
+              "title": "Saya tidak bekerja dengan sistem tempahan. Bolehkah saya masih menjual aktiviti saya melalui Swiss Activities?",
+              "text": "Walaupun anda tidak menggunakan sistem tempahan, anda boleh menyenaraikan aktiviti anda dengan kami. Dalam kes ini, kami akan membuat kalendar secara manual mengikut spesifikasi anda. Jika anda ingin melaksanakan sistem tempahan, sila hubungi kami. Kami sedia memberikan nasihat tentang topik ini. Maklumat yang kami perlukan dari anda adalah seperti berikut:",
+              "list": [
+                "Tempoh (Tarikh)",
+                "Waktu mula",
+                "Tempoh",
+                "Tutup (berapa lama sebelum pelanggan harus membuat tempahan?)",
+                "Harga mengikut Kategori (Dewasa, Kanak-kanak, Sewa dsb.)",
+                "Jumlah tempat yang tersedia maksimum bagi setiap slot"
+              ]
+            },
+            {
+              "title": "Maklumat apa yang dihantar semasa tempahan?",
+              "text": "Apabila seorang pelanggan membuat tempahan dengan Swiss Activities, mereka akan menerima emel pengesahan dengan semua maklumat penting. Ini termasuk butiran hubungan anda, supaya mereka boleh menghubungi anda terus jika mereka mempunyai sebarang pertanyaan.",
+              "list": [
+                "Nama Aktiviti",
+                "Tarikh",
+                "Masa",
+                "Titip Temu",
+                "Jumlah Tiket yang Ditempah",
+                "Butiran Hubungan Anda (Emel dan Telefon)"
+              ]
+            },
+            {
+              "title": "Adakah harga yang sama untuk aktiviti saya diterbitkan di Swiss Activities seperti di laman web saya?",
+              "text": "Ya, dengan kami pelanggan membayar jumlah yang sama seperti jika mereka membuat tempahan secara langsung pada anda. Ini sama pentingnya bagi anda seperti bagi kami. Jika harga berbeza di pelbagai lokasi, pelanggan akan menyedarinya, yang membawa kepada aduan dan salah faham. Dengan cara ini, kita berdua berisiko kehilangan pelanggan yang kembali."
+            },
+            {
+              "title": "Berapa lama tempoh pembatalan di Swiss Activities?",
+              "text": "Pelanggan di Swiss Activities mempunyai kemungkinan untuk membatalkan secara percuma sehingga 24 jam sebelum aktiviti. Jika anda ingin mendaftar aktiviti yang tidak boleh dibatalkan, kami boleh mengaturkan itu. Namun, pengalaman kami menunjukkan bahawa kami lebih banyak mendapatkan tempahan untuk aktiviti yang menawarkan pilihan pembatalan. Jika anda perlu membatalkan tempahan, anda juga boleh melakukannya. Segera maklumkan kepada pelanggan dan beritahu kami juga, supaya kami dapat memproses pengembalian wang. "
+            },
+            {
+              "title": "Bagaimana menangani pembatalan seterusnya?",
+              "text": "Jika kami menerima permintaan untuk pembatalan seterusnya melalui borang pembatalan kami, kami tidak pernah melakukan pengembalian wang tanpa terlebih dahulu berunding dengan anda. Untuk mengelakkan penipuan, kami sentiasa mendapatkan persetujuan anda untuk mengesahkan gambaran pelanggan. Hanya apabila kami mempunyai persetujuan anda, kami akan memproses pengembalian wang selepasnya."
+            }
+          ]
+        },
+        {
+          "title": "Proses pendaftaran produk rekreasi",
+          "blocks": [
+            {
+              "title": "Bagaimana saya boleh mendaftar tawaran saya di Swiss Activities?",
+              "text": "Jika anda ingin menjadi rakan rekreasi di Swiss Activities dan mendaftar tawaran anda, terdapat langkah-langkah berikut yang perlu dilalui:",
+              "list": [
+                "Daftar terlebih dahulu sebagai rakan rekreasi.",
+                "Isi borang untuk setiap aktiviti yang ingin anda daftarkan. Pautan untuk itu akan anda terima setelah kami mengesahkan pendaftaran anda.",
+                "Kami biasanya akan menulis dan merekod aktiviti anda dalam masa dua minggu.",
+                "Seb一belum aktiviti aktif, kami akan memberitahu anda melalui e-mel."
+              ]
+            },
+            {
+              "title": "Apakah maklumat yang diperlukan untuk mendaftar aktiviti saya?",
+              "text": "Setelah anda mendaftar sebagai rakan rekreasi dengan kami, kami akan menghantar borang kepada anda untuk merekod aktiviti anda. Untuk dapat mendaftar, kami memerlukan maklumat berikut daripada anda:",
+              "list": [
+                "Maklumat tentang sistem tempahan (jika ada)",
+                "Tajuk aktiviti",
+                "Pautan kepada aktiviti",
+                "Sekurang-kurangnya 4 foto untuk setiap aktiviti",
+                "Maklumat mengenai tarikh, masa, dan durasi, jika anda tidak menggunakan sistem tempahan",
+                "Maklumat yang ada mengenai umur, bahasa, berat badan dan lain-lain.",
+                "Kesuaian aktiviti: anjing, kereta bayi, kerusi roda, keluarga dan lain-lain.",
+                "Titik pertemuan yang tepat"
+              ]
+            },
+            {
+              "title": "Bolehkah saya memadam penyertaan saya pada bila-bila masa?",
+              "text": "Ya, anda boleh menarik diri dari kontrak pada bila-bila masa. Tiada tempoh kontrak minimum dan tiada kos yang timbul daripada pembatalan."
+            },
+            {
+              "title": "Apa yang perlu saya lakukan jika saya ingin mengubah sesuatu dalam aktiviti?",
+              "text": "Jika anda mempunyai permintaan untuk mengubah kandungan atau ingin menyesuaikan harga - asalkan anda tidak menggunakan sistem tempahan - anda boleh memberitahu kami melalui e-mel."
+            },
+            {
+              "title": "Bagaimana saya menghubungi pelanggan?",
+              "text": "Setiap kali anda membuat tempahan, anda akan menerima e-mel pengesahan daripada kami yang mengandungi maklumat pelanggan. Di sana anda akan menemukan nama, alamat e-mel, dan nombor telefon mereka untuk menghubungi mereka."
+            },
+            {
+              "title": "Bagaimana saya menerima wang saya?",
+              "text": "Pembayaran semua jumlah terbuka dibuat selepas tarikh perkhidmatan dan akan secara automatik dipindahkan pada awal bulan berikutnya. Semua tempahan yang dibuat pada bulan sebelumnya akan dihimpunkan dan diselesaikan dalam satu pembayaran."
+            }
+          ]
+        }
+      ]
+    },
+    "supplierRegistration": {
+      "title": "Swiss Activities: pasar aktiviti masa lapang terbesar di Switzerland",
+      "description": "Swiss Activities adalah pasar aktiviti rekreasi terbesar di Switzerland. Dengan kami, anda boleh mencapai lebih banyak pelanggan dan meningkatkan tempahan anda.",
+      "hero": {
+        "title": "Jadilah sebahagian daripada Swiss Activities",
+        "description": "Daftar secara percuma di Swiss Activities dan tingkatkan jangkauan anda dengan tetamu Swiss dan antarabangsa. Kelebihan anda dalam ringkasan",
+        "list": [
+          "Dijumpai di Google sebagai syarikat dan dengan tawaran anda. Dan itu dalam 4 bahasa!",
+          "Buka saluran jualan baru",
+          "Manfaatkan sokongan pelanggan percuma kami",
+          "Sambungkan sistem tempahan anda dan urus ketersediaan anda terus di dalamnya.",
+          "Pemesan baru - pelanggan anda. Kami tidak menyembunyikan rakan kongsi kami dan ingin memberikan pengalaman pemesanan terbaik kepada pelanggan.",
+          "Tiada kos tetap atau bayaran tersembunyi.",
+          "Pelanggan anda boleh membayar dengan semua kaedah pembayaran tempatan seperti Twint, pembelian secara bil, dan kad kredit biasa."
+        ]
+      }
+    },
+    "affiliate": {
+      "title": "Afiliasi",
+      "description": "Sertai sebagai rakan kongsi di Swiss Activities dan dapatkan komisen sebanyak 1% hingga 5% dari tempahan pertama. Tiada kos tetap.",
+      "hero": {
+        "title": "Jadilah Rakan Affiliate Swiss Activities sekarang",
+        "description": "Daftar untuk program afiliasi Swiss Activities dan nikmati alat pengintegrasian menarik, komisen 1% hingga 5%, dan durasi cookie selama 45 hari.",
+        "steps": [
+          "Daftar",
+          "Laksanakan aktiviti kami",
+          "Jana tempahan dan hasilkan wang"
+        ],
+        "button": "Daftar sekarang"
+      },
+      "form": {
+        "tos": "Saya setuju dengan <a target='_blank' href='/agb/affiliates/'>Syarat Perkhidmatan</a>"
+      },
+      "advantagesTitle": "Apa keuntungan anda sebagai rakan kongsi afiliasi Swiss Activities?",
+      "advantages": [
+        {
+          "title": "1'500+ Aktiviti Rekreasi",
+          "text": "Sebagai rakan kongsi afiliasi Swiss Activities, dengan beberapa klik, anda mempunyai akses kepada lebih dari 1'500 aktiviti rekreasi di seluruh Switzerland."
+        },
+        {
+          "title": "Syarat menarik",
+          "text": "Anda akan menerima komisi 1% hingga 5% untuk setiap tempahan yang dipindahkan. Tempoh cookie adalah 45 hari."
+        },
+        {
+          "title": "Mengilhami pembaca anda",
+          "text": "Hidupkan blog atau laman web anda dengan kandungan yang menginspirasi dan bantu komuniti anda menjimatkan masa dalam merancang aktiviti santai."
+        },
+        {
+          "title": "Pendaftaran yang tidak rumit",
+          "text": "Manfaatkan pendaftaran yang sederhana dan cepat."
+        },
+        {
+          "title": "Penjualan tiket langsung",
+          "text": "Anda mempunyai pilihan untuk menjual tiket secara langsung di laman web anda tanpa mengalihkan pembaca anda kepada kami."
+        },
+        {
+          "title": "HTML Kustom",
+          "text": "Terima kasih kepada alat HTML kustom kami yang serbaguna dan menarik, anda boleh memperibadikan peluang jualan anda."
+        }
+      ],
+      "faqTitle": "Soalan yang paling penting dijawab",
+      "faq": [
+        {
+          "title": "Bagaimana cara pendaftaran untuk program afiliasi Swiss Activities?",
+          "text": "Daftar dengan menggunakan borang di halaman ini dengan semua maklumat yang diperlukan. Kami akan menyemak pendaftaran anda dalam satu hari bekerja dan akan menghantar butiran login anda melalui e-mel apabila diterima."
+        },
+        {
+          "title": "Bagaimana saya boleh log masuk ke papan pemuka rakan kongsi afiliasi saya?",
+          "text": "Dalam pendaftaran anda, anda menetapkan kata laluan peribadi anda. Setelah kami menyemak maklumat anda, anda akan diberitahu dan boleh log masuk ke papan pemuka afiliasi anda melalui <a href='https://swissactivities.tapfiliate.com/login' target='_blank'>pautan ini</a>."
+        },
+        {
+          "title": "Di mana saya boleh mendapatkan lebih banyak maklumat tentang program afiliasi?",
+          "text": "Dalam pusat bantuan kami, anda akan menemukan <a href='https://intercom.help/swiss-activities/de/collections/3916117-affiliate-moglichkeiten-zur-einbindung' target='_blank'>langkah pertama</a> serta pertanyaan penting mengenai <a href='https://intercom.help/swiss-activities/de/collections/3916117-affiliate-moglichkeiten-zur-einbindung' target='_blank'>integrasi aktiviti kami</a>. Selain itu, selepas pendaftaran, anda akan menerima suatu rangkaian e-mel dengan tips berguna."
+        },
+        {
+          "title": "Siapa yang boleh menjadi rakan kongsi afiliasi Swiss Activities?",
+          "text": "Jika anda menjalankan blog atau laman web yang berkaitan dengan pelancongan Switzerland, aktiviti santai di Switzerland atau perjalanan secara umum, anda boleh mendaftar untuk program afiliasi kami. Jika anda mempunyai akaun Instagram, Pinterest atau Facebook di mana anda boleh menyertakan pautan afiliasi, anda juga boleh mendaftar dengan kami."
+        },
+        {
+          "title": "Bolehkah saya menarik diri dari program afiliasi?",
+          "text": "Sudah tentu. Anda tidak terikat kepada sebarang tempoh minimum. Jika anda ingin memadamkan akaun anda, beritahu kami melalui e-mel atau chat dan kami akan mengambil langkah-langkah yang perlu."
+        },
+        {
+          "title": "Berapa komisi yang saya dapat untuk setiap tempahan yang dirujuk?",
+          "text": "Anda akan memperoleh komisi antara 1% hingga 5% jika anda merujuk kepada kami pelanggan yang melaksanakan aktiviti tersebut. Jika pelanggan tersebut membatalkan tempahan mereka, malangnya kami tidak dapat membayar sebarang komisi kepada anda."
+        }
+      ]
+    },
+    "apps": {
+      "title": "Aplikasi Swiss Activities",
+      "description": "Alami Switzerland dengan Aplikasi Swiss Activities – temukan, bandingkan, dan pesan aktivitas rekreasi langsung di smartphone kamu.",
+      "hero": {
+        "title": "Petualangan Swiss kamu di dalam saku",
+        "description": "Dengan aplikasi Swiss Activities, kamu mendapat akses langsung ke lebih dari {amount} aktiviti di seluruh Switzerland. Temukan pengalaman, buat tempahan dalam beberapa saat, dan simpan semua tiket serta tempahanmu pada bila-bila masa.",
+        "features": [
+          "Tiket selalu siap sedia",
+          "Kelola pemesanan dengan mudah",
+          "Temukan pengalaman baru untuk setiap selera",
+          "Tiket juga tersedia secara offline"
+        ]
+      }
+    },
+    "travelGuide": {
+      "title": "Perancang perjalanan anda untuk Switzerland",
+      "description": "Switzerland is a very diverse country and has an incredible amount to offer for your trip. So don't let the small area fool you. Although Switzerland is around ten times smaller than Sweden, California or Morocco, you will find something for every taste. In Mediterranean Ticino you are in a completely different world than in busy Basel. And the mountainous Alpstein has a very different climate than the mild Lake Geneva region. And this, although these places are only three to four hours apart. In our blog we help you with your travel planning. We provide you with helpful travel tips and useful information so that you can prepare perfectly. It doesn't matter whether you're traveling to Switzerland for the first time or already know your way around. Our articles are suitable for first-time visitors as well as for real Switzerland connoisseurs.",
+      "intro": "Switzerland is a very diverse country and has an incredible amount to offer for your trip. So don't let the small area fool you. Although Switzerland is around ten times smaller than Sweden, California or Morocco, you will find something for every taste. In Mediterranean Ticino you are in a completely different world than in busy Basel. And the mountainous Alpstein has a very different climate than the mild Lake Geneva region. And this, although these places are only three to four hours apart. In our blog we help you with your travel planning. We provide you with helpful travel tips and useful information so that you can prepare perfectly. It doesn't matter whether you're traveling to Switzerland for the first time or already know your way around. Our articles are suitable for first-time visitors as well as for real Switzerland connoisseurs."
+    },
+    "travelRoutes": {
+      "title": "Rute perjalanan Switzerland",
+      "description": "Switzerland is a very diverse country and has an incredible amount to offer for your trip. So don't let the small area fool you. Although Switzerland is around ten times smaller than Sweden, California or Morocco, you will find something for every taste. In Mediterranean Ticino you are in a completely different world than in busy Basel. And the mountainous Alpstein has a very different climate than the mild Lake Geneva region. And this, although these places are only three to four hours apart. In our blog we help you with your travel planning. We provide you with helpful travel tips and useful information so that you can prepare perfectly. It doesn't matter whether you're traveling to Switzerland for the first time or already know your way around. Our articles are suitable for first-time visitors as well as for real Switzerland connoisseurs."
+    },
+    "widget": {
+      "title": "Integrate Swiss Activities into your website",
+      "description": "Sertakan Swiss Activities dalam laman web kamu dan jual aktiviti secara langsung melalui laman web kamu.",
+      "hero": {
+        "title": "Integrate offers from Swiss Activities into your website",
+        "description": "The Swiss Activities Widget is the easiest way to integrate activities into your website. Choose from a variety of widget styles and embed in minutes.",
+        "button": "Get started"
+      },
+      "cta": {
+        "title": "Become an affiliate",
+        "button": "Go to form"
+      }
+    },
+    "newsletterConfirm": {
+      "title": "Terima kasih untuk pendaftaran anda. Kami baru saja mengirimkan pesanan untuk mengesahkan pendaftaran anda."
+    },
+    "newsletterSuccess": {
+      "title": "Terima kasih! Anda kini telah mendaftar untuk surat berita kami."
+    },
+    "cookiePolicy": {
+      "title": "Dasar Kuki"
+    },
+    "vouchers": {
+      "title": "Idea hadiah pengalaman untuk Switzerland – kupon terbaik di Swiss Activities",
+      "description": "Hadiahkan momen-momen tidak terlupakan dengan kupon pengalaman dari Swiss Activities! Temui pilihan terbesar aktiviti rekreasi di Switzerland – fleksibel, mudah, dan boleh ditempah secara dalam talian dengan serta-merta. Sempurna sebagai idea hadiah untuk sebarang acara.",
+      "hero": {
+        "title": "Hadiahkan kupon pengalaman untuk Switzerland sekarang dan bawa kegembiraan!",
+        "text": "Temui sekarang idea hadiah terbaik dan kupon pengalaman di Swiss Activities. Sama ada untuk hari jadi, sebagai hadiah Krismas atau sekadar untuk mengucapkan terima kasih – kupon untuk pengalaman Switzerland memenuhi setiap cita rasa dan adalah hadiah yang pasti akan diingati.",
+        "button": "Beli kupon"
+      },
+      "gift": {
+        "title": "Hadiahkan pengalaman Switzerland terbaik – dari pengembaraan hingga relaksasi",
+        "text": "Adakah anda mencari idea hadiah unik untuk rakan atau keluarga di Switzerland? Kupon pengalaman dari Swiss Activities memberi anda akses kepada pilihan terbesar aktiviti rekreasi yang ditawarkan oleh Switzerland. Sama ada lawatan berpandu, pengembaraan di alam semula jadi, waktu santai di spa termal atau sorotan budaya di muzium – Swiss Activities memudahkan anda untuk memberikan momen istimewa."
+      },
+      "why": {
+        "title": "Kenapa kupon pengalaman dari Swiss Activities adalah idea hadiah yang sempurna",
+        "items": [
+          {
+            "title": "Pilihan terbesar di Switzerland",
+            "text": "Lebih daripada <b>1,600</b> aktiviti rekreasi di semua kawasan, dari pengembaraan luar hingga saat-saat relaksasi."
+          },
+          {
+            "title": "Lebih daripada <b>100,000</b> pelanggan yang berpuas hati",
+            "text": "Swiss Activities adalah rakan kongsi yang dipercayai untuk hadiah khusus dan perjalanan."
+          },
+          {
+            "title": "Pilihan pembatalan percuma",
+            "text": "Tempahan yang selamat dan fleksibel, yang boleh disesuaikan dengan keperluan penerima."
+          },
+          {
+            "title": "Sokongan pelanggan 5-Bintang",
+            "text": "Kualiti dan sokongan Swiss – untuk permulaan pengalaman yang lancar."
+          }
+        ]
+      },
+      "end": {
+        "title": "Hadiahkan baucar pengalaman di Switzerland dan berikan kegembiraan!",
+        "text": "Temui idea hadiah terbaik dan baucar pengalaman di Swiss Activities. Tidak kira sama ada untuk hari jadi, hadiah Krismas atau hanya untuk mengucapkan terima kasih – baucar untuk pengalaman di Switzerland sesuai untuk semua selera dan mencipta kenangan yang kekal.",
+        "button": "Pilih voucher"
+      },
+      "banner": {
+        "tagline": "BARU: Idea hadiah yang sempurna!",
+        "title": "Dapatkan\nkupon pengalaman",
+        "button": "Tekan di sini"
+      }
+    }
+  },
+  "filter": {
+    "nearby": "View nearby activities",
+    "results": "Show results",
+    "filter": "Penapis",
+    "search": "Cari",
+    "location": "Lokasi",
+    "types": "Jenis",
+    "categories": "Kategori",
+    "activity": "Aktiviti",
+    "activities": "Aktiviti",
+    "today": "Hari Ini",
+    "tomorrow": "Esok",
+    "price": "Harga",
+    "noResults": "Tiada hasil",
+    "noExactResults": {
+      "title": "Tiada hasil yang tepat",
+      "description": "Cuba ubah atau buang beberapa penapis kamu atau laraskan kawasan carian kamu.",
+      "showNearest": "Tunjukkan hasil yang paling hampir",
+      "resetDate": "Tetapkan semula tempoh masa"
+    },
+    "lang": "Bahasa",
+    "sort": {
+      "relevance": "Relevansi",
+      "distance": "Jarak dari anda",
+      "popularityDesc": "Populariti menurun",
+      "ratingDesc": "Penarafan menurun",
+      "ratingAsc": "Peringkat menaik",
+      "priceDesc": "Harga menurun",
+      "priceAsc": "Harga menaik",
+      "dateDesc": "Terkini dahulu",
+      "dateAsc": "Tertua dahulu"
+    },
+    "navigationBreadcrumbs": {
+      "root": "Switzerland"
+    },
+    "all": "Semua",
+    "map": "Peta",
+    "card": {
+      "from": "dari",
+      "person": "setiap orang"
+    },
+    "viewMore": "Lihat lebih banyak",
+    "ratingBetterThan": "Lebih baik daripada {val} bintang",
+    "ratingEqual": "{val} bintang",
+    "ratingNone": "BARU / Tiada penilaian",
+    "moreFilters": "Tampilkan {val} lebih banyak",
+    "lessFilters": "Tampilkan lebih sedikit",
+    "usedFilters": "Filter yang diterapkan",
+    "resetFilters": "Reset",
+    "discountTypes": "Diskon",
+    "calendar": "Kalendar",
+    "locationError": "Posisi tidak dapat dimuat",
+    "textOnly": "Hanya ulasan dengan teks"
+  },
+  "activity": {
+    "you": "kamu",
+    "nearby": "{distance}km dari {location}",
+    "nearbyAlt": "{distance}km jauh",
+    "recommendation": "Rekomendasi",
+    "reviews": "Ulasan",
+    "reviewOriginalIn": "Asal dalam {language}",
+    "booked": "{val} kali dipesan",
+    "providedBy": "Penyedia aktivitas",
+    "save": "Simpan",
+    "selectDate": "Pilih Tanggal",
+    "similarActivities": "Aktivitas serupa",
+    "question": "Bagaimana kami bisa membantu?",
+    "rating": "Penilaian",
+    "highDemand": "Permintaan tinggi",
+    "widget": {
+      "free": "tersedia",
+      "error500": "Ses sesuatu tidak kena, sila cuba lagi dalam 1 minit.",
+      "errorDate": "Sayangnya, tidak ada slot yang tersedia untuk {val}.",
+      "choose": "Pilih",
+      "titleTime": "Pilih tawaran",
+      "titleTicketOption": "Pilih pilihan tiket",
+      "titleParticipants": "Pilih peserta",
+      "titleTickets": "Pilih Tiket",
+      "confirmOffer": "Sahkan pilihan tiket",
+      "confirmTickets": "Sahkan peserta",
+      "confirmDate": "Sahkan tarikh",
+      "confirmDateTime": "Sahkan tarikh & waktu",
+      "cheapest": "Harga paling murah",
+      "time": "Masa",
+      "navTicket": "Tiket",
+      "check": "Semak ketersediaan",
+      "notBookable": "Malangnya, tawaran ini tidak boleh ditempah buat masa ini.",
+      "paymentMethods": "Kaedah pembayaran",
+      "totalPrice": "Jumlah harga",
+      "taxes": "Yuran tambahan",
+      "offerTimeSelect": "Pilih masa",
+      "basket": "Keranjang",
+      "basketAdd": "Tambah ke keranjang",
+      "selectedOffer": "Tawaran",
+      "adjust": "Edit tempahan",
+      "swissHalfFareCard": "Orang yang tinggal di luar Switzerland boleh&nbsp;<a href=\"/bahnpaesse/swiss-half-fare-card/\" target=\"_blank\" className=\"inline-block\">mendapatkan Swiss Half Fare Card di sini</a> untuk menikmati potongan di pengangkutan awam."
+    },
+    "tabs": {
+      "highlights": "Sorotan",
+      "includes": "Menyertakan",
+      "importantInformation": "Maklumat penting",
+      "meetingPoints": "Tempat pertemuan"
+    },
+    "newsletter": {
+      "title": "Jangan lepaskan aktiviti lagi",
+      "description": "Daftar sekarang untuk petua perjalanan, idea untuk sumber inspirasi dan panduan perjalanan terkini terus ke peti masuk anda.",
+      "signup": "Daftar",
+      "inputPlaceholder": "Emel anda"
+    },
+    "notRefundable": {
+      "title": "Tidak boleh dibatalkan",
+      "description": "Malangnya, kami tidak dapat menawarkan anda sebarang refund dan juga tidak dapat mengubah atau membatalkan tempahan anda untuk produk tertentu ini kerana polisi rakan kongsi kami."
+    }
+  },
+  "UI": {
+    "date": "Tarikh"
+  },
+  "home": {
+    "title": "Pengalamanmu bermula di sini"
+  },
+  "discover": {
+    "title": "Temukan Aktivitas"
+  },
+  "booking": {
+    "cancelable": "Pembatalan percuma hingga",
+    "privacyMessage": "Dengan meneruskan pembayaran, kamu menerima <tos>{text}</tos> serta syarat pembatalan yang terkandung dalam Swiss Activities AG.",
+    "privacyPolicy": "terma dan syarat",
+    "personalTitle": "Butiran tempahan",
+    "personalSubtitle": "Untuk menyelesaikan tempahan, sila isi maklumat berikut.",
+    "mainGuest": "Orang untuk dihubungi",
+    "fullName": "Nama pertama",
+    "lastName": "Nama keluarga",
+    "email": "E-mel",
+    "phoneNumber": "Nombor telefon",
+    "cardDetails": "Kaedah pembayaran",
+    "paymentSecure": "Pembayaran selamat - kami menggunakan penyulitan SSL untuk melindungi data anda",
+    "creditPayments": "Kad kredit",
+    "total": "Jumlah",
+    "fullDay": "Sepanjang hari",
+    "booknow": "Tempah sekarang",
+    "addMoreInformation": "Tambah butiran",
+    "addPaymentMethod": "Pilih kaedah pembayaran",
+    "youBook": "Troli",
+    "rebate": "Kod diskaun",
+    "rebateEmailRequired": "Sila masukkan alamat e-mel anda terlebih dahulu dan sahkan untuk menebus kod diskaun.",
+    "important": "Saya telah menyemak syarat di bawah \"Maklumat Penting\" untuk aktiviti(aktiviti) tersebut",
+    "importantShow": "Tunjukkan maklumat",
+    "importantHide": "Sembunyikan maklumat"
+  },
+  "confirm": {
+    "title": "Terima kasih atas tempahan anda dengan Swiss Activities.",
+    "confirmed": "Tempahan anda telah disahkan.",
+    "pending": "Tempahan anda sedang diproses.",
+    "cancelled": "Tempahan anda telah dibatalkan.",
+    "failed": "Maaf, malangnya ada sesuatu yang tidak kena.",
+    "failedPayment": "Pembayaran tidak dapat diproses. Sila cuba dengan kaedah pembayaran lain.",
+    "failedReservation": "Malangnya tempahan tidak dapat disahkan. Pembayaran kamu akan dikembalikan. Sila cuba lagi.",
+    "wait": "Kami sedang menunggu penyedia pembayaran kami untuk mengesahkan sama ada pembayaran telah disahkan.",
+    "waitEmail": "Anda akan menerima e-mel setelah pembayaran disahkan.",
+    "caption": "Terima kasih banyak atas tempahan melalui Swiss Activities. Kami telah menghantar e-mel pengesahan kepada anda.",
+    "bookingNumber": "Nombor tempahan",
+    "point": "Tempat pertemuan",
+    "pointAddress": "Alamat tempat pertemuan",
+    "number": "Nombor telefon bimbit",
+    "end": "Akhir",
+    "email": "Pengesahan tempahan anda telah dihantar ke {email}. Jika anda tidak menerimanya dalam beberapa minit akan datang, sila hubungi sokongan kami melalui chat.",
+    "transport": {
+      "title": "Datang dengan pengangkutan awam?",
+      "from": "Tempatmu",
+      "description": "Perjalanan dengan pengangkutan awam dengan selesa dan tambahkan tiket mudah alih anda terus ke tempahan ini.",
+      "button": "Tambah tiket"
+    }
+  },
+  "footer": {
+    "company": {
+      "title": "Syarikat",
+      "about-us": "Tentang Kami",
+      "jobs": "Pekerjaan",
+      "legal": "Perundangan"
+    },
+    "resources": {
+      "title": "Sumber"
+    },
+    "collaboration": {
+      "title": "Kerjasama",
+      "becomeapartner": "Menjadi rakan kongsi",
+      "affiliate": "Program Afiliasi",
+      "widget": "Widget"
+    },
+    "affiliate": {
+      "title": "Kod afiliasi",
+      "button": "Salin kod",
+      "buttonCopied": "Kod disalin!"
+    },
+    "contact": {
+      "title": "Perkhidmatan Pelanggan",
+      "faq": "Soalan & Jawapan (FAQ)",
+      "cookie": "Persetujuan Cookie"
+    },
+    "mobileApp": "Dapatkan aplikasi kami"
+  },
+  "tickets": {
+    "discounts": {
+      "noDiscount": "Tiada diskaun"
+    },
+    "showDiscounts": "Tunjukkan kad pelanggan dan diskaun",
+    "travelClass": "Kelas perjalanan"
+  },
+  "supplier": {
+    "activities": "Aktiviti"
+  },
+  "contactPopup": {
+    "modalTitle": "Bagaimana kami dapat membantu anda hari ini?"
+  },
+  "contactForm": {
+    "fullname": "Nama Penuh",
+    "email": "E-Mel",
+    "subject": "Subjek",
+    "messagePlaceholder": "Permintaan, tempahan, dll...",
+    "submit": "Hantar",
+    "formError": "Ada sesuatu yang tidak berjaya. Sila cuba lagi."
+  },
+  "contactThankYou": {
+    "title": "Terima kasih atas kontak anda!"
+  },
+  "internalLinkBlock": {
+    "destinations": "Destinasi Terbaik",
+    "locations": "Wilayah Percutian Terbaik",
+    "topActivities": "Aktiviti Terbaik",
+    "topAttractions": "Tarikan Terbaik"
+  },
+  "offerCard": {
+    "bookNow": "Tempah Sekarang"
+  },
+  "breadcrumbsBasket": {
+    "stepOne": "Pemilihan anda",
+    "stepOneDescription": "Troli Belanja",
+    "stepTwo": "Butiran anda",
+    "stepTwoDescription": "Bayaran",
+    "stepThree": "Langkah Terakhir",
+    "stepThreeDescription": "Pembayaran"
+  },
+  "usps": {
+    "or": "atau",
+    "allDay": "Sepanjang Hari",
+    "bookable": {
+      "title": "Bisa Dipesan",
+      "description": "Untuk {val}"
+    },
+    "online": {
+      "title": "Konfirmasi Pemesanan Instan"
+    },
+    "payment": {
+      "title": "Semua metode pembayaran"
+    },
+    "duration": {
+      "title": "Durasi",
+      "durationMinutes": "{val} menit",
+      "duration": "{val} jam",
+      "durations": "{val} jam",
+      "durationDay": "{val} hari",
+      "durationDays": "{val} hari"
+    },
+    "mobileTicket": {
+      "title": "Tiket Seluler Diterima",
+      "description": "Gunakan ponsel Anda atau cetak voucher Anda"
+    },
+    "confirmation": {
+      "title": "Konfirmasi pemesanan segera",
+      "description": "Tiada bayaran tambahan"
+    },
+    "queue": {
+      "title": "Tiada barisan"
+    },
+    "cancel": {
+      "title": "Pembatalan Percuma",
+      "description": "Pengembalian penuh jika dibatalkan hingga {val} jam sebelum keberangkatan",
+      "descriptionDays": "Pengembalian penuh jika dibatalkan hingga {val} hari sebelum keberangkatan",
+      "subtitle": "Hingga {val} jam sebelum waktu mula",
+      "subtitleDays": "Hingga {val} hari sebelum waktu mula<b>(</b>"
+    },
+    "meetingPoint": {
+      "title": "Tempat pertemuan"
+    },
+    "discount": {
+      "title": "Diskaun"
+    },
+    "request": {
+      "title": "Tempahan atas permintaan",
+      "description": "Tempahan ini perlu disahkan sekali lagi oleh penyedia",
+      "extra": "Tawaran ini berdasarkan kepada ketersediaan penyedia. Tempahan mesti disahkan oleh penyedia terlebih dahulu. Dia akan menghubungi kamu selepas tempahan. Jika aktiviti tidak dapat dijalankan, kamu akan mendapat semula jumlah penuh yang dibayar."
+    },
+    "validity": {
+      "title": "Kesahan"
+    },
+    "openingHours": {
+      "title": "Waktu Operasi"
+    }
+  },
+  "widgetConfigurator": {
+    "title": "Konfigurasi widget",
+    "type": "Jenis",
+    "lang": "Bahasa",
+    "other": "Pilih aktiviti lain",
+    "topBar": "Bar alat",
+    "hideAll": "Sembunyikan Semuanya",
+    "hideSearch": "Sembunyikan Pencarian",
+    "hideSize": "Sembunyikan Toggle Ukuran",
+    "hideFilter": "Sembunyikan Butang Penapis",
+    "hideMap": "Sembunyikan Butang Peta",
+    "hideQuickFilter": "Sembunyikan Penapis Cepat",
+    "hideSort": "Sembunyikan Urutan",
+    "buttonText": "Teks Butang",
+    "buttonBackground": "Latar Belakang Butang",
+    "buttonColor": "Warna Teks Butang",
+    "search": "Carian Praisian"
+  },
+  "types": {
+    "activity": "Aktiviti",
+    "overview": "Gambaran Keseluruhan",
+    "location": "Tempat",
+    "locationType": "Tempat + Jenis",
+    "type": "Jenis",
+    "attribute": "Kategori",
+    "locationAttribute": "Tempat + Kategori",
+    "poi": "Tempat Menarik"
+  },
+  "reviewForm": {
+    "title": "Tingkatkan Pengalaman Anda",
+    "button": "Nilai Sekarang",
+    "rating": "Penilaian",
+    "comment": "Teguran",
+    "thanks": "Terima Kasih atas Penilaian Anda!",
+    "next": "Tingkatkan Tempahan Seterusnya",
+    "finish": "Tetingkap akan ditutup dalam 3 saat"
+  },
+  "user": {
+    "welcome": "Selamat datang ke papan pemuka anda {name}!",
+    "menu": {
+      "activities": "Aktiviti",
+      "bookings": "Tempahan",
+      "suppliers": "Pembekal",
+      "reviews": "Ulasan",
+      "settings": "Tetapan",
+      "chat": "Sembang",
+      "logout": "Log Keluar",
+      "login": "Log masuk"
+    }
+  },
+  "SettingsForm": {
+    "title": "Lengkapkan profil anda",
+    "titleUpdate": "Kemas kini profil anda",
+    "submit": "Hantar",
+    "phoneNumber": "Sila semak nombor telefon kamu sekali lagi",
+    "email": "E-mel tidak sah",
+    "iban": "IBAN tidak sah",
+    "reseller": {
+      "title": "Pengedar",
+      "merchantName": "Nama Pedagang",
+      "merchantAddress": "Alamat Pedagang",
+      "bankAccountHolder": "Pemegang Akaun",
+      "bankAccountIban": "IBAN Akaun",
+      "bankAccountHolderAddress": "Alamat Pemegang Akaun",
+      "contact": {
+        "title": "Kontak",
+        "name": "Nama Penuh",
+        "businessRole": "Peranan Perniagaan",
+        "email": "E-mel",
+        "phone": "Telefon"
+      }
+    },
+    "payment": {
+      "title": "Kaedah Pembayaran Tersimpan",
+      "removeTitle": "Buang kaedah pembayaran"
+    }
+  },
+  "Repeater": {
+    "add": "Tambah",
+    "remove": "Buang"
+  },
+  "Table": {
+    "booking": {
+      "refresh": "Menyegarkan"
+    },
+    "clearFilters": "Reset penapis",
+    "noResults": "Tiada hasil ditemui.",
+    "view": {
+      "title": "Paparan",
+      "adjust": "Laraskan lajur"
+    },
+    "header": {
+      "bookingId": "Nombor Tempahan",
+      "date": "Tarikh",
+      "bookingDate": "Tarikh Tempahan",
+      "serviceDate": "Tarikh Aktiviti",
+      "description": "Penerangan",
+      "location": "Lokasi",
+      "name": "Nama Penuh",
+      "email": "Emel",
+      "type": "Tipe",
+      "price": "Harga dari",
+      "sold": "Terjual",
+      "rating": "Penilaian",
+      "supplier": "Pembekal",
+      "bookingStatus": "Status Tempahan",
+      "paymentStatus": "Status Pembayaran",
+      "total": "Jumlah",
+      "actions": "Tindakan",
+      "duration": "Tempoh",
+      "validity": "Kesahan",
+      "bookable": "Boleh ditempah",
+      "createdAt": "Dicipta pada",
+      "commission": "Komisi",
+      "status": "Status",
+      "reservationSystem": "Sistem tempahan",
+      "bapiId": "ID BAPI",
+      "capiId": "ID CAPI",
+      "notes": "Catatan",
+      "distributor": "Pengedar",
+      "website": "Laman web",
+      "validities": "Kesahan"
+    },
+    "actions": {
+      "aria": "Buka Tindakan",
+      "details": "Tunjukkan Butiran",
+      "book": "Tempah Sekarang"
+    },
+    "sort": {
+      "ascending": "Menaik",
+      "descending": "Menurun",
+      "hide": "Sembunyi",
+      "bookable": "Tunjukkan hanya aktiviti yang boleh ditempah"
+    },
+    "pagination": {
+      "page": "Halaman",
+      "of": "dari",
+      "entriesPerPage": "Entri per halaman",
+      "goToFirstPage": "Ke halaman pertama",
+      "goToLastPage": "Ke halaman terakhir",
+      "goToNextPage": "Ke halaman seterusnya",
+      "goToPreviousPage": "Ke halaman sebelumnya"
+    },
+    "search": {
+      "activities": "Cari Aktiviti",
+      "bookings": "Cari Tempahan",
+      "offers": "Cari Tawaran",
+      "suppliers": "Cari pembekal",
+      "bookingId": "Cari berdasarkan nombor tempahan",
+      "email": "Cari berdasarkan e-mel",
+      "familyName": "Cari berdasarkan nama keluarga"
+    },
+    "cell": {
+      "bookingStatusActive": "Disahkan",
+      "bookingStatusPending": "Tertunda",
+      "bookingStatusCancelled": "Dibatalkan",
+      "paymentStatusActive": "Dibayar",
+      "paymentStatusPending": "Tertunda",
+      "paymentStatusRefunded": "Dikembalikan"
+    }
+  },
+  "Drawer": {
+    "close": "Tutup"
+  },
+  "PaymentMethod": {
+    "card": {
+      "new": "Kartu Baru",
+      "store": "Sila simpan maklumat kad kredit saya untuk pengguguran cepat di masa hadapan.",
+      "endsIn": "Berakhir {val}"
+    }
+  },
+  "Activity": {
+    "new": "Aktiviti Baru",
+    "nav": {
+      "general": "Umum"
+    }
+  },
+  "Offer": {
+    "new": "Tawaran Baru"
+  },
+  "Supplier": {
+    "new": "Pembekal Baru"
+  },
+  "UspSlider": {
+    "title": "Mengapa menempah dengan Swiss Activities?",
+    "items": [
+      "Pilihan terbesar di Switzerland",
+      "Lebih 100'000 pelanggan berpuas hati",
+      "Pilihan pembatalan percuma",
+      "Sokongan pelanggan Swiss bintang 5",
+      "Tempah tiket mudah alih dalam 90 saat"
+    ]
+  },
+  "AppBanner": {
+    "title": "Muat turun aplikasi sekarang",
+    "description": "Terokai Swiss Activities – mudah dan cepat"
+  },
+  "Transport": {
+    "bookTrip": "Tempah sambungan",
+    "button": {
+      "confirmTrip": "Sahkan sambungan",
+      "confirmTravelers": "Pengembara mengesahkan"
+    },
+    "checkDetails": "Semak butiran sambungan",
+    "class": {
+      "first": "Kelas 1",
+      "second": "Kelas 2"
+    },
+    "direct": "Terus",
+    "duration": {
+      "minutes": "Min."
+    },
+    "earlierTrips": "Perhubungan Sebelumnya",
+    "errorLoadingTrips": "Sambungan tidak dapat dimuat.",
+    "laterTrips": "Perhubungan Kemudian",
+    "legend": "Legenda",
+    "loadingTrips": "Sambungan sedang dimuatkan...",
+    "oneWay": "Hanya Perjalanan Pergi",
+    "roundTrip": "Perjalanan Pergi/Pulang",
+    "searchTrips": "Cari sambungan",
+    "selectOriginDestination": "Pilih tempat berangkat dan destinasi untuk mencari sambungan.",
+    "selectProduct": "Pilih pilihan tiket",
+    "selectTravelers": "Pilih Pengembara",
+    "switch": "Tukar",
+    "ticket": "Tiket",
+    "tickets": "Tiket-tiket",
+    "transfer": "Tukar",
+    "tripResults": "Sambungan",
+    "upgradeTo1stClass": "Kemudahan tambahan",
+    "upgradeTo1stClassDescription": "Berkeliling dalam Kelas Pertama",
+    "cityTicketDescription": "Tiket harian untuk pengangkutan bandar",
+    "via": "melalui",
+    "travelDate": "Pilih tarikh perjalanan",
+    "confirmTravelDate": "Sahkan tarikh perjalanan",
+    "departure": "Keberangkatan",
+    "arrival": "Kedatangan",
+    "locationDisabled": "Kongsi lokasi dinonaktifkan",
+    "locationError": "Lokasi tidak dapat ditentukan",
+    "noProductsAvailable": "Tiada tiket tersedia",
+    "disclaimer": "Semua maklumat tanpa jaminan.",
+    "validity": "Kesahan",
+    "validityOnSelectedRoute": "Hanya pada laluan yang dipilih",
+    "validityForConnection": "Hanya untuk sambungan yang dipilih",
+    "validityForConnectionWith2ndClass": "Hanya untuk sambungan yang dipilih dan dengan tiket yang sah untuk Kelas 2",
+    "validityForRouteWith2ndClass": "Hanya untuk laluan yang dipilih dan dengan tiket yang sah untuk Kelas 2",
+    "validityGARoutes": "Boleh digunakan di semua laluan GA",
+    "validityDayClassUpgrade": "Hanya dengan kad harian Half Fare, GA atau Swiss Travel Pass (Flex) untuk Kelas Kedua.",
+    "includedIn": "Termasuk dalam",
+    "validityDateRange": "{fromDate} hingga {toDate}, {toTime}",
+    "validityConnection": "{date} dari {fromTime}, pada {toTime}",
+    "classUpgradeOnly": "Hanya tukar kelas",
+    "loadingDestination": "Sedang dimuat",
+    "distanceToMeetingPoint": "Tempat pertemuan",
+    "walking": "Dengan berjalan kaki",
+    "arrivalInfo": "Masa ketibaan yang dianggarkan: {walkingTime} berjalan kaki + 15 minit buffer hingga ke tempat pertemuan",
+    "timeBeforeEvent": "{minutes} min. sebelum aktiviti · {walkingMinutes} min. berjalan kaki dari stesen",
+    "tooLateForActivity": "Sambungan berikut tidak tiba di lokasi tepat pada masanya"
+  }
+}

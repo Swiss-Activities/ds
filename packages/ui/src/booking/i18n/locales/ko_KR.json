@@ -1,0 +1,1799 @@
+{
+  "general": {
+    "accountAdvantages": "할인과 더 많은 혜택을 누리려면 계정을 만들거나 로그인하세요.",
+    "activityBook": "활동 예약하기",
+    "addTicket": "티켓 추가",
+    "adult": "{val} 성인",
+    "adults": "{val} 성인",
+    "ageChoose": "연령 선택",
+    "ageFrom": "최소 {val} 세",
+    "ageOld": "{val} 세",
+    "ageUnder": "만 {val} 세 미만",
+    "all": "모두",
+    "allReviews": "모든 리뷰",
+    "backToBookings": "예약으로 돌아가기",
+    "bookAsGuest": "손님으로 주문 절차를 마무리합니다.",
+    "cancel": "취소",
+    "cancelled": "취소됨",
+    "cartAmount": "장바구니 가치",
+    "child": "{val} 아이",
+    "children": "{val} 아이들",
+    "chooseSelection": "선택 확인",
+    "confirm": "확인",
+    "confirmCancel": "취소 확인",
+    "contact": "문의하기",
+    "copyUrl": "URL 복사하기",
+    "couple": "커플",
+    "customerServiceFee": "서비스 수수료",
+    "data": "데이터",
+    "date": "날짜",
+    "dateChoose": "날짜 선택",
+    "delete": "삭제",
+    "didYouMean": "당신이 <suggestion>{email}</suggestion>를 의미했나요?",
+    "duplicate": "중복",
+    "emailsDontMatch": "입력한 이메일 주소가 일치하지 않습니다.",
+    "export": "내보내기",
+    "faqType": "스위스의 {type} 에 대한 자주 묻는 질문",
+    "from": "에서",
+    "group": "그룹",
+    "helpfulQuestion": "유용합니까?",
+    "informationPlural": "정보들",
+    "language": "언어",
+    "loginOrRegister": "로그인 또는 등록",
+    "manageBookings": "예약 관리",
+    "mobileAppAddon": "지금 우리의 모바일 앱을 다운로드하여 예약을 편리하게 관리하고, 빠르게 티켓에 접근하며 다음 모험을 찾아보세요.",
+    "mostImportantInSummary": "가장 중요하 내용 요약",
+    "noResults": "안타깝게도 귀하의 검색어에 대한 결과를 찾을 수 없습니다.",
+    "noReviewsYet": "아직 리뷰 없음",
+    "notes": "참고",
+    "oneMonth": "1개월",
+    "openChat": "채팅 열기",
+    "order": "순서",
+    "partSum": "소계",
+    "participants": "참여자",
+    "participantsChoose": "참가자 선택",
+    "past": "과거",
+    "personalizeTickets": "티켓 개인화하기",
+    "pleaseSelect": "선택하세요",
+    "pleaseSelectItem": "값을 선택해주세요 {val}",
+    "questionsChatActivity": "이 활동에 대해 궁금한 점이 있으신가요? 채팅하기",
+    "questionsChatBooking": "예약에 대해 궁금한 점이 있으신가요? 채팅하기",
+    "raw": "Raw",
+    "rebate": "할인",
+    "recaptcha": "이 웹사이트는 재캡챠로 보호됩니다.\n\nGoogle <a href=\"https://policies.google.com/privacy\" target=\"_blank\">개인정보처리방침</a> 및 <a href=\"https://policies.google.com/terms\" target=\"_blank\">서비스</a> <a href=\"https://policies.google.com/terms\" target=\"_blank\">약관이</a> 적용됩니다.",
+    "remove": "제거",
+    "removeFromCart": "장바구니에서 제거",
+    "reset": "초기화",
+    "searchNow": "지금 검색하기",
+    "single": "싱글",
+    "soldOut": "매진되었습니다",
+    "somethingWentWrongContact": "죄송합니다. 무언가 잘못되었습니다. 다시 시도하거나 지원팀에 문의하세요.",
+    "successfullySaved": "저장 성공",
+    "ticket": "티켓",
+    "tickets": "티켓",
+    "to": "까지",
+    "currentLocation": "현재 위치",
+    "toDashboard": "내 예약",
+    "translate": "번역",
+    "tryAgain": "다시 시도하기",
+    "upcoming": "예정",
+    "when": "언제",
+    "who": "누구",
+    "wrongDate": "날짜에 문제가 있습니다: 확인하고 다시 선택해 주세요.",
+    "wrongDateParticipant": "참가자의 생년월일이 제안서의 나이와 일치하지 않습니다.",
+    "today": "오늘",
+    "apply": "적용하기"
+  },
+  "aria": {
+    "forward": "앞으로",
+    "backward": "뒤로"
+  },
+  "auth0": {
+    "accept": "[이용약관]({link})에 동의합니다",
+    "error": "이용약관에 동의해 주세요",
+    "resetPasswordHint": "이메일을 받지 못하셨나요? 스팸 폴더를 확인해 보세요. Apple 또는 Google로 가입하셨다면 해당 로그인 방법을 이용해 주세요."
+  },
+  "menu": {
+    "menu": "메뉴",
+    "search": "검색",
+    "travelGuide": "여행 플래너",
+    "travelRoutes": "여정",
+    "contactus": "문의하기",
+    "switzerland": "스위스",
+    "help": "채팅",
+    "voucher": "바우처 구매",
+    "voucherSm": "바우처",
+    "partners": "파트너",
+    "provider": "공급자",
+    "affiliate": "제휴 파트너"
+  },
+  "chat": {
+    "chats": "모든 채팅",
+    "newChat": "새 채팅",
+    "noChatsYet": "아직 채팅이 없습니다",
+    "typeMessage": "메시지 입력",
+    "welcome": "안녕하세요, Swiss Activities에 오신 것을 환영합니다! 저는 Housibot이며, 귀하의 질문에 기꺼이 도와드리겠습니다.",
+    "welcomeReview": "안녕! 너의 경험은 어땠어? 나는 Housibot이며, 네가 피드백을 공유하는 데 기꺼이 도와줄게."
+  },
+  "supportBanner": {
+    "title": "스키 학교 찾는 데 도움이 필요하니?",
+    "placeholder": "어떻게 도와줄 수 있을까?",
+    "send": "보내기"
+  },
+  "pages": {
+    "404": {
+      "title": "페이지를 찾을 수 없습니다.",
+      "description": "이 페이지는 존재하지 않습니다.",
+      "button": "홈페이지로 돌아가기",
+      "search": "검색 시작"
+    },
+    "home": {
+      "title": "스위스 액티비티 - 스위스 레저 액티비티 찾기",
+      "description": "스위스 액티비티는 스위스에서의 레저 활동을 위한 목적지입니다. 수많은 레저 액티비티를 발견하고 비교하고 예약하세요.",
+      "gatewayCards": {
+        "categories": {
+          "castlesRuins": "성 / 유적지",
+          "castleEvents": "성 이벤트",
+          "exhibitions": "전시회",
+          "fireplaces": "모닥불",
+          "movies": "영화",
+          "museums": "박물관",
+          "playgrounds": "놀이터",
+          "swimmingBathing": "수영 & 목욕"
+        },
+        "dateRange": {
+          "from": "부터",
+          "until": "까지"
+        },
+        "distance": {
+          "unit": "킬로미터"
+        }
+      },
+      "gatewayDetail": {
+        "back": "뒤로",
+        "moreInfo": "더 많은 정보",
+        "source": "출처 열기",
+        "labels": {
+          "admission": "입장료",
+          "address": "주소",
+          "ageRating": "나이",
+          "bookTickets": "티켓 예약",
+          "canton": "주",
+          "cast": "출연진",
+          "category": "카테고리",
+          "cinema": "영화관",
+          "countryYear": "국가 / 연도",
+          "dateRange": "기간",
+          "director": "감독",
+          "duration": "상영 시간",
+          "entryFeeAdult": "성인",
+          "entryFeeChild": "어린이",
+          "foundedYear": "설립 연도",
+          "genres": "장르",
+          "location": "위치",
+          "museumCategory": "박물관 유형",
+          "openTrailer": "트레일러 열기",
+          "openingHours": "운영 시간",
+          "phone": "전화",
+          "poolLength": "수영장 길이",
+          "trailer": "트레일러",
+          "venue": "행사 장소",
+          "waterType": "수질"
+        },
+        "sections": {
+          "amenities": "편의 시설",
+          "badges": "추천 사항",
+          "information": "정보",
+          "prices": "가격",
+          "showtimes": "상영 시간",
+          "venue": "행사 장소"
+        },
+        "amenities": {
+          "capacityPersons": "수용 인원",
+          "hasBenches": "벤치",
+          "hasChangingRooms": "탈의실",
+          "hasDivingBoard": "다이빙 보드",
+          "hasFirewood": "장작",
+          "hasFoodService": "식사 서비스",
+          "hasGrillGrate": "그릴 그레이트",
+          "hasKidsPool": "어린이 풀",
+          "hasLifeguard": "구명 조끼",
+          "hasLockers": "사물함",
+          "hasPlaygroundNearby": "근처 놀이터",
+          "hasShowers": "샤워실",
+          "hasSlide": "슬라이드",
+          "hasShelter": "대피소",
+          "hasTable": "테이블",
+          "hasToilet": "화장실",
+          "hasWater": "물"
+        },
+        "waterTypes": {
+          "indoorPool": "실내 수영장",
+          "lake": "호수",
+          "outdoorPool": "야외 수영장",
+          "pool": "수영장",
+          "river": "강"
+        }
+      }
+    },
+    "s": {
+      "title": "스위스 액티비티 - 스위스 레저 액티비티 찾기",
+      "description": "스위스 액티비티는 스위스에서의 레저 활동을 위한 목적지입니다. 수많은 레저 액티비티를 발견하고 비교하고 예약하세요.",
+      "sort": {
+        "distance": {
+          "notSupported": "브라우저에서 위치 서비스가 지원되지 않습니다. 관련성에 따른 정렬이 사용됩니다.",
+          "permissionDenied": "거리 기준으로 정렬하려면 브라우저 설정에서 위치 접근을 허용하고 페이지를 새로 고쳐주세요.",
+          "positionUnavailable": "위치 정보가 사용할 수 없습니다.",
+          "timeout": "위치 요청 중에 시간 초과가 발생했습니다.",
+          "unknownError": "알려지지 않은 오류가 발생했습니다.",
+          "fallbackMessage": "관련성에 따른 정렬이 사용됩니다.",
+          "errorPrefix": "위치를 확인할 수 없습니다."
+        }
+      }
+    },
+    "chat": {
+      "title": "Swiss Activities 채팅",
+      "description": "Swiss Activities는 스위스의 레저 활동을 위한 당신의 목적지입니다. 수많은 레저 활동을 발견하고, 비교하고, 예약하세요."
+    },
+    "transport": {
+      "title": "스위스 기차 티켓, 패스 & 일일 요금 | Swiss Travel Pass, SBB 할인 일일 티켓",
+      "description": "스위스의 기차 티켓, Swiss Travel Pass, 반값 요금, SBB 할인 일일 티켓 및 지역 패스를 비교하고 예약하세요. 즉시 모바일 티켓으로 휴대폰에 받으세요.",
+      "trust": {
+        "partners": "공식 파트너",
+        "ratingValue": "4.8",
+        "ratingLabel": "+400,000명의 만족한 여행객들",
+        "ratingShortLabel": "400,000명 이상의 여행자"
+      },
+      "discountMap": {
+        "title": "여기에서 패스로 절약하세요",
+        "subtitle": "산악 케이블카, 배 및 최고의 나들이 - 패스를 선택하고 어디에서 무엇을 할 수 있는지 확인하세요.",
+        "free": "포함",
+        "discount50": "−50 %",
+        "discount25": "−25 %",
+        "noDiscount": "할인 없음",
+        "altitude": "{m} m 바다 위 높이.",
+        "moreInfo": "더 알아보기",
+        "selectPass": "패스 선택",
+        "selectCategory": "카테고리 선택",
+        "categories": {
+          "mountain": "산악 케이블카",
+          "lake": "호수 & 배",
+          "museum": "박물관"
+        },
+        "airports": {
+          "zrh": "취리히",
+          "gva": "제네바"
+        },
+        "regions": {
+          "bernerOberland": "베른 오버란트",
+          "jungfrau": "융프라우",
+          "interlaken": "인터라켄",
+          "zentralschweiz": "중부 스위스",
+          "ostschweiz": "동부 스위스",
+          "waadt": "와트주",
+          "engadin": "엔가딘",
+          "wallis": "발리",
+          "tessin": "티치노",
+          "genferseeregion": "제네바 호수 지역",
+          "zuerich": "취리히",
+          "mittelland": "미텔란드",
+          "luzern": "루체른",
+          "basel": "바젤",
+          "bern": "베른",
+          "lausanne": "로잔",
+          "geneve": "제네바",
+          "zermatt": "체르마트",
+          "fribourg": "프리부르",
+          "graubuenden": "그라우뷘덴"
+        }
+      },
+      "hero": {
+        "title": "스위스 전역에서 기차 티켓",
+        "titleAccent": "스위스",
+        "lede": "SBB의 구간 티켓, 일일 티켓 및 할인 패키지 - 즉시 모바일 티켓으로 당신의 휴대폰에.",
+        "subtitle": "SBB의 구간 티켓, 일일 티켓 및 할인 패키지 - 즉시 모바일 티켓으로 당신의 휴대폰에.",
+        "searchTitle": "경로 검색",
+        "searchMeta": "역 · 날짜 · 승객",
+        "fromPlaceholder": "출발 역/출발지",
+        "toPlaceholder": "목적지/목적지",
+        "badges": {
+          "rating": "4.8 / 5 · +400,000 리뷰",
+          "partner": "SBB 공식 파트너"
+        },
+        "usps": {
+          "customers": {
+            "title": "+400,000명의 행복한 고객들",
+            "subline": "2021년부터 Swiss Activities에 대한 신뢰"
+          },
+          "saver": {
+            "title": "최대 50% 할인",
+            "subline": "SBB의 할인 티켓 및 일일 티켓으로"
+          },
+          "mobile": {
+            "title": "즉시 모바일 티켓",
+            "subline": "휴대폰으로 직접, SBB 로그인 불필요"
+          },
+          "earlyBird": {
+            "title": "사전 예약 할인",
+            "subline": "미리 계획하고 SBB의 할인 티켓과 일일 티켓을 구매하세요"
+          }
+        }
+      },
+      "benefits": {
+        "title": "너의 장점",
+        "discount": {
+          "eyebrow": "할인 티켓",
+          "title": "최대 40% 절약",
+          "subline": "SBB 할인 혜택 및 일일 패스",
+          "badge": "베스트셀러"
+        }
+      },
+      "passes": {
+        "title": "SBB 및 지역 패스",
+        "subtitle": "다양한 일일 패스와 다중일 패스를 비교하세요 - 당신에게 가장 적합한 패스를 선택하세요.",
+        "tabs": {
+          "multiDay": "다중일 패스",
+          "dayPass": "일일 패스",
+          "regional": "지역 패스"
+        },
+        "buy": "지금 구매",
+        "from": "부터",
+        "moreInfo": "더 많은 정보",
+        "seeDiscounts": "모든 할인 보기",
+        "viewAllByTab": {
+          "multiDay": "모든 기차 패스 보기",
+          "dayPass": "모든 SBB 일일 티켓 보기",
+          "regional": "모든 지역 패스 보기"
+        },
+        "empty": "현재 사용할 수 있는 제품이 없습니다 - 다른 카테고리를 확인하세요.",
+        "descriptions": {
+          "fallback-stp": "스위스 전역에서 기차, 버스 및 배 이용 - 무료 박물관 입장 포함.",
+          "fallback-stpf": "선택 가능한 날에 대중교통 이용 - 무료 박물관 입장 포함.",
+          "fallback-shfc": "한 달 동안 반값으로 기차, 버스, 배 및 케이블카 이용.",
+          "fallback-halbtax": "하루 종일 스위스 전역에서 무료 여행 - 당신의 반값 패스로.",
+          "fallback-spar": "최고 가격으로 사전 예약 할인된 일일 티켓 - 하루에 한정된 수량.",
+          "fallback-ga": "하루 동안 완전한 이동성 - GA와 같지만 24시간 동안만.",
+          "fallback-tell": "중부 스위스에서 자유로운 여행: 케이블카, 배 및 대중교통 포함.",
+          "fallback-bo": "융프라우 및 인터라켄 지역 탐험 - 패스를 통해 기차, 배 및 케이블카 이용.",
+          "fallback-jtp": "유럽의 정점 지역: 기차, 대중교통 및 Grindelwald, Wengen, Mürren 주위의 주요 명소."
+        },
+        "usps": {
+          "1330": [
+            "하르더 쿨름 & 브리엔쩨 로톤 포함",
+            "그린델발드-웬겐 지역에서 최대 −50 %",
+            "대중교통 및 케이블카 융프라우 지역"
+          ],
+          "1438": [
+            "퍼스트, 샤니게 플라떼 & 니젠 포함",
+            "융프라우의 정상인 유럽에서 −25 % 할인",
+            "하나의 패스로 기차, 배 & 케이블카 이용"
+          ],
+          "1440": [
+            "1개월 동안 반값으로 스위스 전역에서 이용 가능",
+            "기차, 버스, 배 & 케이블카에서",
+            "SBB의 할인 티켓에서도 사용 가능"
+          ],
+          "1447": [
+            "스위스 전역에서 기차, 버스 및 배 무료",
+            "케이블카에서 최대 −50 % (융프라우 −25 %)",
+            "500개 이상의 박물관 무료"
+          ],
+          "1448": [
+            "선택 가능한 날에 스위스 전역에서 이용 가능",
+            "산악 케이블카, 버스, 배에서 최대 −50 %",
+            "500개 이상의 박물관 무료"
+          ],
+          "1450": [
+            "필라투스, 리기 & 스탄서혼 포함",
+            "하르메르 호수의 배 무료",
+            "중부 스위스의 기차, 버스 & 케이블카"
+          ],
+          "1664": [
+            "일일 티켓 CHF 29부터",
+            "사전 예약시 최대 −70 % 할인",
+            "하루에 한정된 수량"
+          ],
+          "1671": [
+            "6-16세 어린이 가족 요금",
+            "스위스 전역의 모든 SBB 노선",
+            "가족 여행에 완벽하다"
+          ],
+          "1676": [
+            "<b>1</b>일 동안 반값으로 이용 가능.",
+            "스위스 전역의 SBB 노선에서",
+            "여러 개의 개별 요금보다 저렴"
+          ]
+        },
+        "soldCount": "{count} 예약됨",
+        "reviews": "({count})",
+        "discounts": {
+          "1330": "하르더 쿨름 포함.",
+          "1438": "퍼스트 & 니젠 포함.",
+          "1440": "반값",
+          "1447": "산악 케이블카 −50 %",
+          "1448": "산악 케이블카 −50 %",
+          "1450": "필라투스 & 리기 포함.",
+          "1664": "최대 −70 %",
+          "1671": "가족 요금"
+        },
+        "benefits": {
+          "includedHeading": "포함",
+          "discountedHeading": "할인",
+          "expand": "모든 할인 보기",
+          "collapse": "덜 보기",
+          "items": {
+            "1330": {
+              "included": [
+                "하더 쿨름 & 브리엔저 로토른",
+                "융프라우 지역의 대중교통 (기차, 버스, 배)"
+              ],
+              "discounted": [
+                "그린델발트-웬겐 스키지역, 최대 50% 할인",
+                "뮈렌-실토른 스키지역, 최대 50% 할인",
+                "융프라우요흐, 유럽의 정상 - 25% 할인"
+              ]
+            },
+            "1438": {
+              "included": [
+                "퍼스트, 쉐니그 플라테 & 니젠",
+                "브리엔저 로토른 & 스톡혼",
+                "융프라우 지역의 기차, 배 & 산악기차"
+              ],
+              "discounted": [
+                "융프라우요흐, 유럽의 정상 - 25% 할인",
+                "실토른 (제임스 본드) - 50% 할인"
+              ]
+            },
+            "1440": {
+              "included": [],
+              "discounted": [
+                "기차, 버스 및 배 요금이 최대 −50 %",
+                "산악 케이블카에서 50 % 할인 적용",
+                "SBB 할인 티켓과 함께 사용 가능"
+              ]
+            },
+            "1447": {
+              "included": [
+                "스위스 전역에서 기차, 버스 & 배",
+                "500개 이상의 박물관",
+                "스위스의 90개 도시에서 대중교통"
+              ],
+              "discounted": [
+                "산악 케이블카 최대 −50 %",
+                "융프라우 정상인 유럽 최대 −25 %",
+                "SBB의 RailAway 제공사항 최대 −30 %"
+              ]
+            },
+            "1448": {
+              "included": [
+                "선택 가능한 날에 기차, 버스 & 배",
+                "500개 이상의 박물관",
+                "스위스의 90개 도시에서 대중교통"
+              ],
+              "discounted": [
+                "산악 케이블카 최대 −50 %",
+                "융프라우 정상인 유럽 최대 −25 %",
+                "SBB의 RailAway 제공사항 최대 −30 %"
+              ]
+            },
+            "1450": {
+              "included": [
+                "필라투스, 리기 & 스타인세르혼",
+                "빌바흐 호수의 배들",
+                "중앙 스위스의 기차, 버스 & 산악기차"
+              ],
+              "discounted": []
+            },
+            "1664": {
+              "included": [
+                "<b>1</b>일 동안 스위스 전역에서 무료 여행."
+              ],
+              "discounted": [
+                "일일티켓 CHF 29부터",
+                "사전 예약 시 최대 −70 % 할인 혜택"
+              ]
+            },
+            "1671": {
+              "included": [
+                "스위스 전역의 SBB 연결, <b>1</b>일 동안 이용 가능."
+              ],
+              "discounted": [
+                "6세에서 16세 어린이를 위한 가족 요금",
+                "정상 가격의 50% 할인"
+              ]
+            },
+            "1676": {
+              "included": [
+                "하프 택스가 포함된 1일 무료 이용권"
+              ],
+              "discounted": [
+                "여러 개의 개별 티켓보다 저렴해요"
+              ]
+            }
+          }
+        }
+      },
+      "articles": {
+        "title": "기차 세계에 관한 흥미로운 기사들",
+        "subtitle": "SBB 티켓, 여행 패스 및 스위스의 대중교통에 대한 팁, 비교 및 실용 정보.",
+        "read": "기사 읽기",
+        "tag": "잡지"
+      },
+      "dayPasses": {
+        "title": "인기 있는 일일 패스",
+        "subtitle": "하루 종일 자유롭게 이동할 수 있어요 – 네 티켓과 쉽게 조합할 수 있어요.",
+        "halbtax": {
+          "title": "하프택스에 대한 일일 패스",
+          "description": "네 하프택스와 함께 스위스 전역에서 하루 종일 자유로운 이동이 가능해요. 하루 여행이나 산악 지역에 적합해요.",
+          "fromPrice": "CHF 52.– 부터",
+          "cta": "경로 검색하기"
+        },
+        "spar": {
+          "title": "스파르트의 일일 패스",
+          "description": "일찍 예약하면 최고의 가격으로 일일 패스를 받을 수 있어요. 하루에 한정된 수량 – 미리 예약하면 더 저렴하게 이동할 수 있어요.",
+          "fromPrice": "CHF 29.– 부터",
+          "cta": "경로 검색하기"
+        }
+      },
+      "groups": {
+        "mountains": "기차로 도달할 수 있는 산 체험들",
+        "dayTrips": "취리히, 베른, 바젤 출발의 인기 있는 일일 여행들",
+        "cities": "도시 탐험: 기차 + 경험",
+        "cityPasses": "도시 패스: 한 장의 카드로 전체 도시를"
+      },
+      "faq": {
+        "title": "SBB 티켓에 대한 자주 묻는 질문들",
+        "items": [
+          {
+            "q": "내 티켓을 취소할 수 있나요?",
+            "a": "<p><strong>구간 티켓</strong>은 출발 전날까지 무료로 취소할 수 있어요 – swissactivities.com의 예약 대시보드에서 직접 가능합니다.</p><p><strong><a href=\"/sbb-tageskarten/spartageskarte-sbb/\">스파르트 일일 패스</a></strong>와 할인 티켓은 취소할 수 없어요. 이들은 선택한 날짜에 맞춰져 있어요 – 구매 전 예약 페이지에 명확한 안내가 표시됩니다.</p>"
+          },
+          {
+            "q": "SBB 티켓은 SBB 매표소에서 구입한 것과 같나요?",
+            "a": "네, SBB 매표소나 SBB 앱에서 받은 것과 동일한 공식 SBB 티켓을 받게 되며 – 추가 비용 없이 제공됩니다. <a href=\"/sbb-tageskarten/\">SBB 일일 패스</a>와 <a href=\"/bahnpaesse/\">기차 패스</a> 또한 1:1로 SBB의 원본 상품입니다."
+          },
+          {
+            "q": "티켓은 얼마나 빨리 받을 수 있나요?",
+            "a": "즉시. 예약이 완료되면 모바일 티켓을 이메일과 swissactivities.com의 예약 대시보드에서 받게 되며, SBB 로그인 없이 기차에서 바로 제시할 수 있어요."
+          },
+          {
+            "q": "하프택스 또는 GA를 등록할 수 있나요?",
+            "a": "네, 예약 단계에서 할인 구독을 선택할 수 있어요 – 가격이 자동으로 조정됩니다. 하프택스만 있다면 하루 종일 이동할 경우 여러 개별 티켓보다 <a href=\"/sbb-tageskarten/sbb-tageskarte-halbtax/\">SBB 하프택스 일일 패스</a>가 더 유리할 때가 많아요."
+          },
+          {
+            "q": "기차에 지연이 생기면 어떻게 되나요?",
+            "a": "너의 구간 티켓은 다음 연결에도 유효해요 – 그냥 다음 적절한 기차에 탑승하면 됩니다. 한 시간 이상 지연되면 SBB를 통해 환불을 요청할 수 있어요."
+          },
+          {
+            "q": "스위스 여행 패스나 스파르트 일일 패스는 가치가 있을까요?",
+            "a": "<p>일반적인 규칙: 연속으로 3일 이상 기차, 버스, 배를 많이 이용하고 박물관을 방문하는 경우 <a href=\"/bahnpaesse/swiss-travel-pass-kaufen/\">스위스 여행 패스</a>가 더 저렴해요. 500개 이상의 박물관과 90개 도시의 대중교통, 산악 기차에 -50% 할인으로 포함됩니다.</p><p>개별 일일 여행에는 <a href=\"/sbb-tageskarten/spartageskarte-sbb/\">SBB 스파르트 일일 패스</a>가 CHF 29부터 거의 항상 가장 저렴한 옵션이에요 – 충분히 미리 예약하세요.</p>"
+          },
+          {
+            "q": "내 여행에 어떤 지방 패스가 적합할까요?",
+            "a": "<p>인터라켄 / 그린델발트 / 웬겐 지역에는 <a href=\"/bahnpaesse/berner-oberland-pass/\">베른 오버란트 패스</a>나 겨울철에는 <a href=\"/bahnpaesse/jungfrau-travel-pass-winter/\">융프라우 여행 패스</a>가 유리해요 – 두 가지 모두 지역의 산악 기차, 대중교통 및 배를 포함하고 있습니다.</p><p>빌바흐 호수 주변에는 <a href=\"/bahnpaesse/sbb-tellpass/\">텔패스</a>가 이상적이에요: 필라투스, 리기, 스타인세르혼과 모든 배가 포함되어 있습니다.</p>"
+          }
+        ]
+      }
+    },
+    "about_us": {
+      "title": "회사 소개 - 스위스 액티비티",
+      "description": "스위스 액티비티는 스위스에서의 레저 활동을 위한 목적지입니다. 수많은 레저 액티비티를 발견하고 비교하고 예약하세요.",
+      "hero": {
+        "title": "스위스 레저 액티비티 찾기",
+        "text": "스위스 액티비티는 스위스 레저 액티비티를 위한 목적지입니다. 스위스 액티비티에서는 클릭 몇 번으로 수많은 레저 액티비티를 찾아 비교하고 예약할 수 있습니다. 스위스에서 여가 시간을 위한 액티비티를 찾는 것이 그 어느 때보다 쉬워졌습니다."
+      },
+      "who": {
+        "title": "당사는 누구인가",
+        "text": "저희는 스위스의 레저 활동에 열정을 가진 의욕적인 팀입니다. 우리는 이 나라와 국민을 잘 알고 있습니다. 새로운 액티비티를 직접 시도하는 것이 저희의 열정입니다. 이것이 바로 스위스 액티비티를 개발한 이유입니다."
+      },
+      "start": {
+        "title": "우리의 시작",
+        "text": "2020년에 더 이상 여행을 할 수 없다는 사실을 깨달았을 때, 저희는 스위스에 초점을 맞춘 스위스 레저 활동 플랫폼을 찾았지만 찾을 수 없었습니다. 이것이 데스티네이션 스위스 액티비티의 시작 신호탄이었습니다.",
+        "milestones": {
+          "march_2020": {
+            "date": "2020년 3월",
+            "title": "비즈니스 모델로서의 스위스 활동 부트스트랩"
+          },
+          "march_2021": {
+            "date": "2021년 3월",
+            "title": "회사 설립"
+          },
+          "june_2021": {
+            "date": "2021년 6월",
+            "title": "자체 플랫폼 출시"
+          },
+          "september_2021": {
+            "date": "2021년 9월",
+            "title": "500개의 실시간 예약 가능한 온라인 액티비티"
+          },
+          "december_2021": {
+            "date": "2021년 12월",
+            "title": "프리 시드 캐피탈 라운드 완료"
+          },
+          "march_2022": {
+            "date": "2021년 3월",
+            "title": "제휴 프로그램 출시"
+          },
+          "may_2022": {
+            "date": "2021년 5월",
+            "title": "B2B 파트너 프로그램 출시"
+          }
+        }
+      },
+      "partner": {
+        "title": "신규 고객을 확보할 수 있도록 지원합니다.",
+        "text": "스위스 액티비티는 새로운 고객을 찾는 데 도움을 드립니다. 스위스 액티비티를 스위스에서 가장 큰 레저 액티비티 목적지로 만들기 위해 매일 노력하고 있습니다. 매일 수천 명의 사람들이 www.swissactivities.com 를 방문하여 스위스의 레저 액티비티를 검색합니다. 스위스 액티비티에 오퍼를 표시하면 새로운 고객에게 다가갈 수 있습니다."
+      },
+      "kunden": {
+        "title": "스위스의 모든 레저 액티비티를 즐길 수 있는 여행지 ",
+        "text": "저희의 목표는 스위스 전역의 모든 레저 액티비티를 www.swissactivities.com 에서 이용할 수 있도록 하는 것입니다. 이를 통해 누구나 쉽게 레저 액티비티를 찾고, 비교하고, 예약할 수 있게 될 것입니다."
+      },
+      "promise": {
+        "title": "고객 약속",
+        "list": [
+          "시간 소모적인 전화 통화 없음",
+          "수많은 웹사이트에 대한 끝없는 조사",
+          "직접 사용 가능한 가용성 확인",
+          "우회 없이 즉시 예약",
+          "추가 비용 없음",
+          "복잡하지 않고 빠른 결제 옵션",
+          "지루한 대기열 없음",
+          "매력적인 혜택 개요",
+          "지역 혜택"
+        ]
+      },
+      "team": {
+        "title": "스위스 활동 팀"
+      }
+    },
+    "tos_b2b": {
+      "title": "공급자를 위한 일반 약관",
+      "description": "이것은 공급자를 위한 우리의 현재 약관입니다."
+    },
+    "tos_b2c": {
+      "title": "고객을 위한 Swiss Activities 중개 플랫폼 이용약관",
+      "description": "이것은 고객을 위한 Swiss Activities 중개 플랫폼의 현재 이용약관입니다."
+    },
+    "tos_aff": {
+      "title": "제휴사를 위한 일반 이용 약관",
+      "description": "다음은 현재 제휴사를 위한 이용 약관입니다."
+    },
+    "imprint": {
+      "title": "임프린트",
+      "description": "이것이 우리의 각인입니다."
+    },
+    "privacy_policy": {
+      "title": "데이터 보호",
+      "description": "개인정보 처리방침입니다."
+    },
+    "contact_us": {
+      "title": "문의하기",
+      "description": "궁금한 점이 있으시면 언제든지 문의해 주세요."
+    },
+    "basket": {
+      "title": "쇼핑 바구니",
+      "delete": "삭제",
+      "warning": "장바구니에서 이 예약을 삭제하시겠습니까?",
+      "edit": "편집",
+      "cancel": "취소",
+      "update": "장바구니 업데이트",
+      "next": "결제",
+      "empty": "장바구니가 비어 있습니다.",
+      "hold": "이 예약은 다음을 위해 보류됩니다.",
+      "explore": "레저 활동 알아보기"
+    },
+    "booking": {
+      "title": "예약"
+    },
+    "confirmation": {
+      "title": "예약 확인",
+      "tickets": "티켓",
+      "download": "모바일 티켓",
+      "more": "자세한 정보",
+      "cancel": "티켓 취소",
+      "cancelled": "취소됨",
+      "cancelWhy": "취소하려는 이유는 무엇인가요?",
+      "cancelReasons": [
+        "휴가가 취소되었습니다.",
+        "더 저렴한 대안을 찾았습니다.",
+        "제때 확인을 받지 못했습니다.",
+        "제공업체에서 예약 취소를 요청했습니다.",
+        "좋아하는 옵션을 사용할 수 없습니다.",
+        "날짜를 잘못 예약했습니다.",
+        "참가자 수를 잘못 예약했습니다.",
+        "기타 이유"
+      ],
+      "rebook": {
+        "title": "재예약",
+        "text": "계획을 변경하시나요? 액티비티를 다시 예약하세요. 이전 예약은 자동으로 취소됩니다.",
+        "button": "지금 예약하기"
+      },
+      "stay": "이 페이지에 머물러 주세요, 귀하의 예약이 처리되고 있습니다.",
+      "editBooking": "예약 변경하기",
+      "showTickets": "티켓",
+      "drawerTitle": "내 예약",
+      "relatedBookings": "관련 예약"
+    },
+    "activities": {
+      "title": "스위스의 최고의 여가 활동 {year}",
+      "description": "스위스에서 {year}에 적합한 활동을 찾아 예약하세요. 다양한 활동과 아이디어가 있는 스위스는 하루 여행을 위한 무수한 옵션을 제공합니다.",
+      "intro": "일 년 내내 모든 상황에 맞는 레저 활동을 찾을 수 있습니다. 가족과의 나들이, 총각 파티, 야외 액티비티, 악천후 프로그램 아이디어를 찾고 계신다면 이곳에서 모든 것을 찾으실 수 있습니다. 스위스 액티비티에서 당일 여행을 계획하고 바로 예약할 수 있습니다.",
+      "titleParentLocation": "{locationTitle} {year}: 최고의 활동 및 제안",
+      "descriptionParentLocation": "{locationTitle} 에서 최고의 액티비티를 찾아 예약하세요. 몇 번의 클릭만으로 여행 또는 가족 액티비티 티켓을 예약하세요.",
+      "titleChildLocation": "{locationTitle} {year}: 최고의 활동",
+      "descriptionChildLocation": "{locationTitle} 에서 최고의 액티비티를 예약하세요. 몇 번의 클릭만으로 여행지 또는 가족 액티비티 티켓을 예약하세요.",
+      "titleParentType": "{typeTitle} {year}: 스위스에서 가장 좋은 {typeTitle}",
+      "descriptionParentType": "스위스 전역에서 최고의 {typeTitle} 예약하기. 대기열, 예약 수수료, 무료 취소 옵션이 없습니다.",
+      "titleChildType": "{typeTitle} {year}: 스위스에서 가장 좋은 {typeTitle} 제안",
+      "descriptionChildType": "스위스 전역에서 {typeTitle} 에 대한 최고의 오퍼를 예약하세요. 대기열, 예약 수수료 및 무료 취소 옵션이 없습니다.",
+      "titleParentLocationParentType": "{typeTitle} {locationTitle}: 최고의 제안 및 가격 {year}",
+      "descriptionParentLocationParentType": "{typeTitle} {locationTitle} {year}의 최고의 제안을 예약하세요. 예약 수수료가 없고 무료 취소 옵션이 있습니다.",
+      "titleParentLocationChildType": "{typeTitle} {locationTitle}: 최고의 제안 및 가격 {year}",
+      "descriptionParentLocationChildType": "{typeTitle} {locationTitle} {year}의 최고의 제안을 예약하세요. 예약 수수료가 없고 무료 취소 옵션이 있습니다.",
+      "titleChildLocationParentType": "{typeTitle} {locationTitle}: 최고의 제안 및 가격 {year}",
+      "descriptionChildLocationParentType": "{typeTitle} {locationTitle} {year}의 최고의 제안을 예약하세요. 예약 수수료가 없고 무료 취소 옵션이 있습니다.",
+      "titleChildLocationChildType": "{typeTitle} {locationTitle}: 최고의 제안 및 가격 {year}",
+      "descriptionChildLocationChildType": "{typeTitle} {locationTitle} {year}의 최고의 제안을 예약하세요. 예약 수수료가 없고 무료 취소 옵션이 있습니다."
+    },
+    "listing": {
+      "title": "{listingTitle}",
+      "offersTitle": "{title} 티켓 및 액티비티",
+      "activities": "활동",
+      "relatedListings": "주요 {value} 명소",
+      "relatedListingsClose": "{value} 관심 장소",
+      "description": "{listingTitle} 목록",
+      "tableOfContent": "목차",
+      "destinationTitle": "{location} - 상위 {num} 명소 및 액티비티 {year}",
+      "more": "자세히 알아보기 {val}",
+      "locations": "{val}주변 장소",
+      "regions": "{val}",
+      "type": "스위스의 인기 여행지 {val}",
+      "typeLocation": "{location} 의 인기 장소 {type}",
+      "types": "상위 {val} 활동",
+      "combo": "{type} {location} - {num} 최고의 제공 및 가격 {year}",
+      "map": "지도",
+      "attributeBadWeatherTitleAttribute": "스위스를 위한 {val} 최고의 악천후 아이디어",
+      "attributeBadWeatherTitle": "{location}의 {val} 최고의 악천후 아이디어",
+      "attributeBadWeatherTeaser": "{location}{locationLink}비, 안개 또는 눈: [ ]( )에는 악천후에도 할 수 있는 다양한 활동이 있습니다. 따라서 비가 온다고 해서 반드시 작업을 중단할 필요는 없습니다.{outdoorLink}어떤 날씨에도 적합한 실내 및 [야외 활동]( )을 모두 찾을 수 있습니다. 활동적인 활동을 원할지, 느긋하게 휴식을 취할지는 여러분이 결정하세요.{badWeatherLink}스위스 전역의 다양한 [악천후 아이디어]( )에서 더 많은 영감을 얻을 수 있습니다.",
+      "attributeBadWeatherDesc": "악천후 아이디어는 {location} 에서 찾아보고 어떤 날씨에서도 할 수 있는 활동을 해보세요.",
+      "attributeFamilyTitleAttribute": "스위스 가족 여행을 위한 {val} 최고의 아이디어",
+      "attributeFamilyTitle": "가족 여행을 위한 {val} 최고의 아이디어 {location}",
+      "attributeFamilyTeaser": "{location}{locationLink}여러분과 자녀를 위해 [ ]( )에서 다음 가족 나들이를 계획하세요. 모험을 좋아하든, 아늑함을 좋아하든, 탐험을 좋아하든 상관없습니다. {location}{locationBadWeatherLink}일 년 내내, 심지어 [ ]( )의 악천후에도 할 수 있는 일이 많습니다. 어린 자녀를 위한 유모차 동반 여행 옵션도 마련되어 있습니다.{familyLink}따라서 [가족 나들이]를 방해하는 것은 아무것도 없습니다( ).",
+      "attributeFamilyDesc": "다음 가족 나들이에 적합한 아이디어를 {location} 에서 찾아보고 아이들과 함께 신나는 하루를 보내세요.",
+      "attributeDogTitleAttribute": "반려견과 함께하는 스위스 최고의 여행 {val}",
+      "attributeDogTitle": "{val} 에서 반려견과 함께하는 최고의 여행 {location}",
+      "attributeDogTeaser": "{location}{locationLink}반려견과 함께 [ ]( )에서 하루를 보낼 수 있는 아이디어를 찾고 있나요? 충실한 반려견과 함께하고 싶다면 여기에서 반려견과 함께할 수 있는 모든 액티비티를 찾아보세요.{outdoorLink}반려견이 신선한 공기를 마시며 스트레스를 풀 수 있는 야외 활동]( )이 특히 적합합니다. 하지만 보트 여행이나 산악 철도 타기도 좋은 선택입니다.{escapeLink}저희가 추천하는 [방탈출 게임]( )은 야외에서 진행되며 일상적인 산책과는 다른 색다른 재미를 선사합니다.",
+      "attributeDogDesc": "{location} 에서 반려견과의 나들이를 계획하고 평소 산책과는 다른 새로운 것을 시도해 보세요.",
+      "attributeOutdoorTitleAttribute": "스위스 최고의 아웃도어 활동 {val}",
+      "attributeOutdoorTitle": "{val} 최고의 아웃도어 활동 {location}",
+      "attributeOutdoorTeaser": "{location}{locationLink}{outdoorLink}[ ]( )에는 일 년 내내 즐길 수 있는 수많은 [야외 활동]( )이 있습니다. 아드레날린이 솟구치는 활동도 있고, 인상적인 경치를 감상하거나 기술에 도전하는 활동도 있습니다.{badWeatherLink}{familyLink}악천후 아이디어]( ) 또는 [가족 나들이]( )로 적합한 야외 활동도 있습니다.{dogLink}경우에 따라서는 [반려견]( )을 데리고 갈 수도 있습니다. 혼자서 할 수 있는 야외 활동도 있지만, 안전상의 이유로 전문 가이드의 투어에 참여해야 하는 야외 활동도 있습니다.",
+      "attributeOutdoorDesc": "{location} 에서 다음 야외 활동을 계획하고 사계절 내내 신선한 공기를 마시며 하루를 보내세요.",
+      "attributeBachelorPartyTitleAttribute": "스위스를 위한 {val} 최고의 암탉 파티 아이디어",
+      "attributeBachelorPartyTitle": "{val} 최고의 암탉 파티 아이디어 {location}",
+      "attributeBachelorPartyTeaser": "{location}]({locationLink})에서 암탉 파티를 위한 멋진 아이디어를 찾고 있나요? 활기찬 사람, 모험가 또는 탐험가 등 모든 취향에 맞는 것을 찾을 수 있습니다. 저희의 아이디어를 활용하면 문제없이 {location} 에서 [암탉 파티]({attributeLink})를 조직하는 작업을 마스터할 수 있습니다. 그러니 친구들과 함께 성공적이고 즐거운 하루를 기대하세요.",
+      "attributeBachelorPartyDesc": "{location}]에서 다음 암탉 파티를 계획하고 친구들과 즐거운 하루를 보내세요.",
+      "attributeTeamEventTitleAttribute": "스위스에서 팀 이벤트를 위한 {val} 최고의 아이디어",
+      "attributeTeamEventTitle": "{val} 에서 팀 이벤트에 대한 최고의 아이디어 {location}",
+      "attributeTeamEventTeaser": "{location}]({locationLink})에서 팀 이벤트를 조직하는 임무를 맡으셨나요? 요구 사항이 매우 다른 경우가 많기 때문에 항상 쉬운 일은 아닙니다. 저희의 아이디어는 다가오는 [팀 이벤트]({attributeLink})를 위한 최고의 영감을 제공하고 준비에 도움이 될 것입니다. 감정가, 탐험가, 활동적인 사람, 퍼즐 애호가 또는 모험가 등 모든 취향에 맞는 것을 찾을 수 있습니다. 동료들과 함께 성공적이고 즐거운 하루를 보내시기 바랍니다.",
+      "attributeTeamEventDesc": "{location} 에서 다음 팀 이벤트를 계획하고 동료들과 즐거운 하루를 보내세요.",
+      "attributeValentinesDayTitleAttribute": "스위스를 위한 {val} 최고의 발렌타인데이 아이디어",
+      "attributeValentinesDayTitle": "{location}에서 발렌타인데이를 위한 최고의 아이디어 {val}",
+      "attributeValentinesDayTeaser": "매년 밸런타인데이가 코앞으로 다가왔습니다. 2월 14일에 무엇을 준비하고 싶은지 이미 정확히 알고 계실 수도 있습니다. 하지만 아직 확신이 서지 않아 [{location}]({locationLink})에서 발렌타인데이 아이디어를 찾고 계실 수도 있습니다. 저희의 활동은 여러분에게 영감을 주고 적합한 것을 찾는 데 도움을 드리기 위해 고안되었습니다. 로맨틱하거나 아늑하거나 모험을 즐기고 싶은 연인이라면 [발렌타인데이]({attributeLink})에서 심장을 더 빨리 뛰게 할 영감을 얻을 수 있을 거예요.",
+      "attributeValentinesDayDesc": "{location} 에서 다음 밸런타인데이를 계획하고 좋아하는 사람과 로맨틱한 하루를 보내세요.",
+      "attributeFirstDateTitleAttribute": "스위스에서의 첫 데이트를 위한 {val} 최고의 아이디어",
+      "attributeFirstDateTitle": "{val} 첫 데이트를 위한 최고의 아이디어 {location}",
+      "attributeFirstDateTeaser": "{location}]({locationLink})에서 첫 데이트에 적합한 아이디어를 찾고 있지만 상대방에게 깊은 인상을 남기는 방법을 잘 모르시나요? 그렇다면 제대로 찾아 오셨습니다. 이 페이지에서 [첫 데이트]({attributeLink})를 완벽하게 성공시키는 데 필요한 모든 영감을 찾을 수 있습니다. 여름이든 겨울이든, 모험을 좋아하든 편안함을 좋아하든, 데이트에 즐거움을 줄 수 있는 무언가를 찾을 수 있을 것입니다. 어쩌면 다음 데이트와 그 이후의 데이트에 적합한 아이템을 발견할지도 모르죠.",
+      "attributeFirstDateDesc": "{location} 에서 첫 데이트를 계획하고 함께 로맨틱한 하루를 보내세요.",
+      "attributeChildBirthdayTitleAttribute": "{val} 스위스에서 어린이 생일 파티를 위한 아이디어",
+      "attributeChildBirthdayTitle": "{val} 어린이 생일 파티를 위한 아이디어 {location}",
+      "attributeChildBirthdayTeaser": "{location}{locationLink}다음 어린이 생일 파티는 [ ]( )에서 계획하세요. 생일은 모든 어린이의 일 년 중 가장 중요한 날 중 하나입니다. 시기와 상관없이 자녀를 행복하게 해줄 아이디어는 얼마든지 있습니다.{outdoorLink}{badWeatherLink}야외 활동]( )을 계획하거나 [악천후 프로그램]( )에 대한 아이디어를 찾아보세요. 다음 어린이 생일 파티는 반드시 성공할 것입니다.",
+      "attributeChildBirthdayDesc": "{location} 에서 어린이 생일 파티를 계획하고 자녀에게 잊지 못할 하루를 선물하세요.",
+      "attributeWheelchairTitleAttribute": "{val} 스위스 휠체어 여행 아이디어",
+      "attributeWheelchairTitle": "{val} 휠체어를 이용한 여행 아이디어 {location}",
+      "attributeWheelchairTeaser": "{location}{locationLink}휠체어 여행을 계획하고 [ ]( )로의 완벽한 접근성 액티비티를 찾아보세요. 스위스는 모든 관광객에게 접근 가능한 경험을 제공하려는 스위스의 노력과 선진적인 접근성 덕분에 휠체어를 타고 여행하는 것이 비교적 쉽습니다.{outdoorLink}여기에는 실내 및 [야외 활동]( ) 모두 포함됩니다.",
+      "attributeWheelchairDesc": "{location} 에서 휠체어 이용이 가능한 여행지에서 영감을 얻어 접근성 높은 액티비티를 계획하세요.",
+      "attributePramTitleAttribute": "{val} 스위스에서 유모차를 이용한 여행 아이디어",
+      "attributePramTitle": "{val} 유모차와 함께하는 여행 아이디어 {location}",
+      "attributePramTeaser": "{location}{locationLink}유모차와 함께 [ ]( ) 안에 여행 계획을 세우세요. 어린 자녀와 함께 여행하는 경우 할 수 있는 활동이 많습니다. 수많은 하이킹 코스가 유모차 친화적으로 설계되어 있으며 대중교통은 어린 자녀를 동반한 가족의 편의를 위해 마련되었습니다.{familyLink}따라서 [가족 나들이]를 방해하는 것은 아무것도 없습니다( ).",
+      "attributePramDesc": "유모차를 가지고 {location} 로 이동하여 가족과 함께 다음 여행을 계획하세요.",
+      "attributesOther": "기타 카테고리",
+      "attributesType": "{val} 활동 카테고리",
+      "teamEvent": "그룹 문의 보내기",
+      "recommended": "여행자 추천",
+      "tickets": "티켓",
+      "tours": "가이드 투어"
+    },
+    "error": {
+      "title": "죄송하지만 오류가 발생했습니다. 홈페이지로 돌아가서 좋아하는 레저 활동을 검색해 보세요."
+    },
+    "supplier": {
+      "title": "스위스 액티비티: 스위스에서 가장 큰 레저 액티비티 마켓플레이스",
+      "description": "스위스 액티비티는 스위스에서 가장 큰 레저 액티비티 마켓플레이스입니다. 저희와 함께라면 더 많은 고객에게 도달하고 예약을 늘릴 수 있습니다.",
+      "hero": {
+        "title": "스위스 액티비티 - 스위스 레저 액티비티의 목적지",
+        "button": "여가 파트너 되기"
+      },
+      "numbers": {
+        "title": "스위스 액티비티가 창립 이래 레저 파트너를 지원해 온 방법",
+        "blocks": [
+          {
+            "title": "웹사이트 방문자",
+            "number": "7'500'000",
+            "text": "잠재 고객"
+          },
+          {
+            "title": "게스트 배치",
+            "number": ">300'000",
+            "text": "게스트 준비"
+          },
+          {
+            "title": "고객 지원",
+            "number": ">10'000",
+            "text": "진행된 대화"
+          },
+          {
+            "title": "예약 시스템",
+            "number": ">20",
+            "text": "바우처 대신 티켓"
+          }
+        ]
+      },
+      "why": {
+        "title": "스위스 액티비티에 레저 상품을 등록하는 이유",
+        "sales": {
+          "title": "신규 고객",
+          "description": "국내외에서 새로운 고객을 확보하고 용량 활용도를 향상하세요."
+        },
+        "support": {
+          "title": "자동화",
+          "description": "스위스 액티비티는 기존 판매 프로세스를 인수하여 거래를 시스템으로 전송합니다."
+        },
+        "finances": {
+          "title": "위험 없음",
+          "description": "고정 비용이나 초기 투자가 없습니다. 고객을 추천할 때만 비용을 지불하면 됩니다."
+        },
+        "local": {
+          "title": "새로운 고객 세그먼트 개발",
+          "description": "스위스 액티비티 리셀러 네트워크와 연결하여 국내외에서 활동 범위를 넓혀보세요."
+        }
+      },
+      "who": {
+        "title": "500개 이상의 레포츠 파트너가 Swiss Activities와 함께합니다",
+        "partners": [
+          {
+            "blocks": [
+              "/자산/공급업체/파트너/베르그반넨/리기.png",
+              "/자산/공급업체/파트너/베르그반넨/실트호른.png",
+              "/자산/공급업체/파트너/베르그반넨/융프라우.jpeg",
+              "/자산/공급업체/파트너/버그바넨/엔겔베르크.svg",
+              "/자산/공급업체/파트너/베르그반넨/필라투스.jpeg",
+              "/자산/공급업체/파트너/베르그반넨/몬테타마로.png",
+              "/자산/공급업체/파트너/베르그반넨/브리엔츠.png",
+              "/자산/공급업체/파트너/베르그반넨/고르너그라트.png",
+              "/자산/공급업체/파트너/목적지/라인펠덴.png",
+              "/자산/공급업체/파트너/목적지/바젤.svg",
+              "/자산/공급업체/파트너/목적지/winterthur.svg",
+              "/자산/공급업체/파트너/목적지/인터라켄.png",
+              "/자산/공급업체/파트너/어트랙션/볼렌버그.png",
+              "/자산/공급업체/파트너/매력물/bls.png",
+              "/자산/공급업체/파트너/매력물/cgn.png",
+              "/자산/공급업체/파트너/관광 명소/칠롱.jpeg",
+              "/자산/공급업체/파트너/어트랙션/마에스트라니.png",
+              "/자산/공급업체/파트너/관광 명소/버케르슈하우스.png",
+              "/자산/공급업체/파트너/매력물/four.png",
+              "/자산/공급업체/파트너/아웃도어/베스트오브스위스.jpeg",
+              "/자산/공급업체/파트너/아웃도어/카약.jpeg",
+              "/자산/공급업체/파트너/아웃도어/아웃도어ch.jpeg",
+              "/자산/공급업체/파트너/아웃도어/패러글라이딩.png",
+              "/자산/공급업체/파트너/아웃도어/와인 투어.webp",
+              "/자산/공급업체/파트너/아웃도어/저마터.png"
+            ]
+          }
+        ]
+      },
+      "pricing": {
+        "title": "가격 모델",
+        "subtitle": "고객이 성공적으로 채용된 경우에만 결제 완료",
+        "description": "스위스 액티비티는 현지 및 전 세계에서 적합한 판매 채널을 파악하고 잠재 고객이 있는 곳에서 레저 상품을 판매할 수 있도록 도와줍니다. 스위스 액티비티에는 설정 비용이 없으므로 추가 투자 없이 새로운 판매 채널을 개설할 수 있습니다.",
+        "blocks": [
+          {
+            "pretitle": "",
+            "cost": "18% + CHF 0.30",
+            "subcost": "부가세 별도",
+            "button": "여가 파트너 되기",
+            "buttonLink": "https://k3qlq2fyp9o.typeform.com/to/CxWJub7f",
+            "subbutton": "",
+            "includes": [
+              "Freizeitaktivitäten auf Swiss Activities 등록하기",
+              "여가 활동 무제한 녹화",
+              "당사 콘텐츠 팀이 제품 설명서를 작성합니다.",
+              "20개 이상의 예약 시스템과 연결",
+              "채팅 및 전화를 통한 개인 파트너 지원",
+              "활동에 대한 질문 시 손님 통신 관리",
+              "손님의 예약 및 취소 요청 처리",
+              "모든 예약 및 취소 모니터링 및 관리",
+              "청구 모니터링 및 관리",
+              "현금 정산 통합 – Swiss Activities를 통한 청구",
+              "판매 프로세스 보장(바우처가 아닌 티켓)",
+              "제휴 네트워크에 자동으로 접근",
+              "리셀러 네트워크에 활동 등록"
+            ],
+            "faq": []
+          }
+        ]
+      },
+      "tech": {
+        "title": "예약 및 발권 시스템",
+        "description": "스위스 활동의 중심 목표 중 하나는 스위스의 모든 여가 제품의 연결 및 디지털화 외에도 국내외 여가 제품의 재판매 프로세스를 단순화하고 자동화하는 것입니다. 유통 환경은 점점 더 복잡해지고 있으며 우리는 재판매자들이 고객 세그먼트를 유지할 수 있도록 돕고 있습니다. 따라서 우리의 여가 파트너와 스위스 활동 간의 직접적인 연결이 매우 중요합니다. 우리는 새로운 시스템을 지속적으로 구현하고 있습니다. 예약 및 티케팅 시스템이 없다면 sales@swissactivities.com으로 연락 주시기 바랍니다.",
+        "partners": [
+          "/자산/공급업체/기술/트렉소프트.웹p",
+          "/자산/공급업체/기술/지역도.웹p",
+          "/자산/공급업체/기술/tomas.webp",
+          "/자산/공급업체/기술/waldhart.webp",
+          "/자산/공급업체/기술/경험은행.webp",
+          "/자산/공급업체/기술/스키데이터.웹p",
+          "/자산/공급업체/기술/axess.webp",
+          "/assets/supplier/technology/smeetz.webp",
+          "/assets/supplier/technology/eatwith.webp",
+          "/자산/공급업체/기술/fareharbor.webp",
+          "/자산/공급업체/기술/예약 키트.웹p",
+          "/자산/공급업체/기술/ntree.webp",
+          "/assets/supplier/technology/secutix.webp",
+          "/자산/공급업체/기술/투어컴즈.웹p",
+          "/자산/공급업체/기술/sbb.webp"
+        ],
+        "titleSoon": "곧 사용 가능",
+        "partnersSoon": [
+          "/자산/공급업체/기술/페라텔.webp"
+        ]
+      },
+      "faq": [
+        {
+          "title": "레저 파트너를 위한 일반 정보",
+          "blocks": [
+            {
+              "title": "누가 스위스 액티비티의 레저 파트너가 될 수 있나요?",
+              "text": "스위스에서 레저 액티비티를 판매하고자 하는 사람은 누구나 스위스 액티비티의 파트너가 될 수 있습니다. 오퍼는 매우 다양할 수 있으며 상상력에는 사실상 제한이 없습니다. 약 100가지 카테고리의 액티비티, 티켓, 어드벤처, 투어, 렌트 등이 있습니다. 여기에는 유니콘 케이크 베이킹 코스부터 텐덤 패러글라이딩 비행, 박물관 입장권 등이 포함됩니다. 중요한 것은 스위스에서 진행되거나 스위스에서 당일치기 여행이 가능한 상품이라는 점입니다."
+            },
+            {
+              "title": "스위스 액티비티에 연결할 수 있는 예약 시스템은 무엇인가요?",
+              "list": [
+                "트렉소프트",
+                "지역도",
+                "Waldhart",
+                "경험 은행",
+                "스키 데이터",
+                "Axess",
+                "Tomas",
+                "Smeetz",
+                "Eatwith",
+                "파레하버",
+                "예약 키트",
+                "N-Tree",
+                "Secutix",
+                "TourCMS",
+                "팔리시스",
+                "곧 출시됩니다: SBB 및 페라텔"
+              ]
+            },
+            {
+              "title": "저는 예약 시스템을 사용하지 않습니다. 스위스 액티비티를 통해 액티비티를 판매할 수 있나요?",
+              "text": "예약 시스템을 사용하지 않더라도 일정을 등록할 수 있습니다. 이 경우 회원님의 사양에 따라 수동으로 캘린더를 만들어 드립니다. 예약 시스템을 구현하고 싶으시다면 문의해 주세요. 이 주제에 대해 기꺼이 조언해 드리겠습니다. 필요한 정보는 다음과 같습니다:",
+              "list": [
+                "기간(날짜)",
+                "시작 시간",
+                "기간",
+                "마감일(고객이 늦어도 몇 일 전까지 예약해야 하나요?)",
+                "카테고리별 가격(성인, 어린이, 대여 등)",
+                "슬롯당 사용 가능한 최대 좌석 수"
+              ]
+            },
+            {
+              "title": "예약 시 어떤 정보가 전송되나요?",
+              "text": "고객이 스위스 액티비티를 예약하면 모든 중요한 정보가 포함된 확인 이메일을 받게 됩니다. 여기에는 문의 사항이 있는 경우 직접 연락할 수 있도록 회원님의 연락처 정보가 포함되어 있습니다.",
+              "list": [
+                "활동 이름",
+                "날짜",
+                "시간",
+                "미팅 포인트",
+                "예약된 항공권 수",
+                "연락처 정보(이메일 및 전화)"
+              ]
+            },
+            {
+              "title": "스위스 액티비티에 웹사이트와 동일한 액티비티 가격이 표시되나요?",
+              "text": "예, 고객이 직접 예약할 때와 동일한 금액을 지불합니다. 이는 당사와 마찬가지로 고객에게도 중요합니다. 위치마다 가격이 다르면 고객이 이를 알게 되고 불만과 이해 부족으로 이어질 수 있습니다. 따라서 양쪽 모두 재방문 고객을 잃을 위험이 있습니다."
+            },
+            {
+              "title": "스위스 액티비티의 취소 기간은 얼마나 되나요?",
+              "text": "스위스 액티비티는 액티비티 시작 24시간 전까지 무료로 취소할 수 있는 옵션이 있습니다. 취소가 불가능한 액티비티를 예약하고 싶으시다면, 저희가 대신 취소해드릴 수 있습니다. 하지만 경험상 취소 옵션을 제공하는 액티비티 예약을 중개하는 경우가 더 많았습니다. 예약을 취소해야 하는 경우에도 취소할 수 있습니다. 환불을 준비할 수 있도록 고객에게 즉시 알려주시기 바랍니다. "
+            },
+            {
+              "title": "이후 취소는 어떻게 처리되나요?",
+              "text": "취소 양식을 통해 이후 취소 요청이 접수되면 고객과 먼저 상의하지 않고는 환불을 해드리지 않습니다. 사기 사례를 방지하기 위해 항상 고객의 설명을 확인하기 위해 동의를 요청합니다. 고객의 동의가 있는 경우에만 환불이 이루어집니다."
+            }
+          ]
+        },
+        {
+          "title": "레저 상품에 대한 잠금 해제 프로세스",
+          "blocks": [
+            {
+              "title": "스위스 액티비티에서 내 오퍼를 광고하려면 어떻게 해야 하나요?",
+              "text": "스위스 액티비티의 레저 파트너가 되어 오퍼를 게시하려면 다음 단계를 수행해야 합니다:",
+              "list": [
+                "먼저 레저 파트너로 등록하세요.",
+                "게시하려는 각 활동에 대해 양식을 작성합니다. 등록이 확인된 후 링크를 받게 됩니다.",
+                "저희는 보통 2주 이내에 회원님의 활동을 작성하고 기록합니다.",
+                "활동이 시작되는 대로 이메일로 알려드립니다."
+              ]
+            },
+            {
+              "title": "내 활동을 켜려면 어떤 정보가 필요한가요?",
+              "text": "레저 파트너로 등록하면 활동을 입력하는 데 사용할 수 있는 양식을 보내드립니다. 활동을 게시하려면 다음 정보가 필요합니다:",
+              "list": [
+                "예약 시스템 세부 정보(가능한 경우)",
+                "활동 제목",
+                "활동 링크",
+                "활동당 최소 4개의 사진",
+                "예약 시스템을 사용하지 않는 경우 날짜, 시간 및 기간에 대한 세부 정보",
+                "연령, 언어, 체중 등에 관한 모든 정보.",
+                "활동의 적합성: 반려견, 유모차, 휠체어, 가족 등",
+                "정확한 미팅 포인트"
+              ]
+            },
+            {
+              "title": "언제든지 내 항목을 삭제할 수 있나요?",
+              "text": "예, 언제든지 계약을 취소할 수 있습니다. 최소 계약 기간은 없으며 취소에 따른 수수료도 없습니다."
+            },
+            {
+              "title": "활동에서 무언가를 변경하려면 어떻게 해야 하나요?",
+              "text": "예약 시스템을 사용하지 않는 경우 콘텐츠를 변경하거나 가격을 조정하려면 이메일로 알려주시기 바랍니다."
+            },
+            {
+              "title": "고객에게 어떻게 연락하나요?",
+              "text": "예약이 완료되면 고객의 세부 정보가 포함된 확인 이메일을 받게 됩니다. 여기에는 고객의 이름, 이메일 주소, 연락할 수 있는 전화번호가 나와 있습니다."
+            },
+            {
+              "title": "돈은 어떻게 받나요?",
+              "text": "모든 미수금은 서비스 날짜에 따라 지급되며 다음 달 초에 자동으로 송금됩니다. 이 때, 이전 달에 발생한 모든 예약이 집계되어 단일 지급으로 처리됩니다."
+            }
+          ]
+        }
+      ]
+    },
+    "supplierRegistration": {
+      "title": "스위스 액티비티: 스위스에서 가장 큰 레저 액티비티 마켓플레이스",
+      "description": "스위스 액티비티는 스위스에서 가장 큰 레저 액티비티 마켓플레이스입니다. 저희와 함께라면 더 많은 고객에게 도달하고 예약을 늘릴 수 있습니다.",
+      "hero": {
+        "title": "스위스 액티비티에 참여하기",
+        "description": "스위스 액티비티에 무료로 등록하고 스위스 및 해외 게스트 사이에서 인지도를 높이세요. 혜택 한눈에 보기",
+        "list": [
+          "회사로서, 그리고 여러분의 제안으로 Google에서 찾아보세요. 4개 언어로 제공됩니다!",
+          "새로운 판매 채널 개척",
+          "무료 고객 지원의 혜택",
+          "예약 시스템을 연결하고 예약 시스템에서 직접 예약 가능 여부를 관리하세요.",
+          "새로운 예약은 곧 고객입니다. 저희는 파트너를 숨기지 않고 고객에게 최고의 예약 경험을 제공하고자 합니다.",
+          "고정 비용이나 숨겨진 수수료가 없습니다.",
+          "고객은 Twint, 계좌 구매, 주요 신용 카드 등 모든 현지 결제 수단을 사용하여 결제할 수 있습니다."
+        ]
+      }
+    },
+    "affiliate": {
+      "title": "제휴",
+      "description": "스위스 액티비티의 파트너로 가입하고 첫 예약에서 1%에서 5%의 수수료를 받으세요. 고정 수수료는 없습니다.",
+      "hero": {
+        "title": "지금 스위스 액티비티의 제휴 파트너가 되어보세요.",
+        "description": "스위스 액티비티 제휴 프로그램에 등록하고 매력적인 통합 도구, 1~5% 수수료, 45일 쿠키 기간의 혜택을 누리세요.",
+        "steps": [
+          "로그인",
+          "활동 실행",
+          "예약을 생성하고 그 과정에서 수익을 창출하세요."
+        ],
+        "button": "지금 등록하기"
+      },
+      "form": {
+        "tos": "<a target='_blank' href='/agb/affiliates/'>일반 이용 약</a> 관에 동의합니다."
+      },
+      "advantagesTitle": "스위스 액티비티의 제휴 파트너로서 어떤 이점이 있나요?",
+      "advantages": [
+        {
+          "title": "1,500개 이상의 레저 활동",
+          "text": "스위스 액티비티의 제휴 파트너로서 클릭 몇 번으로 스위스 전역의 1,500개 이상의 레저 액티비티를 이용할 수 있습니다."
+        },
+        {
+          "title": "매력적인 조건",
+          "text": "중개된 각 예약에 대해 1%에서 5%의 수수료를 받게 됩니다. 쿠키 기간은 45일입니다."
+        },
+        {
+          "title": "독자에게 영감을 불어넣기",
+          "text": "영감을 주는 콘텐츠로 블로그나 웹사이트에 활기를 불어넣고 커뮤니티가 여가 시간을 계획할 때 시간을 절약할 수 있도록 도와주세요."
+        },
+        {
+          "title": "간편한 등록",
+          "text": "복잡하지 않고 빠르게 등록할 수 있는 이점을 누리세요."
+        },
+        {
+          "title": "직접 티켓 판매",
+          "text": "독자를 당사에 전달하지 않고 웹사이트에서 직접 티켓을 판매할 수 있는 옵션이 있습니다."
+        },
+        {
+          "title": "사용자 지정 HTML",
+          "text": "다재다능하고 매력적으로 디자인된 사용자 지정 HTML 도구 덕분에 영업 기회를 맞춤화할 수 있습니다."
+        }
+      ],
+      "faqTitle": "가장 중요한 질문에 대한 답변",
+      "faq": [
+        {
+          "title": "스위스 액티비티 제휴 프로그램 등록은 어떻게 하나요?",
+          "text": "이 페이지의 양식에 필요한 모든 세부 정보를 입력하여 등록하세요. 등록이 승인되면 영업일 기준 1일 이내에 등록을 확인하고 로그인 정보를 이메일로 보내드립니다."
+        },
+        {
+          "title": "제휴 파트너 대시보드에 로그인하려면 어떻게 해야 하나요?",
+          "text": "등록할 때 개인 비밀번호를 정의합니다. 세부 정보를 확인하는 즉시 알림을 받게 되며, <a href='https://swissactivities.tapfiliate.com/login' target='_blank'>이 링크를</a> 통해 제휴 대시보드에 로그인할 수 있습니다."
+        },
+        {
+          "title": "제휴 프로그램에 대한 자세한 정보는 어디에서 찾을 수 있나요?",
+          "text": "헬프데스크에서 <a href='https://intercom.help/swiss-activities/de/collections/3916117-affiliate-moglichkeiten-zur-einbindung' target='_blank'>첫 단계와</a> <a href='https://intercom.help/swiss-activities/de/collections/3916117-affiliate-moglichkeiten-zur-einbindung' target='_blank'>활동 통합에</a> 관한 가장 중요한 질문을 확인할 수 있습니다. 또한 등록 후에는 유용한 팁이 담긴 일련의 이메일을 받게 됩니다."
+        },
+        {
+          "title": "누가 스위스 액티비티의 제휴 파트너가 될 수 있나요?",
+          "text": "스위스 관광, 스위스에서의 레저 활동 또는 여행 전반과 관련된 블로그나 웹사이트를 운영하는 경우, 제휴 프로그램에 등록할 수 있습니다. 제휴 링크를 삽입할 수 있는 인스타그램, 핀터레스트 또는 페이스북 계정이 있는 경우에도 등록할 수 있습니다."
+        },
+        {
+          "title": "제휴 프로그램 구독을 취소할 수 있나요?",
+          "text": "물론입니다. 최소 기간에 얽매이지 않습니다. 계정을 삭제하려면 이메일이나 채팅으로 알려주시면 필요한 모든 조치를 취해드리겠습니다."
+        },
+        {
+          "title": "예약당 수수료는 얼마를 받나요?",
+          "text": "해당 활동을 수행하는 고객을 추천하면 1%에서 5%의 수수료를 받게 됩니다. 고객이 예약을 취소하는 경우에는 안타깝게도 수수료를 지급할 수 없습니다."
+        }
+      ]
+    },
+    "apps": {
+      "title": "스위스 액티비티 앱",
+      "description": "스위스 액티비티 앱으로 스위스를 경험해 보세요 – 휴대폰으로 여가 활동을 발견하고, 비교하고, 예약하세요.",
+      "hero": {
+        "title": "당신의 스위스 모험을 주머니에 담으세요",
+        "description": "Swiss Activities 앱을 통해 스위스 전역에서 {amount}개의 활동에 직접 접근할 수 있어요. 경험을 찾아보고, 몇 초 안에 예약하고, 모든 티켓과 예약을 언제든지 확인하세요.",
+        "features": [
+          "언제든지 티켓을 준비하세요",
+          "예약을 쉽게 관리하세요",
+          "모든 취향에 맞는 새로운 경험을 발견하세요",
+          "오프라인에서도 티켓을 사용할 수 있어요"
+        ]
+      }
+    },
+    "travelGuide": {
+      "title": "스위스 여행 플래너",
+      "description": "스위스는 매우 다양한 나라이며 여행할 때 즐길 거리가 엄청나게 많은 나라입니다. 그러니 작은 크기에 속지 마세요. 스위스는 스웨덴, 캘리포니아 또는 모로코보다 약 10배 작지만 모든 취향에 맞는 무언가를 찾을 수 있습니다. 지중해 티치노에서는 분주한 바젤과는 완전히 다른 세계에 와 있는 듯한 느낌을 받을 수 있습니다. 그리고 산악 지역인 알프슈타인은 온화한 제네바 호수 지역과는 완전히 다른 기후를 가지고 있습니다. 그리고 이 두 지역은 불과 3~4시간 거리에 있음에도 불구하고요. 에어프랑스 블로그에서 여행 계획을 도와드립니다. 여행에 필요한 유용한 팁과 유용한 정보를 제공하여 완벽한 준비를 할 수 있도록 도와드립니다. 스위스를 처음 여행하시든 이미 잘 알고 계시든 상관없습니다. 스위스 전문가뿐만 아니라 처음 방문하는 여행객에게도 적합한 정보를 제공합니다.",
+      "intro": "스위스는 매우 다양한 나라이며 여행할 때 즐길 거리가 엄청나게 많은 나라입니다. 그러니 작은 크기에 속지 마세요. 스위스는 스웨덴, 캘리포니아 또는 모로코보다 약 10배 작지만 모든 취향에 맞는 무언가를 찾을 수 있습니다. 지중해 티치노에서는 분주한 바젤과는 완전히 다른 세계에 와 있는 듯한 느낌을 받을 수 있습니다. 그리고 산악 지역인 알프슈타인은 온화한 제네바 호수 지역과는 완전히 다른 기후를 가지고 있습니다. 그리고 이 두 지역은 불과 3~4시간 거리에 있음에도 불구하고요. 에어프랑스 블로그에서 여행 계획을 도와드립니다. 여행에 필요한 유용한 팁과 유용한 정보를 제공하여 완벽한 준비를 할 수 있도록 도와드립니다. 스위스를 처음 여행하시든 이미 잘 알고 계시든 상관없습니다. 스위스 전문가뿐만 아니라 처음 방문하는 여행객에게도 적합한 정보를 제공합니다."
+    },
+    "travelRoutes": {
+      "title": "여정 스위스",
+      "description": "스위스는 매우 다양한 나라이며 여행할 때 즐길 거리가 엄청나게 많은 나라입니다. 그러니 작은 크기에 속지 마세요. 스위스는 스웨덴, 캘리포니아 또는 모로코보다 약 10배 작지만 모든 취향에 맞는 무언가를 찾을 수 있습니다. 지중해 티치노에서는 분주한 바젤과는 완전히 다른 세계에 와 있는 듯한 느낌을 받을 수 있습니다. 그리고 산악 지역인 알프슈타인은 온화한 제네바 호수 지역과는 완전히 다른 기후를 가지고 있습니다. 그리고 이 두 지역은 불과 3~4시간 거리에 있음에도 불구하고요. 에어프랑스 블로그에서 여행 계획을 도와드립니다. 여행에 필요한 유용한 팁과 유용한 정보를 제공하여 완벽한 준비를 할 수 있도록 도와드립니다. 스위스를 처음 여행하시든 이미 잘 알고 계시든 상관없습니다. 스위스 전문가뿐만 아니라 처음 방문하는 여행객에게도 적합한 정보를 제공합니다."
+    },
+    "widget": {
+      "title": "웹사이트에 스위스 액티비티 통합",
+      "description": "당신의 웹사이트에 Swiss Activities를 통합하고 활동을 직접 판매하세요.",
+      "hero": {
+        "title": "스위스 액티비티의 오퍼를 웹사이트에 통합",
+        "description": "스위스 액티비티 위젯은 웹사이트에 액티비티를 삽입하는 가장 쉬운 방법입니다. 다양한 위젯 유형 중에서 선택하여 몇 분 안에 임베드하세요.",
+        "button": "지금 통합하기"
+      },
+      "cta": {
+        "title": "제휴사 되기",
+        "button": "양식으로"
+      }
+    },
+    "newsletterConfirm": {
+      "title": "등록해 주셔서 감사합니다. 방금 등록을 확인하는 메시지를 보냈습니다."
+    },
+    "newsletterSuccess": {
+      "title": "감사합니다! 이제 뉴스레터를 구독하게 되었습니다."
+    },
+    "cookiePolicy": {
+      "title": "쿠키 정책"
+    },
+    "vouchers": {
+      "title": "체험 선물 아이디어 - Swiss Activities의 최고의 상품권들",
+      "description": "가장 기억에 남는 순간을 Swiss Activities의 체험 상품권으로 선물하세요! 스위스의 다양한 여가 활동을 만나보세요 – 유연하고, 간편하며, 즉시 온라인으로 예약할 수 있습니다. 모든 경우에 완벽한 선물 아이디어입니다.",
+      "hero": {
+        "title": "지금 스위스의 체험 상품권을 선물하고 기쁨을 나누세요!",
+        "text": "지금 Swiss Activities에서 최고의 선물 아이디어와 체험 이용권을 찾아보세요. 생일, 크리스마스 선물로, 혹은 단순히 감사의 말을 전하기 위해서라도 – 스위스의 체험을 위한 이용권은 누구에게나 어울리며, 반드시 기억에 남는 선물이 됩니다.",
+        "button": "상품권 구매"
+      },
+      "gift": {
+        "title": "스위스 최고의 경험을 선물하세요 – 모험부터 휴식까지",
+        "text": "친구나 가족을 위한 독특한 선물 아이디어를 스위스에서 찾고 계신가요? Swiss Activities의 체험 상품권은 스위스가 제공하는 가장 다양한 여가 활동에 접근할 수 있게 해줍니다. 가이드 투어, 자연에서의 모험, 온천에서의 편안한 시간 또는 박물관에서의 문화적 하이라이트 등 – Swiss Activities는 특별한 순간을 선물할 수 있게 해줍니다."
+      },
+      "why": {
+        "title": "왜 Swiss Activities의 체험 상품권이 완벽한 선물 아이디어인지",
+        "items": [
+          {
+            "title": "스위스에서 가장 큰 선택",
+            "text": "모든 지역에서 1,600개 이상의 레저 활동을 즐길 수 있으며, 아웃도어 모험부터 휴식 순간까지 다양한 경험을 제공합니다."
+          },
+          {
+            "title": "10만 명 이상의 만족하는 고객",
+            "text": "Swiss Activities는 특별한 선물과 여행을 위한 신뢰할 수 있는 파트너입니다."
+          },
+          {
+            "title": "무료 취소 옵션",
+            "text": "선물 수령인의 필요에 맞게 조정할 수 있는 안전하고 유연한 예약입니다."
+          },
+          {
+            "title": "5성급 고객 지원",
+            "text": "스위스 품질 및 지원 - 원활한 경험 시작을 위해."
+          }
+        ]
+      },
+      "end": {
+        "title": "스위스에서 경험 상품권을 선물하고 기쁨을 선사하세요!",
+        "text": "지금 Swiss Activities에서 최고의 선물 아이디어와 체험 이용권을 찾아보세요. 생일, 크리스마스 선물로, 혹은 단순히 감사의 말을 전하기 위해서라도 – 스위스의 체험을 위한 이용권은 누구에게나 어울리며, 반드시 기억에 남는 선물이 됩니다.",
+        "button": "상품권 선택"
+      },
+      "banner": {
+        "tagline": "신제품: 완벽한 선물 아이디어!",
+        "title": "체험 상품권을 확보하세요",
+        "button": "여기를 누르세요"
+      }
+    }
+  },
+  "filter": {
+    "nearby": "주변 활동 표시",
+    "results": "결과 표시",
+    "filter": "필터",
+    "search": "검색",
+    "location": "위치",
+    "types": "종류",
+    "categories": "카테고리",
+    "activity": "활동",
+    "activities": "활동",
+    "today": "오늘",
+    "tomorrow": "내일",
+    "price": "가격",
+    "noResults": "결과 없음",
+    "noExactResults": {
+      "title": "정확한 결과가 없습니다",
+      "description": "필터를 변경하거나 제거하거나 검색 범위를 조정해 보세요.",
+      "showNearest": "가장 가까운 결과 보기",
+      "resetDate": "기간 초기화"
+    },
+    "lang": "언어",
+    "sort": {
+      "relevance": "관련성",
+      "distance": "사용자와의 거리",
+      "popularityDesc": "인기도 하락",
+      "ratingDesc": "등급 내림차순",
+      "ratingAsc": "평가 오름차순",
+      "priceDesc": "가격 내림차순",
+      "priceAsc": "가격 오름차순",
+      "dateDesc": "최신 항목 먼저",
+      "dateAsc": "가장 오래된 것부터"
+    },
+    "navigationBreadcrumbs": {
+      "root": "스위스"
+    },
+    "all": "모두",
+    "map": "지도",
+    "card": {
+      "from": "부터",
+      "person": "1인당"
+    },
+    "viewMore": "자세히 보기",
+    "ratingBetterThan": "{val} 별보다 좋음",
+    "ratingEqual": "{val} 별",
+    "ratingNone": "신규 / 평가 없음",
+    "moreFilters": "{val} 더 보기",
+    "lessFilters": "덜 보기",
+    "usedFilters": "적용된 필터",
+    "resetFilters": "초기화",
+    "discountTypes": "할인",
+    "calendar": "캘린더",
+    "locationError": "위치를 로드할 수 없습니다.",
+    "textOnly": "텍스트가 있는 리뷰만"
+  },
+  "activity": {
+    "you": "당신",
+    "nearby": "{distance}km 거리 {location}",
+    "nearbyAlt": "{distance}km 거리",
+    "recommendation": "권장 사항",
+    "reviews": "가치 평가",
+    "reviewOriginalIn": "원래는 {language}로",
+    "booked": "{val} 한 번 예약",
+    "providedBy": "공급자",
+    "save": "저장",
+    "selectDate": "날짜 선택",
+    "similarActivities": "추가 활동",
+    "question": "어떻게 도와드릴까요?",
+    "rating": "가치 평가",
+    "highDemand": "높은 수요",
+    "widget": {
+      "free": "사용 가능",
+      "error500": "무언가 잘못되었습니다. <b>1</b>분 후에 다시 시도해 주세요.",
+      "errorDate": "안타깝게도 {val} 에 더 이상 사용할 수 있는 슬롯이 없습니다.",
+      "choose": "선택",
+      "titleTime": "오퍼 선택",
+      "titleTicketOption": "티켓 옵션 선택하기",
+      "titleParticipants": "참가자 선택",
+      "titleTickets": "티켓 선택",
+      "confirmOffer": "티켓 옵션 확인하기",
+      "confirmTickets": "참가자 확인하기",
+      "confirmDate": "날짜 확인하기",
+      "confirmDateTime": "날짜와 시간 확인하기",
+      "cheapest": "가장 유리한 가격",
+      "time": "시간",
+      "navTicket": "티켓",
+      "check": "가용성 확인",
+      "notBookable": "안타깝게도 이 혜택은 현재 예약할 수 없습니다.",
+      "paymentMethods": "결제 방법",
+      "totalPrice": "총 가격",
+      "taxes": "추가 수수료",
+      "offerTimeSelect": "시간 선택",
+      "basket": "쇼핑 바구니",
+      "basketAdd": "장바구니에 담기",
+      "selectedOffer": "오퍼",
+      "adjust": "맞춤 예약",
+      "swissHalfFareCard": "스위스 외 거주자는 <a href=\"/bahnpaesse/swiss-half-fare-card/\" target=\"_blank\" className=\"inline-block\">스위스 반값 카드</a>(&nbsp;)를 <a href=\"/bahnpaesse/swiss-half-fare-card/\" target=\"_blank\" className=\"inline-block\">발급받아</a> 대중교통 할인에 사용할 수 있습니다."
+    },
+    "tabs": {
+      "highlights": "하이라이트",
+      "includes": "서비스",
+      "importantInformation": "중요 정보",
+      "meetingPoints": "미팅 포인트"
+    },
+    "newsletter": {
+      "title": "더 이상 활동을 놓치지 마세요",
+      "description": "뉴스레터를 구독하고 여행 팁, 여가 시간을 위한 아이디어, 스위스에 적합한 여행 가이드를 받아보세요.",
+      "signup": "로그인",
+      "inputPlaceholder": "이메일"
+    },
+    "notRefundable": {
+      "title": "취소 불가",
+      "description": "안타깝게도 파트너 정책에 따라 이 특정 상품에 대한 환불, 예약 변경 또는 취소는 제공되지 않습니다."
+    }
+  },
+  "UI": {
+    "date": "날짜"
+  },
+  "home": {
+    "title": "여기가 너의 경험이 시작되는 곳이야"
+  },
+  "discover": {
+    "title": "활동 찾기"
+  },
+  "booking": {
+    "cancelable": "다음까지 무료 취소",
+    "privacyMessage": "지불을 계속함으로써, 너는 <tos>{text}</tos> 및 Swiss Activities AG의 취소 조건을 수락하는 것이다.",
+    "privacyPolicy": "일반 이용 약관",
+    "personalTitle": "예약 세부 정보",
+    "personalSubtitle": "예약을 완료하려면 다음 정보를 입력해 주세요.",
+    "mainGuest": "담당자",
+    "fullName": "이름",
+    "lastName": "성",
+    "email": "이메일",
+    "phoneNumber": "전화 번호",
+    "cardDetails": "결제 방법",
+    "paymentSecure": "안전한 결제 - SSL 암호화를 사용하여 데이터를 보호합니다.",
+    "creditPayments": "신용 카드",
+    "total": "합계",
+    "fullDay": "하루 종일",
+    "booknow": "지금 예약하기",
+    "addMoreInformation": "세부 정보 추가",
+    "addPaymentMethod": "결제 방법 선택",
+    "youBook": "쇼핑 바구니",
+    "rebate": "할인 코드",
+    "rebateEmailRequired": "먼저 너의 이메일 주소를 입력하고 확인해 줘, 할인 코드를 사용하려면.",
+    "important": "저는 활동의 \"중요한 정보\" 부분에 명시된 조건을 숙지하였습니다.",
+    "importantShow": "정보 표시",
+    "importantHide": "정보 숨기기"
+  },
+  "confirm": {
+    "title": "스위스 액티비티를 예약해 주셔서 감사합니다.",
+    "confirmed": "예약이 확정되었습니다.",
+    "pending": "예약이 처리 중입니다.",
+    "cancelled": "예약이 취소되었습니다.",
+    "failed": "죄송합니다. 안타깝게도 문제가 발생했습니다.",
+    "failedPayment": "결제가 처리되지 않았습니다. 다른 결제 방법을 시도해 보세요.",
+    "failedReservation": "안타깝게도 예약을 확인할 수 없습니다. 결제 금액이 환불됩니다. 다시 시도해 주세요.",
+    "wait": "결제 서비스 제공업체의 결제 확인을 기다리는 중입니다.",
+    "waitEmail": "결제가 확인되는 즉시 이메일이 전송됩니다.",
+    "caption": "스위스 액티비티를 통해 예약해 주셔서 대단히 감사합니다. 확인 이메일을 보내드렸습니다.",
+    "bookingNumber": "예약 번호",
+    "point": "미팅 포인트",
+    "pointAddress": "주소 미팅 포인트",
+    "number": "휴대폰 번호",
+    "end": "종료",
+    "email": "예약 확인 메일이 {email} 으로 전송되었습니다. 몇 분 이내에 확인서를 받지 못하셨다면 채팅을 통해 지원팀에 문의하시기 바랍니다.",
+    "transport": {
+      "title": "대중교통으로 오고 싶어?",
+      "from": "너의 위치",
+      "description": "대중교통으로 편리하게 여행하고 모바일 티켓을 예약에 바로 추가하세요.",
+      "button": "티켓 추가하기"
+    }
+  },
+  "footer": {
+    "company": {
+      "title": "엔터프라이즈",
+      "about-us": "회사 소개",
+      "jobs": "채용 정보",
+      "legal": "법적 문제"
+    },
+    "resources": {
+      "title": "자원"
+    },
+    "collaboration": {
+      "title": "협력",
+      "becomeapartner": "파트너 되기",
+      "affiliate": "제휴 프로그램",
+      "widget": "위젯"
+    },
+    "affiliate": {
+      "title": "제휴 코드",
+      "button": "코드 복사",
+      "buttonCopied": "코드 복사 완료!"
+    },
+    "contact": {
+      "title": "고객 서비스",
+      "faq": "질문 및 답변 (FAQ)",
+      "cookie": "쿠키 동의"
+    },
+    "mobileApp": "우리의 앱 받기"
+  },
+  "tickets": {
+    "discounts": {
+      "noDiscount": "할인 없음"
+    },
+    "showDiscounts": "고객 및 할인 카드 보기",
+    "travelClass": "여행 클래스"
+  },
+  "supplier": {
+    "activities": "활동"
+  },
+  "contactPopup": {
+    "modalTitle": "오늘 무엇을 도와드릴까요?"
+  },
+  "contactForm": {
+    "fullname": "이름",
+    "email": "이메일",
+    "subject": "주제",
+    "messagePlaceholder": "문의, 예약 등...",
+    "submit": "보내기",
+    "formError": "문제가 해결되지 않았습니다. 다시 시도해 보세요."
+  },
+  "contactThankYou": {
+    "title": "문의해 주셔서 감사합니다!"
+  },
+  "internalLinkBlock": {
+    "destinations": "인기 목적지",
+    "locations": "인기 휴가 지역",
+    "topActivities": "인기 활동",
+    "topAttractions": "인기 명소"
+  },
+  "offerCard": {
+    "bookNow": "예약"
+  },
+  "breadcrumbsBasket": {
+    "stepOne": "선택 항목",
+    "stepOneDescription": "쇼핑 바구니",
+    "stepTwo": "세부 정보",
+    "stepTwoDescription": "결제",
+    "stepThree": "마지막 단계",
+    "stepThreeDescription": "결제"
+  },
+  "usps": {
+    "or": "또는",
+    "allDay": "하루 종일",
+    "bookable": {
+      "title": "예약 가능",
+      "description": "{val}"
+    },
+    "online": {
+      "title": "즉시 예약 확인"
+    },
+    "payment": {
+      "title": "계정으로 예약하거나 Twint로 결제하기"
+    },
+    "duration": {
+      "title": "기간",
+      "durationMinutes": "{val} 분",
+      "duration": "{val} 시간",
+      "durations": "{val} 시간",
+      "durationDay": "{val} 일",
+      "durationDays": "{val} 일수"
+    },
+    "mobileTicket": {
+      "title": "모바일 티켓 허용",
+      "description": "휴대폰을 사용하거나 바우처를 인쇄하세요."
+    },
+    "confirmation": {
+      "title": "즉시 예약 확인",
+      "description": "추가 수수료 없음"
+    },
+    "queue": {
+      "title": "결제 시 대기열 없음"
+    },
+    "cancel": {
+      "title": "무료 취소",
+      "description": "도착 24시간 전까지 취소 시 전액 환불( {val})",
+      "descriptionDays": "도착 10일전까지 취소 시 전액 환불 {val}",
+      "subtitle": "시작 시간보다 최대 {val} 시간 전",
+      "subtitleDays": "시작 시간보다 최대 <b>{val}</b>일 전."
+    },
+    "meetingPoint": {
+      "title": "미팅 포인트"
+    },
+    "discount": {
+      "title": "할인"
+    },
+    "request": {
+      "title": "요청 시 예약",
+      "description": "이 예약은 제공업체에서 재확인해야 합니다.",
+      "extra": "이 제안은 제공자의 가용성에 따라 달라집니다. 예약은 먼저 제공자가 확인해야 합니다. 예약 후 제공자가 귀하에게 연락을 취할 것입니다. 활동을 진행할 수 없는 경우 전체 금액이 환불됩니다."
+    },
+    "validity": {
+      "title": "유효성"
+    },
+    "openingHours": {
+      "title": "운영 시간"
+    }
+  },
+  "widgetConfigurator": {
+    "title": "위젯 구성",
+    "type": "유형",
+    "lang": "언어",
+    "other": "다른 활동 선택",
+    "topBar": "조작 막대",
+    "hideAll": "모든 것을 숨기기",
+    "hideSearch": "검색 숨기기",
+    "hideSize": "크기 숨기기 토글",
+    "hideFilter": "필터 숨기기 버튼",
+    "hideMap": "지도 숨기기 버튼",
+    "hideQuickFilter": "빠른 필터 숨기기",
+    "hideSort": "정렬 숨기기",
+    "buttonText": "버튼 텍스트",
+    "buttonBackground": "버튼 배경",
+    "buttonColor": "텍스트 색상 버튼",
+    "search": "미리 채워진 검색"
+  },
+  "types": {
+    "activity": "활동",
+    "overview": "개요",
+    "location": "장소",
+    "locationType": "장소 + 유형",
+    "type": "유형",
+    "attribute": "카테고리",
+    "locationAttribute": "장소 + 카테고리",
+    "poi": "명소"
+  },
+  "reviewForm": {
+    "title": "경험 평가하기",
+    "button": "지금 평가하기",
+    "rating": "가치 평가",
+    "comment": "댓글",
+    "thanks": "검토해 주셔서 감사합니다!",
+    "next": "다음 예약 평가",
+    "finish": "3초 후에 창이 닫힘"
+  },
+  "user": {
+    "welcome": "대시보드에 오신 것을 환영합니다 {name}!",
+    "menu": {
+      "activities": "활동",
+      "bookings": "예약",
+      "suppliers": "공급업체",
+      "reviews": "가치 평가",
+      "settings": "설정",
+      "chat": "채팅",
+      "logout": "로그아웃",
+      "login": "로그인"
+    }
+  },
+  "SettingsForm": {
+    "title": "프로필 작성",
+    "titleUpdate": "프로필 업데이트",
+    "submit": "보내기",
+    "phoneNumber": "전화번호를 다시 확인해 주세요.",
+    "email": "이메일이 유효하지 않습니다.",
+    "iban": "IBAN이 유효하지 않습니다.",
+    "reseller": {
+      "title": "리셀러",
+      "merchantName": "딜러 이름",
+      "merchantAddress": "딜러 주소",
+      "bankAccountHolder": "계정 소유자",
+      "bankAccountIban": "계좌의 IBAN",
+      "bankAccountHolderAddress": "계정 소유자의 주소",
+      "contact": {
+        "title": "연락처",
+        "name": "이름",
+        "businessRole": "비즈니스 역할",
+        "email": "이메일",
+        "phone": "전화"
+      }
+    },
+    "payment": {
+      "title": "저장된 결제 방법",
+      "removeTitle": "결제 수단 제거"
+    }
+  },
+  "Repeater": {
+    "add": "추가",
+    "remove": "제거"
+  },
+  "Table": {
+    "booking": {
+      "refresh": "새로 고침"
+    },
+    "clearFilters": "필터 재설정",
+    "noResults": "찾을 수 없습니다.",
+    "view": {
+      "title": "보기",
+      "adjust": "열 사용자 지정"
+    },
+    "header": {
+      "bookingId": "예약 번호",
+      "date": "날짜",
+      "bookingDate": "예약 날짜",
+      "serviceDate": "활동 날짜",
+      "description": "설명",
+      "location": "위치",
+      "name": "이름",
+      "email": "이메일",
+      "type": "유형",
+      "price": "가격 시작",
+      "sold": "판매됨",
+      "rating": "가치 평가",
+      "supplier": "공급자",
+      "bookingStatus": "예약 상태",
+      "paymentStatus": "결제 상태",
+      "total": "가격",
+      "actions": "작업",
+      "duration": "기간",
+      "validity": "유효성",
+      "bookable": "예약 가능",
+      "createdAt": "에 생성됨",
+      "commission": "커미션",
+      "status": "상태",
+      "reservationSystem": "예약 시스템",
+      "bapiId": "BAPI ID",
+      "capiId": "CAPI ID",
+      "notes": "참고",
+      "distributor": "배포자",
+      "website": "웹사이트",
+      "validities": "유효성"
+    },
+    "actions": {
+      "aria": "작업 열기",
+      "details": "세부 정보 보기",
+      "book": "지금 예약하기"
+    },
+    "sort": {
+      "ascending": "오름차순",
+      "descending": "내림차순",
+      "hide": "숨기기",
+      "bookable": "예약 가능한 액티비티만 표시"
+    },
+    "pagination": {
+      "page": "페이지",
+      "of": "에서",
+      "entriesPerPage": "페이지당 항목 수",
+      "goToFirstPage": "첫 페이지로 이동",
+      "goToLastPage": "마지막 페이지로 이동",
+      "goToNextPage": "다음 페이지로 이동",
+      "goToPreviousPage": "이전 페이지로 이동"
+    },
+    "search": {
+      "activities": "활동 검색",
+      "bookings": "예약 검색",
+      "offers": "오퍼 검색",
+      "suppliers": "공급업체 검색",
+      "bookingId": "예약 번호로 검색",
+      "email": "이메일 검색",
+      "familyName": "성으로 검색"
+    },
+    "cell": {
+      "bookingStatusActive": "확인됨",
+      "bookingStatusPending": "보류 중",
+      "bookingStatusCancelled": "취소됨",
+      "paymentStatusActive": "유료",
+      "paymentStatusPending": "보류 중",
+      "paymentStatusRefunded": "환불"
+    }
+  },
+  "Drawer": {
+    "close": "닫기"
+  },
+  "PaymentMethod": {
+    "card": {
+      "new": "새 지도",
+      "store": "빠른 체크아웃을 위해 내 신용카드 정보를 저장해 주세요.",
+      "endsIn": "끝: {val}"
+    }
+  },
+  "Activity": {
+    "new": "새로운 활동",
+    "nav": {
+      "general": "일반"
+    }
+  },
+  "Offer": {
+    "new": "새로운 제안"
+  },
+  "Supplier": {
+    "new": "신규 공급업체"
+  },
+  "UspSlider": {
+    "title": "왜 Swiss Activities에서 예약해야 하나요?",
+    "items": [
+      "스위스에서 가장 큰 선택",
+      "10만 명 이상의 만족하는 고객",
+      "무료 취소 옵션",
+      "5 Sterne 스위스 고객 지원",
+      "90초 안에 모바일 티켓 예약하기"
+    ]
+  },
+  "AppBanner": {
+    "title": "지금 앱을 다운로드하세요",
+    "description": "Swiss Activities를 간편하고 빠르게 발견하세요"
+  },
+  "Transport": {
+    "bookTrip": "연결 예약하기",
+    "button": {
+      "confirmTrip": "연결 확인하기",
+      "confirmTravelers": "여행자 확인"
+    },
+    "checkDetails": "연결 세부사항 확인하기",
+    "class": {
+      "first": "1. 클래스",
+      "second": "2. 클래스"
+    },
+    "direct": "직접",
+    "duration": {
+      "minutes": "분."
+    },
+    "earlierTrips": "이전 연결",
+    "errorLoadingTrips": "연결을 불러올 수 없습니다.",
+    "laterTrips": "후속 연결",
+    "legend": "전설",
+    "loadingTrips": "연결을 로드하는 중...",
+    "oneWay": "편도",
+    "roundTrip": "왕복",
+    "searchTrips": "연결 검색하기",
+    "selectOriginDestination": "연결을 검색하려면 출발지와 목적지를 선택하세요.",
+    "selectProduct": "티켓 옵션 선택",
+    "selectTravelers": "여행자를 선택하세요.",
+    "switch": "환승",
+    "ticket": "티켓",
+    "tickets": "티켓",
+    "transfer": "환승",
+    "tripResults": "연결",
+    "upgradeTo1stClass": "추가 편의",
+    "upgradeTo1stClassDescription": "1등석 여행",
+    "cityTicketDescription": "지역 교통을 위한 하루 이용권",
+    "via": "경유지",
+    "travelDate": "여행 날짜 선택",
+    "confirmTravelDate": "여행 날짜 확인",
+    "departure": "출발",
+    "arrival": "도착",
+    "locationDisabled": "위치 공유가 비활성화되어 있습니다.",
+    "locationError": "위치를 확인할 수 없습니다",
+    "noProductsAvailable": "사용 가능한 티켓이 없습니다.",
+    "disclaimer": "모든 정보는 보장되지 않습니다.",
+    "validity": "유효성",
+    "validityOnSelectedRoute": "선택한 경로에서만",
+    "validityForConnection": "선택한 연결에만 유효합니다.",
+    "validityForConnectionWith2ndClass": "선택한 연결 및 2등석에 대한 유효한 티켓만 유효합니다.",
+    "validityForRouteWith2ndClass": "선택한 노선 및 2등석에 대한 유효한 티켓만 유효합니다.",
+    "validityGARoutes": "모든 GA 구간 노선에서 사용 가능",
+    "validityDayClassUpgrade": "2등석용 반액카드(Halbtax), GA 또는 Swiss Travel Pass (Flex) 소지자를 위한 1일권에 한함.",
+    "includedIn": "포함:",
+    "validityDateRange": "{fromDate}부터 {toDate}까지, {toTime}",
+    "validityConnection": "{date} {fromTime} 출발, {toTime} 도착",
+    "classUpgradeOnly": "단지 클래스 업그레이드만",
+    "loadingDestination": "로딩 중",
+    "distanceToMeetingPoint": "만나기 장소",
+    "walking": "걷기",
+    "arrivalInfo": "도착 시간 계산됨: {walkingTime} 도보 + 만남 장소까지 15분 완충 시간",
+    "timeBeforeEvent": "활동 {minutes} 분 전 · 정거장에서 {walkingMinutes} 분 도보",
+    "tooLateForActivity": "다음 연결편은 지정된 장소에 제시간에 도착하지 못합니다"
+  }
+}

@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import { TransportOfferTicketCategories } from "../../types/transport";
+import type { TransportOfferTicketCategories } from "../../types/transport";
 import { axiosApiInstanceWithCsrf, axiosInstanceProd } from "../axios";
 
 export interface GetOfferTicketCategoriesParams {

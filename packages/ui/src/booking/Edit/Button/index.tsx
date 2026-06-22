@@ -1,6 +1,6 @@
 import { useShallow } from "zustand/react/shallow";
-import { Inner, InnerProps } from "../Inner";
-import { BookingStore, useBookingStore } from "../../store";
+import { Inner, type InnerProps } from "../Inner";
+import { type BookingStore, useBookingStore } from "../../store";
 import { Button } from "@swiss-activities/ui";
 
 type EditButtonProps = {

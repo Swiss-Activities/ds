@@ -1,4 +1,4 @@
-import { TActivity } from "./activity";
+import type { TActivity } from "./activity";
 
 type TStreams = {
   tabs: {

@@ -7,7 +7,7 @@ import {
   useCancelBookingItem,
 } from "../Cancel";
 import { BookingButton } from "../../../Button";
-import { CartStore } from "../../../Cart/store";
+import type { CartStore } from "../../../Cart/store";
 import { useCheckoutStore } from "../../../Checkout/store";
 import { useComplementaryStore } from "../../../ComplementaryActivity/store";
 import {

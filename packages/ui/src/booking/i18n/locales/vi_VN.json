@@ -1,0 +1,1799 @@
+{
+  "general": {
+    "accountAdvantages": "Để tận hưởng giảm giá và các lợi ích khác, hãy tạo một tài khoản hoặc đăng nhập.",
+    "activityBook": "Đặt hoạt động",
+    "addTicket": "Thêm vé",
+    "adult": "{val} Người lớn",
+    "adults": "{val} Người lớn",
+    "ageChoose": "Chọn độ tuổi",
+    "ageFrom": "Từ {val} tuổi",
+    "ageOld": "{val} tuổi",
+    "ageUnder": "Dưới {val} tuổi",
+    "all": "Tất cả",
+    "allReviews": "Tất cả các đánh giá",
+    "backToBookings": "Quay lại các đơn đặt hàng",
+    "bookAsGuest": "Bạn hoàn tất quá trình đặt hàng như một khách.",
+    "cancel": "Hủy bỏ",
+    "cancelled": "Đã bị hủy",
+    "cartAmount": "Giá trị giỏ hàng",
+    "child": "{val} Trẻ em",
+    "children": "{val} Trẻ em",
+    "chooseSelection": "Xác nhận lựa chọn",
+    "confirm": "Xác nhận",
+    "confirmCancel": "Xác nhận việc hủy",
+    "contact": "Liên hệ",
+    "copyUrl": "Sao chép URL",
+    "couple": "Cặp đôi",
+    "customerServiceFee": "Phí dịch vụ",
+    "data": "Dữ liệu",
+    "date": "Ngày",
+    "dateChoose": "Chọn ngày",
+    "delete": "Xoá",
+    "didYouMean": "Bạn có nghĩa là <suggestion>{email}</suggestion>?",
+    "duplicate": "Nhân bản",
+    "emailsDontMatch": "Các địa chỉ email đã nhập không khớp.",
+    "export": "Xuất khẩu",
+    "faqType": "Câu hỏi thường gặp về {type} tại Thụy Sĩ",
+    "from": "Từ",
+    "group": "Nhóm",
+    "helpfulQuestion": "Hữu ích không?",
+    "informationPlural": "Thông tin",
+    "language": "Ngôn ngữ",
+    "loginOrRegister": "Đăng nhập hoặc Đăng ký",
+    "manageBookings": "Quản lý đơn đặt hàng",
+    "mobileAppAddon": "Tải xuống ứng dụng di động của chúng tôi ngay bây giờ và quản lý đơn đặt hàng của bạn một cách tiện lợi, nhanh chóng truy cập vào vé của bạn và tìm cuộc phiêu lưu tiếp theo của bạn.",
+    "mostImportantInSummary": "Điều quan trọng nhất trong ngắn gọn",
+    "noResults": "Xin lỗi, chúng tôi không thể tìm thấy kết quả nào cho từ tìm kiếm của bạn",
+    "noReviewsYet": "Chưa có đánh giá nào",
+    "notes": "Ghi chú",
+    "oneMonth": "1 tháng",
+    "openChat": "Mở trò chuyện",
+    "order": "Thứ tự",
+    "partSum": "Tổng phụ",
+    "participants": "Người tham gia",
+    "participantsChoose": "Chọn người tham gia",
+    "past": "Quá khứ",
+    "personalizeTickets": "Cá nhân hóa vé",
+    "pleaseSelect": "Vui lòng chọn",
+    "pleaseSelectItem": "Xin vui lòng chọn {val}",
+    "questionsChatActivity": "Bạn còn câu hỏi nào về hoạt động này không? Nhắn tin cho chúng tôi",
+    "questionsChatBooking": "Bạn còn câu hỏi nào về việc đặt chỗ không? Nhắn tin cho chúng tôi",
+    "raw": "Thô",
+    "rebate": "Giảm giá",
+    "recaptcha": "Website này được bảo vệ bởi reCAPTCHA. Chính sách\n<a href=\"https://policies.google.com/privacy\" target=\"_blank\">Quyền riêng tư</a> và\n<a href=\"https://policies.google.com/terms\" target=\"_blank\">Điều khoản sử dụng</a> của Google áp dụng.",
+    "remove": "Gỡ bỏ",
+    "removeFromCart": "Xóa khỏi giỏ hàng",
+    "reset": "Đặt lại",
+    "searchNow": "Tìm ngay",
+    "single": "Cá nhân",
+    "soldOut": "Đã bán hết",
+    "somethingWentWrongContact": "Xin lỗi, nhưng đã xảy ra sự cố. Vui lòng thử lại hoặc liên hệ với bộ phận hỗ trợ.",
+    "successfullySaved": "Lưu thành công",
+    "ticket": "Vé",
+    "tickets": "Vé",
+    "to": "Đến",
+    "currentLocation": "Vị trí hiện tại",
+    "toDashboard": "Đơn đặt hàng của tôi",
+    "translate": "Dịch",
+    "tryAgain": "Thử lại",
+    "upcoming": "Sắp tới",
+    "when": "Khi nào",
+    "who": "Ai",
+    "wrongDate": "Có điều gì đó không đúng với ngày: Vui lòng kiểm tra và chọn lại.",
+    "wrongDateParticipant": "Ngày sinh của người tham gia không khớp với độ tuổi trong đề nghị.",
+    "today": "Hôm nay",
+    "apply": "Áp dụng"
+  },
+  "aria": {
+    "forward": "Tiến về phía trước",
+    "backward": "Quay lại"
+  },
+  "auth0": {
+    "accept": "Mình chấp nhận [điều khoản sử dụng]({link})",
+    "error": "Hãy chấp nhận điều khoản sử dụng",
+    "resetPasswordHint": "Chưa nhận được email? Kiểm tra thư mục rác của bạn. Nếu bạn đã đăng ký bằng Apple hoặc Google, hãy sử dụng phương thức đăng nhập này."
+  },
+  "menu": {
+    "menu": "Thực đơn",
+    "search": "Tìm kiếm",
+    "travelGuide": "Lập kế hoạch chuyến đi",
+    "travelRoutes": "Hành trình",
+    "contactus": "Liên hệ với chúng tôi",
+    "switzerland": "Thụy Sĩ",
+    "help": "Trò chuyện",
+    "voucher": "Mua voucher",
+    "voucherSm": "Voucher",
+    "partners": "Đối tác",
+    "provider": "Nhà cung cấp",
+    "affiliate": "Đối tác liên kết"
+  },
+  "chat": {
+    "chats": "Tất cả các trò chuyện",
+    "newChat": "Trò chuyện mới",
+    "noChatsYet": "Chưa có trò chuyện nào",
+    "typeMessage": "Nhập tin nhắn",
+    "welcome": "Chào bạn và chào mừng đến với Swiss Activities! Tôi là Housibot và tôi vui mừng hỗ trợ bạn với những câu hỏi của bạn.",
+    "welcomeReview": "Xin chào! Kinh nghiệm của bạn như thế nào? Tôi là Housibot và tôi giúp bạn chia sẻ phản hồi của bạn."
+  },
+  "supportBanner": {
+    "title": "Bạn có cần giúp tìm một trường dạy trượt tuyết phù hợp không?",
+    "placeholder": "Chúng tôi có thể giúp bạn như thế nào?",
+    "send": "Gửi"
+  },
+  "pages": {
+    "404": {
+      "title": "Không tìm thấy trang.",
+      "description": "Trang này không tồn tại.",
+      "button": "Quay lại trang chính",
+      "search": "Bắt đầu tìm kiếm"
+    },
+    "home": {
+      "title": "Swiss Activities - Tìm kiếm và đặt hoạt động của bạn tại Thụy Sĩ",
+      "description": "Swiss Activities là điểm đến của bạn cho các hoạt động giải trí tại Thụy Sĩ. Khám phá, so sánh và đặt hàng ngàn hoạt động giải trí.",
+      "gatewayCards": {
+        "categories": {
+          "castlesRuins": "Lâu đài / Phế tích",
+          "castleEvents": "Sự kiện Lâu đài",
+          "exhibitions": "Triển lãm",
+          "fireplaces": "Nơi đốt lửa",
+          "movies": "Phim",
+          "museums": "Bảo tàng",
+          "playgrounds": "Sân chơi",
+          "swimmingBathing": "Bơi lội & Tắm biển"
+        },
+        "dateRange": {
+          "from": "Từ",
+          "until": "Đến"
+        },
+        "distance": {
+          "unit": "km"
+        }
+      },
+      "gatewayDetail": {
+        "back": "Quay lại",
+        "moreInfo": "Thêm thông tin",
+        "source": "Mở nguồn",
+        "labels": {
+          "admission": "Vé vào cửa",
+          "address": "Địa chỉ",
+          "ageRating": "Độ tuổi",
+          "bookTickets": "Đặt vé",
+          "canton": "Tiểu bang",
+          "cast": "Diễn viên",
+          "category": "Danh mục",
+          "cinema": "Rạp chiếu phim",
+          "countryYear": "Quốc gia / Năm",
+          "dateRange": "Thời gian",
+          "director": "Đạo diễn",
+          "duration": "Thời gian",
+          "entryFeeAdult": "Người lớn",
+          "entryFeeChild": "Trẻ em",
+          "foundedYear": "Thành lập",
+          "genres": "Thể loại",
+          "location": "Địa điểm",
+          "museumCategory": "Loại bảo tàng",
+          "openTrailer": "Mở đoạn giới thiệu",
+          "openingHours": "Giờ mở cửa",
+          "phone": "Điện thoại",
+          "poolLength": "Độ sâu hồ bơi",
+          "trailer": "Đoạn giới thiệu",
+          "venue": "Địa điểm tổ chức",
+          "waterType": "Loại nước"
+        },
+        "sections": {
+          "amenities": "Tiện nghi",
+          "badges": "Gợi ý",
+          "information": "Thông tin",
+          "prices": "Giá",
+          "showtimes": "Lịch chiếu",
+          "venue": "Địa điểm tổ chức"
+        },
+        "amenities": {
+          "capacityPersons": "Sức chứa",
+          "hasBenches": "Ghế dài",
+          "hasChangingRooms": "Phòng thay đồ",
+          "hasDivingBoard": "Bảng nhảy",
+          "hasFirewood": "Gỗ đốt",
+          "hasFoodService": "Dịch vụ ăn uống",
+          "hasGrillGrate": "Vỉ nướng",
+          "hasKidsPool": "Hồ bơi trẻ em",
+          "hasLifeguard": "Người cứu hộ",
+          "hasLockers": "Tủ khóa",
+          "hasPlaygroundNearby": "Sân chơi gần đây",
+          "hasShowers": "Vòi sen",
+          "hasSlide": "Cầu trượt",
+          "hasShelter": "Nơi trú nắng",
+          "hasTable": "Bàn",
+          "hasToilet": "Nhà vệ sinh",
+          "hasWater": "Nước"
+        },
+        "waterTypes": {
+          "indoorPool": "Hồ bơi trong nhà",
+          "lake": "Hồ",
+          "outdoorPool": "Hồ bơi ngoài trời",
+          "pool": "Hồ bơi",
+          "river": "Sông"
+        }
+      }
+    },
+    "s": {
+      "title": "Swiss Activities - Tìm kiếm và đặt hoạt động của bạn",
+      "description": "Swiss Activities là điểm đến của bạn cho các hoạt động giải trí tại Thụy Sĩ. Khám phá, so sánh và đặt hàng ngàn hoạt động giải trí.",
+      "sort": {
+        "distance": {
+          "notSupported": "Dịch vụ vị trí không được trình duyệt của bạn hỗ trợ. Sắp xếp theo độ liên quan sẽ được sử dụng.",
+          "permissionDenied": "Để sắp xếp theo khoảng cách, hãy cho phép quyền truy cập vào vị trí của bạn trong cài đặt trình duyệt và tải lại trang.",
+          "positionUnavailable": "Thông tin vị trí không có sẵn.",
+          "timeout": "Quá trình lấy vị trí đã vượt quá thời gian quy định.",
+          "unknownError": "Đã xảy ra lỗi không xác định.",
+          "fallbackMessage": "Sắp xếp theo độ liên quan sẽ được sử dụng.",
+          "errorPrefix": "Không thể xác định vị trí."
+        }
+      }
+    },
+    "chat": {
+      "title": "Trò chuyện Swiss Activities",
+      "description": "Swiss Activities là điểm đến của bạn cho các hoạt động giải trí tại Thụy Sĩ. Khám phá, so sánh và đặt hàng triệu hoạt động giải trí."
+    },
+    "transport": {
+      "title": "Vé tàu Thụy Sĩ, thẻ và vé cả ngày | Swiss Travel Pass, SBB Spartageskarte",
+      "description": "So sánh và đặt vé tàu, Swiss Travel Pass, thẻ nửa giá, vé SBB Spartageskartes và thẻ vùng cho toàn bộ Thụy Sĩ. Nhận ngay Mobile-Ticket trên điện thoại của bạn.",
+      "trust": {
+        "partners": "Đối tác chính thức của",
+        "ratingValue": "4.8",
+        "ratingLabel": "Hơn <b>400.000</b> hành khách hài lòng",
+        "ratingShortLabel": "400'000+ du khách"
+      },
+      "discountMap": {
+        "title": "Bạn tiết kiệm được gì với thẻ của bạn",
+        "subtitle": "Cáp treo, tàu thủy và các chuyến đi hàng đầu — chọn một thẻ và xem có gì thú vị.",
+        "free": "Bao gồm",
+        "discount50": "−50 %",
+        "discount25": "−25 %",
+        "noDiscount": "Không có giảm giá",
+        "altitude": "{m} m trên mực nước biển.",
+        "moreInfo": "Tìm hiểu thêm",
+        "selectPass": "Chọn thẻ",
+        "selectCategory": "Chọn loại",
+        "categories": {
+          "mountain": "Cáp treo",
+          "lake": "Hồ & tàu thủy",
+          "museum": "Bảo tàng"
+        },
+        "airports": {
+          "zrh": "Zürich",
+          "gva": "Geneva"
+        },
+        "regions": {
+          "bernerOberland": "Berner Oberland",
+          "jungfrau": "Jungfrau",
+          "interlaken": "Interlaken",
+          "zentralschweiz": "Trung Thụy Sĩ",
+          "ostschweiz": "Đông Thụy Sĩ",
+          "waadt": "Vaud",
+          "engadin": "Engadin",
+          "wallis": "Wallis",
+          "tessin": "Tessin",
+          "genferseeregion": "Khu vực hồ Geneva",
+          "zuerich": "Zürich",
+          "mittelland": "Trung tâm",
+          "luzern": "Lucerne",
+          "basel": "Basel",
+          "bern": "Bern",
+          "lausanne": "Lausanne",
+          "geneve": "Geneva",
+          "zermatt": "Zermatt",
+          "fribourg": "Fribourg",
+          "graubuenden": "Graubünden"
+        }
+      },
+      "hero": {
+        "title": "Vé tàu cho toàn bộ",
+        "titleAccent": "Thụy Sĩ",
+        "lede": "Vé tàu cho các tuyến đường, vé cả ngày và ưu đãi tiết kiệm của SBB — nhận ngay Mobile-Ticket trên điện thoại của bạn.",
+        "subtitle": "Vé cho các tuyến đường, vé cả ngày và ưu đãi tiết kiệm của SBB — nhận ngay Mobile-Ticket trên điện thoại của bạn.",
+        "searchTitle": "Tìm chuyến đi",
+        "searchMeta": "Ga · Ngày · Hành khách",
+        "fromPlaceholder": "Ga xuất phát / địa điểm xuất phát",
+        "toPlaceholder": "Ga đến / địa điểm đến",
+        "badges": {
+          "rating": "<b>4,8</b> / 5 · Hơn <b>400.000</b> đánh giá",
+          "partner": "Đối tác chính thức SBB"
+        },
+        "usps": {
+          "customers": {
+            "title": "Hơn <b>400.000</b> khách hàng hạnh phúc",
+            "subline": "Tin tưởng từ năm 2021 vào Swiss Activities"
+          },
+          "saver": {
+            "title": "Tiết kiệm đến 50%",
+            "subline": "Với vé tiết kiệm và vé cả ngày của SBB"
+          },
+          "mobile": {
+            "title": "Ngay lập tức với Mobile-Ticket",
+            "subline": "Trực tiếp trên điện thoại, không cần đăng nhập SBB"
+          },
+          "earlyBird": {
+            "title": "Giảm giá cho người đặt trước",
+            "subline": "Lập kế hoạch trước và mua vé tiết kiệm và vé cả ngày của SBB"
+          }
+        }
+      },
+      "benefits": {
+        "title": "Lợi ích của bạn",
+        "discount": {
+          "eyebrow": "Vé giảm giá",
+          "title": "Tiết kiệm tới 40%",
+          "subline": "Ưu đãi giảm giá của SBB và vé ngày",
+          "badge": "Bán chạy nhất"
+        }
+      },
+      "passes": {
+        "title": "Thẻ SBB và thẻ khu vực",
+        "subtitle": "So sánh thẻ nhiều ngày, thẻ cả ngày và thẻ khu vực – chọn thẻ nào đem lại lợi ích nhiều nhất cho bạn.",
+        "tabs": {
+          "multiDay": "Thẻ nhiều ngày",
+          "dayPass": "Thẻ cả ngày",
+          "regional": "Thẻ khu vực"
+        },
+        "buy": "Mua ngay",
+        "from": "từ",
+        "moreInfo": "Tìm hiểu thêm",
+        "seeDiscounts": "Xem tất cả các ưu đãi",
+        "viewAllByTab": {
+          "multiDay": "Xem tất cả các thẻ tàu",
+          "dayPass": "Xem tất cả các thẻ SBB cả ngày",
+          "regional": "Xem tất cả các thẻ khu vực"
+        },
+        "empty": "Hiện tại không có sản phẩm nào khả dụng - hãy xem trong các danh mục khác.",
+        "descriptions": {
+          "fallback-stp": "Di chuyển khắp Thụy Sĩ bằng tàu, xe buýt và tàu thủy - vào cửa bảo tàng miễn phí cũng bao gồm.",
+          "fallback-stpf": "Sử dụng giao thông công cộng vào những ngày đã chọn - bao gồm vào cửa bảo tàng miễn phí.",
+          "fallback-shfc": "Một tháng giá một nửa cho tàu, xe buýt, tàu thủy và cáp treo.",
+          "fallback-halbtax": "Đi cả ngày miễn phí khắp Thụy Sĩ - với thẻ nửa giá của bạn.",
+          "fallback-spar": "Thẻ cả ngày giá tốt nhất khi đặt trước - số lượng có hạn mỗi ngày.",
+          "fallback-ga": "Di chuyển hoàn toàn tự do trong một ngày - như thẻ GA, chỉ trong 24 giờ.",
+          "fallback-tell": "Đi lại miễn phí ở Trung Thụy Sĩ: cáp treo, tàu thủy và giao thông công cộng bao gồm.",
+          "fallback-bo": "Khám phá khu vực Jungfrau và Interlaken - tàu, tàu thủy và cáp treo với một thẻ.",
+          "fallback-jtp": "Khu vực hàng đầu châu Âu: cáp treo, giao thông công cộng và các điểm nổi bật xung quanh Grindelwald, Wengen, Mürren."
+        },
+        "usps": {
+          "1330": [
+            "Harder Kulm & Brienzer Rothorn bao gồm",
+            "Giảm giá đến −50 % cho khu trượt tuyết Grindelwald-Wengen",
+            "Giao thông công cộng & cáp treo ở khu vực Jungfrau"
+          ],
+          "1438": [
+            "First, Schynige Platte & Niesen bao gồm",
+            "−25 % cho Jungfraujoch Top of Europe",
+            "Tàu, tàu thủy & cáp treo với một thẻ"
+          ],
+          "1440": [
+            "<b>1</b> tháng giá một nửa trên toàn quốc",
+            "Trên tàu, xe buýt, tàu thủy & cáp treo",
+            "Cũng áp dụng cho vé tiết kiệm của SBB"
+          ],
+          "1447": [
+            "Tàu, xe buýt & tàu thủy miễn phí trên toàn quốc",
+            "Giảm giá đến −50 % cho cáp treo (Jungfraujoch −25 %)",
+            "Hơn 500 bảo tàng miễn phí"
+          ],
+          "1448": [
+            "Kích hoạt vào những ngày đã chọn trên toàn quốc",
+            "Giảm giá đến −50 % cho cáp treo, xe buýt, tàu thủy",
+            "Hơn 500 bảo tàng miễn phí"
+          ],
+          "1450": [
+            "Pilatus, Rigi & Stanserhorn bao gồm",
+            "Tàu thủy trên hồ Vierwaldstätter miễn phí",
+            "Tàu, xe buýt & cáp treo ở Trung Thụy Sĩ"
+          ],
+          "1664": [
+            "Thẻ cả ngày từ CHF 29",
+            "Giảm giá đến −70 % khi đặt trước sớm",
+            "Số lượng có hạn mỗi ngày"
+          ],
+          "1671": [
+            "Trẻ em từ 6–16 với mức giá gia đình",
+            "Tất cả các tuyến SBB trên toàn quốc",
+            "Hoàn hảo cho những chuyến đi gia đình"
+          ],
+          "1676": [
+            "<b>1</b> ngày đi lại miễn phí với thẻ nửa giá",
+            "Trên các tuyến SBB trên toàn quốc",
+            "Rẻ hơn so với nhiều vé lẻ"
+          ]
+        },
+        "soldCount": "{count} đã đặt",
+        "reviews": "({count})",
+        "discounts": {
+          "1330": "Harder Kulm bao gồm.",
+          "1438": "First & Niesen bao gồm.",
+          "1440": "Giá một nửa",
+          "1447": "Cáp treo −50 %",
+          "1448": "Cáp treo −50 %",
+          "1450": "Pilatus & Rigi bao gồm.",
+          "1664": "Giảm giá đến −70 %",
+          "1671": "Giá gia đình"
+        },
+        "benefits": {
+          "includedHeading": "Bao gồm",
+          "discountedHeading": "Giảm giá",
+          "expand": "Xem tất cả các giảm giá",
+          "collapse": "Giảm hiển thị",
+          "items": {
+            "1330": {
+              "included": [
+                "Harder Kulm & Brienzer Rothorn",
+                "Giao thông công cộng khu vực Jungfrau (tàu, xe buýt, thuyền)"
+              ],
+              "discounted": [
+                "Khu trượt tuyết Grindelwald-Wengen giảm đến −50 %",
+                "Khu trượt tuyết Mürren-Schilthorn giảm đến −50 %",
+                "Jungfraujoch, Top of Europe - giảm 25 %"
+              ]
+            },
+            "1438": {
+              "included": [
+                "First, Schynige Platte & Niesen",
+                "Brienzer Rothorn & Stockhorn",
+                "Tàu, thuyền & cáp treo khu vực Jungfrau"
+              ],
+              "discounted": [
+                "Jungfraujoch, Top of Europe - giảm 25 %",
+                "Schilthorn (James Bond) - giảm 50 %"
+              ]
+            },
+            "1440": {
+              "included": [],
+              "discounted": [
+                "50 % cho tàu-, xe buýt- & vé tàu thủy",
+                "50 % cho cáp treo",
+                "Cũng có thể kết hợp với vé tiết kiệm SBB"
+              ]
+            },
+            "1447": {
+              "included": [
+                "Tàu, xe buýt & tàu thủy trên toàn quốc",
+                "Hơn 500 bảo tàng",
+                "Giao thông công cộng ở 90 thành phố Thụy Sĩ"
+              ],
+              "discounted": [
+                "Cáp treo giảm đến −50 %",
+                "Jungfraujoch Top of Europe giảm −25 %",
+                "Ưu đãi RailAway của SBB giảm −30 %"
+              ]
+            },
+            "1448": {
+              "included": [
+                "Tàu, xe buýt & tàu thủy vào những ngày đã chọn",
+                "Hơn 500 bảo tàng",
+                "Giao thông công cộng ở 90 thành phố Thụy Sĩ"
+              ],
+              "discounted": [
+                "Cáp treo giảm đến −50 %",
+                "Jungfraujoch Top of Europe giảm −25 %",
+                "Ưu đãi RailAway của SBB giảm −30 %"
+              ]
+            },
+            "1450": {
+              "included": [
+                "Pilatus, Rigi & Stanserhorn",
+                "Tàu trên hồ Vierwaldstättersee",
+                "Tàu, xe buýt & cáp treo tại trung tâm Thụy Sĩ"
+              ],
+              "discounted": []
+            },
+            "1664": {
+              "included": [
+                "<b>1</b> ngày đi lại miễn phí trên toàn quốc"
+              ],
+              "discounted": [
+                "Thẻ cả ngày từ CHF 29",
+                "Giảm giá đến −70 % khi đặt trước sớm"
+              ]
+            },
+            "1671": {
+              "included": [
+                "Các chuyến SBB trên toàn Thụy Sĩ trong 1 ngày"
+              ],
+              "discounted": [
+                "Giá gia đình cho trẻ em 6–16 tuổi",
+                "−50 % trên các vé ngày thông thường"
+              ]
+            },
+            "1676": {
+              "included": [
+                "<b>1</b> ngày đi lại miễn phí với thẻ nửa giá"
+              ],
+              "discounted": [
+                "Rẻ hơn so với nhiều vé mua riêng lẻ"
+              ]
+            }
+          }
+        }
+      },
+      "articles": {
+        "title": "Các bài viết thú vị xung quanh thế giới tàu hỏa",
+        "subtitle": "Mẹo, so sánh và kiến thức thực tiễn về vé SBB, thẻ du lịch và giao thông công cộng tại Thụy Sĩ.",
+        "read": "Đọc bài viết",
+        "tag": "Tạp chí"
+      },
+      "dayPasses": {
+        "title": "Vé ngày phổ biến",
+        "subtitle": "Di chuyển tự do cả ngày – dễ dàng kết hợp với vé của bạn.",
+        "halbtax": {
+          "title": "Vé ngày Halbtax",
+          "description": "Di chuyển tự do cả ngày trên toàn Thụy Sĩ – với Halbtax của bạn. Lý tưởng cho các chuyến đi một ngày và các khu vực núi.",
+          "fromPrice": "từ CHF 52.–",
+          "cta": "Tìm kết nối"
+        },
+        "spar": {
+          "title": "Vé tiết kiệm",
+          "description": "Vé ngày với giá tốt nhất khi đặt trước. Hạn chế số lượng mỗi ngày – ai đặt sớm sẽ được giá rẻ hơn.",
+          "fromPrice": "từ CHF 29.–",
+          "cta": "Tìm kết nối"
+        }
+      },
+      "groups": {
+        "mountains": "Trải nghiệm núi có thể tiếp cận bằng tàu",
+        "dayTrips": "Chuyến đi trong ngày phổ biến từ Zürich, Bern và Basel",
+        "cities": "Khám phá thành phố: Tàu + trải nghiệm",
+        "cityPasses": "City Passes: Một tấm thẻ cho cả thành phố"
+      },
+      "faq": {
+        "title": "Các câu hỏi thường gặp về vé SBB",
+        "items": [
+          {
+            "q": "Tôi có thể hủy vé của mình không?",
+            "a": "<p><strong>Các vé hành trình</strong> bạn có thể hủy miễn phí cho đến ngày hôm trước chuyến đi – việc này có thể thực hiện trực tiếp trong trang quản lý đặt chỗ của bạn trên swissactivities.com.</p><p>Đối với <strong><a href=\"/sbb-tageskarten/spartageskarte-sbb/\">Vé ngày tiết kiệm</a></strong> và vé tiết kiệm, việc hủy là không thể. Những loại vé này gắn với ngày đã chọn – một thông báo rõ ràng sẽ xuất hiện trên trang đặt chỗ trước khi mua.</p>"
+          },
+          {
+            "q": "Vé SBB có giống như ở quầy vé SBB không?",
+            "a": "Có, bạn sẽ nhận được những vé SBB chính thức giống như ở quầy vé hoặc trong ứng dụng SBB – không tính thêm phí. Cả <a href=\"/sbb-tageskarten/\">vé ngày SBB</a> và <a href=\"/bahnpaesse/\">thẻ đường sắt</a> đều là sản phẩm gốc của SBB."
+          },
+          {
+            "q": "Tôi sẽ nhận được vé của mình nhanh chóng như thế nào?",
+            "a": "Ngay lập tức. Sau khi đặt vé thành công, bạn sẽ nhận được vé di động qua email và trong trang quản lý đặt chỗ trên swissactivities.com. Không cần đăng nhập SBB – bạn chỉ cần trình vé khi lên tàu."
+          },
+          {
+            "q": "Tôi có thể sử dụng Halbtax hoặc GA không?",
+            "a": "Có, trong bước đặt vé, bạn có thể chọn ký hiệu giảm giá của mình – giá sẽ tự động điều chỉnh. Nếu bạn chỉ có Halbtax và đi cả ngày, thì thường sẽ có lợi hơn khi có <a href=\"/sbb-tageskarten/sbb-tageskarte-halbtax/\">Vé SBB ngày Halbtax</a> thay vì nhiều vé riêng lẻ."
+          },
+          {
+            "q": "Nếu tàu của tôi bị trễ thì sao?",
+            "a": "Vé hành trình của bạn cũng áp dụng cho chuyến xe tiếp theo – hãy lên tàu ngay chuyến phù hợp tiếp theo. Nếu trễ hơn một giờ, bạn có thể yêu cầu hoàn tiền qua SBB."
+          },
+          {
+            "q": "Giá trị của Swiss Travel Pass hay một vé tiết kiệm có đáng không?",
+            "a": "<p>Quy tắc chung: Những ai đi lại nhiều bằng tàu, xe buýt và thuyền trong ít nhất ba ngày liên tiếp và thích thăm quan bảo tàng, sẽ tiết kiệm được hơn với <a href=\"/bahnpaesse/swiss-travel-pass-kaufen/\">Swiss Travel Pass</a>. Bao gồm hơn 500 bảo tàng, giao thông công cộng ở 90 thành phố và cáp treo với giảm giá −50 %.</p><p>Đối với các chuyến du lịch một ngày, <a href=\"/sbb-tageskarten/spartageskarte-sbb/\">Vé ngày tiết kiệm SBB</a> từ CHF 29 gần như luôn là lựa chọn tốt nhất – hãy đặt sớm.</p>"
+          },
+          {
+            "q": "Thẻ vùng nào phù hợp với chuyến đi của tôi?",
+            "a": "<p>Đối với khu vực Interlaken / Grindelwald / Wengen, thẻ <a href=\"/bahnpaesse/berner-oberland-pass/\">Berner Oberland Pass</a> là sự lựa chọn tốt hoặc vào mùa đông là <a href=\"/bahnpaesse/jungfrau-travel-pass-winter/\">Jungfrau Travel Pass</a> – cả hai đều bao gồm cáp treo, giao thông công cộng và thuyền trong khu vực.</p><p>Xung quanh hồ Vierwaldstättersee, <a href=\"/bahnpaesse/sbb-tellpass/\">Tell-Pass</a> là lựa chọn lý tưởng: Pilatus, Rigi, Stanserhorn và tất cả các thuyền đều bao gồm.</p>"
+          }
+        ]
+      }
+    },
+    "about_us": {
+      "title": "Về chúng tôi - Swiss Activities",
+      "description": "Swiss Activities là điểm đến của bạn cho các hoạt động giải trí tại Thụy Sĩ. Khám phá, so sánh và đặt hàng ngàn hoạt động giải trí.",
+      "hero": {
+        "title": "Tìm kiếm hoạt động giải trí tại Thụy Sĩ",
+        "text": "Swiss Activities là điểm đến của bạn cho các hoạt động giải trí tại Thụy Sĩ. Trên Swiss Activities, bạn có thể tìm thấy hàng ngàn hoạt động giải trí, so sánh chúng và đặt chỉ với vài cú click. Chưa bao giờ việc tìm kiếm hoạt động cho thời gian rảnh của bạn ở Thụy Sĩ lại dễ dàng đến vậy."
+      },
+      "who": {
+        "title": "Chúng tôi là ai",
+        "text": "Chúng tôi là một nhóm trẻ trung và đầy động lực, đam mê các hoạt động giải trí tại Thụy Sĩ. Chúng tôi yêu thích việc tự trải nghiệm các hoạt động mới, mô tả chúng, giới thiệu chúng và làm cho chúng có thể đặt trước được. Tại Swiss Activities, chúng tôi giúp bạn tiết kiệm thời gian và công sức khi tìm kiếm, so sánh và đặt cho cuộc phiêu lưu tiếp theo của bạn."
+      },
+      "start": {
+        "title": "Khởi đầu của chúng tôi",
+        "text": "Khi chúng tôi nhận thấy vào năm 2020 rằng không thể đi du lịch, chúng tôi đã tìm một nền tảng hoạt động giải trí của Thụy Sĩ nhằm phục vụ riêng cho người dân Thụy Sĩ, nhưng không tìm được. Đó là sự khởi đầu của điểm đến hoạt động giải trí Swiss Activities.",
+        "milestones": {
+          "march_2020": {
+            "date": "Tháng 3 năm 2020",
+            "title": "Khởi đầu Swiss Activities như một mô hình kinh doanh"
+          },
+          "march_2021": {
+            "date": "Tháng 3 năm 2021",
+            "title": "Thành lập công ty"
+          },
+          "june_2021": {
+            "date": "Tháng 6 năm 2021",
+            "title": "Ra mắt nền tảng riêng"
+          },
+          "september_2021": {
+            "date": "Tháng 9 năm 2021",
+            "title": "Kích hoạt 500 hoạt động có thể đặt trước ngay lập tức"
+          },
+          "december_2021": {
+            "date": "Tháng 12 năm 2021",
+            "title": "Hoàn tất vòng gọi vốn Pre-Seed"
+          },
+          "march_2022": {
+            "date": "Tháng 3 năm 2021",
+            "title": "Ra mắt chương trình liên kết"
+          },
+          "may_2022": {
+            "date": "Tháng 5 năm 2021",
+            "title": "Ra mắt chương trình đối tác B2B"
+          }
+        }
+      },
+      "partner": {
+        "title": "Chúng tôi giúp bạn có thêm khách hàng",
+        "text": "Swiss Activities giúp bạn tìm kiếm khách hàng mới. Chúng tôi làm việc hàng ngày để biến Swiss Activities thành điểm đến lớn nhất cho các hoạt động giải trí tại Thụy Sĩ. Hàng ngàn người ghé thăm www.swissactivities.com mỗi ngày để tìm kiếm các hoạt động giải trí tại Thụy Sĩ. Khi bạn giới thiệu dịch vụ của mình trên Swiss Activities, bạn sẽ tiếp cận được khách hàng mới."
+      },
+      "kunden": {
+        "title": "Một điểm đến với tất cả các hoạt động giải trí tại Thụy Sĩ",
+        "text": "Mục tiêu của chúng tôi là giúp tất cả các hoạt động giải trí có thể tìm thấy trên www.swissactivities.com. Chúng tôi làm cho việc tìm kiếm, so sánh và đặt các hoạt động giải trí trở nên dễ dàng hơn cho tất cả mọi người."
+      },
+      "promise": {
+        "title": "Lời hứa của chúng tôi",
+        "list": [
+          "không cần gọi điện phức tạp",
+          "không cần tìm kiếm không ngừng trên vô số trang web",
+          "khả năng kiểm tra trực tiếp",
+          "đặt ngay lập tức không cần vòng vo",
+          "không có chi phí ẩn",
+          "khả năng thanh toán đơn giản và nhanh chóng",
+          "không có hàng đợi mệt mỏi",
+          "tổng quan về các ưu đãi hấp dẫn",
+          "các ưu đãi địa phương"
+        ]
+      },
+      "team": {
+        "title": "Đội ngũ Swiss Activities"
+      }
+    },
+    "tos_b2b": {
+      "title": "Điều khoản và điều kiện chung cho nhà cung cấp",
+      "description": "Đây là điều khoản và điều kiện hiện tại của chúng tôi cho các nhà cung cấp."
+    },
+    "tos_b2c": {
+      "title": "Điều khoản sử dụng nền tảng môi giới Swiss Activities cho khách hàng",
+      "description": "Đây là điều khoản sử dụng hiện tại của chúng tôi cho nền tảng môi giới Swiss Activities cho khách hàng."
+    },
+    "tos_aff": {
+      "title": "Điều khoản chung cho các đối tác liên kết",
+      "description": "Đây là các điều kiện dịch vụ hiện tại của chúng tôi cho các đối tác liên kết."
+    },
+    "imprint": {
+      "title": "Giấy phép",
+      "description": "Đây là giấy phép của chúng tôi."
+    },
+    "privacy_policy": {
+      "title": "Chính sách bảo mật",
+      "description": "Đây là chính sách bảo mật của chúng tôi."
+    },
+    "contact_us": {
+      "title": "Liên hệ với chúng tôi",
+      "description": "Nếu bạn có bất kỳ câu hỏi nào, chúng tôi sẽ rất vui lòng giúp bạn."
+    },
+    "basket": {
+      "title": "Giỏ hàng",
+      "delete": "Xóa",
+      "warning": "Bạn có muốn xóa đặt chỗ này khỏi giỏ hàng của mình không?",
+      "edit": "Chỉnh sửa",
+      "cancel": "Hủy bỏ",
+      "update": "Cập nhật giỏ hàng",
+      "next": "Đi đến thanh toán",
+      "empty": "Giỏ hàng của bạn đang trống",
+      "hold": "Chúng tôi sẽ giữ đặt chỗ này cho",
+      "explore": "Khám phá các hoạt động giải trí"
+    },
+    "booking": {
+      "title": "Đặt chỗ"
+    },
+    "confirmation": {
+      "title": "Xác nhận đặt chỗ",
+      "tickets": "Vé của bạn",
+      "download": "Vé di động",
+      "more": "Thêm thông tin",
+      "cancel": "Hủy vé",
+      "cancelled": "Đã hủy",
+      "cancelWhy": "Tại sao bạn muốn hủy bỏ?",
+      "cancelReasons": [
+        "Kỳ nghỉ của tôi đã bị hủy",
+        "Tôi đã tìm thấy một lựa chọn rẻ hơn",
+        "Tôi không nhận được xác nhận đúng lúc",
+        "Nhà cung cấp đã yêu cầu tôi hủy bỏ đặt chỗ",
+        "Các tùy chọn ưu tiên của tôi không có sẵn",
+        "Tôi đã đặt sai ngày",
+        "Tôi đã đặt sai số lượng người tham gia",
+        "Lý do khác"
+      ],
+      "rebook": {
+        "title": "Đặt lại",
+        "text": "Thay đổi kế hoạch? Đặt lại hoạt động của bạn. Đặt chỗ cũ của bạn sẽ bị hủy tự động.",
+        "button": "Đặt lại ngay"
+      },
+      "stay": "Vui lòng ở lại trang này, yêu cầu của bạn đang được xử lý.",
+      "editBooking": "Thay đổi đặt chỗ",
+      "showTickets": "Xem vé",
+      "drawerTitle": "Đặt chỗ của bạn",
+      "relatedBookings": "Các đặt chỗ liên quan"
+    },
+    "activities": {
+      "title": "Những hoạt động giải trí tốt nhất ở Thụy Sĩ {year}",
+      "description": "Tìm và đặt hoạt động phù hợp của bạn {year} tại Thụy Sĩ. Với tư cách là một đất nước đa dạng, Thụy Sĩ cung cấp hàng ngàn hoạt động và ý tưởng cho một chuyến đi trong ngày.",
+      "intro": "Trong suốt cả năm, bạn sẽ tìm thấy các hoạt động giải trí cho mọi dịp. Dù bạn đang lập kế hoạch một chuyến đi cùng gia đình, tổ chức một buổi tiệc độc thân, tìm kiếm một hoạt động ngoài trời hoặc đang tìm kiếm cảm hứng cho chương trình chống mưa, bạn sẽ tìm thấy điều gì đó. Trên Swiss Activities, bạn có thể lập kế hoạch cho chuyến đi trong ngày của mình và đặt ngay.",
+      "titleParentLocation": "{locationTitle} {year}: những hoạt động và ưu đãi tốt nhất",
+      "descriptionParentLocation": "Tìm và đặt những hoạt động tốt nhất tại {locationTitle}: Đặt vé cho các điểm tham quan hoặc các hoạt động gia đình chỉ trong vài cú nhấp chuột.",
+      "titleChildLocation": "{locationTitle} {year}: những hoạt động tốt nhất",
+      "descriptionChildLocation": "Đặt những hoạt động tốt nhất tại {locationTitle}. Đặt vé cho các điểm tham quan hoặc các hoạt động gia đình chỉ trong vài cú nhấp chuột.",
+      "titleParentType": "{typeTitle} {year}: Những {typeTitle} tốt nhất ở Thụy Sĩ",
+      "descriptionParentType": "Đặt những {typeTitle} tốt nhất từ khắp nơi tại Thụy Sĩ. Không chờ đợi, không phí đặt chỗ và các lựa chọn hủy miễn phí.",
+      "titleChildType": "{typeTitle} {year}: Những ưu đãi {typeTitle} tốt nhất ở Thụy Sĩ",
+      "descriptionChildType": "Đặt những ưu đãi tốt nhất cho {typeTitle} từ khắp nơi tại Thụy Sĩ. Không chờ đợi, không phí đặt chỗ và các lựa chọn hủy miễn phí.",
+      "titleParentLocationParentType": "{typeTitle} {locationTitle}: những ưu đãi và giá cả hàng đầu {year}",
+      "descriptionParentLocationParentType": "Đặt những ưu đãi tốt nhất cho {typeTitle} {locationTitle} {year}. Không có phí đặt chỗ và tùy chọn hủy miễn phí.",
+      "titleParentLocationChildType": "{typeTitle} {locationTitle}: những ưu đãi và giá cả hàng đầu {year}",
+      "descriptionParentLocationChildType": "Đặt những ưu đãi tốt nhất cho {typeTitle} {locationTitle} {year}. Không có phí đặt chỗ và tùy chọn hủy miễn phí.",
+      "titleChildLocationParentType": "{typeTitle} {locationTitle}: những ưu đãi và giá cả hàng đầu {year}",
+      "descriptionChildLocationParentType": "Đặt những ưu đãi tốt nhất cho {typeTitle} {locationTitle} {year}. Không có phí đặt chỗ và tùy chọn hủy miễn phí.",
+      "titleChildLocationChildType": "{typeTitle} {locationTitle}: những ưu đãi và giá cả hàng đầu {year}",
+      "descriptionChildLocationChildType": "Đặt những ưu đãi tốt nhất cho {typeTitle} {locationTitle} {year}. Không có phí đặt chỗ và tùy chọn hủy miễn phí."
+    },
+    "listing": {
+      "title": "{listingTitle}",
+      "offersTitle": "Vé và hoạt động {title}",
+      "activities": "Hoạt động",
+      "relatedListings": "Những địa điểm nổi bật hàng đầu ở {value}",
+      "relatedListingsClose": "Những địa điểm nổi bật gần {value}",
+      "description": "Danh sách cho {listingTitle}",
+      "tableOfContent": "Mục lục",
+      "destinationTitle": "{location} - Những địa điểm và hoạt động tốt nhất {num} {year}",
+      "more": "Tìm hiểu thêm về {val}",
+      "locations": "Địa điểm gần {val}",
+      "regions": "Các khu vực trong {val}",
+      "type": "Những địa điểm phổ biến ở Thụy Sĩ cho {val}",
+      "typeLocation": "Những địa điểm phổ biến ở {location} cho {type}",
+      "types": "Những hoạt động hàng đầu {val}",
+      "combo": "{type} {location} - {num} Ưu đãi và giá tốt nhất {year}",
+      "map": "Bản đồ",
+      "attributeBadWeatherTitleAttribute": "Những ý tưởng chống mưa tốt nhất {val} ở Thụy Sĩ",
+      "attributeBadWeatherTitle": "Những ý tưởng chống mưa tốt nhất {val} ở {location}",
+      "attributeBadWeatherTeaser": "Dù trời mưa, sương mù hay tuyết: ở [{location}]({locationLink}) có rất nhiều hoạt động mà bạn có thể làm mặc dù thời tiết xấu. Vì vậy, trời mưa không nhất thiết phải làm hỏng kế hoạch của bạn. Bạn sẽ tìm thấy cả hoạt động trong nhà và [hoạt động ngoài trời]({outdoorLink}) phù hợp cho mọi thời tiết. Bạn quyết định xem mình muốn hoạt động tích cực hay thư giãn. Tìm thêm nguồn cảm hứng cho nhiều [ý tưởng cho thời tiết xấu]({badWeatherLink}) trên toàn Thụy Sĩ.",
+      "attributeBadWeatherDesc": "Tìm ý tưởng chống mưa của bạn ở {location} và chọn một hoạt động có thể diễn ra trong mọi thời tiết.",
+      "attributeFamilyTitleAttribute": "Những ý tưởng tốt nhất cho chuyến đi gia đình của bạn ở Thụy Sĩ là {val}",
+      "attributeFamilyTitle": "Những ý tưởng tốt nhất cho chuyến đi gia đình của bạn ở {location} là {val}",
+      "attributeFamilyTeaser": "Lên kế hoạch cho chuyến đi gia đình tiếp theo của bạn ở [{location}]({locationLink}) cho bạn và các con của bạn. Không quan trọng bạn có thích phiêu lưu, thư giãn hay khám phá những điều mới, có rất nhiều điều để làm quanh năm, ngay cả khi có [thời tiết xấu ở {location}]({locationBadWeatherLink}). Bạn cũng có các tùy chọn cho các chuyến đi với xe đẩy cho trẻ nhỏ. Do đó, không có gì cản trở chuyến [du lịch gia đình]({familyLink}) của bạn.",
+      "attributeFamilyDesc": "Tìm ý tưởng phù hợp cho chuyến đi gia đình tiếp theo của bạn ở {location} và trải qua một ngày thú vị với các con.",
+      "attributeDogTitleAttribute": "Những chuyến đi tốt nhất với chó cho Thụy Sĩ là {val}",
+      "attributeDogTitle": "Những chuyến đi tốt nhất với chó ở {location} là {val}",
+      "attributeDogTeaser": "Bạn đang tìm kiếm một ý tưởng chuyến đi với chó của bạn ở [{location}]({locationLink})? Nếu bạn muốn đưa người bạn trung thành của mình cùng đi, bạn sẽ tìm thấy tất cả các hoạt động mà chó của bạn có thể tham gia. Thường thì, [hoạt động ngoài trời]({outdoorLink}) rất phù hợp, ở đó chó của bạn có thể chạy nhảy trong không khí trong lành. Nhưng các chuyến đi bằng thuyền hoặc cáp treo cũng rất phù hợp. Mẹo bí mật của chúng tôi là các [Escape Games]({escapeLink}), vì chúng diễn ra ngoài trời và mang lại sự thay đổi thú vị cho những lần đi dạo thông thường của bạn.",
+      "attributeDogDesc": "Lập kế hoạch một chuyến đi với chó của bạn ở {location} và thử nghiệm một cái gì đó mới với sự khác biệt với những chuyến đi thông thường của bạn.",
+      "attributeOutdoorTitleAttribute": "Những hoạt động ngoài trời tốt nhất cho Thụy Sĩ là {val}",
+      "attributeOutdoorTitle": "Những hoạt động ngoài trời tốt nhất ở {location} là {val}",
+      "attributeOutdoorTeaser": "Ở [{location}]({locationLink}) có nhiều [hoạt động ngoài trời]({outdoorLink}) để thực hiện quanh năm. Một số hoạt động kích thích adrenaline của bạn, trong khi những hoạt động khác chờ đón bạn với những cảnh quan tuyệt đẹp hoặc thách thức sự khéo léo của bạn. Thú vị là cũng có những hoạt động ngoài trời phù hợp với [ý tưởng cho thời tiết xấu]({badWeatherLink}) hoặc cho một [chuyến đi gia đình]({familyLink}). Đôi khi bạn thậm chí có thể mang theo [chó]({dogLink}) của mình cùng tham gia. Một số hoạt động ngoài trời, bạn có thể dễ dàng tham gia một mình, trong khi những hoạt động khác, bạn nên tham gia vào một chuyến đi được hướng dẫn chuyên nghiệp vì lý do an toàn.",
+      "attributeOutdoorDesc": "Lập kế hoạch cho hoạt động ngoài trời tiếp theo của bạn ở {location} và trải qua cả năm một ngày ngoài trời trong không khí trong lành.",
+      "attributeBachelorPartyTitleAttribute": "Những ý tưởng tiệc độc thân tốt nhất cho Thụy Sĩ là {val}",
+      "attributeBachelorPartyTitle": "Những ý tưởng tiệc độc thân tốt nhất ở {location} là {val}",
+      "attributeBachelorPartyTeaser": "Bạn đang tìm kiếm một ý tưởng tuyệt vời cho một buổi tiệc độc thân ở [{location}]({locationLink})? Dù bạn là một tín đồ ẩm thực, một người thích phiêu lưu hay một người khám phá, bạn sẽ tìm thấy điều gì đó phù hợp với khẩu vị của mình. Với những ý tưởng của chúng tôi, bạn sẽ không gặp vấn đề gì trong việc tổ chức một [buổi tiệc độc thân]({attributeLink}) ở {location}. Hãy chuẩn bị cho một ngày vui vẻ với những người bạn của bạn!",
+      "attributeBachelorPartyDesc": "Lập kế hoạch tiệc độc thân tiếp theo của bạn ở [{location}] và trải qua một ngày vui vẻ với những người bạn của bạn.",
+      "attributeTeamEventTitleAttribute": "Những ý tưởng tốt nhất cho một sự kiện đội ngũ ở Thụy Sĩ là {val}",
+      "attributeTeamEventTitle": "Những ý tưởng tốt nhất cho một sự kiện đội ngũ ở {location} là {val}",
+      "attributeTeamEventTeaser": "Bạn được giao nhiệm vụ tổ chức một sự kiện đội ngũ ở [{location}]({locationLink})? Đây không phải lúc nào cũng là một nhiệm vụ dễ dàng, vì các yêu cầu thường rất khác nhau. Với những ý tưởng của chúng tôi, bạn sẽ được truyền cảm hứng và chuẩn bị tốt cho sự kiện [đội ngũ]({attributeLink}) sắp tới. Dù cho dân sành ăn, nhà khám phá, người năng động, người yêu đố vui hay người thích phiêu lưu: bạn sẽ tìm thấy điều gì đó phù hợp với mọi sở thích. Hãy chuẩn bị cho một ngày thành công và vui vẻ với đồng nghiệp của bạn.",
+      "attributeTeamEventDesc": "Lập kế hoạch sự kiện đội ngũ tiếp theo của bạn ở {location} và trải qua một ngày vui vẻ với các đồng nghiệp của bạn.",
+      "attributeValentinesDayTitleAttribute": "Những ý tưởng tốt nhất cho ngày Valentine ở Thụy Sĩ là {val}",
+      "attributeValentinesDayTitle": "Những ý tưởng tốt nhất cho ngày Valentine ở {location} là {val}",
+      "attributeValentinesDayTeaser": "Mỗi năm nó lại đến: Ngày Valentine. Có thể bạn đã biết chính xác những gì bạn muốn tổ chức vào ngày 14 tháng 2 tới. Hoặc có thể bạn vẫn chưa chắc chắn và đang tìm kiếm một ý tưởng cho Ngày Valentine của bạn ở [{location}]({locationLink}). Những hoạt động của chúng tôi sẽ truyền cảm hứng cho bạn và giúp bạn tìm ra điều phù hợp. Dù là lãng mạn, ấm áp hay mạo hiểm: ở đây bạn chắc chắn sẽ tìm thấy cảm hứng cho một [Ngày Valentine]({attributeLink}) khiến trái tim bạn đập nhanh hơn.",
+      "attributeValentinesDayDesc": "Lập kế hoạch cho Ngày Valentine tiếp theo của bạn ở {location} và trải qua một ngày đầy lãng mạn với người bạn yêu thích.",
+      "attributeFirstDateTitleAttribute": "Những ý tưởng tốt nhất {val} cho buổi hẹn hò đầu tiên của bạn ở Thụy Sĩ",
+      "attributeFirstDateTitle": "Những ý tưởng tốt nhất {val} cho buổi hẹn hò đầu tiên ở {location}",
+      "attributeFirstDateTeaser": "Bạn đang tìm kiếm ý tưởng hoàn hảo cho buổi hẹn hò đầu tiên của bạn ở [{location}]({locationLink}) và không chắc chắn làm thế nào để ấn tượng với người đối diện? Vậy thì bạn đã đến đúng nơi. Trên trang này, bạn sẽ tìm thấy cảm hứng cần thiết để buổi [hẹn hò đầu tiên]({attributeLink}) của bạn trở thành một thành công hoàn toàn. Dù là mùa hè hay mùa đông, mạo hiểm hay thoải mái, bạn chắc chắn sẽ tìm thấy điều gì đó để làm vui lòng người mà bạn đang hẹn hò. Và ai biết được, có thể bạn sẽ gặp phải thứ gì đó hoàn hảo cho cuộc hẹn tiếp theo và cuộc hẹn sau đó.",
+      "attributeFirstDateDesc": "Lập kế hoạch cho buổi hẹn hò đầu tiên ở {location} và trải qua một ngày lãng mạn cùng nhau.",
+      "attributeChildBirthdayTitleAttribute": "{val} ý tưởng cho một sinh nhật trẻ em ở Thụy Sĩ",
+      "attributeChildBirthdayTitle": "{val} ý tưởng cho một sinh nhật trẻ em ở {location}",
+      "attributeChildBirthdayTeaser": "Lên kế hoạch cho sinh nhật tiếp theo của trẻ em ở [{location}]({locationLink}). Sinh nhật là một trong những điểm nổi bật của mỗi đứa trẻ trong suốt năm. Bất kể mùa nào, có rất nhiều ý tưởng để làm cho trẻ vui vẻ. Tổ chức một [hoạt động ngoài trời]({outdoorLink}) hoặc tìm một ý tưởng cho [chương trình thời tiết xấu]({badWeatherLink}). Bằng cách này, sinh nhật tiếp theo của các bạn sẽ chắc chắn là một thành công.",
+      "attributeChildBirthdayDesc": "Tổ chức một sinh nhật trẻ em ở {location} và lập kế hoạch cho một ngày khó quên cho con bạn.",
+      "attributeWheelchairTitleAttribute": "{val} ý tưởng cho chuyến đi có thể tiếp cận bằng xe lăn ở Thụy Sĩ",
+      "attributeWheelchairTitle": "{val} ý tưởng cho chuyến đi có thể tiếp cận bằng xe lăn ở {location}",
+      "attributeWheelchairTeaser": "Lên kế hoạch cho một chuyến đi bằng xe lăn ở [{location}]({locationLink}) và tìm hoạt động không rào cản hoàn hảo cho bạn. Du lịch ở Thụy Sĩ bằng xe lăn tương đối dễ dàng nhờ vào khả năng tiếp cận tiên tiến và nỗ lực của quốc gia trong việc mang đến trải nghiệm dễ tiếp cận cho tất cả du khách. Điều này bao gồm cả các hoạt động trong nhà lẫn [hoạt động ngoài trời]({outdoorLink}).",
+      "attributeWheelchairDesc": "Hãy để bạn được truyền cảm hứng từ những điểm đến có thể tiếp cận bằng xe lăn ở {location} và lập kế hoạch cho hoạt động không rào cản của bạn.",
+      "attributePramTitleAttribute": "{val} ý tưởng cho chuyến đi cùng xe đẩy ở Thụy Sĩ",
+      "attributePramTitle": "{val} ý tưởng cho chuyến đi cùng xe đẩy ở {location}",
+      "attributePramTeaser": "Lên kế hoạch cho chuyến đi với xe đẩy ở [{location}]({locationLink}). Nếu bạn đang đi cùng với trẻ nhỏ, có rất nhiều hoạt động mà bạn có thể tham gia. Nhiều con đường đi bộ được thiết kế thân thiện với xe đẩy, và phương tiện công cộng được định hướng để mang lại sự thoải mái cho các gia đình có trẻ nhỏ. Vì vậy, không gì cản trở được chuyến [đi gia đình]({familyLink}) của các bạn.",
+      "attributePramDesc": "Du lịch đến {location} cùng xe đẩy và lập kế hoạch cho chuyến đi tiếp theo của bạn cùng gia đình.",
+      "attributesOther": "Những danh mục khác",
+      "attributesType": "Danh mục cho các hoạt động {val}",
+      "teamEvent": "Gửi cho chúng tôi yêu cầu nhóm của bạn",
+      "recommended": "Được người du lịch khuyên dùng",
+      "tickets": "Vé",
+      "tours": "Các tour du lịch có hướng dẫn"
+    },
+    "error": {
+      "title": "Chúng tôi xin lỗi nhưng đã xảy ra lỗi. Quay lại trang chính và tìm kiếm hoạt động giải trí phù hợp với bạn."
+    },
+    "supplier": {
+      "title": "Swiss Activities: thị trường hoạt động giải trí lớn nhất Thụy Sĩ",
+      "description": "Swiss Activities là thị trường hoạt động giải trí lớn nhất Thụy Sĩ. Với chúng tôi, bạn sẽ tiếp cận nhiều khách hàng hơn và tăng cường đơn đặt hàng của mình.",
+      "hero": {
+        "title": "Swiss Activities - Điểm đến cho các hoạt động giải trí ở Thụy Sĩ",
+        "button": "Trở thành đối tác giải trí"
+      },
+      "numbers": {
+        "title": "Cách chúng tôi đã hỗ trợ các đối tác giải trí từ khi thành lập Swiss Activities",
+        "blocks": [
+          {
+            "title": "Lượt truy cập khách hàng",
+            "number": "7'500'000",
+            "text": "khách hàng tiềm năng"
+          },
+          {
+            "title": "Đặt chỗ của khách hàng",
+            "number": ">300'000",
+            "text": "Khách đã được chuyển giao"
+          },
+          {
+            "title": "Hỗ trợ khách hàng",
+            "number": ">10'000",
+            "text": "Cuộc trò chuyện đã diễn ra"
+          },
+          {
+            "title": "Hệ thống đặt chỗ",
+            "number": ">20",
+            "text": "Vé thay vì phiếu thưởng"
+          }
+        ]
+      },
+      "why": {
+        "title": "Tại sao lại liệt kê sản phẩm giải trí của bạn trên Swiss Activities",
+        "sales": {
+          "title": "Khách hàng mới",
+          "description": "Kiếm thêm khách hàng từ thị trường nội địa và quốc tế và cải thiện công suất của bạn."
+        },
+        "support": {
+          "title": "Tự động hóa",
+          "description": "Swiss Activities đảm nhận quy trình bán hàng hiện tại của bạn và chuyển giao các giao dịch đến hệ thống của bạn."
+        },
+        "finances": {
+          "title": "Không có rủi ro",
+          "description": "Không có chi phí cố định hay đầu tư trước. Bạn chỉ phải trả tiền cho một khách hàng được giới thiệu."
+        },
+        "local": {
+          "title": "Khai thác các phân khúc khách hàng mới",
+          "description": "Kết nối với mạng lưới đại lý của Swiss Activities và mở rộng phạm vi của bạn cả trong và ngoài nước."
+        }
+      },
+      "who": {
+        "title": "Hơn 500 đối tác giải trí làm việc với Swiss Activities",
+        "partners": [
+          {
+            "blocks": [
+              "/assets/supplier/partner/bergbahnen/rigi.png",
+              "/assets/supplier/partner/bergbahnen/schilthorn.png",
+              "/assets/supplier/partner/bergbahnen/jungfrau.jpeg",
+              "/assets/supplier/partner/bergbahnen/engelberg.svg",
+              "/assets/supplier/partner/bergbahnen/pilatus.jpeg",
+              "/assets/supplier/partner/bergbahnen/monte-tamaro.png",
+              "/assets/supplier/partner/bergbahnen/brienz.png",
+              "/assets/supplier/partner/bergbahnen/gornergrat.png",
+              "/assets/supplier/partner/destinationen/rheinfelden.png",
+              "/assets/supplier/partner/destinationen/basel.svg",
+              "/assets/supplier/partner/destinationen/winterthur.svg",
+              "/assets/supplier/partner/destinationen/interlaken.png",
+              "/assets/supplier/partner/attraktionen/ballenberg.png",
+              "/assets/supplier/partner/attraktionen/bls.png",
+              "/assets/supplier/partner/attraktionen/cgn.png",
+              "/assets/supplier/partner/attraktionen/chillon.jpeg",
+              "/assets/supplier/partner/attraktionen/maestrani.png",
+              "/assets/supplier/partner/attraktionen/verkehrshaus.png",
+              "/assets/supplier/partner/attraktionen/vier.png",
+              "/assets/supplier/partner/outdoor/best-of-switzerland.jpeg",
+              "/assets/supplier/partner/outdoor/kayak.jpeg",
+              "/assets/supplier/partner/outdoor/outdoorch.jpeg",
+              "/assets/supplier/partner/outdoor/paragliding.png",
+              "/assets/supplier/partner/outdoor/wine-tours.webp",
+              "/assets/supplier/partner/outdoor/zermatters.png"
+            ]
+          }
+        ]
+      },
+      "pricing": {
+        "title": "Mô hình giá",
+        "subtitle": "Chỉ thanh toán khi giới thiệu khách hàng thành công",
+        "description": "Swiss Activities giúp bạn xác định các kênh bán hàng phù hợp cả ở địa phương và toàn cầu và bán các sản phẩm giải trí của bạn ở nơi mà khách hàng tiềm năng của bạn đang có mặt. Vì Swiss Activities không có phí thiết lập, bạn mở ra kênh bán hàng mới mà không cần đầu tư thêm.",
+        "blocks": [
+          {
+            "pretitle": "",
+            "cost": "18% + CHF 0.30",
+            "subcost": "không bao gồm VAT.",
+            "button": "Trở thành đối tác giải trí",
+            "buttonLink": "https://k3qlq2fyp9o.typeform.com/to/CxWJub7f",
+            "subbutton": "",
+            "includes": [
+              "Đưa các hoạt động giải trí lên Swiss Activities",
+              "Ghi nhận không giới hạn các hoạt động giải trí",
+              "Tạo mô tả sản phẩm bởi nhóm nội dung của chúng tôi",
+              "Kết nối tới một trong hơn 20 hệ thống đặt chỗ",
+              "Hỗ trợ đối tác cá nhân qua chat và điện thoại",
+              "Quản lý giao tiếp với khách hàng về các hoạt động",
+              "Xử lý các yêu cầu đặt chỗ và hủy bỏ của khách",
+              "Giám sát và kiểm soát tất cả các đặt chỗ và hủy bỏ",
+              "Giám sát và kiểm soát các thanh toán",
+              "Thanh toán tiền mặt được thống nhất – Tính toán qua Swiss Activities",
+              "Đảm bảo quy trình bán hàng (không có vé, chỉ có vé vào cửa)",
+              "Truy cập tự động vào mạng lưới đối tác liên kết",
+              "Đưa các hoạt động lên mạng lưới resell"
+            ],
+            "faq": []
+          }
+        ]
+      },
+      "tech": {
+        "title": "Hệ thống đặt chỗ và vé",
+        "description": "Bên cạnh việc kết nối và số hóa tất cả các sản phẩm giải trí của Thụy Sĩ, một mục tiêu trung tâm của Swiss Activities là đơn giản hóa và tự động hóa quy trình tái bán các sản phẩm giải trí trong và ngoài nước. Cảnh phân phối ngày càng phức tạp và chúng tôi hỗ trợ các nhà phân phối không mất kết nối với các phân khúc khách hàng. Do đó, kết nối trực tiếp giữa các đối tác giải trí của chúng tôi và Swiss Activities trở nên trung tâm hơn bao giờ hết. Chúng tôi luôn đang triển khai các hệ thống mới. Nếu hệ thống đặt chỗ và vé của bạn không có trong danh sách, hãy liên hệ với chúng tôi tại sales@swissactivities.com.",
+        "partners": [
+          "/assets/supplier/technology/trekksoft.webp",
+          "/assets/supplier/technology/regiondo.webp",
+          "/assets/supplier/technology/tomas.webp",
+          "/assets/supplier/technology/waldhart.webp",
+          "/assets/supplier/technology/experiencebank.webp",
+          "/assets/supplier/technology/skidata.webp",
+          "/assets/supplier/technology/axess.webp",
+          "/assets/supplier/technology/smeetz.webp",
+          "/assets/supplier/technology/eatwith.webp",
+          "/assets/supplier/technology/fareharbor.webp",
+          "/assets/supplier/technology/bookingkit.webp",
+          "/assets/supplier/technology/ntree.webp",
+          "/assets/supplier/technology/secutix.webp",
+          "/assets/supplier/technology/tourcms.webp",
+          "/assets/supplier/technology/sbb.webp"
+        ],
+        "titleSoon": "Sắp có mặt",
+        "partnersSoon": [
+          "/assets/supplier/technology/feratel.webp"
+        ]
+      },
+      "faq": [
+        {
+          "title": "Thông tin chung cho các đối tác giải trí",
+          "blocks": [
+            {
+              "title": "Ai có thể trở thành đối tác giải trí của Swiss Activities?",
+              "text": "Bất kỳ ai muốn phân phối các hoạt động giải trí ở Thụy Sĩ đều có thể trở thành đối tác của Swiss Activities. Các đề nghị của bạn có thể rất đa dạng và sự sáng tạo gần như không có giới hạn. Chúng tôi có các hoạt động, vé, cuộc phiêu lưu, tour, cho thuê, v.v. trong khoảng 100 danh mục. Điều này bao gồm các khóa học làm bánh cho bánh unicorn cũng như các chuyến bay dù lượn đôi hoặc vé vào cửa bảo tàng. Điều quan trọng là các đề nghị này diễn ra ở Thụy Sĩ hoặc có thể thực hiện trong một chuyến đi trong ngày từ Thụy Sĩ."
+            },
+            {
+              "title": "Hệ thống đặt chỗ nào tôi có thể kết nối với Swiss Activities?",
+              "list": [
+                "Trekksoft",
+                "Regiondo",
+                "Waldhart",
+                "Ngân hàng trải nghiệm",
+                "Skidata",
+                "Axess",
+                "Tomas",
+                "Smeetz",
+                "Eatwith",
+                "Fareharbor",
+                "Booking Kit",
+                "N-Tree",
+                "Secutix",
+                "TourCMS",
+                "Palisis",
+                "Sẽ sớm có: SBB và Feratel"
+              ]
+            },
+            {
+              "title": "Tôi không sử dụng hệ thống đặt chỗ. Tôi có thể bán hoạt động của mình thông qua Swiss Activities không?",
+              "text": "Ngay cả khi bạn không làm việc với một hệ thống đặt chỗ, bạn vẫn có thể đăng hoạt động của mình với chúng tôi. Trong trường hợp này, chúng tôi sẽ tạo một lịch trình thủ công theo thông tin mà bạn cung cấp. Nếu bạn muốn triển khai một hệ thống đặt chỗ, xin vui lòng liên hệ với chúng tôi. Chúng tôi sẽ tư vấn cho bạn về vấn đề này. Thông tin chúng tôi cần từ bạn bao gồm:",
+              "list": [
+                "Khoảng thời gian (ngày)",
+                "Thời gian bắt đầu",
+                "Thời gian kéo dài",
+                "Thời hạn đăng ký (Khách hàng cần đặt chỗ sớm nhất là bao lâu?)",
+                "Giá theo từng loại (người lớn, trẻ em, cho thuê, v.v.)",
+                "Số chỗ tối đa có sẵn cho mỗi lượt đặt"
+              ]
+            },
+            {
+              "title": "Thông tin nào được truyền tải khi đặt chỗ?",
+              "text": "Khi một khách hàng đặt chỗ tại Swiss Activities, họ sẽ nhận được một email xác nhận với tất cả các thông tin quan trọng. Điều này cũng bao gồm thông tin liên lạc của bạn, để họ có thể liên hệ trực tiếp với bạn nếu có thắc mắc.",
+              "list": [
+                "Tên của hoạt động",
+                "Ngày",
+                "Thời gian",
+                "Điểm gặp gỡ",
+                "Số vé đã đặt",
+                "Thông tin liên lạc của bạn (email và điện thoại)"
+              ]
+            },
+            {
+              "title": "Giá của hoạt động của tôi có được công bố trên Swiss Activities giống như trên trang web của tôi không?",
+              "text": "Đúng vậy, với chúng tôi, khách hàng trả bằng cùng một số tiền như khi họ đặt trực tiếp với bạn. Điều này cũng quan trọng đối với bạn như với chúng tôi. Nếu giá cả ở các nơi khác nhau là khác nhau, khách hàng sẽ nhận thấy điều này, dẫn đến khiếu nại và sự không hiểu biết. Như vậy, cả hai chúng ta đều có nguy cơ mất một khách hàng quay lại."
+            },
+            {
+              "title": "Thời gian hủy bỏ trên Swiss Activities là bao lâu?",
+              "text": "Khách hàng có thể hủy miễn phí cho đến 24 tiếng trước hoạt động tại Swiss Activities. Nếu bạn muốn đăng một hoạt động không thể hủy, chúng tôi có thể làm như vậy. Tuy nhiên, kinh nghiệm của chúng tôi cho thấy rằng chúng tôi trung gian nhiều đặt chỗ hơn cho những hoạt động mà khách hàng có khả năng hủy. Nếu bạn phải hủy đặt chỗ, bạn cũng có thể làm vậy. Xin hãy thông báo ngay lập tức cho khách hàng và cũng cho chúng tôi biết, để chúng tôi có thể thực hiện hoàn lại."
+            },
+            {
+              "title": "Làm thế nào để xử lý các hủy bỏ sau đó?",
+              "text": "Nếu chúng tôi nhận được yêu cầu hủy bỏ sau đó qua biểu mẫu hủy của chúng tôi, chúng tôi sẽ không bao giờ thực hiện hoàn tiền mà không tham khảo ý kiến của bạn trước. Để tránh gian lận, chúng tôi luôn lấy sự đồng ý của bạn để xác nhận lại thông tin của khách hàng. Chỉ khi nào chúng tôi có sự đồng ý của bạn, chúng tôi mới thực hiện hoàn tiền sau đó."
+            }
+          ]
+        },
+        {
+          "title": "Quy trình đăng ký các sản phẩm giải trí",
+          "blocks": [
+            {
+              "title": "Làm thế nào tôi có thể đăng sản phẩm của mình trên Swiss Activities?",
+              "text": "Nếu bạn muốn trở thành đối tác giải trí của Swiss Activities và đăng sản phẩm của mình, bạn cần thực hiện các bước sau:",
+              "list": [
+                "Đầu tiên hãy đăng ký làm đối tác giải trí.",
+                "Điền một biểu mẫu cho mỗi hoạt động mà bạn muốn đăng. Bạn sẽ nhận được liên kết sau khi chúng tôi xác nhận đăng ký của bạn.",
+                "Chúng tôi sẽ viết và ghi lại hoạt động của bạn trong khoảng thời gian hai tuần.",
+                "Khi hoạt động đã được phát trực tiếp, chúng tôi sẽ thông báo cho bạn qua email."
+              ]
+            },
+            {
+              "title": "Thông tin gì là cần thiết để đăng sản phẩm của tôi?",
+              "text": "Sau khi bạn đăng ký làm đối tác giải trí với chúng tôi, chúng tôi sẽ gửi cho bạn một biểu mẫu để bạn có thể điền thông tin hoạt động của mình. Để tôi có thể đăng chúng lên, chúng tôi cần thông tin sau từ bạn:",
+              "list": [
+                "Thông tin về hệ thống đặt chỗ (nếu có)",
+                "Tiêu đề của hoạt động",
+                "Liên kết đến hoạt động",
+                "Ít nhất 4 bức ảnh cho mỗi hoạt động",
+                "Thông tin về ngày, giờ và thời gian kéo dài, nếu bạn không sử dụng hệ thống đặt chỗ",
+                "Bất kỳ thông tin nào về độ tuổi, ngôn ngữ, trọng lượng, v.v.",
+                "Sự phù hợp của hoạt động: chó, xe đẩy, xe lăn, gia đình, v.v.",
+                "Điểm gặp gỡ chính xác"
+              ]
+            },
+            {
+              "title": "Tôi có thể xóa danh sách của mình bất kỳ lúc nào không?",
+              "text": "Có, bạn có thể rút lui khỏi hợp đồng bất cứ lúc nào. Không có thời gian tối thiểu cho hợp đồng và không có chi phí nào phát sinh từ việc hủy bỏ."
+            },
+            {
+              "title": "Tôi nên làm gì nếu tôi muốn thay đổi điều gì đó trong một hoạt động?",
+              "text": "Nếu bạn có yêu cầu thay đổi nội dung hoặc muốn điều chỉnh giá - miễn là bạn không sử dụng hệ thống đặt chỗ - bạn có thể thông báo cho chúng tôi qua email."
+            },
+            {
+              "title": "Làm thế nào để tôi liên lạc với khách hàng?",
+              "text": "Sau mỗi lần đặt chỗ, bạn sẽ nhận được một email xác nhận từ chúng tôi với thông tin của khách hàng. Tại đó bạn sẽ thấy tên, địa chỉ email và số điện thoại của họ để liên hệ."
+            },
+            {
+              "title": "Tôi sẽ nhận tiền của mình như thế nào?",
+              "text": "Việc thanh toán tất cả các khoản tiền mở sẽ diễn ra sau ngày dịch vụ và sẽ được chuyển tự động vào đầu tháng tiếp theo. Tất cả các đặt chỗ xảy ra trong tháng trước sẽ được thanh toán tập hợp và gộp lại trong một lần thanh toán duy nhất."
+            }
+          ]
+        }
+      ]
+    },
+    "supplierRegistration": {
+      "title": "Swiss Activities: thị trường hoạt động giải trí lớn nhất tại Thụy Sĩ",
+      "description": "Swiss Activities là thị trường hoạt động giải trí lớn nhất tại Thụy Sĩ. Với chúng tôi, bạn sẽ tiếp cận được nhiều khách hàng hơn và tăng số lượng đặt chỗ của bạn.",
+      "hero": {
+        "title": "Hãy trở thành một phần của Swiss Activities",
+        "description": "Đăng ký miễn phí tại Swiss Activities và tăng cường khả năng tiếp cận của bạn với khách hàng Thụy Sĩ và quốc tế. Những lợi ích của bạn trong tầm tay",
+        "list": [
+          "Được tìm thấy trên Google với tư cách là công ty và với các ưu đãi của bạn. Và đó là trong 4 ngôn ngữ!",
+          "Mở ra một kênh phân phối mới",
+          "Tận hưởng dịch vụ hỗ trợ khách hàng miễn phí của chúng tôi",
+          "Kết nối hệ thống đặt chỗ của bạn và quản lý khả năng sẵn có ngay trong đó.",
+          "Một đặt chỗ mới - khách hàng của bạn. Chúng tôi không giấu diếm đối tác của mình và muốn mang đến cho khách hàng trải nghiệm đặt chỗ tốt nhất.",
+          "Không có chi phí cố định hoặc phí ẩn.",
+          "Khách hàng của bạn có thể thanh toán bằng tất cả các phương thức thanh toán địa phương như Twint, mua hàng trả sau và các thẻ tín dụng phổ biến."
+        ]
+      }
+    },
+    "affiliate": {
+      "title": "Đối tác liên kết",
+      "description": "Tham gia làm đối tác tại Swiss Activities và kiếm hoa hồng từ 1% đến 5% từ đặt chỗ đầu tiên. Không có chi phí cố định.",
+      "hero": {
+        "title": "Trở thành Đối tác Liên kết của Swiss Activities ngay bây giờ",
+        "description": "Đăng ký chương trình liên kết của Swiss Activities và hưởng lợi từ các công cụ tích hợp hấp dẫn, hoa hồng từ 1% đến 5% và thời gian cookie 45 ngày.",
+        "steps": [
+          "Đăng ký ngay",
+          "Thực hiện các hoạt động của chúng tôi",
+          "Tạo ra các đặt chỗ và kiếm tiền từ đó"
+        ],
+        "button": "Đăng ký ngay bây giờ"
+      },
+      "form": {
+        "tos": "Tôi đồng ý với <a target='_blank' href='/agb/affiliates/'>Điều Khoản Dịch Vụ</a>"
+      },
+      "advantagesTitle": "Lợi ích của bạn khi trở thành đối tác liên kết của Swiss Activities là gì?",
+      "advantages": [
+        {
+          "title": "1'500+ hoạt động giải trí",
+          "text": "Là đối tác liên kết của Swiss Activities, với vài cú nhấp chuột, bạn có thể truy cập hơn 1'500 hoạt động giải trí trên toàn quốc."
+        },
+        {
+          "title": "Điều kiện hấp dẫn",
+          "text": "Bạn nhận được hoa hồng từ 1% đến 5% cho mỗi đặt chỗ bạn giới thiệu. Thời gian cookie là 45 ngày."
+        },
+        {
+          "title": "Truyền cảm hứng cho độc giả của bạn",
+          "text": "Làm sống động blog hoặc trang web của bạn với nội dung truyền cảm hứng và giúp cộng đồng của bạn tiết kiệm thời gian trong việc lập kế hoạch giải trí."
+        },
+        {
+          "title": "Đăng ký đơn giản",
+          "text": "Tận hưởng một quá trình đăng ký đơn giản và nhanh chóng."
+        },
+        {
+          "title": "Bán vé trực tiếp",
+          "text": "Bạn có tùy chọn để bán vé trực tiếp trên trang web của bạn mà không cần chuyển hướng độc giả sang chúng tôi."
+        },
+        {
+          "title": "HTML tùy chỉnh",
+          "text": "Nhờ vào những công cụ HTML tùy chỉnh đa năng và hấp dẫn, bạn có thể cá nhân hóa cơ hội bán hàng của mình."
+        }
+      ],
+      "faqTitle": "Những câu hỏi quan trọng đã được trả lời",
+      "faq": [
+        {
+          "title": "Làm thế nào để đăng ký chương trình liên kết của Swiss Activities?",
+          "text": "Hãy đăng ký qua biểu mẫu trên trang này với tất cả các thông tin cần thiết. Chúng tôi sẽ xem xét đơn đăng ký của bạn trong vòng một ngày làm việc và sẽ gửi thông tin đăng nhập cho bạn qua email khi được chấp nhận."
+        },
+        {
+          "title": "Làm thế nào để tôi đăng nhập vào bảng điều khiển đối tác liên kết của mình?",
+          "text": "Trong quá trình đăng ký, bạn sẽ định nghĩa mật khẩu cá nhân của mình. Một khi chúng tôi kiểm tra thông tin của bạn, bạn sẽ nhận được thông báo và có thể đăng nhập vào bảng điều khiển đối tác liên kết của bạn qua <a href='https://swissactivities.tapfiliate.com/login' target='_blank'>liên kết này</a>."
+        },
+        {
+          "title": "Tôi có thể tìm thấy thêm thông tin về chương trình liên kết ở đâu?",
+          "text": "Trong trung tâm trợ giúp của chúng tôi, bạn sẽ tìm thấy <a href='https://intercom.help/swiss-activities/de/collections/3916117-affiliate-moglichkeiten-zur-einbindung' target='_blank'>những bước đầu tiên</a> cũng như những câu hỏi quan trọng về <a href='https://intercom.help/swiss-activities/de/collections/3916117-affiliate-moglichkeiten-zur-einbindung' target='_blank'>cách tích hợp các hoạt động của chúng tôi</a>. Ngoài ra, sau khi đăng ký, bạn sẽ nhận được một loạt email với các mẹo hữu ích."
+        },
+        {
+          "title": "Ai có thể trở thành đối tác liên kết của Swiss Activities?",
+          "text": "Nếu bạn điều hành một blog hoặc trang web có liên quan đến du lịch Thụy Sĩ, các hoạt động giải trí tại Thụy Sĩ, hoặc đi du lịch nói chung, bạn có thể đăng ký tham gia chương trình liên kết của chúng tôi. Nếu bạn có tài khoản Instagram, Pinterest, hoặc Facebook mà bạn có thể chèn liên kết đối tác, bạn cũng có thể đăng ký với chúng tôi."
+        },
+        {
+          "title": "Tôi có thể hủy đăng ký từ chương trình liên kết không?",
+          "text": "Đương nhiên. Bạn không bị ràng buộc bởi thời gian tối thiểu. Nếu bạn muốn xóa tài khoản của mình, hãy cho chúng tôi biết qua email hoặc trò chuyện và chúng tôi sẽ sắp xếp mọi thứ cần thiết."
+        },
+        {
+          "title": "Tôi nhận được bao nhiêu hoa hồng cho mỗi đặt chỗ được giới thiệu?",
+          "text": "Bạn nhận được hoa hồng từ 1% đến 5% nếu bạn giới thiệu một khách hàng với chúng tôi người thực hiện hoạt động. Nếu khách hàng hủy đặt chỗ của họ, rất tiếc chúng tôi không thể thanh toán hoa hồng cho bạn."
+        }
+      ]
+    },
+    "apps": {
+      "title": "Ứng dụng Swiss Activities",
+      "description": "Trải nghiệm Thụy Sĩ với ứng dụng Swiss Activities – khám phá, so sánh và đặt hoạt động giải trí ngay trên điện thoại thông minh của bạn.",
+      "hero": {
+        "title": "Cuộc phiêu lưu Thụy Sĩ trong lòng bàn tay bạn",
+        "description": "Với ứng dụng Swiss Activities, bạn có thể truy cập trực tiếp vào hơn {amount} hoạt động trên toàn Thụy Sĩ. Tìm kiếm trải nghiệm, đặt trong vài giây và luôn kiểm tra tất cả vé và đơn đặt hàng của bạn.",
+        "features": [
+          "Vé luôn sẵn sàng",
+          "Quản lý đặt chỗ dễ dàng",
+          "Khám phá những trải nghiệm mới cho mọi sở thích",
+          "Vé có sẵn cả khi không có kết nối internet"
+        ]
+      }
+    },
+    "travelGuide": {
+      "title": "Kế hoạch hành trình của bạn cho Thụy Sĩ",
+      "description": "Thụy Sĩ là một đất nước rất đa dạng và có rất nhiều điều tuyệt vời để cung cấp cho chuyến đi của bạn. Vậy nên đừng để diện tích nhỏ làm bạn nhầm lẫn. Mặc dù Thụy Sĩ nhỏ hơn khoảng mười lần so với Thụy Điển, California hoặc Maroc, nhưng bạn sẽ tìm thấy thứ gì đó cho mọi sở thích. Tại Ticino Địa Trung Hải, bạn ở một thế giới hoàn toàn khác so với Basel nhộn nhịp. Và Alpstein núi non có khí hậu hoàn toàn khác với khu vực Hồ Geneva ôn hòa. Và điều này, mặc dù những địa điểm này chỉ cách nhau ba đến bốn giờ. Trong blog của chúng tôi, chúng tôi giúp bạn lên kế hoạch cho chuyến đi của bạn. Chúng tôi cung cấp cho bạn những mẹo du lịch hữu ích và thông tin quan trọng để bạn có thể chuẩn bị một cách hoàn hảo. Dù bạn có đến Thụy Sĩ lần đầu hay đã quen thuộc, điều đó không quan trọng. Các bài viết của chúng tôi phù hợp cho cả những người lần đầu đến cũng như những người am hiểu Thụy Sĩ.",
+      "intro": "Thụy Sĩ là một đất nước rất đa dạng và có rất nhiều điều tuyệt vời để cung cấp cho chuyến đi của bạn. Vậy nên đừng để diện tích nhỏ làm bạn nhầm lẫn. Mặc dù Thụy Sĩ nhỏ hơn khoảng mười lần so với Thụy Điển, California hoặc Maroc, nhưng bạn sẽ tìm thấy thứ gì đó cho mọi sở thích. Tại Ticino Địa Trung Hải, bạn ở một thế giới hoàn toàn khác so với Basel nhộn nhịp. Và Alpstein núi non có khí hậu hoàn toàn khác với khu vực Hồ Geneva ôn hòa. Và điều này, mặc dù những địa điểm này chỉ cách nhau ba đến bốn giờ. Trong blog của chúng tôi, chúng tôi giúp bạn lên kế hoạch cho chuyến đi của bạn. Chúng tôi cung cấp cho bạn những mẹo du lịch hữu ích và thông tin quan trọng để bạn có thể chuẩn bị một cách hoàn hảo. Dù bạn có đến Thụy Sĩ lần đầu hay đã quen thuộc, điều đó không quan trọng. Các bài viết của chúng tôi phù hợp cho cả những người lần đầu đến cũng như những người am hiểu Thụy Sĩ."
+    },
+    "travelRoutes": {
+      "title": "Lịch trình du lịch Thụy Sĩ",
+      "description": "Thụy Sĩ là một đất nước rất đa dạng và có rất nhiều điều tuyệt vời để cung cấp cho chuyến đi của bạn. Vậy nên đừng để diện tích nhỏ bé đánh lừa bạn. Mặc dù Thụy Sĩ nhỏ hơn khoảng mười lần so với Thụy Điển, California hoặc Maroc, bạn sẽ tìm thấy thứ gì đó phù hợp với mọi sở thích. Ở Ticino Địa Trung Hải, bạn ở trong một thế giới hoàn toàn khác so với thành phố nhộn nhịp Basel. Và khu vực Alpstein núi non có khí hậu rất khác với vùng hồ Genève ôn hòa. Và điều này, mặc dù những địa điểm này chỉ cách nhau ba đến bốn giờ. Trong blog của chúng tôi, chúng tôi giúp bạn trong việc lên kế hoạch cho chuyến đi. Chúng tôi cung cấp cho bạn những mẹo du lịch hữu ích và thông tin đúng đắn, để bạn có thể chuẩn bị một cách hoàn hảo. Không quan trọng bạn lần đầu tiên đến Thụy Sĩ hay đã quen thuộc với nơi đây, các bài viết của chúng tôi đều phù hợp với cả những du khách lần đầu cũng như những người đã là người hiểu biết về Thụy Sĩ."
+    },
+    "widget": {
+      "title": "Tích hợp Swiss Activities vào trang web của bạn",
+      "description": "Nhúng Swiss Activities vào trang web của bạn và bán các hoạt động trực tiếp qua trang web của bạn.",
+      "hero": {
+        "title": "Tích hợp các ưu đãi từ Swiss Activities vào trang web của bạn",
+        "description": "Widget của Swiss Activities là cách dễ nhất để tích hợp các hoạt động vào trang web của bạn. Chọn từ nhiều kiểu widget khác nhau và nhúng nó chỉ trong vài phút.",
+        "button": "Bắt đầu ngay"
+      },
+      "cta": {
+        "title": "Trở thành đại lý",
+        "button": "Đi tới biểu mẫu"
+      }
+    },
+    "newsletterConfirm": {
+      "title": "Cảm ơn bạn đã đăng ký. Chúng tôi vừa gửi cho bạn một tin nhắn, thông qua đó bạn có thể xác nhận việc đăng ký của mình."
+    },
+    "newsletterSuccess": {
+      "title": "Cảm ơn bạn! Bạn đã đăng ký nhận bản tin của chúng tôi."
+    },
+    "cookiePolicy": {
+      "title": "Chính sách cookie"
+    },
+    "vouchers": {
+      "title": "Ý tưởng quà tặng trải nghiệm cho Thụy Sĩ – những coupon tốt nhất tại Swiss Activities",
+      "description": "Tặng những khoảnh khắc khó quên với một coupon trải nghiệm từ Swiss Activities! Khám phá sự lựa chọn đa dạng nhất về các hoạt động giải trí ở Thụy Sĩ – linh hoạt, đơn giản và có thể đặt trực tuyến ngay lập tức. Hoàn hảo làm ý tưởng quà tặng cho mọi dịp.",
+      "hero": {
+        "title": "Hãy tặng một coupon trải nghiệm cho Thụy Sĩ ngay bây giờ và mang lại niềm vui!",
+        "text": "Khám phá ngay những ý tưởng quà tặng tốt nhất và coupon trải nghiệm tại Swiss Activities. Cho dù vào sinh nhật, làm quà Giáng sinh hay đơn giản chỉ để nói lời cảm ơn – một coupon cho những trải nghiệm ở Thụy Sĩ sẽ đáp ứng mọi sở thích và là một món quà đảm bảo sẽ được ghi nhớ.",
+        "button": "Mua coupon"
+      },
+      "gift": {
+        "title": "Tặng những trải nghiệm tốt nhất của Thụy Sĩ – từ phiêu lưu đến thư giãn",
+        "text": "Bạn đang tìm một ý tưởng quà tặng độc đáo cho bạn bè hoặc gia đình ở Thụy Sĩ? Một coupon trải nghiệm từ Swiss Activities cung cấp cho bạn quyền truy cập vào sự lựa chọn đa dạng nhất về các hoạt động giải trí mà Thụy Sĩ mang đến. Cho dù là các tour du lịch, khám phá thiên nhiên, những giờ thư giãn trong các suối nước nóng, hay các điểm văn hóa nổi bật trong bảo tàng – Swiss Activities giúp bạn dễ dàng tặng những khoảnh khắc đặc biệt."
+      },
+      "why": {
+        "title": "Tại sao một coupon trải nghiệm từ Swiss Activities là ý tưởng quà tặng hoàn hảo",
+        "items": [
+          {
+            "title": "Lựa chọn lớn nhất của Thụy Sĩ",
+            "text": "Hơn 1,600 hoạt động giải trí ở tất cả các vùng, từ các cuộc phiêu lưu ngoài trời đến những khoảnh khắc thư giãn."
+          },
+          {
+            "title": "Hơn 100,000 khách hàng hài lòng",
+            "text": "Swiss Activities là đối tác được chứng minh cho những món quà và chuyến đi đặc biệt."
+          },
+          {
+            "title": "Lựa chọn hủy miễn phí",
+            "text": "Đặt chỗ an toàn và linh hoạt, có thể điều chỉnh theo nhu cầu của người nhận quà."
+          },
+          {
+            "title": "Hỗ trợ khách hàng 5 sao",
+            "text": "Chất lượng và hỗ trợ của Thụy Sĩ – đảm bảo bắt đầu trải nghiệm một cách suôn sẻ."
+          }
+        ]
+      },
+      "end": {
+        "title": "Tặng phiếu quà tặng trải nghiệm ở Thụy Sĩ và mang lại niềm vui!",
+        "text": "Khám phá những ý tưởng quà tặng tốt nhất và phiếu quà tặng trải nghiệm tại Swiss Activities. Dù là sinh nhật, quà Giáng sinh hay chỉ đơn giản là để cảm ơn – một phiếu quà tặng cho những trải nghiệm ở Thụy Sĩ phù hợp với mọi sở thích và sẽ để lại những kỷ niệm lâu dài.",
+        "button": "Chọn coupon"
+      },
+      "banner": {
+        "tagline": "MỚI: Ý tưởng quà tặng hoàn hảo!",
+        "title": "Hãy nhận một\nphiếu quà tặng trải nghiệm",
+        "button": "Nhấn vào đây"
+      }
+    }
+  },
+  "filter": {
+    "nearby": "Hiển thị các hoạt động gần đây",
+    "results": "Hiển thị kết quả",
+    "filter": "Bộ lọc",
+    "search": "Tìm kiếm",
+    "location": "Địa điểm",
+    "types": "Loại",
+    "categories": "Danh mục",
+    "activity": "Hoạt động",
+    "activities": "Các hoạt động",
+    "today": "Hôm nay",
+    "tomorrow": "Ngày mai",
+    "price": "Giá",
+    "noResults": "Không có kết quả",
+    "noExactResults": {
+      "title": "Không có kết quả chính xác nào",
+      "description": "Hãy thử thay đổi hoặc xóa một số bộ lọc của bạn hoặc điều chỉnh phạm vi tìm kiếm của bạn.",
+      "showNearest": "Hiện thị kết quả gần nhất",
+      "resetDate": "Đặt lại khoảng thời gian"
+    },
+    "lang": "Ngôn ngữ",
+    "sort": {
+      "relevance": "Độ liên quan",
+      "distance": "Khoảng cách tới bạn",
+      "popularityDesc": "Độ phổ biến giảm dần",
+      "ratingDesc": "Đánh giá giảm dần",
+      "ratingAsc": "Đánh giá tăng dần",
+      "priceDesc": "Giá giảm dần",
+      "priceAsc": "Giá tăng dần",
+      "dateDesc": "Mới nhất trước",
+      "dateAsc": "Cũ nhất trước"
+    },
+    "navigationBreadcrumbs": {
+      "root": "Thụy Sĩ"
+    },
+    "all": "Tất cả",
+    "map": "Bản đồ",
+    "card": {
+      "from": "từ",
+      "person": "mỗi người"
+    },
+    "viewMore": "Xem thêm",
+    "ratingBetterThan": "Tốt hơn {val} sao",
+    "ratingEqual": "{val} sao",
+    "ratingNone": "MỚI / Không có đánh giá",
+    "moreFilters": "Hiện {val} thêm",
+    "lessFilters": "Hiện ít hơn",
+    "usedFilters": "Bộ lọc đã áp dụng",
+    "resetFilters": "Đặt lại",
+    "discountTypes": "Giảm giá",
+    "calendar": "Lịch",
+    "locationError": "Không thể tải vị trí",
+    "textOnly": "Chỉ đánh giá có văn bản"
+  },
+  "activity": {
+    "you": "bạn",
+    "nearby": "{distance}km cách {location}",
+    "nearbyAlt": "{distance}km",
+    "recommendation": "Khuyến nghị",
+    "reviews": "Đánh giá",
+    "reviewOriginalIn": "Nguyên bản bằng {language}",
+    "booked": "được đặt {val} lần",
+    "providedBy": "Nhà cung cấp",
+    "save": "Lưu",
+    "selectDate": "Chọn ngày",
+    "similarActivities": "Các hoạt động tương tự",
+    "question": "Chúng tôi có thể giúp gì cho bạn?",
+    "rating": "Đánh giá",
+    "highDemand": "Nhu cầu cao",
+    "widget": {
+      "free": "có sẵn",
+      "error500": "Đã có vấn đề xảy ra, vui lòng thử lại sau 1 phút.",
+      "errorDate": "Rất tiếc, không còn thời gian nào khả dụng cho {val}.",
+      "choose": "chọn",
+      "titleTime": "Chọn ưu đãi",
+      "titleTicketOption": "Chọn tùy chọn vé",
+      "titleParticipants": "Chọn người tham gia",
+      "titleTickets": "Chọn vé",
+      "confirmOffer": "Xác nhận tùy chọn vé",
+      "confirmTickets": "Xác nhận người tham gia",
+      "confirmDate": "Xác nhận ngày",
+      "confirmDateTime": "Xác nhận ngày và giờ",
+      "cheapest": "Giá rẻ nhất",
+      "time": "Thời gian",
+      "navTicket": "Vé",
+      "check": "Kiểm tra tình trạng",
+      "notBookable": "Rất tiếc, hiện tại ưu đãi này không thể đặt.",
+      "paymentMethods": "Các phương thức thanh toán",
+      "totalPrice": "Tổng giá",
+      "taxes": "Phí bổ sung",
+      "offerTimeSelect": "Chọn thời gian",
+      "basket": "Giỏ hàng",
+      "basketAdd": "Thêm vào giỏ hàng",
+      "selectedOffer": "Ưu đãi",
+      "adjust": "Điều chỉnh đặt chỗ",
+      "swissHalfFareCard": "Những người sinh sống ngoài Thụy Sĩ có thể&nbsp;<a href=\"/bahnpaesse/swiss-half-fare-card/\" target=\"_blank\" className=\"inline-block\">nhận thẻ giảm giá một nửa Thụy Sĩ ở đây</a> để sử dụng cho các ưu đãi trong giao thông công cộng."
+    },
+    "tabs": {
+      "highlights": "Điểm nổi bật",
+      "includes": "Các dịch vụ",
+      "importantInformation": "Thông tin quan trọng",
+      "meetingPoints": "Điểm hẹn"
+    },
+    "newsletter": {
+      "title": "Đừng bỏ lỡ các hoạt động nữa",
+      "description": "Đăng ký nhận bản tin và nhận các mẹo du lịch, ý tưởng cho thời gian rảnh và các hướng dẫn du lịch phù hợp từ Thụy Sĩ.",
+      "signup": "Đăng ký",
+      "inputPlaceholder": "Email của bạn"
+    },
+    "notRefundable": {
+      "title": "Không thể hủy",
+      "description": "Rất tiếc, chúng tôi không thể cung cấp cho bạn khoản hoàn tiền cũng như không thể thay đổi hoặc hủy đặt chỗ của bạn cho sản phẩm này theo chính sách của đối tác chúng tôi."
+    }
+  },
+  "UI": {
+    "date": "Ngày"
+  },
+  "home": {
+    "title": "Trải nghiệm của bạn bắt đầu ở đây"
+  },
+  "discover": {
+    "title": "Khám phá hoạt động"
+  },
+  "booking": {
+    "cancelable": "Hủy miễn phí đến",
+    "privacyMessage": "Bằng việc tiếp tục thanh toán, bạn chấp nhận <tos>{text}</tos> cũng như các điều kiện hủy bỏ liên quan của Swiss Activities AG.",
+    "privacyPolicy": "các điều khoản và điều kiện",
+    "personalTitle": "Thông tin đặt chỗ",
+    "personalSubtitle": "Để bạn có thể hoàn tất việc đặt chỗ, vui lòng điền thông tin sau.",
+    "mainGuest": "Người liên hệ",
+    "fullName": "Họ tên",
+    "lastName": "Họ",
+    "email": "Email",
+    "phoneNumber": "Số điện thoại",
+    "cardDetails": "Phương thức thanh toán",
+    "paymentSecure": "Thanh toán an toàn - chúng tôi sử dụng mã hóa SSL để bảo vệ dữ liệu của bạn",
+    "creditPayments": "Thẻ tín dụng",
+    "total": "Tổng cộng",
+    "fullDay": "Cả ngày",
+    "booknow": "Đặt ngay",
+    "addMoreInformation": "Thêm thông tin",
+    "addPaymentMethod": "Chọn phương thức thanh toán",
+    "youBook": "Giỏ hàng",
+    "rebate": "Mã giảm giá",
+    "rebateEmailRequired": "Xin hãy nhập địa chỉ email của bạn trước và xác nhận nó để nhận mã giảm giá.",
+    "important": "Tôi đã nhận thức được các yêu cầu trong \"Thông tin quan trọng\" của hoạt động (các) hoạt động.",
+    "importantShow": "Hiển thị thông tin",
+    "importantHide": "Ẩn thông tin"
+  },
+  "confirm": {
+    "title": "Cảm ơn bạn đã đặt chỗ với Swiss Activities.",
+    "confirmed": "Đặt chỗ của bạn đã được xác nhận.",
+    "pending": "Đặt chỗ của bạn đang được xử lý.",
+    "cancelled": "Đặt chỗ của bạn đã bị hủy.",
+    "failed": "Xin lỗi, đã có điều gì đó sai xảy ra.",
+    "failedPayment": "Việc thanh toán không thể được xử lý. Vui lòng thử lại với phương thức thanh toán khác.",
+    "failedReservation": "Rất tiếc, đặt chỗ không thể được xác nhận. Khoản thanh toán của bạn sẽ được hoàn lại. Vui lòng thử lại.",
+    "wait": "Chúng tôi đang chờ xác nhận từ nhà cung cấp thanh toán.",
+    "waitEmail": "Bạn sẽ nhận được một email khi việc thanh toán được xác nhận.",
+    "caption": "Xin chân thành cảm ơn bạn đã đặt chỗ qua Swiss Activities. Chúng tôi đã gửi cho bạn một email xác nhận.",
+    "bookingNumber": "Số đặt chỗ",
+    "point": "Điểm hẹn",
+    "pointAddress": "Địa chỉ điểm hẹn",
+    "number": "Số điện thoại di động",
+    "end": "Kết thúc",
+    "email": "Xác nhận đặt chỗ của bạn đã được gửi đến {email}. Nếu bạn không nhận được trong vài phút tới, vui lòng liên hệ với hỗ trợ khách hàng qua chat.",
+    "transport": {
+      "title": "Bạn muốn đến bằng phương tiện công cộng?",
+      "from": "Địa điểm của bạn",
+      "description": "Đi lại thoải mái bằng phương tiện công cộng và thêm vé điện tử của bạn trực tiếp vào đặt chỗ này.",
+      "button": "Thêm vé"
+    }
+  },
+  "footer": {
+    "company": {
+      "title": "Công ty",
+      "about-us": "Về chúng tôi",
+      "jobs": "Công việc",
+      "legal": "Pháp lý"
+    },
+    "resources": {
+      "title": "Tài nguyên"
+    },
+    "collaboration": {
+      "title": "Hợp tác",
+      "becomeapartner": "Trở thành đối tác",
+      "affiliate": "Chương trình liên kết",
+      "widget": "Widget"
+    },
+    "affiliate": {
+      "title": "Mã liên kết",
+      "button": "Sao chép mã",
+      "buttonCopied": "Mã đã được sao chép!"
+    },
+    "contact": {
+      "title": "Dịch vụ khách hàng",
+      "faq": "Câu hỏi & trả lời (FAQ)",
+      "cookie": "Đồng ý về cookie"
+    },
+    "mobileApp": "Tải ứng dụng của chúng tôi"
+  },
+  "tickets": {
+    "discounts": {
+      "noDiscount": "Không có giảm giá"
+    },
+    "showDiscounts": "Hiển thị thẻ khách hàng và giảm giá",
+    "travelClass": "Hạng vé"
+  },
+  "supplier": {
+    "activities": "Hoạt động"
+  },
+  "contactPopup": {
+    "modalTitle": "Hôm nay chúng tôi có thể giúp gì bạn?"
+  },
+  "contactForm": {
+    "fullname": "Tên",
+    "email": "Email",
+    "subject": "Chủ đề",
+    "messagePlaceholder": "Yêu cầu, đặt chỗ, v.v...",
+    "submit": "Gửi",
+    "formError": "Một cái gì đó đã không hoạt động. Vui lòng thử lại."
+  },
+  "contactThankYou": {
+    "title": "Cảm ơn bạn đã liên hệ!"
+  },
+  "internalLinkBlock": {
+    "destinations": "Điểm đến hàng đầu",
+    "locations": "Khu nghỉ dưỡng hàng đầu",
+    "topActivities": "Hoạt động hàng đầu",
+    "topAttractions": "Điểm tham quan hàng đầu"
+  },
+  "offerCard": {
+    "bookNow": "Đặt ngay"
+  },
+  "breadcrumbsBasket": {
+    "stepOne": "Lựa chọn của bạn",
+    "stepOneDescription": "Giỏ hàng",
+    "stepTwo": "Chi tiết của bạn",
+    "stepTwoDescription": "Thanh toán",
+    "stepThree": "Bước cuối cùng",
+    "stepThreeDescription": "Thanh toán"
+  },
+  "usps": {
+    "or": "hoặc",
+    "allDay": "Cả ngày",
+    "bookable": {
+      "title": "Có thể đặt",
+      "description": "Đối với {val}"
+    },
+    "online": {
+      "title": "Mua vé trực tuyến"
+    },
+    "payment": {
+      "title": "Đặt trên hóa đơn hoặc thanh toán bằng Twint"
+    },
+    "duration": {
+      "title": "Thời gian",
+      "durationMinutes": "{val} phút",
+      "duration": "{val} giờ",
+      "durations": "{val} giờ",
+      "durationDay": "{val} ngày",
+      "durationDays": "{val} ngày"
+    },
+    "mobileTicket": {
+      "title": "Vé di động được chấp nhận",
+      "description": "Sử dụng điện thoại của bạn hoặc in hóa đơn"
+    },
+    "confirmation": {
+      "title": "Xác nhận đặt chỗ ngay lập tức",
+      "description": "Không có phí bổ sung"
+    },
+    "queue": {
+      "title": "Không cần phải xếp hàng"
+    },
+    "cancel": {
+      "title": "Huỷ miễn phí",
+      "description": "Hoàn tiền đầy đủ nếu huỷ trước {val}h",
+      "descriptionDays": "Hoàn tiền đầy đủ nếu huỷ trước {val} ngày",
+      "subtitle": "Tối đa {val} giờ trước giờ khởi hành",
+      "subtitleDays": "Tối đa {val} ngày trước giờ khởi hành<b>(</b>"
+    },
+    "meetingPoint": {
+      "title": "Điểm hẹn"
+    },
+    "discount": {
+      "title": "Giảm giá"
+    },
+    "request": {
+      "title": "Đặt theo yêu cầu",
+      "description": "Đặt này cần được xác nhận lại bởi nhà cung cấp",
+      "extra": "Ưu đãi này dựa trên sự sẵn có của nhà cung cấp. Việc đặt chỗ phải được nhà cung cấp xác nhận trước. Họ sẽ liên hệ với bạn sau khi đặt chỗ. Nếu hoạt động không thể thực hiện, bạn sẽ được hoàn lại toàn bộ số tiền."
+    },
+    "validity": {
+      "title": "Thời hạn"
+    },
+    "openingHours": {
+      "title": "Giờ mở cửa"
+    }
+  },
+  "widgetConfigurator": {
+    "title": "Cấu hình widget",
+    "type": "Loại",
+    "lang": "Ngôn ngữ",
+    "other": "Chọn một hoạt động khác",
+    "topBar": "Thanh điều khiển",
+    "hideAll": "Ẩn tất cả",
+    "hideSearch": "Ẩn tìm kiếm",
+    "hideSize": "Ẩn công tắc kích thước",
+    "hideFilter": "Ẩn nút bộ lọc",
+    "hideMap": "Ẩn nút bản đồ",
+    "hideQuickFilter": "Ẩn bộ lọc nhanh",
+    "hideSort": "Ẩn sắp xếp",
+    "buttonText": "Văn bản nút",
+    "buttonBackground": "Nền nút",
+    "buttonColor": "Màu chữ nút",
+    "search": "Tìm kiếm được điền sẵn"
+  },
+  "types": {
+    "activity": "Hoạt động",
+    "overview": "Tổng quan",
+    "location": "Địa điểm",
+    "locationType": "Địa điểm + Loại",
+    "type": "Loại",
+    "attribute": "Danh mục",
+    "locationAttribute": "Địa điểm + Danh mục",
+    "poi": "Điểm tham quan"
+  },
+  "reviewForm": {
+    "title": "Đánh giá trải nghiệm của bạn",
+    "button": "Đánh giá ngay",
+    "rating": "Đánh giá",
+    "comment": "Nhận xét",
+    "thanks": "Cảm ơn bạn đã đánh giá!",
+    "next": "Đánh giá đặt chỗ tiếp theo",
+    "finish": "Cửa sổ sẽ đóng trong 3 giây"
+  },
+  "user": {
+    "welcome": "Chào mừng bạn đến bảng điều khiển của bạn {name}!",
+    "menu": {
+      "activities": "Hoạt động",
+      "bookings": "Đặt chỗ",
+      "suppliers": "Nhà cung cấp",
+      "reviews": "Đánh giá",
+      "settings": "Cài đặt",
+      "chat": "Trò chuyện",
+      "logout": "Đăng xuất",
+      "login": "Đăng nhập"
+    }
+  },
+  "SettingsForm": {
+    "title": "Hoàn thành hồ sơ của bạn",
+    "titleUpdate": "Cập nhật hồ sơ của bạn",
+    "submit": "Gửi",
+    "phoneNumber": "Vui lòng kiểm tra lại số điện thoại của bạn.",
+    "email": "Địa chỉ e-mail không hợp lệ",
+    "iban": "IBAN không hợp lệ",
+    "reseller": {
+      "title": "Nhà phân phối",
+      "merchantName": "Tên thương nhân",
+      "merchantAddress": "Địa chỉ thương nhân",
+      "bankAccountHolder": "Chủ tài khoản",
+      "bankAccountIban": "IBAN của tài khoản",
+      "bankAccountHolderAddress": "Địa chỉ của chủ tài khoản",
+      "contact": {
+        "title": "Liên hệ",
+        "name": "Tên",
+        "businessRole": "Vai trò doanh nghiệp",
+        "email": "E-mail",
+        "phone": "Điện thoại"
+      }
+    },
+    "payment": {
+      "title": "Phương thức thanh toán đã lưu",
+      "removeTitle": "Gỡ bỏ phương thức thanh toán"
+    }
+  },
+  "Repeater": {
+    "add": "Thêm",
+    "remove": "Xóa"
+  },
+  "Table": {
+    "booking": {
+      "refresh": "Làm mới"
+    },
+    "clearFilters": "Đặt lại bộ lọc",
+    "noResults": "Không tìm thấy kết quả nào.",
+    "view": {
+      "title": "Xem",
+      "adjust": "Điều chỉnh cột"
+    },
+    "header": {
+      "bookingId": "Số đặt chỗ",
+      "date": "Ngày",
+      "bookingDate": "Ngày đặt chỗ",
+      "serviceDate": "Ngày hoạt động",
+      "description": "Mô tả",
+      "location": "Nơi",
+      "name": "Tên",
+      "email": "E-mail",
+      "type": "Loại",
+      "price": "Giá từ",
+      "sold": "Đã bán",
+      "rating": "Đánh giá",
+      "supplier": "Nhà cung cấp",
+      "bookingStatus": "Trạng thái đặt chỗ",
+      "paymentStatus": "Trạng thái thanh toán",
+      "total": "Tổng số",
+      "actions": "Hành động",
+      "duration": "Thời gian",
+      "validity": "Thời hạn",
+      "bookable": "Có thể đặt",
+      "createdAt": "Tạo vào",
+      "commission": "Hoa hồng",
+      "status": "Trạng thái",
+      "reservationSystem": "Hệ thống đặt chỗ",
+      "bapiId": "BAPI ID",
+      "capiId": "CAPI ID",
+      "notes": "Ghi chú",
+      "distributor": "Nhà phân phối",
+      "website": "Website",
+      "validities": "Thời hạn"
+    },
+    "actions": {
+      "aria": "Mở Hành động",
+      "details": "Hiện chi tiết",
+      "book": "Đặt ngay"
+    },
+    "sort": {
+      "ascending": "Theo thứ tự tăng dần",
+      "descending": "Theo thứ tự giảm dần",
+      "hide": "Ẩn",
+      "bookable": "Chỉ hiển thị hoạt động có thể đặt"
+    },
+    "pagination": {
+      "page": "Trang",
+      "of": "của",
+      "entriesPerPage": "Mục mỗi trang",
+      "goToFirstPage": "Đi đến trang đầu tiên",
+      "goToLastPage": "Đi đến trang cuối cùng",
+      "goToNextPage": "Đi đến trang tiếp theo",
+      "goToPreviousPage": "Đi đến trang trước đó"
+    },
+    "search": {
+      "activities": "Tìm kiếm hoạt động",
+      "bookings": "Tìm kiếm đặt chỗ",
+      "offers": "Tìm kiếm ưu đãi",
+      "suppliers": "Tìm kiếm theo nhà cung cấp",
+      "bookingId": "Tìm kiếm theo số đặt chỗ",
+      "email": "Tìm kiếm theo email",
+      "familyName": "Tìm kiếm theo họ"
+    },
+    "cell": {
+      "bookingStatusActive": "Đã xác nhận",
+      "bookingStatusPending": "Đang chờ",
+      "bookingStatusCancelled": "Đã hủy",
+      "paymentStatusActive": "Đã thanh toán",
+      "paymentStatusPending": "Chờ xử lý",
+      "paymentStatusRefunded": "Đã hoàn tiền"
+    }
+  },
+  "Drawer": {
+    "close": "Đóng"
+  },
+  "PaymentMethod": {
+    "card": {
+      "new": "Thẻ mới",
+      "store": "Vui lòng lưu dữ liệu thẻ tín dụng của tôi để thanh toán nhanh trong tương lai.",
+      "endsIn": "Kết thúc vào {val}"
+    }
+  },
+  "Activity": {
+    "new": "Hoạt động mới",
+    "nav": {
+      "general": "Chung"
+    }
+  },
+  "Offer": {
+    "new": "Đề xuất mới"
+  },
+  "Supplier": {
+    "new": "Nhà cung cấp mới"
+  },
+  "UspSlider": {
+    "title": "Tại sao nên đặt chỗ tại Swiss Activities?",
+    "items": [
+      "Lựa chọn lớn nhất của Thụy Sĩ",
+      "Hơn 100'000 khách hàng hài lòng",
+      "Lựa chọn hủy miễn phí",
+      "Hỗ trợ khách hàng 5 sao của Thụy Sĩ",
+      "Đặt vé di động trong 90 giây"
+    ]
+  },
+  "AppBanner": {
+    "title": "Tải ứng dụng ngay bây giờ",
+    "description": "Khám phá Swiss Activities – đơn giản và nhanh chóng"
+  },
+  "Transport": {
+    "bookTrip": "Đặt kết nối",
+    "button": {
+      "confirmTrip": "Xác nhận kết nối",
+      "confirmTravelers": "Xác nhận khách đi cùng"
+    },
+    "checkDetails": "Kiểm tra chi tiết kết nối",
+    "class": {
+      "first": "Lớp 1",
+      "second": "Lớp 2"
+    },
+    "direct": "Trực tiếp",
+    "duration": {
+      "minutes": "Phút"
+    },
+    "earlierTrips": "Chuyến đi trước",
+    "errorLoadingTrips": "Không thể tải kết nối.",
+    "laterTrips": "Chuyến đi sau",
+    "legend": "Chú giải",
+    "loadingTrips": "Đang tải kết nối...",
+    "oneWay": "Chỉ một chiều",
+    "roundTrip": "Khứ hồi",
+    "searchTrips": "Tìm kiếm kết nối",
+    "selectOriginDestination": "Chọn nơi đi và đến để tìm kiếm kết nối.",
+    "selectProduct": "Chọn tùy chọn vé",
+    "selectTravelers": "Chọn người đi",
+    "switch": "Chuyển tiếp",
+    "ticket": "Vé ticket",
+    "tickets": "Vé tickets",
+    "transfer": "Chuyển tiếp",
+    "tripResults": "Kết nối",
+    "upgradeTo1stClass": "Tiện nghi bổ sung",
+    "upgradeTo1stClassDescription": "Đi tàu hạng nhất",
+    "cityTicketDescription": "Vé ngày cho giao thông địa phương",
+    "via": "qua",
+    "travelDate": "Chọn ngày đi",
+    "confirmTravelDate": "Xác nhận ngày đi",
+    "departure": "Khởi hành",
+    "arrival": "Đến nơi",
+    "locationDisabled": "Chia sẻ vị trí đã bị tắt",
+    "locationError": "Không thể xác định vị trí",
+    "noProductsAvailable": "Không có vé nào có sẵn",
+    "disclaimer": "Tất cả thông tin đều không đảm bảo.",
+    "validity": "Thời gian hiệu lực",
+    "validityOnSelectedRoute": "Chỉ trên tuyến đường đã chọn",
+    "validityForConnection": "Chỉ cho tuyến đường đã chọn",
+    "validityForConnectionWith2ndClass": "Chỉ cho tuyến đường đã chọn và với vé hợp lệ cho hạng 2",
+    "validityForRouteWith2ndClass": "Chỉ cho lộ trình đã chọn và với vé hợp lệ cho hạng 2",
+    "validityGARoutes": "Có giá trị trên tất cả các tuyến đường GA",
+    "validityDayClassUpgrade": "Chỉ với thẻ ngày, thẻ nửa giá, GA hoặc Swiss Travel Pass (Flex) cho hạng hai.",
+    "includedIn": "Bao gồm trong",
+    "validityDateRange": "{fromDate} đến {toDate}, {toTime}",
+    "validityConnection": "{date} từ {fromTime}, đến {toTime}",
+    "classUpgradeOnly": "Chỉ đổi lớp",
+    "loadingDestination": "Đang tải",
+    "distanceToMeetingPoint": "Điểm gặp gỡ",
+    "walking": "Đi bộ",
+    "arrivalInfo": "Thời gian đến được tính: {walkingTime} phút đi bộ + 15 phút đệm đến điểm gặp gỡ",
+    "timeBeforeEvent": "{minutes} phút trước hoạt động · {walkingMinutes} phút đi bộ từ ga",
+    "tooLateForActivity": "Các chuyến xe sau sẽ không đến kịp địa điểm gặp mặt"
+  }
+}

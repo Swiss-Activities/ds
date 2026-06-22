@@ -1,4 +1,7 @@
 {
   "extends": "./tsconfig.web.json",
+  "compilerOptions": {
+    "types": ["react", "node"]
+  },
   "include": ["src/booking/**/*"]
 }

@@ -78,7 +78,8 @@ export const useSearchStore = create<Store>()(
       name: "searchStore",
       storage: createJSONStorage(() => sessionStorage),
       onRehydrateStorage: () => (state) => {
-        const pageType = window?.__NEXT_DATA__?.props?.pageProps?.pageType;
+        const pageType =
+          window?.__NEXT_DATA__?.props?.pageProps?.pageType ?? "";
         let defaultInput = "";
         if (
           [
@@ -90,7 +91,8 @@ export const useSearchStore = create<Store>()(
             "listing",
           ].includes(pageType)
         ) {
-          defaultInput = window?.__NEXT_DATA__?.props?.pageProps?.page?.title;
+          defaultInput =
+            window?.__NEXT_DATA__?.props?.pageProps?.page?.title ?? "";
         }
 
         if (state?.input.trim().length === 0) {

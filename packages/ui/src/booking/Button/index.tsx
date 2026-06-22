@@ -14,24 +14,25 @@ import {
 } from "../Total/hooks";
 import { usePostReservation } from "../hooks";
 import { useBookingStore } from "../store";
-import { Button, ButtonProps } from "@swiss-activities/ui";
+import { Button, type ButtonProps } from "@swiss-activities/ui";
 import { ChatButton } from "../stubs";
 import { useSearchStore } from "../store/search";
 import { Skeleton } from "@swiss-activities/ui";
 import { useAffiliateStore } from "../store/affiliateStore";
-import { TActivity } from "../types/activity";
+import type { TActivity } from "../types/activity";
 import { cn } from "../utils/css/cn";
 import { DateService } from "../utils/dates/DateService";
 import { toISO } from "../utils/dates/toISO";
 import { useChat } from "../utils/env/useChat";
 import { useI18n } from "../utils/i18n/useI18n";
-import { dataLayerSend } from "../utils/thirdParty/dataLayerSend";
+import { useDataLayer } from "../utils/thirdParty/dataLayerSend";
 import { useFeatureFlag } from "../utils/ui/useFeatureFlag";
 import { useGetActivityOffers } from "../query/activity/getActivityOffers";
 
 type BookingButtonProps = ButtonProps;
 
 export const BookingButton = (props: BookingButtonProps) => {
+  const { dataLayer } = useDataLayer();
   const isChat = useChat();
   const { t, locale } = useI18n();
   const {
@@ -275,7 +276,7 @@ export const BookingButton = (props: BookingButtonProps) => {
     if (shouldContinueToOffers) {
       setActive("offers");
       if (!date) setDate(today);
-      dataLayerSend({
+      dataLayer({
         obj: {
           event: "select_date",
         },
@@ -297,7 +298,7 @@ export const BookingButton = (props: BookingButtonProps) => {
     ) {
       if (personalizedOptions?.length) {
         setActive("personalized");
-        dataLayerSend({
+        dataLayer({
           obj: {
             event: "add_information",
           },

@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import { TReservation } from "../../types/reservation";
+import type { TReservation } from "../../types/reservation";
 import { axiosInstance } from "../axios";
 
 export const getReservation = async (reservationId: string | undefined) => {

@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { useUser } from "@auth0/nextjs-auth0/client";
+import { useUser } from "../user/useUser";
 import { I } from "../../components/I";
 import i18n from "../../data/i18n";
 import { useI18n } from "../i18n/useI18n";

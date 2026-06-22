@@ -5,6 +5,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { DayPicker } from "react-day-picker";
 import { buttonVariants } from "./buttonVariants";
 import { cn } from "../utils/css/cn";
+import "../styles/calendar.css";
 
 export type CalendarProps = ComponentProps<typeof DayPicker> & {
   disablePast?: boolean;

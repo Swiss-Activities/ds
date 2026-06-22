@@ -1,7 +1,7 @@
 import { useMemo } from "react";
 import { useShallow } from "zustand/react/shallow";
 import { useBookingStore } from "../store";
-import { TActivity } from "../types/activity";
+import type { TActivity } from "../types/activity";
 import { useI18n } from "../utils/i18n/useI18n";
 import { useGetActivityOffers } from "../query/activity/getActivityOffers";
 

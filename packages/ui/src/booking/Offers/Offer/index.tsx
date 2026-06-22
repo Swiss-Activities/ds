@@ -6,15 +6,16 @@ import { useAvailabilities } from "../Availabilities/hooks";
 import { useBookingStore } from "../../store";
 import { Text } from "@swiss-activities/ui";
 import { Usps } from "../../components/Usps";
-import { TActivity } from "../../types/activity";
-import { TOfferBooking } from "../../types/offerBooking";
+import type { TActivity } from "../../types/activity";
+import type { TOfferBooking } from "../../types/offerBooking";
 import { Button } from "@swiss-activities/ui";
 import { cn } from "../../utils/css/cn";
 import { useI18n } from "../../utils/i18n/useI18n";
-import { dataLayerSend } from "../../utils/thirdParty/dataLayerSend";
+import { useDataLayer } from "../../utils/thirdParty/dataLayerSend";
 import { useOffersCapi } from "../../query/offers/getOffersCapi";
 
 export const Offer = (offer: TOfferBooking) => {
+  const { dataLayer } = useDataLayer();
   const { t } = useI18n();
   const { data } = useOffersCapi();
   const {
@@ -61,7 +62,7 @@ export const Offer = (offer: TOfferBooking) => {
 
     setTickets(mappedTickets);
 
-    dataLayerSend({
+    dataLayer({
       obj: {
         event: "select_offer",
       },

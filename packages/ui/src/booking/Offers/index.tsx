@@ -7,7 +7,7 @@ import { Title } from "../Title";
 import { useBookingStore } from "../store";
 import { useSearchStore } from "../store/search";
 import { Skeleton } from "@swiss-activities/ui";
-import { TOfferBooking } from "../types/offerBooking";
+import type { TOfferBooking } from "../types/offerBooking";
 import { DateService } from "../utils/dates/DateService";
 import { toISO } from "../utils/dates/toISO";
 import { useI18n } from "../utils/i18n/useI18n";
