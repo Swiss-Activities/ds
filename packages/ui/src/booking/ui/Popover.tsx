@@ -56,7 +56,7 @@ export const PopoverContent = ({
       alignOffset={alignOffset}
       side={side}
       sideOffset={sideOffset}
-      className="isolate z-50"
+      className="isolate z-[230]"
     >
       <PopoverPrimitive.Popup
         className={cn(

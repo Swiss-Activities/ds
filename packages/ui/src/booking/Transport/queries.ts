@@ -85,8 +85,8 @@ export const useTrips = () => {
   }, [baseQueryParams]);
 
   useEffect(() => {
-    setEarlierTrips([]);
-    setLaterTrips([]);
+    setEarlierTrips((prev) => (prev.length ? [] : prev));
+    setLaterTrips((prev) => (prev.length ? [] : prev));
     setHasNoMoreEarlier(false);
     setHasNoMoreLater(false);
   }, [from, to, vias, calendarDate, time, direction]);
