@@ -1,6 +1,7 @@
-import { lazy, Suspense, type ComponentType, type ReactNode } from "react";
+import { type ReactNode } from "react";
 import { Button, Image, Text, cn } from "@swiss-activities/ui";
 import type { TGatewayBlogOverview, TGatewayBlogOverviewPost } from "../gateway/types";
+import TravelGuideMarkdownColumns from "./travel-guide-markdown";
 
 /**
  * Travel-guide overview pages — 1:1 port of the legacy travelGuide/
@@ -59,22 +60,13 @@ export function splitColumnMarkdown(markdown: string): { head: string; body: str
   return { head: head.join("\n"), body: lines.slice(i).join("\n") };
 }
 
-/** The editorial links are absolute production URLs — serve them host-relative. */
-// SSR (renderToStaticMarkup can't suspend) gets the markdown renderer
-// synchronously; the browser lazy-loads it so the markdown stack stays out
-// of the landing bundle on every other page.
-const TravelGuideMarkdownColumns: ComponentType<{ markdown: string }> =
-  typeof window === "undefined"
-    ? (await import("./travel-guide-markdown")).default
-    : lazy(() => import("./travel-guide-markdown"));
-
-/** Legacy `Content column` rendering for the routes editorial markdown. */
+/** Legacy `Content column` rendering for the routes editorial markdown. The
+ * markdown renderer (react-markdown) is bundled into this travel-guide chunk —
+ * itself lazy-loaded only on travel-guide pages, so the stack still never
+ * reaches the landing bundle — and rendered synchronously, so a client mount
+ * never trips a Suspense fallback (a flash). */
 export function TravelGuideColumnContent({ markdown }: { markdown: string }) {
-  return (
-    <Suspense fallback={null}>
-      <TravelGuideMarkdownColumns markdown={markdown} />
-    </Suspense>
-  );
+  return <TravelGuideMarkdownColumns markdown={markdown} />;
 }
 
 const DEFAULT_LABELS: Required<WebsiteGatewayTravelGuideLabels> = {

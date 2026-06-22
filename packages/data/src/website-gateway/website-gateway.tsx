@@ -8,6 +8,7 @@ import {
   useMemo,
   useRef,
   useState,
+  type ComponentType,
   type ReactNode,
 } from "react";
 import { mapGatewayHomeData } from "../adapters/gatewayHome";
@@ -38,22 +39,85 @@ import type { WebsiteGatewayStaticPagesContent } from "./static/static-page";
 // them synchronously, the browser lazy-loads only the branch of the page it
 // is standing on — blog/static/travel-guide code stays out of the landing
 // bundle everywhere else.
+// Whole-page components are code-split per page type, but on the CLIENT a mount
+// re-renders over prerendered static markup with `createRoot` — and `React.lazy`
+// ALWAYS suspends for at least a microtask on first render (even with the chunk
+// cached), so a `<Suspense fallback={null}>` boundary can paint blank for a frame
+// → a flash. To make the render deterministic, `preloadGatewayPage` resolves the
+// real component into this cache BEFORE mount; `clientPage` then renders it
+// synchronously (no suspend, no flash). The `lazy()` fallbacks below only ever
+// run if a mount path skipped the preload (e.g. an unforeseen code path).
+const clientPageCache = new Map<string, ComponentType<Record<string, unknown>>>();
+
+const CLIENT_PAGE_LOADERS: Record<
+  string,
+  () => Promise<ComponentType<Record<string, unknown>>>
+> = {
+  "detail-blog-post": () =>
+    import("./blog-detail").then(
+      (m) => m.WebsiteGatewayBlogPostDetail as unknown as ComponentType<Record<string, unknown>>
+    ),
+  "static-page": () =>
+    import("./static/static-page").then(
+      (m) => m.WebsiteGatewayStaticPageContent as unknown as ComponentType<Record<string, unknown>>
+    ),
+  "overview-travel-guide": () =>
+    import("./travel-guide").then(
+      (m) =>
+        m.WebsiteGatewayTravelGuideOverviewPage as unknown as ComponentType<
+          Record<string, unknown>
+        >
+    ),
+};
+
+/**
+ * Warm a page type's code-split chunk so the client can mount its component
+ * synchronously (no `<Suspense>` fallback → no flash over the prerendered
+ * markup). The renderer kicks this off in parallel with its data fetch and
+ * awaits it before mounting; the `import()` specifiers match the `lazy()` and
+ * server `await import` ones, so the same chunk is reused (no double fetch).
+ * No-op for page types that aren't code-split. Returns once cached.
+ */
+export async function preloadGatewayPage(type: string): Promise<void> {
+  const load = CLIENT_PAGE_LOADERS[type];
+  if (load && !clientPageCache.has(type)) {
+    clientPageCache.set(type, await load());
+  }
+}
+
+/** Client wrapper: render the preloaded (synchronous) component when present,
+ * else the `lazy()` fallback. */
+function clientPage<P extends object>(type: string, fallback: ComponentType<P>): ComponentType<P> {
+  return function ClientPage(props: P) {
+    const Cached = clientPageCache.get(type) as ComponentType<P> | undefined;
+    const Component = Cached ?? fallback;
+    return <Component {...props} />;
+  };
+}
+
 const BlogPostDetailPage =
   typeof window === "undefined"
     ? (await import("./blog-detail")).WebsiteGatewayBlogPostDetail
-    : lazy(() =>
-        import("./blog-detail").then((m) => ({ default: m.WebsiteGatewayBlogPostDetail }))
+    : clientPage(
+        "detail-blog-post",
+        lazy(() =>
+          import("./blog-detail").then((m) => ({ default: m.WebsiteGatewayBlogPostDetail }))
+        )
       );
 const StaticPage =
   typeof window === "undefined"
     ? (await import("./static/static-page")).WebsiteGatewayStaticPageContent
-    : lazy(() =>
-        import("./static/static-page").then((m) => ({
-          default: m.WebsiteGatewayStaticPageContent,
-        }))
+    : clientPage(
+        "static-page",
+        lazy(() =>
+          import("./static/static-page").then((m) => ({
+            default: m.WebsiteGatewayStaticPageContent,
+          }))
+        )
       );
 // The region explorer carries the Swiss map geometry (~120 KB source) and
-// renders below the fold — the browser fetches it on demand.
+// renders below the fold — the browser fetches it on demand (its brief
+// fallback is off-screen, so it never flashes the main content).
 const RegionExplorerSection =
   typeof window === "undefined"
     ? (await import("@swiss-activities/ui/section-region-explorer")).SectionRegionExplorer
@@ -66,8 +130,13 @@ const RegionExplorerSection =
 const TravelGuidePage =
   typeof window === "undefined"
     ? (await import("./travel-guide")).WebsiteGatewayTravelGuideOverviewPage
-    : lazy(() =>
-        import("./travel-guide").then((m) => ({ default: m.WebsiteGatewayTravelGuideOverviewPage }))
+    : clientPage(
+        "overview-travel-guide",
+        lazy(() =>
+          import("./travel-guide").then((m) => ({
+            default: m.WebsiteGatewayTravelGuideOverviewPage,
+          }))
+        )
       );
 import { GatewayProvider } from "../gateway-provider";
 import { useGatewayFilter } from "../gateway/getGatewayFilter";
