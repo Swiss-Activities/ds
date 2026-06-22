@@ -1,8 +1,8 @@
 "use client";
 
 import * as React from "react";
-import * as PopoverPrimitive from "@radix-ui/react-popover";
-import * as TooltipPrimitive from "@radix-ui/react-tooltip";
+import { Popover as PopoverPrimitive } from "@base-ui/react/popover";
+import { Tooltip as TooltipPrimitive } from "@base-ui/react/tooltip";
 import { cn } from "../utils/css/cn";
 import { useIsMobile } from "../utils/ui/useIsMobile";
 
@@ -16,7 +16,7 @@ type GlobalTooltipProps = {
 };
 
 const tooltipContentStyles =
-  "z-50 w-full max-w-[300px] overflow-hidden rounded-md bg-gray-900 p-3 text-xs text-gray-50 shadow-sm animate-in fade-in-0 zoom-in-95 data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2";
+  "w-full max-w-[300px] overflow-hidden rounded-md bg-gray-900 p-3 text-xs text-gray-50 shadow-sm animate-in fade-in-0 zoom-in-95 data-[closed]:animate-out data-[closed]:fade-out-0 data-[closed]:zoom-out-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2";
 
 export const GlobalTooltip = ({
   children,
@@ -27,38 +27,51 @@ export const GlobalTooltip = ({
   className,
 }: GlobalTooltipProps) => {
   const isMobile = useIsMobile();
+  const trigger = React.isValidElement(children) ? children : undefined;
 
   if (isMobile) {
     return (
       <PopoverPrimitive.Root>
-        <PopoverPrimitive.Trigger asChild>{children}</PopoverPrimitive.Trigger>
+        <PopoverPrimitive.Trigger render={trigger}>
+          {trigger ? undefined : children}
+        </PopoverPrimitive.Trigger>
         <PopoverPrimitive.Portal>
-          <PopoverPrimitive.Content
+          <PopoverPrimitive.Positioner
             side={side}
             align={align}
             sideOffset={sideOffset}
-            className={cn(tooltipContentStyles, className)}
+            className="isolate z-50"
           >
-            {content}
-          </PopoverPrimitive.Content>
+            <PopoverPrimitive.Popup className={cn(tooltipContentStyles, className)}>
+              {content}
+            </PopoverPrimitive.Popup>
+          </PopoverPrimitive.Positioner>
         </PopoverPrimitive.Portal>
       </PopoverPrimitive.Root>
     );
   }
 
   return (
-    <TooltipPrimitive.Root>
-      <TooltipPrimitive.Trigger asChild>{children}</TooltipPrimitive.Trigger>
-      <TooltipPrimitive.Portal>
-        <TooltipPrimitive.Content
-          side={side}
-          align={align}
-          sideOffset={sideOffset}
-          className={cn(tooltipContentStyles, className)}
-        >
-          {content}
-        </TooltipPrimitive.Content>
-      </TooltipPrimitive.Portal>
-    </TooltipPrimitive.Root>
+    <TooltipPrimitive.Provider>
+      <TooltipPrimitive.Root>
+        <TooltipPrimitive.Trigger render={trigger}>
+          {trigger ? undefined : children}
+        </TooltipPrimitive.Trigger>
+        <TooltipPrimitive.Portal>
+          <TooltipPrimitive.Positioner
+            side={side}
+            align={align}
+            sideOffset={sideOffset}
+            className="isolate z-50"
+          >
+            <TooltipPrimitive.Popup
+              className={cn(tooltipContentStyles, className)}
+            >
+              {content}
+            </TooltipPrimitive.Popup>
+          </TooltipPrimitive.Positioner>
+        </TooltipPrimitive.Portal>
+      </TooltipPrimitive.Root>
+    </TooltipPrimitive.Provider>
   );
 };

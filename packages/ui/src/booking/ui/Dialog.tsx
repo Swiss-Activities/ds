@@ -1,8 +1,8 @@
 "use client";
 
 import { ComponentPropsWithoutRef, ElementRef, HTMLAttributes } from "react";
-import * as DialogPrimitive from "@radix-ui/react-dialog";
-import { Cross2Icon } from "@radix-ui/react-icons";
+import { Dialog as DialogPrimitive } from "@base-ui/react/dialog";
+import { X } from "lucide-react";
 import { cn } from "../utils/css/cn";
 
 const Dialog = DialogPrimitive.Root;
@@ -15,47 +15,47 @@ const DialogOverlay = ({
   ref,
   className,
   ...props
-}: ComponentPropsWithoutRef<typeof DialogPrimitive.Overlay> & {
-  ref?: React.RefObject<ElementRef<typeof DialogPrimitive.Overlay>>;
+}: ComponentPropsWithoutRef<typeof DialogPrimitive.Backdrop> & {
+  ref?: React.RefObject<ElementRef<typeof DialogPrimitive.Backdrop>>;
 }) => (
-  <DialogPrimitive.Overlay
+  <DialogPrimitive.Backdrop
     ref={ref}
     className={cn(
-      "fixed inset-0 z-50 bg-white/80 backdrop-blur-sm data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0",
+      "fixed inset-0 z-50 bg-white/80 backdrop-blur-sm data-[starting-style]:animate-in data-[ending-style]:animate-out data-[ending-style]:fade-out-0 data-[starting-style]:fade-in-0",
       className
     )}
     {...props}
   />
 );
-DialogOverlay.displayName = DialogPrimitive.Overlay.displayName;
+DialogOverlay.displayName = DialogPrimitive.Backdrop.displayName;
 
 const DialogContent = ({
   ref,
   className,
   children,
   ...props
-}: ComponentPropsWithoutRef<typeof DialogPrimitive.Content> & {
-  ref?: React.RefObject<ElementRef<typeof DialogPrimitive.Content>>;
+}: ComponentPropsWithoutRef<typeof DialogPrimitive.Popup> & {
+  ref?: React.RefObject<ElementRef<typeof DialogPrimitive.Popup>>;
 }) => (
   <DialogPortal>
     <DialogOverlay />
-    <DialogPrimitive.Content
+    <DialogPrimitive.Popup
       ref={ref}
       className={cn(
-        "fixed start-[50%] top-[50%] z-50 grid w-full max-w-lg translate-x-[-50%] translate-y-[-50%] gap-4 border border-gray-200 bg-white p-6 shadow-lg duration-200 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[state=closed]:slide-out-to-left-1/2 data-[state=closed]:slide-out-to-top-[48%] data-[state=open]:slide-in-from-left-1/2 data-[state=open]:slide-in-from-top-[48%] sm:rounded-lg md:w-full",
+        "fixed start-[50%] top-[50%] z-50 grid w-full max-w-lg translate-x-[-50%] translate-y-[-50%] gap-4 border border-gray-200 bg-white p-6 shadow-lg duration-200 data-[starting-style]:animate-in data-[ending-style]:animate-out data-[ending-style]:fade-out-0 data-[starting-style]:fade-in-0 data-[ending-style]:zoom-out-95 data-[starting-style]:zoom-in-95 data-[ending-style]:slide-out-to-left-1/2 data-[ending-style]:slide-out-to-top-[48%] data-[starting-style]:slide-in-from-left-1/2 data-[starting-style]:slide-in-from-top-[48%] sm:rounded-lg md:w-full",
         className
       )}
       {...props}
     >
       {children}
-      <DialogPrimitive.Close className="absolute end-4 top-4 rounded-sm opacity-70 ring-offset-white transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-gray-950 focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-gray-100 data-[state=open]:text-gray-500">
-        <Cross2Icon className="h-4 w-4" />
+      <DialogPrimitive.Close className="absolute end-4 top-4 rounded-sm opacity-70 ring-offset-white transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-gray-950 focus:ring-offset-2 disabled:pointer-events-none data-[open]:bg-gray-100 data-[open]:text-gray-500">
+        <X className="h-4 w-4" />
         <span className="sr-only">Close</span>
       </DialogPrimitive.Close>
-    </DialogPrimitive.Content>
+    </DialogPrimitive.Popup>
   </DialogPortal>
 );
-DialogContent.displayName = DialogPrimitive.Content.displayName;
+DialogContent.displayName = DialogPrimitive.Popup.displayName;
 
 const DialogHeader = ({
   className,

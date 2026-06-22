@@ -1,25 +1,16 @@
 import { useMutation } from "@tanstack/react-query";
-import { axiosApiInstance, axiosInstanceAuthPatch } from "../axios";
+import { axiosInstancePatch } from "../axios";
 
-const rebookQuery = async (data: object) => {
-  const url = "/booking/rebook/";
-
-  return axiosApiInstance.post(url, data).then((response) => response.data);
+const rebookQuery = async (data: { bookingId: string | null; reservation: unknown }) => {
+  return axiosInstancePatch
+    .patch(`/bookings/${data.bookingId}/rebooking`, data.reservation)
+    .then((response) => response.data);
 };
 
 export const usePostRebook = () => {
   return useMutation({
     mutationKey: ["post", "rebook"],
-    mutationFn: (data: object) => rebookQuery(data),
+    mutationFn: (data: { bookingId: string | null; reservation: unknown }) =>
+      rebookQuery(data),
   });
-};
-
-export const rebook = async (
-  bookingId: string,
-  token: string,
-  reservation: unknown
-) => {
-  return axiosInstanceAuthPatch(token)
-    .patch(`/bookings/${bookingId}/rebooking`, reservation)
-    .then((response) => response.data);
 };

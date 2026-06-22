@@ -1,11 +1,5 @@
 import { ComponentType, ReactNode, useEffect, useRef, useState } from "react";
-import {
-  CheckIcon,
-  PlusCircledIcon,
-  Cross1Icon,
-  ChevronDownIcon,
-} from "@radix-ui/react-icons";
-import { Loader2Icon } from "lucide-react";
+import { Check, ChevronDown, Loader2Icon, PlusCircle, X } from "lucide-react";
 import { I } from "../components/I";
 import { Text } from "@swiss-activities/ui";
 import { Button, ButtonProps } from "@swiss-activities/ui";
@@ -145,9 +139,9 @@ export const Combobox = ({
               {isLoading ? (
                 <Loader2Icon className="me-2 h-4 w-4 animate-spin" />
               ) : select ? (
-                <ChevronDownIcon className="h-4 w-4" />
+                <ChevronDown className="h-4 w-4" />
               ) : (
-                <PlusCircledIcon className="me-2 h-4 w-4" />
+                <PlusCircle className="me-2 h-4 w-4" />
               )}
               {titleEl || title}
             </Button>
@@ -198,7 +192,7 @@ export const Combobox = ({
                               isSelected ? "" : "opacity-50 [&_svg]:invisible"
                             )}
                           >
-                            <CheckIcon className={cn("h-4 w-4")} />
+                            <Check className={cn("h-4 w-4")} />
                           </div>
                         )}
                         <span
@@ -262,7 +256,7 @@ export const Combobox = ({
                 key={option.value}
                 onClick={() => onChange({ isSelected, option })}
               >
-                <Cross1Icon className="me-1.5 h-3 w-3 shrink-0" />
+                <X className="me-1.5 h-3 w-3 shrink-0" />
                 {option.label}
               </Button>
             );

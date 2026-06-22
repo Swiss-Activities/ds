@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import * as Collapsible from "@radix-ui/react-collapsible";
+import { Collapsible } from "@base-ui/react/collapsible";
 import { Check, ChevronDown, Info } from "lucide-react";
 import { useShallow } from "zustand/react/shallow";
 import { Card } from "../../Card";
@@ -876,7 +876,7 @@ export const Products = () => {
                 )}
               />
             </Collapsible.Trigger>
-            <Collapsible.Content className="space-y-2">
+            <Collapsible.Panel className="space-y-2">
               {classUpgradeProducts.map((product) => (
                 <ProductCard
                   key={product.id}
@@ -891,7 +891,7 @@ export const Products = () => {
                   ticketSummary={ticketSummary}
                 />
               ))}
-            </Collapsible.Content>
+            </Collapsible.Panel>
           </Collapsible.Root>
         )}
     </div>

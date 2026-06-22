@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ChevronDownIcon, CopyIcon } from "@radix-ui/react-icons";
+import { ChevronDown, Copy } from "lucide-react";
 import { useUrlObject } from "../../UrlState/hooks";
 import { Button } from "@swiss-activities/ui";
 import {
@@ -34,13 +34,13 @@ export const InfoHeaderDropdown = () => {
           className="relative -end-0.5 -top-0.5"
           data-restore-url={getHrefWithObjString()}
         >
-          <ChevronDownIcon />
+          <ChevronDown />
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent>
         <DropdownMenuItem onClick={handleCopy}>
           {t("general.copyUrl")}
-          <CopyIcon />
+          <Copy />
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>

@@ -1,11 +1,9 @@
 import { useMutation } from "@tanstack/react-query";
-import { axiosApiInstance } from "../axios";
+import { axiosInstancePatch } from "../axios";
 
 export const syncOffer = async (offerId: number) => {
-  const url = `/booking/sync-offer/`;
-
-  return axiosApiInstance.post(url, {
-    offerId,
+  return axiosInstancePatch.patch(`/offers/${offerId}/sync`, {
+    action: "schedule",
   });
 };
 

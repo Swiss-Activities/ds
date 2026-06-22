@@ -1,8 +1,14 @@
 "use client";
 
-import { ComponentPropsWithoutRef, ElementRef, HTMLAttributes } from "react";
-import { DialogProps } from "@radix-ui/react-dialog";
-import { MagnifyingGlassIcon } from "@radix-ui/react-icons";
+import {
+  ComponentProps,
+  ComponentPropsWithoutRef,
+  ElementRef,
+  HTMLAttributes,
+  ReactNode,
+} from "react";
+import { Dialog as DialogPrimitive } from "@base-ui/react/dialog";
+import { Search } from "lucide-react";
 import { Command as CommandPrimitive } from "cmdk";
 import { Loader2Icon } from "lucide-react";
 import { Dialog, DialogContent } from "./Dialog";
@@ -26,7 +32,10 @@ const Command = ({
 );
 Command.displayName = CommandPrimitive.displayName;
 
-interface CommandDialogProps extends DialogProps {}
+interface CommandDialogProps
+  extends Omit<ComponentProps<typeof DialogPrimitive.Root>, "children"> {
+  children?: ReactNode;
+}
 
 const CommandDialog = ({ children, ...props }: CommandDialogProps) => {
   return (
@@ -57,7 +66,7 @@ const CommandInput = ({
     className="flex items-center border-b border-l-0 border-r-0 border-t-0 border-solid border-gray-200 px-3"
     cmdk-input-wrapper=""
   >
-    <MagnifyingGlassIcon className="me-2 h-4 w-4 shrink-0 opacity-50" />
+    <Search className="me-2 h-4 w-4 shrink-0 opacity-50" />
     <CommandPrimitive.Input
       ref={ref}
       className={cn(
