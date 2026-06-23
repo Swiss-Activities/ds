@@ -115,6 +115,7 @@ export const Drawer = ({
             )}
           >
             {isSide ? (
+              flush && !showTitle ? <div aria-hidden /> : (
               <div className="flex min-h-[56px] items-center justify-between gap-3 border-0 border-b border-solid border-gray-200 bg-white pe-2 ps-5">
                 <Sheet.Title
                   className={cn(
@@ -134,6 +135,7 @@ export const Drawer = ({
                   </Sheet.Trigger>
                 )}
               </div>
+              )
             ) : (
               <Sheet.Header className="pb-2 pt-2">
                 <Sheet.Handle />
