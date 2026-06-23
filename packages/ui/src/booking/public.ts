@@ -3,6 +3,7 @@ export { BookingBottomBar, BookingBottomBarInner, BookingButton } from "./Bottom
 export { WebActivity } from "./WebActivity";
 export { Basket } from "./Basket";
 export { CheckoutPage } from "./Checkout/Page";
+export { ConfirmPage } from "./Confirm/Page";
 export { CartButton } from "./CartButton";
 export { BookingI18nProvider } from "./utils/i18n/BookingI18nProvider";
 export { useCartStore } from "./Cart/store";
