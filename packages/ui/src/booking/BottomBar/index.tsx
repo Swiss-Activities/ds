@@ -1,4 +1,4 @@
-import { CancellationCard } from "../stubs";
+import { CancellationCard } from "../CancellationCard";
 import { Badge } from "../components/Badge";
 import { useBooking, useHasStartedBooking } from "../hooks";
 import { BottomBar } from "../bottom-bar";

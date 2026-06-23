@@ -1,6 +1,6 @@
 import dayjs from "dayjs";
 import { useShallow } from "zustand/react/shallow";
-import { CancellationCard } from "../stubs";
+import { CancellationCard } from "../CancellationCard";
 import { useAvailabilitiesByQuantities } from "../Calendar/BookingCalendarV2/hooks";
 import { useCheckoutButtonTextOrState } from "../Checkout/hooks";
 import { useCheckoutStore } from "../Checkout/store";
