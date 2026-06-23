@@ -5,6 +5,7 @@ import {
 } from "./axios";
 import { getOffers as getCapiOffers } from "./offers/getOffersCapi";
 import { getToken } from "./token";
+import { logError } from "../utils/thirdParty/logError";
 
 // Reservations
 
@@ -34,7 +35,7 @@ export const getReservations = async (
         ),
       };
     })
-    .catch((err) => console.log("error ===", err));
+    .catch((err) => logError(err));
 };
 
 export const syncOffer = async (offerId: string, token: string) => {
@@ -43,7 +44,7 @@ export const syncOffer = async (offerId: string, token: string) => {
       action: "schedule",
     })
     .then((response) => response.data)
-    .catch((err) => console.log("error ===", err));
+    .catch((err) => logError(err));
 };
 
 export const updateOffer = async (
@@ -64,7 +65,7 @@ export const getPaymentAttempts = async (id: string) => {
   return axiosInstance
     .get(`/payment_attempts/${id}`)
     .then((response) => response.data)
-    .catch((err) => console.log("error ===", err));
+    .catch((err) => logError(err));
 };
 
 // Bookings
@@ -73,7 +74,7 @@ export const getBooking = async (id: string) => {
   return axiosInstance
     .get(`/bookings/${id}`)
     .then((response) => response.data)
-    .catch((err) => console.log("error ===", err));
+    .catch((err) => logError(err));
 };
 
 type GetUserBookingsParams = {
@@ -109,7 +110,7 @@ export const getUserBookings = async ({
     })
     .then((response) => response.data)
     .catch((err) => {
-      console.log("error ===", err);
+      logError(err);
       return {
         bookings: [],
         paging: { page: 1, itemsPerPage, totalItems: 0, totalPages: 0 },
@@ -122,7 +123,7 @@ export const getBookings = async (data: {}, token: string) => {
   return axiosInstanceAuth(token)
     .get(`/bookings?${params}`)
     .then((response) => response.data)
-    .catch((err) => console.log("error ===", err));
+    .catch((err) => logError(err));
 };
 
 export const getBookingsSummary = async (id: string, token: string) => {
@@ -133,7 +134,7 @@ export const getBookingsSummary = async (id: string, token: string) => {
       },
     })
     .then((response) => response.data)
-    .catch((err) => console.log("error ===", err));
+    .catch((err) => logError(err));
 };
 
 // Suppliers
@@ -144,7 +145,7 @@ export const getSuppliers = async () => {
   return axiosInstanceAuth(token)
     .get(`/suppliers?itemsPerPage=1000`)
     .then((response) => response.data)
-    .catch((err) => console.log("error ===", err));
+    .catch((err) => logError(err));
 };
 
 export const getSupplier = async (id: string) => {
@@ -153,7 +154,7 @@ export const getSupplier = async (id: string) => {
   return axiosInstanceAuth(token)
     .get(`/suppliers/CA${id}`)
     .then((response) => response.data)
-    .catch((err) => console.log("error ===", err));
+    .catch((err) => logError(err));
 };
 
 export const getSupplierById = async (id: string) => {
@@ -162,7 +163,7 @@ export const getSupplierById = async (id: string) => {
   return axiosInstanceAuth(token)
     .get(`/suppliers/${id}`)
     .then((response) => response.data)
-    .catch((err) => console.log("error ===", err));
+    .catch((err) => logError(err));
 };
 
 // Distributors
@@ -176,7 +177,7 @@ export const getDistributors = async ({ token, ...rest }: Props) => {
   return axiosInstanceAuth(token)
     .get("/distributors", { params: rest })
     .then((response) => response.data)
-    .catch((err) => console.log("error ===", err));
+    .catch((err) => logError(err));
 };
 
 // Activities
@@ -185,7 +186,7 @@ export const getDates = async () => {
   return axiosInstance
     .get("/activities/dates")
     .then((response) => response.data)
-    .catch((err) => console.log("error ===", err));
+    .catch((err) => logError(err));
 };
 
 export const getSummaries = async (params: unknown) => {
@@ -194,14 +195,14 @@ export const getSummaries = async (params: unknown) => {
       params,
     })
     .then((response) => response.data)
-    .catch((err) => console.log("error ===", err));
+    .catch((err) => logError(err));
 };
 
 export const getOffers = async (activityId: string, token: string) => {
   return axiosInstanceAuth(token)
     .get(`/activities/${activityId}/offers`)
     .then((response) => response.data)
-    .catch((err) => console.log("error ===", err));
+    .catch((err) => logError(err));
 };
 
 // Ticket Categories
@@ -214,7 +215,7 @@ export const getTicketCategoriesOptions = async () => {
       },
     })
     .then((response) => response.data)
-    .catch((err) => console.log("error ===", err));
+    .catch((err) => logError(err));
 };
 
 // Reservation systems
@@ -223,7 +224,7 @@ export const getReservationSystems = async () => {
   return axiosInstance
     .get("/swissactivities/reservation_system")
     .then((response) => response.data)
-    .catch((err) => console.log("error ===", err));
+    .catch((err) => logError(err));
 };
 
 // Duplicate

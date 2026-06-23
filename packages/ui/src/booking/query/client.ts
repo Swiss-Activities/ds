@@ -5,7 +5,7 @@ import { useSearchStore } from "../store/search";
 import { logBookingFlowError } from "../utils/log/logBookingFlowError";
 
 const logError = (err: any, fingerprint?: string[]) => {
-  const url = err?.config?.url;
+  const url = typeof err?.config?.url === "string" ? err.config.url : "";
   const statusCode = err?.response?.status;
   const data = useBookingStore.getState();
   const date = useSearchStore.getState().date;

@@ -311,11 +311,6 @@ export const BookingButton = (props: BookingButtonProps) => {
     }
   };
 
-  // console.log("isLoadingCheckout", isLoadingCheckout);
-  // console.log("isPending", isPending);
-  // console.log("isSuccess", isSuccess && !isInlineCheckout);
-  // console.log("isLoading", isLoading);
-  // console.log("hasToWait", hasToWaitForPersonalizedOptionsLoading);
 
   return (
     <div

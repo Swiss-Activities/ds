@@ -275,10 +275,6 @@ export const BookingCalendarV2 = () => {
               if (view === "month" && activeStartDate && currentMonth) {
                 const newMonth = dayjs(activeStartDate);
                 if (!newMonth.isSame(currentMonth, "month")) {
-                  console.log("Calendar navigation:", {
-                    from: currentMonth.format("YYYY-MM"),
-                    to: newMonth.format("YYYY-MM"),
-                  });
                   setInitialLoad(false);
                   setCurrentMonth(newMonth);
                   setQueryMonth({

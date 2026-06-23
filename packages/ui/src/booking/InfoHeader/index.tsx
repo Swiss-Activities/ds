@@ -19,10 +19,12 @@ import { Button as ButtonIcon } from "@swiss-activities/ui";
 import { cn } from "../utils/css/cn";
 import { niceDate } from "../utils/dates/niceDate";
 import { useI18n } from "../utils/i18n/useI18n";
+import { useUrlObject } from "../UrlState/hooks";
 import { useGetActivityOffers } from "../query/activity/getActivityOffers";
 
 export const InfoHeader = () => {
   const { t, locale } = useI18n();
+  const { getHrefWithObjString } = useUrlObject();
   const {
     active,
     activity,
@@ -150,6 +152,7 @@ export const InfoHeader = () => {
 
   return (
     <Card elevation="lg">
+      <span data-restore-url={getHrefWithObjString()} hidden aria-hidden="true" />
       <div className="flex items-center justify-between gap-4">
         <InfoHeaderTitle>{activity?.info?.title}</InfoHeaderTitle>
       </div>

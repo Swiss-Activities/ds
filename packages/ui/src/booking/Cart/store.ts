@@ -14,6 +14,14 @@ import { getCart } from "../query/booking/getCart";
 import { restoreCart } from "../query/booking/restoreCart";
 
 let cartInitLocale: string | null = null;
+let expiryTimer: ReturnType<typeof setTimeout> | null = null;
+
+const clearExpiryWatcher = () => {
+  if (expiryTimer) {
+    clearTimeout(expiryTimer);
+    expiryTimer = null;
+  }
+};
 
 export type CartStore = {
   locale: string;
@@ -152,24 +160,25 @@ export const useCartStore = create<CartStore>((set, get) => ({
     });
   },
 
-  checkForExpired: async () => {
-    let { cart, locale } = get();
+  checkForExpired: () => {
+    const { cart } = get();
 
     if (!cart || !cart?.reservations?.length) {
       set({ loadingState: "empty" });
       return;
     }
 
-    const checkExpiration = async () => {
-      cart = get().cart;
+    clearExpiryWatcher();
 
-      if (!cart || !cart?.customData?.length) return;
+    const tick = () => {
+      const current = get().cart;
 
-      for (const data of cart.customData) {
+      if (!current || !current?.customData?.length) return;
+
+      for (const data of current.customData) {
         const expiresAt = new Date(data.reservation.expiresAt).getTime();
-        const now = Date.now();
 
-        if (expiresAt <= now) {
+        if (expiresAt <= Date.now()) {
           sendDataLayer({
             obj: {
               event: "reservation_expired",
@@ -182,19 +191,21 @@ export const useCartStore = create<CartStore>((set, get) => ({
             ] as unknown as Activities,
           });
 
-          get().init(locale, true);
+          clearExpiryWatcher();
+          cartInitLocale = null;
+          get().init(get().locale, true);
           return;
         }
       }
+
+      expiryTimer = setTimeout(tick, 10000);
     };
 
-    while (true) {
-      await checkExpiration();
-      await new Promise((resolve) => setTimeout(resolve, 10000));
-    }
+    tick();
   },
 
   reset: () => {
+    clearExpiryWatcher();
     cartInitLocale = null;
     set({
       cart: {} as CartStore["cart"],

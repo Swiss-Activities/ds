@@ -174,7 +174,6 @@ export const usePersonalizedOptions = () => {
           : 0)
     ) {
       isValid = false;
-      console.log("here");
     }
 
     Object.values(slicedPersonalizedOptionsValues).forEach((item) => {
@@ -183,20 +182,17 @@ export const usePersonalizedOptions = () => {
         !item.isReservation
       ) {
         isValid = false;
-        console.log("here 2");
       }
 
       Object.entries(item).forEach(([k, v]) => {
         if (k === "dob") {
           if (!validateValue().date(v, date)) {
             isValid = false;
-            console.log("here 3");
           }
         }
 
         if (v === "") {
           isValid = false;
-          console.log("here 4");
         }
       });
     });
@@ -208,7 +204,6 @@ export const usePersonalizedOptions = () => {
       ).length < ticketAmount
     ) {
       isValid = false;
-      console.log("here 5");
     }
 
     personalizedOptions
@@ -219,7 +214,6 @@ export const usePersonalizedOptions = () => {
         );
         if (!reservationField) {
           isValid = false;
-          console.log("here 6");
         }
       });
 
@@ -232,7 +226,6 @@ export const usePersonalizedOptions = () => {
           if (reservationField && reservationField?.type === "option") {
             if (!reservationField?.options?.find((e) => e.key === v)) {
               isValid = false;
-              console.log("here 7");
             }
           }
         });
@@ -258,7 +251,6 @@ export const usePersonalizedOptions = () => {
             const isValidDate = validateValue().date(dob, date, minAge, maxAge);
             if (!isValidDate) {
               isValid = false;
-              console.log("here 8");
             }
           }
         });

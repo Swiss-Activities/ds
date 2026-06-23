@@ -128,8 +128,8 @@ export const UrlState = () => {
 
         setBookingData(parsedObj);
         setIsRestore(isRestore === "true");
-      } catch (e) {
-        console.log(e);
+      } catch {
+        setIsRestoreError(true);
       } finally {
         setHasProcessed(true);
       }
