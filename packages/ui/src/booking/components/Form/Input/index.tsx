@@ -128,7 +128,7 @@ export const Input = ({
         {...{ value, type, required }}
         placeholder={keepPlaceholder ? "" : placeholder}
         className={cn(
-          "form-input h-[40px] w-full rounded-md border border-solid border-gray-300 text-base text-black transition-colors duration-100 ease-in focus:border-primary focus:ring-0 sm:pb-[10px] sm:text-sm",
+          "form-input h-[40px] w-full rounded-md border border-solid border-gray-300 px-3 py-2 text-base text-black transition-colors duration-100 ease-in focus:border-primary focus:ring-0 sm:pb-[10px] sm:text-sm",
           {
             "border-green-600 focus:border-green-600": isValid,
             "border-primary focus:border-primary": emailSuggestion,
