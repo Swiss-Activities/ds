@@ -9,7 +9,6 @@ import type { TOfferBooking } from "../types/offerBooking";
 import { useI18n } from "../utils/i18n/useI18n";
 import { useDataLayer } from "../utils/thirdParty/dataLayerSend";
 import { useGetActivityOffers } from "../query/activity/getActivityOffers";
-import { useOffersCapi } from "../query/offers/getOffersCapi";
 
 type ExpandedOffer = {
   offer: TOfferBooking;
@@ -45,7 +44,8 @@ export const OffersV2 = () => {
     }
   );
 
-  const { isLoading: isLoadingOffersCapi } = useOffersCapi();
+  // @todo CAPI offers (descriptions) — see OffersV2/Offer; useOffersCapi call
+  // removed until the /api/web/offers/{locale}/ proxy is wired in src/dev-server.ts.
 
   const expandedOffers = useMemo<ExpandedOffer[]>(() => {
     if (!offers) return [];
@@ -115,8 +115,8 @@ export const OffersV2 = () => {
   return (
     <div>
       <Title>{t("activity.widget.titleTicketOption")}</Title>
-      <Skeleton loading={isLoadingOffers || isLoadingOffersCapi} />
-      {expandedOffers.length > 0 && !isLoadingOffers && !isLoadingOffersCapi ? (
+      <Skeleton loading={isLoadingOffers} />
+      {expandedOffers.length > 0 && !isLoadingOffers ? (
         <div className="space-y-3">
           {expandedOffers
             .sort((a, b) => a.offer.sequenceIndex - b.offer.sequenceIndex)

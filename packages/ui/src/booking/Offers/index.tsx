@@ -12,7 +12,6 @@ import { DateService } from "../utils/dates/DateService";
 import { toISO } from "../utils/dates/toISO";
 import { useI18n } from "../utils/i18n/useI18n";
 import { useGetAvailabilities } from "../query/activity/getAvailabilities";
-import { useOffersCapi } from "../query/offers/getOffersCapi";
 
 export const Offers = () => {
   const { t, locale } = useI18n();
@@ -41,7 +40,8 @@ export const Offers = () => {
     true
   );
 
-  const { isLoading: isLoadingOffersCapi } = useOffersCapi();
+  // @todo CAPI offers (descriptions) — see Offers/Offer; useOffersCapi call
+  // removed until the /api/web/offers/{locale}/ proxy is wired in src/dev-server.ts.
 
   useLayoutEffect(() => {
     if (!offer?.offerId && !offerId) return;

@@ -12,12 +12,10 @@ import { Button } from "@swiss-activities/ui";
 import { cn } from "../../utils/css/cn";
 import { useI18n } from "../../utils/i18n/useI18n";
 import { useDataLayer } from "../../utils/thirdParty/dataLayerSend";
-import { useOffersCapi } from "../../query/offers/getOffersCapi";
 
 export const Offer = (offer: TOfferBooking) => {
   const { dataLayer } = useDataLayer();
   const { t } = useI18n();
-  const { data } = useOffersCapi();
   const {
     activity,
     availability,
@@ -68,10 +66,6 @@ export const Offer = (offer: TOfferBooking) => {
       },
     });
   };
-
-  const capiOffer = data?.find(
-    (o) => `${offer?.contentApiOfferId}` === `${o.id}`
-  );
 
   const price = useMemo(() => {
     let price = offer?.startingPrice?.formatted;
@@ -126,11 +120,9 @@ export const Offer = (offer: TOfferBooking) => {
             <Text black className="relative -top-px">
               {offer?.offerLabel || ""}
             </Text>
-            {capiOffer && capiOffer?.description && (
-              <Text size="sm2" className="mt-1">
-                {capiOffer.description}
-              </Text>
-            )}
+            {/* @todo CAPI offer description: wire /api/web/offers/{locale}/ proxy
+                (contentapi2 + token) in src/dev-server.ts, then restore
+                useOffersCapi + capiOffer.description here. */}
             <Usps
               className="mt-2"
               activity={

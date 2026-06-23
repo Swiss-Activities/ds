@@ -4,16 +4,13 @@ import { Card } from "../../Card";
 import { CategoryTypeSelector } from "../../CategoryTypeSelector";
 import { PriceDisplay } from "../../PriceDisplay";
 import { useBookingStore } from "../../store";
-import { useSearchStore } from "../../store/search";
 import { Text } from "@swiss-activities/ui";
 import { Usps } from "../../components/Usps";
 import type { TActivity } from "../../types/activity";
 import type { TOfferBooking } from "../../types/offerBooking";
 import { cn } from "../../utils/css/cn";
 import { useI18n } from "../../utils/i18n/useI18n";
-import { logBookingFlowError } from "../../utils/log/logBookingFlowError";
 import { useDataLayer } from "../../utils/thirdParty/dataLayerSend";
-import { useOffersCapi } from "../../query/offers/getOffersCapi";
 
 export const Offer = (
   offer: TOfferBooking & {
@@ -24,8 +21,7 @@ export const Offer = (
   }
 ) => {
   const { dataLayer } = useDataLayer();
-  const { t, locale } = useI18n();
-  const { data } = useOffersCapi();
+  const { t } = useI18n();
   const {
     uniqueId,
     forceCategoryType,
@@ -34,7 +30,6 @@ export const Offer = (
   } = offer;
   const {
     activity,
-    availability,
     offer: selectedOffer,
     setOffer,
     ticketSelections,
@@ -44,7 +39,6 @@ export const Offer = (
     setCategoryType,
   } = useBookingStore(
     useShallow((state) => ({
-      availability: state.availability,
       activity: state.activity,
       offer: state.offer,
       setOffer: state.setOffer,
@@ -98,10 +92,6 @@ export const Offer = (
       },
     });
   };
-
-  const capiOffer = data?.find(
-    (o) => `${offer?.contentApiOfferId}` === `${o.id}`
-  );
 
   const activeCategoryType = forceCategoryType || categoryType;
 
@@ -260,18 +250,9 @@ export const Offer = (
     setTicketSelection,
   ]);
 
-  useEffect(() => {
-    if (capiOffer || !data) return;
-    logBookingFlowError({
-      activity,
-      availability,
-      date: useSearchStore.getState().date,
-      locale,
-      message: `Offer wasn't displayed. Missing offer translation for CAPI ID: ${offer?.contentApiOfferId} (${locale})`,
-    });
-  }, [capiOffer, activity, availability, locale, offer]);
-
-  if (!capiOffer) return null;
+  // @todo CAPI offers: restore the capiOffer lookup, the "hide offers without a
+  // CAPI translation" gate, and the missing-translation log once the
+  // /api/web/offers/{locale}/ proxy is wired in src/dev-server.ts.
 
   return (
     <Card
@@ -297,15 +278,14 @@ export const Offer = (
         </div>
         <div className="flex flex-col text-left">
           <p className="relative text-lg font-medium text-black">
-            {capiOffer.label}
+            {offer?.offerLabel}
             {categoryTypeLabel && `, ${categoryTypeLabel}`}
           </p>
         </div>
       </div>
       <div className="-mx-4 mb-4 grid gap-4 border-b-0 border-l-0 border-r-0 border-t border-solid border-gray-200 px-4 pt-4 empty:hidden">
-        {capiOffer.description && (
-          <p className="text-muted text-base">{capiOffer.description}</p>
-        )}
+        {/* @todo CAPI offer description: restore capiOffer.description once the
+            /api/web/offers/{locale}/ proxy is wired in src/dev-server.ts. */}
         {(offer?.durationInHours?.length ||
           offer?.validities?.length ||
           offer?.openingHours) && (
