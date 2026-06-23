@@ -51,12 +51,6 @@
 @layer base {
   html {
     text-rendering: optimizeLegibility;
-    /* Streaming + client mounts briefly pass through sub-viewport document
-       heights — keep the scrollbar track always present so the page width
-       never jumps between navigations/reloads. (Not scrollbar-gutter: the
-       reserved gutter stays even while the sheet library locks scroll and
-       adds its own padding compensation — double gap.) */
-    overflow-y: scroll;
   }
 
   html,
