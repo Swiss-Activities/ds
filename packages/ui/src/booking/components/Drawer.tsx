@@ -115,7 +115,7 @@ export const Drawer = ({
             )}
           >
             {isSide ? (
-              <div className="flex min-h-[56px] items-center justify-between gap-3 border-0 border-b border-solid border-gray-200 pe-2 ps-5">
+              <div className="flex min-h-[56px] items-center justify-between gap-3 border-0 border-b border-solid border-gray-200 bg-white pe-2 ps-5">
                 <Sheet.Title
                   className={cn(
                     "truncate text-lg font-semibold text-gray-950",
