@@ -105,12 +105,16 @@ export const Basket = () => {
       <div className="sa-container">
         <div className="grid gap-8 lg:grid-cols-[2fr_1fr] lg:gap-12">
           <div>
-            <Text as="h1" size="default" className="mb-4">
+            <Text as="h1" size="default" className="mb">
               {t("activity.widget.basket")}
             </Text>
             <div>
-              {loadingState === "empty" ||
-              (loadingState === "ready" && reservations.length === 0) ? (
+              {loadingState === "loading" ? (
+                <div className="space-y-4 lg:space-y-6">
+                  <Activity skeleton />
+                </div>
+              ) : loadingState === "empty" ||
+                (loadingState === "ready" && reservations.length === 0) ? (
                 <Card className="flex flex-col items-center justify-center space-y-4 lg:py-8">
                   <Text as="h2" size="lg">
                     {t("pages.basket.empty")}
@@ -140,7 +144,7 @@ export const Basket = () => {
           <div className="hidden lg:block">
             {reservations.length >= 1 && (
               <>
-                <Text as="h2" size="default" className="mb-4">
+                <Text as="h2" size="default" className="mb">
                   {t("breadcrumbsBasket.stepTwoDescription")}
                 </Text>
                 <div className="space-y-4">

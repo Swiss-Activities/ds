@@ -86,3 +86,7 @@
     font-weight: 700 !important;
   }
 }
+
+.mb {
+  @apply mb-2.5 sm:mb-3.5 lg:mb-6;
+}
