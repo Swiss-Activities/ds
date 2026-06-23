@@ -185,7 +185,7 @@ export const Combobox = ({
                           onChange({ isSelected, option });
                         }}
                       >
-                        {(!select || (select && selectedValues.size > 0)) && (
+                        {!select && (
                           <div
                             className={cn(
                               "me-2 flex h-4 w-4 items-center justify-center rounded-sm border border-primary",
@@ -204,6 +204,9 @@ export const Combobox = ({
                         >
                           {option?.labelEl || option.label}
                         </span>
+                        {select && isSelected && (
+                          <Check className="ms-auto h-4 w-4 shrink-0 text-primary" />
+                        )}
                         {option?.description && (
                           <Tooltip>
                             <TooltipTrigger asChild>

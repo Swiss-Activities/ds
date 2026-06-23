@@ -42,7 +42,7 @@ export const Inner = ({
             {icon}
           </span>
           <Text
-            className={cn({
+            className={cn("pr-4", {
               underline: activeType && showActive,
             })}
             size="sm2"
@@ -57,7 +57,7 @@ export const Inner = ({
               className="relative top-1 mb-auto !flex !rotate-0 text-black"
             />
           ) : (
-            <Pencil className="relative top-1 mb-auto h-4 w-4 text-black" />
+            <Pencil className="relative top-1 mb-auto h-4 w-4 shrink-0 text-black" />
           ))}
       </>
     )

@@ -74,9 +74,9 @@ const SelectCombobox = ({
 }) => {
   const firstEmit = useRef(false);
   const buttonClassName = cn(
-    "h-[40px] text-base w-full text-left justify-end px-3 gap-1 flex-row-reverse sm:text-sm",
+    "h-[40px] min-h-[40px] text-base w-full text-left justify-end px-3 gap-1 flex-row-reverse sm:text-sm",
     {
-      "border-green-600 focus:border-green-600": isValid,
+      "!border-green-600 focus:!border-green-600": isValid,
       "lg:hidden": advanced === "mobile",
       "hidden lg:flex": advanced === "desktop",
     }
