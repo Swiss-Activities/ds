@@ -223,17 +223,48 @@ export async function loadWebsiteGatewayPage({
     };
   }
 
+  const feedContext = {
+    locale: context?.locale,
+    country: context?.country ?? undefined,
+    lat: context?.lat,
+    lng: context?.lng,
+    date: context?.date,
+    dev,
+  };
+
+  // The gateway resolves destinations, POIs, and regions to the same lean
+  // single-segment "listing" envelope (no kind discriminator), so such a page
+  // arrives typed as overview-point-of-interest. Try the matching feeds in turn
+  // — destination (the common case) → POI → region — and adopt the type of the
+  // one that resolves. @todo remove once the gateway envelope carries the entity
+  // kind again (then getFeedSelection alone suffices).
+  if (page.type === "overview-point-of-interest") {
+    const slug = page.slug ?? null;
+    const candidates = [
+      { type: "overview-destination" as const, selection: { destinationOverview: slug } },
+      { type: "overview-point-of-interest" as const, selection: { poi: slug } },
+      { type: "overview-region" as const, selection: { region: slug } },
+    ];
+    let lastError: unknown = new Error(`No feed resolved for ${page.slug}`);
+    for (const candidate of candidates) {
+      try {
+        const data = await getGatewayFeed(
+          apiUrl,
+          { ...feedContext, ...candidate.selection },
+          signal
+        );
+        return { type: candidate.type, data, context, slug: page.slug };
+      } catch (error) {
+        if (signal?.aborted) throw error;
+        lastError = error;
+      }
+    }
+    throw lastError;
+  }
+
   const data = await getGatewayFeed(
     apiUrl,
-    {
-      locale: context?.locale,
-      country: context?.country ?? undefined,
-      lat: context?.lat,
-      lng: context?.lng,
-      date: context?.date,
-      dev,
-      ...getFeedSelection(page),
-    },
+    { ...feedContext, ...getFeedSelection(page) },
     signal
   );
 
