@@ -105,6 +105,7 @@ export const Offer = (offer: TOfferBooking) => {
         variant="block"
         onClick={handleClick}
         id={`offer-${offer?.offerId}`}
+        className="w-full flex-col items-stretch p-0"
       >
         <div className="flex">
           <div
