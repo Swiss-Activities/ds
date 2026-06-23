@@ -19,7 +19,7 @@ import { sendTransportEvent } from "../tracking";
 import { usePostReservation } from "../../hooks";
 import { useBookingStore } from "../../store";
 import { Button } from "@swiss-activities/ui";
-import { ChatButton } from "../../stubs";
+import { ChatButton } from "../../ChatButton";
 import { Skeleton } from "@swiss-activities/ui";
 import { useI18n } from "../../utils/i18n/useI18n";
 import { useGetTripDetails } from "../../query/transport/trip";

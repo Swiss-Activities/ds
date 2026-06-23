@@ -3,7 +3,7 @@ import { Badge } from "../components/Badge";
 import { useBooking, useHasStartedBooking } from "../hooks";
 import { BottomBar } from "../bottom-bar";
 import { Button, type ButtonProps } from "@swiss-activities/ui";
-import { ChatButton } from "../stubs";
+import { ChatButton } from "../ChatButton";
 import type { TActivity } from "../types/activity";
 import type { TBooking } from "../types/booking";
 import type { TReservation } from "../types/reservation";

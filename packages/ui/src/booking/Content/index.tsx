@@ -19,7 +19,7 @@ import { Trash } from "../Trash";
 import { WidgetActivity } from "../WidgetActivity";
 import { useBookingStore } from "../store";
 import { useMessagesStore } from "../store/messages";
-import { ChatButton } from "../stubs";
+import { ChatButton } from "../ChatButton";
 import { useSearchStore } from "../store/search";
 import { Skeleton } from "@swiss-activities/ui";
 import { useAffiliateStore } from "../store/affiliateStore";

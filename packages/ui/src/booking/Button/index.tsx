@@ -15,7 +15,7 @@ import {
 import { usePostReservation } from "../hooks";
 import { useBookingStore } from "../store";
 import { Button, type ButtonProps } from "@swiss-activities/ui";
-import { ChatButton } from "../stubs";
+import { ChatButton } from "../ChatButton";
 import { useSearchStore } from "../store/search";
 import { Skeleton } from "@swiss-activities/ui";
 import { useAffiliateStore } from "../store/affiliateStore";

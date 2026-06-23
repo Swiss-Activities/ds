@@ -13,6 +13,8 @@ import { getReservations } from "../query/booking";
 import { getCart } from "../query/booking/getCart";
 import { restoreCart } from "../query/booking/restoreCart";
 
+let cartInitLocale: string | null = null;
+
 export type CartStore = {
   locale: string;
   setLocale: (locale: string) => void;
@@ -58,6 +60,8 @@ export const useCartStore = create<CartStore>((set, get) => ({
   setActivityObjects: (activityObjects: Activities) => set({ activityObjects }),
 
   init: async (locale, restore = true) => {
+    if (cartInitLocale === locale) return;
+    cartInitLocale = locale;
     set({ loadingState: "loading" });
 
     const url = new URL(window.location.href);
@@ -190,11 +194,13 @@ export const useCartStore = create<CartStore>((set, get) => ({
     }
   },
 
-  reset: () =>
+  reset: () => {
+    cartInitLocale = null;
     set({
       cart: {} as CartStore["cart"],
       loadingState: "loading",
       activityObject: null,
       activityObjects: [] as unknown as Activities,
-    }),
+    });
+  },
 }));

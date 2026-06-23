@@ -7,8 +7,10 @@ import { Summary } from "../Cart/Summary";
 import { useCartStore } from "../Cart/store";
 import { ComplementaryActivities } from "../ComplementaryActivity";
 import { BottomBar } from "../bottom-bar";
+import { BreadcrumbsBasket } from "../BreadcrumbsBasket";
 import { CancellationCard } from "../CancellationCard";
-import { ChatButton, SignUpCard } from "../stubs";
+import { ChatButton } from "../ChatButton";
+import { SignUpCard } from "../stubs";
 import type { TActivity } from "../types/activity";
 import { getPageUrl } from "../utils/content/loaders";
 import { useI18n } from "../utils/i18n/useI18n";
@@ -98,11 +100,12 @@ export const Basket = () => {
   };
 
   return (
-    <section className="bg-gray-50 pb-16 lg:pb-24">
-      <div className="container-tw">
+    <section className="bg-bg pb-16 lg:pb-24">
+      <BreadcrumbsBasket />
+      <div className="sa-container">
         <div className="grid gap-8 lg:grid-cols-[2fr_1fr] lg:gap-12">
           <div>
-            <Text as="h1" size="default" className="mb">
+            <Text as="h1" size="default" className="mb-4">
               {t("activity.widget.basket")}
             </Text>
             <div>
@@ -137,7 +140,7 @@ export const Basket = () => {
           <div className="hidden lg:block">
             {reservations.length >= 1 && (
               <>
-                <Text as="h2" size="default" className="mb">
+                <Text as="h2" size="default" className="mb-4">
                   {t("breadcrumbsBasket.stepTwoDescription")}
                 </Text>
                 <div className="space-y-4">
