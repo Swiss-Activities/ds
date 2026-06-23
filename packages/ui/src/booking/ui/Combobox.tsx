@@ -205,7 +205,7 @@ export const Combobox = ({
                           {option?.labelEl || option.label}
                         </span>
                         {select && isSelected && (
-                          <Check className="ms-auto h-4 w-4 shrink-0 text-primary" />
+                          <Check className="ms-auto h-4 w-4 shrink-0 text-black" />
                         )}
                         {option?.description && (
                           <Tooltip>
