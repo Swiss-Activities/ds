@@ -98,6 +98,7 @@ export const Booking = () => {
         )}
         mobileTitle={false}
         classNameInner="bg-bg"
+        classNameContent="!bg-bg"
         onClose={handleClose}
       >
         <ErrorBoundary FallbackComponent={Fallback} onError={handleError}>

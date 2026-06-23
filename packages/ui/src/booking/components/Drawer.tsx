@@ -35,6 +35,7 @@ export type DrawerProps = {
   mobileTitle?: boolean;
   desktopTitle?: boolean;
   classNameInner?: string;
+  classNameContent?: string;
   className?: string;
   [key: string]: unknown;
 };
@@ -53,6 +54,7 @@ export const Drawer = ({
   mobileTitle = true,
   desktopTitle = true,
   classNameInner,
+  classNameContent,
   className,
 }: DrawerProps) => {
   const { t } = useI18n();
@@ -109,6 +111,7 @@ export const Drawer = ({
                 : wantsTall
                   ? "h-[calc(100dvh-40px)] max-h-[calc(100dvh-40px)] min-h-[calc(100dvh-40px)] rounded-t-3xl"
                   : "h-auto max-h-[90dvh] rounded-t-3xl",
+              classNameContent,
             )}
           >
             {isSide ? (
