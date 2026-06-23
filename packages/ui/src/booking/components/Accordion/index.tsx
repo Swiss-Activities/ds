@@ -48,7 +48,7 @@ export const Accordion = ({
   const isDesktop = type === "desktop";
 
   const cls = cn(
-    "text-left cursor-pointer flex text-sm bg-white border-none text-gray-700 w-full transition ease-in duration-100 sm:hover:bg-gray-50",
+    "text-left cursor-pointer flex text-sm bg-white !border-0 text-gray-700 w-full transition ease-in duration-100 sm:hover:bg-gray-50",
     {
       [className]: className,
       "!pointer-events-none !rounded-none !px-4 !pb-2 !pt-3 [&_svg]:hidden":
