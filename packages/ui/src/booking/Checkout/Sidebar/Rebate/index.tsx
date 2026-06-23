@@ -158,7 +158,7 @@ export const Rebate = () => {
           <form
             onSubmit={isDiscount ? handleRebateRemove : handleRebate}
             id="rebate"
-            className="grid grid-cols-[1fr,auto] gap-4"
+            className="grid grid-cols-[1fr_auto] gap-4"
           >
             <Input
               key="rebate-code"

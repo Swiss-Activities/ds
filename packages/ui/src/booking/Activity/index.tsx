@@ -39,14 +39,14 @@ type ActivityProps = {
 
 const ActivitySkeleton = () => (
   <Card>
-    <div className="mb-1 grid grid-cols-[65px,1fr] gap-4 sm:mb-0 sm:grid-cols-1">
+    <div className="mb-1 grid grid-cols-[65px_1fr] gap-4 sm:mb-0 sm:grid-cols-1">
       <div className="!h-[65px] w-[65px] animate-pulse rounded bg-gray-200 sm:hidden" />
       <div className="flex flex-col gap-2">
         <div className="h-5 w-3/4 animate-pulse rounded bg-gray-200" />
         <div className="h-4 w-24 animate-pulse rounded bg-gray-200" />
       </div>
     </div>
-    <div className="mt-4 grid gap-8 sm:grid-cols-[100px,1fr]">
+    <div className="mt-4 grid gap-8 sm:grid-cols-[100px_1fr]">
       <div className="hidden !h-[100px] !w-[100px] animate-pulse rounded-lg bg-gray-200 sm:block" />
       <div className="space-y-3">
         <div className="h-4 w-1/2 animate-pulse rounded bg-gray-200" />
@@ -126,7 +126,7 @@ export const Activity = ({
           {!isTrip && (
             <div
               className={cn({
-                "mb-1 grid grid-cols-[65px,1fr] gap-4 sm:mb-0 sm:grid-cols-1":
+                "mb-1 grid grid-cols-[65px_1fr] gap-4 sm:mb-0 sm:grid-cols-1":
                   !isSm,
               })}
             >
@@ -148,7 +148,7 @@ export const Activity = ({
                     (canModify || !isCancelled) && "pr-3 lg:pr-6",
                     {
                       "sm:mb-4": !isSm,
-                      "mb-1.5 grid grid-cols-[auto,1fr] gap-2": isSm,
+                      "mb-1.5 grid grid-cols-[auto_1fr] gap-2": isSm,
                     }
                   )}
                 >
@@ -176,7 +176,7 @@ export const Activity = ({
           )}
           <div
             className={cn(`grid gap-8`, {
-              "sm:grid-cols-[100px,1fr]": !isSm && !isTrip,
+              "sm:grid-cols-[100px_1fr]": !isSm && !isTrip,
               "gap-4 pe-4 lg:pe-6": isTrip,
             })}
           >

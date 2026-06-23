@@ -214,7 +214,7 @@ export const TripContent = ({
         )}
 
         {ticketStyle ? (
-          <div className="grid grid-cols-[64px,1fr] gap-4">
+          <div className="grid grid-cols-[64px_1fr] gap-4">
             <div className="flex h-16 w-16 items-center justify-center rounded-lg border border-solid border-gray-200 bg-gray-50">
               <Ticket className="size-8 text-gray-500" />
             </div>
@@ -241,7 +241,7 @@ export const TripContent = ({
           <>
             {headingContent}
 
-            <div className="mt-4 grid grid-cols-[auto,1fr,auto] items-center gap-3">
+            <div className="mt-4 grid grid-cols-[auto_1fr_auto] items-center gap-3">
               <Time time={trip.start.time} className="text-sm" />
               <div className="relative h-[2px] w-full bg-gray-800 before:absolute before:left-0 before:top-1/2 before:h-2.5 before:w-2.5 before:-translate-y-1/2 before:rounded-full before:border before:border-solid before:border-gray-800 before:bg-gray-800 before:content-[''] after:absolute after:right-0 after:top-1/2 after:h-2.5 after:w-2.5 after:-translate-y-1/2 after:rounded-full after:border after:border-solid after:border-gray-800 after:bg-gray-800 after:content-['']">
                 {transferPositions.map((position, index) => (
@@ -315,7 +315,7 @@ export const TripContent = ({
 
   return (
     <div>
-      <div className="grid grid-cols-[auto,1fr,auto] items-center gap-3">
+      <div className="grid grid-cols-[auto_1fr_auto] items-center gap-3">
         <Time time={trip.start.time} className="lg:text-base" />
         <div className="relative h-[2px] w-full bg-gray-800 before:absolute before:left-0 before:top-1/2 before:h-2.5 before:w-2.5 before:-translate-y-1/2 before:rounded-full before:border before:border-solid before:border-gray-800 before:bg-gray-800 before:content-[''] after:absolute after:right-0 after:top-1/2 after:h-2.5 after:w-2.5 after:-translate-y-1/2 after:rounded-full after:border after:border-solid after:border-gray-800 after:bg-gray-800 after:content-['']">
           {transferPositions.map((position, index) => (

@@ -29,8 +29,8 @@ export const Toast = ({
           {
             "border border-solid border-sky-100 bg-sky-50": !warning && !inline,
             "items-center bg-rose-50": warning && !inline,
-            "grid-cols-[40px,1fr] py-1.5 pe-3": !inline,
-            "grid-cols-[20px,1fr] py-0.5": inline,
+            "grid-cols-[40px_1fr] py-1.5 pe-3": !inline,
+            "grid-cols-[20px_1fr] py-0.5": inline,
           }
         )}
       >

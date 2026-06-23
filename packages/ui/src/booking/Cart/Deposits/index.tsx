@@ -22,7 +22,7 @@ export const Deposits = ({ reservations }: DepositsProps) => {
       <Text size="xs">{t("activity.widget.taxes")}</Text>
       {Object.values(deposits?.obj || {}).map((item: any) => {
         return (
-          <div className="grid grid-cols-[1fr,auto]" key={item.label}>
+          <div className="grid grid-cols-[1fr_auto]" key={item.label}>
             <span className="text-[11px] font-medium">{`${item.amount} × ${item.label}`}</span>
             <Text size="xs" className="justify-self-end">
               {`${deposits?.currency} ${padRight(item.amount * item.value)}`}

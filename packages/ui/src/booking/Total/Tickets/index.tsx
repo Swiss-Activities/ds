@@ -22,7 +22,7 @@ export const Tickets = () => {
           tickets[ticketCategoryId] >= 1 && (
             <div
               key={`summary-${ticketCategoryId}`}
-              className="grid grid-cols-[auto,1fr,auto] gap-2"
+              className="grid grid-cols-[auto_1fr_auto] gap-2"
             >
               <Text className="text-xs text-black lg:text-sm">
                 {ticketCat?.maxOccupancy === null && ticketCat?.occupancy >= 2

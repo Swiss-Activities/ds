@@ -163,7 +163,7 @@ export const Accordion = ({
   return item?.text ? (
     <li
       className={cn(`select-none list-none`, {
-        "lg:grid lg:select-text lg:grid-cols-[300px,1fr] lg:items-start":
+        "lg:grid lg:select-text lg:grid-cols-[300px_1fr] lg:items-start":
           isDesktop,
       })}
       style={{ borderLeft: "none", borderRight: "none" }}

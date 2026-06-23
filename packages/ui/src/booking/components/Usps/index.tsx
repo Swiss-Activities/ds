@@ -246,8 +246,8 @@ export const Usps = memo(
         >
           <div
             className={cn(`!grid`, {
-              "grid-cols-[50px,1fr]": !isSm,
-              "grid-cols-[auto,1fr] items-start gap-2": isSm,
+              "grid-cols-[50px_1fr]": !isSm,
+              "grid-cols-[auto_1fr] items-start gap-2": isSm,
             })}
           >
             {icons && (

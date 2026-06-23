@@ -150,7 +150,7 @@ const ConfirmDrawerContent = ({
   return (
     <div className="flex flex-col px-4 pb-8 pt-4 lg:px-6 lg:pt-6">
       <Card elevation="lg">
-        <div className="grid grid-cols-[64px,1fr] gap-4">
+        <div className="grid grid-cols-[64px_1fr] gap-4">
           <div className="h-[64px] w-[64px] overflow-hidden rounded-lg">
             <StaticImage
               src={activity?.teaser_image?.url}

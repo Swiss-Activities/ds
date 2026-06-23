@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { create } from "zustand";
 import type { TActivity } from "../types/activity";
-import { disableBodyLock, enableBodyLock } from "../utils/ui/bodylock";
+import { disableBodyLock } from "../utils/ui/bodylock";
 import { scrollToTarget } from "../utils/ui/scrollToTarget";
 
 const DRAWER_UNMOUNT_DELAY_MS = 500;
@@ -35,10 +35,6 @@ export const useDrawerStore = create<DrawerStore>((set, get) => ({
     }
 
     if (!opened.includes(isOpen)) {
-      if (opened.length === 0) {
-        enableBodyLock();
-        document.body.style.top = -scroll + "px";
-      }
       opened.push(isOpen);
     }
 

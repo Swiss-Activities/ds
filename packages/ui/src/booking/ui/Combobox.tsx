@@ -131,7 +131,7 @@ export const Combobox = ({
           <PopoverTrigger asChild>
             <Button
               ref={ref}
-              variant="outline"
+              variant="outline-gray"
               size="sm"
               className="h-8 shrink-0 border-dashed"
               {...buttonProps}

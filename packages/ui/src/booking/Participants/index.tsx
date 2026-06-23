@@ -110,7 +110,7 @@ export const Participant = ({
   return (
     <div
       className={cn(
-        "grid w-full grid-cols-[1fr,auto] items-center border-l-0 border-r-0",
+        "grid w-full grid-cols-[1fr_auto] items-center border-l-0 border-r-0",
         {
           "pt-4": padding,
         }
@@ -140,13 +140,13 @@ export const Participant = ({
           </Text>
         )}
       </div>
-      <div className="grid grid-cols-[auto,20px,auto] items-center gap-4 [&_button]:rounded-full">
+      <div className="grid grid-cols-[auto_20px_auto] items-center gap-4 [&_button]:rounded-full">
         <Button
           variant="outline-gray"
           size="icon"
           onClick={onClickMinus}
           disabled={minusDisabled}
-          className="amount-subtract !h-10 !w-10 !min-h-[40px] !min-w-[40px] !p-0 bg-white"
+          className="amount-subtract !h-10 !w-10 !min-h-[40px] !min-w-[40px] !p-0 bg-white disabled:!border-gray-200 disabled:!bg-white disabled:opacity-50"
         >
           <I icon="minus" />
         </Button>
@@ -158,7 +158,7 @@ export const Participant = ({
           size="icon"
           onClick={onClickPlus}
           disabled={plusDisabled}
-          className="amount-add !h-10 !w-10 !min-h-[40px] !min-w-[40px] !p-0 bg-white"
+          className="amount-add !h-10 !w-10 !min-h-[40px] !min-w-[40px] !p-0 bg-white disabled:!border-gray-200 disabled:!bg-white disabled:opacity-50"
         >
           <I icon="plus" />
         </Button>

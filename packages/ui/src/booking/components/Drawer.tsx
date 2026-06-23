@@ -105,7 +105,7 @@ export const Drawer = ({
                 ? "grid-rows-[min-content_1fr_min-content]"
                 : "grid-rows-[min-content_1fr]",
               isSide
-                ? "h-dvh min-h-dvh max-h-none w-[min(92vw,440px)] max-w-[min(92vw,440px)] rounded-none"
+                ? "h-dvh min-h-dvh max-h-none w-[min(92vw,600px)] max-w-[min(92vw,600px)] rounded-none"
                 : wantsTall
                   ? "h-[calc(100dvh-40px)] max-h-[calc(100dvh-40px)] min-h-[calc(100dvh-40px)] rounded-t-3xl"
                   : "h-auto max-h-[90dvh] rounded-t-3xl",
@@ -141,10 +141,10 @@ export const Drawer = ({
                 ) : null}
               </Sheet.Header>
             )}
-            <Sheet.ScrollRoot className="h-full min-h-0">
+            <Sheet.ScrollRoot className={cn("h-full min-h-0", classNameInner)}>
               <Sheet.ScrollView className="h-full min-h-0">
                 <Sheet.ScrollContent
-                  className={cn(!flush && padding && "px-4 pb-4", classNameInner)}
+                  className={cn("min-h-full", !flush && padding && "px-4 pb-4")}
                 >
                   {children}
                 </Sheet.ScrollContent>

@@ -99,7 +99,7 @@ export const Basket = () => {
   return (
     <section className="bg-gray-50 pb-16 lg:pb-24">
       <div className="container-tw">
-        <div className="grid gap-8 lg:grid-cols-[2fr,1fr] lg:gap-12">
+        <div className="grid gap-8 lg:grid-cols-[2fr_1fr] lg:gap-12">
           <div>
             <Text as="h1" size="default" className="mb">
               {t("activity.widget.basket")}

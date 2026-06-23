@@ -15,7 +15,7 @@ type TripLegProps = {
 export const TripLeg = ({ leg, isFirst, isLast }: TripLegProps) => {
   return (
     <Card paddingNormalised>
-      <div className="grid grid-cols-[auto,16px,1fr,auto] items-start gap-3">
+      <div className="grid grid-cols-[auto_16px_1fr_auto] items-start gap-3">
         <div className="col-start-1 row-span-2 flex h-full flex-col text-sm text-black">
           <Time time={leg.start.time} className="relative -top-1 font-bold" />
           <Time

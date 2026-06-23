@@ -53,7 +53,7 @@ export const ImportantAgree = () => {
       id="important-agree"
       className="rounded-md border border-dashed border-gray-300 p-3"
     >
-      <div className="grid grid-cols-1 gap-2 sm:grid-cols-[minmax(0,2fr),minmax(0,1fr)] sm:gap-8">
+      <div className="grid grid-cols-1 gap-2 sm:grid-cols-[minmax(0,2fr)_minmax(0,1fr)] sm:gap-8">
         <Checkbox
           required
           title={t("booking.important")}
