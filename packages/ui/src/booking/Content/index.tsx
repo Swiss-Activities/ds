@@ -42,7 +42,7 @@ type ContentShellProps = {
 
 export const ContentShell = ({ children }: ContentShellProps) => {
   return (
-    <div className="flex flex-col lg:h-[calc(var(--vh)-54px-97px)]">
+    <div className="flex flex-col pt-4 lg:h-[calc(var(--vh)-54px-97px)] lg:pt-6">
       {children}
     </div>
   );
