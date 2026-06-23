@@ -1,6 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
 import { useI18n } from "../../utils/i18n/useI18n";
-import { axiosApiInstance } from "../axios";
 
 type TCapiOffer = {
   id: string;
@@ -8,13 +7,11 @@ type TCapiOffer = {
   description: string;
 };
 
-let OFFERS_CACHE: Record<string, TCapiOffer[]> = {};
-
-const getOffersCapi = async (locale: string) => {
-  const url = `/offers/${locale}/`;
-
-  return axiosApiInstance.get<TCapiOffer[]>(url).then((response) => response.data);
-};
+// @todo CAPI offers — /api/web/offers/{locale}/ 404s until the proxy is wired in
+// src/dev-server.ts (contentapi2 + token). Short-circuit every CAPI offers
+// lookup to empty so nothing fires the failing request; restore the axios
+// fetches (offers list + per-id lookup, with the OFFERS_CACHE) once it exists.
+const getOffersCapi = async (_locale: string): Promise<TCapiOffer[]> => [];
 
 export const useOffersCapi = () => {
   const { locale } = useI18n();
@@ -32,18 +29,8 @@ export async function getOffers(
   id: string | number
 ): Promise<TCapiOffer | undefined>;
 export async function getOffers(
-  locale: string,
+  _locale: string,
   id: string | number | false = false
 ): Promise<TCapiOffer[] | TCapiOffer | undefined> {
-  if (OFFERS_CACHE?.[locale]) {
-    if (!id) return OFFERS_CACHE[locale];
-    return OFFERS_CACHE[locale].find((o) => Number(o.id) === Number(id));
-  }
-
-  return axiosApiInstance(`/offers/${locale}/`).then((response) => {
-    const offers = response.data as TCapiOffer[];
-    OFFERS_CACHE[locale] = offers;
-    if (!id) return offers;
-    return offers.find((o) => Number(o.id) === Number(id));
-  });
+  return id ? undefined : [];
 }
