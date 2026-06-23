@@ -25,7 +25,7 @@ import type { MonthlyAvailability } from "../../query/activity/getMonthlyAvailab
 import { useGetMonthlyDates } from "../../query/activity/getMonthlyDates";
 
 export const CLASS_ARROW =
-  "w-full h-full flex items-center justify-center text-xs flex h-12 w-12 items-center justify-center";
+  "flex h-12 w-12 items-center justify-center text-xs";
 
 const DynamicCalendar = dynamic(() =>
   // @ts-ignore

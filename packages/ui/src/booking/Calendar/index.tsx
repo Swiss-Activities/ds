@@ -8,7 +8,7 @@ import { DateService } from "../utils/dates/DateService";
 import { useI18n } from "../utils/i18n/useI18n";
 
 export const CLASS_ARROW =
-  "w-full h-full flex items-center justify-center text-xs flex h-12 w-12 items-center justify-center";
+  "flex h-12 w-12 items-center justify-center text-xs";
 
 const DynamicCalendar = dynamic(() =>
   // @ts-ignore
