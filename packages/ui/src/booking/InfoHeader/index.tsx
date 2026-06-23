@@ -5,7 +5,6 @@ import { useTime } from "../Calendar/hooks";
 import { Cancellable } from "../Cancellable";
 import { Card } from "../Card";
 import { EditButton as Button } from "../Edit/Button";
-import { InfoHeaderDropdown } from "./Dropdown";
 import { InfoHeaderTitle } from "./Title";
 import { useOriginalOffer } from "../OffersV2/hooks";
 import { usePersonalizedOptions } from "../PersonalizedOptions/hooks";
@@ -153,7 +152,6 @@ export const InfoHeader = () => {
     <Card elevation="lg">
       <div className="flex items-center justify-between gap-4">
         <InfoHeaderTitle>{activity?.info?.title}</InfoHeaderTitle>
-        <InfoHeaderDropdown />
       </div>
       <Rating {...{ activity }} type="sm" minRating={4} />
       {reservation && !isInlineCheckout && !isRebook && (
