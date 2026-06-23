@@ -69,6 +69,7 @@ export const Drawer = ({
 
   return (
     <Sheet.Root
+      forComponent="closest"
       presented={presented}
       onPresentedChange={(open) => {
         if (!open) {
@@ -95,12 +96,14 @@ export const Drawer = ({
                   type="transparent"
                   icon={<Icon icon={X} size="sm" />}
                   text={t("Drawer.close")}
+                  reverse
                   className="pointer-events-auto gap-1.5 !min-h-[40px] !border-none !text-white hover:!bg-transparent"
                 />
               </Sheet.Trigger>
             </div>
           )}
           <Sheet.Content
+            stackingAnimation={{ scale: [1, 0.92], translateY: ["0px", "-12px"] }}
             className={cn(
               "grid overflow-hidden bg-white",
               bottom
@@ -136,15 +139,15 @@ export const Drawer = ({
                 )}
               </div>
               )
-            ) : (
+            ) : showTitle ? (
+              // Bottom sheet header — legacy parity: no drag handle, title only.
               <Sheet.Header className="pb-2 pt-2">
-                <Sheet.Handle />
-                {showTitle ? (
-                  <Sheet.Title className="mt-3 text-xl font-semibold text-gray-950">
-                    {title}
-                  </Sheet.Title>
-                ) : null}
+                <Sheet.Title className="mt-3 text-xl font-semibold text-gray-950">
+                  {title}
+                </Sheet.Title>
               </Sheet.Header>
+            ) : (
+              <div aria-hidden />
             )}
             <Sheet.ScrollRoot className={cn("h-full min-h-0", classNameInner)}>
               <Sheet.ScrollView className="h-full min-h-0">
