@@ -90,3 +90,18 @@
 .mb {
   @apply mb-2.5 sm:mb-3.5 lg:mb-6;
 }
+
+/* Hide the browser autofill background (the blue/yellow prefill tint) on form
+ * fields — the white inset shadow covers it; the long transition keeps it from
+ * flashing back in. */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px #fff inset;
+  box-shadow: 0 0 0 1000px #fff inset;
+  -webkit-text-fill-color: inherit;
+  transition: background-color 9999s ease-in-out 0s;
+}

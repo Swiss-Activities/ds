@@ -108,7 +108,9 @@ export const Phone = ({
         {...{ required, disabled }}
         name={index ? `countryCode-${index}` : "countryCode"}
         options={countries}
-        className="relative w-full rounded-b-none focus:z-10"
+        className={cn("relative w-full rounded-b-none focus:z-10", {
+          "!border-green-600": isValid,
+        })}
         onChange={handleCountryCodeChange}
         selected={(value?.countryCode || "CH").toUpperCase()}
         advanced="desktop"
