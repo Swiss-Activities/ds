@@ -94,7 +94,11 @@ export const Drawer = ({
                 placement === "right" ? "justify-start" : "justify-end",
               )}
             >
-              <Sheet.Trigger action="dismiss" asChild>
+              <Sheet.Trigger
+                action="dismiss"
+                travelAnimation={{ opacity: [0, 1] }}
+                asChild
+              >
                 <Button
                   type="transparent"
                   icon={<Icon icon={X} size="sm" />}
@@ -142,15 +146,16 @@ export const Drawer = ({
                 )}
               </div>
               )
-            ) : showTitle ? (
-              // Bottom sheet header — legacy parity: no drag handle, title only.
-              <Sheet.Header className="pb-2 pt-2">
-                <Sheet.Title className="mt-3 text-xl font-semibold text-gray-950">
-                  {title}
-                </Sheet.Title>
-              </Sheet.Header>
             ) : (
-              <div aria-hidden />
+              // Bottom sheet header — drag handle + optional title.
+              <Sheet.Header className="pb-2 pt-2">
+                <Sheet.Handle />
+                {showTitle ? (
+                  <Sheet.Title className="mt-3 text-xl font-semibold text-gray-950">
+                    {title}
+                  </Sheet.Title>
+                ) : null}
+              </Sheet.Header>
             )}
             <Sheet.ScrollRoot className={cn("h-full min-h-0", classNameInner)}>
               <Sheet.ScrollView className="h-full min-h-0">
