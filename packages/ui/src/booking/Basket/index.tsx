@@ -9,7 +9,6 @@ import { ComplementaryActivities } from "../ComplementaryActivity";
 import { BottomBar } from "../bottom-bar";
 import { BreadcrumbsBasket } from "../BreadcrumbsBasket";
 import { CancellationCard } from "../CancellationCard";
-import { ChatButton } from "../ChatButton";
 import { SignUpCard } from "../stubs";
 import type { TActivity } from "../types/activity";
 import { getPageUrl } from "../utils/content/loaders";
@@ -136,9 +135,6 @@ export const Basket = () => {
                 </div>
               ) : null}
               <SignUpCard className="mt-8 lg:hidden" returnUrl={basketUrl} />
-              <div className="flex lg:hidden">
-                <ChatButton className="mx-auto mt-8" />
-              </div>
             </div>
           </div>
           <div className="hidden lg:block">
@@ -166,9 +162,6 @@ export const Basket = () => {
                   </Card>
                   <SignUpCard returnUrl={basketUrl} />
                   <ComplementaryActivities />
-                  <div className="flex">
-                    <ChatButton className="mx-auto" />
-                  </div>
                 </div>
               </>
             )}
