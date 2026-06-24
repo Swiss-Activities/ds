@@ -151,7 +151,7 @@ export const Rebate = () => {
     <div className="-mx-2 mt-0">
       <Accordion
         className="!min-h-[40px] !px-2 hover:!bg-white"
-        classNameChildren="!pb-0 !px-2 lg:!pb-4"
+        classNameChildren="!px-2"
         item={{ text: t("booking.rebate") }}
       >
         <div>

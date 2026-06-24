@@ -83,6 +83,7 @@ export const Accordion = ({
         tabIndex={0}
         role="button"
         as="div"
+        type="transparent"
         key={item.text}
         href={href}
         onClick={item?.onClick || onClick}
@@ -146,6 +147,7 @@ export const Accordion = ({
   }) => {
     return (
       <Button
+        type="transparent"
         key={item.text}
         href={href}
         onClick={item?.onClick || onClick}
@@ -219,7 +221,7 @@ export const Accordion = ({
             )}
           >
             <div
-              className={cn(`px-4 pb-4 lg:pb-0`, {
+              className={cn(`px-4 pb-4`, {
                 [classNameChildren]: classNameChildren,
               })}
             >
