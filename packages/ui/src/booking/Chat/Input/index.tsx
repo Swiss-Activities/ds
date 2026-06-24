@@ -58,30 +58,32 @@ export const Input = () => {
   const showRating = type === "review" && !hasUserMessages;
 
   return (
-    <div className="w-full">
+    <div className="w-full pb-2 lg:pb-4">
       {showRating && (
-        <div className="mb-3">
+        <div className="mb-2 px-6">
           <RatingUser initialRating={rating} onRating={setRating} />
         </div>
       )}
-      <form className="relative mx-auto w-full max-w-[600px]" onSubmit={handleSubmit}>
-        <Textarea
-          className="scrollbar-chat !h-auto max-h-[200px] min-h-[48px] resize-none rounded-2xl border border-solid border-gray-200 bg-white p-3.5 pe-12 !text-base shadow-sm focus:border-gray-200"
-          placeholder={t("chat.typeMessage")}
-          value={inputValue}
-          onInput={handleInput}
-          onKeyDown={handleKeyDown}
-          id="chat-input"
-        />
-        <Button
-          type="submit"
-          size="icon"
-          className="absolute end-2 top-2 rounded-xl"
-          disabled={chatIsPending ? true : !inputValue.trim()}
-          loading={!!chatIsPending}
-        >
-          <ArrowRight />
-        </Button>
+      <form className="relative w-full" onSubmit={handleSubmit}>
+        <div className="mx-auto w-[calc(100%-1rem)] max-w-[calc(600px+1.5rem)] rounded-3xl border border-solid border-gray-200 bg-gray-50/90 p-2 backdrop-blur lg:w-[calc(100%-2rem)]">
+          <Textarea
+            className="scrollbar-chat !h-auto max-h-[350px] resize-none rounded-2xl border !border-b-0 border-solid border-gray-200 bg-white p-4 pb-8 pe-12 !text-base shadow focus:border-gray-200"
+            placeholder={t("chat.typeMessage")}
+            value={inputValue}
+            onInput={handleInput}
+            onKeyDown={handleKeyDown}
+            id="chat-input"
+          />
+          <Button
+            type="submit"
+            size="icon"
+            className="absolute end-4 top-4 rounded-xl"
+            disabled={chatIsPending ? true : !inputValue.trim()}
+            loading={!!chatIsPending}
+          >
+            <ArrowRight />
+          </Button>
+        </div>
       </form>
     </div>
   );

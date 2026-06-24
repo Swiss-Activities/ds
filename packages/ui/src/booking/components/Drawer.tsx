@@ -28,6 +28,8 @@ export type DrawerProps = {
   desktopDrawer?: "left" | "right";
   modal?: boolean;
   flush?: boolean;
+  /** Edge-to-edge scroll content: no min-h-full, no padding (e.g. the chat). */
+  fullBleed?: boolean;
   padding?: boolean;
   size?: "sm" | "md" | "lg";
   onClose?: () => void;
@@ -48,6 +50,7 @@ export const Drawer = ({
   bottomLarge,
   desktopDrawer,
   flush,
+  fullBleed,
   padding = true,
   onClose,
   notCloseable,
@@ -152,7 +155,12 @@ export const Drawer = ({
             <Sheet.ScrollRoot className={cn("h-full min-h-0", classNameInner)}>
               <Sheet.ScrollView className="h-full min-h-0">
                 <Sheet.ScrollContent
-                  className={cn("min-h-full", !flush && padding && "px-4 pb-4")}
+                  className={cn(
+                    !fullBleed && "min-h-full",
+                    // Override the shared sheetInsetXClassName (px-4 lg:px-6).
+                    fullBleed && "px-0 lg:px-0",
+                    !flush && padding && "px-4 pb-4",
+                  )}
                 >
                   {children}
                 </Sheet.ScrollContent>
@@ -161,8 +169,9 @@ export const Drawer = ({
             {bottom ? (
               <div
                 className={cn(
-                  "border-0 border-t border-solid border-gray-200 bg-white px-4 py-3",
-                  bottomLarge && "py-4",
+                  !fullBleed &&
+                    "border-0 border-t border-solid border-gray-200 bg-white px-4 py-3",
+                  !fullBleed && bottomLarge && "py-4",
                 )}
               >
                 {bottom}

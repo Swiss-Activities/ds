@@ -22,6 +22,7 @@ export const Chat = () => {
       ident="chat"
       desktopDrawer="right"
       flush
+      fullBleed
       bottom={<Input />}
       classNameInner="scrollbar-chat"
       onClose={handleClose}
