@@ -150,7 +150,6 @@ export const PaymentAdyen = () => {
 
           onSubmit: async (state, _, actions) => {
             try {
-              console.log("state", state);
               const booking = await handleCheckout();
               const result = await handlePayment(booking, state);
 

@@ -421,7 +421,8 @@ const sendDataLayer = ({
           posthog.capture(obj.event, obj);
         }
       } else {
-        console.log("DataLayer: ", obj);
+        // No console.log here: the full analytics object carries user_email /
+        // user_country and would ship to the browser console in production (Q5).
         window?.dataLayer?.push(obj);
 
         if (obj?.event) {
