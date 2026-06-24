@@ -99,7 +99,7 @@ export const Phone = ({
   return (
     <Base
       {...{ title, row, rowFull, required }}
-      className={cn({
+      className={cn("[&_select]:!ps-3", {
         "[&_select]:border-green-600": isValid,
       })}
       as="div"
@@ -111,6 +111,8 @@ export const Phone = ({
         className="relative w-full rounded-b-none focus:z-10"
         onChange={handleCountryCodeChange}
         selected={(value?.countryCode || "CH").toUpperCase()}
+        advanced="desktop"
+        advancedFlush
       />
       <Input
         {...{ required, disabled }}

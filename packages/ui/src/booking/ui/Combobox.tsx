@@ -33,6 +33,8 @@ interface ComboboxProps {
   children?: ReactNode;
   contentButtonSize?: boolean;
   contentAutoWidth?: boolean;
+  /** Attach the dropdown flush to the trigger: no side offset, square top. */
+  flush?: boolean;
   isLoading?: boolean;
   onSelectionChange: (
     selectedValues: Set<string>,
@@ -60,6 +62,7 @@ export const Combobox = ({
   children,
   contentButtonSize,
   contentAutoWidth = false,
+  flush,
   isLoading,
   onSelectionChange,
   open,
@@ -131,6 +134,8 @@ export const Combobox = ({
           <PopoverTrigger asChild>
             <Button
               ref={ref}
+              type="button"
+              form="none"
               variant="outline-gray"
               size="sm"
               className="h-8 shrink-0 border-dashed"
@@ -151,8 +156,10 @@ export const Combobox = ({
           className={cn("min-w-[200px] p-0", {
             "w-full": select,
             "w-auto": contentAutoWidth,
+            "rounded-t-none border-gray-300": flush,
           })}
           align={align}
+          sideOffset={flush ? -1 : undefined}
           style={contentAutoWidth ? undefined : { width }}
         >
           <Command>

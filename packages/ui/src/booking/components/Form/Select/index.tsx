@@ -30,6 +30,7 @@ export type SelectProps = {
   advanced?: "mobile" | "desktop" | "both";
   advancedAlign?: "start" | "center" | "end";
   advancedAutoWidth?: boolean;
+  advancedFlush?: boolean;
   check?: boolean;
   className?: string;
   desktopDrawer?: "left" | "right";
@@ -49,6 +50,8 @@ const SelectCombobox = ({
   advanced,
   align,
   autoWidth,
+  className,
+  flush,
   isFlag,
   isValid,
   onChange,
@@ -62,6 +65,8 @@ const SelectCombobox = ({
   advanced?: "mobile" | "desktop" | "both";
   align?: "start" | "center" | "end";
   autoWidth?: boolean;
+  className?: string;
+  flush?: boolean;
   isFlag: boolean;
   isValid?: boolean;
   onChange: (event: ChangeEvent<HTMLSelectElement>) => void;
@@ -74,12 +79,13 @@ const SelectCombobox = ({
 }) => {
   const firstEmit = useRef(false);
   const buttonClassName = cn(
-    "h-[40px] min-h-[40px] text-base w-full text-left justify-end px-3 gap-1 flex-row-reverse sm:text-sm",
+    "h-[40px] min-h-[40px] text-base w-full text-left justify-end px-3 gap-1 flex-row-reverse !border-gray-300 sm:text-sm",
     {
       "!border-green-600 focus:!border-green-600": isValid,
       "lg:hidden": advanced === "mobile",
       "hidden lg:flex": advanced === "desktop",
-    }
+    },
+    className
   );
 
   const options = useMemo(() => {
@@ -137,6 +143,7 @@ const SelectCombobox = ({
       contentButtonSize={!autoWidth}
       contentAutoWidth={autoWidth}
       align={align}
+      flush={flush}
       sort=""
       tags={false}
     />
@@ -147,6 +154,7 @@ export const Select = ({
   advanced,
   advancedAlign = "start",
   advancedAutoWidth = false,
+  advancedFlush = false,
   check = false,
   className = "",
   desktopDrawer,
@@ -285,6 +293,7 @@ export const Select = ({
             }}
             align={advancedAlign}
             autoWidth={advancedAutoWidth}
+            flush={advancedFlush}
             options={optionsSortedAndNotDisabled}
           />
         ) : null}
