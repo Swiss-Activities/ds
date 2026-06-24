@@ -105,3 +105,22 @@ select:-webkit-autofill {
   -webkit-text-fill-color: inherit;
   transition: background-color 9999s ease-in-out 0s;
 }
+
+/* The splash-screen logo shimmer — a light sweep across the logo while a page
+ * (or booking) loads. Ported verbatim from the legacy site's tailwind.css; the
+ * DS SplashScreen + the web loading states render `.shimmer-logo` over the logo,
+ * but the keyframes/class were never carried over, so the sweep was invisible. */
+@keyframes shimmerMove {
+  0% {
+    transform: translateX(-100%) skewX(-20deg);
+  }
+  100% {
+    transform: translateX(200%) skewX(-20deg);
+  }
+}
+
+.shimmer-logo {
+  animation: shimmerMove 2s ease-in-out infinite;
+  background: linear-gradient(110deg, transparent 0%, rgba(255, 255, 255, 0.6) 50%, transparent 100%);
+  mix-blend-mode: overlay;
+}
