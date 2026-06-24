@@ -125,6 +125,7 @@ export function SiteHeader({
   menuGroups = [],
   mobileLogo = <Logo size="sm" />,
   mobileMenu = null,
+  mobileMenuButton = true,
   mobileMenuOpen,
   onMobileMenuOpenChange,
   primaryItems = [],
@@ -179,7 +180,7 @@ export function SiteHeader({
             </span>
           </a>
           {gatewaySearch}
-          <div className="flex w-full items-center justify-end sm:w-auto sm:ps-4 lg:space-x-0.5 [&>a:not(.user-button)]:!px-2 [&>button:not(.user-button)]:!px-2 [&_a]:whitespace-nowrap [&_button]:whitespace-nowrap">
+          <div className="flex w-full items-center justify-end gap-2 sm:w-auto sm:ps-4 lg:gap-0.5 [&>a:not(.user-button)]:!px-2 [&>button:not(.user-button)]:!px-2 [&_a]:whitespace-nowrap [&_button]:whitespace-nowrap">
             {children}
             {searchButton}
             {primaryItems.map((item) => {
@@ -203,7 +204,7 @@ export function SiteHeader({
             {actionItems.map((item) => (
               <HeaderActionItem item={item} key={item.id} />
             ))}
-            {mobileMenu ? (
+            {mobileMenu && mobileMenuButton ? (
               <Button
                 type="transparent"
                 size="sm"
@@ -218,7 +219,7 @@ export function SiteHeader({
                 {languageSelector}
               </div>
             ) : null}
-            {userSlot ? <div className="!ms-1.5 flex lg:!ms-4">{userSlot}</div> : null}
+            {userSlot ? <div className="flex">{userSlot}</div> : null}
           </div>
         </div>
       </Header>

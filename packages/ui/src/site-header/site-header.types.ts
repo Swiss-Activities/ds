@@ -41,6 +41,10 @@ export type SiteHeaderProps = {
   mobileLogo?: ReactNode;
   menuGroups?: SiteHeaderMenuGroup[];
   mobileMenu?: ReactNode;
+  /** Render the built-in burger trigger (default true). Set false to place a
+   * custom trigger elsewhere (e.g. inside userSlot) while still rendering the
+   * mobile menu sheet — drive it via mobileMenuOpen/onMobileMenuOpenChange. */
+  mobileMenuButton?: boolean;
   mobileMenuOpen?: boolean;
   onMobileMenuOpenChange?: (open: boolean) => void;
   primaryItems?: SiteHeaderLinkItem[];

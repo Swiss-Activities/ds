@@ -24,6 +24,7 @@ export const CartButton = ({ className }: CartButtonProps) => {
   return (
     <Button
       type="transparent"
+      size="sm"
       href={getPageUrl("basket", locale)}
       aria-label={t("pages.basket.title")}
       className={className}

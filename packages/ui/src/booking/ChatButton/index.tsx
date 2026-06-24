@@ -48,7 +48,7 @@ export const ChatButton = ({
 
   return (
     <Button type="transparent" onClick={handleClick} className={className}>
-      <BotMessageSquareIcon size={16} className="relative top-0.5 me-1.5 inline" />
+      <BotMessageSquareIcon size={16} className="me-1.5 inline" />
       <span className="relative -top-px">{label}</span>
     </Button>
   );
