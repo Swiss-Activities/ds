@@ -7,6 +7,22 @@ export type GatewayContextParams = {
   country?: string | null;
 };
 
+/**
+ * A non-2xx gateway response. Carries the numeric `status` as a structured
+ * field (not only in the message), so consumers — notably the web SSG render
+ * worker's retry/missing/failed classification — read `error.status` instead of
+ * scraping a 3-digit number out of the message text (which misreads ids/years).
+ */
+export class GatewayResponseError extends Error {
+  constructor(
+    readonly status: number,
+    readonly path: string,
+  ) {
+    super(`Gateway ${path} error: ${status}`);
+    this.name = "GatewayResponseError";
+  }
+}
+
 export const normalizeGatewayLocale = (locale?: string | null) =>
   locale ? locale.replace("_", "-") : undefined;
 
@@ -73,7 +89,7 @@ export async function fetchGatewayProxy<T>({
   const response = await fetch(url, { signal });
 
   if (!response.ok) {
-    throw new Error(`Gateway ${path} error: ${response.status}`);
+    throw new GatewayResponseError(response.status, path);
   }
 
   return (await response.json()) as T;
@@ -103,7 +119,7 @@ export async function fetchGatewayDirect<T>({
   });
 
   if (!response.ok) {
-    throw new Error(`Gateway ${path} error: ${response.status}`);
+    throw new GatewayResponseError(response.status, path);
   }
 
   return (await response.json()) as T;
