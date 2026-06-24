@@ -13,6 +13,14 @@ import { unlockCartRestore } from "../../Cart/utils";
 import { usePaymentProvider } from "../../Checkout/hooks";
 import { ComplementaryActivities } from "../../ComplementaryActivity";
 import { GetMobileApp } from "../../components/GetMobileApp";
+import {
+  allCancelled,
+  groupCustomData,
+  hasTransportBooking,
+  isActivityPast,
+  isTransportActivity,
+  type ResolvedReservation,
+} from "../customData";
 import { Status } from "../Status";
 import { TransportSection } from "../TransportSection";
 import { cn } from "../../utils/css/cn";
@@ -184,8 +192,7 @@ export const ConfirmPage = () => {
           setBooking(bookingItem);
 
           if (bookingItem) {
-            const customDataItems: CartStore["cart"]["customData"] = [];
-
+            const resolved: ResolvedReservation[] = [];
             for (const item of bookingItem?.items) {
               const act = await getActivity(item.relatedIds.activity_id_capi, locale);
               for (const itemInner of item.reservations) {
@@ -194,29 +201,19 @@ export const ConfirmPage = () => {
                 const now = dayjs().toDate();
                 const isCancellable =
                   itemInner.cancellableUntil !== null && !(cancellableUntil < now);
-
-                if (customDataItems.find((e) => e.activity.id === act.id)) {
-                  const index = customDataItems.findIndex((e) => e.activity.id === act.id);
-                  if (!(customDataItems[index]?.reservation as any).reservations) {
-                    (customDataItems[index]?.reservation as any).reservations = [];
-                  }
-                  (customDataItems[index]?.reservation as any).reservations.push(res);
-                } else {
-                  customDataItems.push({
-                    reservation: {
-                      ...res,
-                      isCancellable,
-                      cancellableUntil: itemInner.cancellableUntil,
-                      bookingItemId: item.bookingItemId,
-                      cancelledAt: item.cancelledAt,
-                      offerId: item.relatedIds.offer_id,
-                      validity: item?.validity,
-                    } as any,
-                    activity: act,
-                  });
-                }
+                resolved.push({
+                  act,
+                  res,
+                  isCancellable,
+                  cancellableUntil: itemInner.cancellableUntil,
+                  bookingItemId: item.bookingItemId,
+                  cancelledAt: item.cancelledAt,
+                  offerId: item.relatedIds.offer_id,
+                  validity: item?.validity,
+                });
               }
             }
+            const customDataItems = groupCustomData(resolved) as CartStore["cart"]["customData"];
 
             setCustomData(customDataItems);
 
@@ -225,7 +222,7 @@ export const ConfirmPage = () => {
                 setIsRebook(true);
               }
             }
-            setIsAllCancelled(bookingItem?.items?.every((e) => e?.cancelledAt));
+            setIsAllCancelled(allCancelled(bookingItem?.items));
 
             if (bookingItem.relatedBookingIds?.length > 0) {
               const relatedResults: typeof relatedData = [];
@@ -233,7 +230,7 @@ export const ConfirmPage = () => {
                 try {
                   const relatedBooking = await getBooking(relatedBkgId);
                   if (!relatedBooking) continue;
-                  const relatedItems: CartStore["cart"]["customData"] = [];
+                  const rResolved: ResolvedReservation[] = [];
                   for (const rItem of relatedBooking.items) {
                     const rAct = await getActivity(rItem.relatedIds.activity_id_capi, locale);
                     for (const rInner of rItem.reservations) {
@@ -242,31 +239,21 @@ export const ConfirmPage = () => {
                       const rIsCancellable =
                         rInner.cancellableUntil !== null &&
                         !(rCancellableUntil < dayjs().toDate());
-                      if (relatedItems.find((e) => e.activity.id === rAct.id)) {
-                        const idx = relatedItems.findIndex((e) => e.activity.id === rAct.id);
-                        if (!(relatedItems[idx]?.reservation as any).reservations) {
-                          (relatedItems[idx]?.reservation as any).reservations = [];
-                        }
-                        (relatedItems[idx]?.reservation as any).reservations.push(rRes);
-                      } else {
-                        relatedItems.push({
-                          reservation: {
-                            ...rRes,
-                            isCancellable: rIsCancellable,
-                            cancellableUntil: rInner.cancellableUntil,
-                            bookingItemId: rItem.bookingItemId,
-                            cancelledAt: rItem.cancelledAt,
-                            offerId: rItem.relatedIds.offer_id,
-                            validity: rItem?.validity,
-                          } as any,
-                          activity: rAct,
-                        });
-                      }
+                      rResolved.push({
+                        act: rAct,
+                        res: rRes,
+                        isCancellable: rIsCancellable,
+                        cancellableUntil: rInner.cancellableUntil,
+                        bookingItemId: rItem.bookingItemId,
+                        cancelledAt: rItem.cancelledAt,
+                        offerId: rItem.relatedIds.offer_id,
+                        validity: rItem?.validity,
+                      });
                     }
                   }
                   relatedResults.push({
                     bookingId: relatedBkgId,
-                    customData: relatedItems,
+                    customData: groupCustomData(rResolved) as CartStore["cart"]["customData"],
                   });
                 } catch (err) {
                   console.log("Error fetching related booking:", err);
@@ -285,23 +272,15 @@ export const ConfirmPage = () => {
     })();
   }, [bkgId, booking, madePaymentDetails]);
 
-  const hasTransportBooking =
-    (Object.values(customData) as any[]).some((d) => d?.reservation?.tripId) ||
-    relatedData?.some((r) =>
-      (Object.values(r.customData) as any[]).some((d) => d?.reservation?.tripId)
-    );
-  const isActivityPast = (Object.values(customData) as any[]).every(
-    (d) => d?.reservation?.endsAt && new Date(d.reservation.endsAt) < new Date()
-  );
-  const isTransportActivity = (Object.values(customData) as any[]).some((d) =>
-    TRANSPORT_TYPE_IDS.includes(d?.activity?.type?.id)
-  );
+  const transportBooking = hasTransportBooking(customData, relatedData);
+  const activityPast = isActivityPast(customData, new Date());
+  const transportActivity = isTransportActivity(customData, TRANSPORT_TYPE_IDS);
   const showTransport =
-    !hasTransportBooking &&
-    !isActivityPast &&
-    !isTransportActivity &&
+    !transportBooking &&
+    !activityPast &&
+    !transportActivity &&
     !isAllCancelled &&
-    Object.values(customData).length === 1;
+    customData.length === 1;
 
   return (
     <section className="bg-bg pb-20 lg:pb-24">
