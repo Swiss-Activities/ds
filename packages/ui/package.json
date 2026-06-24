@@ -90,6 +90,7 @@
     }
   },
   "scripts": {
+    "test": "bun test",
     "typecheck:web": "tsc -p tsconfig.web.json --noEmit",
     "typecheck": "bun run typecheck:web"
   },

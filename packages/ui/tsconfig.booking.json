@@ -3,5 +3,6 @@
   "compilerOptions": {
     "types": ["react", "node"]
   },
-  "include": ["src/booking/**/*"]
+  "include": ["src/booking/**/*"],
+  "exclude": ["src/**/*.test.ts", "src/**/*.test.tsx"]
 }
