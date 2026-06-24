@@ -1,5 +1,6 @@
 "use client";
 
+import { BookingPageTop } from "../BookingPageTop";
 import { cn } from "../utils/css/cn";
 import { useI18n } from "../utils/i18n/useI18n";
 
@@ -17,7 +18,7 @@ export const BreadcrumbsBasket = ({ active = 1 }: BreadcrumbsBasketProps) => {
   ];
 
   return (
-    <div className="sa-container space-y-8 py-8 pt-4 lg:py-12">
+    <BookingPageTop className="space-y-8 pb-8 lg:pb-12">
       <div className="relative mx-auto flex w-full max-w-screen-lg justify-between">
         <div className="absolute start-0 top-0 h-10 w-full lg:h-12">
           <div className="absolute left-1/2 top-1/2 mt-1 h-px w-[calc(100%-56px)] -translate-x-1/2 -translate-y-1/2 bg-gray-200" />
@@ -46,6 +47,6 @@ export const BreadcrumbsBasket = ({ active = 1 }: BreadcrumbsBasketProps) => {
           </div>
         ))}
       </div>
-    </div>
+    </BookingPageTop>
   );
 };

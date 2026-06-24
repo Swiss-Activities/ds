@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import dayjs from "dayjs";
 import { Text } from "@swiss-activities/ui";
 import { Activity } from "../../Activity";
+import { BookingPageTop } from "../../BookingPageTop";
 import { ConfirmDrawer } from "../../Activity/Drawer";
 import { EditBookingDrawer } from "../../Activity/Drawer/Edit";
 import { Card } from "../../Card";
@@ -304,6 +305,9 @@ export const ConfirmPage = () => {
 
   return (
     <section className="bg-bg pb-20 lg:pb-24">
+      {/* Shared top spacing so confirm starts at the same offset below the header
+          as the basket/checkout funnel pages (which get it from the breadcrumb). */}
+      <BookingPageTop />
       <div className="sa-container">
         <div className="grid grid-cols-1 gap-8 mb-8 lg:grid-cols-[minmax(0,2fr)_minmax(0,1fr)] lg:gap-12">
           <div>
