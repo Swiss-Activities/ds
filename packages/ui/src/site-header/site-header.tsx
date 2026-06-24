@@ -7,6 +7,7 @@ import { Header } from "../header";
 import { Icon } from "../icon/icon";
 import { Logo } from "../logo";
 import { SheetFull } from "../sheet/Full";
+import { sheetTallHeightClassName } from "../sheet/shared";
 import { Text } from "../text";
 import { cn } from "../utils/cn";
 import type {
@@ -92,7 +93,12 @@ function MobileMenuSheet({
         <SheetFull.View contentPlacement="bottom">
           <SheetFull.Backdrop />
           <SheetFull.CloseButton label={label} />
-          <SheetFull.Content className="grid grid-rows-[min-content_1fr] bg-white">
+          <SheetFull.Content
+            className={cn(
+              "grid grid-rows-[min-content_1fr] rounded-t-3xl bg-white",
+              sheetTallHeightClassName
+            )}
+          >
             <SheetFull.Header className="pb-4 pt-2">
               <SheetFull.Handle />
             </SheetFull.Header>

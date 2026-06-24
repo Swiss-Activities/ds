@@ -9,6 +9,17 @@ import { cn } from "../utils/cn";
 
 export const sheetInsetXClassName = "px-4 lg:px-6";
 
+/**
+ * Bottom-sheet height — full viewport minus a 40px top gap. `h-full` does not
+ * resolve inside Silk's Content, so we use the explicit calc; defined here once
+ * so sheets reference it instead of re-spelling it. Pair
+ * `sheetMaxHeightClassName` with `h-auto` for content-sized sheets that should
+ * still cap at the same gap.
+ */
+export const sheetMaxHeightClassName = "max-h-[calc(100dvh-40px)]";
+export const sheetTallHeightClassName =
+  "h-[calc(100dvh-40px)] min-h-[calc(100dvh-40px)] max-h-[calc(100dvh-40px)]";
+
 type HandleProps = React.ComponentPropsWithoutRef<typeof Sheet.Handle>;
 
 export const Handle = React.forwardRef<
@@ -45,15 +56,33 @@ export const Backdrop = React.forwardRef<
 });
 Backdrop.displayName = "Sheet.Backdrop";
 
-export function CloseButton({ label = "Close" }: { label?: string }) {
+/**
+ * The single close button for every sheet: floats over the backdrop and fades
+ * with the travel progress (in sync with the backdrop). `align` places it in a
+ * top corner and keeps the X toward that edge — `end` (default, top-right) →
+ * "Label ✕"; `start` (top-left, e.g. a right-side drawer) → "✕ Label".
+ */
+export function CloseButton({
+  label = "Close",
+  align = "end",
+}: {
+  label?: string;
+  align?: "start" | "end";
+}) {
   return (
-    <div className="pointer-events-none absolute inset-0 z-10 flex items-start justify-end">
-      <Sheet.Trigger action="dismiss" asChild>
+    <div
+      className={cn(
+        "pointer-events-none absolute inset-0 z-10 flex items-start",
+        align === "start" ? "justify-start" : "justify-end"
+      )}
+    >
+      <Sheet.Trigger action="dismiss" travelAnimation={{ opacity: [0, 1] }} asChild>
         <Button
           type="transparent"
           icon={<Icon icon={X} size="sm" />}
           text={label}
-          className="pointer-events-auto !min-h-[40px] !border-none !text-white gap-1.5 hover:!bg-transparent focus-visible:!outline-white"
+          reverse={align === "end"}
+          className="pointer-events-auto !min-h-[40px] gap-1.5 !border-none !text-white hover:!bg-transparent focus-visible:!outline-white"
         />
       </Sheet.Trigger>
     </div>

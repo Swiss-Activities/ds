@@ -1,5 +1,9 @@
 import { useEffect, useState, type ReactNode } from "react";
 import { SheetFull as Sheet, cn, Button, Icon, X } from "@swiss-activities/ui";
+import {
+  sheetMaxHeightClassName,
+  sheetTallHeightClassName,
+} from "../../sheet/shared";
 import { useDrawerStore } from "../store/drawer";
 import { useI18n } from "../utils/i18n/useI18n";
 
@@ -88,26 +92,10 @@ export const Drawer = ({
         >
           <Sheet.Backdrop />
           {notCloseable ? null : (
-            <div
-              className={cn(
-                "pointer-events-none absolute inset-x-0 top-0 z-10 flex items-start p-1",
-                placement === "right" ? "justify-start" : "justify-end",
-              )}
-            >
-              <Sheet.Trigger
-                action="dismiss"
-                travelAnimation={{ opacity: [0, 1] }}
-                asChild
-              >
-                <Button
-                  type="transparent"
-                  icon={<Icon icon={X} size="sm" />}
-                  text={t("Drawer.close")}
-                  reverse
-                  className="pointer-events-auto gap-1.5 !min-h-[40px] !border-none !text-white hover:!bg-transparent"
-                />
-              </Sheet.Trigger>
-            </div>
+            <Sheet.CloseButton
+              label={t("Drawer.close")}
+              align={placement === "right" ? "start" : "end"}
+            />
           )}
           <Sheet.Content
             stackingAnimation={{ scale: [1, 0.92], translateY: ["0px", "-12px"] }}
@@ -116,11 +104,14 @@ export const Drawer = ({
               bottom
                 ? "grid-rows-[min-content_1fr_min-content]"
                 : "grid-rows-[min-content_1fr]",
+              // Bottom sheets: tall ones use the shared calc height; auto ones
+              // size to content but cap at the same gap. Side drawers are full.
               isSide
                 ? "h-dvh min-h-dvh max-h-none w-[min(92vw,600px)] max-w-[min(92vw,600px)] rounded-none"
-                : wantsTall
-                  ? "h-[calc(100dvh-40px)] max-h-[calc(100dvh-40px)] min-h-[calc(100dvh-40px)] rounded-t-3xl"
-                  : "h-auto max-h-[90dvh] rounded-t-3xl",
+                : cn(
+                    "rounded-t-3xl",
+                    wantsTall ? sheetTallHeightClassName : cn("h-auto", sheetMaxHeightClassName),
+                  ),
               classNameContent,
             )}
           >
