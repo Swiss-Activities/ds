@@ -161,6 +161,48 @@ export type BookingStore = {
   setWidgetTab: (widgetTab: BookingStore["widgetTab"]) => void;
 };
 
+/**
+ * Canonical initial values for the resettable booking fields. Both reset() and
+ * resetInlineCheckout() spread this then apply their explicit deltas, so a new
+ * field can't silently diverge across the copies the way showDiscountedTickets
+ * and isRestoreError already had (PRD Q4). The live store's initial state is
+ * built inline below and intentionally keeps personalizedOptionsValues as
+ * `false` (a truthiness gate in hooks.ts) — only the resets use `{}`.
+ */
+const DEFAULT_BOOKING_STATE = {
+  active: "date",
+  activity: null,
+  availability: null,
+  bookingId: null,
+  dates: {},
+  error: null,
+  flowType: "date-offers",
+  isChat: false,
+  isCheckout: false,
+  isInlineCheckout: false,
+  isLoading: false,
+  isRebook: false,
+  isReservationLoaded: false,
+  isRestore: false,
+  isRestoreError: false,
+  offer: null,
+  offerId: null,
+  personalizedOptions: [],
+  personalizedOptionsCache: {},
+  personalizedOptionsValidated: false,
+  personalizedOptionsValues: {},
+  reservation: null,
+  tickets: {},
+  ticketsAudiences: {},
+  ticketSelections: {},
+  ticketSelectionsMetadata: {},
+  ticketClassSelections: {},
+  categoryType: null,
+  hasAutoSelectedTicket: false,
+  showDiscountedTickets: true,
+  visitedSteps: {},
+} satisfies Partial<BookingStore>;
+
 export const useBookingStore = create<BookingStore>((set, get) => {
   let widgetTab = "booking" as BookingStore["widgetTab"];
 
@@ -448,36 +490,10 @@ export const useBookingStore = create<BookingStore>((set, get) => {
 
     reset: (data: Partial<BookingStore> = {}) => {
       set({
-        active: "date",
-        activity: null,
-        availability: null,
-        bookingId: null,
-        dates: {},
-        error: null,
-        flowType: "date-offers",
-        isChat: false,
-        isCheckout: false,
-        isInlineCheckout: false,
-        isLoading: false,
-        isRebook: false,
-        isReservationLoaded: false,
-        isRestore: false,
-        isRestoreError: false,
-        offer: null,
-        personalizedOptions: [],
-        personalizedOptionsCache: {},
-        personalizedOptionsValidated: false,
-        personalizedOptionsValues: {},
-        reservation: null,
-        tickets: {},
-        ticketsAudiences: {},
-        ticketSelections: {},
-        ticketSelectionsMetadata: {},
-        ticketClassSelections: {},
-        categoryType: null,
-        hasAutoSelectedTicket: false,
-        showDiscountedTickets: false,
-        visitedSteps: {},
+        ...DEFAULT_BOOKING_STATE,
+        // The full reset leaves offerId untouched — the offer can be
+        // pre-selected from page context (inline checkout differs, see below).
+        offerId: get().offerId,
         widgetTab,
         ...data,
       });
@@ -485,36 +501,11 @@ export const useBookingStore = create<BookingStore>((set, get) => {
 
     resetInlineCheckout: (data: Partial<BookingStore> = {}) => {
       set({
-        active: "date",
-        activity: null,
-        availability: null,
-        bookingId: null,
-        dates: {},
-        error: null,
-        flowType: "date-offers",
-        isChat: false,
-        isCheckout: false,
-        isLoading: false,
-        isRebook: false,
-        isReservationLoaded: false,
-        isRestore: false,
-        isRestoreError: false,
-        offer: null,
+        ...DEFAULT_BOOKING_STATE,
+        // Inline checkout resets *within* the inline flow: keep inline-checkout
+        // mode on and use offerId 0 (its sentinel), unlike the full reset.
+        isInlineCheckout: get().isInlineCheckout,
         offerId: 0,
-        personalizedOptions: [],
-        personalizedOptionsCache: {},
-        personalizedOptionsValidated: false,
-        personalizedOptionsValues: {},
-        reservation: null,
-        tickets: {},
-        ticketsAudiences: {},
-        ticketSelections: {},
-        ticketSelectionsMetadata: {},
-        ticketClassSelections: {},
-        categoryType: null,
-        hasAutoSelectedTicket: false,
-        showDiscountedTickets: false,
-        visitedSteps: {},
         widgetTab,
         ...data,
       });

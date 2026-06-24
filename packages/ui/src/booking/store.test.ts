@@ -83,3 +83,55 @@ describe("booking store — ticket audience reducers", () => {
     expect(state.tickets).toEqual({ 101: 1 });
   });
 });
+
+describe("booking store — reset() / resetInlineCheckout()", () => {
+  it("reset() restores showDiscountedTickets to its true default (PRD Q4 drift)", () => {
+    const s = useBookingStore.getState();
+    s.setShowDiscountedTickets(false);
+    s.reset();
+    expect(useBookingStore.getState().showDiscountedTickets).toBe(true);
+  });
+
+  it("resetInlineCheckout() restores showDiscountedTickets to its true default", () => {
+    const s = useBookingStore.getState();
+    s.setShowDiscountedTickets(false);
+    s.resetInlineCheckout();
+    expect(useBookingStore.getState().showDiscountedTickets).toBe(true);
+  });
+
+  it("resetInlineCheckout() clears a restore error (no leak into inline checkout)", () => {
+    const s = useBookingStore.getState();
+    s.setIsRestoreError(true);
+    s.resetInlineCheckout();
+    expect(useBookingStore.getState().isRestoreError).toBe(false);
+  });
+
+  it("resetInlineCheckout() keeps inline-checkout mode on", () => {
+    const s = useBookingStore.getState();
+    s.setIsInlineCheckout(true);
+    s.resetInlineCheckout();
+    expect(useBookingStore.getState().isInlineCheckout).toBe(true);
+  });
+
+  it("reset() turns inline-checkout mode off", () => {
+    const s = useBookingStore.getState();
+    s.setIsInlineCheckout(true);
+    s.reset();
+    expect(useBookingStore.getState().isInlineCheckout).toBe(false);
+  });
+
+  it("reset() clears selection + error state to baseline", () => {
+    const s = useBookingStore.getState();
+    s.setFlowType("date-offers");
+    s.setTicketAudienceAmount("adult", 2);
+    s.setTicketSelection("adult-0", 101);
+    s.setError("boom");
+    s.reset();
+    const state = useBookingStore.getState();
+    expect(state.ticketsAudiences).toEqual({});
+    expect(state.ticketSelections).toEqual({});
+    expect(state.tickets).toEqual({});
+    expect(state.error).toBeNull();
+    expect(state.activity).toBeNull();
+  });
+});
