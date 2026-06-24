@@ -227,3 +227,12 @@ export function computeDeposits(
 
   return { deposits, currency, total };
 }
+
+/**
+ * A price block renders for any concrete amount INCLUDING 0 (a genuinely free
+ * item) — only null/undefined hides it. The old `!price` guard hid free offers
+ * entirely, a real gap given the free-booking flow exists (PRD Q7).
+ */
+export function isPriceVisible(price: number | null | undefined): boolean {
+  return price != null;
+}

@@ -1,5 +1,5 @@
 import { describe, expect, it } from "bun:test";
-import { computeDeposits, computeDisplayPrice, computeTotal } from "./pricing";
+import { computeDeposits, computeDisplayPrice, computeTotal, isPriceVisible } from "./pricing";
 import type { TOfferBooking } from "./types/offerBooking";
 
 const price = (amount: string, currency = "CHF") => ({
@@ -178,6 +178,15 @@ describe("computeTotal", () => {
   it("ignores ticket keys absent from the offer", () => {
     const offer = makeOffer({ ticketCategories: [adult(101, "50")] });
     expect(computeTotal(offer, { 999: 4 })).toBe(0);
+  });
+});
+
+describe("isPriceVisible", () => {
+  it("renders free (0) and any concrete price; hides only null/undefined", () => {
+    expect(isPriceVisible(0)).toBe(true); // PRD Q7 — free items must render
+    expect(isPriceVisible(50)).toBe(true);
+    expect(isPriceVisible(null)).toBe(false);
+    expect(isPriceVisible(undefined)).toBe(false);
   });
 });
 

@@ -9,5 +9,6 @@
     "skipLibCheck": true,
     "allowJs": true
   },
-  "include": ["src/**/*.ts", "src/**/*.cjs"]
+  "include": ["src/**/*.ts", "src/**/*.cjs"],
+  "exclude": ["src/**/*.test.ts"]
 }

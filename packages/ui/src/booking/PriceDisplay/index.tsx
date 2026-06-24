@@ -1,3 +1,4 @@
+import { isPriceVisible } from "../pricing";
 import { cn } from "../utils/css/cn";
 import { useI18n } from "../utils/i18n/useI18n";
 
@@ -20,7 +21,8 @@ export const PriceDisplay = ({
 }: PriceDisplayProps) => {
   const { t } = useI18n();
 
-  if (!price) return null;
+  // `price == null` not `!price`: a free (0) item must still render (PRD Q7).
+  if (!isPriceVisible(price)) return null;
 
   return (
     <div className={cn(className, "price-display")}>

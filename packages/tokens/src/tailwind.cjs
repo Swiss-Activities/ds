@@ -29,7 +29,7 @@ const dsTailwindTokens = {
     gray: grayColors,
     sa: saColors,
     semantic: {
-      green: "#17a34a",
+      green: "#16a34a",
       orange: "#ff9f0a",
       orangeLight: "#fff0d8",
       yellow: "#facc15",

@@ -1359,7 +1359,7 @@ function formatPrice(value: number | null) {
   return value ? `CHF ${value}` : "";
 }
 
-function toActivityCardItem(
+export function toActivityCardItem(
   value: unknown,
   localeKey = "de_CH"
 ): TGatewayActivityCardItem | null {
@@ -1380,14 +1380,16 @@ function toActivityCardItem(
     title,
     type: "activity",
     imageUrl: imageUrl || null,
+    // `||` not `??`: getString returns "" (never nullish) on a miss, so `??`
+    // would never fall back — a non-de-CH card would lose its url/price (TS8).
     priceFormatted:
-      getString(value, ["summary", "startingPrice", "formatted"]) ??
+      getString(value, ["summary", "startingPrice", "formatted"]) ||
       formatPrice(getNumber(value, ["summary", "startingPrice"])),
     rating: getNumber(value, ["rating", "average_rating"]),
     reviewCount: getNumber(value, ["rating", "num_ratings"]),
     path:
-      getString(value, ["urls", localeKey]) ??
-      getString(value, ["urls", "de_CH"]) ??
+      getString(value, ["urls", localeKey]) ||
+      getString(value, ["urls", "de_CH"]) ||
       null,
     subtitle: getString(value, ["location", "title"]) || null,
   };
@@ -1426,7 +1428,7 @@ function getActivityBreadcrumbs(
   return getArray(detail.activity, ["breadcrumbs"]).flatMap((crumb) => {
     const label = getString(crumb, ["title"]);
     const href =
-      getString(crumb, ["urls", localeKey]) ?? getString(crumb, ["urls", "de_CH"]);
+      getString(crumb, ["urls", localeKey]) || getString(crumb, ["urls", "de_CH"]);
     return label && href ? [{ label, href }] : [];
   });
 }

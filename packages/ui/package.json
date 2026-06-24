@@ -18,6 +18,10 @@
       "types": "./src/booking/public.ts",
       "default": "./src/booking/public.ts"
     },
+    "./booking/data/pages": {
+      "types": "./src/booking/data/pages.ts",
+      "default": "./src/booking/data/pages.ts"
+    },
     "./tokens": {
       "types": "./src/tokens/index.ts",
       "default": "./src/tokens/index.ts"

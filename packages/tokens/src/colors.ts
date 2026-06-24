@@ -27,7 +27,7 @@ export const saColors = {
 export type SaColorName = keyof typeof saColors;
 
 export const semanticPalette = {
-  green: "#17a34a",
+  green: "#16a34a",
   greenLight: "#dcfce7",
   orange: "#ff9f0a",
   orangeLight: "#fff0d8",

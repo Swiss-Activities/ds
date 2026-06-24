@@ -1,4 +1,4 @@
-import { grayColors, saColors } from './colors';
+import { grayColors, saColors, semanticPalette } from './colors';
 import { saRadius } from './radius';
 import { fontFamilies } from './typography';
 
@@ -189,14 +189,14 @@ export const componentTokens = {
     availabilitySelect: {
       background: '#ffffff',
       border: grayColors['200'],
-      selectedBorder: '#16a34a',
+      selectedBorder: semanticPalette.green,
       radius: saRadius.md,
       paddingX: 16,
       paddingY: 12,
       minHeight: 48,
       iconSize: 32,
       iconRadius: saRadius.md,
-      iconBackground: '#16a34a',
+      iconBackground: semanticPalette.green,
       iconColor: '#ffffff',
       chevronColor: grayColors['500'],
       menuBackground: '#ffffff',
