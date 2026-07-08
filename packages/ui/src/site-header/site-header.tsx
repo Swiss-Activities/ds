@@ -186,7 +186,7 @@ export function SiteHeader({
             </span>
           </a>
           {gatewaySearch}
-          <div className="flex w-full items-center justify-end gap-2 sm:w-auto sm:ps-4 lg:gap-0.5 [&>a:not(.user-button)]:!px-2 [&>button:not(.user-button)]:!px-2 [&_a]:whitespace-nowrap [&_button]:whitespace-nowrap">
+          <div className="flex w-full items-center justify-end gap-0.5 sm:w-auto sm:ps-4 [&>a:not(.user-button)]:!px-2 [&>button:not(.user-button)]:!px-2 [&_a]:whitespace-nowrap [&_button]:whitespace-nowrap">
             {children}
             {searchButton}
             {primaryItems.map((item) => {
