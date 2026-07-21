@@ -164,9 +164,9 @@ export const useAffiliateData = () => {
       url.searchParams.get("affiliateId") ||
       "";
 
-    // Präzedenz: URL-Query > Cookie sa_click > Cookie affiliateId. Vorher gewann das
-    // alte affiliateId-Cookie gegen den frischen Query-Parameter — im Widget-Kontext
-    // verlor dadurch der Partner, auf dessen Seite gerade gebucht wird.
+    // Präzedenz: URL-Query > Cookie sa_click > Cookie affiliateId (Contract §3),
+    // aber erst wirksam, sobald ein sa_click existiert — ohne sa_click bleibt es
+    // beim heutigen Verhalten (altes Cookie zuerst). Details im Resolver.
     const { affiliateReferralCode, affiliateClickId } =
       resolveAffiliateAttribution(
         queryId,
