@@ -6,6 +6,7 @@ type PaymentAttemptRequest = {
     affiliateReferralCode: string;
     affiliateReferrer: string | null;
     affiliateLandingPage: string | null;
+    affiliateClickId?: string;
   } | null;
   channelId: string | null;
   failureReturnUrl: string;
