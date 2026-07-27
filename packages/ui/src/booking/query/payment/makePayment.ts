@@ -10,6 +10,7 @@ export type MakePaymentRequest = {
     affiliateReferralCode?: string;
     affiliateReferrer?: string | null;
     affiliateLandingPage?: string | null;
+    affiliateClickId?: string;
   } | null;
   storePaymentMethod?: boolean;
   authenticationData?: {

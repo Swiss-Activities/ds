@@ -6,6 +6,7 @@ import { useBookingStore } from "../store";
 import { PAYMENT_PROVIDER } from "../data/constants/paymentProvider";
 import { useAffiliateStore } from "../store/affiliateStore";
 import type { TBooking } from "../types/booking";
+import { resolveAffiliateAttribution } from "../utils/affiliate/resolveAffiliateAttribution";
 import { getCookie } from "../utils/cookies/getCookie";
 import { secureLocalStorage } from "../utils/data/secureLocalStorage";
 import { useI18n } from "../utils/i18n/useI18n";
@@ -148,6 +149,7 @@ export const useAffiliateData = () => {
     affiliateReferralCode: string;
     affiliateLandingPage: string | null;
     affiliateReferrer: string;
+    affiliateClickId?: string;
   } | null>(null);
 
   const affiliateLandingPage = useAffiliateStore(
@@ -155,25 +157,32 @@ export const useAffiliateData = () => {
   );
 
   useEffect(() => {
-    let id = getCookie("affiliateId");
+    const url = new URL(window.location.href);
+    const queryId =
+      url.searchParams.get("ref") ||
+      url.searchParams.get("affiliateid") ||
+      url.searchParams.get("affiliateId") ||
+      "";
 
-    if (!id) {
-      const url = new URL(window.location.href);
-      id =
-        url.searchParams.get("ref") ||
-        url.searchParams.get("affiliateid") ||
-        url.searchParams.get("affiliateId") ||
-        "";
-    }
+    // Präzedenz: URL-Query > Cookie sa_click > Cookie affiliateId (Contract §3),
+    // aber erst wirksam, sobald ein sa_click existiert — ohne sa_click bleibt es
+    // beim heutigen Verhalten (altes Cookie zuerst). Details im Resolver.
+    const { affiliateReferralCode, affiliateClickId } =
+      resolveAffiliateAttribution(
+        queryId,
+        getCookie("sa_click"),
+        getCookie("affiliateId")
+      );
 
-    if (id) {
+    if (affiliateReferralCode || affiliateClickId) {
       setIsAffiliate(true);
     }
 
     setAffiliateData({
-      affiliateReferralCode: id,
+      affiliateReferralCode,
       affiliateLandingPage: affiliateLandingPage || null,
       affiliateReferrer: document?.referrer || "",
+      ...(affiliateClickId ? { affiliateClickId } : {}),
     });
   }, [affiliateLandingPage]);
 
