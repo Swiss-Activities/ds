@@ -14,17 +14,12 @@ export type GatewayContextParams = {
  * scraping a 3-digit number out of the message text (which misreads ids/years).
  */
 export class GatewayResponseError extends Error {
-  // Declared as fields and assigned in the body rather than as constructor
-  // parameter properties: those are not erasable type syntax, which the
-  // storybook-web tsconfig rejects under `erasableSyntaxOnly`.
-  readonly status: number;
-  readonly path: string;
-
-  constructor(status: number, path: string) {
+  constructor(
+    readonly status: number,
+    readonly path: string,
+  ) {
     super(`Gateway ${path} error: ${status}`);
     this.name = "GatewayResponseError";
-    this.status = status;
-    this.path = path;
   }
 }
 

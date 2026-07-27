@@ -23,7 +23,7 @@ export type TGatewayHomeItem = {
       }
   >;
   subtitle?: string | null;
-  path?: string | null;
+  path?: string;
   webPath?: string | null;
   detailPath?: string | null;
   lat?: number | null;
