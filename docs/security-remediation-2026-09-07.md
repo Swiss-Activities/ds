@@ -22,3 +22,5 @@ CI repeats the focused security tests, UI typecheck and high-severity dependency
 Owner: design-system maintainer, with the consuming application's frontend owner. First publish the reviewed library revision, then update one consuming application in staging. Pass criteria: allowed flows continue, missing/wrong booking credentials are rejected by the server, SSR/analytics do not expose credentials, both image-processing tests pass, and the dependency audit has no high/critical findings. Roll out consumers gradually only after their application-specific acceptance checks. Roll back by pinning the previous reviewed library revision; retain server authorization and disable an incompatible consumer flow until corrected. Credential storage may be cleared locally to force re-establishment.
 
 Follow-up: nested payment-attempt response envelopes preserve the creating request’s booking proof. The regression also verifies that an unknown parent cannot establish a proof.
+
+Strict consumer integration also narrows indexed elements explicitly in the scroller and review counts, preserving existing behavior under `noUncheckedIndexedAccess`.
