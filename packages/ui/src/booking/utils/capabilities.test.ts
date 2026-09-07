@@ -51,3 +51,12 @@ describe("booking and device capabilities", () => {
     expect(getBookingAccessToken("blocked-1")).toBe("synthetic-blocked");
   });
 });
+
+it("retains parent proof for booking-item cancellation and a newly created payment attempt", () => {
+  rememberBookingAccess({bookingId:"parent-1",bookingAccessToken:"synthetic-parent",items:[{bookingItemId:"item-1"}],paymentAttempts:[{paymentAttemptId:"attempt-1"}]});
+  expect(bookingAccessForRequest("/booking_items/item-1/cancel")).toBe("synthetic-parent");
+  expect(bookingAccessForRequest("/payment_attempts/attempt-1")).toBe("synthetic-parent");
+  rememberBookingAccess({paymentAttemptId:"attempt-2"},"/bookings/parent-1/payment_attempts");
+  expect(bookingAccessForRequest("/payment_attempts/attempt-2")).toBe("synthetic-parent");
+  expect(bookingAccessForRequest("/booking_items/another-item/cancel")).toBeUndefined();
+});

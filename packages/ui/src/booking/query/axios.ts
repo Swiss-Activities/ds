@@ -7,7 +7,7 @@ const API_BASE = "/api/web";
 const BOOKING_BASE = "/api/booking";
 const GATEWAY_BASE = "/api/gateway";
 
-const successHandler = (response: AxiosResponse) => { rememberBookingAccess(response.data); return response; };
+const successHandler = (response: AxiosResponse) => { rememberBookingAccess(response.data, response.config.url, response.config.data); return response; };
 const errorHandler = (error: AxiosError) => {
   return Promise.reject({ ...error });
 };

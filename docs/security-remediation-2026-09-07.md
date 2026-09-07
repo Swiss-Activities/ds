@@ -2,14 +2,14 @@
 
 This change adds booking-scoped request credentials to the booking client, captures credentials from incoming ticket links before routing, and preserves them only in browser session storage/current-tab memory. An independent random device identifier is available for authenticated plan storage protocols. Server rendering never caches these credentials. Intentional ticket sharing includes the booking credential; telemetry must not include these URLs.
 
-The booking restore operation uses POST. Both static and session-specific Axios clients attach a credential only to the matching booking. Server-side authorization remains authoritative. Integrators must capture incoming credentials before initializing analytics, publish a no-referrer policy, and verify valid/expired credentials, fresh checkout, signed-in booking recovery, ticket sharing and restore in staging before adopting the updated submodule.
+The booking restore operation uses POST. Both static and session-specific Axios clients attach a credential only to the matching booking. Authorized booking items and newly created payment attempts retain their parent booking credential for cancellation and payment status requests. Server-side authorization remains authoritative. Integrators must capture incoming credentials before initializing analytics, publish a no-referrer policy, and verify valid/expired credentials, fresh checkout, signed-in booking recovery, ticket sharing and restore in staging before adopting the updated submodule.
 
 Dependencies were refreshed within declared compatible ranges, with sharp 0.35.4 supplying a corrected libvips runtime. Explicit React DOM peer/type declarations and two existing type-contract mismatches were corrected so a clean isolated install can run the full validation. The lockfile is committed.
 
 ## Local validation
 
-- `bun run test:security`: 8 passed, including accepted/rejected credential boundaries and valid/invalid image input.
-- `bun run test`: tokens 3, data 30, UI 50 passed (83 total).
+- `bun run test:security`: 9 passed, including accepted/rejected credential boundaries and valid/invalid image input.
+- `bun run test`: tokens 3, data 30, UI 51 passed (84 total).
 - `bun run typecheck`: passed for tokens, data, UI and Storybook.
 - `STORYBOOK_DISABLE_TELEMETRY=1 bun run build:web`: passed.
 - `bun audit --json`: no reported advisories on 2026-09-07.

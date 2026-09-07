@@ -22,14 +22,22 @@ export function getPlanToken(): string | undefined {
   }
 }
 
-export function rememberBookingAccess(value: unknown): void {
+export function rememberBookingAccess(value: unknown, requestPath?: string, requestBody?: unknown): void {
   if (!value || typeof value !== "object") return;
-  if (Array.isArray(value)) { value.forEach(rememberBookingAccess); return; }
+  if (Array.isArray(value)) { value.forEach(entry => rememberBookingAccess(entry)); return; }
   const entry = value as Record<string, unknown>;
-  const id = entry.bookingId ?? entry.id;
-  if (typeof window !== "undefined" && bookingIdValid(id) && typeof entry.bookingAccessToken === "string" && entry.bookingAccessToken.length <= 8192) {
-    memory.set(BOOKING_KEY + id, entry.bookingAccessToken);
-    try { window.sessionStorage.setItem(BOOKING_KEY + id, entry.bookingAccessToken); } catch { /* Current-tab access still works when storage is blocked. */ }
+  const id = entry.bookingId ?? entry.paymentAttemptId ?? entry.id;
+  const token = typeof entry.bookingAccessToken === "string" ? entry.bookingAccessToken :
+    bookingAccessForRequest(requestPath, requestBody) ?? (bookingIdValid(id) ? getBookingAccessToken(id) : undefined);
+  if (typeof window !== "undefined" && bookingIdValid(id) && token && token.length <= 8192) {
+    const aliases: unknown[] = [id];
+    for (const key of ["items", "paymentAttempts", "payments"]) {
+      if (Array.isArray(entry[key])) for (const child of entry[key] as Record<string, unknown>[]) aliases.push(child.bookingItemId ?? child.paymentAttemptId ?? child.id);
+    }
+    for (const alias of aliases) if (bookingIdValid(alias)) {
+      memory.set(BOOKING_KEY + alias, token);
+      try { window.sessionStorage.setItem(BOOKING_KEY + alias, token); } catch { /* Current-tab access still works when storage is blocked. */ }
+    }
   }
   for (const key of ["booking", "bookings", "results", "data", "items"]) rememberBookingAccess(entry[key]);
 }
@@ -58,7 +66,7 @@ export function bookingAccessForRequest(path: string | undefined, body?: unknown
   if (!path || !path.startsWith("/") || path.startsWith("//") || path.includes("\\")) return undefined;
   let data = body;
   if (typeof data === "string") { try { data = JSON.parse(data); } catch { return undefined; } }
-  const id = /\/bookings\/([^/?]+)/.exec(path)?.[1] ?? (data && typeof data === "object" ? (data as Record<string, unknown>).bookingId : undefined);
+  const id = /\/(?:bookings|booking_items|payment_attempts|payments)\/([^/?]+)/.exec(path)?.[1] ?? (data && typeof data === "object" ? (data as Record<string, unknown>).bookingId : undefined);
   return bookingIdValid(id) ? getBookingAccessToken(id) : undefined;
 }
 
