@@ -8,8 +8,8 @@ Dependencies were refreshed within declared compatible ranges, with sharp 0.35.4
 
 ## Local validation
 
-- `bun run test:security`: 9 passed, including accepted/rejected credential boundaries and valid/invalid image input.
-- `bun run test`: tokens 3, data 30, UI 51 passed (84 total).
+- `bun run test:security`: 10 passed, including accepted/rejected credential boundaries and valid/invalid image input.
+- `bun run test`: tokens 3, data 30, UI 52 passed (85 total).
 - `bun run typecheck`: passed for tokens, data, UI and Storybook.
 - `STORYBOOK_DISABLE_TELEMETRY=1 bun run build:web`: passed.
 - `bun audit --json`: no reported advisories on 2026-09-07.
@@ -20,3 +20,5 @@ CI repeats the focused security tests, UI typecheck and high-severity dependency
 ## Integration and rollback
 
 Owner: design-system maintainer, with the consuming application's frontend owner. First publish the reviewed library revision, then update one consuming application in staging. Pass criteria: allowed flows continue, missing/wrong booking credentials are rejected by the server, SSR/analytics do not expose credentials, both image-processing tests pass, and the dependency audit has no high/critical findings. Roll out consumers gradually only after their application-specific acceptance checks. Roll back by pinning the previous reviewed library revision; retain server authorization and disable an incompatible consumer flow until corrected. Credential storage may be cleared locally to force re-establishment.
+
+Follow-up: nested payment-attempt response envelopes preserve the creating request’s booking proof. The regression also verifies that an unknown parent cannot establish a proof.

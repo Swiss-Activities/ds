@@ -24,7 +24,7 @@ export function getPlanToken(): string | undefined {
 
 export function rememberBookingAccess(value: unknown, requestPath?: string, requestBody?: unknown): void {
   if (!value || typeof value !== "object") return;
-  if (Array.isArray(value)) { value.forEach(entry => rememberBookingAccess(entry)); return; }
+  if (Array.isArray(value)) { value.forEach(entry => rememberBookingAccess(entry, requestPath, requestBody)); return; }
   const entry = value as Record<string, unknown>;
   const id = entry.bookingId ?? entry.paymentAttemptId ?? entry.id;
   const token = typeof entry.bookingAccessToken === "string" ? entry.bookingAccessToken :
@@ -39,7 +39,7 @@ export function rememberBookingAccess(value: unknown, requestPath?: string, requ
       try { window.sessionStorage.setItem(BOOKING_KEY + alias, token); } catch { /* Current-tab access still works when storage is blocked. */ }
     }
   }
-  for (const key of ["booking", "bookings", "results", "data", "items"]) rememberBookingAccess(entry[key]);
+  for (const key of ["booking", "bookings", "results", "data", "items"]) rememberBookingAccess(entry[key], requestPath, requestBody);
 }
 
 export function getBookingAccessToken(bookingId: string): string | undefined {

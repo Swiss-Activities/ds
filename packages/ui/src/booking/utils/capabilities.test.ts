@@ -60,3 +60,11 @@ it("retains parent proof for booking-item cancellation and a newly created payme
   expect(bookingAccessForRequest("/payment_attempts/attempt-2")).toBe("synthetic-parent");
   expect(bookingAccessForRequest("/booking_items/another-item/cancel")).toBeUndefined();
 });
+
+it("preserves request parent proof through nested payment response envelopes", () => {
+  rememberBookingAccess({bookingId:"envelope-parent",bookingAccessToken:"synthetic-envelope"});
+  rememberBookingAccess({results:[{data:{paymentAttemptId:"envelope-attempt"}}]},"/payment_attempts",{bookingId:"envelope-parent"});
+  expect(bookingAccessForRequest("/payment_attempts/envelope-attempt")).toBe("synthetic-envelope");
+  rememberBookingAccess({data:{paymentAttemptId:"unproven-attempt"}},"/payment_attempts",{bookingId:"unproven-parent"});
+  expect(bookingAccessForRequest("/payment_attempts/unproven-attempt")).toBeUndefined();
+});
