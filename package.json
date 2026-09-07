@@ -23,13 +23,14 @@
     "typecheck:tokens": "bun run --cwd packages/tokens typecheck",
     "typecheck:data": "bun run --cwd packages/data typecheck",
     "typecheck:ui": "bun run --cwd packages/ui typecheck",
-    "typecheck": "bun run typecheck:tokens && bun run typecheck:data && bun run typecheck:ui && bun run --cwd apps/storybook-web typecheck"
+    "typecheck": "bun run typecheck:tokens && bun run typecheck:data && bun run typecheck:ui && bun run --cwd apps/storybook-web typecheck",
+    "test:security": "bun test packages/ui/src/booking/utils/capabilities.test.ts scripts/security-dependencies.test.ts"
   },
   "workspaces": [
     "apps/*",
     "packages/*"
   ],
   "devDependencies": {
-    "sharp": "^0.34.5"
+    "sharp": "^0.35.4"
   }
 }

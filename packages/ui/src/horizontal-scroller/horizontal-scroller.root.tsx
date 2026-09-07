@@ -32,8 +32,9 @@ export function HorizontalScrollerRoot({
     const el = trackRef.current;
     if (!el) return;
     const items = Array.from(el.children) as HTMLElement[];
-    if (items.length < 2) return;
-    const step = items[1].offsetLeft - items[0].offsetLeft;
+    const [first, second] = items;
+    if (!first || !second) return;
+    const step = second.offsetLeft - first.offsetLeft;
     el.scrollBy({ left: -step, behavior: "smooth" });
   }, []);
 
@@ -41,8 +42,9 @@ export function HorizontalScrollerRoot({
     const el = trackRef.current;
     if (!el) return;
     const items = Array.from(el.children) as HTMLElement[];
-    if (items.length < 2) return;
-    const step = items[1].offsetLeft - items[0].offsetLeft;
+    const [first, second] = items;
+    if (!first || !second) return;
+    const step = second.offsetLeft - first.offsetLeft;
     el.scrollBy({ left: step, behavior: "smooth" });
   }, []);
 

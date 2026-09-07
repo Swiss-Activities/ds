@@ -542,7 +542,7 @@ export function SectionReviews({
       const index = Math.floor(review.rating) - 1;
 
       if (index >= 0 && index < counts.length) {
-        counts[index] += 1;
+        counts[index] = (counts[index] ?? 0) + 1;
       }
     });
 

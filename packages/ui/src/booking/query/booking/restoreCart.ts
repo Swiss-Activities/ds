@@ -10,7 +10,7 @@ export const restoreCart = async (bookingId: string) => {
   }
 
   return axiosInstancePatch
-    .get(`/bookings/${bookingId}/restore_cart`)
+    .post(`/bookings/${bookingId}/restore_cart`)
     .then((response) => response.data);
 };
 

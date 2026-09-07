@@ -14,12 +14,13 @@ export type GatewayContextParams = {
  * scraping a 3-digit number out of the message text (which misreads ids/years).
  */
 export class GatewayResponseError extends Error {
-  constructor(
-    readonly status: number,
-    readonly path: string,
-  ) {
+  readonly status: number;
+  readonly path: string;
+  constructor(status: number, path: string) {
     super(`Gateway ${path} error: ${status}`);
     this.name = "GatewayResponseError";
+    this.status = status;
+    this.path = path;
   }
 }
 

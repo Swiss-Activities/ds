@@ -1,4 +1,5 @@
-import axios, { AxiosError, type AxiosResponse } from "axios";
+import { bookingAccessForRequest, rememberBookingAccess } from "../utils/capabilities";
+import axios, { AxiosError, type AxiosResponse, type AxiosInstance } from "axios";
 
 const AXIOS_TIMEOUT = 30000;
 
@@ -6,7 +7,7 @@ const API_BASE = "/api/web";
 const BOOKING_BASE = "/api/booking";
 const GATEWAY_BASE = "/api/gateway";
 
-const successHandler = (response: AxiosResponse) => response;
+const successHandler = (response: AxiosResponse) => { rememberBookingAccess(response.data, response.config.url, response.config.data); return response; };
 const errorHandler = (error: AxiosError) => {
   return Promise.reject({ ...error });
 };
@@ -50,7 +51,7 @@ axiosInstanceProd.interceptors.response.use(
 );
 
 export const axiosInstanceAuth = (token: string) =>
-  axios.create({
+  withBookingCapabilities(axios.create({
     baseURL: BOOKING_BASE,
     timeout: AXIOS_TIMEOUT,
     headers: {
@@ -58,7 +59,7 @@ export const axiosInstanceAuth = (token: string) =>
       Accept: "application/json",
       Authorization: `Bearer ${token}`,
     },
-  });
+  }));
 
 export const axiosInstancePatch = axios.create({
   baseURL: BOOKING_BASE,
@@ -75,7 +76,7 @@ axiosInstancePatch.interceptors.response.use(
 );
 
 export const axiosInstanceAuthPatch = (token: string) =>
-  axios.create({
+  withBookingCapabilities(axios.create({
     baseURL: BOOKING_BASE,
     timeout: AXIOS_TIMEOUT,
     headers: {
@@ -83,7 +84,7 @@ export const axiosInstanceAuthPatch = (token: string) =>
       Accept: "application/json",
       Authorization: `Bearer ${token}`,
     },
-  });
+  }));
 
 let csrfTokenSingleton: string | null = null;
 let csrfTokenPromise: Promise<string> | null = null;
@@ -214,3 +215,14 @@ axiosGatewayInstance.interceptors.response.use(
   (response) => successHandler(response),
   (error) => errorHandler(error)
 );
+
+function withBookingCapabilities(client: AxiosInstance): AxiosInstance {
+  client.interceptors.request.use(config => {
+    const token = bookingAccessForRequest(config.url, config.data);
+    if (token) config.headers.set("X-Booking-Access-Token", token);
+    return config;
+  });
+  client.interceptors.response.use(successHandler);
+  return client;
+}
+for (const client of [axiosApiInstance, axiosInstance, axiosInstanceProd, axiosInstancePatch, axiosApiInstanceWithCsrf, axiosGatewayInstance]) withBookingCapabilities(client);

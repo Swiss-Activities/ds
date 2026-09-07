@@ -27,9 +27,9 @@ describe("toActivityCardItem — locale URL + price fallback", () => {
     expect(item?.path).toBe("/en/x/");
   });
 
-  it("path is null when no url exists for any locale", () => {
+  it("omits path when no url exists for any locale", () => {
     const item = toActivityCardItem(activity({}), "en_CH");
-    expect(item?.path).toBeNull();
+    expect(item?.path).toBeUndefined();
   });
 
   it("falls back to the formatted number price when the formatted string is missing", () => {

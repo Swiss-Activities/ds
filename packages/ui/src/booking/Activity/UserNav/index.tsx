@@ -1,3 +1,4 @@
+import { mobileTicketsUrl } from "../../utils/capabilities";
 import { Button } from "@swiss-activities/ui";
 import { I } from "../../components/I";
 import i18n from "../../data/i18n";
@@ -11,7 +12,7 @@ export const UserNav = ({ bookingId }: { bookingId: string }) => {
       <Button
         type="primary"
         target="_blank"
-        href={`https://mobiletickets.swissactivities.com/b/${bookingId}`}
+        href={mobileTicketsUrl(bookingId)}
         className="w-max"
         text={t("pages.confirmation.download")}
         icon={<I icon="ticket" />}
