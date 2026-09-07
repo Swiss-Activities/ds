@@ -1,3 +1,4 @@
+import { mobileTicketsUrl } from "../utils/capabilities";
 import { Badge } from "../components/Badge";
 import { Cancellable } from "./Cancellable";
 import { Countdown } from "./Countdown";
@@ -322,7 +323,7 @@ export const Activity = ({
                 <Button
                   type="transparent"
                   text={t("pages.confirmation.showTickets")}
-                  href={`https://mobiletickets.swissactivities.com/b/${bookingId}`}
+                  href={mobileTicketsUrl(bookingId)}
                   target="_blank"
                   className={cn(
                     "justify-center rounded-none border-b-0 border-e-0 border-t-0 border-solid border-gray-200 !text-sm font-medium",
@@ -350,7 +351,7 @@ export const Activity = ({
               <Button
                 type="secondary"
                 text={t("pages.confirmation.showTickets")}
-                href={`https://mobiletickets.swissactivities.com/b/${bookingId}`}
+                href={mobileTicketsUrl(bookingId)}
                 target="_blank"
                 className="min-w-[200px]"
               />

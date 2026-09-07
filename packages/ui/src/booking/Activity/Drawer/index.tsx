@@ -1,3 +1,4 @@
+import { mobileTicketsUrl } from "../../utils/capabilities";
 import dayjs from "dayjs";
 import { CalendarDays, Clock, User } from "lucide-react";
 import { Cancellable } from "../Cancellable";
@@ -94,7 +95,7 @@ const ConfirmDrawerBottom = ({
         <Button
           type="primary"
           text={t("pages.confirmation.showTickets")}
-          href={`https://mobiletickets.swissactivities.com/b/${bookingId}`}
+          href={mobileTicketsUrl(bookingId)}
           target="_blank"
           className={canModify ? "" : "col-span-2"}
         />

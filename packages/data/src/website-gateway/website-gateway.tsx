@@ -1390,7 +1390,7 @@ export function toActivityCardItem(
     path:
       getString(value, ["urls", localeKey]) ||
       getString(value, ["urls", "de_CH"]) ||
-      null,
+      undefined,
     subtitle: getString(value, ["location", "title"]) || null,
   };
 }

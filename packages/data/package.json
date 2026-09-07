@@ -19,13 +19,15 @@
     "react": "^18.0.0 || ^19.0.0",
     "@tanstack/react-query": "^5.0.0",
     "zustand": "^4.0.0",
-    "@swiss-activities/ui": "*"
+    "@swiss-activities/ui": "*",
+    "react-dom": "^18.0.0 || ^19.0.0"
   },
   "devDependencies": {
     "@types/react": "^19.2.14",
     "@tanstack/react-query": "^5.99.2",
     "typescript": "~6.0.2",
-    "zustand": "^4.5.7"
+    "zustand": "^4.5.7",
+    "@types/react-dom": "~19.2.3"
   },
   "dependencies": {
     "react-markdown": "^10.1.0"
